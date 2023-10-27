@@ -1,0 +1,1248 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+        <!-- category:  #id:2449 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:área círculo - ex.1  -->
+        <question type="category">
+        <category>
+        <text>$course$/top/multichoice/Topico Exemplo/diff1/área círculo - ex.1</text>
+        </category>
+        <info format="moodle_auto_format">
+        <text></text>
+        </info>
+        <idnumber></idnumber>
+        </question>
+        
+        <!-- question: #c:2 #id:2449 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:área círculo - ex.1 #var:1  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Qual é a área do círculo de raio \( 27 \)?
+
+% comentário em LaTex. Observe que a variável raio1, após "code:" 
+% foi definida na linha 18 abaixo
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 6082.12
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 5026.55
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 7542.96
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> 2290.22
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:3 #id:2449 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:área círculo - ex.1 #var:2  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Qual é a área do círculo de raio \( 46 \)?
+
+% comentário em LaTex. Observe que a variável raio1, após "code:" 
+% foi definida na linha 18 abaixo
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 1963.50
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> 6647.61
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 5281.02
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 1385.44
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:1 #id:2449 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:área círculo - ex.1 #var:3  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Qual é a área do círculo de raio \( 20 \)?
+
+% comentário em LaTex. Observe que a variável raio1, após "code:" 
+% foi definida na linha 18 abaixo
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 5808.80
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> 1256.64
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 5026.55
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 6939.78
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:3 #id:2449 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:área círculo - ex.1 #var:4  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Qual é a área do círculo de raio \( 25 \)?
+
+% comentário em LaTex. Observe que a variável raio1, após "code:" 
+% foi definida na linha 18 abaixo
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> 1963.50
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 5026.55
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 4071.50
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 7853.98
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:2 #id:2449 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:área círculo - ex.1 #var:5  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Qual é a área do círculo de raio \( 30 \)?
+
+% comentário em LaTex. Observe que a variável raio1, após "code:" 
+% foi definida na linha 18 abaixo
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 3421.19
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 7542.96
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 5541.77
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> 2827.43
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- category:  #id:2464 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:equação da reta  -->
+        <question type="category">
+        <category>
+        <text>$course$/top/multichoice/Topico Exemplo/diff1/equação da reta</text>
+        </category>
+        <info format="moodle_auto_format">
+        <text></text>
+        </info>
+        <idnumber></idnumber>
+        </question>
+        
+        <!-- question: #c:1 #id:2464 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:equação da reta #var:1  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Qual é a equação da reta que passa pelos pontos (9, 2) e (1, 7)?
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = -1.33x + 10.67
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> y = -0.62x + 7.62
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = -7.00x + 58.00
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = 0.80x + 2.40
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:1 #id:2464 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:equação da reta #var:2  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Qual é a equação da reta que passa pelos pontos (4, 7) e (3, 6)?
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = 0.33x + 1.00
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> y = 1.00x + 3.00
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = -2.33x + 17.33
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = -0.33x + 7.00
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:3 #id:2464 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:equação da reta #var:3  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Qual é a equação da reta que passa pelos pontos (2, 7) e (4, 8)?
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> y = 0.50x + 6.00
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = -0.67x + 10.33
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = 3.00x + -15.00
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = 0.67x + -1.00
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:1 #id:2464 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:equação da reta #var:4  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Qual é a equação da reta que passa pelos pontos (5, 4) e (6, 3)?
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = -1.00x + 8.00
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = 1.75x + -4.25
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> y = -1.00x + 9.00
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = 1.25x + 0.25
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:3 #id:2464 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:equação da reta #var:5  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Qual é a equação da reta que passa pelos pontos (5, 9) e (2, 7)?
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = 0.17x + 5.50
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = -0.40x + 8.20
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> y = -0.50x + 8.50
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> y = 0.67x + 5.67
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- category:  #id:2465 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:idades irmãos  -->
+        <question type="category">
+        <category>
+        <text>$course$/top/multichoice/Topico Exemplo/diff1/idades irmãos</text>
+        </category>
+        <info format="moodle_auto_format">
+        <text></text>
+        </info>
+        <idnumber></idnumber>
+        </question>
+        
+        <!-- question: #c:3 #id:2465 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:idades irmãos #var:1  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Uma pessoa tem x anos e seu irmão tem y anos. Se a diferença entre suas idades é de 11 anos, e a soma das idades é 17, determine as idades da pessoa e do irmão, respectivamente. 
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 12 e  4
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> 14 e  3
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 23 e  4
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 10 e  3
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:2 #id:2465 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:idades irmãos #var:2  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Uma pessoa tem x anos e seu irmão tem y anos. Se a diferença entre suas idades é de 23 anos, e a soma das idades é 27, determine as idades da pessoa e do irmão, respectivamente. 
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> 25 e  2
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 23 e  6
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 23 e  2
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p>  6 e  1
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:2 #id:2465 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:idades irmãos #var:3  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Uma pessoa tem x anos e seu irmão tem y anos. Se a diferença entre suas idades é de 11 anos, e a soma das idades é 19, determine as idades da pessoa e do irmão, respectivamente. 
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 13 e  7
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 11 e  8
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> 15 e  4
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 10 e  7
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:2 #id:2465 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:idades irmãos #var:4  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Uma pessoa tem x anos e seu irmão tem y anos. Se a diferença entre suas idades é de 12 anos, e a soma das idades é 24, determine as idades da pessoa e do irmão, respectivamente. 
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 21 e  6
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> 18 e  6
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 11 e  3
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 19 e  7
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- question: #c:1 #id:2465 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:idades irmãos #var:5  -->
+          <question type="multichoice">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Uma pessoa tem x anos e seu irmão tem y anos. Se a diferença entre suas idades é de 4 anos, e a soma das idades é 22, determine as idades da pessoa e do irmão, respectivamente. 
+
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 16 e  9
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 23 e  3
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="0" format="moodle_auto_format">
+              <text><![CDATA[<p> 13 e  4
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        
+            <answer fraction="100" format="moodle_auto_format">
+              <text><![CDATA[<p> 13 e  9
+ <br></p>]]></text>
+              <feedback format="moodle_auto_format">
+                <text></text>
+              </feedback>
+            </answer>
+        </question>
+
+        <!-- category:  #id:2466 #type:shortanswer #topic:Topico Exemplo #diff:1 #descr:resposta exata - vetor  -->
+        <question type="category">
+        <category>
+        <text>$course$/top/shortanswer/Topico Exemplo/diff1/resposta exata - vetor</text>
+        </category>
+        <info format="moodle_auto_format">
+        <text></text>
+        </info>
+        <idnumber></idnumber>
+        </question>
+        
+        <!-- question: #c:4 #id:2466 #type:shortanswer #topic:Topico Exemplo #diff:1 #descr:resposta exata - vetor #var:1  -->
+          <question type="shortanswer">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Dado um vetor de inteiros de tamanho \( n = 21\), ordenar o tre$$ $$cho do 
+vetor que começa no índice \( inicio = 7 \) e termina no índice 
+\( fim = 13\). Onde, \( 0<início<fim<n \), ou seja, o tre$$ $$cho a ser
+ordenado está nos limites do vetor. Vale ressaltar que os índices do 
+vetor começam em 0 e terminam em \( n-1\). 
+
+Considere esta entrada:
+4 6 4 9 6 1 8 9 6 6 9 6 3 8 6 8 4 1 3 6 4
+
+
+}
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+<answer fraction="100" format="moodle_auto_format"><text>
+4 6 4 9 6 1 8 3 6 6 6 8 9 9 6 8 4 1 3 6 4
+</text></answer>
+</question>
+
+        <!-- question: #c:4 #id:2466 #type:shortanswer #topic:Topico Exemplo #diff:1 #descr:resposta exata - vetor #var:2  -->
+          <question type="shortanswer">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Dado um vetor de inteiros de tamanho \( n = 29\), ordenar o tre$$ $$cho do 
+vetor que começa no índice \( inicio = 3 \) e termina no índice 
+\( fim = 19\). Onde, \( 0<início<fim<n \), ou seja, o tre$$ $$cho a ser
+ordenado está nos limites do vetor. Vale ressaltar que os índices do 
+vetor começam em 0 e terminam em \( n-1\). 
+
+Considere esta entrada:
+0 6 2 4 5 5 7 1 3 1 4 8 4 1 5 0 0 6 3 4 9 9 9 0 2 8 1 6 4
+
+
+}
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+<answer fraction="100" format="moodle_auto_format"><text>
+0 6 2 0 0 1 1 1 3 3 4 4 4 4 5 5 5 6 7 8 9 9 9 0 2 8 1 6 4
+</text></answer>
+</question>
+
+        <!-- question: #c:4 #id:2466 #type:shortanswer #topic:Topico Exemplo #diff:1 #descr:resposta exata - vetor #var:3  -->
+          <question type="shortanswer">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Dado um vetor de inteiros de tamanho \( n = 36\), ordenar o tre$$ $$cho do 
+vetor que começa no índice \( inicio = 9 \) e termina no índice 
+\( fim = 27\). Onde, \( 0<início<fim<n \), ou seja, o tre$$ $$cho a ser
+ordenado está nos limites do vetor. Vale ressaltar que os índices do 
+vetor começam em 0 e terminam em \( n-1\). 
+
+Considere esta entrada:
+1 1 1 8 2 8 6 8 4 8 7 0 9 2 8 5 0 1 7 1 6 1 5 9 0 4 7 9 0 3 1 0 4 8 1 6
+
+
+}
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+<answer fraction="100" format="moodle_auto_format"><text>
+1 1 1 8 2 8 6 8 4 0 0 0 1 1 1 2 4 5 5 6 7 7 7 8 8 9 9 9 0 3 1 0 4 8 1 6
+</text></answer>
+</question>
+
+        <!-- question: #c:4 #id:2466 #type:shortanswer #topic:Topico Exemplo #diff:1 #descr:resposta exata - vetor #var:4  -->
+          <question type="shortanswer">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Dado um vetor de inteiros de tamanho \( n = 25\), ordenar o tre$$ $$cho do 
+vetor que começa no índice \( inicio = 7 \) e termina no índice 
+\( fim = 19\). Onde, \( 0<início<fim<n \), ou seja, o tre$$ $$cho a ser
+ordenado está nos limites do vetor. Vale ressaltar que os índices do 
+vetor começam em 0 e terminam em \( n-1\). 
+
+Considere esta entrada:
+8 8 1 2 4 5 4 2 3 0 5 1 3 6 8 8 5 7 6 5 6 9 7 7 4
+
+
+}
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+<answer fraction="100" format="moodle_auto_format"><text>
+8 8 1 2 4 5 4 0 1 2 3 3 5 5 5 6 6 7 8 8 6 9 7 7 4
+</text></answer>
+</question>
+
+        <!-- question: #c:4 #id:2466 #type:shortanswer #topic:Topico Exemplo #diff:1 #descr:resposta exata - vetor #var:5  -->
+          <question type="shortanswer">
+            <name>
+              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+            </name>
+            <questiontext format="moodle_auto_format">
+              <text><![CDATA[<p> Dado um vetor de inteiros de tamanho \( n = 33\), ordenar o tre$$ $$cho do 
+vetor que começa no índice \( inicio = 4 \) e termina no índice 
+\( fim = 26\). Onde, \( 0<início<fim<n \), ou seja, o tre$$ $$cho a ser
+ordenado está nos limites do vetor. Vale ressaltar que os índices do 
+vetor começam em 0 e terminam em \( n-1\). 
+
+Considere esta entrada:
+3 8 3 5 4 8 8 0 6 1 5 4 4 7 7 6 0 4 0 7 4 0 5 5 0 3 2 6 8 3 8 5 7
+
+
+}
+ <br></p>]]></text>
+            </questiontext>
+            <generalfeedback format="moodle_auto_format">
+              <text></text>
+            </generalfeedback>
+            <defaultgrade>1.0000000</defaultgrade>
+            <penalty>0.3333333</penalty>
+            <hidden>0</hidden>
+            <idnumber></idnumber>
+            <single>true</single>
+            <shuffleanswers>true</shuffleanswers>
+            <answernumbering>abc</answernumbering>
+            <correctfeedback format="moodle_auto_format">
+              <text>Sua resposta está correta.</text>
+            </correctfeedback>
+            <partiallycorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está parcialmente correta.</text>
+            </partiallycorrectfeedback>
+            <incorrectfeedback format="moodle_auto_format">
+              <text>Sua resposta está incorreta.</text>
+            </incorrectfeedback>
+            <shownumcorrect/>        
+        
+<answer fraction="100" format="moodle_auto_format"><text>
+3 8 3 5 0 0 0 0 0 1 2 3 4 4 4 4 4 5 5 5 6 6 7 7 7 8 8 6 8 3 8 5 7
+</text></answer>
+</question>
+</quiz>

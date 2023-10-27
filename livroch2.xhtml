@@ -1,0 +1,735 @@
+<!DOCTYPE html> 
+<html lang='pt' xmlns:epub='http://www.idpf.org/2007/ops' xmlns='http://www.w3.org/1999/xhtml'> 
+<head><title>2 Visao geral do MCTest</title> 
+<meta charset='UTF-8' /> 
+<meta content='TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)' name='generator' /> 
+<link href='livro.css' rel='stylesheet' type='text/css' /> 
+</head><body>
+       <!-- l. 2 --><div class='crosslinks'><p class='noindent'></p></div>
+       <h2 class='chapterHead' id='visao-geral-do-mctest'><span class='titlemark'>Capítulo 2</span><br /><a id='x16-310002'></a>Visão geral do MCTest</h2>
+       <hr />
+       <hr />
+       <div class='tcolorbox mybox' id='tcolobox-4'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12x-x-120'>Conteúdo</span>___________________________________________________________________________
+</p> 
+ 
+</div> 
+</div>
+<p class='indent'>       O MCTest é um sistema, gratuito, de código aberto e em desenvolvimento, cujo objetivo é
+fornecer e gerenciar um banco de dados para avaliações de estudantes em um sistema de ensino. O foco
+principal do sistema é fornecer questões que possam ser utilizadas em atividades de ensino, além de
+oferecer geração e correção automática de atividades e exames. Com o MCTest, os educadores terão
+acesso a uma ferramenta poderosa para avaliar o progresso dos estudantes, aprimorar o processo de ensino e
+fornecer <span class='cmti-12'>feedback </span>de forma rápida.
+</p> 
+<p class='indent'>       O MCTest representa uma importante contribuição ao estado da arte em Tecnologia da
+Informação e Comunicação (TIC) ao fornecer métodos para a construção e correção
+automatizada de questões parametrizadas de múltipla escolha (QMs) e dissertativas (QTs). O sistema
+utiliza diferentes bibliotecas da linguagem de programação Python para calcular parâmetros
+na descrição e nas alternativas das questões de forma automática. Para mais detalhes,
+é possível consultar as publicações disponíveis em <a href='http://vision.ufabc.edu.br'>vision.ufabc.edu.br</a>, algumas delas
+também serão apresentadas nos capítulos da Parte <a href='livropa4.xhtml#experimentos'>IV<!-- tex4ht:ref: part:experimentos  --></a>. Além disso, o MCTest também
+suporta QTs que podem incluir exercícios de programação (EP) ou qualquer outro tipo de
+resposta.
+</p> 
+<p class='indent'>       O MCTest possui um ambiente de produção disponível em <a href='http://mctest.ufabc.edu.br'>mctest.ufabc.edu.br</a>, atualmente
+utilizado por diversos professores e setores na Universidade Federal do ABC (UFABC). Por exemplo, a
+Escola Preparatória (EPUFABC) utiliza o sistema no processo seletivo anual de aproximadamente 3000
+candidatos anualmente. Isso demonstra a eficácia e a confiabilidade do MCTest como uma ferramenta de
+avaliação em larga escala.
+</p> 
+<p class='indent'>       O MCTest está disponível gratuitamente no <a href='http://github.com/fzampirolli/mctest'>GitHub</a>, permitindo que outras instituições possam
+copiar, personalizar e instalar o sistema em seus próprios servidores de forma livre e flexível. Além
+disso, há diversas possibilidades de melhoria e trabalhos futuros para o MCTest, as quais podem ser
+exploradas seguindo a filosofia de código aberto, como definido no <a href='http://mctest.ufabc.edu.br/license'>Copyright <span class='tcrm-1200'>© </span>2018–2023</a> do sistema.
+Para mais informações sobre as possibilidades de melhoria do MCTest, é possível consultar o <span class='cmti-12'>link</span>
+<a href='http://mctest.ufabc.edu.br/readme'>mctest.ufabc.edu.br/readme</a>.
+<a id='x16-31001r32'></a>
+                                                                                                  
+                                                                                                  
+       </p> 
+
+       <h3 class='sectionHead' id='navegacao-geral-e-usuarios'><span class='titlemark'>2.1   </span> <a id='x16-320001'></a>Navegação geral e usuários</h3>
+<p class='noindent'>A navegação geral do MCTest visa possibilitar a criação e manutenção das entidades principais do
+sistema, que incluem instituto, curso, disciplina, turma, exame, tópico e questão. Os usuários do sistema
+são categorizados em três perfis: professor, coordenador e administrador. No entanto, na Figura <a href='#x16-32001r1'>2.1<!-- tex4ht:ref: fig:MCTest  --></a>,
+quando nenhum usuário está logado no sistema, um usuário da web pode visualizar os conteúdos
+públicos de institutos, cursos e disciplinas, bem como se inscrever ou entrar no sistema. Para uma
+comparação das funcionalidades de cada perfil de usuário, consulte também a Figura <a href='#x16-32003r2'>2.2<!-- tex4ht:ref: fig:cap2_navegacao  --></a>.
+</p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-principal-do-mctest-'><img alt='PIC' height='461' src='./figs-br//cap02_figMCTest.png' width='460' /> <a id='x16-32001r1'></a>
+<a id='x16-32002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.1: </span><span class='content'>Tela principal do MCTest.                                                            </span></figcaption><!-- tex4ht:label?: x16-32001r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <div class='tcolorbox mybox' id='tcolobox-5'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Observação:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+<p class='indent'>As figuras apresentadas neste livro correspondem à implantação do MCTest em uma
+máquina local, utilizando um banco de dados de exemplo disponível no <a href='https://github.com/fzampirolli/mctest'>GitHub</a>, com um
+número limitado de entidades cadastradas. Para ver um exemplo com um banco de dados mais
+completo, visite o site <a href='http://mctest.ufabc.edu.br'>mctest.ufabc.edu.br</a>. Para adiantar, o leitor pode instalar uma máquina
+virtual utilizando o <a href='https://www.virtualbox.org/'>VirtualBox</a> e, em seguida, fazer o <span class='cmti-12'>download </span>de um sistema operacional
+suportado,  conforme  explicado  no  arquivo  <a href='https://github.com/fzampirolli/mctest/blob/master/_setup-all.sh'><span class='cmtt-12'>_setup-all.sh</span></a>.  Basta  seguir  as  instruções
+fornecidas nesse arquivo para concluir a instalação, incluindo a instalação das bibliotecas
+necessárias. É importante notar que o processo de instalação do pacote LaTeX pode levar
+mais de 10 minutos. Para mais detalhes, ver Seção <a href='livroch1.xhtml#instalando-o-mctest'>1.4<!-- tex4ht:ref: sec:instalacao  --></a> – <a href='livroch1.xhtml#instalando-o-mctest'>Instalando o MCTest<!-- tex4ht:ref: sec:instalacao  --></a>. </p> 
+ 
+</div> 
+</div>
+<p class='indent'>       Atualmente, além do administrador, o sistema está disponível apenas para usuários do tipo
+professor, que podem também ser coordenadores de disciplina com permissão para incluir professores e
+tópicos. O perfil de coordenador é adicionado pelo administrador do sistema ao associá-lo a uma
+disciplina específica. Cabe ao administrador também a responsabilidade de manter a página do
+<a href='https://www.djangoproject.com/'>Django</a>.
+</p> 
+<p class='indent'>       No MCTest, cada tipo de usuário possui acesso restrito a um conjunto específico de
+entidades, como ilustrado na Figura <a href='#x16-32003r2'>2.2<!-- tex4ht:ref: fig:cap2_navegacao  --></a>. É importante ressaltar que os itens (c) e (d) são
+idênticos para professores e coordenadores. Por exemplo, ambos podem visualizar todas as
+turmas, tópicos e questões das disciplinas em que estão inscritos, mas somente o coordenador
+pode realizar alterações em tópicos de disciplinas que coordena. Além disso, os menus
+à esquerda são gerais para todo o conteúdo ao qual o usuário tem acesso, enquanto à
+direita são apresentados apenas os conteúdos de questões, turmas e exames que o usuário
+criou.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-menu-de-navegacao-principal-do-mctest-'><img alt='PIC' height='461' src='./figs-br//cap02_figNavega01.png' width='460' /><br />
+(a) Navegação sem estar logado<br />
+<img alt='PIC' height='461' src='./figs-br//cap02_figNavega02.png' width='460' /><br />
+(b) Navegação para um usuário cadastrado sem perfil<br />
+<img alt='PIC' height='461' src='./figs-br//cap02_figNavega03.png' width='460' /><br />
+(c) Navegação para um usuário com perfil de professor<br />
+<img alt='PIC' height='461' src='./figs-br//cap02_figNavega04.png' width='460' /><br />
+(d) Navegação para um usuário com perfil de coordenador<br />
+<img alt='PIC' height='461' src='./figs-br//cap02_figNavega05.png' width='460' /><br />
+(e) Navegação para um usuário com perfil de administrador<br />
+<a id='x16-32003r2'></a>
+<a id='x16-32004'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.2: </span><span class='content'>Recorte do menu de navegação principal do MCTest.                               </span></figcaption><!-- tex4ht:label?: x16-32003r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       O MCTest também permite que um professor coordenador de disciplina adicione vários professores
+a uma disciplina por um arquivo CSV, sendo automaticamente cadastrado no sistema como perfil de
+professor (esse processo será exemplificado no próximo capítulo). Com isso, os professores incluídos
+na disciplina têm acesso somente às funcionalidades do sistema que são relevantes ao seu
+perfil.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox mybox' id='tcolobox-6'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Destaque:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+<p class='indent'>Para enfatizar um ponto específico no que se refere ao registro de professores, é de extrema
+relevância ressaltar que, quando um professor efetua seu cadastro de forma independente,
+ele não é automaticamente incluído no grupo de professores. Nessa situação, torna-se
+imperativo que um administrador intervenha a fim de efetuar essa inclusão, por meio do
+acesso à aba “Admin”, conforme ilustrado na Figura <a href='#x16-32003r2'>2.2<!-- tex4ht:ref: fig:cap2_navegacao  --></a>-(e). </p> 
+ 
+</div> 
+</div>
+<p class='indent'>       Antes de demonstrar como criar entidades no sistema, é importante cadastrar-se na
+plataforma, clicando na opção “Inscrever”, conforme indicado na Figura <a href='#x16-32003r2'>2.2<!-- tex4ht:ref: fig:cap2_navegacao  --></a> e exemplificado na
+Figura <a href='#x16-32005r3'>2.3<!-- tex4ht:ref: fig:inscrever  --></a>. É necessário ressaltar que somente os professores podem se inscrever neste serviço
+e devem utilizar o e-mail institucional fornecido pela instituição durante o cadastro. Por
+exemplo, o endereço <span class='cmtt-12'>user@ufabc.edu.br </span>é válido, enquanto <span class='cmtt-12'>user@aluno.ufabc.edu.br </span>é
+inválido. O e-mail deve conter a URL da instituição (por exemplo, <span class='cmtt-12'>@ufabc.edu.br</span>). Tais
+restrições são cruciais para garantir a validade e a segurança das informações associadas às
+instituições cadastradas no sistema. Finalmente, o botão “De Acordo”, apresentado na
+Figura <a href='#x16-32005r3'>2.3<!-- tex4ht:ref: fig:inscrever  --></a>, foi detalhado na Seção <a href='livroch1.xhtml#direitos-autorais-das-questoes-disponiveis-no-bd'>1.3.2<!-- tex4ht:ref: sec:deAcordo  --></a> – <a href='livroch1.xhtml#direitos-autorais-das-questoes-disponiveis-no-bd'>Direitos autorais das questões disponíveis no
+BD<!-- tex4ht:ref: sec:deAcordo  --></a>.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox mybox' id='tcolobox-7'>    
+<div class='tcolorbox-title'>
+                                                                                                  
+                                                                                                  
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Melhorias:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+
+       <ul class='itemize1'>
+       <li class='itemize'>É importante ressaltar que ainda não foi implementada a funcionalidade de segurança
+        para validar o e-mail durante o processo de inscrição. Será necessário implementar
+        essa funcionalidade para garantir a integridade e a segurança dos dados cadastrados no
+        sistema.
+        </li>
+        <li class='itemize'>Outra  melhoria  importante  para  a  segurança  do  sistema  é  a  utilização  de  um
+        certificado digital, que permitirá a utilização do protocolo HTTPS em vez de HTTP
+        nos servidores utilizados para a implantação do MCTest. O HTTPS criptografa a
+        comunicação entre o navegador do usuário e o servidor, garantindo a confidencialidade
+        e a integridade dos dados transmitidos.</li></ul>
+ 
+</div> 
+</div>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-para-a-inscricao-do-usuario-'><img alt='PIC' height='461' src='./figs-br//cap02_figInscrever.png' width='460' /> <a id='x16-32005r3'></a>
+<a id='x16-32006'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.3: </span><span class='content'>Tela para a inscrição do usuário.                                                  </span></figcaption><!-- tex4ht:label?: x16-32005r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x16-32007r36'></a></p>
+       <h3 class='sectionHead' id='criar-entidades'><span class='titlemark'>2.2   </span> <a id='x16-330002'></a>Criar entidades</h3>
+<p class='noindent'>O MCTest é um sistema que gerencia diversas entidades em um banco de dados MySQL, como detalhado
+neste e no próximo capítulo. Essas entidades são criadas e relacionadas para modelar o
+domínio educacional com foco na avaliação dos estudantes. Além disso, o sistema oferece
+funcionalidades para o cadastro, alteração, remoção e consulta dessas entidades e seus
+relacionamentos.
+</p> 
+<p class='indent'>       Nesta seção, você encontrará a descrição das principais entidades de negócio
+de um sistema educacional que tem como foco as avaliações. É importante ressaltar que,
+embora as entidades, questão e exame sejam de extrema importância no contexto do MCTest,
+elas serão abordadas em capítulos específicos para uma exposição mais detalhada e
+aprofundada.
+<a id='x16-33001r30'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='instituto'><span class='titlemark'>2.2.1   </span> <a id='x16-340001'></a>Instituto</h4>
+<p class='noindent'>A entidade instituto representa a instituição cadastrada no sistema e contém atributos como nome,
+código, logo, site, entre outros. A criação de uma entidade instituto é restrita ao usuário com perfil de
+administrador.
+</p> 
+<p class='indent'>       Na Figura <a href='#x16-34001r4'>2.4<!-- tex4ht:ref: fig:instituto  --></a>, ao clicar em “Criar um novo Instituto”, uma tela será aberta para cadastrar
+informações sobre o instituto, conforme ilustrado na Figura <a href='#x16-34003r5'>2.5<!-- tex4ht:ref: fig:cap02_figInstitutoCria  --></a>. Ao clicar em um instituto existente na
+coluna “Código” ou “Nome” da Figura <a href='#x16-34001r4'>2.4<!-- tex4ht:ref: fig:instituto  --></a>, o usuário será direcionado para uma tela para
+visualizar as informações do instituto, conforme ilustrado na Figura <a href='#x16-34005r6'>2.6<!-- tex4ht:ref: fig:cap02_figInstitutoDetalha  --></a>. É importante observar
+que nesta tela também é apresentada a lista de cursos, que será detalhada na próxima
+seção.
+</p> 
+<p class='indent'>       Ao clicar no botão “Atualizar” em um instituto existente na coluna “Ações” da Figura <a href='#x16-34001r4'>2.4<!-- tex4ht:ref: fig:instituto  --></a>, o
+usuário será direcionado para uma nova tela para atualizá-lo, semelhante à Figura <a href='#x16-34003r5'>2.5<!-- tex4ht:ref: fig:cap02_figInstitutoCria  --></a>. Se o usuário
+clicar em “Apagar”, o instituto será removido do banco de dados, após confirmação na janela de
+diálogo apresentada na Figura <a href='#x16-34007r7'>2.7<!-- tex4ht:ref: fig:cap02_figInstitutoRemover  --></a>.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-para-administrador-atualizar-apagar-ou-criar-um-instituto-'><img alt='PIC' height='461' src='./figs-br//cap02_figInstituto.png' width='460' /> <a id='x16-34001r4'></a>
+<a id='x16-34002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.4: </span><span class='content'>Tela para administrador atualizar, apagar ou criar um instituto.                       </span></figcaption><!-- tex4ht:label?: x16-34001r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       A Figura <a href='#x16-34003r5'>2.5<!-- tex4ht:ref: fig:cap02_figInstitutoCria  --></a> apresenta o recorte da tela para “Criar de um novo Instituto”, que é similar à de
+“Atualizar um Instituto”. Os três últimos campos exibidos na tela são utilizados para contabilizar o
+número de exames e questões gerados e corrigidos pelo sistema desde a criação do instituto. Esses
+contadores são úteis para monitorar a atividade do sistema em relação a cada instituto. É importante
+ressaltar que apenas o administrador pode zerar esses contadores a qualquer momento, o que pode ser
+necessário em algumas circunstâncias, como quando é necessário reiniciar as contagens ou avaliar a
+atividade recente do sistema.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-para-o-administrador-criar-um-instituto-'><img alt='PIC' height='461' src='figs-br/cap02_figInstitutoCria.png' width='460' /> <a id='x16-34003r5'></a>
+<a id='x16-34004'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.5: </span><span class='content'>Tela para o administrador criar um instituto.                                         </span></figcaption><!-- tex4ht:label?: x16-34003r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <div class='tcolorbox mybox' id='tcolobox-8'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Observação:</span><br class='newline' />___________________________________________________________________________________________________________
+</p> 
+<p class='indent'>As  telas  e  as  ações  de  criar,  ler,  atualizar  e  remover  (CRUD  –  <span class='cmti-12'>Create, Read, Update,
+</span><span class='cmti-12'>Delete</span>)  para  fazer  a  manutenção  do  instituto  são  semelhantes,  em  geral,  às  demais
+entidades do MCTest. Portanto, a partir deste ponto, serão apresentadas apenas as telas
+com informações diferentes, para o usuário poder se concentrar nas especificidades da
+manutenção das entidades do sistema. Além disso, os nomes dessas entidades nessas telas
+devem seguir o formato LaTeX. </p> 
+ 
+</div> 
+</div>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-apresentando-os-detalhes-de-um-instituto-'><img alt='PIC' height='461' src='./figs-br//cap02_figInstitutoDetalha.png' width='460' /> <a id='x16-34005r6'></a>
+<a id='x16-34006'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.6: </span><span class='content'>Tela apresentando os detalhes de um instituto.                                        </span></figcaption><!-- tex4ht:label?: x16-34005r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-para-confirmar-a-exclusao-do-instituto-'><img alt='PIC' height='461' src='./figs-br//cap02_figInstitutoRemover.png' width='460' /> <a id='x16-34007r7'></a>
+<a id='x16-34008'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.7: </span><span class='content'>Tela para confirmar a exclusão do instituto.                                          </span></figcaption><!-- tex4ht:label?: x16-34007r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x16-34009r41'></a></p>
+       <h4 class='subsectionHead' id='curso'><span class='titlemark'>2.2.2   </span> <a id='x16-350002'></a>Curso</h4>
+<p class='noindent'>A criação da entidade curso é restrita ao usuário com perfil de administrador, como ilustrado na
+Figura <a href='#x16-35001r8'>2.8<!-- tex4ht:ref: fig:curso  --></a>, que também pode atualizar ou apagar um curso existente, conforme apresentado na coluna
+“Ações” (outros tipos de usuários não têm acesso a esses botões). É importante destacar que um
+curso pode pertencer a um ou vários institutos, permitindo assim a organização dos cursos de acordo
+com sua área de atuação ou afinidade temática.
+</p> 
+<p class='indent'>       Na UFABC, por exemplo, um instituto como o Centro de Matemática, Computação e
+Cognição (CMCC) pode conter vários cursos. Além disso, um curso pode pertencer a mais de um
+instituto, e existem também cursos intercentros, como o Bacharelado em Ciência e Tecnologia (BCT),
+que pode pertencer ao instituto PROGRAD (Pró-Reitoria de Graduação) e também aos três centros
+existentes na UFABC.
+</p> 
+<p class='indent'>       Outros exemplos de cursos na UFABC incluem a Escola Preparatória, que pode ser
+um curso do instituto PROEC (Pró-Reitoria de Extensão e Cultura), e o curso de idiomas,
+que pertence ao instituto NETEL (Núcleo Educacional de Tecnologias e Línguas), entre
+outros.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-que-apresenta-a-lista-de-cursos-na-qual-o-administrador-pode-atualizar-apagar-ou-criar-um-novo-curso-'><img alt='PIC' height='461' src='./figs-br//cap02_figCurso.png' width='460' /> <a id='x16-35001r8'></a>
+<a id='x16-35002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.8: </span><span class='content'>Tela que apresenta a lista de cursos, na qual o administrador pode atualizar, apagar ou
+criar um novo curso.                                                                             </span></figcaption><!-- tex4ht:label?: x16-35001r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Essa flexibilidade na associação dos cursos aos institutos permite uma maior customização do
+sistema de avaliação educacional do MCTest, conforme as necessidades específicas de cada instituição
+ou curso. Dessa forma, é possível adaptar o sistema para atender às demandas e particularidades de
+diferentes áreas de conhecimento e instituições de ensino.
+</p> 
+<p class='indent'>       Ao clicar no botão “Criar um novo Curso” na Figura <a href='#x16-35001r8'>2.8<!-- tex4ht:ref: fig:curso  --></a>, o administrador será direcionado para a
+tela de criação de um novo curso, apresentada na Figura <a href='#x16-35003r9'>2.9<!-- tex4ht:ref: fig:cursoCria  --></a>. Nesta tela, o administrador deve
+preencher as informações necessárias sobre o curso, como o nome e código. Além disso,
+é necessário selecionar o instituto ao qual o curso pertence, como exemplificado no caso do
+“Instituto Exemplo”. É importante destacar que é possível associar mais de um instituto a um
+curso específico, como será exemplificado no próximo capítulo. Após preencher todas as
+informações, o administrador deve clicar no botão “Salvar” para salvar o curso no banco de dados do
+sistema.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-para-administrador-criar-um-curso-novo-'><img alt='PIC' height='461' src='./figs-br//cap02_figCursoCria.png' width='460' /> <a id='x16-35003r9'></a>
+<a id='x16-35004'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.9: </span><span class='content'>Tela para administrador criar um curso novo.                                         </span></figcaption><!-- tex4ht:label?: x16-35003r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <div class='tcolorbox mybox' id='tcolobox-9'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Melhorias:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+<p class='indent'>É importante destacar que o banco de dados do sistema já suporta o relacionamento
+entre  um  conjunto  de  professores/coordenadores  e  uma  instituição/curso.  Portanto,  é
+necessário  implementar  as  funcionalidades  que  permitam  vincular  esses  profissionais  às
+entidades correspondentes. Isso permitirá que a gestão dos professores/coordenadores seja
+feita de forma mais organizada e eficiente, facilitando a alocação desses profissionais em
+diferentes cursos ou instituições. </p> 
+ 
+</div> 
+</div>
+<p class='indent'>       Ao clicar em um curso nas colunas “Código” ou “Nome” na Figura <a href='#x16-35001r8'>2.8<!-- tex4ht:ref: fig:curso  --></a>, o usuário será
+direcionado para uma tela detalhando as informações do curso selecionado, conforme ilustrado na Figura
+<a href='#x16-35005r10'>2.10<!-- tex4ht:ref: fig:cap02_figCursoDetalha  --></a>. É importante observar que nesta tela também são inseridas informações sobre as disciplinas do
+curso selecionado, em forma de uma lista. A manutenção das disciplinas será abordada na próxima
+seção.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-apresentando-os-detalhes-de-um-curso-'><img alt='PIC' height='461' src='./figs-br//cap02_figCursoDetalha.png' width='460' /> <a id='x16-35005r10'></a>
+<a id='x16-35006'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.10: </span><span class='content'>Tela apresentando os detalhes de um curso.                                          </span></figcaption><!-- tex4ht:label?: x16-35005r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x16-35007r46'></a></p>
+       <h4 class='subsectionHead' id='disciplina'><span class='titlemark'>2.2.3   </span> <a id='x16-360003'></a>Disciplina</h4>
+<p class='noindent'>A entidade disciplina é responsável por representar as disciplinas cadastradas no sistema, sendo sua
+criação restrita ao usuário com perfil de administrador, que também pode atualizar ou apagar uma
+disciplina existente, como ilustrado na Figura <a href='#x16-36001r11'>2.11<!-- tex4ht:ref: fig:cap02_figDisciplina  --></a>, conforme apresentado na coluna “Ações” (outros
+tipos de usuários não têm acesso a esses botões de ação). No entanto, o usuário com perfil de
+coordenador possui permissão apenas para atualizar a disciplina que coordena, como será detalhado na
+próxima seção.
+</p> 
+<p class='indent'>       A entidade disciplina é essencial para a organização das turmas e tópicos, o que permite criar
+exames específicos para atender a várias turmas simultaneamente, facilitando a gestão e a aplicação
+de avaliações na plataforma.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-que-apresenta-a-lista-de-disciplinas-na-qual-o-administrador-pode-atualizar-apagar-ou-criar-uma-nova-disciplina-'><img alt='PIC' height='461' src='./figs-br//cap02_figDisciplina.png' width='460' /> <a id='x16-36001r11'></a>
+<a id='x16-36002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.11: </span><span class='content'>Tela que apresenta a lista de disciplinas, na qual o administrador pode atualizar, apagar
+ou criar uma nova disciplina.                                                                     </span></figcaption><!-- tex4ht:label?: x16-36001r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       A Figura <a href='#x16-36003r12'>2.12<!-- tex4ht:ref: fig:cap02_figDisciplinaCria  --></a> mostra a tela para criar uma disciplina. Esta tela é semelhante à primeira parte da
+tela de atualização de uma disciplina. No caso de uma disciplina com muitas turmas, foram
+implementadas funcionalidades na segunda parte da tela de atualização de disciplina para o coordenador
+poder cadastrar todos os professores e estudantes de várias turmas de uma só vez, através da
+importação de arquivos no formato CSV, conforme ilustrado na Figura <a href='#x16-36005r13'>2.13<!-- tex4ht:ref: fig:cap02_figDisciplinaAtualiza22  --></a>. Essa funcionalidade
+será detalhada no próximo capítulo, na Seção <a href='livroch3.xhtml#criar-varias-turmas-com-arquivo-csv'>3.2.2<!-- tex4ht:ref: sec:variasTurmasCSV  --></a> – <a href='livroch3.xhtml#criar-varias-turmas-com-arquivo-csv'>Criar várias turmas com arquivo
+CSV<!-- tex4ht:ref: sec:variasTurmasCSV  --></a>.
+</p> 
+<p class='indent'>       A flexibilidade na associação de cursos permite uma personalização maior do sistema de
+avaliação educacional do MCTest, conforme as necessidades específicas de cada disciplina. Além disso,
+é possível associar professores e coordenadores à disciplina, permitindo uma organização mais
+eficiente e atribuição de responsabilidades na gestão da disciplina. Para selecionar mais de um professor,
+basta manter a tecla <span class='cmbx-12'>Ctrl </span>pressionada.
+</p> 
+<p class='indent'>       É fundamental destacar que a criação e associação de disciplinas aos cursos devem ser
+realizadas com cautela e atenção pelo coordenador, visando garantir a precisão e efetividade da
+avaliação educacional. A associação correta de disciplinas aos respectivos cursos, institutos e
+professores é crucial para a realização de exames precisos e eficazes.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-para-o-administrador-criar-uma-disciplina-tela-semelhante-a-primeira-parte-da-tela-de-atualizar-uma-disciplina-'><img alt='PIC' height='461' src='./figs-br//cap02_figDisciplinaCria.png' width='460' /> <a id='x16-36003r12'></a>
+<a id='x16-36004'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.12: </span><span class='content'>Tela para o administrador criar uma disciplina. Tela semelhante à primeira parte da
+tela de atualizar uma disciplina.                                                                  </span></figcaption><!-- tex4ht:label?: x16-36003r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-segunda-parte-da-tela-para-o-administrador-atualizar-uma-disciplina-'><img alt='PIC' height='461' src='./figs-br//cap02_figDisciplinaAtualiza2.png' width='460' /> <a id='x16-36005r13'></a>
+<a id='x16-36006'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.13: </span><span class='content'>Segunda parte da tela para o administrador atualizar uma disciplina.                 </span></figcaption><!-- tex4ht:label?: x16-36005r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Ao clicar em uma disciplina nas colunas “Código” ou “Nome” da Figura <a href='#x16-36001r11'>2.11<!-- tex4ht:ref: fig:cap02_figDisciplina  --></a>, será aberta
+uma tela detalhando as informações da disciplina, conforme ilustrado nas Figuras <a href='#x16-36007r14'>2.14<!-- tex4ht:ref: fig:cap02_figDisciplinaDetalha  --></a> e
+<a href='#x16-36009r15'>2.15<!-- tex4ht:ref: fig:cap02_figDisciplinaDetalha2  --></a>.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-parte-tela-apresentando-os-detalhes-de-uma-disciplina-'><img alt='PIC' height='461' src='./figs-br//cap02_figDisciplinaDetalha.png' width='460' /> <a id='x16-36007r14'></a>
+<a id='x16-36008'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.14: </span><span class='content'>(Parte 1) Tela apresentando os detalhes de uma disciplina.                           </span></figcaption><!-- tex4ht:label?: x16-36007r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-parte-continuacao-da-tela-apresentando-os-detalhes-de-uma-disciplina-'><img alt='PIC' height='461' src='./figs-br//cap02_figDisciplinaDetalha2.png' width='460' /> <a id='x16-36009r15'></a>
+<a id='x16-36010'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.15: </span><span class='content'>(Parte 2) Continuação da tela apresentando os detalhes de uma disciplina.         </span></figcaption><!-- tex4ht:label?: x16-36009r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x16-36011r50'></a></p>
+       <h4 class='subsectionHead' id='turma'><span class='titlemark'>2.2.4   </span> <a id='x16-370004'></a>Turma</h4>
+<p class='noindent'>A entidade turma é responsável por representar as turmas cadastradas para cada disciplina no MCTest.
+A criação, atualização ou exclusão de turmas pode ser realizada pelo administrador, pelo coordenador
+ou pelo professor da disciplina, conforme apresentado na Figura <a href='#x16-37001r16'>2.16<!-- tex4ht:ref: fig:cap02_figTurma  --></a>. Nesta figura, o professor tem a
+opção de criar uma nova turma ao clicar em “Criar uma nova Turma”, abrindo a tela apresentada na
+Figura <a href='#x16-37003r17'>2.17<!-- tex4ht:ref: fig:cap02_figTurmaCriar  --></a>. Para isso, é necessário escolher uma disciplina, definir o código da sala da disciplina e
+especificar se a turma é de teoria ou prática.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-que-apresenta-a-lista-de-turmas-na-qual-um-professor-de-uma-disciplina-pode-criar-uma-nova-turma-alem-de-atualizar-ou-apagar-turmas-existentes-'><img alt='PIC' height='461' src='./figs-br//cap02_figTurma.png' width='460' /> <a id='x16-37001r16'></a>
+<a id='x16-37002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.16: </span><span class='content'>Tela que apresenta a lista de turmas, na qual um professor de uma disciplina pode criar
+uma nova turma, além de atualizar ou apagar turmas existentes.                                 </span></figcaption><!-- tex4ht:label?: x16-37001r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-utilizada-pelo-professor-para-criar-uma-nova-turma-apos-clicar-no-botao-criar-uma-nova-turma-na-tela-da-figura-figcapfigturma-e-importante-destacar-que-o-nome-da-turma-nao-pode-conter-acentos-ou-caracteres-especiais-pois-esse-nome-fara-parte-do-cabecalho-do-exame-'><img alt='PIC' height='461' src='./figs-br//cap02_figTurmaCriar.png' width='460' /> <a id='x16-37003r17'></a>
+<a id='x16-37004'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.17: </span><span class='content'>Tela utilizada pelo professor para criar uma nova turma após clicar no botão “Criar
+uma nova Turma”, na tela da Figura <a href='#x16-37001r16'>2.16<!-- tex4ht:ref: fig:cap02_figTurma  --></a>. É importante destacar que o nome da turma não pode
+conter acentos ou caracteres especiais, pois esse nome fará parte do cabeçalho do exame.        </span></figcaption><!-- tex4ht:label?: x16-37003r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Após a criação da turma pelo professor, a tela apresentada na Figura <a href='#x16-37001r16'>2.16<!-- tex4ht:ref: fig:cap02_figTurma  --></a> deve ser atualizada e
+é possível clicar em “Atualizar” na coluna “Ações” para inserir estudantes na turma. Essa ação
+levará à tela de atualização da turma, conforme ilustrado na Figura <a href='#x16-37005r18'>2.18<!-- tex4ht:ref: fig:cap02_figTurmaAtualiza  --></a>. Nessa tela, é possível
+fazer a importação de um arquivo no formato CSV contendo a lista de estudantes que serão adicionados
+à turma.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-para-um-professor-de-uma-disciplina-poder-atualizar-uma-turma-inserindo-estudantes-com-a-importacao-de-um-arquivo-no-formato-csv-'><img alt='PIC' height='461' src='./figs-br//cap02_figTurmaAtualiza.png' width='460' /> <a id='x16-37005r18'></a>
+<a id='x16-37006'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.18:  </span><span class='content'>Tela  para  um  professor  de  uma  disciplina  poder  atualizar  uma  turma,  inserindo
+estudantes com a importação de um arquivo no formato CSV.                                  </span></figcaption><!-- tex4ht:label?: x16-37005r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Na Figura <a href='#x16-37001r16'>2.16<!-- tex4ht:ref: fig:cap02_figTurma  --></a>, o professor pode clicar no código da turma (primeira coluna) e aparece a tela
+apresentada na Figura <a href='#x16-37007r19'>2.19<!-- tex4ht:ref: fig:cap02_figTurmaAtualiza2  --></a>, onde o professor pode atualizar ou apagar estudantes. Veja na Figura <a href='#x16-37009r20'>2.20<!-- tex4ht:ref: fig:cap02_figTurmaAtualiza3  --></a> a
+tela para atualizar os dados de um estudante.
+</p> 
+<p class='indent'>       Na Figura <a href='#x16-37005r18'>2.18<!-- tex4ht:ref: fig:cap02_figTurmaAtualiza  --></a>, é possível observar uma lista de todas as disciplinas do professor, se houver
+alguma, em “Escolher Disciplinas”. Ao clicar no código de uma turma específica (primeira coluna), o
+professor pode acessar a tela apresentada na Figura <a href='#x16-37007r19'>2.19<!-- tex4ht:ref: fig:cap02_figTurmaAtualiza2  --></a>.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-para-um-professor-de-uma-disciplina-poder-atualizar-uma-turma-atualizando-ou-apagando-estudantes-da-turma-alem-disso-e-possivel-incluir-um-novo-estudante-na-turma-'><img alt='PIC' height='461' src='./figs-br//cap02_figTurmaAtualiza2.png' width='460' /> <a id='x16-37007r19'></a>
+<a id='x16-37008'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.19: </span><span class='content'>Tela para um professor de uma disciplina poder atualizar uma turma, atualizando ou
+apagando estudantes da turma. Além disso, é possível incluir um novo estudante na turma.    </span></figcaption><!-- tex4ht:label?: x16-37007r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Além disso, ao clicar no nome de um estudante específico, o professor pode acessar a tela
+apresentada na Figura <a href='#x16-37009r20'>2.20<!-- tex4ht:ref: fig:cap02_figTurmaAtualiza3  --></a>, onde é possível atualizar os dados do estudante, como nome, e-mail e
+matrícula. Essa funcionalidade permite que os professores mantenham a lista de estudantes atualizada e
+corrigir eventuais erros ou inconsistências nas informações.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-para-um-professor-de-uma-disciplina-poder-atualizar-os-dados-de-um-estudante-da-turma-'><img alt='PIC' height='461' src='./figs-br//cap02_figTurmaAtualiza3.png' width='460' /> <a id='x16-37009r20'></a>
+<a id='x16-37010'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.20: </span><span class='content'>Tela para um professor de uma disciplina poder atualizar os dados de um estudante da
+turma.                                                                                           </span></figcaption><!-- tex4ht:label?: x16-37009r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x16-37011r56'></a></p>
+       <h4 class='subsectionHead' id='topico'><span class='titlemark'>2.2.5   </span> <a id='x16-380005'></a>Tópico</h4>
+<p class='noindent'>Os tópicos são definidos para agrupar questões numa disciplina. Cada disciplina possui um conjunto de
+tópicos associados. A criação, atualização ou exclusão de um tópico de disciplina(s) é restrita ao
+usuário com perfil de coordenador ou ao administrador, conforme indicado na lista de tópicos apresentada
+na Figura <a href='#x16-38001r21'>2.21<!-- tex4ht:ref: fig:cap02_figTopico  --></a>. É importante ressaltar que a lista exibida corresponde aos tópicos das disciplinas onde o
+usuário está envolvido.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-com-a-lista-de-topicos-para-o-coordenador-ou-administrador-criar-atualizar-ou-apagar-um-topico-de-disciplinas-'><img alt='PIC' height='461' src='./figs-br//cap02_figTopico.png' width='460' /> <a id='x16-38001r21'></a>
+<a id='x16-38002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.21: </span><span class='content'>Tela com a lista de tópicos para o coordenador (ou administrador) criar, atualizar ou
+apagar um tópico de disciplina(s).                                                               </span></figcaption><!-- tex4ht:label?: x16-38001r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       A Figura <a href='#x16-38003r22'>2.22<!-- tex4ht:ref: fig:cap02_figTopicoAtualiza  --></a> apresenta a tela para atualização de um tópico, que é semelhante à tela de
+cadastro de um novo tópico. Uma das principais funcionalidades disponíveis nessa tela é a possibilidade
+de associar mais de uma disciplina ao tópico em questão, mantendo a tecla <span class='cmtt-12'>Ctrl </span>pressionada. Essa
+flexibilidade permite que um mesmo tópico possa ser utilizado em diferentes disciplinas, conforme as
+necessidades e particularidades de cada uma delas.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-para-o-coordenador-ou-administrador-atualizar-um-topico-de-uma-disciplina-'><img alt='PIC' height='461' src='./figs-br//cap02_figTopicoAtualiza.png' width='460' /> <a id='x16-38003r22'></a>
+<a id='x16-38004'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.22: </span><span class='content'>Tela para o coordenador (ou administrador) atualizar um tópico de uma disciplina.  </span></figcaption><!-- tex4ht:label?: x16-38003r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Ao clicar em um tópico na primeira coluna da Figura <a href='#x16-38001r21'>2.21<!-- tex4ht:ref: fig:cap02_figTopico  --></a>, será aberta uma tela detalhando as
+questões relacionadas ao tópico, conforme ilustrado na Figura <a href='#x16-38005r23'>2.23<!-- tex4ht:ref: fig:cap02_figTopicoDetalha  --></a> (as outras colunas serão
+detalhadas nos próximos capítulos). É importante destacar o botão “Criar-PDF”, que
+permite a criação de um arquivo PDF contendo todas as questões do tópico selecionado,
+conforme ilustrado na Figura <a href='#x16-38007r24'>2.24<!-- tex4ht:ref: fig:cap02_figTopicoDetalha2  --></a>. Detalhes sobre este arquivo serão abordados em capítulos
+futuros.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-apresentando-os-detalhes-de-um-topico-'><img alt='PIC' height='461' src='./figs-br//cap02_figTopicoDetalha.png' width='460' /> <a id='x16-38005r23'></a>
+<a id='x16-38006'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.23: </span><span class='content'>Tela apresentando os detalhes de um tópico.                                        </span></figcaption><!-- tex4ht:label?: x16-38005r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-tela-apresentando-as-tres-primeiras-questoes-de-um-topico-'><img alt='PIC' height='461' src='./figs-br//cap02_figTopicoDetalha2.png' width='460' /> <a id='x16-38007r24'></a>
+<a id='x16-38008'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 2.24: </span><span class='content'>Tela apresentando as três primeiras questões de um tópico.                       </span></figcaption><!-- tex4ht:label?: x16-38007r2  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x16-38009r40'></a></p>
+       <h3 class='sectionHead' id='consideracoes-finais'><span class='titlemark'>2.3   </span> <a id='x16-390003'></a>Considerações finais</h3>
+<p class='noindent'>Neste capítulo, foi apresentada uma visão geral do MCTest, enfatizando sua estrutura e
+funcionalidades essenciais. Foi discutida a navegação geral do sistema, destacando como os usuários
+podem acessar as diferentes entidades disponíveis, como institutos, cursos, disciplinas, turmas e
+tópicos.
+</p> 
+<p class='indent'>       Os diferentes tipos de usuários com acesso ao MCTest foram apresentados, incluindo
+administrador, coordenador e professor, juntamente com suas respectivas permissões e responsabilidades
+específicas.
+</p> 
+<p class='indent'>       O administrador foi identificado como o usuário com maior privilégio, possuindo acesso irrestrito a
+todas as funcionalidades e dados do sistema. Sua responsabilidade abrange a configuração do sistema,
+criação e gerenciamento de outros usuários, bem como a definição de parâmetros gerais do
+MCTest.
+</p> 
+<p class='indent'>       O coordenador, por sua vez, possui um conjunto de ferramentas específicas para gerenciar a
+disciplina, permitindo a criação e manutenção de tópicos relevantes para o andamento das aulas, bem
+como a criação de turmas e seus respectivos estudantes. É importante ressaltar que o acesso às
+configurações gerais do sistema é restrito ao administrador. Além disso, o coordenador pode cadastrar
+outros coordenadores e professores para colaborarem na gestão da disciplina. Uma funcionalidade
+interessante disponível ao coordenador é a criação de turmas por meio da importação de arquivos
+CSV, prática que favorece a organização e evita possíveis erros durante a inserção manual de
+dados.
+</p> 
+<p class='indent'>       O professor tem acesso mais restrito em comparação com o coordenador e o administrador. Sua
+responsabilidade abrange a criação e manutenção dos exames, turmas e estudantes atribuídos a ele,
+assim como a elaboração e utilização de questões da disciplina. No entanto, ele não possui
+permissão para cadastrar ou editar disciplinas, ou tópicos, reservadas ao coordenador e ao
+administrador.
+</p> 
+<p class='indent'>       Os detalhes específicos de cada funcionalidade atribuída a esses usuários serão abordados em
+capítulos futuros, fornecendo informações detalhadas sobre as ferramentas disponíveis para cada
+perfil, bem como as ações que podem ser realizadas no sistema.
+</p> 
+<p class='indent'>       As entidades questão e exame desempenham papéis fundamentais no MCTest, e suas descrições
+detalhadas serão realizadas nas Partes <a href='livropa2.xhtml#questoes-no-mctest'>II<!-- tex4ht:ref: part:questoesMCTest  --></a> e <a href='livropa3.xhtml#exames-no-mctest'>III<!-- tex4ht:ref: part:exames  --></a>, respectivamente.
+</p> 
+<p class='indent'>       A elaboração de questões parametrizadas representa o aspecto mais desafiador do sistema,
+exigindo criatividade, conhecimento da sintaxe LaTeX e domínio da linguagem Python. No entanto, após
+a criação bem-sucedida dessas questões, elas podem ser reutilizadas em diversos exames,
+desde que adequadamente parametrizadas. Essa característica simplifica a criação de novos
+exames.
+</p> 
+<p class='indent'>       A entidade exame, por sua vez, é considerada o elemento central do sistema, uma vez que todo o
+processo avaliativo é construído em torno dela. Os exames representam a ferramenta por meio da qual os
+                                                                                                  
+                                                                                                  
+estudantes são avaliados e os resultados obtidos, tornando essa entidade indispensável para o êxito do
+MCTest como um sistema de avaliação educacional.
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+       </p> 
+<!-- l. 1 --><div class='crosslinks'><p class='noindent'></p></div>
+        
+</body> 
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html> 
+<html lang='pt' xmlns:epub='http://www.idpf.org/2007/ops' xmlns='http://www.w3.org/1999/xhtml'> 
+<head><title>8 Exames com QR+QM e/ou QT</title> 
+<meta charset='UTF-8' /> 
+<meta content='TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)' name='generator' /> 
+<link href='livro.css' rel='stylesheet' type='text/css' /> 
+</head><body>
+       <!-- l. 1 --><div class='crosslinks'><p class='noindent'></p></div>
+       <h2 class='chapterHead' id='exames-com-qrqm-eou-qt'><span class='titlemark'>Capítulo 8</span><br /><a id='x24-1030008'></a>Exames com QR+QM e/ou QT</h2>
+       <hr />
+       <hr />
+       <div class='tcolorbox mybox' id='tcolobox-66'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12x-x-120'>Conteúdo</span>___________________________________________________________________________
+</p> 
+ 
+</div> 
+</div>
+<p class='indent'>       Este capítulo complementa o anterior, fornecendo detalhes sobre o processo de criação e
+correção de exames que envolvem tanto o Quadro de Respostas (QR) quanto os enunciados das questões
+de múltipla escolha (QMs), como exemplificado nos Capítulos <a href='livroch4.xhtml#questoes-estaticas'>4<!-- tex4ht:ref: ch:questoesClassicasMCTest  --></a> – <a href='livroch4.xhtml#questoes-estaticas'>Questões estáticas<!-- tex4ht:ref: ch:questoesClassicasMCTest  --></a> e <a href='livroch5.xhtml#questoes-parametricas'>5<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a> – <a href='livroch5.xhtml#questoes-parametricas'>Questões
+paramétricas<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a> para questões com código em Python.
+</p> 
+<p class='indent'>       Esse estilo de exame com QR+QM tem sido amplamente utilizado na Especialização em
+Tecnologia e Sistemas de Informação (TSI) da UFABC, como introduzido no Capítulo <a href='livroch1.xhtml#introducao'>1<!-- tex4ht:ref: ch:introducao  --></a>, nos
+processos seletivos desde 2017. Anteriormente, desde 2012, já se utilizava o MCTest em versões
+anteriores, com QR+QM, porém em um formato de exame que empregava editores de texto
+como o Word ou o BROffice, com uma única folha frente e verso, para evitar a necessidade de
+grampear as folhas de milhares de candidatos nos processos seletivos. O avanço significativo no
+MCTest ocorreu na versão 4, quando passou a ser possível criar os exames utilizando o LaTeX,
+o que permitiu também a inclusão de blocos de código Python para a elaboração de
+questões paramétricas, conforme apresentado no Capítulo <a href='livroch5.xhtml#questoes-parametricas'>5<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a> – <a href='livroch5.xhtml#questoes-parametricas'>Questões paramétricas<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a>.
+A versão mais recente do MCTest, disponível na web, possibilitou o armazenamento das
+questões em um banco de dados, juntamente com toda uma estrutura para gerenciar um sistema
+acadêmico voltado exclusivamente para avaliações. Esses avanços têm sido objeto de diversas
+publicações e também motivaram a escrita deste livro, com o intuito de registrar as principais
+características de tudo o que foi desenvolvido e validado em avaliações dos mais diversos
+estilos.
+</p> 
+<p class='indent'>       Além das QMs, também é possível incluir questões dissertativas (QTs) nos exames, após a
+apresentação das QMs. Essa abordagem permite uma maior diversidade nos tipos de questões e uma
+avaliação mais abrangente das habilidades dos estudantes.
+</p> 
+<p class='indent'>       No Capítulo <a href='livroch6.xhtml#visao-geral-dos-exames'>6<!-- tex4ht:ref: ch:exames  --></a> – <a href='livroch6.xhtml#visao-geral-dos-exames'>Visão geral dos exames<!-- tex4ht:ref: ch:exames  --></a>, foi introduzido como criar exames contendo QR+QM,
+abordando detalhes sobre o formulário do exame. Agora, será colocada em prática a criação
+de exemplos de exames contendo QR+QM+QT, além de detalhar o processo de correção
+automática.
+<a id='x24-103001r186'></a>
+       </p> 
+
+                                                                                                  
+                                                                                                  
+       <h3 class='sectionHead' id='criando-qms-e-uma-qt'><span class='titlemark'>8.1   </span> <a id='x24-1040001'></a>Criando QMs e uma QT</h3>
+<p class='noindent'>Uma forma prática de criar questões não paramétricas no MCTest é utilizando um arquivo TXT com
+todas as questões, conforme introduzido na Seção <a href='livroch4.xhtml#tutoriais-gerais-sobre-a-navegacao-de-questoes'>4.1<!-- tex4ht:ref: sec:questaoNavegacao  --></a> – <a href='livroch4.xhtml#tutoriais-gerais-sobre-a-navegacao-de-questoes'>Tutoriais gerais sobre a navegação de
+questões<!-- tex4ht:ref: sec:questaoNavegacao  --></a>. Antes de prosseguir com a criação das questões, é necessário criar o tópico,
+por exemplo, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>DE-TIC</span></span></span> da disciplina, seguindo as instruções apresentadas na Seção <a href='livroch2.xhtml#topico'>2.2.5<!-- tex4ht:ref: sec:topicos  --></a> –
+<a href='livroch2.xhtml#topico'>Tópico<!-- tex4ht:ref: sec:topicos  --></a>.
+</p> 
+<p class='indent'>       A seguir, serão apresentadas sete questões que serão incluídas no MCTest. Serão duas
+questões para o nível de dificuldade fácil (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>QE</span></span></span>), ou dificuldade 1, duas questões para o nível de
+dificuldade médio (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>QM</span></span></span>), ou dificuldade 3, e três questões para o nível de dificuldade difícil (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>QH</span></span></span>), ou
+dificuldade 5. Para otimizar o processo de <span class='cmti-12'>upload</span>, sugere-se agrupá-las em um único arquivo
+TXT.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox myboxCode' id='tcolobox-67'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo CSV, questões fáceis</span>_________________________________________________________________________
+</p> 
+<pre class='verbatim' id='verbatim-14'>
+QE::DE-TIC::
+Qual é o componente principal de um computador que armazena dados e programas?
+A: Memória RAM % alternativa correta - sempre a primeira
+A: Placa-mãe
+A: Processador
+A: Teclado
+A: Placa de vídeo
+
+QE::DE-TIC::
+Qual dos seguintes dispositivos é usado exclusivamente para entrada de dados em um computador?
+A: Teclado
+A: Impressora
+A: Caixa de som
+A: Monitor
+A: Placa de vídeo
+</pre>
+<p class='noindent'> </p> 
+ 
+</div> 
+</div>
+       <div class='tcolorbox myboxCode' id='tcolobox-68'>    
+<div class='tcolorbox-title'>
+                                                                                                  
+                                                                                                  
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo CSV, questões de nível médio</span>__________________________________________________________
+</p> 
+<pre class='verbatim' id='verbatim-15'>
+QM::DE-TIC::
+O que significa a sigla HTML?
+A: HyperText Markup Language
+A: High Technical Machine Language
+A: Home Tool Management Language
+A: Hyper Transfer Machine Learning
+A: Hardware Technical Maintenance Language
+
+QM::DE-TIC::
+Qual das seguintes linguagens de programação é amplamente utilizada para o desenvolvimento de
+sites dinâmicos?
+A: JavaScript
+A: HTML
+A: CSS
+A: Python
+A: C++
+</pre>
+<p class='noindent'> </p> 
+ 
+</div> 
+</div>
+       <div class='tcolorbox myboxCode' id='tcolobox-69'>    
+<div class='tcolorbox-title'>
+                                                                                                  
+                                                                                                  
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo CSV, questões difíceis</span>______________________________________________________________________
+</p> 
+<pre class='verbatim' id='verbatim-16'>
+QH::DE-TIC::
+Qual das seguintes opções representa corretamente um endereço IP válido?
+A: 127.0.0.1
+A: 192.168.0.300
+A: 10.0.0.256
+A: 172.16.0.0
+A: 256.256.256.256
+
+QH::DE-TIC::
+Qual dos seguintes protocolos de internet é utilizado para enviar e-mails?
+A: SMTP
+A: FTP
+A: HTTP
+A: DNS
+A: SSH
+
+QH::DE-TIC::
+Qual é o resultado da soma dos números hexadecimais 7C e 54?
+A: D0
+A: F0
+A: D4
+A: D1
+A: E0
+</pre>
+<p class='noindent'> </p> 
+ 
+</div> 
+</div>
+<p class='indent'>       A questão apresentada no Código <a href='#x24-104022r1'>8.1<!-- tex4ht:ref: lst:questaoQT_exata  --></a> é um exemplo de QT que contém um valor exato
+como resposta correta, delimitado pelos marcadores <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>%%{</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>}%%</span></span></span>, conforme indicado na linha 5 do
+código. Neste caso, é utilizada a palavra “exata” como exemplo para ilustrar o funcionamento
+dessa abordagem. Na linha 7 do código, são desenhadas 10 linhas para que o estudante possa
+responder à questão. Na próxima seção, será explorada essa funcionalidade com mais
+detalhes.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-de-qt-com-resposta-exata-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-70'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb15'><a id='x24-104009r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Descreva brevemente a importância da tecnologia da informação (TI) na</span> 
+<a id='x24-104011r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>sociedade moderna e mencione pelo menos duas áreas onde a TI desempenha</span> 
+<a id='x24-104013r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>um papel fundamental</span><span id='textcolor752'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x24-104015r4'></a><span class='cmr-6'>4</span> 
+<a id='x24-104017r5'></a><span class='cmr-6'>5</span><span id='textcolor753'><span class='cmtt-10x-x-109'>%%</span></span><span class='cmtt-10x-x-109'>{exata}</span><span id='textcolor754'><span class='cmtt-10x-x-109'>%%</span></span> 
+<a id='x24-104019r6'></a><span class='cmr-6'>6</span> 
+<a id='x24-104021r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>\drawLines{</span><span id='textcolor755'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>}</span></pre>
+ 
+</div> 
+</div>
+<a id='x24-104022r1'></a>
+<a id='x24-104023'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Ao criar o exame, selecione as sete QMs, escolhendo duas questões em cada nível de dificuldade,
+conforme ilustrado na Figura <a href='#x24-104024r1'>8.1<!-- tex4ht:ref: fig:cap08_figexameQR_QT  --></a>. Além disso, inclua uma QT como exemplo. Certifique-se de marcar a
+opção “Respostas/Questões/Ambos=Ambos” para incluir tanto o QR quanto as questões (QM e QT)
+no exame. Mais informações sobre essa configuração podem ser encontradas na Seção <a href='livroch6.xhtml#recorte-iv-da-tela-de-exame-configurando-os-detalhes'>6.5<!-- tex4ht:ref: sec:exameDetalhes  --></a> – <a href='livroch6.xhtml#recorte-iv-da-tela-de-exame-configurando-os-detalhes'>Recorte
+IV da tela de exame – configurando os detalhes<!-- tex4ht:ref: sec:exameDetalhes  --></a>.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-da-tela-de-configuracao-do-exame-'><img alt='PIC' height='461' src='./figs-br//cap08_figexameQR_QT.png' width='460' /> <a id='x24-104024r1'></a>
+<a id='x24-104025'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 8.1: </span><span class='content'>Recorte da tela de configuração do exame.                                          </span></figcaption><!-- tex4ht:label?: x24-104024r8  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x24-104026r188'></a></p>
+       <h3 class='sectionHead' id='criando-as-variacoes'><span class='titlemark'>8.2   </span> <a id='x24-1050002'></a>Criando as variações</h3>
+<p class='noindent'>Antes de criar o PDF do exame, é necessário criar as variações clicando no botão “Criar-Variações”
+(observe que ao lado deste botão há um ID inicialmente definido como 0, que será alterado quando o
+botão for pressionado). É importante detalhar mais essa opção, conforme ilustrado na Figura
+<a href='#x24-105001r2'>8.2<!-- tex4ht:ref: fig:cap08_figexameCriarVariacoes  --></a>.
+</p> 
+<p class='indent'>       Ao marcar a opção “Json”, se a questão for de integração entre MCTest, Moodle e VPL, será
+enviado ao e-mail do professor um arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>linker.json</span></span></span> contendo os casos de teste a serem incluídos na
+atividade VPL do Moodle. Se a opção “Template” for selecionada, será criado um arquivo CSV
+contendo o gabarito das QMs, bem como QTs com respostas curtas, para ser possível comparar as
+respostas exatas, caractere por caractere.
+</p> 
+<p class='indent'>       As opções “Aiken” e “XML” são utilizadas para gerar arquivos que podem ser importados para
+criar um banco de questões no Moodle. Por fim, ao selecionar a opção “LaTeX+PDF”, o professor
+receberá um PDF contendo todas as variações do exame. No exemplo ilustrado na Figura
+<a href='#x24-104024r1'>8.1<!-- tex4ht:ref: fig:cap08_figexameQR_QT  --></a>, foram criadas apenas duas variações. Vale ressaltar que existem artigos validando cada
+método utilizado nesses botões, os quais serão detalhados na parte de experimentos deste
+livro.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-da-tela-de-configuracao-do-exame-detalhando-o-botao-criarvariacoes-'><img alt='PIC' height='461' src='./figs-br//cap08_figexameCriarVariacoes.png' width='460' /> <a id='x24-105001r2'></a>
+<a id='x24-105002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 8.2: </span><span class='content'>Recorte da tela de configuração do exame, detalhando o botão “Criar-Variações”.</span></figcaption><!-- tex4ht:label?: x24-105001r8  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Assim, antes de criar o PDF do exame, marque a opção “Template” na Figura <a href='#x24-105001r2'>8.2<!-- tex4ht:ref: fig:cap08_figexameCriarVariacoes  --></a> para receber o
+gabarito e clique em “Criar-Variações”. Nesse exemplo, uma nova aba será aberta no navegador
+exibindo a mensagem apresentada na Figura <a href='#x24-105003r3'>8.3<!-- tex4ht:ref: fig:cap08_figexameCriarVariacoesMsg  --></a>.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-mensagem-apos-clicar-no-botao-criarvariacoes-'><img alt='PIC' height='461' src='./figs-br//cap08_figexameCriarVariacoesMsg.png' width='460' /> <a id='x24-105003r3'></a>
+<a id='x24-105004'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 8.3: </span><span class='content'>Mensagem após clicar no botão “Criar-Variações”.                               </span></figcaption><!-- tex4ht:label?: x24-105003r8  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x24-105005r191'></a></p>
+       <h3 class='sectionHead' id='detalhando-os-gabaritos-no-arquivo-csv'><span class='titlemark'>8.3   </span> <a id='x24-1060003'></a>Detalhando os gabaritos no arquivo CSV</h3>
+<p class='noindent'>Após clicar em “Criar-Variações”, selecionando antes a opção “Template”, o professor
+receberá um e-mail contendo o seguinte arquivo com os gabaritos, conforme ilustrado na Figura
+<a href='#x24-106001r4'>8.4<!-- tex4ht:ref: fig:cap08_figexameCriarVariacoesEmail  --></a>.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox myboxCode' id='tcolobox-71'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo CSV, com os gabaritos (as colunas são separadas por vírgula)</span>__________________
+</p> 
+<pre class='verbatim' id='verbatim-17'>
+variation Q1 Q2 Q3 Q4 Q5 Q6    Q7     K1        K2        K3        K4        K5        K6
+    0      A  B  C  A  A  A exata 245604231 245540123 245823041 245703214 245904132 246002413
+    1      C  A  B  E  A  E exata 245612043 245503421 245830214 245741320 246104132 246032140
+</pre>
+<p class='noindent'> </p> 
+ 
+</div> 
+</div>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-email-enviado-ao-professor-apos-clicar-no-botao-criarvariacoes-'><img alt='PIC' height='461' src='./figs-br//cap08_figexameCriarVariacoesEmail.png' width='460' /> <a id='x24-106001r4'></a>
+<a id='x24-106002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 8.4: </span><span class='content'>E-mail enviado ao professor após clicar no botão “Criar-Variações”.              </span></figcaption><!-- tex4ht:label?: x24-106001r8  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       No arquivo em questão, a primeira coluna <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>variation</span></span></span> apresenta a variação do exame. No
+exemplo mostrado na Figura <a href='#x24-104024r1'>8.1<!-- tex4ht:ref: fig:cap08_figexameQR_QT  --></a>, foram escolhidas apenas duas variações, identificadas como variação
+0 e variação 1. Em seguida, são apresentadas as respostas corretas para cada uma das sete questões do
+exame, identificadas como <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q1</span></span></span> até <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q7</span></span></span>.
+</p> 
+<p class='indent'>       A questão <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q7</span></span></span> é uma QT e foi definida em seu enunciado a sequência <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>%%{exata}%%</span></span></span>, indicando
+para o MCTest que essa questão tem uma resposta exata contendo o texto “exata”. É importante
+ressaltar que é possível incluir questões paramétricas, onde cada variação pode apresentar uma
+resposta correta diferente. Essa flexibilidade é discutida em detalhes no trabalho de Zampirolli, Batista,
+Iriarte e Junior (2020), que descreve a aplicação dessas técnicas na disciplina de Cálculo 1. Na parte de
+experimentos deste livro, essas abordagens serão apresentadas de forma mais detalhada, explorando suas
+aplicações e resultados.
+</p> 
+<p class='indent'>       Após as respostas corretas, são criadas novas colunas de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>K1</span></span></span> até <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>K6</span></span></span> para detalhar o sorteio
+realizado em cada variação do exame para as QMs. Por exemplo, na variação 1 (segunda
+variação), a questão <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>K1</span></span></span> tem o valor 245612043. Como são QMs com 5 alternativas, o valor 12043
+indica a ordem das alternativas da questão 2456 (ID da questão no banco de dados). Sabendo
+que a alternativa correta sempre é a primeira (índice 0), pode-se concluir que a alternativa
+correta para essa questão é a letra C. Portanto, a alternativa A corresponde à segunda
+alternativa no banco de dados (índice 1), a alternativa B corresponde à terceira (índice 2), a
+alternativa C corresponde à primeira correta (índice 0), a alternativa D corresponde à quinta
+(índice 4) e a alternativa E corresponde à quarta (índice 3), resultando na sequência
+12043.
+</p> 
+<p class='indent'>       Ao analisar o sorteio das questões em ambas as variações, foram selecionadas sete QMs. No
+entanto, para cada exame, apenas seis questões serão sorteadas, conforme a configuração
+previamente definida. No arquivo CSV, é possível observar que apenas a questão <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q5</span></span></span> apresentou
+variações diferentes das demais questões (consulte a coluna <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>K5</span></span></span>, com questões de ID 2459 e
+2461).
+</p> 
+<p class='indent'>       Uma estrutura de atribuição de pesos diferentes para cada alternativa marcada é
+detalhada no trabalho de Zampirolli, Batista, Iriarte e Junior (2020), onde são apresentadas
+abordagens para avaliar o desempenho dos estudantes considerando a relevância das respostas em
+QMs.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox mybox' id='tcolobox-72'>    
+<div class='tcolorbox-title'>
+                                                                                                  
+                                                                                                  
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+<p class='indent'>É extremamente importante verificar se o gabarito gerado corresponde ao PDF que será
+distribuído aos estudantes.
+        </p> 
+<dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+    1.  </dt><dd class='enumerate-enumitem'>O  ID  da  variação  será  alterado  toda  vez  que  o  botão  “Criar-Variações”  for
+        acionado;
+        </dd><dt class='enumerate-enumitem'>
+    2.  </dt><dd class='enumerate-enumitem'>Esse número de ID também será impresso no PDF gerado, abaixo do cabeçalho
+        do exame, em vermelho. Por exemplo, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>#E477#V60970 -- 2023-07-09 -- 14:58:34</span></span></span>. No
+        exemplo mencionado, o exame possui o ID 477 e a variação é 60970;
+        </dd><dt class='enumerate-enumitem'>
+    3.  </dt><dd class='enumerate-enumitem'>No momento em que o botão “Criar-Variações” é acionado, uma “fotografia” das
+        questões selecionadas no exame é armazenada no banco de dados para cada variação.
+        Essa “fotografia” representa o estado atual das questões e é independente de eventuais
+        alterações realizadas posteriormente pelo coordenador da disciplina ou professor que
+        criou alguma destas questões. Esse recurso de segurança garante que as variações
+        do exame permaneçam consistentes, mesmo que haja modificações nas questões
+        originais.</dd></dl>
+ 
+</div> 
+</div>
+<p><a id='x24-106006r194'></a></p>
+       <h3 class='sectionHead' id='criando-o-pdf-do-exame-com-qrqmqt'><span class='titlemark'>8.4   </span> <a id='x24-1070004'></a>Criando o PDF do exame com QR+QM+QT</h3>
+<p class='noindent'>Após a criação das variações, a próxima etapa do processo de criação do exame consiste em gerar
+o PDF contendo os QRs, as QMs e QTs, caso estejam presentes no exame. Essa etapa é realizada ao clicar
+no botão “Criar-PDF” no painel de configuração do exame.
+</p> 
+<p class='indent'>       Ao gerar o PDF, todas as variações do exame serão incluídas, garantindo a diversificação das
+questões e respostas. Os QRs serão apresentados para os estudantes poderem preencher suas respostas, e
+as QMs e QTs serão apresentadas conforme a configuração do exame. A ordem das questões impressas
+no PDF gerado segue a ordem de dificuldade de 1 a 5 para as QMs. Em seguida, as QTs serão
+apresentadas na mesma ordem.
+</p> 
+<p class='indent'>       É de extrema importância revisar o PDF gerado para garantir a correta formatação das
+questões, respostas e demais elementos antes de disponibilizá-lo aos estudantes. Além disso, é válido
+ressaltar que será criado um PDF para cada turma selecionada no exame, conforme detalhado na Seção
+<a href='livroch6.xhtml#recorte-ii-da-tela-de-exame-turmas'>6.3<!-- tex4ht:ref: sec:exameTurmas  --></a> – <a href='livroch6.xhtml#recorte-ii-da-tela-de-exame-turmas'>Recorte II da tela de exame – turmas<!-- tex4ht:ref: sec:exameTurmas  --></a>. No contexto do exame criado nas seções anteriores, foi gerado
+o PDF ilustrado na Figura <a href='#x24-107001r5'>8.5<!-- tex4ht:ref: fig:cap08_figexameQR_QM_QT_PDF  --></a>.
+                                                                                                  
+                                                                                                  
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-do-exame-gerado-apos-a-acao-do-botao-criarpdf-'><img alt='PIC' height='461' src='./figs-br//cap08_figexameQR_QM_QT_PDF.png' width='460' /> <a id='x24-107001r5'></a>
+<a id='x24-107002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 8.5: </span><span class='content'>Recorte do PDF do exame gerado após a ação do botão “Criar-PDF”.            </span></figcaption><!-- tex4ht:label?: x24-107001r8  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Após a geração do PDF do exame, será enviado por e-mail ao professor o arquivo LaTeX
+correspondente a cada turma selecionada. Esse arquivo pode ser útil caso o professor deseje realizar
+alterações manuais no exame, embora seja importante ressaltar que o QRcode é específico de cada
+estudante, para garantir a correção automática. No exemplo fornecido, o arquivo gerado é o
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>_e477_class_670_varID_60970.tex</span></span></span>.
+</p> 
+<p class='indent'>       Além do arquivo LaTeX, o e-mail também conterá um arquivo CSV anexado, que apresenta as
+variações sorteadas para cada estudante. No exemplo mencionado, o arquivo é denominado
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>report_Exam_477_varID_60970_students_variations.csv</span></span></span>. Caso haja mais turmas selecionadas para o
+exame, todos os estudantes de todas as turmas serão listados em um único arquivo CSV, que corresponde
+ao exame com o ID 477.
+</p> 
+<p class='indent'>       Ao observar a Figura <a href='#x24-107003r6'>8.6<!-- tex4ht:ref: fig:cap08_figexameCriarPDF_Email  --></a>, é possível verificar um trecho do e-mail encaminhado ao professor após
+acionar o botão “Criar-PDF” contendo os três arquivos a seguir:
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox myboxCode' id='tcolobox-73'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivos anexados ao e-mail enviado ao professor</span>_________________________________________________
+</p> 
+<pre class='verbatim' id='verbatim-18'>
+_e477_class_670_varID_60970.pdf
+_e477_class_670_varID_60970.tex
+report_Exam_477_varID_60970_students_variations.csv
+</pre>
+<p class='noindent'></p> 
+ 
+</div> 
+</div>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-email-enviado-ao-professor-apos-clicar-no-botao-criarpdf-'><img alt='PIC' height='461' src='./figs-br//cap08_figexameCriarPDF_Email.png' width='460' /> <a id='x24-107003r6'></a>
+<a id='x24-107004'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 8.6: </span><span class='content'>E-mail enviado ao professor após clicar no botão “Criar-PDF”.                      </span></figcaption><!-- tex4ht:label?: x24-107003r8  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <div class='tcolorbox myboxCode' id='tcolobox-74'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo CSV, com as variações de cada estudante (as colunas são separadas por
+</span><span class='cmbx-10x-x-109'>vírgula)</span>______________________________________________________________________________________________________
+</p> 
+<pre class='verbatim' id='verbatim-19'>
+Name                          Variation
+Estudante Exemplo Sobrenome      1
+</pre>
+<p class='noindent'></p> 
+ 
+</div> 
+</div>
+       <div class='tcolorbox mybox' id='tcolobox-75'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+<p class='indent'>Foi adotado o seguinte critério de sorteio de variações para os estudantes:
+        </p> 
+<dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+    1.  </dt><dd class='enumerate-enumitem'>Se o número de variações definido for menor que o número de estudantes em cada
+        turma, será sorteada uma variação para os estudantes baseado no <span class='cmti-12'>hash  </span>gerado a
+        partir do nome e sobrenome do estudante. Dessa forma, ao clicar em “Criar-PDF”, será
+        atribuída a mesma variação para cada estudante;
+        </dd><dt class='enumerate-enumitem'>
+    2.  </dt><dd class='enumerate-enumitem'>Caso contrário, ou seja, se o número de variações definido no exame for maior ou
+        igual que o número de estudantes da turma, será sorteada uma variação diferente
+        para cada estudante a cada vez que o botão “Criar-PDF” for acionado.</dd></dl>
+ 
+</div> 
+</div>
+<p><a id='x24-107007r196'></a></p>
+       <h3 class='sectionHead' id='corrigindo-exames-com-qrqm'><span class='titlemark'>8.5   </span> <a id='x24-1080005'></a>Corrigindo exames com QR+QM</h3>
+<p class='noindent'>Ao corrigir exames que contêm QR e QMs utilizando o MCTest, o processo é mais simples em
+comparação com a correção de exames apenas com QR, conforme detalhado na Seção <a href='livroch7.xhtml#corrigindo-exames-com-qr'>7.3<!-- tex4ht:ref: sec:examesCorrigirQR  --></a> –
+<a href='livroch7.xhtml#corrigindo-exames-com-qr'>Corrigindo exames com QR<!-- tex4ht:ref: sec:examesCorrigirQR  --></a>.
+</p> 
+<p class='indent'>       O gabarito de cada exame é armazenado no servidor do MCTest. Ele é identificado através
+da decodificação do QRcode, sendo criptografado e compactado, como ilustrado na Figura
+<a href='#x24-107001r5'>8.5<!-- tex4ht:ref: fig:cap08_figexameQR_QM_QT_PDF  --></a>.
+</p> 
+<p class='indent'>       É possível verificar as respostas correspondentes ao gabarito apresentado no CSV na Seção <a href='#detalhando-os-gabaritos-no-arquivo-csv'>8.3<!-- tex4ht:ref: sec:QMgabarito  --></a> –
+<a href='#detalhando-os-gabaritos-no-arquivo-csv'>Detalhando os gabaritos no arquivo CSV<!-- tex4ht:ref: sec:QMgabarito  --></a>, considerando a variação 1, conforme apresentado no CSV da
+                                                                                                  
+                                                                                                  
+seção anterior. Portanto, as respostas para as questões <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q1</span></span></span> até <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q7</span></span></span> são, respectivamente:
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>C, A, B, E, A, E, exata</span></span></span>.
+</p> 
+<p class='indent'>       Imprimindo o PDF apresentado na Figura <a href='#x24-107001r5'>8.5<!-- tex4ht:ref: fig:cap08_figexameQR_QM_QT_PDF  --></a>, selecionando a opção “Retorno=Sim” e salvando o
+exame, preenchendo as questões, digitalizando e enviando para o botão “Upload-PDF”, o estudante
+receberá o <span class='cmti-12'>feedback </span>apresentado na Figura <a href='#x24-108001r7'>8.7<!-- tex4ht:ref: fig:cap08_figexameQR_QM_QT_PDFScan  --></a> por e-mail.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-do-exame-enviado-como-feedaback-por-email-ao-estudante-apos-a-acao-do-botao-uploadpdf-'><img alt='PIC' height='461' src='./figs-br//cap08_figexameQR_QM_QT_PDFScan.png' width='460' /> <a id='x24-108001r7'></a>
+<a id='x24-108002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 8.7: </span><span class='content'>Recorte do PDF do exame enviado como <span class='cmti-12'>feedaback  </span>por e-mail ao estudante, após a
+ação do botão “Upload-PDF”.                                                                </span></figcaption><!-- tex4ht:label?: x24-108001r8  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Além disso, o professor receberá as correções realizadas em um arquivo ZIP, conforme detalhado
+na Seção <a href='livroch7.xhtml#corrigindo-exames-com-qr'>7.3<!-- tex4ht:ref: sec:examesCorrigirQR  --></a>, que conterá os seguintes arquivos:
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox myboxCode' id='tcolobox-76'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivos gerados ao solicitar a correção do exame no botão “Upload-PDF”</span>__________
+</p> 
+<pre class='verbatim' id='verbatim-20'>
+_e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN__.csv
+_e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_irt.csv
+_e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_p001_s1_q006.png
+_e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_statistics.csv
+</pre>
+<p class='noindent'></p> 
+ 
+</div> 
+</div>
+<p class='indent'>       Conforme explicado na Seção <a href='livroch7.xhtml#arquivo-csv-com-as-correcoes'>7.3.1<!-- tex4ht:ref: sec:CSVcorrecoesQR  --></a> – <a href='livroch7.xhtml#arquivo-csv-com-as-correcoes'>Arquivo CSV com as correções<!-- tex4ht:ref: sec:CSVcorrecoesQR  --></a>, o primeiro arquivo CSV,
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>*_.csv</span></span></span>, apresenta o seguinte conteúdo:
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox myboxCode' id='tcolobox-77'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Conteúdo do arquivo </span><span class='cmtt-10x-x-109'>*_.csv </span><span class='cmbx-10x-x-109'>gerado (as colunas são separadas por vírgula)</span>___________
+</p> 
+<pre class='verbatim' id='verbatim-21'>
+Pag ID Resp Quest Inv Grad Q1  Q2  Q3  Q4 Q5 Q6     K1        K2        K3        K4        K5        K6
+1  001    5     6   1   1 E/C D/A C/B B/E A 2/E 245612043 245503421 245830214 245741320 246104132 246032140
+</pre>
+<p class='noindent'> </p> 
+ 
+</div> 
+</div>
+<p class='indent'>       No arquivo em questão, é possível observar nas colunas <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q1</span></span></span> até <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q6</span></span></span> a notação
+apresentada na Seção <a href='livroch7.xhtml#arquivo-csv-com-as-correcoes'>7.3.1<!-- tex4ht:ref: sec:CSVcorrecoesQR  --></a>, agora com a adição de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>resposta marcada/resposta correta</span></span></span>.
+Por exemplo, na questão <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q1</span></span></span> tem a notação <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>E/C</span></span></span>, indicando que a alternativa marcada pelo
+estudante foi a <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>E</span></span></span>, enquanto a resposta correta é a <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>C</span></span></span>. Também é possível notar a presença de
+uma questão inválida na coluna <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Inv</span></span></span>, referente à questão <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q6</span></span></span>, que apresenta o conteúdo
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>2/E</span></span></span>. Isso indica que duas alternativas foram marcadas, sendo que na Figura <a href='#x24-108001r7'>8.7<!-- tex4ht:ref: fig:cap08_figexameQR_QM_QT_PDFScan  --></a> é possível
+observar que a alternativa <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>A</span></span></span> foi marcada, mas também foi realizada uma pequena marcação na
+alternativa <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>E</span></span></span>, invalidando a questão. Neste exemplo, a única marcação correta é na questão
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q5</span></span></span>.
+</p> 
+<p class='indent'>       A Figura <a href='#x24-108001r7'>8.7<!-- tex4ht:ref: fig:cap08_figexameQR_QM_QT_PDFScan  --></a> apresenta um relatório com os dados do estudante, a nota obtida e os enunciados das
+questões, incluindo as marcações realizadas e a alternativa correta de cada questão. As colunas <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>K1</span></span></span>
+até <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>K6</span></span></span> foram previamente explicadas na Seção <a href='#detalhando-os-gabaritos-no-arquivo-csv'>8.3<!-- tex4ht:ref: sec:QMgabarito  --></a> – <a href='#detalhando-os-gabaritos-no-arquivo-csv'>Detalhando os gabaritos no arquivo
+CSV<!-- tex4ht:ref: sec:QMgabarito  --></a>.
+                                                                                                  
+                                                                                                  
+<a id='x24-108003r199'></a>
+       </p> 
+
+       <h3 class='sectionHead' id='recomendacoes-para-realizacao-tranquila-de-exames-presenciais'><span class='titlemark'>8.6   </span> <a id='x24-1090006'></a>Recomendações para realização tranquila de exames presenciais</h3>
+<p class='noindent'>Com base na experiência de inúmeros exames aplicados e corrigidos, é possível destacar algumas
+recomendações essenciais para garantir a realização tranquila do processo e permitir o melhor
+desempenho de todos os envolvidos:
+      </p> 
+<dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+   1. </dt><dd class='enumerate-enumitem'>Revisar  cuidadosamente  todas  as  questões,  a  fim  de  evitar  erros  ou  ambiguidades  que
+      comprometam a aplicação ou correção. Questões mal elaboradas podem prejudicar a
+      validade de todo o exame;
+      </dd><dt class='enumerate-enumitem'>
+   2. </dt><dd class='enumerate-enumitem'>Após selecionar as questões e configurar o estilo, crie as variações de exame marcando
+      a caixa “Template” ao lado do botão “Criar-Variações”. Isso assegura que o sistema gere
+      os gabaritos corretos e possibilite a correção automática por meio do QRCode (se houver
+      algum erro na leitura do QRCode durante a correção automática, o gabarito enviado por
+      e-mail deverá ser usado – certifique-se de guardar o arquivo CSV com cuidado);
+      </dd><dt class='enumerate-enumitem'>
+   3. </dt><dd class='enumerate-enumitem'>Cada  vez  que  você  clicar  em  “Criar-Variações”,  o  ID  será  alterado,  gerando  novas
+      variações com gabaritos diferentes no banco de dados. Para aplicar o exame, verifique se o
+      ID ao lado deste botão corresponde ao ID em vermelho no PDF do exame (não se esqueça
+      de atualizar a página para atualizar o ID). Isso é fundamental para garantir a correção
+      automática, pois o ID gerado deve sempre coincidir com o do exame aplicado;
+      </dd><dt class='enumerate-enumitem'>
+   4. </dt><dd class='enumerate-enumitem'>É viável empregar as variações existentes no banco de dados em múltiplas turmas, com
+      a simples modificação da turma no exame, seguida dos botões “Salvar” e “Criar-PDF”;
+      </dd><dt class='enumerate-enumitem'>
+   5. </dt><dd class='enumerate-enumitem'>Deixar “Retorno” como “Não” ao criar os exames, caso contrário elas serão enviadas aos
+      estudantes por e-mail antes da aplicação;
+      </dd><dt class='enumerate-enumitem'>
+   6. </dt><dd class='enumerate-enumitem'>Imprima um único exemplar do exame antes de produzir toda a tiragem, a fim de validar.
+      Preencha o exame, digitalize e solicite a correção automática enviando o PDF e selecionando
+      o botão “Upload-PDF”. Isso permite verificar se o sistema gerou o exame corretamente e
+      realizou a correção automática adequadamente. Além disso, verifique se todos os exames
+      ocupam apenas uma página frente e verso, evitando a necessidade de grampear folhas. Se todos
+      os PDFs gerados estiverem corretos, solicite a impressão no modo frente e verso, utilizando
+      uma impressora com bom toner. Por fim, verifique se a impressão foi realizada com sucesso,
+                                                                                                  
+                                                                                                  
+      garantindo que os quatro discos pretos que delimitam o QR estão intactos e sem cortes na
+      folha;
+      </dd><dt class='enumerate-enumitem'>
+   7. </dt><dd class='enumerate-enumitem'>Organizar os exames em ordem alfabética sobre as filas de carteiras da sala, de modo que os
+      estudantes não tenham dúvidas sobre qual é a deles. Isso garante que todos tenham acesso
+      aos seus exames de forma rápida e organizada. Esse processo geralmente leva cerca de 10
+      minutos para 100 exames;
+      </dd><dt class='enumerate-enumitem'>
+   8. </dt><dd class='enumerate-enumitem'>Instrua os estudantes a não utilizar fluidos de correção (conhecidos como “branquinho”)
+      ou  fazer  rascunhos  nos  espaços  designados  pelos  quatro  discos  pretos,  a  fim  de  evitar  a
+      interferência na correção automática dos gabaritos;
+      </dd><dt class='enumerate-enumitem'>
+   9. </dt><dd class='enumerate-enumitem'>Digitalizar somente a frente dos exames em um único arquivo PDF por turma para permitir
+      a correção em larga escala de maneira ágil e livre de erros. Evite o uso de impressoras que
+      possam “engolir” as folhas;
+      </dd><dt class='enumerate-enumitem'>
+  10. </dt><dd class='enumerate-enumitem'>Se ocorrer erro na decodificação do QRCode, é possível digitalizar apenas os exames com
+      erro, utilizando diferentes configurações de digitalização da impressora. Outra alternativa
+      é a correção manual, usando o gabarito enviado por e-mail. Certifique-se de verificar qual
+      é a variação do exame do estudante recebido por e-mail ao clicar em “Criar-PDF” e o
+      gabarito da variação recebida também por e-mail ao clicar em “Criar Variação”;
+      </dd><dt class='enumerate-enumitem'>
+  11. </dt><dd class='enumerate-enumitem'>Envie os resultados aos estudantes somente após validar as correções para assegurar que
+      tudo  ocorreu  conforme  o  esperado  e  não  há  erros.  Se  desejar  enviar  um  gabarito  aos
+      estudantes apenas com QR, sem as questões, marque “Retorno” como “SIM” e não selecione
+      a caixa abaixo do botão “Upload-PDF”. Em seguida, escolha o arquivo e clique no botão
+      para realizar a correção automática e enviar os <span class='cmti-12'>feedbacks </span>aos estudantes por e-mail.</dd></dl>
+<p class='indent'>       Seguir essas recomendações é crucial para a realização de exames presenciais tranquilamente.
+É essencial revisar as questões, criar variações e verificar os IDs tanto na página do exame quanto no
+PDF. Garantir a impressão correta do PDF, sem cortes no QR, é importante. Além disso, realizar a
+validação das correções antes de enviar os resultados assegura a qualidade e precisão do
+processo. Ao seguir essas recomendações, é possível promover a eficiência da correção
+automatizada.
+<a id='x24-109012r201'></a>
+       </p> 
+
+       <h3 class='sectionHead' id='consideracoes-finais6'><span class='titlemark'>8.7   </span> <a id='x24-1100007'></a>Considerações finais</h3>
+<p class='noindent'>Este capítulo abordou a criação e correção de exames que envolvem tanto o QR quanto as QMs,
+                                                                                                  
+                                                                                                  
+além das QTs. Essa combinação de questões permite uma avaliação abrangente das habilidades dos
+estudantes e tem sido amplamente utilizada na Especialização em Tecnologia e Sistemas de Informação
+(TSI) da UFABC, como mencionado no Capítulo <a href='livroch1.xhtml#introducao'>1<!-- tex4ht:ref: ch:introducao  --></a>.
+</p> 
+<p class='indent'>       No processo de criação dos exames, é necessário criar as QMs e QTs, seguindo as instruções
+fornecidas neste capítulo, bem como nos Capítulos <a href='livroch4.xhtml#questoes-estaticas'>4<!-- tex4ht:ref: ch:questoesClassicasMCTest  --></a> – <a href='livroch4.xhtml#questoes-estaticas'>Questões estáticas<!-- tex4ht:ref: ch:questoesClassicasMCTest  --></a> e <a href='livroch5.xhtml#questoes-parametricas'>5<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a> – <a href='livroch5.xhtml#questoes-parametricas'>Questões
+paramétricas<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a>. A utilização de arquivos TXT para criar as questões não paramétricas é uma
+abordagem prática e eficiente para inseri-las no MCTest. Além disso, é fundamental criar as variações
+do exame por meio do botão “Criar-Variações”. Essa etapa garante a diversificação das questões e
+respostas disponibilizadas aos estudantes.
+</p> 
+<p class='indent'>       Após a criação das variações, é possível gerar o PDF do exame, incluindo os QR, QM
+e QT, através do botão “Criar-PDF”. É essencial revisar o PDF gerado para garantir a
+formatação correta das questões, respostas e demais elementos antes de disponibilizá-lo aos
+estudantes.
+</p> 
+<p class='indent'>       Na etapa de correção dos exames, o processo é simplificado quando se utiliza o MCTest, pois o
+gabarito é armazenado no servidor. O gabarito é identificado através da decodificação do QRcode e
+pode ser verificado a partir do CSV dos gabaritos correspondentes, caso a opção “Template” tenha sido
+selecionada antes de clicar em “Criar-Variações”. As respostas corretas para cada questão podem ser
+obtidas dessa forma, como exemplificado no capítulo.
+</p> 
+<p class='indent'>       Ao enviar o PDF preenchido pelos estudantes através do botão “Upload-PDF”, e selecionar a
+opção “Retorno=Sim”, o estudante receberá um <span class='cmti-12'>feedback </span>detalhado por e-mail, contendo as correções
+realizadas. O professor também receberá um arquivo ZIP com as correções realizadas em formato CSV,
+além de vários outros arquivos já citados anteriormente, facilitando a análise e o registro das
+correções.
+</p> 
+<p class='indent'>       No próximo capítulo, serão explorados os formatos de arquivos Aiken e XML ao criar
+variações de um exame. Esses recursos são altamente úteis para a criação de bancos de questões no
+Moodle.
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+       </p> 
+<!-- l. 1 --><div class='crosslinks'><p class='noindent'></p></div>
+        
+</body> 
+</html>

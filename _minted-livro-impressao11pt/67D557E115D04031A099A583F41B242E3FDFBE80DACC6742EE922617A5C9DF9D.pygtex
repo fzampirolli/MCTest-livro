@@ -1,0 +1,47 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{[[}\PYG{n}{def}\PYG{p}{:}
+\PYG{k+kn}{import} \PYG{n+nn}{json}\PYG{o}{,} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} Passo 1: Criar os parâmetros do enunciado da questão}
+\PYG{n}{Linhas}\PYG{p}{,} \PYG{n}{Colunas} \PYG{o}{=}  \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Passo 2: Criar os casos de teste}
+\PYG{n}{inp\PYGZus{}list}\PYG{p}{,} \PYG{n}{out\PYGZus{}list} \PYG{o}{=} \PYG{p}{[],} \PYG{p}{[]}  \PYG{c+c1}{\PYGZsh{} Listas vazias para armazenar os casos de teste}
+\PYG{n}{casos\PYGZus{}teste} \PYG{o}{=} \PYG{l+m+mi}{2}  \PYG{c+c1}{\PYGZsh{} Número de casos de teste desejado}
+\PYG{c+c1}{\PYGZsh{} Aumentar esse número após validar a questão também na atividade VPL do Moodle}
+
+\PYG{k}{def} \PYG{n+nf}{matriz2texto}\PYG{p}{(}\PYG{n}{M}\PYG{p}{):}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Converte uma matriz em formato de texto.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{n}{texto} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}
+    \PYG{k}{for} \PYG{n}{linha} \PYG{o+ow}{in} \PYG{n}{M}\PYG{p}{:}
+        \PYG{n}{texto} \PYG{o}{+=} \PYG{l+s+s1}{\PYGZsq{} \PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{elemento}\PYG{l+s+si}{:}\PYG{l+s+s2}{1d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}} \PYG{k}{for} \PYG{n}{elemento} \PYG{o+ow}{in} \PYG{n}{linha}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}
+    \PYG{k}{return} \PYG{n}{texto}
+
+\PYG{c+c1}{\PYGZsh{} Para cada caso de teste:}
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{casos\PYGZus{}teste}\PYG{p}{):}
+
+    \PYG{c+c1}{\PYGZsh{}\PYGZgt{}\PYGZgt{}\PYGZgt{}\PYGZgt{} begin \PYGZhy{} casos de teste}
+    \PYG{c+c1}{\PYGZsh{} Gerar valores aleatórios entre 0 e 9 para a matriz}
+    \PYG{n}{M} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{p}{(}\PYG{n}{Linhas}\PYG{p}{,} \PYG{n}{Colunas}\PYG{p}{))}
+
+    \PYG{c+c1}{\PYGZsh{} Criar a entrada do caso de teste como uma string}
+    \PYG{n}{inp} \PYG{o}{=} \PYG{n}{matriz2texto}\PYG{p}{(}\PYG{n}{M}\PYG{p}{)} \PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}
+
+    \PYG{c+c1}{\PYGZsh{} Calcular o valor da parcela arredondado para duas casas decimais}
+    \PYG{n}{out} \PYG{o}{=} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}soma = }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{M}\PYG{p}{)}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
+    \PYG{c+c1}{\PYGZsh{}\PYGZlt{}\PYGZlt{}\PYGZlt{}\PYGZlt{} end \PYGZhy{} casos de teste}
+
+    \PYG{c+c1}{\PYGZsh{} Adicionar a entrada e saída do caso de teste às listas}
+    \PYG{n}{inp\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{inp}\PYG{p}{),} \PYG{n}{out\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{out}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Passo 3: Criar o dicionário com os casos de teste}
+\PYG{n}{cases} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{n}{cases}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}input\PYGZsq{}}\PYG{p}{]}  \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{inp\PYGZus{}list}\PYG{p}{)}\PYG{o}{.}\PYG{n}{tolist}\PYG{p}{()}
+\PYG{n}{cases}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}output\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{out\PYGZus{}list}\PYG{p}{)}\PYG{o}{.}\PYG{n}{tolist}\PYG{p}{()}
+\PYG{n}{moodle\PYGZus{}cases} \PYG{o}{=} \PYG{n}{json}\PYG{o}{.}\PYG{n}{dumps}\PYG{p}{(}\PYG{n}{cases}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Passo 4: Mostrar um exemplo no enunciado da questão}
+\PYG{n}{caso0\PYGZus{}inp}\PYG{p}{,} \PYG{n}{caso0\PYGZus{}out} \PYG{o}{=} \PYG{n}{cases}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}input\PYGZsq{}}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{cases}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}output\PYGZsq{}}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{c+c1}{\PYGZsh{}print(moodle\PYGZus{}cases) \PYGZsh{} para testar em uma IDE}
+\PYG{p}{]]}
+\end{Verbatim}

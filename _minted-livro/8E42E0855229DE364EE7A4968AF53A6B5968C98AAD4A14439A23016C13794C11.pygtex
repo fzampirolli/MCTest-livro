@@ -1,0 +1,34 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} Definição das variáveis que indicam o número de linhas e colunas da matriz}
+\PYG{n}{linhas}\PYG{p}{,} \PYG{n}{colunas} \PYG{o}{=} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{6}
+
+\PYG{c+c1}{\PYGZsh{} Inicialização da matriz M como uma lista vazia}
+\PYG{n}{M} \PYG{o}{=} \PYG{p}{[]}
+
+\PYG{c+c1}{\PYGZsh{} Loop para preenchimento da matriz M}
+\PYG{k}{for} \PYG{n}{l} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{linhas}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{} Inicialização da linha l da matriz M como uma lista vazia}
+    \PYG{n}{linha} \PYG{o}{=} \PYG{p}{[]}
+
+    \PYG{c+c1}{\PYGZsh{} Leitura da linha l da matriz como uma string separada por espaços em branco}
+    \PYG{n}{linhaChar} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{()}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{} \PYGZsq{}}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Loop para preencher a linha l da matriz M com os valores lidos pelo usuário}
+    \PYG{k}{for} \PYG{n}{c} \PYG{o+ow}{in} \PYG{n}{linhaChar}\PYG{p}{:}
+        \PYG{c+c1}{\PYGZsh{} Verificação se o caractere não é vazio}
+        \PYG{k}{if} \PYG{n}{c}\PYG{p}{:}
+            \PYG{c+c1}{\PYGZsh{} Conversão e inserção do valor na linha l da matriz M}
+            \PYG{n}{valor} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{c}\PYG{p}{)}
+            \PYG{n}{linha}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{valor}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Adição da linha l à matriz M}
+    \PYG{n}{M}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{linha}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Cálculo da soma de todos os elementos da matriz M utilizando o método sum}
+\PYG{n}{soma} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{M}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Impressão do resultado da soma}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}soma = }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{soma}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

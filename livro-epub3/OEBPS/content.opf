@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='utf-8' ?> 
+<package unique-identifier='dcidid' version='3.0' xmlns='http://www.idpf.org/2007/opf'> 
+<metadata xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:opf='http://www.idpf.org/2007/opf'> 
+<dc:title>MCTest:Como Criar e Corrigir Exames Parametrizados Automaticamente</dc:title> 
+<dc:language>pt</dc:language> 
+<dc:identifier id='dcidid'>http://example.com/livro</dc:identifier> 
+<dc:creator>Francisco de Assis Zampirolli</dc:creator> 
+
+<dc:date>2023-10-27T11:55:00Z</dc:date>  
+<meta property='dcterms:modified'>2023-10-27T11:55:00Z</meta></metadata>   
+<manifest> 
+<item href='livro.ncx' id='ncx' media-type='application/x-dtbncx+xml'></item> 
+<item href='livro.css' id='stylesheet' media-type='text/css'></item> 
+<item href='livro.xhtml' id='file1' media-type='application/xhtml+xml'></item> 
+<item href='livroli6.xhtml' id='file2' media-type='application/xhtml+xml' properties='nav'></item> 
+<item href='livroli8.xhtml' id='file3' media-type='application/xhtml+xml'></item> 
+<item href='livroli10.xhtml' id='file4' media-type='application/xhtml+xml'></item> 
+<item href='livroli1.xhtml' id='file5' media-type='application/xhtml+xml'></item> 
+<item href='livroli2.xhtml' id='file6' media-type='application/xhtml+xml'></item> 
+<item href='livroli3.xhtml' id='file7' media-type='application/xhtml+xml'></item> 
+<item href='livroli4.xhtml' id='file8' media-type='application/xhtml+xml'></item> 
+<item href='livroli5.xhtml' id='file9' media-type='application/xhtml+xml'></item> 
+<item href='livroli7.xhtml' id='file10' media-type='application/xhtml+xml'></item> 
+<item href='livroli9.xhtml' id='file11' media-type='application/xhtml+xml'></item> 
+<item href='livroli11.xhtml' id='file12' media-type='application/xhtml+xml'></item> 
+<item href='livroli12.xhtml' id='file13' media-type='application/xhtml+xml'></item> 
+<item href='livroch1.xhtml' id='file14' media-type='application/xhtml+xml'></item> 
+<item href='livropa1.xhtml' id='file15' media-type='application/xhtml+xml'></item> 
+<item href='livroch2.xhtml' id='file16' media-type='application/xhtml+xml'></item> 
+<item href='livroch3.xhtml' id='file17' media-type='application/xhtml+xml'></item> 
+<item href='livropa2.xhtml' id='file18' media-type='application/xhtml+xml'></item> 
+<item href='livroch4.xhtml' id='file19' media-type='application/xhtml+xml'></item> 
+<item href='livroch5.xhtml' id='file20' media-type='application/xhtml+xml'></item> 
+<item href='livropa3.xhtml' id='file21' media-type='application/xhtml+xml'></item> 
+<item href='livroch6.xhtml' id='file22' media-type='application/xhtml+xml'></item> 
+<item href='livroch7.xhtml' id='file23' media-type='application/xhtml+xml'></item> 
+<item href='livroch8.xhtml' id='file24' media-type='application/xhtml+xml'></item> 
+<item href='livroch9.xhtml' id='file25' media-type='application/xhtml+xml'></item> 
+<item href='livroch10.xhtml' id='file26' media-type='application/xhtml+xml'></item> 
+<item href='livropa4.xhtml' id='file27' media-type='application/xhtml+xml'></item> 
+<item href='livroch11.xhtml' id='file28' media-type='application/xhtml+xml'></item> 
+<item href='livroch12.xhtml' id='file29' media-type='application/xhtml+xml'></item> 
+<item href='livroch13.xhtml' id='file30' media-type='application/xhtml+xml'></item> 
+<item href='livroch14.xhtml' id='file31' media-type='application/xhtml+xml'></item> 
+<item href='livroli13.xhtml' id='file32' media-type='application/xhtml+xml'></item> 
+<item href='livroli14.xhtml' id='file33' media-type='application/xhtml+xml'></item> 
+ 
+<item href='./figs-br//cap01_MCTest-book-v3.png' id='figs-brcap01_MCTest-book-v3_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figMCTest.png' id='figs-brcap02_figMCTest_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figNavega01.png' id='figs-brcap02_figNavega01_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figNavega02.png' id='figs-brcap02_figNavega02_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figNavega03.png' id='figs-brcap02_figNavega03_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figNavega04.png' id='figs-brcap02_figNavega04_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figNavega05.png' id='figs-brcap02_figNavega05_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figInscrever.png' id='figs-brcap02_figInscrever_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figInstituto.png' id='figs-brcap02_figInstituto_png' media-type='image/png'></item>
+<item href='figs-br/cap02_figInstitutoCria.png' id='figs-brcap02_figInstitutoCria_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figInstitutoDetalha.png' id='figs-brcap02_figInstitutoDetalha_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figInstitutoRemover.png' id='figs-brcap02_figInstitutoRemover_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figCurso.png' id='figs-brcap02_figCurso_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figCursoCria.png' id='figs-brcap02_figCursoCria_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figCursoDetalha.png' id='figs-brcap02_figCursoDetalha_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figDisciplina.png' id='figs-brcap02_figDisciplina_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figDisciplinaCria.png' id='figs-brcap02_figDisciplinaCria_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figDisciplinaAtualiza2.png' id='figs-brcap02_figDisciplinaAtualiza2_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figDisciplinaDetalha.png' id='figs-brcap02_figDisciplinaDetalha_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figDisciplinaDetalha2.png' id='figs-brcap02_figDisciplinaDetalha2_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figTurma.png' id='figs-brcap02_figTurma_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figTurmaCriar.png' id='figs-brcap02_figTurmaCriar_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figTurmaAtualiza.png' id='figs-brcap02_figTurmaAtualiza_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figTurmaAtualiza2.png' id='figs-brcap02_figTurmaAtualiza2_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figTurmaAtualiza3.png' id='figs-brcap02_figTurmaAtualiza3_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figTopico.png' id='figs-brcap02_figTopico_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figTopicoAtualiza.png' id='figs-brcap02_figTopicoAtualiza_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figTopicoDetalha.png' id='figs-brcap02_figTopicoDetalha_png' media-type='image/png'></item>
+<item href='./figs-br//cap02_figTopicoDetalha2.png' id='figs-brcap02_figTopicoDetalha2_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figInstituto2.png' id='figs-brcap03_figInstituto2_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figCursoListar2.png' id='figs-brcap03_figCursoListar2_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figCursoCria2.png' id='figs-brcap03_figCursoCria2_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figCursoListar3.png' id='figs-brcap03_figCursoListar3_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figDisciplina2.png' id='figs-brcap03_figDisciplina2_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figAdminBD.png' id='figs-brcap03_figAdminBD_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figTopico2.png' id='figs-brcap03_figTopico2_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figDisciplina3.png' id='figs-brcap03_figDisciplina3_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figDisciplinaAtualiza2a.png' id='figs-brcap03_figDisciplinaAtualiza2a_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figDisciplinaAtualiza22.png' id='figs-brcap03_figDisciplinaAtualiza22_png' media-type='image/png'></item>
+<item href='./figs-br//cap03_figTurmaCSV.png' id='figs-brcap03_figTurmaCSV_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestao.png' id='figs-brcap04_figQuestao_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoErro.png' id='figs-brcap04_figQuestaoErro_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoView.png' id='figs-brcap04_figQuestaoView_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoMy.png' id='figs-brcap04_figQuestaoMy_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoCria.png' id='figs-brcap04_figQuestaoCria_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoCria2.png' id='figs-brcap04_figQuestaoCria2_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoAtualiza.png' id='figs-brcap04_figQuestaoAtualiza_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoAtualizaPDF.png' id='figs-brcap04_figQuestaoAtualizaPDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoAtualizaPDF2.png' id='figs-brcap04_figQuestaoAtualizaPDF2_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoAtualizaPDF3.png' id='figs-brcap04_figQuestaoAtualizaPDF3_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoAtualizaTesteMesa.png' id='figs-brcap04_figQuestaoAtualizaTesteMesa_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoAtualizaPDF4.png' id='figs-brcap04_figQuestaoAtualizaPDF4_png' media-type='image/png'></item>
+<item href='./figs-br//cap05_questaoQM_AreaCirculoPDF.png' id='figs-brcap05_questaoQM_AreaCirculoPDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap05_questaoQT_TesteMesaEx2PDF.png' id='figs-brcap05_questaoQT_TesteMesaEx2PDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap05_questaoQT_TesteMesaEx3PDF.png' id='figs-brcap05_questaoQT_TesteMesaEx3PDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap05_questaoQT_TesteMesaEx4PDF.png' id='figs-brcap05_questaoQT_TesteMesaEx4PDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap05_questaoQT_EP_1.png' id='figs-brcap05_questaoQT_EP_1_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExame.png' id='figs-brcap06_figExame_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExameCria.png' id='figs-brcap06_figExameCria_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExamePDF_QRpadrao.png' id='figs-brcap06_figExamePDF_QRpadrao_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExameAtualiza1.png' id='figs-brcap06_figExameAtualiza1_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExameAtualiza2.png' id='figs-brcap06_figExameAtualiza2_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExameAtualiza3.png' id='figs-brcap06_figExameAtualiza3_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExameAtualiza4.png' id='figs-brcap06_figExameAtualiza4_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figvertical.png' id='figs-brcap07_figvertical_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figinstrucoes.png' id='figs-brcap07_figinstrucoes_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_fighorizontal.png' id='figs-brcap07_fighorizontal_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figmaxHorizontal.png' id='figs-brcap07_figmaxHorizontal_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figmaxVertigal.png' id='figs-brcap07_figmaxVertigal_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figquestoesPorBloco.png' id='figs-brcap07_figquestoesPorBloco_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figquestoesPorBlocoScan1.png' id='figs-brcap07_figquestoesPorBlocoScan1_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figquestoesPorBlocoScan2.png' id='figs-brcap07_figquestoesPorBlocoScan2_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figquestoes_q002.png' id='figs-brcap07_figquestoes_q002_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figquestoes_q003.png' id='figs-brcap07_figquestoes_q003_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figquestoes_q004.png' id='figs-brcap07_figquestoes_q004_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figquestoes_q005.png' id='figs-brcap07_figquestoes_q005_png' media-type='image/png'></item>
+<item href='./figs-br//cap07_figFeedback.png' id='figs-brcap07_figFeedback_png' media-type='image/png'></item>
+<item href='./figs-br//cap08_figexameQR_QT.png' id='figs-brcap08_figexameQR_QT_png' media-type='image/png'></item>
+<item href='./figs-br//cap08_figexameCriarVariacoes.png' id='figs-brcap08_figexameCriarVariacoes_png' media-type='image/png'></item>
+<item href='./figs-br//cap08_figexameCriarVariacoesMsg.png' id='figs-brcap08_figexameCriarVariacoesMsg_png' media-type='image/png'></item>
+<item href='./figs-br//cap08_figexameCriarVariacoesEmail.png' id='figs-brcap08_figexameCriarVariacoesEmail_png' media-type='image/png'></item>
+<item href='./figs-br//cap08_figexameQR_QM_QT_PDF.png' id='figs-brcap08_figexameQR_QM_QT_PDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap08_figexameCriarPDF_Email.png' id='figs-brcap08_figexameCriarPDF_Email_png' media-type='image/png'></item>
+<item href='./figs-br//cap08_figexameQR_QM_QT_PDFScan.png' id='figs-brcap08_figexameQR_QM_QT_PDFScan_png' media-type='image/png'></item>
+<item href='./figs-br//cap09_questaoQM_EquacaoIdadePDF.png' id='figs-brcap09_questaoQM_EquacaoIdadePDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap09_questaoQM_EquacaoRetaPDF.png' id='figs-brcap09_questaoQM_EquacaoRetaPDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap09_questaoQT_Exata_PDF.png' id='figs-brcap09_questaoQT_Exata_PDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap09_exameVariacoes_questoes.png' id='figs-brcap09_exameVariacoes_questoes_png' media-type='image/png'></item>
+<item href='./figs-br//cap09_exameVariacoes_detalhes.png' id='figs-brcap09_exameVariacoes_detalhes_png' media-type='image/png'></item>
+<item href='./figs-br//cap09_exameVariacoes_variacoes.png' id='figs-brcap09_exameVariacoes_variacoes_png' media-type='image/png'></item>
+<item href='./figs-br//cap09_exameVariacoes_variacoes_email.png' id='figs-brcap09_exameVariacoes_variacoes_email_png' media-type='image/png'></item>
+<item href='./figs-br//cap09_exameVariacoes_QM_moodle.png' id='figs-brcap09_exameVariacoes_QM_moodle_png' media-type='image/png'></item>
+<item href='./figs-br//cap09_exameVariacoes_exata_moodle.png' id='figs-brcap09_exameVariacoes_exata_moodle_png' media-type='image/png'></item>
+<item href='./figs-br//cap09_exameVariacoes_PDF_MCTest.png' id='figs-brcap09_exameVariacoes_PDF_MCTest_png' media-type='image/png'></item>
+<item href='./figs-br//cap10_questaoQT_EP_2_matriz.png' id='figs-brcap10_questaoQT_EP_2_matriz_png' media-type='image/png'></item>
+<item href='./figs-br//cap10_figExameVPL_Atualiza4.png' id='figs-brcap10_figExameVPL_Atualiza4_png' media-type='image/png'></item>
+<item href='./figs-br//cap10_figExameVPL_email.png' id='figs-brcap10_figExameVPL_email_png' media-type='image/png'></item>
+<item href='./figs-br//cap10_figExameVPL_PDF.png' id='figs-brcap10_figExameVPL_PDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap11_mctest1_folha.png' id='figs-brcap11_mctest1_folha_png' media-type='image/png'></item>
+<item href='./figs-br//cap11_mctest2_folha.png' id='figs-brcap11_mctest2_folha_png' media-type='image/png'></item>
+<item href='./figs-br//cap11_mctest2_QR.jpg' id='figs-brcap11_mctest2_QR_jpg' media-type='image/jpeg'></item>
+<item href='./figs-br//cap11_mctest2_estatisticas.png' id='figs-brcap11_mctest2_estatisticas_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_mctest4_pastas.png' id='figs-brcap12_mctest4_pastas_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_mctest4_folha.png' id='figs-brcap12_mctest4_folha_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_questaoQM_MRUPDF.png' id='figs-brcap12_questaoQM_MRUPDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_questaoQM_criaMatrizPDF.png' id='figs-brcap12_questaoQM_criaMatrizPDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_questaoQM_equacaoFiguraPDF.png' id='figs-brcap12_questaoQM_equacaoFiguraPDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_questaoQM_grafoPDF.png' id='figs-brcap12_questaoQM_grafoPDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_questaoMatrizRosaPDF.png' id='figs-brcap12_questaoMatrizRosaPDF_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_examesSheets_planilha.png' id='figs-brcap12_examesSheets_planilha_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_examesPDF_MCTestS.png' id='figs-brcap12_examesPDF_MCTestS_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_examesMCTest_pesos_BD.png' id='figs-brcap12_examesMCTest_pesos_BD_png' media-type='image/png'></item>
+<item href='./figs-br//cap12_examesMCTest_pesos_Final.png' id='figs-brcap12_examesMCTest_pesos_Final_png' media-type='image/png'></item>
+<item href='./figs-br//cap13_fig01.png' id='figs-brcap13_fig01_png' media-type='image/png'></item>
+<item href='./figs-br//cap13_fig03.png' id='figs-brcap13_fig03_png' media-type='image/png'></item>
+<item href='livro0x.png' id='livro0x_png' media-type='image/png'></item>
+<item href='livro1x.png' id='livro1x_png' media-type='image/png'></item>
+<item href='livro2x.png' id='livro2x_png' media-type='image/png'></item>
+<item href='livro3x.png' id='livro3x_png' media-type='image/png'></item>
+<item href='livro4x.png' id='livro4x_png' media-type='image/png'></item>
+<item href='livro5x.png' id='livro5x_png' media-type='image/png'></item>
+<item href='livro6x.png' id='livro6x_png' media-type='image/png'></item>
+<item href='livro7x.png' id='livro7x_png' media-type='image/png'></item>
+<item href='livro8x.png' id='livro8x_png' media-type='image/png'></item>
+<item href='livro9x.png' id='livro9x_png' media-type='image/png'></item>
+<item href='livro10x.png' id='livro10x_png' media-type='image/png'></item>
+<item href='livro11x.png' id='livro11x_png' media-type='image/png'></item>
+<item href='livro12x.png' id='livro12x_png' media-type='image/png'></item>
+<item href='livro13x.png' id='livro13x_png' media-type='image/png'></item>
+<item href='livro14x.png' id='livro14x_png' media-type='image/png'></item>
+<item href='livro15x.png' id='livro15x_png' media-type='image/png'></item>
+<item href='livro16x.png' id='livro16x_png' media-type='image/png'></item>
+<item href='livro17x.png' id='livro17x_png' media-type='image/png'></item>
+<item href='livro18x.png' id='livro18x_png' media-type='image/png'></item>
+<item href='livro19x.png' id='livro19x_png' media-type='image/png'></item>
+<item href='livro20x.png' id='livro20x_png' media-type='image/png'></item>
+<item href='livro21x.png' id='livro21x_png' media-type='image/png'></item>
+<item href='livro22x.png' id='livro22x_png' media-type='image/png'></item>
+<item href='livro23x.png' id='livro23x_png' media-type='image/png'></item>
+<item href='livro24x.png' id='livro24x_png' media-type='image/png'></item>
+</manifest> 
+   
+<spine toc='ncx'> 
+<itemref idref='file1'></itemref> 
+<itemref idref='file2'></itemref> 
+<itemref idref='file3'></itemref> 
+<itemref idref='file4'></itemref> 
+<itemref idref='file5'></itemref> 
+<itemref idref='file6'></itemref> 
+<itemref idref='file7'></itemref> 
+<itemref idref='file8'></itemref> 
+<itemref idref='file9'></itemref> 
+<itemref idref='file10'></itemref> 
+<itemref idref='file11'></itemref> 
+<itemref idref='file12'></itemref> 
+<itemref idref='file13'></itemref> 
+<itemref idref='file14'></itemref> 
+<itemref idref='file15'></itemref> 
+<itemref idref='file16'></itemref> 
+<itemref idref='file17'></itemref> 
+<itemref idref='file18'></itemref> 
+<itemref idref='file19'></itemref> 
+<itemref idref='file20'></itemref> 
+<itemref idref='file21'></itemref> 
+<itemref idref='file22'></itemref> 
+<itemref idref='file23'></itemref> 
+<itemref idref='file24'></itemref> 
+<itemref idref='file25'></itemref> 
+<itemref idref='file26'></itemref> 
+<itemref idref='file27'></itemref> 
+<itemref idref='file28'></itemref> 
+<itemref idref='file29'></itemref> 
+<itemref idref='file30'></itemref> 
+<itemref idref='file31'></itemref> 
+<itemref idref='file32'></itemref> 
+<itemref idref='file33'></itemref> 
+  
+ 
+</spine> 
+</package>

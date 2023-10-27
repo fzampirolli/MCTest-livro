@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Dado} \PYG{n}{um} \PYG{n}{vetor} \PYG{n}{de} \PYG{n}{inteiros} \PYG{n}{de} \PYG{n}{tamanho} \PYGZbs{}\PYG{p}{(} \PYG{n}{n} \PYG{o}{=} \PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{n}\PYG{p}{]]}\PYGZbs{}\PYG{p}{),} \PYG{n}{ordenar} \PYG{n}{o} \PYG{n}{trecho} \PYG{n}{do}
+\PYG{n}{vetor} \PYG{n}{que} \PYG{n}{começa} \PYG{n}{no} \PYG{n}{índice} \PYGZbs{}\PYG{p}{(} \PYG{n}{inicio} \PYG{o}{=} \PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{inicio}\PYG{p}{]]} \PYGZbs{}\PYG{p}{)} \PYG{n}{e} \PYG{n}{termina} \PYG{n}{no} \PYG{n}{índice}
+\PYGZbs{}\PYG{p}{(} \PYG{n}{fim} \PYG{o}{=} \PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{fim}\PYG{p}{]]}\PYGZbs{}\PYG{p}{)}\PYG{o}{.} \PYG{n}{Onde}\PYG{p}{,} \PYGZbs{}\PYG{p}{(} \PYG{l+m+mi}{0}\PYG{o}{\PYGZlt{}}\PYG{n}{início}\PYG{o}{\PYGZlt{}}\PYG{n}{fim}\PYG{o}{\PYGZlt{}}\PYG{n}{n} \PYGZbs{}\PYG{p}{),} \PYG{n}{ou} \PYG{n}{seja}\PYG{p}{,} \PYG{n}{o} \PYG{n}{trecho} \PYG{n}{a} \PYG{n}{ser}
+\PYG{n}{ordenado} \PYG{n}{está} \PYG{n}{entre} \PYG{n}{início} \PYG{p}{(}\PYG{n}{inclusive}\PYG{p}{)} \PYG{n}{e} \PYG{n}{fim} \PYG{p}{(}\PYG{n}{inclusive}\PYG{p}{)}\PYG{o}{.} \PYG{n}{Vale} \PYG{n}{ressaltar} \PYG{n}{que}
+\PYG{n}{os} \PYG{n}{índices} \PYG{n}{do} \PYG{n}{vetor} \PYG{n}{começam} \PYG{n}{em} \PYG{l+m+mi}{0} \PYG{n}{e} \PYG{n}{terminam} \PYG{n}{em} \PYGZbs{}\PYG{p}{(} \PYG{n}{n}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYGZbs{}\PYG{p}{)}\PYG{o}{.}
+
+\PYG{n}{Considere} \PYG{n}{esta} \PYG{n}{entrada}\PYG{p}{:\PYGZcb{}}
+\PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{caso0\PYGZus{}inp}\PYG{p}{]]}
+
+\PYG{o}{\PYGZpc{}\PYGZpc{}}\PYG{p}{\PYGZob{}[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{caso0\PYGZus{}out}\PYG{p}{]]\PYGZcb{}}\PYG{o}{\PYGZpc{}\PYGZpc{}}
+\end{Verbatim}

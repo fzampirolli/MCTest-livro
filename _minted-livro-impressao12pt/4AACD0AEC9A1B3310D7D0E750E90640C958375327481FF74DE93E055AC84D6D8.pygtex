@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Preencha} \PYG{n}{a} \PYG{n}{tabela} \PYG{n}{com} \PYG{n}{os} \PYG{n}{valores} \PYG{n}{corretos} \PYG{n}{das} \PYG{n}{variáveis} \PYG{n}{contador} \PYG{n}{e} \PYG{n}{soma}
+\PYG{n}{em} \PYG{n}{cada} \PYG{n}{iteração} \PYG{n}{do} \PYG{n}{laço}\PYG{o}{.}  \PYG{n}{Além} \PYG{n}{disso}\PYG{p}{,} \PYG{n}{considere} \PYG{n}{os} \PYG{n}{números} \PYG{n}{das} \PYG{n}{linhas} \PYG{n}{do}
+\PYG{n}{código} \PYG{n}{para} \PYG{n}{preencher} \PYG{n}{a} \PYG{n}{tabela}\PYG{p}{,} \PYG{n}{a} \PYG{n}{fim} \PYG{n}{de} \PYG{n}{facilitar} \PYG{n}{a} \PYG{n}{referência}\PYG{o}{.} \PYG{n}{Considere}
+\PYG{n}{inicialmente} \PYG{n}{N}\PYG{o}{=}\PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{N1}\PYG{p}{]],} \PYG{n}{contador}\PYG{o}{=}\PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{N2}\PYG{p}{]]} \PYG{n}{e} \PYG{n}{soma}\PYG{o}{=}\PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{N3}\PYG{p}{]]}\PYG{o}{.}
+
+\PYGZbs{}\PYG{n}{begin}\PYG{p}{\PYGZob{}}\PYG{n}{verbatim}\PYG{p}{\PYGZcb{}}
+\PYG{l+m+mf}{1.} \PYG{n}{Inicializar} \PYG{n}{a} \PYG{n}{variável} \PYG{n}{N} \PYG{n}{com} \PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{N1}\PYG{p}{]]}
+\PYG{l+m+mf}{2.} \PYG{n}{Inicializar} \PYG{n}{a} \PYG{n}{variável} \PYG{n}{contador} \PYG{n}{com} \PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{N2}\PYG{p}{]]}
+\PYG{l+m+mf}{3.} \PYG{n}{Inicializar} \PYG{n}{a} \PYG{n}{variável} \PYG{n}{soma} \PYG{n}{com} \PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{N3}\PYG{p}{]]}
+\PYG{l+m+mf}{4.} \PYG{n}{Enquanto} \PYG{n}{contador} \PYG{o}{\PYGZlt{}=} \PYG{n}{N} \PYG{n}{faça}
+\PYG{l+m+mf}{5.}     \PYG{n}{Se} \PYG{n}{contador} \PYG{n}{é} \PYG{n}{par} \PYG{n}{então}
+\PYG{l+m+mf}{6.}         \PYG{n}{soma} \PYG{o}{=} \PYG{n}{soma} \PYG{o}{+} \PYG{n}{contador}
+\PYG{l+m+mf}{7.}     \PYG{n}{Senão}
+\PYG{l+m+mf}{8.}         \PYG{n}{soma} \PYG{o}{=} \PYG{n}{soma} \PYG{o}{\PYGZhy{}} \PYG{n}{contador}
+\PYG{l+m+mf}{9.}     \PYG{n}{Fim} \PYG{n}{se}
+\PYG{l+m+mf}{10.}    \PYG{n}{Incrementar} \PYG{n}{contador} \PYG{n}{em} \PYG{l+m+mi}{1}
+\PYG{l+m+mf}{11.} \PYG{n}{Fim} \PYG{n}{enquanto}
+\PYG{l+m+mf}{12.} \PYG{n}{Imprimir} \PYG{n}{o} \PYG{n}{valor} \PYG{n}{da} \PYG{n}{variável} \PYG{n}{soma}
+\PYGZbs{}\PYG{n}{end}\PYG{p}{\PYGZob{}}\PYG{n}{verbatim}\PYG{p}{\PYGZcb{}}
+
+\PYGZbs{}\PYG{n}{begin}\PYG{p}{\PYGZob{}}\PYG{n}{tabular}\PYG{p}{\PYGZcb{}\PYGZob{}}\PYG{o}{|}\PYG{n}{c}\PYG{o}{|}\PYG{n}{c}\PYG{o}{|}\PYG{n}{c}\PYG{o}{|}\PYG{n}{c}\PYG{o}{|}\PYG{p}{\PYGZcb{}}
+\PYGZbs{}\PYG{n}{hline}
+\PYGZbs{}\PYG{n}{textbf}\PYG{p}{\PYGZob{}}\PYG{n}{linha}\PYG{p}{\PYGZcb{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYG{n}{textbf}\PYG{p}{\PYGZob{}}\PYG{n}{contador}\PYG{p}{\PYGZcb{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYG{n}{textbf}\PYG{p}{\PYGZob{}}\PYG{n}{soma}\PYG{p}{\PYGZcb{}} \PYGZbs{}\PYGZbs{}
+\PYGZbs{}\PYG{n}{hline}
+ \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYGZbs{} \PYGZbs{}\PYG{n}{hline}
+ \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYGZbs{} \PYGZbs{}\PYG{n}{hline}
+ \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYGZbs{} \PYGZbs{}\PYG{n}{hline}
+ \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYGZbs{} \PYGZbs{}\PYG{n}{hline}
+ \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYGZbs{} \PYGZbs{}\PYG{n}{hline}
+ \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYGZbs{} \PYGZbs{}\PYG{n}{hline}
+ \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYGZbs{} \PYGZbs{}\PYG{n}{hline}
+ \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYGZbs{} \PYGZbs{}\PYG{n}{hline}
+ \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZam{}} \PYGZbs{}\PYGZbs{} \PYGZbs{}\PYG{n}{hline}
+\PYGZbs{}\PYG{n}{end}\PYG{p}{\PYGZob{}}\PYG{n}{tabular}\PYG{p}{\PYGZcb{}}
+
+\PYG{p}{[[}\PYG{n}{def}\PYG{p}{:}
+\PYG{k+kn}{import} \PYG{n+nn}{random}
+\PYG{n}{N1} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{7}\PYG{p}{,}\PYG{l+m+mi}{16}\PYG{p}{)}
+\PYG{n}{N2} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{6}\PYG{p}{)}
+\PYG{n}{N3} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{p}{]]}
+\end{Verbatim}

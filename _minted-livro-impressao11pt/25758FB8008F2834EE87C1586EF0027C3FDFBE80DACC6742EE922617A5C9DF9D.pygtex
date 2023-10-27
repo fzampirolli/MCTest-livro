@@ -1,0 +1,38 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{[[}\PYG{n}{def}\PYG{p}{:}
+\PYG{k+kn}{import} \PYG{n+nn}{random}\PYG{o}{,} \PYG{n+nn}{sys}
+\PYG{k}{global} \PYG{n}{trace}
+
+\PYG{k}{def} \PYG{n+nf}{trace}\PYG{p}{(}\PYG{n}{frame}\PYG{p}{,} \PYG{n}{event}\PYG{p}{,} \PYG{n}{arg\PYGZus{}unused}\PYG{p}{):}
+    \PYG{k}{global} \PYG{n}{output}
+    \PYG{k}{if} \PYG{n}{event} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}line\PYGZsq{}}\PYG{p}{:}
+        \PYG{n}{lineno} \PYG{o}{=} \PYG{n}{frame}\PYG{o}{.}\PYG{n}{f\PYGZus{}lineno}  \PYG{c+c1}{\PYGZsh{} pega a linha}
+        \PYG{n}{locals\PYGZus{}dict} \PYG{o}{=} \PYG{n}{frame}\PYG{o}{.}\PYG{n}{f\PYGZus{}locals}  \PYG{c+c1}{\PYGZsh{} pega todas as variáveis locais}
+        \PYG{n}{contador} \PYG{o}{=} \PYG{n}{locals\PYGZus{}dict}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}contador\PYGZsq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} pega a variável contador}
+        \PYG{n}{soma} \PYG{o}{=} \PYG{n}{locals\PYGZus{}dict}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}soma\PYGZsq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} pega a variável soma}
+        \PYG{n}{output}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{lineno}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{16}\PYG{l+s+si}{:}\PYG{l+s+s2}{3d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{contador}\PYG{l+s+si}{:}\PYG{l+s+s2}{7d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{soma}\PYG{l+s+si}{:}\PYG{l+s+s2}{7d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+        \PYG{c+c1}{\PYGZsh{} armazena a string na lista}
+    \PYG{k}{return} \PYG{n}{trace}
+
+\PYG{k}{def} \PYG{n+nf}{gerar\PYGZus{}gabarito}\PYG{p}{(}\PYG{n}{N1}\PYG{p}{,} \PYG{n}{soma}\PYG{p}{,} \PYG{n}{contador}\PYG{p}{):}
+    \PYG{k}{while} \PYG{n}{contador} \PYG{o}{\PYGZlt{}=} \PYG{n}{N1}\PYG{p}{:}
+        \PYG{k}{if} \PYG{n}{contador} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+            \PYG{n}{soma} \PYG{o}{=} \PYG{n}{soma} \PYG{o}{+} \PYG{n}{contador}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n}{soma} \PYG{o}{=} \PYG{n}{soma} \PYG{o}{\PYGZhy{}} \PYG{n}{contador}
+        \PYG{n}{contador} \PYG{o}{+=} \PYG{l+m+mi}{1}
+
+\PYG{c+c1}{\PYGZsh{} Exemplo de uso:}
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{n}{N1}\PYG{p}{,} \PYG{n}{N2}\PYG{p}{,} \PYG{n}{N3} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{sample}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{),} \PYG{l+m+mi}{3}\PYG{p}{)}
+    \PYG{n}{output} \PYG{o}{=} \PYG{p}{[]}
+    \PYG{n}{output}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Linha Contador Soma}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{output}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{sys}\PYG{o}{.}\PYG{n}{settrace}\PYG{p}{(}\PYG{n}{trace}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Inicializa o rastreamento}
+    \PYG{n}{gerar\PYGZus{}gabarito}\PYG{p}{(}\PYG{n}{N1}\PYG{p}{,} \PYG{n}{N2}\PYG{p}{,} \PYG{n}{N3}\PYG{p}{)}
+    \PYG{n}{sys}\PYG{o}{.}\PYG{n}{settrace}\PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Finaliza o rastreamento}
+    \PYG{n}{tabela} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{output}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} converte a lista de strings em uma string}
+    \PYG{k}{if} \PYG{l+m+mi}{10} \PYG{o}{\PYGZlt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{tabela}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{))} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{15}\PYG{p}{:}
+        \PYG{k}{break}
+\PYG{p}{]]}
+\end{Verbatim}

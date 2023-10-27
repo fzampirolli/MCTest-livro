@@ -1,0 +1,1479 @@
+<!DOCTYPE html> 
+<html lang='pt' xmlns:epub='http://www.idpf.org/2007/ops' xmlns='http://www.w3.org/1999/xhtml'> 
+<head><title>5 Questoes parametricas</title> 
+<meta charset='UTF-8' /> 
+<meta content='TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)' name='generator' /> 
+<link href='livro.css' rel='stylesheet' type='text/css' /> 
+</head><body>
+       <!-- l. 2 --><div class='crosslinks'><p class='noindent'></p></div>
+       <h2 class='chapterHead' id='questoes-parametricas'><span class='titlemark'>Capítulo 5</span><br /><a id='x20-580005'></a>Questões paramétricas</h2>
+       <hr />
+       <hr />
+       <div class='tcolorbox mybox' id='tcolobox-25'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12x-x-120'>Conteúdo</span>___________________________________________________________________________
+</p> 
+ 
+</div> 
+</div>
+<p class='indent'>       No capítulo anterior, foi apresentada a criação de questões estáticas de múltipla escolha
+(QMs) e dissertativas (QTs), incluindo uma questão típica utilizada em disciplinas de lógica de
+programação na UFABC, apresentada na Figura <a href='livroch4.xhtml#x19-56005r12'>4.12<!-- tex4ht:ref: fig:cap04_figQuestaoAtualizaPDF4  --></a>. É possível criar essas questões utilizando
+LaTeX, uma linguagem de preparação de documentos de alta qualidade e profissionalismo, com recursos
+avançados para controle de tipos de letra, espaçamento, numeração de seções, referências
+bibliográficas e equações matemáticas, entre outros. LaTeX é gratuita e está disponível para
+vários sistemas operacionais.
+</p> 
+<p class='indent'>       A linguagem LaTeX foi criada no início da década de 1980 pelo matemático e cientista da
+computação Leslie Lamport (LAMPORT, 1985). Ela é baseada no TeX, uma linguagem de marcação
+desenvolvida por Donald Knuth na década de 1970 para produzir documentos com alta qualidade
+tipográfica para sua série de livros “<span class='cmti-12'>The Art of Computer Programming</span>”. O TeX se tornou popular para
+a produção de documentos científicos, técnicos e matemáticos e ainda é amplamente utilizado
+atualmente.
+</p> 
+<p class='indent'>       Para contornar a sintaxe complexa e de difícil programação do LaTeX, no MCTest foi introduzida a
+possibilidade de intercalar trechos em LaTeX com trechos de código em Python. Python é uma linguagem de
+programação de alto nível, interpretada e de propósito geral, criada no início da década de 1990
+por Guido van Rossum, e atualmente é uma das linguagens de programação mais populares do
+mundo <a epub:type='noteref' href='#fn1x31'><sup class='textsuperscript'>1</sup></a><a id='x20-58001f1'></a>.
+Com uma ampla variedade de aplicações em áreas como desenvolvimento web, ciência de dados,
+inteligência artificial e automação de processos, Python é conhecida por sua sintaxe clara e legível,
+facilitando a escrita e a leitura de código.
+</p> 
+<section class='footnotes' epub:type='footnotes'> 
+
+       <aside class='footnote' epub:type='footnote' id='fn1x31'><p><a id='x20-58002x1'></a>   <sup class='textsuperscript'>1</sup><span class='cmr-10'>Levantamento das linguagens de programação mais populares em 2023: </span><a href='https://survey.stackoverflow.co/2023'><span class='cmr-10'>survey.stackoverflow.co/2023</span></a> <span class='cmr-10'>e</span>
+<a href='https://pypl.github.io/PYPL.html'><span class='cmr-10'>pypl.github.io/PYPL.html</span></a><span class='cmr-10'>.</span></p> 
+ </aside>                                                                           
+</section> 
+<p class='indent'>
+O MCTest proporciona aos usuários a capacidade de criar questões diversas e paramétricas, combinando
+o uso do formato LaTeX e da linguagem de programação Python. Essa funcionalidade será apresentada
+neste capítulo. Em capítulos futuros, na Parte - <a href='livropa4.xhtml#experimentos'>IV<!-- tex4ht:ref: part:experimentos  --></a> - <span class='cmbx-12'>Experimentos</span>, serão exploradas com
+mais detalhes essa característica fundamental do MCTest de criar questões paramétricas.
+Essa abordagem proporciona maior flexibilidade na criação de questões personalizadas e
+permite uma fácil manipulação dos parâmetros definidos pelos professores. Dessa forma, a
+                                                                                                  
+                                                                                                  
+criação de questões torna-se mais eficiente e adaptável às necessidades específicas de cada
+disciplina.
+</p> 
+<p class='indent'>       Apesar dessa possibilidade, muitas vezes a criação de questões paramétricas ainda exige
+habilidades de programação por parte do professor. No entanto, quando há um grupo de
+professores interessados e uma grande demanda de avaliações para milhares de estudantes, o
+MCTest oferece a gestão de avaliações utilizando um banco de questões que podem ser
+facilmente reaproveitadas em avaliações futuras. Essa abordagem já foi avaliada em várias
+publicações científicas, demonstrando eficiência e eficácia em avaliações, como apresentado em
+<a href='http://vision.ufabc.edu.br'>vision.ufabc.edu.br</a>.
+<a id='x20-58003r108'></a>
+       </p> 
+
+       <h3 class='sectionHead' id='qm-parametrica'><span class='titlemark'>5.1   </span> <a id='x20-590001'></a>QM paramétrica</h3>
+<p class='noindent'>A criação de QMs é uma tarefa comum para professores de diversas áreas do conhecimento. Para
+tornar esse processo mais eficiente, é possível utilizar recursos de programação. Nesta seção, será
+abordada a QM paramétrica, que permite criar questões com variações de parâmetros. Isso possibilita
+a criação de inúmeras questões com facilidade e rapidez. Serão apresentados exemplos de como criar
+questões paramétricas em Python, utilizando o MCTest como plataforma. Serão abordadas diferentes
+técnicas de parametrização, permitindo ao professor escolher a que melhor se adapta à sua habilidade
+em programação.
+<a id='x20-59001r88'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='um-exemplo'><span class='titlemark'>5.1.1   </span> <a id='x20-600001'></a>Um exemplo</h4>
+<p class='noindent'>Suponha que você seja um professor de matemática e deseje criar várias QMs sobre a fórmula da
+área do círculo. Embora este exemplo seja bastante simples, é possível generalizar para
+questões mais complexas. Para alcançar esse objetivo, você pode utilizar o seguinte método em
+Python:
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-de-metodo-para-calcular-a-area-de-um-circulo-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-26'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Código:  </span><span class='cmr-10x-x-109'>método </span><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>area_circulo(raio)</span></span></span>
+____________________________________________________
+<pre class='fancyvrb' id='fancyvrb1'><a id='x20-60006r1'></a><span class='cmr-6'>1</span><span id='textcolor1'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor2'><span class='cmtt-10x-x-109'>math</span></span> 
+<a id='x20-60008r2'></a><span class='cmr-6'>2</span> 
+<a id='x20-60010r3'></a><span class='cmr-6'>3</span><span id='textcolor3'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor4'><span class='cmtt-10x-x-109'>area_circulo</span></span><span class='cmtt-10x-x-109'>(raio):</span> 
+<a id='x20-60012r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor5'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> math</span><span id='textcolor6'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>pi </span><span id='textcolor7'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> raio </span><span id='textcolor8'><span class='cmtt-10x-x-109'>**</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor9'><span class='cmtt-10x-x-109'>2</span></span></pre>
+ 
+</div> 
+</div>
+<a id='x20-60013r1'></a>
+<a id='x20-60014'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Com base no método apresentado no Código <a href='#x20-60013r1'>5.1<!-- tex4ht:ref: lst:codigoAreaCirculo  --></a>, é possível gerar diversas QMs sobre a área
+do círculo, com as seguintes variações:
+      </p> 
+<dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+   1. </dt><dd class='enumerate-enumitem'>A questão deve ter 4 alternativas de resposta;
+      </dd><dt class='enumerate-enumitem'>
+   2. </dt><dd class='enumerate-enumitem'>O raio do círculo deve variar aleatoriamente;
+      </dd><dt class='enumerate-enumitem'>
+   3. </dt><dd class='enumerate-enumitem'>A alternativa correta deve ser calculada com base no valor do raio;
+      </dd><dt class='enumerate-enumitem'>
+   4. </dt><dd class='enumerate-enumitem'>As demais alternativas erradas devem ter valores distintos.</dd></dl>
+<p class='indent'>       A seguir, serão apresentados três exemplos de questões para calcular a área do círculo, com
+raios escolhidos aleatoriamente:
+      </p> 
+<dl class='description'><dt class='description'>
+      <p class='indent'>
+ </p> 
+</dt><dd class='description'>
+      <p class='indent'><span class='cmbx-12'>1) Qual é </span><span class='cmbx-12'>a área do círculo de raio 2?</span>
+      </p> 
+<div class='columns-4'>
+       A. 3,14
+       B. 6,28
+       C. 12,56
+       D. 25,12
+      </div>
+      </dd><dt class='description'>
+      <p class='indent'>
+ </p> 
+</dt><dd class='description'>
+      <p class='indent'><span class='cmbx-12'>2) Qual é </span><span class='cmbx-12'>a área do círculo de raio 4?</span>
+      </p> 
+<div class='columns-4'>
+                                                                                                  
+                                                                                                  
+       A. 12,56
+       B. 25,12
+       C. 37,68
+       D. 50,24
+      </div>
+      </dd><dt class='description'>
+      <p class='indent'>
+ </p> 
+</dt><dd class='description'>
+      <p class='indent'><span class='cmbx-12'>3) Qual é </span><span class='cmbx-12'>a área do círculo de raio 3?</span>
+      </p> 
+<div class='columns-4'>
+       A. 9,42
+       B. 12,56
+       C. 15,70
+       D. 18,84
+      </div>
+      </dd></dl>
+<p class='indent'>       Nos exemplos ilustrativos apresentados, o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>area_circulo</span></span></span> pode ser utilizado para calcular a
+resposta correta para cada alternativa de resposta. A variação aleatória do raio pode ser
+realizada com a ajuda da biblioteca <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>random</span></span></span> do Python. Por fim, as alternativas erradas podem ser
+calculadas, também utilizando o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>area_circulo</span></span></span>, com base no valor do raio, garantindo a
+não repetição de alternativas. A seguir, será apresentado esse exemplo implementado no
+MCTest.
+<a id='x20-60031r111'></a>
+                                                                                                  
+                                                                                                  
+       </p> 
+
+       <h4 class='subsectionHead' id='qm-parametrica-no-mctest'><span class='titlemark'>5.1.2   </span> <a id='x20-610002'></a>QM paramétrica no MCTest</h4>
+<p class='noindent'>É possível parametrizar QMs no MCTest de várias maneiras, dependendo das habilidades de
+programação em Python do professor. Algumas dessas maneiras são apresentadas nesta
+seção.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox mybox' id='tcolobox-27'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Observações:</span><br class='newline' />___________________________________________________________________________________________________________ </p> 
+<dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+   1.  </dt><dd class='enumerate-enumitem'>A  descrição  da  questão  no  MCTest  (campo  “Descrição”  na  Figura  <a href='livroch4.xhtml#x19-55003r7'>4.7<!-- tex4ht:ref: fig:cap04_figQuestaoAtualiza  --></a>),  que
+        pode incluir textos em LaTeX integrados com códigos em Python, é a parte mais
+        importante na criação de questões paramétricas. A partir deste capítulo, não
+        será mais apresentada uma captura de tela do formulário da questão, como foram
+        realizados nos dois capítulos anteriores. Para criar uma QM ou QT paramétrica basta
+        alterar o parâmetro “Paramétrica” de “Não” para “Sim”, nas telas de criação ou
+        alteração de questão;
+        </dd><dt class='enumerate-enumitem'>
+    2.  </dt><dd class='enumerate-enumitem'>A parte mais complicada na criação de questões paramétricas no MCTest é lidar
+        com possíveis erros que podem ser retornados pelo MCTest ao tentar criar o PDF. Para
+        tentar resolver esse problema, foi criado um <span class='cmti-12'>notebook </span>no Google Colab, acessado ao clicar
+        no botão “Compile-Colab” nas telas de alteração de questão, como apresentado na
+        Figura <a href='livroch4.xhtml#x19-55003r7'>4.7<!-- tex4ht:ref: fig:cap04_figQuestaoAtualiza  --></a>.</dd></dl>
+ 
+</div> 
+</div>
+       <h5 class='likesubsubsectionHead' id='exemplo-'><a id='x20-620002'></a>Exemplo 1</h5>
+<p class='noindent'>Veja uma descrição da questão paramétrica para calcular a área de um círculo, implementada no
+MCTest, no Código <a href='#x20-62102r2'>5.2<!-- tex4ht:ref: lst:questaoQM_AreaCirculoEx1  --></a>. Todo o texto que aparece até a linha 6, contendo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[def:</span></span></span>, fará parte do
+enunciado da questão e pode utilizar a sintaxe do LaTeX. As partes paramétricas deste enunciado
+ocorrem nas instruções em Python entre as marcações <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code:</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>. Geralmente, essas instruções
+são variáveis definidas em Python entre as marcações <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[def:</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>, neste exemplo, entre as linhas 6 e
+30.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox mybox' id='tcolobox-28'>    
+<div class='tcolorbox-title'>
+                                                                                                  
+                                                                                                  
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Marcações principais definidas no MCTest:</span><br class='newline' />___________________________________________________________________________________________________________ </p> 
+<dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+   1.  </dt><dd class='enumerate-enumitem'>Instruções que podem representar a parte paramétrica do enunciado da questão
+        são colocadas entre as marcações <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code:</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>, conforme exemplificado na linha 1
+        do Código <a href='#x20-62102r2'>5.2<!-- tex4ht:ref: lst:questaoQM_AreaCirculoEx1  --></a>;
+        </dd><dt class='enumerate-enumitem'>
+    2.  </dt><dd class='enumerate-enumitem'>Após esse enunciado, um único bloco de código em Python deve ser definido entre
+        as marcações <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[def:</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>, como ilustrado entre as linhas 6 e 30 do exemplo. Todo o
+        texto após esse bloco é descartado do enunciado da questão.</dd></dl>
+ 
+</div> 
+</div>
+<p class='indent'>       Se as marcações de início e fim de bloco ou instruções aparecerem erroneamente, ou se houver
+algum erro no código Python, mensagens de erro do compilador Python poderão ser exibidas, mas sem
+fornecer muitos detalhes sobre o erro específico. Portanto, é fundamental testar o código Python fora do
+MCTest, por exemplo, utilizando o <span class='cmti-12'>notebook </span>do Google Colab. Para acessar o <span class='cmti-12'>notebook</span>, basta clicar no
+botão “Compile-Colab” nas telas de alteração de questão, como mostrado na Figura <a href='livroch4.xhtml#x19-55003r7'>4.7<!-- tex4ht:ref: fig:cap04_figQuestaoAtualiza  --></a>. Experimente
+adicionar espaços inesperados, como <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code: raio1]]</span></span></span> ou <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[ [code:raio1]]</span></span></span>, salve e clique em
+“Cria-PDF”. Isso permitirá identificar erros e depurar a questão no MCTest, seguindo os seguintes
+exemplos:
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox myboxCode' id='tcolobox-29'>    
+<div class='tcolorbox-title'>
+                                                                                                  
+                                                                                                  
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Alguns exemplos de erros comuns que podem ocorrer:</span><br class='newline' />___________________________________________________________________________________________________________________</p> 
+<p class='indent'><span class='cmr-10x-x-109'>Experimente incluir esses erros, salve e crie o PDF para identificar e corrigir possíveis problemas
+</span><span class='cmr-10x-x-109'>futuros:</span>
+        </p> 
+<dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+    <span class='cmr-10x-x-109'>1.</span>  </dt><dd class='enumerate-enumitem'><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>[[code: raio1]]</span></span></span> <span class='cmr-10x-x-109'>– espaço não esperado – retorna:</span><br class='newline' /><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ERROR in [[code: ... ]]: unmatched ’]’ (&lt;string&gt;, line 1) raio1]]?</span></span></span>
+     </dd><dt class='enumerate-enumitem'>
+   <span class='cmr-10x-x-109'>2.</span>  </dt><dd class='enumerate-enumitem'><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>[[code:Raio1]]</span></span></span> <span class='cmr-10x-x-109'>– “R” maiúsculo – retorna:</span><br class='newline' /><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ERROR in [[code: ... ]]: name ’Raio1’ is not defined Raio1</span></span></span>
+     </dd><dt class='enumerate-enumitem'>
+   <span class='cmr-10x-x-109'>3.</span>  </dt><dd class='enumerate-enumitem'><span class='cmr-10x-x-109'>Bloco de código no método </span><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>area_circulo</span></span></span> <span class='cmr-10x-x-109'>sem </span><span class='cmti-10x-x-109'>identação </span><span class='cmr-10x-x-109'>correta – retorna:</span><br class='newline' /><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ERROR in [[def: ... ]]: unexpected indent (&lt;string&gt;, line 7)</span></span></span>
+     </dd><dt class='enumerate-enumitem'>
+   <span class='cmr-10x-x-109'>4.</span>  </dt><dd class='enumerate-enumitem'><span class='cmr-10x-x-109'>Sem a linha </span><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>import math</span></span></span> <span class='cmr-10x-x-109'>no método </span><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>area_circulo</span></span></span> <span class='cmr-10x-x-109'>– retorna:</span><br class='newline' /><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ERROR in [[def: ... ]]: name ’math’ is not defined</span></span></span>
+     </dd><dt class='enumerate-enumitem'>
+   <span class='cmr-10x-x-109'>5.</span>  </dt><dd class='enumerate-enumitem'><span class='cmr-10x-x-109'>Sem os “:” no final da linha do método </span><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>area_circulo</span></span></span> <span class='cmr-10x-x-109'>– retorna:</span><br class='newline' /><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ERROR in [[def: ... ]]: invalid syntax (&lt;string&gt;, line 5)</span></span></span>
+     </dd><dt class='enumerate-enumitem'>
+   <span class='cmr-10x-x-109'>6.</span>  </dt><dd class='enumerate-enumitem'><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>[ [def:</span></span></span> <span class='cmr-10x-x-109'>ou </span><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>[[def :</span></span></span> <span class='cmr-10x-x-109'>– espaço não esperado – retorna:</span><br class='newline' /><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ERROR in [[code: ... ]]: name ’raio1’ is not defined raio1</span></span></span>
+     </dd></dl>
+ 
+</div> 
+</div>
+<p class='indent'>       Observe que, nesse sexto caso, o erro retornado é que a variável <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>raio1</span></span></span> não foi definida. Isso
+ocorreu porque o MCTest não encontrou o bloco de código Python entre as marcações
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[def:</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>. Certifique-se de ter incluído corretamente o bloco de código necessário para
+definir a variável <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>raio1</span></span></span> e verifique se não há erros de digitação ou formatação nas
+marcações. Essa etapa é crucial para garantir o funcionamento correto da questão paramétrica no
+MCTest.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-de-qm-parametrica-para-calcular-a-area-do-circulo-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-30'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb2'><a id='x20-62041r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Qual é a área do círculo de raio [[code:raio1]]</span><span class='colorbox' id='colorbox10'><span class='cmtt-10x-x-109'>?</span></span>  
+<a id='x20-62043r2'></a><span class='cmr-6'>2</span>  
+<a id='x20-62045r3'></a><span class='cmr-6'>3</span><span id='textcolor11'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> comentário em LaTeX</span><span id='textcolor12'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Observe que a variável raio1, após </span><span id='textcolor13'><span class='cmtt-10x-x-109'>"code:"</span></span> 
+<a id='x20-62047r4'></a><span class='cmr-6'>4</span><span id='textcolor14'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> foi definida na linha </span><span id='textcolor15'><span class='cmtt-10x-x-109'>15</span></span><span class='cmtt-10x-x-109'> abaixo</span> 
+<a id='x20-62049r5'></a><span class='cmr-6'>5</span> 
+<a id='x20-62051r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>[[def: </span><span id='textcolor16'><span class='cmitt-10x-x-109'># comentário em Python</span></span> 
+<a id='x20-62053r7'></a><span class='cmr-6'>7</span><span id='textcolor17'><span class='cmitt-10x-x-109'># o bloco de código Python deve sempre iniciar com a linha anterior!</span></span> 
+<a id='x20-62055r8'></a><span class='cmr-6'>8</span><span id='textcolor18'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor19'><span class='cmtt-10x-x-109'>random</span></span> 
+<a id='x20-62057r9'></a><span class='cmr-6'>9</span> 
+<a id='x20-62059r10'></a><span class='cmr-6'>10</span><span id='textcolor20'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor21'><span class='cmtt-10x-x-109'>area_circulo</span></span><span class='cmtt-10x-x-109'>(raio): </span><span id='textcolor22'><span class='cmitt-10x-x-109'># método para calcular a área do círculo</span></span> 
+<a id='x20-62061r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor23'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor24'><span class='cmtt-10x-x-109'>math</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor25'><span class='cmitt-10x-x-109'># necessário importar biblioteca(s) no método</span></span> 
+<a id='x20-62063r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor26'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> math</span><span id='textcolor27'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>pi </span><span id='textcolor28'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> raio </span><span id='textcolor29'><span class='cmtt-10x-x-109'>**</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor30'><span class='cmtt-10x-x-109'>2</span></span> 
+<a id='x20-62065r13'></a><span class='cmr-6'>13</span> 
+<a id='x20-62067r14'></a><span class='cmr-6'>14</span><span id='textcolor31'><span class='cmitt-10x-x-109'># lista de 4 raios aleatórios entre 20 e 50</span></span> 
+<a id='x20-62069r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>raio1,raio2,raio3,raio4 </span><span id='textcolor32'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor33'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sample(</span><span id='textcolor34'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor35'><span class='cmtt-10x-x-109'>20</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor36'><span class='cmtt-10x-x-109'>51</span></span><span class='cmtt-10x-x-109'>), </span><span id='textcolor37'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-62071r16'></a><span class='cmr-6'>16</span> 
+<a id='x20-62073r17'></a><span class='cmr-6'>17</span><span id='textcolor38'><span class='cmitt-10x-x-109'># formata as áreas com 2 casas decimais</span></span> 
+<a id='x20-62075r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>area1 </span><span id='textcolor39'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor40'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor41'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor42'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>area_circulo(raio1)</span><span id='textcolor43'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor44'><span class='cmtt-10x-x-109'>.2f</span></span><span id='textcolor45'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor46'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-62077r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>area2 </span><span id='textcolor47'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor48'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor49'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor50'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>area_circulo(raio2)</span><span id='textcolor51'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor52'><span class='cmtt-10x-x-109'>.2f</span></span><span id='textcolor53'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor54'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-62079r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>area3 </span><span id='textcolor55'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor56'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor57'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor58'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>area_circulo(raio3)</span><span id='textcolor59'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor60'><span class='cmtt-10x-x-109'>.2f</span></span><span id='textcolor61'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor62'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-62081r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>area4 </span><span id='textcolor63'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor64'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor65'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor66'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>area_circulo(raio4)</span><span id='textcolor67'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor68'><span class='cmtt-10x-x-109'>.2f</span></span><span id='textcolor69'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor70'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-62083r22'></a><span class='cmr-6'>22</span> 
+<a id='x20-62085r23'></a><span class='cmr-6'>23</span><span id='textcolor71'><span class='cmitt-10x-x-109'># incluir nas alternativas:</span></span> 
+<a id='x20-62087r24'></a><span class='cmr-6'>24</span><span id='textcolor72'><span class='cmitt-10x-x-109'># [[code:area1]]</span></span> 
+<a id='x20-62089r25'></a><span class='cmr-6'>25</span><span id='textcolor73'><span class='cmitt-10x-x-109'># [[code:area2]]</span></span> 
+<a id='x20-62091r26'></a><span class='cmr-6'>26</span><span id='textcolor74'><span class='cmitt-10x-x-109'># [[code:area3]]</span></span> 
+<a id='x20-62093r27'></a><span class='cmr-6'>27</span><span id='textcolor75'><span class='cmitt-10x-x-109'># [[code:area4]]</span></span> 
+<a id='x20-62095r28'></a><span class='cmr-6'>28</span> 
+<a id='x20-62097r29'></a><span class='cmr-6'>29</span><span id='textcolor76'><span class='cmitt-10x-x-109'># o bloco de código Python deve sempre terminar com a próxima linha</span></span> 
+<a id='x20-62099r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>]]</span> 
+<a id='x20-62101r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>Todo o texto que aparece após a linha anterior é ignorado</span><span id='textcolor77'><span class='cmtt-10x-x-109'>.</span></span></pre>
+ 
+</div> 
+</div>
+<a id='x20-62102r2'></a>
+<a id='x20-62103'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <h5 class='likesubsubsectionHead' id='exemplo-1'><a id='x20-630002'></a>Exemplo 2</h5>
+<p class='noindent'>Quando as alternativas de uma QM paramétrica assumem apenas valores inteiros, é possível utilizar o
+método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>createWrongAnswers</span></span></span> desenvolvido e disponibilizado no MCTest. No entanto, algumas exigências
+são necessárias, como apresentado no Código <a href='#x20-63058r3'>5.3<!-- tex4ht:ref: lst:questaoQM_AreaCirculoEx2  --></a>.
+</p> 
+<p class='indent'>       Primeiramente, é necessário criar uma variável global chamada <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>correctAnswer</span></span></span>, conforme
+mostrado na linha 12 do código. Em seguida, atribui-se a resposta correta a essa variável, como ilustrado
+na linha 14.
+</p> 
+<p class='indent'>       No que diz respeito às alternativas da questão, é importante incluir na primeira alternativa o
+conteúdo da linha 17, sem o comentário. Na segunda alternativa, deve-se utilizar o conteúdo da linha 18,
+também sem o comentário. Na linha 18, o método irá gerar três valores aleatórios distintos entre
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>correctAnswer</span></span></span><span class='cmsy-10x-x-120'>−</span>10 e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>correctAnswer</span></span></span>+10.
+</p> 
+<p class='indent'>       É importante observar que, nesse caso, as questões geradas não são consideradas “ótimas”, pois
+os estudantes podem deduzir que a resposta correta não está nos extremos dos valores fornecidos,
+conforme ilustrado na Figura <a href='#x20-63060r1'>5.1<!-- tex4ht:ref: fig:cap05_questaoQM_AreaCirculoPDF  --></a>. Em QMs, o texto em verde (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>#2450</span></span></span>) representa a identificação da
+questão no banco de dados. Azul (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>#0</span></span></span>) representa a primeira alternativa no formulário de criação ou
+alteração da questão. As demais alternativas em vermelho (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>*1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>*2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>*3</span></span></span>) são as três alternativas
+erradas criadas pelo método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>createWrongAnswers</span></span></span>.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-de-qm-parametrica-para-calcular-a-area-do-circulo-utilizando-o-metodo-createwronganswers-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-31'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb3'><a id='x20-63021r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Qual é a área do círculo de raio [[code:raio1]]</span><span class='colorbox' id='colorbox78'><span class='cmtt-10x-x-109'>?</span></span>  
+<a id='x20-63023r2'></a><span class='cmr-6'>2</span>  
+<a id='x20-63025r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x20-63027r4'></a><span class='cmr-6'>4</span><span id='textcolor79'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor80'><span class='cmtt-10x-x-109'>random</span></span> 
+<a id='x20-63029r5'></a><span class='cmr-6'>5</span> 
+<a id='x20-63031r6'></a><span class='cmr-6'>6</span><span id='textcolor81'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor82'><span class='cmtt-10x-x-109'>area_circulo</span></span><span class='cmtt-10x-x-109'>(raio):</span> 
+<a id='x20-63033r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor83'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor84'><span class='cmtt-10x-x-109'>math</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor85'><span class='cmitt-10x-x-109'># necessário importar biblioteca(s) no método</span></span> 
+<a id='x20-63035r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor86'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> math</span><span id='textcolor87'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>pi </span><span id='textcolor88'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> raio </span><span id='textcolor89'><span class='cmtt-10x-x-109'>**</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor90'><span class='cmtt-10x-x-109'>2</span></span> 
+<a id='x20-63037r9'></a><span class='cmr-6'>9</span> 
+<a id='x20-63039r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>raio1 </span><span id='textcolor91'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor92'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor93'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor94'><span class='cmtt-10x-x-109'>51</span></span><span class='cmtt-10x-x-109'>) </span><span id='textcolor95'><span class='cmitt-10x-x-109'># sorteia valor entre 10 e 50</span></span> 
+<a id='x20-63041r11'></a><span class='cmr-6'>11</span> 
+<a id='x20-63043r12'></a><span class='cmr-6'>12</span><span id='textcolor96'><span class='cmtt-10x-x-109'>global</span></span><span class='cmtt-10x-x-109'> correctAnswer </span><span id='textcolor97'><span class='cmitt-10x-x-109'># variável necessária para usar o método</span></span> 
+<a id='x20-63045r13'></a><span class='cmr-6'>13</span><span id='textcolor98'><span class='cmitt-10x-x-109'># createWrongAnswers, a resposta deve ter valor inteiro</span></span> 
+<a id='x20-63047r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>correctAnswer </span><span id='textcolor99'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor100'><span class='cmtt-10x-x-109'>int</span></span><span class='cmtt-10x-x-109'>(area_circulo(raio1))</span> 
+<a id='x20-63049r15'></a><span class='cmr-6'>15</span> 
+<a id='x20-63051r16'></a><span class='cmr-6'>16</span><span id='textcolor101'><span class='cmitt-10x-x-109'># incluir nas alternativas da questão:</span></span> 
+<a id='x20-63053r17'></a><span class='cmr-6'>17</span><span id='textcolor102'><span class='cmitt-10x-x-109'># [[code:correctAnswer]] % primeira alternativa (sempre) correta</span></span> 
+<a id='x20-63055r18'></a><span class='cmr-6'>18</span><span id='textcolor103'><span class='cmitt-10x-x-109'># [[code:createWrongAnswers([3,10])]] % cria 3 alter. erradas +/- 10</span></span> 
+<a id='x20-63057r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>]]</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-63058r3'></a>
+<a id='x20-63059'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-definida-no-codigo-lstquestaoqmareacirculoex-'><img alt='PIC' height='256' src='./figs-br//cap05_questaoQM_AreaCirculoPDF.png' width='256' /> <a id='x20-63060r1'></a>
+<a id='x20-63061'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 5.1: </span><span class='content'>Recorte do PDF gerado para a questão definida no Código <a href='#x20-63058r3'>5.3<!-- tex4ht:ref: lst:questaoQM_AreaCirculoEx2  --></a>.
+</span></figcaption><!-- tex4ht:label?: x20-63060r5  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x20-63062r110'></a></p>
+       <h3 class='sectionHead' id='qt-parametrica'><span class='titlemark'>5.2   </span> <a id='x20-640002'></a>QT paramétrica</h3>
+<p class='noindent'>Os conceitos apresentados anteriormente para as QMs paramétricas são aplicáveis também às QTs
+paramétricas, com a distinção de que não há necessidade de considerar as alternativas da
+questão. Em vez disso, é possível definir uma única resposta correta, se necessário. Nesta
+seção, serão fornecidos três exemplos adicionais da questão de teste de mesa introduzida
+no capítulo anterior (Seção <a href='livroch4.xhtml#questao-dissertativa-qt'>4.3<!-- tex4ht:ref: sec:introducaoTextoQT  --></a> – <a href='livroch4.xhtml#questao-dissertativa-qt'>Questão dissertativa (QT)<!-- tex4ht:ref: sec:introducaoTextoQT  --></a>), agora sob a perspectiva
+paramétrica.
+</p> 
+<p class='indent'>       No primeiro exemplo, foi criada uma questão com três parâmetros aleatórios. No segundo
+exemplo, foi adicionado um gabarito para esses parâmetros aleatórios, implementando a solução do
+pseudocódigo apresentado em Python e adicionando comandos <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>print</span></span></span> em locais estratégicos para
+imprimir a tabela com o gabarito. Por fim, no último exemplo, foi utilizado um recurso avançado de
+rastreamento de instruções, métodos e exceções. Esses exemplos mostram o poder da
+parametrização no MCTest para criar questões personalizadas e detalhadas.
+<a id='x20-64001r113'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='exemplo-teste-de-mesa'><span class='titlemark'>5.2.1   </span> <a id='x20-650001'></a>Exemplo 1 – Teste de mesa</h4>
+<p class='noindent'>Nesta seção, será abordada a parametrização da questão de teste de mesa ilustrada na Figura <a href='#x20-65126r2'>5.2<!-- tex4ht:ref: fig:cap05_questaoQT_TesteMesaEx2PDF  --></a> e
+apresentada no Código <a href='#x20-65124r4'>5.4<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx2  --></a>, para exemplificar o processo. As partes paramétricas estão localizadas nas
+linhas 7, 8 e 9 da questão, com os parâmetros <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N3</span></span></span>, cujos valores são definidos aleatoriamente no
+bloco de código Python nas linhas 38, 39 e 40, respectivamente. O PDF correspondente a essa questão é
+apresentado na Figura <a href='#x20-65126r2'>5.2<!-- tex4ht:ref: fig:cap05_questaoQT_TesteMesaEx2PDF  --></a>.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-simples-de-descricao-de-qt-parametrica-para-teste-de-mesa-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-32'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb4'><a id='x20-65043r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Preencha a tabela com os valores corretos das variáveis contador e soma</span> 
+<a id='x20-65045r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>em cada iteração do laço</span><span id='textcolor104'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>  Além disso, considere os números das linhas do</span> 
+<a id='x20-65047r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>código para preencher a tabela, a fim de facilitar a referência</span><span id='textcolor105'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Considere</span> 
+<a id='x20-65049r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>inicialmente N</span><span id='textcolor106'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[[code:N1]], contador</span><span id='textcolor107'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[[code:N2]] e soma</span><span id='textcolor108'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[[code:N3]]</span><span id='textcolor109'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x20-65051r5'></a><span class='cmr-6'>5</span> 
+<a id='x20-65053r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
+<a id='x20-65055r7'></a><span class='cmr-6'>7</span><span id='textcolor110'><span class='cmtt-10x-x-109'>1.</span></span><span class='cmtt-10x-x-109'> Inicializar a variável N com [[code:N1]]</span> 
+<a id='x20-65057r8'></a><span class='cmr-6'>8</span><span id='textcolor111'><span class='cmtt-10x-x-109'>2.</span></span><span class='cmtt-10x-x-109'> Inicializar a variável contador com [[code:N2]]</span> 
+<a id='x20-65059r9'></a><span class='cmr-6'>9</span><span id='textcolor112'><span class='cmtt-10x-x-109'>3.</span></span><span class='cmtt-10x-x-109'> Inicializar a variável soma com [[code:N3]]</span> 
+<a id='x20-65061r10'></a><span class='cmr-6'>10</span><span id='textcolor113'><span class='cmtt-10x-x-109'>4.</span></span><span class='cmtt-10x-x-109'> Enquanto contador </span><span id='textcolor114'><span class='cmmi-10x-x-109'>&lt;</span><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> N faça</span> 
+<a id='x20-65063r11'></a><span class='cmr-6'>11</span><span id='textcolor115'><span class='cmtt-10x-x-109'>5.</span></span><span class='cmtt-10x-x-109'>     Se contador é par então</span> 
+<a id='x20-65065r12'></a><span class='cmr-6'>12</span><span id='textcolor116'><span class='cmtt-10x-x-109'>6.</span></span><span class='cmtt-10x-x-109'>         soma </span><span id='textcolor117'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor118'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-65067r13'></a><span class='cmr-6'>13</span><span id='textcolor119'><span class='cmtt-10x-x-109'>7.</span></span><span class='cmtt-10x-x-109'>     Senão</span> 
+<a id='x20-65069r14'></a><span class='cmr-6'>14</span><span id='textcolor120'><span class='cmtt-10x-x-109'>8.</span></span><span class='cmtt-10x-x-109'>         soma </span><span id='textcolor121'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor122'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-65071r15'></a><span class='cmr-6'>15</span><span id='textcolor123'><span class='cmtt-10x-x-109'>9.</span></span><span class='cmtt-10x-x-109'>     Fim se</span> 
+<a id='x20-65073r16'></a><span class='cmr-6'>16</span><span id='textcolor124'><span class='cmtt-10x-x-109'>10.</span></span><span class='cmtt-10x-x-109'>    Incrementar contador em </span><span id='textcolor125'><span class='cmtt-10x-x-109'>1</span></span> 
+<a id='x20-65075r17'></a><span class='cmr-6'>17</span><span id='textcolor126'><span class='cmtt-10x-x-109'>11.</span></span><span class='cmtt-10x-x-109'> Fim enquanto</span> 
+<a id='x20-65077r18'></a><span class='cmr-6'>18</span><span id='textcolor127'><span class='cmtt-10x-x-109'>12.</span></span><span class='cmtt-10x-x-109'> Imprimir o valor da variável soma</span> 
+<a id='x20-65079r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
+<a id='x20-65081r20'></a><span class='cmr-6'>20</span> 
+<a id='x20-65083r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>\begin{tabular}{</span><span id='textcolor128'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor129'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor130'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor131'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor132'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-65085r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>\hline</span> 
+<a id='x20-65087r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>\textbf{linha} </span><span id='textcolor133'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \textbf{contador} </span><span id='textcolor134'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \textbf{soma} \\</span> 
+<a id='x20-65089r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>\hline</span> 
+<a id='x20-65091r25'></a><span class='cmr-6'>25</span><span class='cmtt-10x-x-109'> </span><span id='textcolor135'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor136'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-65093r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'> </span><span id='textcolor137'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor138'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-65095r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'> </span><span id='textcolor139'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor140'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-65097r28'></a><span class='cmr-6'>28</span><span class='cmtt-10x-x-109'> </span><span id='textcolor141'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor142'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-65099r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'> </span><span id='textcolor143'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor144'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-65101r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'> </span><span id='textcolor145'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor146'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-65103r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'> </span><span id='textcolor147'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor148'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-65105r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'> </span><span id='textcolor149'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor150'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-65107r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'> </span><span id='textcolor151'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor152'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-65109r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>\end{tabular}</span> 
+<a id='x20-65111r35'></a><span class='cmr-6'>35</span> 
+<a id='x20-65113r36'></a><span class='cmr-6'>36</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x20-65115r37'></a><span class='cmr-6'>37</span><span id='textcolor153'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor154'><span class='cmtt-10x-x-109'>random</span></span> 
+<a id='x20-65117r38'></a><span class='cmr-6'>38</span><span class='cmtt-10x-x-109'>N1 </span><span id='textcolor155'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor156'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor157'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor158'><span class='cmtt-10x-x-109'>16</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-65119r39'></a><span class='cmr-6'>39</span><span class='cmtt-10x-x-109'>N2 </span><span id='textcolor159'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor160'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor161'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor162'><span class='cmtt-10x-x-109'>6</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-65121r40'></a><span class='cmr-6'>40</span><span class='cmtt-10x-x-109'>N3 </span><span id='textcolor163'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor164'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor165'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor166'><span class='cmtt-10x-x-109'>5</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-65123r41'></a><span class='cmr-6'>41</span><span class='cmtt-10x-x-109'>]]</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-65124r4'></a>
+<a id='x20-65125'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-definida-no-codigo-lstquestaoqttestemesaex-'><img alt='PIC' height='461' src='./figs-br//cap05_questaoQT_TesteMesaEx2PDF.png' width='460' /> <a id='x20-65126r2'></a>
+<a id='x20-65127'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 5.2: </span><span class='content'>Recorte do PDF gerado para a questão definida no Código <a href='#x20-65124r4'>5.4<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx2  --></a>.
+</span></figcaption><!-- tex4ht:label?: x20-65126r5  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x20-65128r120'></a></p>
+       <h4 class='subsectionHead' id='exemplo-teste-de-mesa-e-gabarito'><span class='titlemark'>5.2.2   </span> <a id='x20-660002'></a>Exemplo 2 – Teste de mesa e gabarito</h4>
+<p class='noindent'>É possível aprimorar o exemplo anterior expandindo-o para gerar o gabarito correspondente a cada valor
+aleatório gerado para as variáveis <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N3</span></span></span>. Para essa finalidade, foi criado um método em Python
+que implementa o algoritmo da questão. Devido à quantidade de linhas na descrição dessa questão, os
+códigos correspondentes foram divididos e estão disponíveis nos fragmentos dos Códigos <a href='#x20-66121r5'>5.5<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx3Parte1  --></a> e
+<a href='#x20-66219r6'>5.6<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx3Parte2  --></a>.
+</p> 
+<p class='indent'>       Nesta nova versão, o gabarito foi adicionado ao PDF utilizando as linhas 36 a 40 do Código <a href='#x20-66121r5'>5.5<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx3Parte1  --></a>.
+Na linha 36, azul e o tamanho <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>small</span></span></span> foram definidos para a variável <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>tabela</span></span></span>, conforme mostrado na
+Figura <a href='#x20-66221r3'>5.3<!-- tex4ht:ref: fig:cap05_questaoQT_TesteMesaEx3PDF  --></a>. Caso o professor não deseje exibir esse gabarito na folha de atividade, basta utilizar a cor
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>white</span></span></span>. Na linha 38, a variável <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>tabela</span></span></span>, sendo uma <span class='cmti-12'>string</span>, é definida na segunda parte do código, no
+Código <a href='#x20-66219r6'>5.6<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx3Parte2  --></a>.
+</p> 
+<p class='indent'>       Nesta versão, foi criado o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>gerar_gabarito</span></span></span> para retornar a tabela atualizada para incluir
+as linhas específicas do algoritmo com os espaços correspondentes para preencher com os valores corretos
+das variáveis <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>contador</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>soma</span></span></span>.
+</p> 
+<p class='indent'>       O trecho entre as linhas 27 e 31 do Código <a href='#x20-66219r6'>5.6<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx3Parte2  --></a> apresenta um exemplo de uso do código, no qual
+são gerados valores aleatórios para <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N3</span></span></span> até que a tabela gerada tenha entre 10 e 15 linhas
+(exclusivamente). Esse trecho será analisado linha por linha:
+      </p> 
+<dl class='description'><dt class='description'>
+      <p class='indent'>
+ </p> 
+</dt><dd class='description'>
+      <p class='indent'><span class='obeylines-h'><span class='verb'><span class='cmtt-12'>while True</span></span></span>: isso cria um <span class='cmti-12'>loop </span>infinito que será executado até que a condição na linha 30
+      seja satisfeita e o <span class='cmti-12'>loop </span>seja interrompido na linha 31;
+      </p> 
+</dd><dt class='description'>
+      <p class='indent'>
+ </p> 
+</dt><dd class='description'>
+      <p class='indent'><span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N1, N2, N3 = random.sample(range(4, 20), 3)</span></span></span>:  aqui  é  usado  o  método  <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>sample</span></span></span> da
+      biblioteca <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>random</span></span></span> para gerar três valores aleatórios, sem repetição, no intervalo de 4 a 19.
+      Esses valores são atribuídos às variáveis <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N3</span></span></span>;
+      </p> 
+</dd><dt class='description'>
+      <p class='indent'>
+ </p> 
+</dt><dd class='description'>
+      <p class='indent'><span class='obeylines-h'><span class='verb'><span class='cmtt-12'>tabela = gerar_gabarito(N1, N2, N3)</span></span></span>: o método é chamado <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>gerar_gabarito</span></span></span> passando
+      os valores aleatórios <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N3</span></span></span> como argumentos. Esse método retorna a tabela formatada
+      com os valores corretos das variáveis <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>contador</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>soma</span></span></span>;
+                                                                                                  
+                                                                                                  
+      </p> 
+</dd><dt class='description'>
+      <p class='indent'>
+ </p> 
+</dt><dd class='description'>
+      <p class='indent'><span class='obeylines-h'><span class='verb'><span class='cmtt-12'>if 10 &lt; len(tabela.split('\n')) &lt; 15: break</span></span></span>: aqui é verificado o número de linhas na
+      tabela gerada. Se o número de linhas estiver entre 10 e 15 (exclusivamente), a condição é
+      satisfeita e o <span class='cmti-12'>loop </span>é interrompido com o uso do comando <span class='cmti-12'>break</span>.</p> 
+</dd></dl>
+<p class='indent'>       Dessa forma, esse trecho de código permite gerar valores aleatórios para as variáveis <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N3</span></span></span>
+repetidamente até que a tabela gerada tenha o número de linhas desejado. Isso garante que todas as
+variações tenham dificuldades de resolução semelhantes, testando diferentes casos. Neste exemplo
+simples, é possível gerar 15 <span class='cmsy-10x-x-120'>∗ </span>15 <span class='cmsy-10x-x-120'>∗ </span>15 variações, mas apenas aquelas que resultarem em tabelas com 11
+a 14 linhas serão consideradas.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-pratico-de-teste-de-mesa-parametrico-mostrando-o-gabarito-parte-descricao-de-questao-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-33'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb5'><a id='x20-66042r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Preencha a tabela com os valores corretos das variáveis contador e soma</span> 
+<a id='x20-66044r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>em cada iteração do laço</span><span id='textcolor167'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>  Além disso, considere os números das linhas do</span> 
+<a id='x20-66046r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>código para preencher a tabela, a fim de facilitar a referência</span><span id='textcolor168'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Considere</span> 
+<a id='x20-66048r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>inicialmente N</span><span id='textcolor169'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[[code:N1]], contador</span><span id='textcolor170'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[[code:N2]] e soma</span><span id='textcolor171'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[[code:N3]]</span><span id='textcolor172'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x20-66050r5'></a><span class='cmr-6'>5</span> 
+<a id='x20-66052r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
+<a id='x20-66054r7'></a><span class='cmr-6'>7</span><span id='textcolor173'><span class='cmtt-10x-x-109'>1.</span></span><span class='cmtt-10x-x-109'> Inicializar a variável N com [[code:N1]]</span> 
+<a id='x20-66056r8'></a><span class='cmr-6'>8</span><span id='textcolor174'><span class='cmtt-10x-x-109'>2.</span></span><span class='cmtt-10x-x-109'> Inicializar a variável contador com [[code:N2]]</span> 
+<a id='x20-66058r9'></a><span class='cmr-6'>9</span><span id='textcolor175'><span class='cmtt-10x-x-109'>3.</span></span><span class='cmtt-10x-x-109'> Inicializar a variável soma com [[code:N3]]</span> 
+<a id='x20-66060r10'></a><span class='cmr-6'>10</span><span id='textcolor176'><span class='cmtt-10x-x-109'>4.</span></span><span class='cmtt-10x-x-109'> Enquanto contador </span><span id='textcolor177'><span class='cmmi-10x-x-109'>&lt;</span><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> N faça</span> 
+<a id='x20-66062r11'></a><span class='cmr-6'>11</span><span id='textcolor178'><span class='cmtt-10x-x-109'>5.</span></span><span class='cmtt-10x-x-109'>     Se contador é par então</span> 
+<a id='x20-66064r12'></a><span class='cmr-6'>12</span><span id='textcolor179'><span class='cmtt-10x-x-109'>6.</span></span><span class='cmtt-10x-x-109'>         soma </span><span id='textcolor180'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor181'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-66066r13'></a><span class='cmr-6'>13</span><span id='textcolor182'><span class='cmtt-10x-x-109'>7.</span></span><span class='cmtt-10x-x-109'>     Senão</span> 
+<a id='x20-66068r14'></a><span class='cmr-6'>14</span><span id='textcolor183'><span class='cmtt-10x-x-109'>8.</span></span><span class='cmtt-10x-x-109'>         soma </span><span id='textcolor184'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor185'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-66070r15'></a><span class='cmr-6'>15</span><span id='textcolor186'><span class='cmtt-10x-x-109'>9.</span></span><span class='cmtt-10x-x-109'>     Fim se</span> 
+<a id='x20-66072r16'></a><span class='cmr-6'>16</span><span id='textcolor187'><span class='cmtt-10x-x-109'>10.</span></span><span class='cmtt-10x-x-109'>    Incrementar contador em </span><span id='textcolor188'><span class='cmtt-10x-x-109'>1</span></span> 
+<a id='x20-66074r17'></a><span class='cmr-6'>17</span><span id='textcolor189'><span class='cmtt-10x-x-109'>11.</span></span><span class='cmtt-10x-x-109'> Fim enquanto</span> 
+<a id='x20-66076r18'></a><span class='cmr-6'>18</span><span id='textcolor190'><span class='cmtt-10x-x-109'>12.</span></span><span class='cmtt-10x-x-109'> Imprimir o valor da variável soma</span> 
+<a id='x20-66078r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
+<a id='x20-66080r20'></a><span class='cmr-6'>20</span> 
+<a id='x20-66082r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>\begin{tabular}{</span><span id='textcolor191'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor192'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor193'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor194'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor195'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-66084r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>\hline</span> 
+<a id='x20-66086r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>\textbf{linha} </span><span id='textcolor196'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \textbf{contador} </span><span id='textcolor197'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \textbf{soma} \\</span> 
+<a id='x20-66088r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>\hline</span> 
+<a id='x20-66090r25'></a><span class='cmr-6'>25</span><span class='cmtt-10x-x-109'> </span><span id='textcolor198'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor199'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-66092r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'> </span><span id='textcolor200'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor201'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-66094r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'> </span><span id='textcolor202'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor203'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-66096r28'></a><span class='cmr-6'>28</span><span class='cmtt-10x-x-109'> </span><span id='textcolor204'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor205'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-66098r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'> </span><span id='textcolor206'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor207'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-66100r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'> </span><span id='textcolor208'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor209'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-66102r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'> </span><span id='textcolor210'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor211'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-66104r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'> </span><span id='textcolor212'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor213'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-66106r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'> </span><span id='textcolor214'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor215'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-66108r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>\end{tabular}</span> 
+<a id='x20-66110r35'></a><span class='cmr-6'>35</span> 
+<a id='x20-66112r36'></a><span class='cmr-6'>36</span><span class='cmtt-10x-x-109'>{\color{blue} {\small</span> 
+<a id='x20-66114r37'></a><span class='cmr-6'>37</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
+<a id='x20-66116r38'></a><span class='cmr-6'>38</span><span class='cmtt-10x-x-109'>[[code:tabela]]</span> 
+<a id='x20-66118r39'></a><span class='cmr-6'>39</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
+<a id='x20-66120r40'></a><span class='cmr-6'>40</span><span class='cmtt-10x-x-109'>}}</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-66121r5'></a>
+<a id='x20-66122'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+                                                                                                  
+                                                                                                  
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-pratico-de-teste-de-mesa-parametrico-mostrando-o-gabarito-parte-bloco-de-codigo-em-python-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-34'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb6'><a id='x20-66156r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x20-66158r2'></a><span class='cmr-6'>2</span><span id='textcolor216'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor217'><span class='cmtt-10x-x-109'>random</span></span> 
+<a id='x20-66160r3'></a><span class='cmr-6'>3</span> 
+<a id='x20-66162r4'></a><span class='cmr-6'>4</span><span id='textcolor218'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor219'><span class='cmtt-10x-x-109'>gerar_gabarito</span></span><span class='cmtt-10x-x-109'>(N1, N2, N3):</span> 
+<a id='x20-66164r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>    s </span><span id='textcolor220'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor221'><span class='cmtt-10x-x-109'>"Linha</span></span><span id='textcolor222'><span class='cmtt-10x-x-109'>\t</span></span><span id='textcolor223'><span class='cmtt-10x-x-109'>Contador</span></span><span id='textcolor224'><span class='cmtt-10x-x-109'>\t</span></span><span id='textcolor225'><span class='cmtt-10x-x-109'>Soma</span></span><span id='textcolor226'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor227'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-66166r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>    s </span><span id='textcolor228'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor229'><span class='cmtt-10x-x-109'>"--------------------</span></span><span id='textcolor230'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor231'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-66168r7'></a><span class='cmr-6'>7</span> 
+<a id='x20-66170r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>    contador </span><span id='textcolor232'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> N2</span> 
+<a id='x20-66172r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>    s </span><span id='textcolor233'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor234'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor235'><span class='cmtt-10x-x-109'>"  2 </span></span><span id='textcolor236'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>contador</span><span id='textcolor237'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor238'><span class='cmtt-10x-x-109'>7d</span></span><span id='textcolor239'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor240'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor241'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-66174r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>    soma </span><span id='textcolor242'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> N3</span> 
+<a id='x20-66176r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>    s </span><span id='textcolor243'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor244'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor245'><span class='cmtt-10x-x-109'>"  3 </span></span><span id='textcolor246'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>contador</span><span id='textcolor247'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor248'><span class='cmtt-10x-x-109'>7d</span></span><span id='textcolor249'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor250'><span class='cmtt-10x-x-109'> </span></span><span id='textcolor251'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>soma</span><span id='textcolor252'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor253'><span class='cmtt-10x-x-109'>6d</span></span><span id='textcolor254'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor255'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor256'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-66178r12'></a><span class='cmr-6'>12</span> 
+<a id='x20-66180r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor257'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> contador </span><span id='textcolor258'><span class='cmmi-10x-x-109'>&lt;</span><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> N1:</span> 
+<a id='x20-66182r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor259'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> contador </span><span id='textcolor260'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor261'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor262'><span class='cmtt-10x-x-109'>==</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor263'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-66184r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>            soma </span><span id='textcolor264'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor265'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-66186r16'></a><span class='cmr-6'>16</span><span class='cmtt-10x-x-109'>            s </span><span id='textcolor266'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor267'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor268'><span class='cmtt-10x-x-109'>"  6 </span></span><span id='textcolor269'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>contador</span><span id='textcolor270'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor271'><span class='cmtt-10x-x-109'>7d</span></span><span id='textcolor272'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor273'><span class='cmtt-10x-x-109'> </span></span><span id='textcolor274'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>soma</span><span id='textcolor275'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor276'><span class='cmtt-10x-x-109'>6d</span></span><span id='textcolor277'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor278'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor279'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-66188r17'></a><span class='cmr-6'>17</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor280'><span class='cmtt-10x-x-109'>else</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-66190r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>            soma </span><span id='textcolor281'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor282'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-66192r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>            s </span><span id='textcolor283'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor284'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor285'><span class='cmtt-10x-x-109'>"  8 </span></span><span id='textcolor286'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>contador</span><span id='textcolor287'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor288'><span class='cmtt-10x-x-109'>7d</span></span><span id='textcolor289'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor290'><span class='cmtt-10x-x-109'> </span></span><span id='textcolor291'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>soma</span><span id='textcolor292'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor293'><span class='cmtt-10x-x-109'>6d</span></span><span id='textcolor294'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor295'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor296'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-66194r20'></a><span class='cmr-6'>20</span> 
+<a id='x20-66196r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>        contador </span><span id='textcolor297'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor298'><span class='cmtt-10x-x-109'>1</span></span> 
+<a id='x20-66198r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>        s </span><span id='textcolor299'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor300'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor301'><span class='cmtt-10x-x-109'>" 10 </span></span><span id='textcolor302'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>contador</span><span id='textcolor303'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor304'><span class='cmtt-10x-x-109'>7d</span></span><span id='textcolor305'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor306'><span class='cmtt-10x-x-109'> </span></span><span id='textcolor307'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>soma</span><span id='textcolor308'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor309'><span class='cmtt-10x-x-109'>6d</span></span><span id='textcolor310'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor311'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor312'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x20-66200r23'></a><span class='cmr-6'>23</span> 
+<a id='x20-66202r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor313'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> s</span> 
+<a id='x20-66204r25'></a><span class='cmr-6'>25</span> 
+<a id='x20-66206r26'></a><span class='cmr-6'>26</span><span id='textcolor314'><span class='cmitt-10x-x-109'># Exemplo de uso:</span></span> 
+<a id='x20-66208r27'></a><span class='cmr-6'>27</span><span id='textcolor315'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor316'><span class='cmtt-10x-x-109'>True</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-66210r28'></a><span class='cmr-6'>28</span><span class='cmtt-10x-x-109'>    N1, N2, N3 </span><span id='textcolor317'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor318'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sample(</span><span id='textcolor319'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor320'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor321'><span class='cmtt-10x-x-109'>20</span></span><span class='cmtt-10x-x-109'>), </span><span id='textcolor322'><span class='cmtt-10x-x-109'>3</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-66212r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>    tabela </span><span id='textcolor323'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> gerar_gabarito(N1, N2, N3)</span> 
+<a id='x20-66214r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor324'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor325'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor326'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor327'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(tabela</span><span id='textcolor328'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>split(</span><span id='textcolor329'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor330'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor331'><span class='cmtt-10x-x-109'>'</span></span><span class='cmtt-10x-x-109'>)) </span><span id='textcolor332'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor333'><span class='cmtt-10x-x-109'>15</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-66216r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor334'><span class='cmtt-10x-x-109'>break</span></span> 
+<a id='x20-66218r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'>]]</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-66219r6'></a>
+<a id='x20-66220'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-definida-nos-codigos-lstquestaoqttestemesaexparte-e-lstquestaoqttestemesaexparte-'><img alt='PIC' height='461' src='./figs-br//cap05_questaoQT_TesteMesaEx3PDF.png' width='460' /> <a id='x20-66221r3'></a>
+<a id='x20-66222'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 5.3: </span><span class='content'>Recorte do PDF gerado para a questão definida nos Códigos <a href='#x20-66121r5'>5.5<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx3Parte1  --></a> e <a href='#x20-66219r6'>5.6<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx3Parte2  --></a>.
+</span></figcaption><!-- tex4ht:label?: x20-66221r5  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x20-66223r123'></a></p>
+       <h4 class='subsectionHead' id='exemplo-teste-de-mesa-e-gabarito-com-settrace'><span class='titlemark'>5.2.3   </span> <a id='x20-670003'></a>Exemplo 3 – Teste de mesa e gabarito com <span class='cmtt-12'>settrace</span></h4>
+<p class='noindent'>Um exemplo avançado de teste de mesa é o uso do método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>settrace</span></span></span> em Python. <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>settrace</span></span></span> é um
+método da biblioteca <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>sys</span></span></span> que permite definir um rastreador de ações ocorridas no código. Ele é usado
+para registrar um rastreamento personalizado que será chamado sempre que ocorrer uma chamada de
+instrução, retorno de método ou exceção.
+</p> 
+<p class='indent'>       Ao chamar <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>sys.settrace</span></span></span>, é possível fornecer um rastreamento personalizado que será invocado
+automaticamente durante a execução do programa. Esse método de rastreamento recebe os
+argumentos:
+      </p> 
+<dl class='description'><dt class='description'>
+      <p class='indent'>
+ </p> 
+</dt><dd class='description'>
+      <p class='indent'><span class='obeylines-h'><span class='verb'><span class='cmtt-12'>frame</span></span></span>: é um objeto que representa o quadro de variáveis atual em uma pilha;
+      </p> 
+</dd><dt class='description'>
+      <p class='indent'>
+ </p> 
+</dt><dd class='description'>
+      <p class='indent'><span class='obeylines-h'><span class='verb'><span class='cmtt-12'>event</span></span></span>: é uma <span class='cmti-12'>string  </span>que indica o tipo de evento que ocorreu. Pode ser <span class='cmti-12'>call  </span>(chamada de
+      método), <span class='cmti-12'>return </span>(retorno de método) ou <span class='cmti-12'>exception </span>(exceção);
+      </p> 
+</dd><dt class='description'>
+      <p class='indent'>
+ </p> 
+</dt><dd class='description'>
+      <p class='indent'><span class='obeylines-h'><span class='verb'><span class='cmtt-12'>arg</span></span></span>: é um argumento adicional que depende do tipo de evento. Para eventos de chamada e
+      retorno, é sempre <span class='cmti-12'>None</span>. Para eventos de exceção, é uma tupla contendo informações
+      sobre a exceção disparada.</p> 
+</dd></dl>
+<p class='indent'>       O método de rastreamento personalizado pode realizar várias ações, como exibir informações
+sobre as chamadas de métodos, coletar dados de execução, fazer análises dinâmicas, entre outros.
+É uma ferramenta poderosa para depurar e analisar o fluxo de execução de um programa
+Python.
+</p> 
+<p class='indent'>       É importante mencionar que o uso de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>sys.settrace</span></span></span> pode ter um impacto significativo no
+desempenho do programa, uma vez que o método de rastreamento é chamado em cada evento de
+chamada, retorno ou exceção. Portanto, é recomendado usá-lo com cuidado e apenas quando
+necessário para fins de depuração ou análise.
+       </p> 
+
+                                                                                                  
+                                                                                                  
+       <h5 class='likesubsubsectionHead' id='exemplo-de-uso-do-metodo-settrace-para-rastreamento-de-codigo'><a id='x20-680003'></a>Exemplo de uso do método <span class='cmtt-12'>settrace </span>para rastreamento de código</h5>
+<p class='noindent'>O Código <a href='#x20-68049r7'>5.7<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx4Parte1  --></a> define o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>trace</span></span></span> para ser chamada sempre que ocorrer um evento específico, como
+a execução de uma linha de código. Neste método, as informações relevantes são impressas no
+console, após a sua execução, como o evento, o número da linha e as variáveis locais. Em seguida, o
+método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>gerar_gabarito</span></span></span> é definido para calcular a soma ou subtração com contador par e ímpar,
+respectivamente, em um determinado intervalo. O método é chamado com os argumentos 9, 7 e 6
+para os parâmetros <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>N1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>contador</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>soma</span></span></span>, respectivamente. Por fim, o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>trace</span></span></span> é
+desativado na linha 16. Este código é um exemplo de como usar o recurso de rastreamento
+em Python para depurar o código e entender como as variáveis são alteradas durante a
+execução. O código rastreado não possui saída, mas o rastreamento pode ser modificado
+para imprimir informações adicionais ou para armazenar informações em um arquivo de
+<span class='cmti-12'>log</span>.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-de-uso-de-syssettrace-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-35'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb7'><a id='x20-68018r1'></a><span class='cmr-6'>1</span><span id='textcolor335'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor336'><span class='cmtt-10x-x-109'>trace</span></span><span class='cmtt-10x-x-109'>(frame, event, arg_unused):</span> 
+<a id='x20-68020r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor337'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(event, frame</span><span id='textcolor338'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>f_lineno, frame</span><span id='textcolor339'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>f_locals)</span> 
+<a id='x20-68022r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor340'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> trace</span> 
+<a id='x20-68024r4'></a><span class='cmr-6'>4</span> 
+<a id='x20-68026r5'></a><span class='cmr-6'>5</span><span id='textcolor341'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor342'><span class='cmtt-10x-x-109'>gerar_gabarito</span></span><span class='cmtt-10x-x-109'>(N1, contador, soma):</span> 
+<a id='x20-68028r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor343'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> contador </span><span id='textcolor344'><span class='cmmi-10x-x-109'>&lt;</span><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> N1:</span> 
+<a id='x20-68030r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor345'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> contador </span><span id='textcolor346'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor347'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor348'><span class='cmtt-10x-x-109'>==</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor349'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-68032r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>            soma </span><span id='textcolor350'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor351'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-68034r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor352'><span class='cmtt-10x-x-109'>else</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-68036r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>            soma </span><span id='textcolor353'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor354'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-68038r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>        contador </span><span id='textcolor355'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor356'><span class='cmtt-10x-x-109'>1</span></span> 
+<a id='x20-68040r12'></a><span class='cmr-6'>12</span> 
+<a id='x20-68042r13'></a><span class='cmr-6'>13</span><span id='textcolor357'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor358'><span class='cmtt-10x-x-109'>sys</span></span> 
+<a id='x20-68044r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>sys</span><span id='textcolor359'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>settrace(trace)</span> 
+<a id='x20-68046r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>gerar_gabarito(</span><span id='textcolor360'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor361'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor362'><span class='cmtt-10x-x-109'>6</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-68048r16'></a><span class='cmr-6'>16</span><span class='cmtt-10x-x-109'>sys</span><span id='textcolor363'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>settrace(</span><span id='textcolor364'><span class='cmtt-10x-x-109'>None</span></span><span class='cmtt-10x-x-109'>)</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-68049r7'></a>
+<a id='x20-68050'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Ao salvar o Código <a href='#x20-68049r7'>5.7<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx4Parte1  --></a> no arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>trace.py</span></span></span> e executá-lo no console do computador
+usando o comando <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>python trace.py</span></span></span>, a saída resultante será semelhante ao apresentado a
+seguir:
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox myboxCode' id='tcolobox-36'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Saída do Código </span><a href='#x20-68049r7'><span class='cmbx-10x-x-109'>5.7</span><!-- tex4ht:ref: lst:questaoQT_TesteMesaEx4Parte1  --></a><span class='cmbx-10x-x-109'>:</span>___________________________________________________________________________________
+</p> 
+<pre class='fancyvrb' id='fancyvrb8'><a id='x20-68067r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>call </span><span id='textcolor365'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor366'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor367'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor368'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor369'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor370'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor371'><span class='cmtt-10x-x-109'>6</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68069r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor372'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor373'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor374'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor375'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor376'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor377'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor378'><span class='cmtt-10x-x-109'>6</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68071r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor379'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor380'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor381'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor382'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor383'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor384'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor385'><span class='cmtt-10x-x-109'>6</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68073r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor386'><span class='cmtt-10x-x-109'>12</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor387'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor388'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor389'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor390'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor391'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor392'><span class='cmtt-10x-x-109'>6</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68075r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor393'><span class='cmtt-10x-x-109'>13</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor394'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor395'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor396'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor397'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor398'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor399'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor400'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68077r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor401'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor402'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor403'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor404'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor405'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor406'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor407'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor408'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68079r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor409'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor410'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor411'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor412'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor413'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor414'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor415'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor416'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68081r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor417'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor418'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor419'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor420'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor421'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor422'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor423'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor424'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68083r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor425'><span class='cmtt-10x-x-109'>13</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor426'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor427'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor428'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor429'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor430'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor431'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68085r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor432'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor433'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor434'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor435'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor436'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor437'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor438'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68087r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor439'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor440'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor441'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor442'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor443'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor444'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor445'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68089r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor446'><span class='cmtt-10x-x-109'>12</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor447'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor448'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor449'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor450'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor451'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor452'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68091r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor453'><span class='cmtt-10x-x-109'>13</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor454'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor455'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor456'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor457'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor458'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor459'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor460'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68093r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>line </span><span id='textcolor461'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor462'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor463'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor464'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor465'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor466'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor467'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor468'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-68095r15'></a><span class='cmr-6'>15</span><span id='textcolor469'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor470'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'> {</span><span id='textcolor471'><span class='cmtt-10x-x-109'>'N1'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor472'><span class='cmtt-10x-x-109'>9</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor473'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor474'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor475'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor476'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor477'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>}</span></pre>
+ 
+</div> 
+</div>
+<p class='indent'>       É possível formatar essa saída e gerar uma questão completa no MCTest, conforme
+demonstrado a seguir.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='teste-de-mesa-com-rastreamento-de-codigo-usando-settrace'><a id='x20-690003'></a>Teste de mesa com rastreamento de código usando <span class='cmtt-12'>settrace</span></h5>
+<p class='noindent'>Neste terceiro exemplo de teste de mesa paramétrico, é utilizado o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>settrace</span></span></span>, da biblioteca <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>sys</span></span></span>,
+para gerar o gabarito. Este exemplo foi inspirado no artigo de Teubl e Zampirolli (2023). A vantagem dessa
+versão em relação à anterior é que pode-se criar o gabarito sem precisar incluir vários comandos
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>print</span></span></span> na implementação do pseudocódigo, tornando o processo mais genérico para diferentes exemplos
+de teste de mesa. A seguir, serão adaptadas as versões anteriores, criando um código em Python que faz
+parte do enunciado da questão, apresentado no Código <a href='#x20-69109r8'>5.8<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx4Parte2  --></a>. No entanto, também é possível ter
+utilizado um pseudocódigo.
+</p> 
+<p class='indent'>       A parte com diferenças significativas em relação às anteriores é apresentada no
+Código <a href='#x20-69219r9'>5.9<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx4Parte3  --></a>. Nessa parte, o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>trace</span></span></span> é adaptado, conforme apresentado no Código
+<a href='#x20-68049r7'>5.7<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx4Parte1  --></a>, para formatar a tabela com o gabarito. Dentro desse método, é verificado se o evento
+atual é uma linha de código (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>event == 'line'</span></span></span>). Em caso afirmativo, o método obtém o
+número da linha atual (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>lineno</span></span></span>) e o dicionário de variáveis locais (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>locals_dict</span></span></span>) do <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>frame</span></span></span>
+atual.
+</p> 
+<p class='indent'>       Em seguida, o método obtém os valores das variáveis <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>contador</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>soma</span></span></span> do dicionário de
+variáveis locais, usando o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>get</span></span></span>. Esses valores são usados para criar uma <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>string</span></span></span> formatada,
+armazenada em uma lista chamada <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>output</span></span></span>.
+</p> 
+<p class='indent'>       Por fim, o método retorna a si (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>return trace</span></span></span>), o que permite que seja chamado novamente no
+próximo evento de linha. Esse processo se repete até que a execução do programa seja concluída ou
+até encontrar o comando <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>sys.settrace(None)</span></span></span>, que encerra o rastreamento.
+</p> 
+<p class='indent'>       Além disso, o código apresenta o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>gerar_gabarito</span></span></span>, semelhante ao apresentado no
+Código <a href='#x20-68049r7'>5.7<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx4Parte1  --></a>. Em seguida, o trecho de código inicia um <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>loop</span></span></span> infinito que realiza as seguintes ações: gera
+três números aleatórios distintos em um intervalo específico, inicializa uma lista vazia chamada <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>output</span></span></span>
+e adiciona cabeçalhos e uma linha de separação à lista. Em seguida, o rastreamento do código é
+iniciado com <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>sys.settrace(trace)</span></span></span>, o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>gerar_gabarito</span></span></span> é executado com os valores gerados e o
+                                                                                                  
+                                                                                                  
+rastreamento é finalizado com <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>sys.settrace(None)</span></span></span>. A lista <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>output</span></span></span> é convertida em uma única <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>string</span></span></span>
+chamada <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>tabela</span></span></span>. O código verifica se o número de linhas na tabela está entre 11 e 14. Se a
+condição for satisfeita, o <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>loop</span></span></span> é interrompido e o programa é finalizado. Essa estrutura de
+repetição permite gerar e obter uma tabela com um número específico de linhas no intervalo
+desejado.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-pratico-de-teste-de-mesa-parametrico-utilizando-syssettrace-parte-descricao-de-questao-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-37'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb9'><a id='x20-69038r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Preencha a tabela com os valores corretos das variáveis contador e soma</span> 
+<a id='x20-69040r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>em cada iteração do laço, para valores de entrada específicos do método</span><span id='textcolor478'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x20-69042r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>Além disso, considere os números das linhas do código para preencher a</span> 
+<a id='x20-69044r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>tabela, a fim de facilitar a referência</span><span id='textcolor479'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Considere inicialmente</span> 
+<a id='x20-69046r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>N1</span><span id='textcolor480'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[[code:N1]], contador</span><span id='textcolor481'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[[code:N2]] e soma</span><span id='textcolor482'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[[code:N3]]</span><span id='textcolor483'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x20-69048r6'></a><span class='cmr-6'>6</span> 
+<a id='x20-69050r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
+<a id='x20-69052r8'></a><span class='cmr-6'>8</span><span id='textcolor484'><span class='cmtt-10x-x-109'>1.</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor485'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor486'><span class='cmtt-10x-x-109'>gerar_gabarito</span></span><span class='cmtt-10x-x-109'>(N1, contador, soma):</span> 
+<a id='x20-69054r9'></a><span class='cmr-6'>9</span><span id='textcolor487'><span class='cmtt-10x-x-109'>2.</span></span><span class='cmtt-10x-x-109'>    </span><span id='textcolor488'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> contador </span><span id='textcolor489'><span class='cmmi-10x-x-109'>&lt;</span><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> N1:</span> 
+<a id='x20-69056r10'></a><span class='cmr-6'>10</span><span id='textcolor490'><span class='cmtt-10x-x-109'>3.</span></span><span class='cmtt-10x-x-109'>        </span><span id='textcolor491'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> contador </span><span id='textcolor492'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor493'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor494'><span class='cmtt-10x-x-109'>==</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor495'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-69058r11'></a><span class='cmr-6'>11</span><span id='textcolor496'><span class='cmtt-10x-x-109'>4.</span></span><span class='cmtt-10x-x-109'>            soma </span><span id='textcolor497'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor498'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-69060r12'></a><span class='cmr-6'>12</span><span id='textcolor499'><span class='cmtt-10x-x-109'>5.</span></span><span class='cmtt-10x-x-109'>        </span><span id='textcolor500'><span class='cmtt-10x-x-109'>else</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-69062r13'></a><span class='cmr-6'>13</span><span id='textcolor501'><span class='cmtt-10x-x-109'>6.</span></span><span class='cmtt-10x-x-109'>            soma </span><span id='textcolor502'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor503'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-69064r14'></a><span class='cmr-6'>14</span><span id='textcolor504'><span class='cmtt-10x-x-109'>7.</span></span><span class='cmtt-10x-x-109'>        contador </span><span id='textcolor505'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor506'><span class='cmtt-10x-x-109'>1</span></span> 
+<a id='x20-69066r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
+<a id='x20-69068r16'></a><span class='cmr-6'>16</span> 
+<a id='x20-69070r17'></a><span class='cmr-6'>17</span><span class='cmtt-10x-x-109'>\begin{tabular}{</span><span id='textcolor507'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor508'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor509'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor510'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>c</span><span id='textcolor511'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>}</span> 
+<a id='x20-69072r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>\hline</span> 
+<a id='x20-69074r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>\textbf{linha} </span><span id='textcolor512'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \textbf{contador} </span><span id='textcolor513'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \textbf{soma} \\</span> 
+<a id='x20-69076r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>\hline</span> 
+<a id='x20-69078r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'> </span><span id='textcolor514'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor515'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-69080r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'> </span><span id='textcolor516'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor517'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-69082r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'> </span><span id='textcolor518'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor519'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-69084r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'> </span><span id='textcolor520'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor521'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-69086r25'></a><span class='cmr-6'>25</span><span class='cmtt-10x-x-109'> </span><span id='textcolor522'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor523'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-69088r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'> </span><span id='textcolor524'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor525'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-69090r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'> </span><span id='textcolor526'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor527'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-69092r28'></a><span class='cmr-6'>28</span><span class='cmtt-10x-x-109'> </span><span id='textcolor528'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor529'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-69094r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'> </span><span id='textcolor530'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor531'><span class='cmtt-10x-x-109'>&amp;</span></span><span class='cmtt-10x-x-109'> \\ \hline</span> 
+<a id='x20-69096r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>\end{tabular}</span> 
+<a id='x20-69098r31'></a><span class='cmr-6'>31</span> 
+<a id='x20-69100r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'>{\color{blue} {\small</span> 
+<a id='x20-69102r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
+<a id='x20-69104r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>[[code:tabela]]</span> 
+<a id='x20-69106r35'></a><span class='cmr-6'>35</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
+<a id='x20-69108r36'></a><span class='cmr-6'>36</span><span class='cmtt-10x-x-109'>}}</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-69109r8'></a>
+<a id='x20-69110'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+                                                                                                  
+                                                                                                  
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-pratico-de-teste-de-mesa-parametrico-utilizando-syssettrace-parte-bloco-de-codigo-em-python-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-38'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb10'><a id='x20-69148r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x20-69150r2'></a><span class='cmr-6'>2</span><span id='textcolor532'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor533'><span class='cmtt-10x-x-109'>random</span></span><span id='textcolor534'><span class='cmtt-10x-x-109'>,</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor535'><span class='cmtt-10x-x-109'>sys</span></span> 
+<a id='x20-69152r3'></a><span class='cmr-6'>3</span><span id='textcolor536'><span class='cmtt-10x-x-109'>global</span></span><span class='cmtt-10x-x-109'> trace</span> 
+<a id='x20-69154r4'></a><span class='cmr-6'>4</span> 
+<a id='x20-69156r5'></a><span class='cmr-6'>5</span><span id='textcolor537'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor538'><span class='cmtt-10x-x-109'>trace</span></span><span class='cmtt-10x-x-109'>(frame, event, arg_unused):</span> 
+<a id='x20-69158r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor539'><span class='cmtt-10x-x-109'>global</span></span><span class='cmtt-10x-x-109'> output</span> 
+<a id='x20-69160r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor540'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> event </span><span id='textcolor541'><span class='cmtt-10x-x-109'>==</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor542'><span class='cmtt-10x-x-109'>'line'</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-69162r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>        lineno </span><span id='textcolor543'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> frame</span><span id='textcolor544'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>f_lineno  </span><span id='textcolor545'><span class='cmitt-10x-x-109'># pega a linha</span></span> 
+<a id='x20-69164r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>        locals_dict </span><span id='textcolor546'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> frame</span><span id='textcolor547'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>f_locals  </span><span id='textcolor548'><span class='cmitt-10x-x-109'># pega todas as variáveis locais</span></span> 
+<a id='x20-69166r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>        contador </span><span id='textcolor549'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> locals_dict</span><span id='textcolor550'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>get(</span><span id='textcolor551'><span class='cmtt-10x-x-109'>'contador'</span></span><span class='cmtt-10x-x-109'>)  </span><span id='textcolor552'><span class='cmitt-10x-x-109'># pega a variável contador</span></span> 
+<a id='x20-69168r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>        soma </span><span id='textcolor553'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> locals_dict</span><span id='textcolor554'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>get(</span><span id='textcolor555'><span class='cmtt-10x-x-109'>'soma'</span></span><span class='cmtt-10x-x-109'>)  </span><span id='textcolor556'><span class='cmitt-10x-x-109'># pega a variável soma</span></span> 
+<a id='x20-69170r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>        output</span><span id='textcolor557'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(</span><span id='textcolor558'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor559'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor560'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>lineno</span><span id='textcolor561'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor562'><span class='cmtt-10x-x-109'>16</span></span><span id='textcolor563'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor564'><span class='cmtt-10x-x-109'>3d</span></span><span id='textcolor565'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor566'><span class='cmtt-10x-x-109'> </span></span><span id='textcolor567'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>contador</span><span id='textcolor568'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor569'><span class='cmtt-10x-x-109'>7d</span></span><span id='textcolor570'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor571'><span class='cmtt-10x-x-109'> </span></span><span id='textcolor572'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>soma</span><span id='textcolor573'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor574'><span class='cmtt-10x-x-109'>7d</span></span><span id='textcolor575'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor576'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor577'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-69172r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor578'><span class='cmitt-10x-x-109'># armazena a string na lista</span></span> 
+<a id='x20-69174r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor579'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> trace</span> 
+<a id='x20-69176r15'></a><span class='cmr-6'>15</span> 
+<a id='x20-69178r16'></a><span class='cmr-6'>16</span><span id='textcolor580'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor581'><span class='cmtt-10x-x-109'>gerar_gabarito</span></span><span class='cmtt-10x-x-109'>(N1, soma, contador):</span> 
+<a id='x20-69180r17'></a><span class='cmr-6'>17</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor582'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> contador </span><span id='textcolor583'><span class='cmmi-10x-x-109'>&lt;</span><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> N1:</span> 
+<a id='x20-69182r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor584'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> contador </span><span id='textcolor585'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor586'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor587'><span class='cmtt-10x-x-109'>==</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor588'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-69184r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>            soma </span><span id='textcolor589'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor590'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-69186r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor591'><span class='cmtt-10x-x-109'>else</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-69188r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>            soma </span><span id='textcolor592'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor593'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> contador</span> 
+<a id='x20-69190r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>        contador </span><span id='textcolor594'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor595'><span class='cmtt-10x-x-109'>1</span></span> 
+<a id='x20-69192r23'></a><span class='cmr-6'>23</span> 
+<a id='x20-69194r24'></a><span class='cmr-6'>24</span><span id='textcolor596'><span class='cmitt-10x-x-109'># Exemplo de uso:</span></span> 
+<a id='x20-69196r25'></a><span class='cmr-6'>25</span><span id='textcolor597'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor598'><span class='cmtt-10x-x-109'>True</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-69198r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>    N1, N2, N3 </span><span id='textcolor599'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor600'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sample(</span><span id='textcolor601'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor602'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor603'><span class='cmtt-10x-x-109'>20</span></span><span class='cmtt-10x-x-109'>), </span><span id='textcolor604'><span class='cmtt-10x-x-109'>3</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-69200r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>    output </span><span id='textcolor605'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> []</span> 
+<a id='x20-69202r28'></a><span class='cmr-6'>28</span><span class='cmtt-10x-x-109'>    output</span><span id='textcolor606'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(</span><span id='textcolor607'><span class='cmtt-10x-x-109'>"Linha Contador Soma</span></span><span id='textcolor608'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor609'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-69204r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>    output</span><span id='textcolor610'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(</span><span id='textcolor611'><span class='cmtt-10x-x-109'>"---------------------</span></span><span id='textcolor612'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor613'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-69206r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>    sys</span><span id='textcolor614'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>settrace(trace)  </span><span id='textcolor615'><span class='cmitt-10x-x-109'># Inicializa o rastreamento</span></span> 
+<a id='x20-69208r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>    gerar_gabarito(N1, N2, N3)</span> 
+<a id='x20-69210r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'>    sys</span><span id='textcolor616'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>settrace(</span><span id='textcolor617'><span class='cmtt-10x-x-109'>None</span></span><span class='cmtt-10x-x-109'>)  </span><span id='textcolor618'><span class='cmitt-10x-x-109'># Finaliza o rastreamento</span></span> 
+<a id='x20-69212r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'>    tabela </span><span id='textcolor619'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor620'><span class='cmtt-10x-x-109'>''</span></span><span id='textcolor621'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>join(output)  </span><span id='textcolor622'><span class='cmitt-10x-x-109'># converte a lista de strings em uma string</span></span> 
+<a id='x20-69214r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor623'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor624'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor625'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor626'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(tabela</span><span id='textcolor627'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>split(</span><span id='textcolor628'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor629'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor630'><span class='cmtt-10x-x-109'>'</span></span><span class='cmtt-10x-x-109'>)) </span><span id='textcolor631'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor632'><span class='cmtt-10x-x-109'>15</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-69216r35'></a><span class='cmr-6'>35</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor633'><span class='cmtt-10x-x-109'>break</span></span> 
+<a id='x20-69218r36'></a><span class='cmr-6'>36</span><span class='cmtt-10x-x-109'>]]</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-69219r9'></a>
+<a id='x20-69220'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-definida-nos-codigos-lstquestaoqttestemesaexparte-e-lstquestaoqttestemesaexparte-1'><img alt='PIC' height='461' src='./figs-br//cap05_questaoQT_TesteMesaEx4PDF.png' width='460' /> <a id='x20-69221r4'></a>
+<a id='x20-69222'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 5.4: </span><span class='content'>Recorte do PDF gerado para a questão definida nos Códigos <a href='#x20-69109r8'>5.8<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx4Parte2  --></a> e <a href='#x20-69219r9'>5.9<!-- tex4ht:ref: lst:questaoQT_TesteMesaEx4Parte3  --></a>.
+</span></figcaption><!-- tex4ht:label?: x20-69221r5  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x20-69223r119'></a></p>
+       <h3 class='sectionHead' id='qt-parametrica-com-codigo'><span class='titlemark'>5.3   </span> <a id='x20-700003'></a>QT paramétrica, com código</h3>
+<p class='noindent'>Nesta seção, são abordadas QTs paramétricas que envolvem código, introduzindo o ambiente Moodle
+e VPL. Em seguida, é apresentado um exemplo de atividade que combina essas duas ferramentas.
+Posteriormente, é fornecido um exemplo de atividade que utiliza a combinação MCTest, Moodle e
+VPL.
+<a id='x20-70001r127'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='introducao-ao-moodle-e-ao-vpl'><span class='titlemark'>5.3.1   </span> <a id='x20-710001'></a>Introdução ao Moodle e ao VPL</h4>
+<p class='noindent'>O Moodle é uma plataforma de aprendizagem <span class='cmti-12'>online </span>amplamente utilizada em instituições de ensino em
+todo o mundo. Ela oferece recursos abrangentes para apoiar o ensino e a aprendizagem, incluindo a
+capacidade de criar e disponibilizar atividades interativas para os estudantes. Um dos <span class='cmti-12'>plugins </span>populares do
+Moodle é o VPL (<span class='cmti-12'>Virtual Programming Lab</span>) (PINO, 2012), desenvolvido especialmente para a correção
+automática de exercícios de programação (EPs).
+</p> 
+<p class='indent'>       O <span class='cmti-12'>plugin </span>VPL permite que os professores criem EPs e ofereçam aos estudantes um
+ambiente virtual para escrever e testar seu código. Essa ferramenta é particularmente útil em
+disciplinas de programação, onde os estudantes precisam praticar e aprimorar suas habilidades de
+codificação.
+</p> 
+<p class='indent'>       O VPL oferece recursos avançados de avaliação e correção automática. Os estudantes podem
+enviar seus códigos para o sistema, e o VPL executará testes automatizados para verificar se o código
+produz os resultados esperados. Os resultados são fornecidos instantaneamente, permitindo que os
+estudantes identifiquem onde cometeram erros e onde podem melhorar.
+</p> 
+<p class='indent'>       Além disso, o VPL permite que os professores configurem casos de teste personalizados para
+verificar a correção dos programas dos estudantes. Isso significa que os professores podem criar uma
+variedade de exercícios e testes para avaliar a compreensão e a habilidade dos estudantes em diferentes
+aspectos da programação.
+</p> 
+<p class='indent'>       O uso do VPL no Moodle traz diversos benefícios. Ele promove a prática ativa e produz <span class='cmti-12'>feedback</span>
+imediato aos estudantes, permitindo que eles experimentem e aprendam com seus erros. Além disso, o
+VPL agiliza o processo de correção, liberando mais tempo para que os professores se concentrem em
+fornecer orientação e apoio individualizado aos estudantes.
+<a id='x20-71001r135'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='questao-com-exercicio-de-programacao-no-moodlevpl'><span class='titlemark'>5.3.2   </span> <a id='x20-720002'></a>Questão com exercício de programação no Moodle+VPL</h4>
+<p class='noindent'>Nesta seção, será apresentada uma QT que requer a solução utilizando o  <span class='cmti-12'>plugin </span>VPL do Moodle.
+Esse tipo de questão é definido neste livro como EP. O estudante é solicitado a inserir o código na
+atividade correspondente do Moodle, utilizando uma linguagem de programação definida pelo professor.
+É importante destacar que a questão apresentada a seguir não é paramétrica, embora possua
+                                                                                                  
+                                                                                                  
+diferentes casos de teste.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='um-exemplo-de-atividade-moodlevpl'><a id='x20-730002'></a>Um exemplo de atividade Moodle+VPL</h5>
+<p class='noindent'>Escreva um programa em Python para calcular o fatorial de um número inteiro fornecido pelo
+usuário.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='instrucoes'><a id='x20-740002'></a>Instruções</h5>
+<p class='noindent'>Aqui está um exemplo de questão de EP no Moodle usando a linguagem Python para calcular o fatorial
+de um número:
+      </p> 
+<dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+   1. </dt><dd class='enumerate-enumitem'>Acesse o Moodle e vá para a disciplina em que deseja adicionar a questão;
+      </dd><dt class='enumerate-enumitem'>
+   2. </dt><dd class='enumerate-enumitem'>Clique em “Atividades” e selecione “Laboratório Virtual de Programação” para criar uma
+      nova atividade VPL;
+      </dd><dt class='enumerate-enumitem'>
+   3. </dt><dd class='enumerate-enumitem'>Preencha os detalhes da atividade, como nome, descrição e pontuação. Finalize salvando
+      e  mostrando  a  atividade.  Em  seguida,  clique  no  ícone  de  engrenagem  para  acessar  as
+      configurações avançadas da atividade e siga os próximos passos;
+      </dd><dt class='enumerate-enumitem'>
+   4. </dt><dd class='enumerate-enumitem'>Na seção “Opções de execução”, selecione a linguagem “Python” como “Script de
+      execução”, deixando apenas “Avaliar” e “Atribuição automática de nota” como “Sim”,
+      por exemplo;
+      </dd><dt class='enumerate-enumitem'>
+   5. </dt><dd class='enumerate-enumitem'>Na seção “Casos de teste”, você pode definir os casos de teste da seguinte maneira:
+      <div class='tcolorbox myboxCode' id='tcolobox-39'>    
+<div class='tcolorbox-title'>
+      </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo com os casos de teste:</span>___________________________________________________________________
+</p> 
+<pre class='verbatim' id='verbatim-7'>
+case=caso1
+input=5
+output="O fatorial de 5 é 120."
+output="O fatorial de 5 é 120"
+case=caso2
+input=10
+output="O fatorial de 10 é 3628800."
+output="O fatorial de 10 é 3628800"
+</pre>
+<p class='noindent'></p> 
+ 
+</div> 
+</div>
+                                                                                                  
+                                                                                                  
+      </dd><dt class='enumerate-enumitem'>
+   6. </dt><dd class='enumerate-enumitem'>Na seção “Arquivo de execução”, você pode deixar em branco, pois não é necessário
+      alterações neste exemplo.
+      </dd></dl>
+<p class='indent'>       O Código <a href='#x20-74034r10'>5.10<!-- tex4ht:ref: lst:fatorial  --></a> apresenta um método em Python para calcular o fatorial de um número. O
+fatorial de um número é o produto de todos os números inteiros positivos de 1 até esse
+número.
+</p> 
+<p class='indent'>       O método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>fatorial(n)</span></span></span> recebe um número <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>n</span></span></span> como parâmetro. Ele verifica se <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>n</span></span></span> é igual a zero.
+Se for, retorna 1, pois o fatorial de 0 é definido como 1. Caso contrário, o método calcula o fatorial de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>n</span></span></span>
+multiplicando <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>n</span></span></span> pelo fatorial de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>n-1</span></span></span> (ou seja, o fatorial do número anterior). Isso é feito recursivamente
+até chegar ao caso base do fatorial de 0.
+</p> 
+<p class='indent'>       Em seguida, o programa solicita ao usuário que digite um número inteiro. Esse número é
+armazenado na variável <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>numero</span></span></span>. O programa então chama o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>fatorial(numero)</span></span></span> para
+calcular o fatorial desse número e armazena o resultado na variável <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>resultado</span></span></span>. Por fim, o
+programa exibe a frase <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>"O fatorial de"</span></span></span> seguida do número digitado pelo usuário e do resultado
+calculado.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-programa-em-python-para-calculo-do-fatorial-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-40'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Código:  </span><span class='cmr-10x-x-109'>Exemplo de uso de atividade Moodle+VPL</span>
+_________________________________________
+<pre class='fancyvrb' id='fancyvrb11'><a id='x20-74017r1'></a><span class='cmr-6'>1</span><span id='textcolor634'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor635'><span class='cmtt-10x-x-109'>fatorial</span></span><span class='cmtt-10x-x-109'>(n):</span> 
+<a id='x20-74019r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor636'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> n </span><span id='textcolor637'><span class='cmtt-10x-x-109'>==</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor638'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-74021r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor639'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor640'><span class='cmtt-10x-x-109'>1</span></span> 
+<a id='x20-74023r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor641'><span class='cmtt-10x-x-109'>else</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x20-74025r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor642'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> n </span><span id='textcolor643'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> fatorial(n </span><span id='textcolor644'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor645'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-74027r6'></a><span class='cmr-6'>6</span> 
+<a id='x20-74029r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>numero </span><span id='textcolor646'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor647'><span class='cmtt-10x-x-109'>int</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor648'><span class='cmtt-10x-x-109'>input</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor649'><span class='cmtt-10x-x-109'>"Digite um número inteiro: "</span></span><span class='cmtt-10x-x-109'>))</span> 
+<a id='x20-74031r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>resultado </span><span id='textcolor650'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> fatorial(numero)</span> 
+<a id='x20-74033r9'></a><span class='cmr-6'>9</span><span id='textcolor651'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor652'><span class='cmtt-10x-x-109'>"O fatorial de"</span></span><span class='cmtt-10x-x-109'>, numero, </span><span id='textcolor653'><span class='cmtt-10x-x-109'>"é"</span></span><span class='cmtt-10x-x-109'>, resultado, </span><span id='textcolor654'><span class='cmtt-10x-x-109'>"."</span></span><span class='cmtt-10x-x-109'>)</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-74034r10'></a>
+<a id='x20-74035'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <h5 class='likesubsubsectionHead' id='avaliacao'><a id='x20-750002'></a>Avaliação</h5>
+<p class='noindent'>A pontuação para esta questão será baseada no programa fornecido pelo estudante para ler as
+entradas, calcular o fatorial e produzir as saídas esperadas para os casos de teste fornecidos. Se o
+estudante fornecer apenas uma saída fixa, como <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>print("O fatorial de 5 é 120.")</span></span></span>, a questão
+receberá uma nota de 50%.
+</p> 
+<p class='indent'>       Portanto, é importante incluir uma variedade de casos de teste para avaliar corretamente o
+programa e identificar possíveis tentativas de trapassa. Quanto mais casos de teste forem utilizados,
+melhor será a avaliação, uma vez que aumenta a chance de identificar soluções corretas e detectar
+respostas fixas ou incorretas.
+<a id='x20-75001r136'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='questao-com-exercicio-de-programacao-no-mctestmoodlevpl'><span class='titlemark'>5.3.3   </span> <a id='x20-760003'></a>Questão com exercício de programação no MCTest+Moodle+VPL</h4>
+<p class='noindent'>Esse tipo de questão, utilizando EP no MCTest+Moodle+VPL, apresenta dois desafios devido à falta de
+integração atual entre os bancos de dados do MCTest e do Moodle.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='primeiro-desafio'><a id='x20-770003'></a>Primeiro desafio</h5>
+<p class='noindent'>O primeiro desafio consiste em definir a variação da atividade para cada estudante, uma vez que as
+atividades podem ser individuais. Para solucionar esse problema, o MCTest gera um arquivo no formato
+CSV chamado <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>students_variations.csv</span></span></span>, contendo o nome do estudante e a variação atribuída. Esse
+arquivo deve ser inserido no campo “Arquivo de execução” da atividade VPL no Moodle. Além disso,
+existem vários outros arquivos disponíveis no GitHub, detalhados em capítulos futuros deste livro, que
+também devem ser incluídos nesse campo. A versão utilizada neste livro está na pasta
+<a href='https://github.com/fzampirolli/mctest/tree/master/VPL_modification'><span class='cmtt-12'>V10-new_selector</span></a> do GitHub.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox mybox' id='tcolobox-41'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+<p class='indent'>É importante destacar que a busca pela variação do estudante deve ser realizada pelo nome
+e sobrenome do estudante no arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>students_variations.csv</span></span></span>, sendo necessário que esses
+dados sejam idênticos tanto no MCTest quanto no Moodle. Em versões recentes do VPL,
+também é possível utilizar o e-mail do estudante, o que representará uma melhoria futura
+nesse processo. </p> 
+ 
+</div> 
+</div>
+       <h5 class='likesubsubsectionHead' id='segundo-desafio'><a id='x20-780003'></a>Segundo desafio</h5>
+<p class='noindent'>O segundo desafio, ainda mais crítico, envolve a definição dos casos de teste para cada variação da
+questão. Esse desafio é enfrentado através da geração do arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>linker.json</span></span></span> pelo MCTest, no
+formato JSON. Esse arquivo contém as variações da atividade, incluindo as questões e seus respectivos
+                                                                                                  
+                                                                                                  
+casos de teste. Nesta seção, será abordado o processo de criação de uma QT paramétrica
+de EP no MCTest+Moodle+VPL. No entanto, é importante ressaltar que todos os detalhes
+desse processo serão abordados em capítulos futuros, uma vez que os arquivos CSV e JSON
+são gerados ao criar um exame no MCTest, especificamente no Capítulo <a href='livroch10.xhtml#exames-com-mctestmoodlevpl'>10<!-- tex4ht:ref: ch:examesQT_VPL  --></a> – <a href='livroch10.xhtml#exames-com-mctestmoodlevpl'>Exames com
+MCTest+Moodle+VPL<!-- tex4ht:ref: ch:examesQT_VPL  --></a>.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='um-exemplo-simples-de-calculo-de-parcelas-sem-juros'><a id='x20-790003'></a>Um exemplo simples de cálculo de parcelas sem juros</h5>
+<p class='noindent'>O VPL considera cada linha como uma entrada de dados de um programa. No Python, essa entrada é
+capturada utilizando o comando <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>input()</span></span></span>, que recebe um texto. Por exemplo, o texto <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>"5003.9\n10\n"</span></span></span>
+contém duas entradas. Para uma questão de parcelas sem juros, é possível ter duas entradas e uma
+saída de dados no Código <a href='#x20-79019r11'>5.11<!-- tex4ht:ref: lst:parcelasSemJuros  --></a> em Python, que pode ser testado em uma atividade VPL no
+Moodle.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-programa-em-python-para-calculo-de-parcelas-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-42'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Código:  </span><span class='cmr-10x-x-109'>Exemplo de uso de atividade Moodle+VPL – Parcelas</span>
+_______________________________
+<pre class='fancyvrb' id='fancyvrb12'><a id='x20-79008r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>valor_total </span><span id='textcolor655'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor656'><span class='cmtt-10x-x-109'>float</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor657'><span class='cmtt-10x-x-109'>input</span></span><span class='cmtt-10x-x-109'>())</span> 
+<a id='x20-79010r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>parcelas </span><span id='textcolor658'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor659'><span class='cmtt-10x-x-109'>int</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor660'><span class='cmtt-10x-x-109'>input</span></span><span class='cmtt-10x-x-109'>())</span> 
+<a id='x20-79012r3'></a><span class='cmr-6'>3</span> 
+<a id='x20-79014r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>valor_parcela </span><span id='textcolor661'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> valor_total </span><span id='textcolor662'><span class='cmtt-10x-x-109'>/</span></span><span class='cmtt-10x-x-109'> parcelas</span> 
+<a id='x20-79016r5'></a><span class='cmr-6'>5</span> 
+<a id='x20-79018r6'></a><span class='cmr-6'>6</span><span id='textcolor663'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor664'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor665'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor666'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>valor_parcela</span><span id='textcolor667'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor668'><span class='cmtt-10x-x-109'>.2f</span></span><span id='textcolor669'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor670'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-79019r11'></a>
+<a id='x20-79020'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Nesse exemplo, o programa captura o valor total e o número de parcelas informados pelo usuário e
+calcula o valor de cada parcela. Em seguida, exibe o resultado utilizando o comando <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>print</span></span></span>, formatando com
+duas casas decimais.
+</p> 
+<p class='indent'>       O MCTest pode gerar automaticamente diversos casos de teste, seguindo uma estrutura específica
+de dicionário de dados. Por exemplo, a seguir estão apresentados dois casos de teste criados no MCTest
+para o exemplo de cálculo de parcelas sem juros:
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox myboxCode' id='tcolobox-43'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Dicionário usado no MCTest contendo os casos de teste:</span>_______________________________________
+</p> 
+<pre class='verbatim' id='verbatim-8'>
+moodle_cases = {
+  "input": ["5009.4\n10\n", "5003.9\n10\n"],
+  "output": ["500.94", "500.39"]
+}
+</pre>
+<p class='noindent'></p> 
+ 
+</div> 
+</div>
+<p class='indent'>       Esse dicionário será formatado no arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>linker.json</span></span></span>, que será tratado por vários arquivos
+que deverão ser inseridos em “Arquivos de execução”, em uma atividade VPL no Moodle, que pode ser
+equivalente aos seguintes casos de teste.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox myboxCode' id='tcolobox-44'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo com os casos de teste:</span>__________________________________________________________________________
+</p> 
+<pre class='verbatim' id='verbatim-9'>
+case=caso1
+input=5009.4
+10
+output=500.94
+case=caso2
+input=5003.9
+10
+output=500.39
+</pre>
+<p class='noindent'></p> 
+ 
+</div> 
+</div>
+<p class='indent'>       Para realizar essa tarefa, na descrição da questão no MCTest, é necessário incluir um trecho de
+                                                                                                  
+                                                                                                  
+código utilizando o comando <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>comment</span></span></span> que contenha apenas o dicionário de casos de teste. Esse trecho
+indica ao gerador MCTest para incluir os casos de teste no arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>linker.json</span></span></span>, que será importado no
+Moodle.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='criando-uma-qt-parametrica-para-integracao-mctestmoodlevpl'><a id='x20-800003'></a>Criando uma QT paramétrica para integração MCTest+Moodle+VPL</h5>
+<p class='noindent'>A seguir, será apresentado um exemplo completo de código para essa questão de parcelas sem juros,
+onde as variáveis e instruções em Python estão entre os marcadores <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code:</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>. Essas
+variáveis devem ser criadas no bloco de código Python definido entre os marcadores <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[def:</span></span></span> e
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>.
+</p> 
+<p class='indent'>       Para criar questões paramétricas, não apenas nos casos de teste, é necessário incluir variáveis
+aleatórias no enunciado da questão entre <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code:</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>. No exemplo das parcelas sem juros, foi incluído
+no enunciado o número de parcelas, sendo utilizado apenas o valor da compra como entrada para o caso de
+teste.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox mybox' id='tcolobox-45'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+<p class='indent'>Para garantir que cada estudante receba uma questão diferente, é necessário incluir o maior
+número possível de variáveis aleatórias no enunciado. Por exemplo, ao lidar com um
+problema de parcelas sem juros, é possível adicionar variáveis aleatórias como o nome do
+cliente, o produto em questão, entre outros. Além disso, é importante que esses dados sejam
+impressos na saída esperada para os casos de teste. Caso contrário, um mesmo código pode
+funcionar para todas as variações de atividade, ignorando a necessidade de múltiplos casos
+de teste. </p> 
+ 
+</div> 
+</div>
+<p class='indent'>       No Código <a href='#x20-80061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a>, é apresentado o enunciado da questão, incluindo a parcela como parte
+paramétrica. Também é incluído o primeiro caso de teste como exemplo no enunciado.
+Essa primeira parte é finalizada com o bloco <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>comment</span></span></span>, necessário para o MCTest entender
+que se trata de uma questão onde o estudante deve resolver como uma atividade VPL no
+Moodle.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-de-qt-parametrica-utilizando-mctestmoodlevpl-parte-descricao-de-questao-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-46'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb13'><a id='x20-80022r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Escreva um programa que auxilia uma loja na hora de efetuar uma venda</span><span id='textcolor671'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Seu</span> 
+<a id='x20-80024r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>programa deve perguntar o preço do produto e considerar que a loja parcela</span> 
+<a id='x20-80026r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>este preço em somente em  [[code:parcelas]] parcelas (sem juros)</span><span id='textcolor672'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>  O seu</span> 
+<a id='x20-80028r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>programa deve mostrar quanto será o valor de uma parcela (arredondando</span> 
+<a id='x20-80030r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>para duas casas decimais apenas)</span><span id='textcolor673'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Veja exemplo a seguir: \\</span> 
+<a id='x20-80032r6'></a><span class='cmr-6'>6</span> 
+<a id='x20-80034r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>\noindent\textbf{Exemplo de Entrada:}</span> 
+<a id='x20-80036r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
+<a id='x20-80038r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>[[code:caso0_inp]]</span> 
+<a id='x20-80040r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
+<a id='x20-80042r11'></a><span class='cmr-6'>11</span> 
+<a id='x20-80044r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>\noindent\textbf{Exemplo de Saída:}</span> 
+<a id='x20-80046r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
+<a id='x20-80048r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>[[code:caso0_out]]</span> 
+<a id='x20-80050r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
+<a id='x20-80052r16'></a><span class='cmr-6'>16</span> 
+<a id='x20-80054r17'></a><span class='cmr-6'>17</span><span id='textcolor674'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> necessário para gerar casos de testes no moodle</span> 
+<a id='x20-80056r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>\begin{comment}</span> 
+<a id='x20-80058r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>[[code:moodle_cases]]</span> 
+<a id='x20-80060r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>\end{comment}</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-80061r12'></a>
+<a id='x20-80062'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       A segunda parte da questão apresentada no Código <a href='#x20-80061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a> é fornecida no Código <a href='#x20-80195r13'>5.13<!-- tex4ht:ref: lst:questaoQT_EP_1_parte2  --></a>, que
+contém o bloco de código Python que define a parte paramétrica, incluindo o dicionário <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>moodle_cases</span></span></span>
+que contém os casos de teste.
+</p> 
+<p class='indent'>       O Código <a href='#x20-80195r13'>5.13<!-- tex4ht:ref: lst:questaoQT_EP_1_parte2  --></a> consiste em quatro passos principais. No Passo 1, um número inteiro aleatório
+entre 8 e 19 é gerado, representando o número de parcelas em uma QT paramétrica. No Passo 2, os
+casos de teste são criados. Para cada caso de teste, um valor aleatório para o preço do produto é
+gerado e as entradas e saídas correspondentes são formatadas. No Passo 3, um dicionário contendo os
+casos de teste é criado e convertido para o formato JSON. Por fim, no Passo 4, um exemplo de caso de
+teste é mostrado no enunciado da questão. Esse código permite gerar casos de teste e parâmetros para
+questões paramétricas, proporcionando variação nos valores dos testes e facilitando a criação de
+questões personalizadas. É importante testar o código em uma IDE antes de utilizá-lo no
+MCTest.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox mybox' id='tcolobox-47'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+<p class='indent'>Dentre os quatro passos apresentados, o professor precisa apenas modificar o Passo 1, onde os
+parâmetros do enunciado da questão são definidos. Além disso, o trecho entre <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>#&gt;&gt;&gt;&gt;</span></span></span> e
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>#&lt;&lt;&lt;&lt;</span></span></span> deve ser alterado para criar diferentes casos de teste. Essas modificações permitem
+criar outras questões paramétricas, com variações nos parâmetros e nos casos de teste,
+tornando o processo de criação mais flexível e personalizado. </p> 
+ 
+</div> 
+</div>
+                                                                                                  
+                                                                                                  
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-de-qt-parametrica-utilizando-mctestmoodlevpl-parte-bloco-de-codigo-em-python-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-48'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb14'><a id='x20-80108r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x20-80110r2'></a><span class='cmr-6'>2</span><span id='textcolor675'><span class='cmitt-10x-x-109'># Antes de prosseguir, é recomendado testar o trecho de código</span></span> 
+<a id='x20-80112r3'></a><span class='cmr-6'>3</span><span id='textcolor676'><span class='cmitt-10x-x-109'># Python a seguir em uma IDE para garantir seu funcionamento correto.</span></span> 
+<a id='x20-80114r4'></a><span class='cmr-6'>4</span><span id='textcolor677'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor678'><span class='cmtt-10x-x-109'>json</span></span> 
+<a id='x20-80116r5'></a><span class='cmr-6'>5</span><span id='textcolor679'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor680'><span class='cmtt-10x-x-109'>numpy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor681'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor682'><span class='cmtt-10x-x-109'>np</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor683'><span class='cmitt-10x-x-109'># uso da biblioteca numpy para gerar número aleatório</span></span> 
+<a id='x20-80118r6'></a><span class='cmr-6'>6</span> 
+<a id='x20-80120r7'></a><span class='cmr-6'>7</span><span id='textcolor684'><span class='cmitt-10x-x-109'># Passo 1: Criar os parâmetros do enunciado da questão</span></span> 
+<a id='x20-80122r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>parcelas </span><span id='textcolor685'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>  np</span><span id='textcolor686'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor687'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor688'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor689'><span class='cmtt-10x-x-109'>20</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x20-80124r9'></a><span class='cmr-6'>9</span> 
+<a id='x20-80126r10'></a><span class='cmr-6'>10</span><span id='textcolor690'><span class='cmitt-10x-x-109'># Passo 2: Criar os casos de teste</span></span> 
+<a id='x20-80128r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>inp_list, out_list </span><span id='textcolor691'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [], []  </span><span id='textcolor692'><span class='cmitt-10x-x-109'># Listas vazias para armazenar os casos de teste</span></span> 
+<a id='x20-80130r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>casos_teste </span><span id='textcolor693'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor694'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>  </span><span id='textcolor695'><span class='cmitt-10x-x-109'># Número de casos de teste desejado</span></span> 
+<a id='x20-80132r13'></a><span class='cmr-6'>13</span><span id='textcolor696'><span class='cmitt-10x-x-109'># Aumentar esse número após validar a questão também na atividade VPL do Moodle</span></span> 
+<a id='x20-80134r14'></a><span class='cmr-6'>14</span> 
+<a id='x20-80136r15'></a><span class='cmr-6'>15</span><span id='textcolor697'><span class='cmitt-10x-x-109'># Para cada caso de teste:</span></span> 
+<a id='x20-80138r16'></a><span class='cmr-6'>16</span><span id='textcolor698'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor699'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor700'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(casos_teste):</span> 
+<a id='x20-80140r17'></a><span class='cmr-6'>17</span> 
+<a id='x20-80142r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor701'><span class='cmitt-10x-x-109'>#</span><span class='cmmi-10x-x-109'>&gt;&gt;&gt;&gt;</span><span class='cmitt-10x-x-109'> begin - casos de teste</span></span> 
+<a id='x20-80144r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor702'><span class='cmitt-10x-x-109'># Gerar um valor aleatório para o preço do produto</span></span> 
+<a id='x20-80146r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>    valor_total </span><span id='textcolor703'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor704'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor705'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor706'><span class='cmtt-10x-x-109'>100</span></span><span class='cmtt-10x-x-109'>)</span><span id='textcolor707'><span class='cmtt-10x-x-109'>/</span></span><span id='textcolor708'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor709'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor710'><span class='cmtt-10x-x-109'>5001</span></span> 
+<a id='x20-80148r21'></a><span class='cmr-6'>21</span> 
+<a id='x20-80150r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor711'><span class='cmitt-10x-x-109'># Criar a entrada do caso de teste como uma string</span></span> 
+<a id='x20-80152r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>    inp </span><span id='textcolor712'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor713'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(valor_total)</span><span id='textcolor714'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor715'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor716'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor717'><span class='cmtt-10x-x-109'>'</span></span> 
+<a id='x20-80154r24'></a><span class='cmr-6'>24</span> 
+<a id='x20-80156r25'></a><span class='cmr-6'>25</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor718'><span class='cmitt-10x-x-109'># Calcular o valor da parcela arredondado para duas casas decimais</span></span> 
+<a id='x20-80158r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>    out </span><span id='textcolor719'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor720'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor721'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor722'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>(valor_total</span><span id='textcolor723'><span class='cmtt-10x-x-109'>/</span></span><span class='cmtt-10x-x-109'>parcelas)</span><span id='textcolor724'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor725'><span class='cmtt-10x-x-109'>.2f</span></span><span id='textcolor726'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor727'><span class='cmtt-10x-x-109'>'</span></span> 
+<a id='x20-80160r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor728'><span class='cmitt-10x-x-109'>#</span><span class='cmmi-10x-x-109'>&lt;&lt;&lt;&lt;</span><span class='cmitt-10x-x-109'> end - casos de teste</span></span> 
+<a id='x20-80162r28'></a><span class='cmr-6'>28</span> 
+<a id='x20-80164r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor729'><span class='cmitt-10x-x-109'># Adicionar a entrada e saída do caso de teste às listas</span></span> 
+<a id='x20-80166r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>    inp_list</span><span id='textcolor730'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(inp)</span> 
+<a id='x20-80168r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>    out_list</span><span id='textcolor731'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(out)</span> 
+<a id='x20-80170r32'></a><span class='cmr-6'>32</span> 
+<a id='x20-80172r33'></a><span class='cmr-6'>33</span><span id='textcolor732'><span class='cmitt-10x-x-109'># Passo 3: Criar o dicionário com os casos de teste</span></span> 
+<a id='x20-80174r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>cases </span><span id='textcolor733'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> {}</span> 
+<a id='x20-80176r35'></a><span class='cmr-6'>35</span><span class='cmtt-10x-x-109'>cases[</span><span id='textcolor734'><span class='cmtt-10x-x-109'>'input'</span></span><span class='cmtt-10x-x-109'>]  </span><span id='textcolor735'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor736'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>array(inp_list)</span><span id='textcolor737'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>tolist()</span> 
+<a id='x20-80178r36'></a><span class='cmr-6'>36</span><span class='cmtt-10x-x-109'>cases[</span><span id='textcolor738'><span class='cmtt-10x-x-109'>'output'</span></span><span class='cmtt-10x-x-109'>] </span><span id='textcolor739'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor740'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>array(out_list)</span><span id='textcolor741'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>tolist()</span> 
+<a id='x20-80180r37'></a><span class='cmr-6'>37</span><span class='cmtt-10x-x-109'>moodle_cases </span><span id='textcolor742'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> json</span><span id='textcolor743'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>dumps(cases)</span> 
+<a id='x20-80182r38'></a><span class='cmr-6'>38</span> 
+<a id='x20-80184r39'></a><span class='cmr-6'>39</span><span id='textcolor744'><span class='cmitt-10x-x-109'># Passo 4: Mostrar um exemplo no enunciado da questão</span></span> 
+<a id='x20-80186r40'></a><span class='cmr-6'>40</span><span class='cmtt-10x-x-109'>caso0_inp </span><span id='textcolor745'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> cases[</span><span id='textcolor746'><span class='cmtt-10x-x-109'>'input'</span></span><span class='cmtt-10x-x-109'>][</span><span id='textcolor747'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>]</span> 
+<a id='x20-80188r41'></a><span class='cmr-6'>41</span><span class='cmtt-10x-x-109'>caso0_out </span><span id='textcolor748'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> cases[</span><span id='textcolor749'><span class='cmtt-10x-x-109'>'output'</span></span><span class='cmtt-10x-x-109'>][</span><span id='textcolor750'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>]</span> 
+<a id='x20-80190r42'></a><span class='cmr-6'>42</span> 
+<a id='x20-80192r43'></a><span class='cmr-6'>43</span><span id='textcolor751'><span class='cmitt-10x-x-109'>#print(moodle_cases) # para testar em uma IDE</span></span> 
+<a id='x20-80194r44'></a><span class='cmr-6'>44</span><span class='cmtt-10x-x-109'>]]</span></pre>
+ 
+</div> 
+</div>
+<a id='x20-80195r13'></a>
+<a id='x20-80196'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Veja o resultado desta questão criada no MCTest após clicar em “Criar-PDF” na Figura <a href='#x20-80197r5'>5.5<!-- tex4ht:ref: fig:cap05_questaoQT_EP_1  --></a>.
+Observa-se que, na descrição da questão, é exibido <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Integration: Moodle+VPL</span></span></span>, indicando que o
+MCTest reconheceu essa questão como uma tarefa que o estudante deve realizar em uma atividade
+VPL no ambiente do Moodle, devido ao reconhecimento do comando <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>command</span></span></span> no enunciado da
+questão.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-qt-definida-nos-codigos-lstquestaoqtepparte-e-lstquestaoqtepparte-'><img alt='PIC' height='461' src='./figs-br//cap05_questaoQT_EP_1.png' width='460' /> <a id='x20-80197r5'></a>
+<a id='x20-80198'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 5.5: </span><span class='content'>Recorte do PDF gerado para a QT definida nos Códigos <a href='#x20-80061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a> e <a href='#x20-80195r13'>5.13<!-- tex4ht:ref: lst:questaoQT_EP_1_parte2  --></a>.
+</span></figcaption><!-- tex4ht:label?: x20-80197r5  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p><a id='x20-80199r134'></a></p>
+       <h3 class='sectionHead' id='consideracoes-finais3'><span class='titlemark'>5.4   </span> <a id='x20-810004'></a>Considerações finais</h3>
+<p class='noindent'>Neste capítulo, foram exploradas algumas possibilidades de criação de questões paramétricas no
+MCTest, combinando recursos de LaTeX e Python. Foram apresentados exemplos simples, mas é
+importante ressaltar que é possível criar questões paramétricas muito mais complexas, dependendo da
+criatividade do professor. Essa capacidade de criação personalizada é uma das partes mais importantes
+do MCTest, ao permitir a geração e compartilhamento de questões para os mais diferentes
+fins.
+</p> 
+<p class='indent'>       Embora a criação de questões paramétricas possa exigir habilidades de programação por
+parte dos professores, o MCTest oferece a vantagem de gerenciar avaliações com um banco de questões
+reutilizáveis. Isso é especialmente útil quando há um grupo de professores interessados e uma grande
+demanda de avaliações para milhares de estudantes.
+</p> 
+<p class='indent'>       No caso das QMs paramétricas, foram apresentados exemplos de como criar questões com
+variações de parâmetros, permitindo a geração fácil e rápida de inúmeras questões. Também
+foram discutidas diferentes técnicas de parametrização, oferecendo ao professor a liberdade de escolher a
+que melhor se adapta às suas habilidades de programação.
+</p> 
+<p class='indent'>       Em relação às QTs paramétricas, foram destacados que os conceitos e técnicas
+apresentados para as QMs também se aplicam a esse tipo de questão. No entanto, nas QTs,
+não é preciso se preocupar com as alternativas. Foram apresentados exemplos de questões
+paramétricas onde os parâmetros foram variados, permitindo uma ampla gama de variações para os
+estudantes.
+</p> 
+<p class='indent'>       Por fim, foram abordadas QTs paramétricas que envolvem código e introduzido o ambiente
+Moodle e o <span class='cmti-12'>plugin </span>VPL. Mostrou-se como criar questões de EPs utilizando o Moodle+VPL e discutiram-se
+os benefícios dessa abordagem, incluindo a prática ativa, o <span class='cmti-12'>feedback </span>imediato e a agilidade na correção.
+Também foram mencionados os desafios de integrar o MCTest, Moodle e VPL para questões
+paramétricas de EP. A combinação dessas ferramentas oferece aos professores uma poderosa maneira de
+criar e avaliar questões paramétricas personalizadas, enriquecendo a experiência de aprendizagem dos
+estudantes.
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+       </p> 
+<!-- l. 45 --><div class='crosslinks'><p class='noindent'></p></div>
+        
+</body> 
+</html>

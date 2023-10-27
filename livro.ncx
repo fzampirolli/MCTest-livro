@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">                            <head> 
+<meta name="dtb:uid" content="http://example.com/livro"/> 
+<meta name="dtb:depth" content="3"/> 
+<meta name="dtb:totalPageCount" content="0"/> 
+<meta name="dtb:maxPageNumber" content="0"/> 
+</head> 
+<docTitle> 
+<text>MCTest:<br 
+class="newline" />Como Criar e Corrigir Exames Parametrizados Automaticamente</text> 
+</docTitle> 
+<navMap> 
+<navPoint id="navPoint-1" playOrder="1"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>  </text> 
+</navLabel> 
+<content src="livroli1.xhtml#x2-1000" /></navPoint> 
+ 
+<navPoint id="navPoint-2" playOrder="2"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>
+Epígrafe</text> 
+</navLabel> 
+<content src="livroli2.xhtml#x3-2000" /></navPoint> 
+ 
+<navPoint id="navPoint-3" playOrder="3"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>  </text> 
+</navLabel> 
+<content src="livroli3.xhtml#x4-3000" /></navPoint> 
+ 
+<navPoint id="navPoint-4" playOrder="4"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>  Prefácio</text> 
+</navLabel> 
+<content src="livroli4.xhtml#x5-4000" /></navPoint> 
+ 
+<navPoint id="navPoint-5" playOrder="5"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>  </text> 
+</navLabel> 
+<content src="livroli5.xhtml#x6-5000" /></navPoint> 
+ 
+<navPoint id="navPoint-6" playOrder="6"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark> Conteúdo</text> 
+</navLabel> 
+<content src="livroli6.xhtml#x7-6000" /></navPoint> 
+ 
+<navPoint id="navPoint-7" playOrder="7"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>  </text> 
+</navLabel> 
+<content src="livroli7.xhtml#x8-7000" /></navPoint> 
+ 
+<navPoint id="navPoint-8" playOrder="8"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark> Lista de Figuras</text> 
+</navLabel> 
+<content src="livroli8.xhtml#x9-8000" /></navPoint> 
+ 
+<navPoint id="navPoint-9" playOrder="9"> 
+<navLabel> 
+<text><navmark type="chapter"></navmark>
+Lista de Figuras</text> 
+</navLabel> 
+<content src="livroli8.xhtml#Q1-9-9" /></navPoint> 
+ 
+<navPoint id="navPoint-10" playOrder="10"> 
+<navLabel> 
+<text><navmark type="chapter"></navmark> Lista de Códigos</text> 
+</navLabel> 
+<content src="livroli8.xhtml#Q1-9-10" /></navPoint> 
+ 
+<navPoint id="navPoint-11" playOrder="11"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>  </text> 
+</navLabel> 
+<content src="livroli9.xhtml#x10-9000" /></navPoint> 
+ 
+<navPoint id="navPoint-12" playOrder="12"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark> Lista de Códigos</text> 
+</navLabel> 
+<content src="livroli10.xhtml#x11-10000" /></navPoint> 
+ 
+<navPoint id="navPoint-13" playOrder="13"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>
+</text> 
+</navLabel> 
+<content src="livroli11.xhtml#x12-11000" /></navPoint> 
+ 
+<navPoint id="navPoint-14" playOrder="14"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>  Lista de Abreviaturas e Siglas</text> 
+</navLabel> 
+<content src="livroli12.xhtml#x13-12000" /></navPoint> 
+ 
+<navPoint id="navPoint-15" playOrder="15"> 
+<navLabel> 
+<text><navmark type="chapter"></navmark> Lista de Abreviaturas e Siglas</text> 
+</navLabel> 
+<content src="livroli12.xhtml#Q1-13-15" /></navPoint> 
+ 
+<navPoint id="navPoint-16" playOrder="16"> 
+<navLabel> 
+<text><navmark type="chapter">1</navmark>
+Introdução</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-130001" /> 
+<navPoint id="navPoint-17" playOrder="17"> 
+<navLabel> 
+<text><navmark type="section">1.1</navmark> Apresentação</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-140001" /> 
+<navPoint id="navPoint-18" playOrder="18"> 
+<navLabel> 
+<text><navmark type="subsection">1.1.1</navmark> Objetivo</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-150001" /></navPoint> 
+ 
+<navPoint id="navPoint-19" playOrder="19"> 
+<navLabel> 
+<text><navmark type="subsection">1.1.2</navmark>
+Método</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-160002" /></navPoint> 
+ 
+<navPoint id="navPoint-20" playOrder="20"> 
+<navLabel> 
+<text><navmark type="subsection">1.1.3</navmark> Resultados</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-170003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-21" playOrder="21"> 
+<navLabel> 
+<text><navmark type="section">1.2</navmark> Breve histórico do MCTest</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-180002" /> 
+<navPoint id="navPoint-22" playOrder="22"> 
+<navLabel> 
+<text><navmark type="subsection">1.2.1</navmark>
+MCTest no TSI</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-190001" /></navPoint> 
+ 
+<navPoint id="navPoint-23" playOrder="23"> 
+<navLabel> 
+<text><navmark type="subsection">1.2.2</navmark> Versões do MCTest</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-200002" /></navPoint> 
+ 
+<navPoint id="navPoint-24" playOrder="24"> 
+<navLabel> 
+<text><navmark type="subsection">1.2.3</navmark> MCTest nos
+processos seletivos e exames de disciplinas do TSI</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-210003" /></navPoint> 
+ 
+<navPoint id="navPoint-25" playOrder="25"> 
+<navLabel> 
+<text><navmark type="subsection">1.2.4</navmark> MCTest na
+Escola Preparatória</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-220004" /> 
+<navPoint id="navPoint-26" playOrder="26"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> ENEM Interativo</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-230004" /></navPoint> 
+ 
+<navPoint id="navPoint-27" playOrder="27"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Comparações de
+três métodos de seleção</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-240004" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-28" playOrder="28"> 
+<navLabel> 
+<text><navmark type="section">1.3</navmark> Direitos autorais</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-250003" /> 
+<navPoint id="navPoint-29" playOrder="29"> 
+<navLabel> 
+<text><navmark type="subsection">1.3.1</navmark> Direitos
+autorais do software</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-260001" /></navPoint> 
+ 
+<navPoint id="navPoint-30" playOrder="30"> 
+<navLabel> 
+<text><navmark type="subsection">1.3.2</navmark> Direitos autorais das questões disponíveis
+no BD</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-270002" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-31" playOrder="31"> 
+<navLabel> 
+<text><navmark type="section">1.4</navmark> Instalando o MCTest</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-280004" /></navPoint> 
+ 
+<navPoint id="navPoint-32" playOrder="32"> 
+<navLabel> 
+<text><navmark type="section">1.5</navmark> Organização do livro</text> 
+</navLabel> 
+<content src="livroch1.xhtml#x14-290005" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-33" playOrder="33"> 
+<navLabel> 
+<text><navmark type="part">I</navmark>
+Fundamentos do MCTest</text> 
+</navLabel> 
+<content src="livropa1.xhtml#x15-300001" /> 
+<navPoint id="navPoint-34" playOrder="34"> 
+<navLabel> 
+<text><navmark type="chapter">2</navmark>   Visão geral do MCTest</text> 
+</navLabel> 
+<content src="livroch2.xhtml#x16-310002" /> 
+<navPoint id="navPoint-35" playOrder="35"> 
+<navLabel> 
+<text><navmark type="section">2.1</navmark>
+Navegação geral e usuários</text> 
+</navLabel> 
+<content src="livroch2.xhtml#x16-320001" /></navPoint> 
+ 
+<navPoint id="navPoint-36" playOrder="36"> 
+<navLabel> 
+<text><navmark type="section">2.2</navmark> Criar entidades</text> 
+</navLabel> 
+<content src="livroch2.xhtml#x16-330002" /> 
+<navPoint id="navPoint-37" playOrder="37"> 
+<navLabel> 
+<text><navmark type="subsection">2.2.1</navmark>
+Instituto</text> 
+</navLabel> 
+<content src="livroch2.xhtml#x16-340001" /></navPoint> 
+ 
+<navPoint id="navPoint-38" playOrder="38"> 
+<navLabel> 
+<text><navmark type="subsection">2.2.2</navmark> Curso</text> 
+</navLabel> 
+<content src="livroch2.xhtml#x16-350002" /></navPoint> 
+ 
+<navPoint id="navPoint-39" playOrder="39"> 
+<navLabel> 
+<text><navmark type="subsection">2.2.3</navmark> Disciplina</text> 
+</navLabel> 
+<content src="livroch2.xhtml#x16-360003" /></navPoint> 
+ 
+<navPoint id="navPoint-40" playOrder="40"> 
+<navLabel> 
+<text><navmark type="subsection">2.2.4</navmark> Turma</text> 
+</navLabel> 
+<content src="livroch2.xhtml#x16-370004" /></navPoint> 
+ 
+<navPoint id="navPoint-41" playOrder="41"> 
+<navLabel> 
+<text><navmark type="subsection">2.2.5</navmark>
+Tópico</text> 
+</navLabel> 
+<content src="livroch2.xhtml#x16-380005" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-42" playOrder="42"> 
+<navLabel> 
+<text><navmark type="section">2.3</navmark> Considerações finais</text> 
+</navLabel> 
+<content src="livroch2.xhtml#x16-390003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-43" playOrder="43"> 
+<navLabel> 
+<text><navmark type="chapter">3</navmark>  Recursos avançados</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-400003" /> 
+<navPoint id="navPoint-44" playOrder="44"> 
+<navLabel> 
+<text><navmark type="section">3.1</navmark>
+Administrador</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-410001" /> 
+<navPoint id="navPoint-45" playOrder="45"> 
+<navLabel> 
+<text><navmark type="subsection">3.1.1</navmark> Criar um curso relacionado a dois institutos</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-420001" /></navPoint> 
+ 
+<navPoint id="navPoint-46" playOrder="46"> 
+<navLabel> 
+<text><navmark type="subsection">3.1.2</navmark>
+Criar uma disciplina relacionada a dois cursos</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-430002" /></navPoint> 
+ 
+<navPoint id="navPoint-47" playOrder="47"> 
+<navLabel> 
+<text><navmark type="subsection">3.1.3</navmark> Acesso ao banco de
+dados</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-440003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-48" playOrder="48"> 
+<navLabel> 
+<text><navmark type="section">3.2</navmark> Coordenador</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-450002" /> 
+<navPoint id="navPoint-49" playOrder="49"> 
+<navLabel> 
+<text><navmark type="subsection">3.2.1</navmark> Criar um tópico relacionado a duas
+ou mais disciplinas</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-460001" /></navPoint> 
+ 
+<navPoint id="navPoint-50" playOrder="50"> 
+<navLabel> 
+<text><navmark type="subsection">3.2.2</navmark> Criar várias turmas com arquivo CSV</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-470002" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-51" playOrder="51"> 
+<navLabel> 
+<text><navmark type="section">3.3</navmark>
+Professor</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-480003" /> 
+<navPoint id="navPoint-52" playOrder="52"> 
+<navLabel> 
+<text><navmark type="subsection">3.3.1</navmark> Criar turma com arquivo CSV</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-490001" /></navPoint> 
+ 
+<navPoint id="navPoint-53" playOrder="53"> 
+<navLabel> 
+<text><navmark type="subsection">3.3.2</navmark> Criar turma
+com arquivo CSV – restrições</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-500002" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-54" playOrder="54"> 
+<navLabel> 
+<text><navmark type="section">3.4</navmark> Considerações finais</text> 
+</navLabel> 
+<content src="livroch3.xhtml#x17-510004" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-55" playOrder="55"> 
+<navLabel> 
+<text><navmark type="part">II</navmark>
+Questões no MCTest</text> 
+</navLabel> 
+<content src="livropa2.xhtml#x18-520002" /> 
+<navPoint id="navPoint-56" playOrder="56"> 
+<navLabel> 
+<text><navmark type="chapter">4</navmark>   Questões estáticas</text> 
+</navLabel> 
+<content src="livroch4.xhtml#x19-530004" /> 
+<navPoint id="navPoint-57" playOrder="57"> 
+<navLabel> 
+<text><navmark type="section">4.1</navmark> Tutoriais
+gerais sobre a navegação de questões</text> 
+</navLabel> 
+<content src="livroch4.xhtml#x19-540001" /></navPoint> 
+ 
+<navPoint id="navPoint-58" playOrder="58"> 
+<navLabel> 
+<text><navmark type="section">4.2</navmark> Questão de múltipla
+escolha (QM)</text> 
+</navLabel> 
+<content src="livroch4.xhtml#x19-550002" /></navPoint> 
+ 
+<navPoint id="navPoint-59" playOrder="59"> 
+<navLabel> 
+<text><navmark type="section">4.3</navmark> Questão dissertativa (QT)</text> 
+</navLabel> 
+<content src="livroch4.xhtml#x19-560003" /></navPoint> 
+ 
+<navPoint id="navPoint-60" playOrder="60"> 
+<navLabel> 
+<text><navmark type="section">4.4</navmark> Considerações
+finais</text> 
+</navLabel> 
+<content src="livroch4.xhtml#x19-570004" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-61" playOrder="61"> 
+<navLabel> 
+<text><navmark type="chapter">5</navmark>  Questões paramétricas</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-580005" /> 
+<navPoint id="navPoint-62" playOrder="62"> 
+<navLabel> 
+<text><navmark type="section">5.1</navmark> QM paramétrica</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-590001" /> 
+<navPoint id="navPoint-63" playOrder="63"> 
+<navLabel> 
+<text><navmark type="subsection">5.1.1</navmark>
+Um exemplo</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-600001" /></navPoint> 
+ 
+<navPoint id="navPoint-64" playOrder="64"> 
+<navLabel> 
+<text><navmark type="subsection">5.1.2</navmark> QM paramétrica no MCTest</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-610002" /> 
+<navPoint id="navPoint-65" playOrder="65"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Exemplo 1</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-620002" /></navPoint> 
+ 
+<navPoint id="navPoint-66" playOrder="66"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark>
+Exemplo 2</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-630002" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-67" playOrder="67"> 
+<navLabel> 
+<text><navmark type="section">5.2</navmark> QT paramétrica</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-640002" /> 
+<navPoint id="navPoint-68" playOrder="68"> 
+<navLabel> 
+<text><navmark type="subsection">5.2.1</navmark> Exemplo 1 – Teste de
+mesa</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-650001" /></navPoint> 
+ 
+<navPoint id="navPoint-69" playOrder="69"> 
+<navLabel> 
+<text><navmark type="subsection">5.2.2</navmark> Exemplo 2 – Teste de mesa e gabarito</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-660002" /></navPoint> 
+ 
+<navPoint id="navPoint-70" playOrder="70"> 
+<navLabel> 
+<text><navmark type="subsection">5.2.3</navmark> Exemplo
+3 – Teste de mesa e gabarito com settrace</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-670003" /> 
+<navPoint id="navPoint-71" playOrder="71"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Exemplo de uso do
+método settrace para rastreamento de código</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-680003" /></navPoint> 
+ 
+<navPoint id="navPoint-72" playOrder="72"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Teste de mesa com
+rastreamento de código usando settrace</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-690003" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-73" playOrder="73"> 
+<navLabel> 
+<text><navmark type="section">5.3</navmark> QT paramétrica, com
+código</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-700003" /> 
+<navPoint id="navPoint-74" playOrder="74"> 
+<navLabel> 
+<text><navmark type="subsection">5.3.1</navmark> Introdução ao Moodle e ao VPL</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-710001" /></navPoint> 
+ 
+<navPoint id="navPoint-75" playOrder="75"> 
+<navLabel> 
+<text><navmark type="subsection">5.3.2</navmark> Questão
+com exercício de programação no Moodle+VPL</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-720002" /> 
+<navPoint id="navPoint-76" playOrder="76"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Um exemplo
+de atividade Moodle+VPL</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-730002" /></navPoint> 
+ 
+<navPoint id="navPoint-77" playOrder="77"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Instruções</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-740002" /></navPoint> 
+ 
+<navPoint id="navPoint-78" playOrder="78"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Avaliação</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-750002" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-79" playOrder="79"> 
+<navLabel> 
+<text><navmark type="subsection">5.3.3</navmark>
+Questão com exercício de programação no MCTest+Moodle+VPL</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-760003" /> 
+<navPoint id="navPoint-80" playOrder="80"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark>
+Primeiro desafio</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-770003" /></navPoint> 
+ 
+<navPoint id="navPoint-81" playOrder="81"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Segundo desafio</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-780003" /></navPoint> 
+ 
+<navPoint id="navPoint-82" playOrder="82"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Um exemplo simples de
+cálculo de parcelas sem juros</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-790003" /></navPoint> 
+ 
+<navPoint id="navPoint-83" playOrder="83"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Criando uma QT paramétrica
+para integração MCTest+Moodle+VPL</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-800003" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-84" playOrder="84"> 
+<navLabel> 
+<text><navmark type="section">5.4</navmark> Considerações
+                                                                                                  
+                                                                                                  
+finais</text> 
+</navLabel> 
+<content src="livroch5.xhtml#x20-810004" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-85" playOrder="85"> 
+<navLabel> 
+<text><navmark type="part">III</navmark>  Exames no MCTest</text> 
+</navLabel> 
+<content src="livropa3.xhtml#x21-820003" /> 
+<navPoint id="navPoint-86" playOrder="86"> 
+<navLabel> 
+<text><navmark type="chapter">6</navmark>  Visão geral dos exames</text> 
+</navLabel> 
+<content src="livroch6.xhtml#x22-830006" /> 
+<navPoint id="navPoint-87" playOrder="87"> 
+<navLabel> 
+<text><navmark type="section">6.1</navmark>
+Acesso à tela de exames</text> 
+</navLabel> 
+<content src="livroch6.xhtml#x22-840001" /></navPoint> 
+ 
+<navPoint id="navPoint-88" playOrder="88"> 
+<navLabel> 
+<text><navmark type="section">6.2</navmark> Recorte I da tela de exame</text> 
+</navLabel> 
+<content src="livroch6.xhtml#x22-850002" /> 
+<navPoint id="navPoint-89" playOrder="89"> 
+<navLabel> 
+<text><navmark type="subsection">6.2.1</navmark>
+Área à esquerda</text> 
+</navLabel> 
+<content src="livroch6.xhtml#x22-860001" /></navPoint> 
+ 
+<navPoint id="navPoint-90" playOrder="90"> 
+<navLabel> 
+<text><navmark type="subsection">6.2.2</navmark> Área central</text> 
+</navLabel> 
+<content src="livroch6.xhtml#x22-870002" /></navPoint> 
+ 
+<navPoint id="navPoint-91" playOrder="91"> 
+<navLabel> 
+<text><navmark type="subsection">6.2.3</navmark> Área à direita</text> 
+</navLabel> 
+<content src="livroch6.xhtml#x22-880003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-92" playOrder="92"> 
+<navLabel> 
+<text><navmark type="section">6.3</navmark>
+Recorte II da tela de exame – turmas</text> 
+</navLabel> 
+<content src="livroch6.xhtml#x22-890003" /></navPoint> 
+ 
+<navPoint id="navPoint-93" playOrder="93"> 
+<navLabel> 
+<text><navmark type="section">6.4</navmark> Recorte III da tela de
+exame – questões</text> 
+</navLabel> 
+<content src="livroch6.xhtml#x22-900004" /></navPoint> 
+ 
+<navPoint id="navPoint-94" playOrder="94"> 
+<navLabel> 
+<text><navmark type="section">6.5</navmark> Recorte IV da tela de exame – configurando os
+detalhes</text> 
+</navLabel> 
+<content src="livroch6.xhtml#x22-910005" /></navPoint> 
+ 
+<navPoint id="navPoint-95" playOrder="95"> 
+<navLabel> 
+<text><navmark type="section">6.6</navmark> Considerações finais</text> 
+</navLabel> 
+<content src="livroch6.xhtml#x22-920006" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-96" playOrder="96"> 
+<navLabel> 
+<text><navmark type="chapter">7</navmark>   Exames com Quadro de
+Respostas (QR)</text> 
+</navLabel> 
+<content src="livroch7.xhtml#x23-930007" /> 
+<navPoint id="navPoint-97" playOrder="97"> 
+<navLabel> 
+<text><navmark type="section">7.1</navmark> Utilizando exames exclusivamente com QR</text> 
+</navLabel> 
+<content src="livroch7.xhtml#x23-940001" /> 
+<navPoint id="navPoint-98" playOrder="98"> 
+<navLabel> 
+<text><navmark type="subsection">7.1.1</navmark>
+Estilo vertical</text> 
+</navLabel> 
+<content src="livroch7.xhtml#x23-950001" /></navPoint> 
+ 
+<navPoint id="navPoint-99" playOrder="99"> 
+<navLabel> 
+<text><navmark type="subsection">7.1.2</navmark> Estilo horizontal</text> 
+</navLabel> 
+<content src="livroch7.xhtml#x23-960002" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-100" playOrder="100"> 
+<navLabel> 
+<text><navmark type="section">7.2</navmark> Restrições nos
+QRs</text> 
+</navLabel> 
+<content src="livroch7.xhtml#x23-970002" /></navPoint> 
+ 
+<navPoint id="navPoint-101" playOrder="101"> 
+<navLabel> 
+<text><navmark type="section">7.3</navmark> Corrigindo exames com QR</text> 
+</navLabel> 
+<content src="livroch7.xhtml#x23-980003" /> 
+<navPoint id="navPoint-102" playOrder="102"> 
+<navLabel> 
+<text><navmark type="subsection">7.3.1</navmark> Arquivo CSV com
+as correções</text> 
+</navLabel> 
+<content src="livroch7.xhtml#x23-990001" /></navPoint> 
+ 
+<navPoint id="navPoint-103" playOrder="103"> 
+<navLabel> 
+<text><navmark type="subsection">7.3.2</navmark> Teoria de Resposta ao Item</text> 
+</navLabel> 
+<content src="livroch7.xhtml#x23-1000002" /></navPoint> 
+ 
+<navPoint id="navPoint-104" playOrder="104"> 
+<navLabel> 
+<text><navmark type="subsection">7.3.3</navmark> Feedback
+ao estudante</text> 
+</navLabel> 
+<content src="livroch7.xhtml#x23-1010003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-105" playOrder="105"> 
+<navLabel> 
+<text><navmark type="section">7.4</navmark> Considerações finais</text> 
+</navLabel> 
+<content src="livroch7.xhtml#x23-1020004" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-106" playOrder="106"> 
+<navLabel> 
+<text><navmark type="chapter">8</navmark>   Exames com
+QR+QM e/ou QT</text> 
+</navLabel> 
+<content src="livroch8.xhtml#x24-1030008" /> 
+<navPoint id="navPoint-107" playOrder="107"> 
+<navLabel> 
+<text><navmark type="section">8.1</navmark> Criando QMs e uma QT</text> 
+</navLabel> 
+<content src="livroch8.xhtml#x24-1040001" /></navPoint> 
+ 
+<navPoint id="navPoint-108" playOrder="108"> 
+<navLabel> 
+<text><navmark type="section">8.2</navmark> Criando as
+variações</text> 
+</navLabel> 
+<content src="livroch8.xhtml#x24-1050002" /></navPoint> 
+ 
+<navPoint id="navPoint-109" playOrder="109"> 
+<navLabel> 
+<text><navmark type="section">8.3</navmark> Detalhando os gabaritos no arquivo CSV</text> 
+</navLabel> 
+<content src="livroch8.xhtml#x24-1060003" /></navPoint> 
+ 
+<navPoint id="navPoint-110" playOrder="110"> 
+<navLabel> 
+<text><navmark type="section">8.4</navmark>
+Criando o PDF do exame com QR+QM+QT</text> 
+</navLabel> 
+<content src="livroch8.xhtml#x24-1070004" /></navPoint> 
+ 
+<navPoint id="navPoint-111" playOrder="111"> 
+<navLabel> 
+<text><navmark type="section">8.5</navmark> Corrigindo exames
+com QR+QM</text> 
+</navLabel> 
+<content src="livroch8.xhtml#x24-1080005" /></navPoint> 
+ 
+<navPoint id="navPoint-112" playOrder="112"> 
+<navLabel> 
+<text><navmark type="section">8.6</navmark> Recomendações para realização tranquila de
+exames presenciais</text> 
+</navLabel> 
+<content src="livroch8.xhtml#x24-1090006" /></navPoint> 
+ 
+<navPoint id="navPoint-113" playOrder="113"> 
+<navLabel> 
+<text><navmark type="section">8.7</navmark> Considerações finais</text> 
+</navLabel> 
+<content src="livroch8.xhtml#x24-1100007" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-114" playOrder="114"> 
+<navLabel> 
+<text><navmark type="chapter">9</navmark>  Variações de
+exames com QM+QT para o Moodle</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1110009" /> 
+<navPoint id="navPoint-115" playOrder="115"> 
+<navLabel> 
+<text><navmark type="section">9.1</navmark> Criando exames e exportando
+arquivos Aiken e XML</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1120001" /> 
+<navPoint id="navPoint-116" playOrder="116"> 
+<navLabel> 
+<text><navmark type="subsection">9.1.1</navmark> QM – equação de primeiro grau –
+idade</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1130001" /></navPoint> 
+ 
+<navPoint id="navPoint-117" playOrder="117"> 
+<navLabel> 
+<text><navmark type="subsection">9.1.2</navmark> QM – equação da reta</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1140002" /></navPoint> 
+ 
+<navPoint id="navPoint-118" playOrder="118"> 
+<navLabel> 
+<text><navmark type="subsection">9.1.3</navmark> QT com resposta
+exata – ordena parte do vetor</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1150003" /></navPoint> 
+ 
+<navPoint id="navPoint-119" playOrder="119"> 
+<navLabel> 
+<text><navmark type="subsection">9.1.4</navmark> Criando exame e exportando as
+variações</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1160004" /> 
+<navPoint id="navPoint-120" playOrder="120"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Detalhando o arquivo no formato Aiken</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1170004" /></navPoint> 
+ 
+<navPoint id="navPoint-121" playOrder="121"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Detalhando
+o arquivo no formato XML para QM</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1180004" /></navPoint> 
+ 
+<navPoint id="navPoint-122" playOrder="122"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Detalhando o arquivo no
+formato XML – questão com resposta exata</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1190004" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-123" playOrder="123"> 
+<navLabel> 
+<text><navmark type="section">9.2</navmark> Importando arquivo
+XML no Moodle</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1200002" /></navPoint> 
+ 
+<navPoint id="navPoint-124" playOrder="124"> 
+<navLabel> 
+<text><navmark type="section">9.3</navmark> Considerações finais</text> 
+</navLabel> 
+<content src="livroch9.xhtml#x25-1210003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-125" playOrder="125"> 
+<navLabel> 
+<text><navmark type="chapter">10</navmark>  Exames com
+MCTest+Moodle+VPL</text> 
+</navLabel> 
+<content src="livroch10.xhtml#x26-12200010" /> 
+<navPoint id="navPoint-126" playOrder="126"> 
+<navLabel> 
+<text><navmark type="section">10.1</navmark> Criando um exame com QT integrado ao
+VPL</text> 
+</navLabel> 
+<content src="livroch10.xhtml#x26-1230001" /> 
+<navPoint id="navPoint-127" playOrder="127"> 
+<navLabel> 
+<text><navmark type="subsection">10.1.1</navmark> Criando uma nova questão integrada ao VPL</text> 
+</navLabel> 
+<content src="livroch10.xhtml#x26-1240001" /></navPoint> 
+ 
+<navPoint id="navPoint-128" playOrder="128"> 
+<navLabel> 
+<text><navmark type="subsection">10.1.2</navmark>
+Criando as variações e imprimindo o PDF do exame</text> 
+</navLabel> 
+<content src="livroch10.xhtml#x26-1250002" /></navPoint> 
+ 
+<navPoint id="navPoint-129" playOrder="129"> 
+<navLabel> 
+<text><navmark type="subsection">10.1.3</navmark>
+Criando e configurando a atividade VPL para o exame</text> 
+</navLabel> 
+<content src="livroch10.xhtml#x26-1260003" /></navPoint> 
+ 
+<navPoint id="navPoint-130" playOrder="130"> 
+<navLabel> 
+<text><navmark type="subsection">10.1.4</navmark>
+Soluções da atividade VPL para o exame</text> 
+</navLabel> 
+<content src="livroch10.xhtml#x26-1270004" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-131" playOrder="131"> 
+<navLabel> 
+<text><navmark type="section">10.2</navmark> Detalhando
+o arquivo linker.json</text> 
+</navLabel> 
+<content src="livroch10.xhtml#x26-1280002" /></navPoint> 
+ 
+<navPoint id="navPoint-132" playOrder="132"> 
+<navLabel> 
+<text><navmark type="section">10.3</navmark> Considerações finais</text> 
+</navLabel> 
+<content src="livroch10.xhtml#x26-1290003" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-133" playOrder="133"> 
+<navLabel> 
+<text><navmark type="part">IV</navmark>
+Experimentos</text> 
+</navLabel> 
+<content src="livropa4.xhtml#x27-1300004" /> 
+<navPoint id="navPoint-134" playOrder="134"> 
+<navLabel> 
+<text><navmark type="chapter">11</navmark>  MCTest versões 1, 2 e 3 - Quadro de Respostas
+(QR)</text> 
+</navLabel> 
+<content src="livroch11.xhtml#x28-13100011" /> 
+<navPoint id="navPoint-135" playOrder="135"> 
+<navLabel> 
+<text><navmark type="section">11.1</navmark> MCTest-1: versão no Matlab</text> 
+</navLabel> 
+<content src="livroch11.xhtml#x28-1320001" /> 
+<navPoint id="navPoint-136" playOrder="136"> 
+<navLabel> 
+<text><navmark type="likesubsection"></navmark> Artigo descrevendo
+a parte de visão computacional do MCTest-1</text> 
+</navLabel> 
+<content src="livroch11.xhtml#x28-1330001" /> 
+<navPoint id="navPoint-137" playOrder="137"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Método</text> 
+</navLabel> 
+<content src="livroch11.xhtml#x28-1340001" /></navPoint> 
+ 
+<navPoint id="navPoint-138" playOrder="138"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark>
+Experimentos</text> 
+</navLabel> 
+<content src="livroch11.xhtml#x28-1350001" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-139" playOrder="139"> 
+<navLabel> 
+<text><navmark type="section">11.2</navmark> MCTest-2: versão no Android</text> 
+</navLabel> 
+<content src="livroch11.xhtml#x28-1360002" /> 
+<navPoint id="navPoint-140" playOrder="140"> 
+<navLabel> 
+<text><navmark type="likesubsection"></navmark> Artigo
+descrevendo o MCTest-2 para dispositivos móveis</text> 
+</navLabel> 
+<content src="livroch11.xhtml#x28-1370002" /> 
+<navPoint id="navPoint-141" playOrder="141"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Método</text> 
+</navLabel> 
+<content src="livroch11.xhtml#x28-1380002" /></navPoint> 
+ 
+<navPoint id="navPoint-142" playOrder="142"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark>
+Experimentos</text> 
+</navLabel> 
+<content src="livroch11.xhtml#x28-1390002" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-143" playOrder="143"> 
+<navLabel> 
+<text><navmark type="section">11.3</navmark> Considerações finais</text> 
+</navLabel> 
+<content src="livroch11.xhtml#x28-1400003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-144" playOrder="144"> 
+<navLabel> 
+<text><navmark type="chapter">12</navmark>  MCTest versões
+4, 4.G e 5</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-14100012" /> 
+<navPoint id="navPoint-145" playOrder="145"> 
+<navLabel> 
+<text><navmark type="section">12.1</navmark> MCTest-4: gerando e corrigindo questões criadas
+no LaTeX</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1420001" /> 
+<navPoint id="navPoint-146" playOrder="146"> 
+<navLabel> 
+<text><navmark type="subsection">12.1.1</navmark> Artigo descrevendo as versões do MCTest 4 e
+4.G</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1430001" /> 
+<navPoint id="navPoint-147" playOrder="147"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Método</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1440001" /></navPoint> 
+ 
+<navPoint id="navPoint-148" playOrder="148"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Experimentos</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1450001" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-149" playOrder="149"> 
+<navLabel> 
+<text><navmark type="subsection">12.1.2</navmark> Artigo comparando
+as modalidades semipresencial e presencial CS1 com base na utilidade
+                                                                                                  
+                                                                                                  
+do MCTest-4</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1460002" /> 
+<navPoint id="navPoint-150" playOrder="150"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Método</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1470002" /></navPoint> 
+ 
+<navPoint id="navPoint-151" playOrder="151"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Experimentos</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1480002" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-152" playOrder="152"> 
+<navLabel> 
+<text><navmark type="subsection">12.1.3</navmark> Artigo
+definindo a parametrização do MCTest após a versão 4</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1490003" /> 
+<navPoint id="navPoint-153" playOrder="153"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Movimento
+Retilíneo Uniforme com a biblioteca symbols</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1500003" /></navPoint> 
+ 
+<navPoint id="navPoint-154" playOrder="154"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Criação de
+Matriz</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1510003" /></navPoint> 
+ 
+<navPoint id="navPoint-155" playOrder="155"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Experimentos</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1520003" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-156" playOrder="156"> 
+<navLabel> 
+<text><navmark type="section">12.2</navmark> MCTest-5: a versão web</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1530002" /> 
+<navPoint id="navPoint-157" playOrder="157"> 
+<navLabel> 
+<text><navmark type="subsection">12.2.1</navmark>
+Artigo apresentando a primeira versão web do MCTest</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1540001" /> 
+<navPoint id="navPoint-158" playOrder="158"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Equações
+paramétricas com equação e figura utilizando a biblioteca sympy</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1550001" /></navPoint> 
+ 
+<navPoint id="navPoint-159" playOrder="159"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark>
+Questão paramétrica com grafo e figura</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1560001" /></navPoint> 
+ 
+<navPoint id="navPoint-160" playOrder="160"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Questão paramétrica com
+matriz e figura</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1570001" /></navPoint> 
+ 
+<navPoint id="navPoint-161" playOrder="161"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Resultados</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1580001" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-162" playOrder="162"> 
+<navLabel> 
+<text><navmark type="subsection">12.2.2</navmark> Artigo descrevendo o MCTest
+em conjunto com Google Forms e Google Sheets</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1590002" /> 
+<navPoint id="navPoint-163" playOrder="163"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Método</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1600002" /></navPoint> 
+ 
+<navPoint id="navPoint-164" playOrder="164"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark>
+Experimentos</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1610002" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-165" playOrder="165"> 
+<navLabel> 
+<text><navmark type="subsection">12.2.3</navmark> Artigo descrevendo a adoção de QMs com
+pesos diferentes nas alternativas</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1620003" /> 
+<navPoint id="navPoint-166" playOrder="166"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Método</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1630003" /></navPoint> 
+ 
+<navPoint id="navPoint-167" playOrder="167"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Experimentos</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1640003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-168" playOrder="168"> 
+<navLabel> 
+<text><navmark type="likesubsection"></navmark>
+Artigo comparando diferentes processos seletivos na EPUFABC</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1650003" /> 
+<navPoint id="navPoint-169" playOrder="169"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark>
+Método</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1660003" /></navPoint> 
+ 
+<navPoint id="navPoint-170" playOrder="170"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Experimentos</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1670003" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-171" playOrder="171"> 
+<navLabel> 
+<text><navmark type="section">12.3</navmark> Considerações finais</text> 
+</navLabel> 
+<content src="livroch12.xhtml#x29-1680003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-172" playOrder="172"> 
+<navLabel> 
+<text><navmark type="chapter">13</navmark>
+MCTest+Moodle+VPL</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-16900013" /> 
+<navPoint id="navPoint-173" playOrder="173"> 
+<navLabel> 
+<text><navmark type="section">13.1</navmark> MCTest-5, com Moodle</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1700001" /> 
+<navPoint id="navPoint-174" playOrder="174"> 
+<navLabel> 
+<text><navmark type="likesubsection"></navmark>
+Artigo sobre a exportação de questões paramétricas para o Moodle
+usando o MCTest</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1710001" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-175" playOrder="175"> 
+<navLabel> 
+<text><navmark type="section">13.2</navmark> MCTest-5, com Moodle+VPL</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1720002" /> 
+<navPoint id="navPoint-176" playOrder="176"> 
+<navLabel> 
+<text><navmark type="subsection">13.2.1</navmark>
+Artigo com a primeira integração entre MCTest+Moodle+VPL</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1730001" /> 
+<navPoint id="navPoint-177" playOrder="177"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark>
+Método</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1740001" /></navPoint> 
+ 
+<navPoint id="navPoint-178" playOrder="178"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Experimentos</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1750001" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-179" playOrder="179"> 
+<navLabel> 
+<text><navmark type="subsection">13.2.2</navmark> Artigo aplicando a
+integração MCTest+Moodle+VPL em CS0</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1760002" /> 
+<navPoint id="navPoint-180" playOrder="180"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Método</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1770002" /></navPoint> 
+ 
+<navPoint id="navPoint-181" playOrder="181"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark>
+Experimentos</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1780002" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-182" playOrder="182"> 
+<navLabel> 
+<text><navmark type="subsection">13.2.3</navmark> Artigo sobre o uso de múltiplas linguagens de
+programação em CS1</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1790003" /> 
+<navPoint id="navPoint-183" playOrder="183"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Método</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1800003" /></navPoint> 
+ 
+<navPoint id="navPoint-184" playOrder="184"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Experimentos</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1810003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-185" playOrder="185"> 
+<navLabel> 
+<text><navmark type="subsection">13.2.4</navmark>
+Artigo aplicando a integração MCTest+Moodle+VPL em CS1</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1820004" /> 
+<navPoint id="navPoint-186" playOrder="186"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark>
+Método</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1830004" /></navPoint> 
+ 
+<navPoint id="navPoint-187" playOrder="187"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Experimentos</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1840004" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-188" playOrder="188"> 
+<navLabel> 
+<text><navmark type="subsection">13.2.5</navmark> Artigo explorando a integração
+de jogos no ensino de CS0</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1850005" /> 
+<navPoint id="navPoint-189" playOrder="189"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Método</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1860005" /></navPoint> 
+ 
+<navPoint id="navPoint-190" playOrder="190"> 
+<navLabel> 
+<text><navmark type="likesubsubsection"></navmark> Experimentos</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1870005" /></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-191" playOrder="191"> 
+<navLabel> 
+<text><navmark type="section">13.3</navmark>
+Considerações finais</text> 
+</navLabel> 
+<content src="livroch13.xhtml#x30-1880003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-192" playOrder="192"> 
+<navLabel> 
+<text><navmark type="chapter">14</navmark>  Conclusões</text> 
+</navLabel> 
+<content src="livroch14.xhtml#x31-18900014" /> 
+<navPoint id="navPoint-193" playOrder="193"> 
+<navLabel> 
+<text><navmark type="section">14.1</navmark> Novas possibilidades
+de aprimoramento</text> 
+</navLabel> 
+<content src="livroch14.xhtml#x31-1900001" /></navPoint> 
+ 
+<navPoint id="navPoint-194" playOrder="194"> 
+<navLabel> 
+<text><navmark type="section">14.2</navmark> Novas publicações</text> 
+</navLabel> 
+<content src="livroch14.xhtml#x31-1910002" /></navPoint> 
+ 
+<navPoint id="navPoint-195" playOrder="195"> 
+<navLabel> 
+<text><navmark type="section">14.3</navmark> Novas
+edições deste livro</text> 
+</navLabel> 
+<content src="livroch14.xhtml#x31-1920003" /></navPoint> 
+</navPoint> 
+ 
+<navPoint id="navPoint-196" playOrder="196"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>   </text> 
+</navLabel> 
+<content src="livroli13.xhtml#x32-1930003" /></navPoint> 
+ 
+<navPoint id="navPoint-197" playOrder="197"> 
+<navLabel> 
+<text><navmark type="likechapter"></navmark>   Bibliografia</text> 
+</navLabel> 
+<content src="livroli14.xhtml#x33-1940003" /></navPoint> 
+ 
+<navPoint id="navPoint-198" playOrder="198"> 
+<navLabel> 
+<text><navmark type="chapter"></navmark> Bibliografia</text> 
+</navLabel> 
+<content src="livroli14.xhtml#Q1-33-333" />
+       </navPoint> 
+</navPoint> 
+</navMap>
+       </ncx>

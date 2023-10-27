@@ -1,0 +1,1342 @@
+<!DOCTYPE html> 
+<html lang='pt' xmlns:epub='http://www.idpf.org/2007/ops' xmlns='http://www.w3.org/1999/xhtml'> 
+<head><title>12 MCTest versoes 4, 4.G e 5</title> 
+<meta charset='UTF-8' /> 
+<meta content='TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)' name='generator' /> 
+<link href='livro.css' rel='stylesheet' type='text/css' /> 
+</head><body>
+       <!-- l. 1 --><div class='crosslinks'><p class='noindent'></p></div>
+       <h2 class='chapterHead' id='mctest-versoes-g-e-'><span class='titlemark'>Capítulo 12</span><br /><a id='x29-14100012'></a>MCTest versões 4, 4.G e 5</h2>
+       <hr />
+       <hr />
+       <div class='tcolorbox mybox' id='tcolobox-103'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12x-x-120'>Conteúdo</span>___________________________________________________________________________
+</p> 
+ 
+</div> 
+</div>
+<p class='indent'>       Neste capítulo, são apresentadas as versões adicionais do MCTest, nomeadamente o MCTest-4,
+MCTest-4.G e MCTest-5.
+</p> 
+<p class='indent'>       O MCTest-4 é um software desenvolvido para a <span class='cmbx-12'>correção </span>de exames com QMs. Ele lê um
+arquivo PDF contendo os QRs dos estudantes, identifica automaticamente cada estudante utilizando
+código de barras e corrige exames individuais com questões e alternativas aleatórias. O programa realiza
+a correção dos exames comparando as respostas marcadas com o gabarito e gera um arquivo CSV
+contendo a correção de cada questão, bem como o número total de questões corretas e
+inválidas.
+</p> 
+<p class='indent'>       O MCTest-4.G (de <span class='cmti-12'>generate</span>) é um software desenvolvido para a <span class='cmbx-12'>geração </span>de exames com
+questões. Ele lê uma estrutura de pastas e arquivos contendo dados de estudantes e matrícula, além de
+um banco de QMs ou QTs. O MCTest-4.G utiliza esses dados para gerar exames distintos e aleatórios para
+cada estudante. Nas folhas de exame, além do nome e matrícula do estudante, há um código de barras
+referente à sua matrícula.
+</p> 
+<p class='indent'>       Além disso, neste capítulo, são apresentados os experimentos conduzidos na versão mais
+recente, o MCTest-5, que agora é baseado na web e usa o banco de dados MySQL. No entanto, a
+integração com as atividades VPL do Moodle será tratada em um capítulo distinto, devido à sua
+complexidade e à extensa literatura existente sobre o assunto.
+<a id='x29-141001r259'></a>
+       </p> 
+
+       <h3 class='sectionHead' id='mctest-gerando-e-corrigindo-questoes-criadas-no-latex'><span class='titlemark'>12.1   </span> <a id='x29-1420001'></a>MCTest-4: gerando e corrigindo questões criadas no LaTeX</h3>
+<p class='noindent'>Tanto o gerador de exames (MCTest-4.G) quanto o corretor (MCTest-4) operam de maneira
+independente. No entanto, para assegurar a precisão na correção dos exames, é importante
+utilizar os exames gerados pelo MCTest-4.G. Em caso contrário, a única alternativa viável
+será considerar uma única variação do exame para todos os estudantes, e a identificação
+individual de cada estudante se baseará na sequência em que eles aparecem no documento
+PDF. Dessa forma, a correção terá de ser realizada manualmente, como exemplo, por meio
+do uso de uma planilha eletrônica, onde as respostas dos estudantes no CSV gerado serão
+comparadas com um gabarito, assemelhando-se ao procedimento nas versões anteriores do
+                                                                                                  
+                                                                                                  
+MCTest.
+</p> 
+<p class='indent'>       A partir desta seção, será considera apenas a versão MCTest-4, incorporando as funcionalidades
+das duas versões.
+<a id='x29-142001r240'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='artigo-descrevendo-as-versoes-do-mctest-e-g'><span class='titlemark'>12.1.1   </span> <a id='x29-1430001'></a>Artigo descrevendo as versões do MCTest 4 e 4.G</h4>
+<p class='noindent'>A versão 4 do MCTest (MCTest-4) representou um avanço significativo em relação às versões
+anteriores, ao introduzir melhorias na correção dos exames. No artigo de Zampirolli, Batista e
+Quilici-Gonzalez (2016), é apresentada uma solução inovadora para simplificar a geração e correção
+de QMs onde a confiabilidade dos resultados é fundamental.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='metodo3'><a id='x29-1440001'></a>Método</h5>
+<p class='noindent'>No MCTest-4, o programa gera um arquivo LaTeX e seu respectivo arquivo PDF compilado, contendo o
+exame individual de cada estudante. O exame consiste em uma página inicial seguida por uma lista de
+QMs e, opcionalmente, QTs. A página inicial é projetada para a marcação das respostas das QMs
+e inclui um cabeçalho. É possível gerar exames individuais com respostas únicas para
+cada estudante. Todas essas opções são configuráveis em um arquivo de configuração
+separado.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-estrutura-de-pastas-do-mctest-fonte-zampirollibatistaea-'><img alt='PIC' height='435' src='./figs-br//cap12_mctest4_pastas.png' width='435' /> <a id='x29-144001r1'></a>
+<a id='x29-144002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.1:  </span><span class='content'>Estrutura  de  pastas  do  MCTest-4.   Fonte:   Zampirolli,  Batista  e  Quilici-Gonzalez
+(2016).                                                                                           </span></figcaption><!-- tex4ht:label?: x29-144001r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       A pasta <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>MCTest4-master</span></span></span>, mostrada na Figura <a href='#x29-144001r1'>12.1<!-- tex4ht:ref: fig:cap12_mctest4_pastas  --></a>, contém cinco subpastas, incluindo a pasta
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>courses</span></span></span>, destinada a armazenar diferentes turmas de uma mesma disciplina ou de disciplinas diferentes.
+Por exemplo, se você estiver lecionando Programação Orientada a Objetos (POO) e Engenharia de
+Software (ES) em um semestre de 2016, poderá criar as pastas <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>course1</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>course2</span></span></span> dentro de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>courses</span></span></span> para
+as turmas de POO e ES, respectivamente. Cada pasta conterá listas de estudantes e seus respectivos IDs
+em arquivos CSV, como <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>16_POO_class1.csv</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>16_ES_class2.csv</span></span></span>, seguindo a formatação
+definida na Seção <a href='livroch3.xhtml#criar-turma-com-arquivo-csv'>3.3.1<!-- tex4ht:ref: sec:professorCriarTurma  --></a> – <a href='livroch3.xhtml#criar-turma-com-arquivo-csv'>Criar turma com arquivo CSV<!-- tex4ht:ref: sec:professorCriarTurma  --></a>. As questões são armazenadas na
+pasta <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>questions</span></span></span> em arquivos TXT, seguindo a mesma estrutura apresentada na Seção <a href='livroch4.xhtml#tutoriais-gerais-sobre-a-navegacao-de-questoes'>4.1<!-- tex4ht:ref: sec:questaoNavegacao  --></a>
+– <a href='livroch4.xhtml#tutoriais-gerais-sobre-a-navegacao-de-questoes'>Tutoriais gerais sobre a navegação de questões<!-- tex4ht:ref: sec:questaoNavegacao  --></a>. A geração de um exame para uma
+turma específica requer a configuração no arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>config.txt</span></span></span>. Para mais detalhes sobre
+essa estrutura de pastas e arquivos, consulte o artigo de Zampirolli, Batista e Quilici-Gonzalez
+(2016).
+</p> 
+<p class='indent'>       Os estudantes preenchem os QRs na página inicial do exame, que já contém seus nomes e
+números de identificação em um código de barras, no caso de exames individuais. Após a conclusão
+do exame, todas as páginas com os QRs podem ser digitalizadas em um único arquivo PDF, que o
+software utiliza para realizar a correção automática. As notas finais são armazenadas em um arquivo
+CSV que contém o ID de cada estudante, seguindo o mesmo estilo apresentado na Seção <a href='livroch7.xhtml#arquivo-csv-com-as-correcoes'>7.3.1<!-- tex4ht:ref: sec:CSVcorrecoesQR  --></a> - <a href='livroch7.xhtml#arquivo-csv-com-as-correcoes'>Arquivo
+CSV com as correções<!-- tex4ht:ref: sec:CSVcorrecoesQR  --></a>.
+</p> 
+<p class='indent'>       O programa <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>createTexTests.py</span></span></span>, apresentado na Figura <a href='#x29-144001r1'>12.1<!-- tex4ht:ref: fig:cap12_mctest4_pastas  --></a>, é responsável por gerar um arquivo
+GAB contendo os gabaritos das respostas individuais de cada estudante, caso sejam utilizados exames
+aleatórios. O corretor, por sua vez, lê um arquivo PDF contendo as páginas digitalizadas dos exames e
+utiliza o arquivo GAB para calcular as notas. As respostas dos estudantes são identificadas através da
+análise das marcações nas questões. Caso ocorram erros de leitura do código de barras ou das
+marcações, o corretor sinaliza esses problemas nas notas. O arquivo de notas é gerado em formato
+CSV.
+</p> 
+<p class='indent'>       O MCTest-4 foi elaborado utilizando a linguagem de programação Python e se encontra
+disponível gratuitamente em <a href='https://github.com/fzampirolli/MCTest4'>github.com/fzampirolli/MCTest4</a>. Professores podem fazer o <span class='cmti-12'>download </span>do
+código em Python, acompanhado da estrutura de pastas e exemplares de arquivos, para gerar os
+exames.
+</p> 
+<p class='indent'>       Para utilizar o programa, é necessário que o professor instale o Python e as bibliotecas
+necessárias, como a OpenCV. Uma alternativa é enviar os arquivos GAB e PDF digitalizados para o
+servidor do MCTest-4 por meio do FTP. Neste servidor, há um <span class='cmti-12'>script </span>que detecta automaticamente esses
+arquivos e os processa. O arquivo de notas resultante pode ser enviado por e-mail ou baixado do
+servidor. Todo esse processo é detalhado no artigo de Zampirolli, Batista e Quilici-Gonzalez
+(2016).
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='experimentos3'><a id='x29-1450001'></a>Experimentos</h5>
+<p class='noindent'>Segundo os autores do artigo, são descritos três experimentos realizados com o MCTest-4. O primeiro
+                                                                                                  
+                                                                                                  
+experimento foi realizado com uma turma de 66 estudantes da disciplina de Programação Orientada a
+Objetos. Os exames foram gerados com 10 QMs e uma QT. Os resultados foram satisfatórios, com apenas
+um erro de leitura. O segundo experimento foi realizado com uma turma de 130 estudantes
+da disciplina de Processamento de Informação. Os exames foram gerados com 12 QMs e
+uma QT. Os resultados também foram satisfatórios, sem nenhum erro de leitura. O terceiro
+experimento foi realizado com 6772 estudantes de escolas públicas do Brasil. Os exames foram
+gerados com 11 QMs para os estudantes do ensino médio e 13 questões para os estudantes do
+ensino fundamental. Os resultados foram satisfatórios, com uma taxa de erros de leitura de
+1,88%.
+</p> 
+<p class='indent'>       No terceiro experimento, foi utilizado um servidor adquirido com recursos da FAPESP, processo
+<a href='https://bv.fapesp.br/pt/auxilios/28430/modelagem-de-objetos-usando-morfologia-matematica-e-grafos-de-vizinhanca/'>2009/14430–1</a>, com um microprocessador, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Intel (R) Core (TM) i7</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>CPU X980@3.33GHz</span></span></span> com <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>12GB</span></span></span> de
+RAM, sistema operacional Linux Ubuntu 64 bits versão 15.04 e executáveis gerados por Python 2.7.9.
+Um <span class='cmti-12'>script </span>do MCTest-4 é executado a cada minuto e procura por arquivos com extensão PDF (sem
+arquivos GAB), para os quais os arquivos CSV correspondentes ainda não foram criados. O
+corretor automático levou 102 minutos para processar os 6772 exames, ou seja, 0,9 segundos por
+exame.
+</p> 
+<p class='indent'>       Os resultados dos experimentos indicam que o MCTest-4 é uma ferramenta eficaz para a
+avaliação de estudantes. O programa consegue gerar exames com questões de qualidade e de corrigi-los
+de forma rápida e precisa. Além disso, o programa é fácil de usar e pode ser personalizado para
+atender às necessidades específicas de cada professor.
+<a id='x29-145001r262'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='artigo-comparando-as-modalidades-semipresencial-e-presencial-cs-com-base-na-utilidade-do-mctest'><span class='titlemark'>12.1.2   </span> <a id='x29-1460002'></a>Artigo comparando as modalidades semipresencial e presencial CS1 com base na utilidade
+do MCTest-4</h4>
+<p class='noindent'>O artigo de Zampirolli, Goya, Pimentel e Kobayashi (2018), publicado na revista <span class='cmti-12'>Computer Applications in
+</span><span class='cmti-12'>Engineering Education</span>, descreve um processo de avaliação desenvolvido para a disciplina de
+Processamento da Informação (ou Introdução à Programação, IP, ou também CS1) oferecido pela
+Universidade Federal do ABC. O estudo compara a modalidade presencial (IP-FF – <span class='cmti-12'>face-to-face</span>) e a
+modalidade semipresencial <span class='cmti-12'>blended learning </span>(IP-BL), onde apenas as avaliações são realizadas
+presencialmente.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='metodo4'><a id='x29-1470002'></a>Método</h5>
+<p class='noindent'>O processo de avaliação foi desenvolvido a partir da identificação de problemas no processo de
+avaliação de IP-FF. Os problemas identificados foram: Avaliação de critérios diferentes entre
+professores; falta de uniformidade na formatação dos exames; dificuldade de calcular a nota final do
+estudante.
+</p> 
+<p class='indent'>       Para resolver esses problemas, o processo de avaliação proposto utiliza: um banco de questões
+com diferentes níveis de dificuldade; um sistema para gerar exames únicos para cada estudante; um
+sistema para corrigir os exames de forma semi-automática.
+                                                                                                  
+                                                                                                  
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='experimentos4'><a id='x29-1480002'></a>Experimentos</h5>
+<p class='noindent'>Os experimentos foram conduzidos em 10 turmas da disciplina IP-BL e demonstraram que o processo de
+avaliação conseguiu padronizar os critérios de avaliação, aprimorar a formatação dos exames e
+simplificar o cálculo da nota final. Os exames foram elaborados utilizando adaptações no software
+MCTest-4.G, contendo três QTs em cada exame. Para aumentar a diversidade, as questões foram
+replicadas manualmente com modificações em alguns parâmetros.
+</p> 
+<p class='indent'>       Foram criados <span class='cmti-12'>scripts </span>em Python para auxiliar nas avaliações da disciplina. Essas ferramentas
+automatizadas incluem a geração automática de exames individuais, a organização dos exames
+digitalizados por questão e estudante, a compilação do código submetido pelos estudantes e o envio
+automático de e-mails com as notas e os erros apontados pelos professores. Todos esses <span class='cmti-12'>scripts </span>foram
+adaptados e incorporados na versão web mais recente, MCTest-5.
+</p> 
+<p class='indent'>       A primeira avaliação da disciplina foi realizada em formato impresso, onde os estudantes tinham
+que resolver três EPs. Uma das questões envolvia o uso de teste de mesa, conforme ilustrado na Figura
+<a href='livroch4.xhtml#x19-56005r12'>4.12<!-- tex4ht:ref: fig:cap04_figQuestaoAtualizaPDF4  --></a>. Um exemplo de exame utilizado para essa primeira avaliação, onde cada questão ocupava uma
+folha frente e verso, é mostrado na Figura <a href='#x29-148001r2'>12.2<!-- tex4ht:ref: fig:cap12_mctest4_folha  --></a>. As resoluções dos estudantes eram digitalizadas e
+enviadas aos professores, sendo que cada professor corrigia uma única questão de todos os estudantes da
+disciplina na modalidade IP-BL.
+</p> 
+<p class='indent'>       Na segunda avaliação, os estudantes também tinham que resolver três EPs, mas desta vez elas
+foram enviadas por meio da plataforma AVA (Ambiente Virtual de Aprendizagem) <a href='http://tidia4.ufabc.edu.br/portal'>tidia4.ufabc.edu.br</a>.
+Todos os códigos submetidos pelos estudantes foram salvos em um computador e executados
+automaticamente para verificar possíveis erros. Os professores deveriam atribuir um conceito a cada
+arquivo de código.
+</p> 
+<p class='indent'>       Essas correções unificadas ocorreram nos anos de 2016.3, 2017.1 e 2017.2, com um total
+de 235, 185 e 161 estudantes, respectivamente. A UFABC utiliza três períodos letivos por
+ano.
+</p> 
+<p class='indent'>       Esses aquivos de códigos dos estudantes foram também utilizados como <span class='cmti-12'>dataset </span>para o artigo de
+Souza, Zampirolli e Kobayashi (2019), onde apresenta um método para validar as notas atribuídas por
+professores aos EPs de estudantes em IP-BL. Foi utilizado um modelo de rede neural convolucional treinado
+com códigos fonte de estudantes avaliados por diferentes professores. Os códigos foram pré-processados e
+convertidos em representações <span class='cmti-12'>embedding</span>, utilizadas como entrada para a rede neural. O
+modelo obteve uma precisão média de 74,9% na classificação das notas dos exercícios. Essa
+abordagem pode ajudar a detectar possíveis erros no processo de avaliação realizado pelos
+professores.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-de-um-exame-gerado-com-mctestg-'><img alt='PIC' height='461' src='./figs-br//cap12_mctest4_folha.png' width='460' /> <a id='x29-148001r2'></a>
+<a id='x29-148002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.2: </span><span class='content'>Recorte de um exame gerado com MCTest-4.G.                                      </span></figcaption><!-- tex4ht:label?: x29-148001r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Os resultados mostraram a redução da dispersão nas notas após a implementação do processo
+de avaliação unificado. No entanto, ainda é preciso enfrentar desafios como a resistência dos
+professores em adotar critérios unificados e a incorporação de ferramentas de correção automática
+no AVA. O artigo ressalta a importância de atividades de motivação e acompanhamento dos estudantes
+para melhorar os índices de aprovação na disciplina.
+<a id='x29-148003r266'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='artigo-definindo-a-parametrizacao-do-mctest-apos-a-versao-'><span class='titlemark'>12.1.3   </span> <a id='x29-1490003'></a>Artigo definindo a parametrização do MCTest após a versão 4</h4>
+<p class='noindent'>Todo o conteúdo apresentado no Capítulo <a href='livroch5.xhtml#questoes-parametricas'>5<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a> – <a href='livroch5.xhtml#questoes-parametricas'>Questões paramétricas<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a>, exceto a seção referente ao
+VPL, foi originalmente publicado no artigo de Zampirolli, Teubl e Batista (2019a). Em resumo, para criar
+questões paramétricas no MCTest-4, são necessários dois delimitadores especiais: <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code:...]]</span></span></span> e
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[def:...]]</span></span></span>. O primeiro deve ser colocado no enunciado da questão ou nas alternativas e define
+instruções em Python ou variáveis a serem usadas na geração do exame de cada estudante. Já o
+segundo deve ser definido no final do enunciado e deve conter os possíveis valores para as variáveis
+aplicadas anteriormente.
+</p> 
+<p class='indent'>       Esse artigo apresenta duas questões paramétricas utilizando arquivos TXT, conforme apresentado
+na Seção <a href='livroch4.xhtml#tutoriais-gerais-sobre-a-navegacao-de-questoes'>4.1<!-- tex4ht:ref: sec:questaoNavegacao  --></a> - <a href='livroch4.xhtml#tutoriais-gerais-sobre-a-navegacao-de-questoes'>Tutoriais gerais sobre a navegação de questões<!-- tex4ht:ref: sec:questaoNavegacao  --></a>, reproduzidas a seguir. Lembrando que
+a contribuição desse artigo criou questões paramétricas e na época da escrita do artigo, a versão web
+ainda não estava disponível. A seguir, são apresentadas essas questões, porém, na versão web do
+MCTest.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='movimento-retilineo-uniforme-com-a-biblioteca-symbols'><a id='x29-1500003'></a>Movimento Retilíneo Uniforme com a biblioteca <span class='cmtt-12'>symbols</span></h5>
+<p class='noindent'>O Código <a href='#x29-150112r1'>12.1<!-- tex4ht:ref: lst:questaoQM_MRU  --></a> implementa um algoritmo para calcular a variável tempo (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>t</span></span></span>) em um problema de
+Movimento Retilíneo Uniforme (MRU), dado a posição inicial (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s0</span></span></span>), a velocidade (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>v</span></span></span>) e a posição final
+(<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s</span></span></span>) do corpo. O método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>algorithm(a)</span></span></span> recebe como entrada uma lista contendo três valores
+inteiros: a posição inicial (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s0</span></span></span>), a velocidade (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>v</span></span></span>) e a posição final (<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s</span></span></span>), nessa ordem. Na
+primeira linha do método, são importados os módulos <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>symbols</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>solve</span></span></span> da biblioteca SymPy
+(<a href='https://docs.sympy.org'>docs.sympy.org</a>), que permite criar símbolos matemáticos para serem usados em cálculos
+simbólicos e também resolver uma equação, respectivamente. São definidos os símbolos <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s</span></span></span> e
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>t</span></span></span> utilizando o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>symbols</span></span></span>, e a posição <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s</span></span></span> é calculada como a soma da posição
+inicial <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s0</span></span></span> com a velocidade <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>v</span></span></span> multiplicada pelo tempo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>t</span></span></span>. Por fim, o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>solve</span></span></span> é utilizado
+para resolver a equação <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s-a2=0</span></span></span> em relação à variável <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>t</span></span></span>. O resultado é armazenado na
+variável <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>r</span></span></span> como um número decimal (do tipo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>float</span></span></span>) e retornado pelo método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>algorithm(a)</span></span></span>
+como o tempo necessário para o objeto percorrer a distância entre as posições <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s0</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s</span></span></span> com
+velocidade <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>v</span></span></span> em MRU. Um exemplo de saída desta questão pode ser visualizado na Figura
+<a href='#x29-150114r3'>12.3<!-- tex4ht:ref: fig:cap12_questaoQM_MRUPDF  --></a>.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-de-qm-parametrica-para-calcular-mru-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-104'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb25'><a id='x29-150039r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Um automóvel percorre uma estrada com função horária \( s</span><span id='textcolor1215'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[[code:a0]] </span><span id='textcolor1216'><span class='cmtt-10x-x-109'>+</span></span> 
+<a id='x29-150041r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>[[code:a1]]t \), onde \(s\) é dado em quilômetros e \(t\) em horas</span><span id='textcolor1217'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x29-150043r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>O automóvel passa pelo km [[code:a2]] após:</span> 
+<a id='x29-150045r4'></a><span class='cmr-6'>4</span> 
+<a id='x29-150047r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x29-150049r6'></a><span class='cmr-6'>6</span><span id='textcolor1218'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1219'><span class='cmtt-10x-x-109'>generate_numbers</span></span><span class='cmtt-10x-x-109'>():</span> 
+<a id='x29-150051r7'></a><span class='cmr-6'>7</span><span id='textcolor1220'><span class='cmtt-10x-x-109'>    </span></span><span id='textcolor1221'><span class='cmitt-10x-x-109'>""" Gera três números aleatórios e retorna-os como uma lista. """</span></span> 
+<a id='x29-150053r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1222'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1223'><span class='cmtt-10x-x-109'>random</span></span> 
+<a id='x29-150055r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1224'><span class='cmtt-10x-x-109'>global</span></span><span class='cmtt-10x-x-109'> a0, a1, a2 </span><span id='textcolor1225'><span class='cmitt-10x-x-109'># necessário declarar como global para utilizar no enunciado</span></span> 
+<a id='x29-150057r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>    a0 </span><span id='textcolor1226'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor1227'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randrange(</span><span id='textcolor1228'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor1229'><span class='cmtt-10x-x-109'>6</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1230'><span class='cmtt-10x-x-109'>12</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1231'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>)  </span><span id='textcolor1232'><span class='cmitt-10x-x-109'># s0 - posição inicial</span></span> 
+<a id='x29-150059r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>    a1 </span><span id='textcolor1233'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor1234'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randrange(</span><span id='textcolor1235'><span class='cmtt-10x-x-109'>3</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1236'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1237'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>)    </span><span id='textcolor1238'><span class='cmitt-10x-x-109'># v  - velocidade</span></span> 
+<a id='x29-150061r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>    a2 </span><span id='textcolor1239'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor1240'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randrange(</span><span id='textcolor1241'><span class='cmtt-10x-x-109'>3</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1242'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1243'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>)    </span><span id='textcolor1244'><span class='cmitt-10x-x-109'># s  - posição final</span></span> 
+<a id='x29-150063r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1245'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> [a0, a1, a2]</span> 
+<a id='x29-150065r14'></a><span class='cmr-6'>14</span> 
+<a id='x29-150067r15'></a><span class='cmr-6'>15</span><span id='textcolor1246'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1247'><span class='cmtt-10x-x-109'>algorithm</span></span><span class='cmtt-10x-x-109'>(a):</span> 
+<a id='x29-150069r16'></a><span class='cmr-6'>16</span><span id='textcolor1248'><span class='cmtt-10x-x-109'>    </span></span><span id='textcolor1249'><span class='cmitt-10x-x-109'>""" Executa um algoritmo matemático utilizando os valores passados como</span></span> 
+<a id='x29-150071r17'></a><span class='cmr-6'>17</span><span id='textcolor1250'><span class='cmitt-10x-x-109'>    parâmetro. Retorna o resultado do algoritmo. """</span></span> 
+<a id='x29-150073r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1251'><span class='cmtt-10x-x-109'>from</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1252'><span class='cmtt-10x-x-109'>sympy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1253'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> symbols, solve</span> 
+<a id='x29-150075r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>    a0, a1, a2 </span><span id='textcolor1254'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> a  </span><span id='textcolor1255'><span class='cmitt-10x-x-109'># s0, v, s</span></span> 
+<a id='x29-150077r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>    s, t </span><span id='textcolor1256'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> symbols(</span><span id='textcolor1257'><span class='cmtt-10x-x-109'>'s,t'</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-150079r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>    s </span><span id='textcolor1258'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> a0 </span><span id='textcolor1259'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> a1 </span><span id='textcolor1260'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> t</span> 
+<a id='x29-150081r22'></a><span class='cmr-6'>22</span> 
+<a id='x29-150083r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>    r </span><span id='textcolor1261'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1262'><span class='cmtt-10x-x-109'>float</span></span><span class='cmtt-10x-x-109'>(solve(s </span><span id='textcolor1263'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> a2, t)[</span><span id='textcolor1264'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>])</span> 
+<a id='x29-150085r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1265'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> r</span> 
+<a id='x29-150087r25'></a><span class='cmr-6'>25</span> 
+<a id='x29-150089r26'></a><span class='cmr-6'>26</span><span id='textcolor1266'><span class='cmitt-10x-x-109'># Gera os números aleatórios</span></span> 
+<a id='x29-150091r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>numbers </span><span id='textcolor1267'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> generate_numbers()</span> 
+<a id='x29-150093r28'></a><span class='cmr-6'>28</span> 
+<a id='x29-150095r29'></a><span class='cmr-6'>29</span><span id='textcolor1268'><span class='cmitt-10x-x-109'># Executa o algoritmo utilizando os números gerados</span></span> 
+<a id='x29-150097r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>correctAnswer </span><span id='textcolor1269'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> algorithm(numbers)</span> 
+<a id='x29-150099r31'></a><span class='cmr-6'>31</span><span id='textcolor1270'><span class='cmitt-10x-x-109'># [[code:f"{correctAnswer:.2f}"]]</span></span> 
+<a id='x29-150101r32'></a><span class='cmr-6'>32</span> 
+<a id='x29-150103r33'></a><span class='cmr-6'>33</span><span id='textcolor1271'><span class='cmitt-10x-x-109'># Opções de respostas erradas com base no resultado do algoritmo</span></span> 
+<a id='x29-150105r34'></a><span class='cmr-6'>34</span><span id='textcolor1272'><span class='cmitt-10x-x-109'># [[code:f"{correctAnswer+1.2:.2f}"]]</span></span> 
+<a id='x29-150107r35'></a><span class='cmr-6'>35</span><span id='textcolor1273'><span class='cmitt-10x-x-109'># [[code:f"{correctAnswer+4.8:.2f}"]]</span></span> 
+<a id='x29-150109r36'></a><span class='cmr-6'>36</span><span id='textcolor1274'><span class='cmitt-10x-x-109'># [[code:f"{correctAnswer-0.9:.2f}"]]</span></span> 
+<a id='x29-150111r37'></a><span class='cmr-6'>37</span><span class='cmtt-10x-x-109'>]]</span></pre>
+ 
+</div> 
+</div>
+<a id='x29-150112r1'></a>
+<a id='x29-150113'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-de-mru-do-codigo-lstquestaoqmmru-'><img alt='PIC' height='461' src='./figs-br//cap12_questaoQM_MRUPDF.png' width='460' /> <a id='x29-150114r3'></a>
+<a id='x29-150115'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.3: </span><span class='content'>Recorte do PDF gerado para a questão de MRU do Código <a href='#x29-150112r1'>12.1<!-- tex4ht:ref: lst:questaoQM_MRU  --></a>.
+</span></figcaption><!-- tex4ht:label?: x29-150114r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <div class='tcolorbox mybox' id='tcolobox-105'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________ </p> 
+<dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+   1.  </dt><dd class='enumerate-enumitem'>Toda variável declarada em um método e utilizada no enunciado da questão deve ser
+        definida como global, como pode ser visto na linha 9 do Código <a href='#x29-150112r1'>12.1<!-- tex4ht:ref: lst:questaoQM_MRU  --></a>;
+        </dd><dt class='enumerate-enumitem'>
+    2.  </dt><dd class='enumerate-enumitem'>As importações de bibliotecas também devem ser realizadas nos métodos, como
+        podem ser vistos nas linhas 8 e 18.</dd></dl>
+ 
+</div> 
+</div>
+       <h5 class='likesubsubsectionHead' id='criacao-de-matriz'><a id='x29-1510003'></a>Criação de Matriz</h5>
+<p class='noindent'>A questão a seguir é uma adaptação daquela apresentada na Seção <a href='livroch4.xhtml#tutoriais-gerais-sobre-a-navegacao-de-questoes'>4.1<!-- tex4ht:ref: sec:questaoNavegacao  --></a> – <a href='livroch4.xhtml#tutoriais-gerais-sobre-a-navegacao-de-questoes'>Tutoriais gerais
+sobre a navegação de questões<!-- tex4ht:ref: sec:questaoNavegacao  --></a>, porém, agora é parametrizada com as dimensões da
+matriz e os elementos atribuídos. O Código <a href='#x29-151094r2'>12.2<!-- tex4ht:ref: lst:questaoQM_criaMatriz  --></a> é responsável por criar uma matriz <img alt='M  ' class='math' src='livro0x.png' />
+com dimensões <img alt='[[code:Linhas ]] × [[code:Colunas ]]  ' class='math' src='livro1x.png' />. Cada elemento da matriz é calculado
+utilizando a fórmula <img alt='(i,j) = ((((i + 1) × [[code:a2]]) + ((j + 1) × [[code:a3 ]])) mod 100 )  ' class='math' src='livro2x.png' />, onde
+<img alt='i  ' class='math' src='livro3x.png' /> representa as linhas e <img alt='j  ' class='math' src='livro4x.png' /> representa as colunas da matriz. Na prática, o código gera
+aleatoriamente o número de linhas e colunas da matriz, num intervalo específico, assim como
+os valores de <img alt='a2  ' class='math' src='livro5x.png' /> e <img alt='a3  ' class='math' src='livro6x.png' />, escolhidos aleatoriamente entre as opções [7, 13, 19] e [11, 17,
+23], respectivamente. A matriz é inicializada com zeros e, em seguida, preenchida utilizando
+dois laços aninhados. Cada elemento <img alt='M  [i,j]  ' class='math' src='livro7x.png' /> recebe o resultado do cálculo mencionado
+anteriormente. Por fim, a variável global <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>correctAnswer</span></span></span> é definida como a soma de todos os
+elementos da matriz <img alt='M  ' class='math' src='livro8x.png' />. Um exemplo de saída desta questão pode ser visualizado na Figura
+<a href='#x29-151096r4'>12.4<!-- tex4ht:ref: fig:cap12_questaoQM_criaMatrizPDF  --></a>.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-exemplo-de-qm-parametrica-para-criar-uma-matriz-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-106'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb26'><a id='x29-151033r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Criar uma matriz \( [[code:Linhas]] \times [[code:Colunas]] \) com elementos</span> 
+<a id='x29-151035r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>\( (i,j) </span><span id='textcolor1275'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> ((((i</span><span id='textcolor1276'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor1277'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>) </span><span id='textcolor1278'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> [[code:a2]]) </span><span id='textcolor1279'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> ( ( j</span><span id='textcolor1280'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor1281'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>) </span><span id='textcolor1282'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> [[code:a3]])) \mod{</span><span id='textcolor1283'><span class='cmtt-10x-x-109'>100</span></span><span class='cmtt-10x-x-109'>}) \)</span><span id='textcolor1284'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x29-151037r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>Calcular a soma dos elementos desta matriz</span><span id='textcolor1285'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Os índices \(i\) são </span><span id='textcolor1286'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> linhas</span> 
+<a id='x29-151039r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>e \(j\) </span><span id='textcolor1287'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> colunas iniciadas com o valor \(</span><span id='textcolor1288'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>\)</span><span id='textcolor1289'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x29-151041r5'></a><span class='cmr-6'>5</span> 
+<a id='x29-151043r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x29-151045r7'></a><span class='cmr-6'>7</span><span id='textcolor1290'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1291'><span class='cmtt-10x-x-109'>numpy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1292'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1293'><span class='cmtt-10x-x-109'>np</span></span><span id='textcolor1294'><span class='cmtt-10x-x-109'>,</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1295'><span class='cmtt-10x-x-109'>random</span></span> 
+<a id='x29-151047r8'></a><span class='cmr-6'>8</span> 
+<a id='x29-151049r9'></a><span class='cmr-6'>9</span><span id='textcolor1296'><span class='cmitt-10x-x-109'># Gerar número aleatório de linhas e colunas</span></span> 
+<a id='x29-151051r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>Linhas </span><span id='textcolor1297'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1298'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor1299'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor1300'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1301'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-151053r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>Colunas </span><span id='textcolor1302'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1303'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor1304'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor1305'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1306'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-151055r12'></a><span class='cmr-6'>12</span> 
+<a id='x29-151057r13'></a><span class='cmr-6'>13</span><span id='textcolor1307'><span class='cmitt-10x-x-109'># Escolher valores aleatórios para a2 e a3</span></span> 
+<a id='x29-151059r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>a2 </span><span id='textcolor1308'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor1309'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>choice([</span><span id='textcolor1310'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1311'><span class='cmtt-10x-x-109'>13</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1312'><span class='cmtt-10x-x-109'>19</span></span><span class='cmtt-10x-x-109'>])</span> 
+<a id='x29-151061r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>a3 </span><span id='textcolor1313'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor1314'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>choice([</span><span id='textcolor1315'><span class='cmtt-10x-x-109'>11</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1316'><span class='cmtt-10x-x-109'>17</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1317'><span class='cmtt-10x-x-109'>23</span></span><span class='cmtt-10x-x-109'>])</span> 
+<a id='x29-151063r16'></a><span class='cmr-6'>16</span> 
+<a id='x29-151065r17'></a><span class='cmr-6'>17</span><span id='textcolor1318'><span class='cmitt-10x-x-109'># Inicializar matriz com zeros</span></span> 
+<a id='x29-151067r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>M </span><span id='textcolor1319'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1320'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>zeros((Linhas, Colunas), dtype</span><span id='textcolor1321'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1322'><span class='cmtt-10x-x-109'>int</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-151069r19'></a><span class='cmr-6'>19</span> 
+<a id='x29-151071r20'></a><span class='cmr-6'>20</span><span id='textcolor1323'><span class='cmitt-10x-x-109'># Preencher a matriz com os cálculos</span></span> 
+<a id='x29-151073r21'></a><span class='cmr-6'>21</span><span id='textcolor1324'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor1325'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1326'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(Linhas):</span> 
+<a id='x29-151075r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1327'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> j </span><span id='textcolor1328'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1329'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(Colunas):</span> 
+<a id='x29-151077r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>        M[i, j] </span><span id='textcolor1330'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> (((i</span><span id='textcolor1331'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor1332'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>) </span><span id='textcolor1333'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> a2) </span><span id='textcolor1334'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> ((j</span><span id='textcolor1335'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor1336'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>) </span><span id='textcolor1337'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> a3)) </span><span id='textcolor1338'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1339'><span class='cmtt-10x-x-109'>100</span></span> 
+<a id='x29-151079r24'></a><span class='cmr-6'>24</span> 
+<a id='x29-151081r25'></a><span class='cmr-6'>25</span><span id='textcolor1340'><span class='cmitt-10x-x-109'># Calcular a soma dos elementos da matriz</span></span> 
+<a id='x29-151083r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>correctAnswer </span><span id='textcolor1341'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1342'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sum(M)</span> 
+<a id='x29-151085r27'></a><span class='cmr-6'>27</span> 
+<a id='x29-151087r28'></a><span class='cmr-6'>28</span><span id='textcolor1343'><span class='cmitt-10x-x-109'># Incluir nas alternativas da questão:</span></span> 
+<a id='x29-151089r29'></a><span class='cmr-6'>29</span><span id='textcolor1344'><span class='cmitt-10x-x-109'># [[code:correctAnswer]] % primeira alternativa (sempre) correta</span></span> 
+<a id='x29-151091r30'></a><span class='cmr-6'>30</span><span id='textcolor1345'><span class='cmitt-10x-x-109'># [[code:createWrongAnswers([3,10])]] % cria 3 alter. erradas +/- 10</span></span> 
+<a id='x29-151093r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>]]</span></pre>
+ 
+</div> 
+</div>
+<a id='x29-151094r2'></a>
+<a id='x29-151095'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-para-criar-uma-matriz-do-codigo-lstquestaoqmcriamatriz-'><img alt='PIC' height='461' src='./figs-br//cap12_questaoQM_criaMatrizPDF.png' width='460' /> <a id='x29-151096r4'></a>
+<a id='x29-151097'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.4: </span><span class='content'>Recorte do PDF gerado para a questão para criar uma matriz do Código <a href='#x29-151094r2'>12.2<!-- tex4ht:ref: lst:questaoQM_criaMatriz  --></a>.
+</span></figcaption><!-- tex4ht:label?: x29-151096r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <h5 class='likesubsubsectionHead' id='experimentos5'><a id='x29-1520003'></a>Experimentos</h5>
+<p class='noindent'>O método proposto para gerar questões paramétricas foi aplicado na disciplina de Processamento da
+Informação (ou Introdução à Programação, IP, ou também CS1) no segundo trimestre de 2018,
+com um total de 167 estudantes matriculados. A disciplina foi oferecida em um formato semipresencial, com
+aulas presenciais ocorrendo em quatro momentos ao longo do semestre: na abertura, no primeiro exame, no
+projeto e no segundo exame.
+</p> 
+<p class='indent'>       A disciplina CS1 faz parte de um programa de bacharelado interdisciplinar oferecido pela
+universidade, e os estudantes que a cursam têm origens diversas. O método se baseia no software
+MCTest-4, que permite gerar várias versões diferentes da mesma questão sem repetições. Para cada
+estudante, foram geradas três questões de dificuldades diferentes (fácil, média e difícil),
+porém com a preocupação de não deixar uma variação de exame mais difícil que a
+outra.
+</p> 
+<p class='indent'>       Os resultados dos experimentos mostraram que o método proposto foi eficaz na geração de
+questões paramétricas para exames impressos. Além disso, o uso do MCTest-4 facilitou a correção
+automática dos exames com QMs.
+<a id='x29-152001r261'></a>
+       </p> 
+
+       <h3 class='sectionHead' id='mctest-a-versao-web'><span class='titlemark'>12.2   </span> <a id='x29-1530002'></a>MCTest-5: a versão web</h3>
+<p class='noindent'>A partir deste ponto, todas as publicações foram conduzidas utilizando a versão web MCTest-5, que
+será mencionada simplesmente como MCTest. Esta versão possibilitou que os docentes empregassem o
+MCTest sem a necessidade de instalações locais em seus dispositivos, resultando em notável
+simplificação tanto na criação como na avaliação de exames, além da viabilização do
+compartilhamento de questões. A seguir, serão apresentados os artigos diretamente vinculados a esta
+edição <span class='cmti-12'>online</span>, corroborando sua eficácia e usabilidade, porém, ainda sem a integração do VPL no
+Moodle.
+<a id='x29-153001r270'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='artigo-apresentando-a-primeira-versao-web-do-mctest'><span class='titlemark'>12.2.1   </span> <a id='x29-1540001'></a>Artigo apresentando a primeira versão web do MCTest</h4>
+<p class='noindent'>O artigo de Zampirolli, Teubl e Batista (2019b) apresentou a primeira versão web do MCTest para
+geração e correção de questões parametrizadas, aplicável a diversas disciplinas e instituições
+educacionais. O método desenvolvido permite criar exames com variações nos textos, mantendo o
+mesmo conteúdo e nível de dificuldade. Para facilitar o processo, foram desenvolvidas interfaces gráficas
+que permitem coletar informações sobre instituições, cursos, disciplinas, tópicos, turmas, exames e
+questões.
+</p> 
+<p class='indent'>       O artigo apresenta as primeiras versões dessas interfaces gráficas, com ênfase na versão mais
+recente discutida nos Capítulos <a href='livroch2.xhtml#visao-geral-do-mctest'>2<!-- tex4ht:ref: ch:visaoGeral  --></a> - <a href='livroch2.xhtml#visao-geral-do-mctest'>Visão geral do MCTest<!-- tex4ht:ref: ch:visaoGeral  --></a>, <a href='livroch4.xhtml#questoes-estaticas'>4<!-- tex4ht:ref: ch:questoesClassicasMCTest  --></a> - <a href='livroch4.xhtml#questoes-estaticas'>Questões estáticas<!-- tex4ht:ref: ch:questoesClassicasMCTest  --></a> e <a href='livroch5.xhtml#questoes-parametricas'>5<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a> - <a href='livroch5.xhtml#questoes-parametricas'>Questões
+paramétricas<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a>. Os resultados detalhados da implementação desse método são apresentados neste
+                                                                                                  
+                                                                                                  
+Capítulo <a href='livroch5.xhtml#questoes-parametricas'>5<!-- tex4ht:ref: ch:questoesCodigoMCTest  --></a>.
+</p> 
+<p class='indent'>       O processo de geração de questões parametrizadas utiliza principalmente a linguagem de
+programação Python, com alguns elementos de LaTeX presentes no enunciado das questões. Os
+resultados obtidos demonstram a eficiência do sistema, mesmo em sua primeira versão, que
+foi implementada em páginas web escritas em Django. O sistema é gratuito e oferece aos
+professores a capacidade de gerar e corrigir exames automaticamente para centenas ou milhares de
+estudantes.
+</p> 
+<p class='indent'>       A seguir, serão apresentados exemplos das questões paramétricas discutidas neste
+artigo.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='equacoes-parametricas-com-equacao-e-figura-utilizando-a-biblioteca-sympy'><a id='x29-1550001'></a>Equações paramétricas com equação e figura utilizando a biblioteca <span class='cmtt-12'>sympy</span></h5>
+<p class='noindent'>A seguir é apresentado um exemplo de questão paramétrica que inclui uma equação matemática e
+uma figura. Neste caso, a equação envolve funções seno, cosseno e integração.
+</p> 
+<p class='indent'>       O Código <a href='#x29-155119r3'>12.3<!-- tex4ht:ref: lst:questaoQM_equacaoFigura  --></a> primeiro importa as bibliotecas <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>sympy</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>random</span></span></span>. A biblioteca SymPy,
+disponível em <a href='https://docs.sympy.org'>docs.sympy.org</a>, fornece funções para trabalhar com expressões simbólicas. O
+código então gera três números aleatórios, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a3</span></span></span>, escolhidos entre 3 e 6, 2 e 4, e 1 e 3,
+respectivamente. Esses números serão usados para definir os parâmetros da função. O código
+então define a variável simbólica <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>x</span></span></span> e a função <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>f</span></span></span>. A função <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>f</span></span></span> é uma combinação
+de funções seno e cosseno com os parâmetros <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a3</span></span></span>. O código então desenha o
+gráfico da função <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>f</span></span></span> no intervalo de -5 a 5. A imagem do gráfico é salva no arquivo
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>./tmp/imgs180days/fz_figIntegral_01_{a1}_{a2}_{a3}_{h}.png</span></span></span>. O código então calcula a integral
+da função <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>f</span></span></span>. A integral é calculada usando a função <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>integrate</span></span></span> da biblioteca SymPy. O código
+então converte a integral para notação LaTeX. Por fim, o código imprime as seguintes expressões em
+notação LaTeX: a integral da função <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>f</span></span></span>, a resposta correta à pergunta e três respostas
+incorretas.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox mybox' id='tcolobox-107'>    
+<div class='tcolorbox-title'>
+                                                                                                  
+                                                                                                  
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________ </p> 
+<dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
+   1.  </dt><dd class='enumerate-enumitem'>A inclusão de imagens em arquivo LaTeX pode tornar a compilação para gerar o
+        PDF muito lenta;
+        </dd><dt class='enumerate-enumitem'>
+    2.  </dt><dd class='enumerate-enumitem'>Uma sugestão é salvar as imagens no servidor do MCTest, disponível no seguinte <span class='cmti-12'>link</span>:
+        <a class='url' href='http://mctest.ufabc.edu.br:8000/tmp/imgs180days/'>http://mctest.ufabc.edu.br:8000/tmp/imgs180days/</a>. Esse servidor antes do <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>/tmp/</span></span></span> deve
+        ser alterado a cada implantação do MCTest. O professor pode incluir um <span class='cmti-12'>link </span>para
+        essa imagem no enunciado da questão, permitindo que os estudantes acessem durante
+        a realização do exame.
+        </dd><dt class='enumerate-enumitem'>
+    3.  </dt><dd class='enumerate-enumitem'>Todos os arquivos temporários são eliminados automaticamente do servidor após 180
+        dias; contudo, essa configuração pode ser ajustada;
+        </dd><dt class='enumerate-enumitem'>
+    4.  </dt><dd class='enumerate-enumitem'>É fundamental incluir os parâmetros no nome do arquivo da imagem caso a questão
+        seja paramétrica e a imagem varie conforme esses parâmetros. Isso pode ser feito como
+        demonstrado nas linhas 22 a 29 do Código <a href='#x29-155119r3'>12.3<!-- tex4ht:ref: lst:questaoQM_equacaoFigura  --></a>, onde uma <span class='cmti-12'>string </span>contendo os valores
+        dos parâmetros é usada para gerar um objeto <span class='cmti-12'>hash</span>, convertido em uma <span class='cmti-12'>string </span>legível
+        e adicionado ao nome do arquivo de imagem. Dessa forma, cada imagem gerada terá
+        um nome único, garantindo que não haja conflitos entre elas.</dd></dl>
+ 
+</div> 
+</div>
+<p class='indent'>       Merece uma explicação especial o nome do arquivo onde será salva a imagem gerada.
+Esse arquivo deve ser único, minimizando a chance de criar um arquivo com o mesmo nome
+de outro que já existe. Para garantir isso, é utilizada a biblioteca <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>hashlib</span></span></span> na linha 23 do
+Código <a href='#x29-155119r3'>12.3<!-- tex4ht:ref: lst:questaoQM_equacaoFigura  --></a>. Em seguida, o código cria uma <span class='cmti-12'>string </span><span class='obeylines-h'><span class='verb'><span class='cmtt-12'>s</span></span></span> que contém os valores dos parâmetros
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a3</span></span></span>. Essa <span class='cmti-12'>string </span>é usada para criar um objeto <span class='cmti-12'>hash</span>, que será usado para gerar um
+nome único para o arquivo de imagem. Depois, o objeto <span class='cmti-12'>hash </span>é convertido em uma <span class='cmti-12'>string</span>
+legível e adicionado ao nome do arquivo de imagem. Esse nome é composto pelo prefixo
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>./tmp/imgs180days/fz_figIntegral_01_</span></span></span>, seguido pelos valores dos parâmetros <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a1</span></span></span>, <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a2</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>a3</span></span></span> e
+pelo <span class='cmti-12'>hash </span>gerado anteriormente. Por fim, o sufixo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>.png</span></span></span> indica que a imagem será salva em
+formato PNG. Dessa forma, é possível gerar imagens únicas para diferentes valores dos
+parâmetros.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-questao-parametrica-com-equacao-e-figura-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-108'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb27'><a id='x29-155044r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>A integral da função  \([[code:a0]]\) tem seu gráfico representado abaixo</span><span id='textcolor1346'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x29-155046r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>Calcule o valor da integral e marque a alternativa correta</span><span id='textcolor1347'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x29-155048r3'></a><span class='cmr-6'>3</span> 
+<a id='x29-155050r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>\begin{figure}[ht</span><span class='colorbox' id='colorbox1348'><span class='cmtt-10x-x-109'>!</span></span><span class='cmtt-10x-x-109'>]</span>  
+<a id='x29-155052r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>\centering \includegraphics[scale</span><span id='textcolor1349'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1350'><span class='cmtt-10x-x-109'>0.7</span></span><span class='cmtt-10x-x-109'>]{[[code:figura]]}</span> 
+<a id='x29-155054r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>\centerline{Figura da integral}</span> 
+<a id='x29-155056r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>\end{figure}</span> 
+<a id='x29-155058r8'></a><span class='cmr-6'>8</span> 
+<a id='x29-155060r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x29-155062r10'></a><span class='cmr-6'>10</span><span id='textcolor1351'><span class='cmtt-10x-x-109'>from</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1352'><span class='cmtt-10x-x-109'>sympy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1353'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> symbols, sin, cos, plot, latex, Integral, integrate</span> 
+<a id='x29-155064r11'></a><span class='cmr-6'>11</span><span id='textcolor1354'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1355'><span class='cmtt-10x-x-109'>random</span></span> 
+<a id='x29-155066r12'></a><span class='cmr-6'>12</span> 
+<a id='x29-155068r13'></a><span class='cmr-6'>13</span><span id='textcolor1356'><span class='cmitt-10x-x-109'># Geração dos parâmetros aleatórios</span></span> 
+<a id='x29-155070r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>a1 </span><span id='textcolor1357'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor1358'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randrange(</span><span id='textcolor1359'><span class='cmtt-10x-x-109'>3</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1360'><span class='cmtt-10x-x-109'>6</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1361'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-155072r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>a2 </span><span id='textcolor1362'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor1363'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randrange(</span><span id='textcolor1364'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1365'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1366'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-155074r16'></a><span class='cmr-6'>16</span><span class='cmtt-10x-x-109'>a3 </span><span id='textcolor1367'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor1368'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randrange(</span><span id='textcolor1369'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1370'><span class='cmtt-10x-x-109'>3</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1371'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-155076r17'></a><span class='cmr-6'>17</span> 
+<a id='x29-155078r18'></a><span class='cmr-6'>18</span><span id='textcolor1372'><span class='cmitt-10x-x-109'># Definição da variável simbólica e da função</span></span> 
+<a id='x29-155080r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>x </span><span id='textcolor1373'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> symbols(</span><span id='textcolor1374'><span class='cmtt-10x-x-109'>'x'</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-155082r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>f </span><span id='textcolor1375'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> a1</span><span id='textcolor1376'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'>sin(a2</span><span id='textcolor1377'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'>x) </span><span id='textcolor1378'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> a3</span><span id='textcolor1379'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'>cos(x)</span> 
+<a id='x29-155084r21'></a><span class='cmr-6'>21</span> 
+<a id='x29-155086r22'></a><span class='cmr-6'>22</span><span id='textcolor1380'><span class='cmitt-10x-x-109'># Plotagem da função</span></span> 
+<a id='x29-155088r23'></a><span class='cmr-6'>23</span><span id='textcolor1381'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1382'><span class='cmtt-10x-x-109'>hashlib</span></span> 
+<a id='x29-155090r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>s </span><span id='textcolor1383'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1384'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>([a1,a2,a3])</span> 
+<a id='x29-155092r25'></a><span class='cmr-6'>25</span><span class='cmtt-10x-x-109'>h </span><span id='textcolor1385'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> hashlib</span><span id='textcolor1386'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>md5(s</span><span id='textcolor1387'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>encode()) </span><span id='textcolor1388'><span class='cmitt-10x-x-109'># create hash - arquivo único</span></span> 
+<a id='x29-155094r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>h </span><span id='textcolor1389'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1390'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(h</span><span id='textcolor1391'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>hexdigest())</span> 
+<a id='x29-155096r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>p </span><span id='textcolor1392'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> plot(f, (x, </span><span id='textcolor1393'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor1394'><span class='cmtt-10x-x-109'>5</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1395'><span class='cmtt-10x-x-109'>5</span></span><span class='cmtt-10x-x-109'>), show</span><span id='textcolor1396'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1397'><span class='cmtt-10x-x-109'>False</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-155098r28'></a><span class='cmr-6'>28</span><span class='cmtt-10x-x-109'>figura </span><span id='textcolor1398'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1399'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor1400'><span class='cmtt-10x-x-109'>'./tmp/imgs180days/fz_figIntegral_01_</span></span><span id='textcolor1401'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>a1</span><span id='textcolor1402'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1403'><span class='cmtt-10x-x-109'>_</span></span><span id='textcolor1404'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>a2</span><span id='textcolor1405'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1406'><span class='cmtt-10x-x-109'>_</span></span><span id='textcolor1407'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>a3</span><span id='textcolor1408'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1409'><span class='cmtt-10x-x-109'>_</span></span><span id='textcolor1410'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>h</span><span id='textcolor1411'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1412'><span class='cmtt-10x-x-109'>.png'</span></span> 
+<a id='x29-155100r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>p</span><span id='textcolor1413'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>save(figura)</span> 
+<a id='x29-155102r30'></a><span class='cmr-6'>30</span> 
+<a id='x29-155104r31'></a><span class='cmr-6'>31</span><span id='textcolor1414'><span class='cmitt-10x-x-109'># Cálculo da integral e conversão para notação LaTeX</span></span> 
+<a id='x29-155106r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'>a0 </span><span id='textcolor1415'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> latex(Integral(f, x))</span> 
+<a id='x29-155108r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'>correctAnswer </span><span id='textcolor1416'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> latex(integrate(f, x))</span> 
+<a id='x29-155110r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>error1 </span><span id='textcolor1417'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> latex(integrate(f </span><span id='textcolor1418'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> x, x))</span> 
+<a id='x29-155112r35'></a><span class='cmr-6'>35</span><span class='cmtt-10x-x-109'>error2 </span><span id='textcolor1419'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> latex(integrate(f </span><span id='textcolor1420'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> x, x))</span> 
+<a id='x29-155114r36'></a><span class='cmr-6'>36</span><span class='cmtt-10x-x-109'>error3 </span><span id='textcolor1421'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> latex(integrate(x</span><span id='textcolor1422'><span class='cmtt-10x-x-109'>**</span></span><span id='textcolor1423'><span class='cmtt-10x-x-109'>5</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1424'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> x </span><span id='textcolor1425'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1426'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>, x))</span> 
+<a id='x29-155116r37'></a><span class='cmr-6'>37</span><span id='textcolor1427'><span class='cmitt-10x-x-109'># nas alternativas: \([[code:correctAnswer]]\); \([[code:error1]]\); ...</span></span> 
+<a id='x29-155118r38'></a><span class='cmr-6'>38</span><span class='cmtt-10x-x-109'>]]</span></pre>
+ 
+</div> 
+</div>
+<a id='x29-155119r3'></a>
+<a id='x29-155120'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-parametrica-com-equacao-e-figura-referente-ao-codigo-lstquestaoqmequacaofigura-'><img alt='PIC' height='461' src='./figs-br//cap12_questaoQM_equacaoFiguraPDF.png' width='460' /> <a id='x29-155121r5'></a>
+<a id='x29-155122'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.5: </span><span class='content'>Recorte do PDF gerado para a questão paramétrica com equação e figura referente
+ao Código <a href='#x29-155119r3'>12.3<!-- tex4ht:ref: lst:questaoQM_equacaoFigura  --></a>.
+</span></figcaption><!-- tex4ht:label?: x29-155121r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <div class='tcolorbox mybox' id='tcolobox-109'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+<p class='indent'>A principal dificuldade ao lidar com questões paramétricas usando a biblioteca SymPy é
+definir corretamente o intervalo das variáveis aleatórias e também as respostas incorretas
+das alternativas, sem gerar soluções inexistentes. </p> 
+ 
+</div> 
+</div>
+       <h5 class='likesubsubsectionHead' id='questao-parametrica-com-grafo-e-figura'><a id='x29-1560001'></a>Questão paramétrica com grafo e figura</h5>
+<p class='noindent'>A questão paramétrica apresentada no  Código <a href='#x29-156133r4'>12.4<!-- tex4ht:ref: lst:questaoQM_grafo  --></a>  cria o grafo  <img alt='G =  (V, E )  ' class='math' src='livro9x.png' />,   onde
+ <img alt='V  = n1,n2, ⋅⋅⋅ ,np  ' class='math' src='livro10x.png' /> é um conjunto de nós (ou vértices) e <img alt='E  ' class='math' src='livro11x.png' /> é um conjunto de arestas (ou arcos),
+sendo que cada <img alt='e ∈ E  ' class='math' src='livro12x.png' /> é dado por <img alt='e = (n ,n )
+      i  j  ' class='math' src='livro13x.png' /> para <img alt='n ,n  ∈ V
+ i  j  ' class='math' src='livro14x.png' />. As arestas podem ter peso e o
+exemplo resolve o problema de encontrar o caminho de peso mínimo. Um caminho é uma sequência de
+vértices adjacentes, que determina uma sequência de arestas, e o peso do caminho é calculado somando
+os pesos de suas arestas.
+</p> 
+<p class='indent'>       Para gerar a imagem apresentada na Figura <a href='#x29-156135r6'>12.6<!-- tex4ht:ref: fig:cap12_questaoQM_grafoPDF  --></a>, será utilizado o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>draw</span></span></span> da biblioteca
+NetworkX (<a href='https://networkx.org/'>networkx.org</a>) em conjunto com a biblioteca Matplotlib (<a href='https://matplotlib.org/'>matplotlib.org</a>). No entanto, é
+importante notar que o código precisa ser modificado para tratar o caso em que existem dois
+ou mais caminhos mínimos com o mesmo peso. Uma possível solução seria modificar o
+código para descartar os pesos gerados nas linhas 16 e 17 quando existirem dois caminhos
+mínimos com o mesmo peso. Essa modificação é análoga à condição de aceitar apenas
+caminhos com pelo menos 5 vértices, verificada nas linhas 21 e 22. Dessa forma, o código
+garantiria que apenas um caminho mínimo seria considerado na geração da imagem, o que é
+necessário para garantir que a QM com alternativas definidas nas linhas 30 e 31 tenha apenas uma
+correta.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-qm-parametrica-com-grafo-e-figura-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-110'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb28'><a id='x29-156046r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Qual é o caminho de Dijkstra neste grafo, entre os nós \(a\) e \(e\), com os</span> 
+<a id='x29-156048r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>seguintes pesos \\ \verb</span><span id='textcolor1428'><span class='cmtt-10x-x-109'>|</span></span><span class='cmtt-10x-x-109'>[[code:grafo]]</span><span id='textcolor1429'><span class='cmtt-10x-x-109'>|</span></span><span class='colorbox' id='colorbox1430'><span class='cmtt-10x-x-109'>?</span></span>  
+<a id='x29-156050r3'></a><span class='cmr-6'>3</span>  
+<a id='x29-156052r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>\begin{figure}[</span><span class='colorbox' id='colorbox1431'><span class='cmtt-10x-x-109'>!</span></span><span class='cmtt-10x-x-109'>h]</span> 
+<a id='x29-156054r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>\centering\includegraphics[scale</span><span id='textcolor1432'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1433'><span class='cmtt-10x-x-109'>0.7</span></span><span class='cmtt-10x-x-109'>]{[[code:pathGrafico]]}</span> 
+<a id='x29-156056r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>\end{figure}</span> 
+<a id='x29-156058r7'></a><span class='cmr-6'>7</span> 
+<a id='x29-156060r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x29-156062r9'></a><span class='cmr-6'>9</span><span id='textcolor1434'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1435'><span class='cmtt-10x-x-109'>matplotlib.pyplot</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1436'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1437'><span class='cmtt-10x-x-109'>plt</span></span><span id='textcolor1438'><span class='cmtt-10x-x-109'>,</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1439'><span class='cmtt-10x-x-109'>networkx</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1440'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1441'><span class='cmtt-10x-x-109'>nx</span></span> 
+<a id='x29-156064r10'></a><span class='cmr-6'>10</span><span id='textcolor1442'><span class='cmtt-10x-x-109'>from</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1443'><span class='cmtt-10x-x-109'>itertools</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1444'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> permutations</span> 
+<a id='x29-156066r11'></a><span class='cmr-6'>11</span> 
+<a id='x29-156068r12'></a><span class='cmr-6'>12</span><span id='textcolor1445'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1446'><span class='cmtt-10x-x-109'>True</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x29-156070r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>  plt</span><span id='textcolor1447'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>clf()</span> 
+<a id='x29-156072r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>  G </span><span id='textcolor1448'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> nx</span><span id='textcolor1449'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>Graph() </span><span id='textcolor1450'><span class='cmitt-10x-x-109'># Definição do grafo</span></span> 
+<a id='x29-156074r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>  w1,w2,w3,w4,w5,w6,w7 </span><span id='textcolor1451'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>  random</span><span id='textcolor1452'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sample(</span><span id='textcolor1453'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1454'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor1455'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>), </span><span id='textcolor1456'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-156076r16'></a><span class='cmr-6'>16</span><span class='cmtt-10x-x-109'>  edges</span><span id='textcolor1457'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>[(</span><span id='textcolor1458'><span class='cmtt-10x-x-109'>'a'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor1459'><span class='cmtt-10x-x-109'>'b'</span></span><span class='cmtt-10x-x-109'>,w1),(</span><span id='textcolor1460'><span class='cmtt-10x-x-109'>'b'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor1461'><span class='cmtt-10x-x-109'>'c'</span></span><span class='cmtt-10x-x-109'>,w2),(</span><span id='textcolor1462'><span class='cmtt-10x-x-109'>'a'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor1463'><span class='cmtt-10x-x-109'>'c'</span></span><span class='cmtt-10x-x-109'>,w3),(</span><span id='textcolor1464'><span class='cmtt-10x-x-109'>'c'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor1465'><span class='cmtt-10x-x-109'>'d'</span></span><span class='cmtt-10x-x-109'>,w4),</span> 
+<a id='x29-156078r17'></a><span class='cmr-6'>17</span><span class='cmtt-10x-x-109'>   (</span><span id='textcolor1466'><span class='cmtt-10x-x-109'>'b'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor1467'><span class='cmtt-10x-x-109'>'d'</span></span><span class='cmtt-10x-x-109'>,w5),(</span><span id='textcolor1468'><span class='cmtt-10x-x-109'>'d'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor1469'><span class='cmtt-10x-x-109'>'e'</span></span><span class='cmtt-10x-x-109'>,w6),(</span><span id='textcolor1470'><span class='cmtt-10x-x-109'>'e'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor1471'><span class='cmtt-10x-x-109'>'c'</span></span><span class='cmtt-10x-x-109'>,w7)]</span> 
+<a id='x29-156080r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>  G</span><span id='textcolor1472'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>add_weighted_edges_from(edges)</span> 
+<a id='x29-156082r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>  grafo </span><span id='textcolor1473'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1474'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(edges)</span> 
+<a id='x29-156084r20'></a><span class='cmr-6'>20</span> 
+<a id='x29-156086r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>  v </span><span id='textcolor1475'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> nx</span><span id='textcolor1476'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>dijkstra_path(G, </span><span id='textcolor1477'><span class='cmtt-10x-x-109'>'a'</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1478'><span class='cmtt-10x-x-109'>'e'</span></span><span class='cmtt-10x-x-109'>) </span><span id='textcolor1479'><span class='cmitt-10x-x-109'># Cálculo do caminho mínimo</span></span> 
+<a id='x29-156088r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor1480'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1481'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(v)</span><span id='textcolor1482'><span class='cmmi-10x-x-109'>&lt;</span></span><span id='textcolor1483'><span class='cmtt-10x-x-109'>5</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor1484'><span class='cmtt-10x-x-109'>continue</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1485'><span class='cmitt-10x-x-109'># aceita pelo menos 5 nós</span></span> 
+<a id='x29-156090r23'></a><span class='cmr-6'>23</span> 
+<a id='x29-156092r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>  perm_list </span><span id='textcolor1486'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [] </span><span id='textcolor1487'><span class='cmitt-10x-x-109'># criar permutações</span></span> 
+<a id='x29-156094r25'></a><span class='cmr-6'>25</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor1488'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> perm </span><span id='textcolor1489'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> permutations(v):</span> 
+<a id='x29-156096r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1490'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> perm[</span><span id='textcolor1491'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>] </span><span id='textcolor1492'><span class='cmtt-10x-x-109'>==</span></span><span class='cmtt-10x-x-109'> v[</span><span id='textcolor1493'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>] </span><span id='textcolor1494'><span class='cmtt-10x-x-109'>and</span></span><span class='cmtt-10x-x-109'> perm[</span><span id='textcolor1495'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor1496'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>] </span><span id='textcolor1497'><span class='cmtt-10x-x-109'>==</span></span><span class='cmtt-10x-x-109'> v[</span><span id='textcolor1498'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor1499'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>]:</span> 
+<a id='x29-156098r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>      perm_list</span><span id='textcolor1500'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(perm)</span> 
+<a id='x29-156100r28'></a><span class='cmr-6'>28</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor1501'><span class='cmtt-10x-x-109'>break</span></span> 
+<a id='x29-156102r29'></a><span class='cmr-6'>29</span> 
+<a id='x29-156104r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>correctAnswer </span><span id='textcolor1502'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1503'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(perm_list[</span><span id='textcolor1504'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>])</span> 
+<a id='x29-156106r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>error1,error2,error3 </span><span id='textcolor1505'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1506'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(perm_list[</span><span id='textcolor1507'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>]), </span><span id='textcolor1508'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(perm_list[</span><span id='textcolor1509'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>]), </span><span id='textcolor1510'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(perm_list[</span><span id='textcolor1511'><span class='cmtt-10x-x-109'>3</span></span><span class='cmtt-10x-x-109'>])</span> 
+<a id='x29-156108r32'></a><span class='cmr-6'>32</span><span id='textcolor1512'><span class='cmitt-10x-x-109'># nas alternativas: \verb|[[code:correctAnswer]]|\\ ; \verb|[[code:error1]]|\\ ...</span></span> 
+<a id='x29-156110r33'></a><span class='cmr-6'>33</span> 
+<a id='x29-156112r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>pos </span><span id='textcolor1513'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> nx</span><span id='textcolor1514'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>spring_layout(G) </span><span id='textcolor1515'><span class='cmitt-10x-x-109'># Plotagem do grafo</span></span> 
+<a id='x29-156114r35'></a><span class='cmr-6'>35</span><span class='cmtt-10x-x-109'>nx</span><span id='textcolor1516'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>draw(G, pos</span><span id='textcolor1517'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>pos)</span> 
+<a id='x29-156116r36'></a><span class='cmr-6'>36</span><span class='cmtt-10x-x-109'>nx</span><span id='textcolor1518'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>draw_networkx_labels(G, pos</span><span id='textcolor1519'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>pos)</span> 
+<a id='x29-156118r37'></a><span class='cmr-6'>37</span><span class='cmtt-10x-x-109'>nx</span><span id='textcolor1520'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>draw_networkx_edge_labels(G, pos</span><span id='textcolor1521'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>pos)</span> 
+<a id='x29-156120r38'></a><span class='cmr-6'>38</span> 
+<a id='x29-156122r39'></a><span class='cmr-6'>39</span><span id='textcolor1522'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1523'><span class='cmtt-10x-x-109'>hashlib</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1524'><span class='cmitt-10x-x-109'># Salvando a figura</span></span> 
+<a id='x29-156124r40'></a><span class='cmr-6'>40</span><span class='cmtt-10x-x-109'>s </span><span id='textcolor1525'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1526'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(edges)</span> 
+<a id='x29-156126r41'></a><span class='cmr-6'>41</span><span class='cmtt-10x-x-109'>h </span><span id='textcolor1527'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> hashlib</span><span id='textcolor1528'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>md5(s</span><span id='textcolor1529'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>encode()) </span><span id='textcolor1530'><span class='cmitt-10x-x-109'># create hash - arquivo único</span></span> 
+<a id='x29-156128r42'></a><span class='cmr-6'>42</span><span class='cmtt-10x-x-109'>pathGrafico </span><span id='textcolor1531'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1532'><span class='cmtt-10x-x-109'>'figGrafo('</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1533'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1534'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(h</span><span id='textcolor1535'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>hexdigest()) </span><span id='textcolor1536'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1537'><span class='cmtt-10x-x-109'>')'</span></span> 
+<a id='x29-156130r43'></a><span class='cmr-6'>43</span><span class='cmtt-10x-x-109'>plt</span><span id='textcolor1538'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>savefig(pathGrafico)</span> 
+<a id='x29-156132r44'></a><span class='cmr-6'>44</span><span class='cmtt-10x-x-109'>]]</span></pre>
+ 
+</div> 
+</div>
+<a id='x29-156133r4'></a>
+<a id='x29-156134'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-parametrica-com-grafo-e-figura-referente-ao-codigo-lstquestaoqmgrafo-'><img alt='PIC' height='461' src='./figs-br//cap12_questaoQM_grafoPDF.png' width='460' /> <a id='x29-156135r6'></a>
+<a id='x29-156136'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.6: </span><span class='content'>Recorte do PDF gerado para a questão paramétrica com grafo e figura referente ao
+Código <a href='#x29-156133r4'>12.4<!-- tex4ht:ref: lst:questaoQM_grafo  --></a>.
+</span></figcaption><!-- tex4ht:label?: x29-156135r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <h5 class='likesubsubsectionHead' id='questao-parametrica-com-matriz-e-figura'><a id='x29-1570001'></a>Questão paramétrica com matriz e figura</h5>
+<p class='noindent'>No arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>static/Utils.py</span></span></span>, localizado no GitHub <a href='https://github.com/fzampirolli/mctest'>github.com/fzampirolli/mctest</a>, há vários métodos
+úteis para a criação de questões paramétricas. Um desses métodos é o <span class='cmtt-12'>drawMatrix()</span>, que permite
+desenhar uma matriz, conforme serão demonstrados nos códigos desta seção.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-metodo-para-desenhar-matriz-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-111'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Método:  </span><span class='cmr-10x-x-109'>desenha matriz</span>
+__________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb29'><a id='x29-157038r1'></a><span class='cmr-6'>1</span><span id='textcolor1539'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1540'><span class='cmtt-10x-x-109'>drawMatrix</span></span><span class='cmtt-10x-x-109'>(A, myfile):</span> 
+<a id='x29-157040r2'></a><span class='cmr-6'>2</span><span id='textcolor1541'><span class='cmtt-10x-x-109'>    </span></span><span id='textcolor1542'><span class='cmitt-10x-x-109'>"""</span></span> 
+<a id='x29-157042r3'></a><span class='cmr-6'>3</span><span id='textcolor1543'><span class='cmitt-10x-x-109'>    Desenha uma representação visual de uma matriz e salva a imagem em um arquivo.</span></span> 
+<a id='x29-157044r4'></a><span class='cmr-6'>4</span><span id='textcolor1544'><span class='cmitt-10x-x-109'>    Exemplo de uso:</span></span> 
+<a id='x29-157046r5'></a><span class='cmr-6'>5</span><span id='textcolor1545'><span class='cmitt-10x-x-109'>    No enunciado da questão, desenhe a seguinte figura</span></span> 
+<a id='x29-157048r6'></a><span class='cmr-6'>6</span><span id='textcolor1546'><span class='cmitt-10x-x-109'>    (copie o código abaixo para uma nova questão):</span></span> 
+<a id='x29-157050r7'></a><span class='cmr-6'>7</span><span id='textcolor1547'><span class='cmitt-10x-x-109'>    \begin{figure}[h!]</span></span> 
+<a id='x29-157052r8'></a><span class='cmr-6'>8</span><span id='textcolor1548'><span class='cmitt-10x-x-109'>    \centering</span></span> 
+<a id='x29-157054r9'></a><span class='cmr-6'>9</span><span id='textcolor1549'><span class='cmitt-10x-x-109'>    \includegraphics[scale=0.55]{[[code:f"./tmp/imgs180days/{pathGraficoA}"]]}</span></span> 
+<a id='x29-157056r10'></a><span class='cmr-6'>10</span><span id='textcolor1550'><span class='cmitt-10x-x-109'>    \end{figure}</span></span> 
+<a id='x29-157058r11'></a><span class='cmr-6'>11</span> 
+<a id='x29-157060r12'></a><span class='cmr-6'>12</span><span id='textcolor1551'><span class='cmitt-10x-x-109'>    [[def:</span></span> 
+<a id='x29-157062r13'></a><span class='cmr-6'>13</span><span id='textcolor1552'><span class='cmitt-10x-x-109'>    import numpy as np</span></span> 
+<a id='x29-157064r14'></a><span class='cmr-6'>14</span><span id='textcolor1553'><span class='cmitt-10x-x-109'>    Lin, Col = 4, 5</span></span> 
+<a id='x29-157066r15'></a><span class='cmr-6'>15</span><span id='textcolor1554'><span class='cmitt-10x-x-109'>    A = np.random.randint(10, size=(Lin, Col))</span></span> 
+<a id='x29-157068r16'></a><span class='cmr-6'>16</span><span id='textcolor1555'><span class='cmitt-10x-x-109'>    # Plotagem da função</span></span> 
+<a id='x29-157070r17'></a><span class='cmr-6'>17</span><span id='textcolor1556'><span class='cmitt-10x-x-109'>    import hashlib</span></span> 
+<a id='x29-157072r18'></a><span class='cmr-6'>18</span><span id='textcolor1557'><span class='cmitt-10x-x-109'>    s =str([Lin, Col])</span></span> 
+<a id='x29-157074r19'></a><span class='cmr-6'>19</span><span id='textcolor1558'><span class='cmitt-10x-x-109'>    h = hashlib.md5(s.encode()) # create hash - arquivo único</span></span> 
+<a id='x29-157076r20'></a><span class='cmr-6'>20</span><span id='textcolor1559'><span class='cmitt-10x-x-109'>    h = str(h.hexdigest())</span></span> 
+<a id='x29-157078r21'></a><span class='cmr-6'>21</span><span id='textcolor1560'><span class='cmitt-10x-x-109'>    fig0 = f'fz_figExample01{Lin}_{Col}_{h}.png'</span></span> 
+<a id='x29-157080r22'></a><span class='cmr-6'>22</span><span id='textcolor1561'><span class='cmitt-10x-x-109'>    drawMatrix(A, fig0)</span></span> 
+<a id='x29-157082r23'></a><span class='cmr-6'>23</span><span id='textcolor1562'><span class='cmitt-10x-x-109'>    ]] """</span></span> 
+<a id='x29-157084r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1563'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1564'><span class='cmtt-10x-x-109'>matplotlib.pyplot</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1565'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1566'><span class='cmtt-10x-x-109'>plt</span></span> 
+<a id='x29-157086r25'></a><span class='cmr-6'>25</span> 
+<a id='x29-157088r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>    fig, ax </span><span id='textcolor1567'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> plt</span><span id='textcolor1568'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>subplots()</span> 
+<a id='x29-157090r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>    mat </span><span id='textcolor1569'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> ax</span><span id='textcolor1570'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>imshow(A, cmap</span><span id='textcolor1571'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1572'><span class='cmtt-10x-x-109'>'Pastel1'</span></span><span class='cmtt-10x-x-109'>, interpolation</span><span id='textcolor1573'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1574'><span class='cmtt-10x-x-109'>'nearest'</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-157092r28'></a><span class='cmr-6'>28</span> 
+<a id='x29-157094r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1575'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> x </span><span id='textcolor1576'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1577'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(A</span><span id='textcolor1578'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>shape[</span><span id='textcolor1579'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>]):</span> 
+<a id='x29-157096r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor1580'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> y </span><span id='textcolor1581'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1582'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(A</span><span id='textcolor1583'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>shape[</span><span id='textcolor1584'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>]):</span> 
+<a id='x29-157098r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>            ax</span><span id='textcolor1585'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>annotate(</span><span id='textcolor1586'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(A[x, y])[</span><span id='textcolor1587'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>], xy</span><span id='textcolor1588'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>(y, x), horizontalalignment</span><span id='textcolor1589'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1590'><span class='cmtt-10x-x-109'>'center'</span></span><span class='cmtt-10x-x-109'>,</span> 
+<a id='x29-157100r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'>                        verticalalignment</span><span id='textcolor1591'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1592'><span class='cmtt-10x-x-109'>'center'</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-157102r33'></a><span class='cmr-6'>33</span> 
+<a id='x29-157104r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>    plt</span><span id='textcolor1593'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>show()</span> 
+<a id='x29-157106r35'></a><span class='cmr-6'>35</span><span class='cmtt-10x-x-109'>    fig</span><span id='textcolor1594'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>savefig(</span><span id='textcolor1595'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor1596'><span class='cmtt-10x-x-109'>'./tmp/imgs180days/</span></span><span id='textcolor1597'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>myfile</span><span id='textcolor1598'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1599'><span class='cmtt-10x-x-109'>.png'</span></span><span class='cmtt-10x-x-109'>, dpi</span><span id='textcolor1600'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1601'><span class='cmtt-10x-x-109'>300</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x29-157108r36'></a><span class='cmr-6'>36</span><span class='cmtt-10x-x-109'>    plt</span><span id='textcolor1602'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>close()</span></pre>
+ 
+</div> 
+</div>
+<a id='x29-157109r5'></a>
+<a id='x29-157110'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       A questão apresentada nos Códigos <a href='#x29-157231r6'>12.6<!-- tex4ht:ref: lst:questaoMatrizRosaParte1  --></a> e <a href='#x29-157377r7'>12.7<!-- tex4ht:ref: lst:questaoMatrizRosaParte2  --></a> propõe a criação de um programa que
+manipula matrizes para identificar e ativar elementos com determinada condição em relação aos seus
+vizinhos. O programa recebe uma matriz de entrada <img alt='E  ' class='math' src='livro15x.png' /> e cria uma matriz de saída <img alt='F  ' class='math' src='livro16x.png' />, inicializada
+com o valor “-1”. Um elemento <img alt='(i,j)  ' class='math' src='livro17x.png' /> da matriz <img alt='E  ' class='math' src='livro18x.png' /> é considerado “maior” ou “menor”
+em relação aos seus vizinhos nas direções especificadas. As direções são codificadas
+numericamente conforme a tabela fornecida na questão (ver Figura <a href='#x29-157379r7'>12.7<!-- tex4ht:ref: fig:cap12_questaoMatrizRosaPDF  --></a>). O programa deve
+percorrer a matriz de entrada <img alt='E  ' class='math' src='livro19x.png' /> e, para cada elemento que atenda à condição de ser “maior”
+ou “menor” em relação aos seus vizinhos, o valor correspondente na matriz de saída <img alt='F  ' class='math' src='livro20x.png' />
+deve ser atualizado. Após a ativação de todos os elementos que atendem à condição, o
+programa deve imprimir a matriz <img alt='F  ' class='math' src='livro21x.png' />. Além disso, são fornecidos exemplos de uma matriz de
+entrada e a saída correspondente, exibidos na forma de imagens. O programa deve conseguir
+lidar com matrizes de qualquer dimensão e garantir que os elementos de borda da matriz <img alt='F  ' class='math' src='livro22x.png' />
+sejam mantidos como “-1”. O exemplo fornecido mostra uma matriz de entrada e a matriz de
+saída resultante após a ativação dos elementos que atendem à condição especificada.
+As imagens mostram a representação gráfica das matrizes. Para simplificar a resolução
+desta questão, é crucial destacar que <img alt='a0 = (i,j)  ' class='math' src='livro23x.png' /> não se encontra em um pixel de borda.
+Em outras palavras, na matriz <img alt='F  ' class='math' src='livro24x.png' />, todos os elementos correspondentes às bordas devem ser
+mantidos com o valor “-1”. Um exemplo da saída dessa questão pode ser observado na Figura
+<a href='#x29-157379r7'>12.7<!-- tex4ht:ref: fig:cap12_questaoMatrizRosaPDF  --></a>.
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>       </p> 
+<figure class='float' id='-questao-parametrica-com-matriz-parte-descricao-de-questao-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-112'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb30'><a id='x29-157152r1'></a><span class='cmr-6'>1</span><span class='cmtt-10'>Um elemento \(a_0</span><span id='textcolor1603'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>(i,j)\) é de uma matriz dito ser \textbf{[[code:direcao]]</span> 
+<a id='x29-157154r2'></a><span class='cmr-6'>2</span><span class='cmtt-10'>[[code:maiormenor]]} se seu valor é  [[code:maiormenor]] do que o valor de</span> 
+<a id='x29-157156r3'></a><span class='cmr-6'>3</span><span class='cmtt-10'>seus vizinhos nas direções [[code:direcao_viz]], considerando a seguinte</span> 
+<a id='x29-157158r4'></a><span class='cmr-6'>4</span><span class='cmtt-10'>codificação para </span><span id='textcolor1604'><span class='cmtt-10'>as</span></span><span class='cmtt-10'> possíveis direções:</span> 
+<a id='x29-157160r5'></a><span class='cmr-6'>5</span><span class='cmtt-10'>\</span> 
+<a id='x29-157162r6'></a><span class='cmr-6'>6</span><span class='cmtt-10'>\begin{table}[h</span><span class='colorbox' id='colorbox1605'><span class='cmtt-10'>!</span></span><span class='cmtt-10'>]</span>  
+<a id='x29-157164r7'></a><span class='cmr-6'>7</span><span class='cmtt-10'>\centering\vspace{</span><span id='textcolor1606'><span class='cmtt-10'>-</span></span><span id='textcolor1607'><span class='cmtt-10'>2</span></span><span class='cmtt-10'>mm}</span> 
+<a id='x29-157166r8'></a><span class='cmr-6'>8</span><span class='cmtt-10'>\begin{tabular}{lllll}</span> 
+<a id='x29-157168r9'></a><span class='cmr-6'>9</span><span class='cmtt-10'>\cline{</span><span id='textcolor1608'><span class='cmtt-10'>1</span></span><span id='textcolor1609'><span class='cmtt-10'>-</span></span><span id='textcolor1610'><span class='cmtt-10'>3</span></span><span class='cmtt-10'>}</span> 
+<a id='x29-157170r10'></a><span class='cmr-6'>10</span><span class='cmtt-10'>\multicolumn{</span><span id='textcolor1611'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>}{</span><span id='textcolor1612'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>l</span><span id='textcolor1613'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>}{\(a_8</span><span id='textcolor1614'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>\) Noroeste} </span><span id='textcolor1615'><span class='cmtt-10'>&amp;</span></span><span class='cmtt-10'> \multicolumn{</span><span id='textcolor1616'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>}{l</span><span id='textcolor1617'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>}{\(a_1</span><span id='textcolor1618'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>\) Norte}  </span><span id='textcolor1619'><span class='cmtt-10'>&amp;</span></span> 
+<a id='x29-157172r11'></a><span class='cmr-6'>11</span><span class='cmtt-10'>\multicolumn{</span><span id='textcolor1620'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>}{l</span><span id='textcolor1621'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>}{\(a_2</span><span id='textcolor1622'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>\) Nordeste} </span><span id='textcolor1623'><span class='cmtt-10'>&amp;</span></span><span class='cmtt-10'>  </span><span id='textcolor1624'><span class='cmtt-10'>&amp;</span></span><span class='cmtt-10'>  \\ \cline{</span><span id='textcolor1625'><span class='cmtt-10'>1</span></span><span id='textcolor1626'><span class='cmtt-10'>-</span></span><span id='textcolor1627'><span class='cmtt-10'>3</span></span><span class='cmtt-10'>}</span> 
+<a id='x29-157174r12'></a><span class='cmr-6'>12</span><span class='cmtt-10'>\multicolumn{</span><span id='textcolor1628'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>}{</span><span id='textcolor1629'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>l</span><span id='textcolor1630'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>}{\(a_7</span><span id='textcolor1631'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>\) Oeste}      </span><span id='textcolor1632'><span class='cmtt-10'>&amp;</span></span><span class='cmtt-10'> \multicolumn{</span><span id='textcolor1633'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>}{l</span><span id='textcolor1634'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>}{\(a_0</span><span id='textcolor1635'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>(i,j)\)} </span><span id='textcolor1636'><span class='cmtt-10'>&amp;</span></span> 
+<a id='x29-157176r13'></a><span class='cmr-6'>13</span><span class='cmtt-10'>\multicolumn{</span><span id='textcolor1637'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>}{l</span><span id='textcolor1638'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>}{\(a_3</span><span id='textcolor1639'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>\) Leste}      </span><span id='textcolor1640'><span class='cmtt-10'>&amp;</span></span><span class='cmtt-10'>  </span><span id='textcolor1641'><span class='cmtt-10'>&amp;</span></span><span class='cmtt-10'>  \\ \cline{</span><span id='textcolor1642'><span class='cmtt-10'>1</span></span><span id='textcolor1643'><span class='cmtt-10'>-</span></span><span id='textcolor1644'><span class='cmtt-10'>3</span></span><span class='cmtt-10'>}</span> 
+<a id='x29-157178r14'></a><span class='cmr-6'>14</span><span class='cmtt-10'>\multicolumn{</span><span id='textcolor1645'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>}{</span><span id='textcolor1646'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>l</span><span id='textcolor1647'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>}{\(a_6</span><span id='textcolor1648'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>\) Sudoeste} </span><span id='textcolor1649'><span class='cmtt-10'>&amp;</span></span><span class='cmtt-10'> \multicolumn{</span><span id='textcolor1650'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>}{l</span><span id='textcolor1651'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>}{\(a_5</span><span id='textcolor1652'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>\) Sul}    </span><span id='textcolor1653'><span class='cmtt-10'>&amp;</span></span> 
+<a id='x29-157180r15'></a><span class='cmr-6'>15</span><span class='cmtt-10'>\multicolumn{</span><span id='textcolor1654'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>}{l</span><span id='textcolor1655'><span class='cmtt-10'>|</span></span><span class='cmtt-10'>}{\(a_4</span><span id='textcolor1656'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>\) Sudeste}  </span><span id='textcolor1657'><span class='cmtt-10'>&amp;</span></span><span class='cmtt-10'>  </span><span id='textcolor1658'><span class='cmtt-10'>&amp;</span></span><span class='cmtt-10'>  \\ \cline{</span><span id='textcolor1659'><span class='cmtt-10'>1</span></span><span id='textcolor1660'><span class='cmtt-10'>-</span></span><span id='textcolor1661'><span class='cmtt-10'>3</span></span><span class='cmtt-10'>}</span> 
+<a id='x29-157182r16'></a><span class='cmr-6'>16</span><span class='cmtt-10'>\end{tabular}</span> 
+<a id='x29-157184r17'></a><span class='cmr-6'>17</span><span class='cmtt-10'>\end{table}</span> 
+<a id='x29-157186r18'></a><span class='cmr-6'>18</span> 
+<a id='x29-157188r19'></a><span class='cmr-6'>19</span><span class='cmtt-10'>\vspace{</span><span id='textcolor1662'><span class='cmtt-10'>-</span></span><span id='textcolor1663'><span class='cmtt-10'>2</span></span><span class='cmtt-10'>mm}</span> 
+<a id='x29-157190r20'></a><span class='cmr-6'>20</span><span class='cmtt-10'>\noindent Faça um programa para criar e ler uma matriz de entrada \(E\) de inteiros</span><span id='textcolor1664'><span class='cmtt-10'>.</span></span> 
+<a id='x29-157192r21'></a><span class='cmr-6'>21</span><span class='cmtt-10'>Seu programa deve criar também uma matriz de saída \(F\) e inicializa</span><span id='textcolor1665'><span class='cmtt-10'>-</span></span><span class='cmtt-10'>la com o valor</span> 
+<a id='x29-157194r22'></a><span class='cmr-6'>22</span><span class='colorbox' id='colorbox1666'><span class='cmtt-10'>``</span></span><span id='textcolor1667'><span class='cmtt-10'>-</span></span><span id='textcolor1668'><span class='cmtt-10'>1</span></span><span id='textcolor1669'><span class='cmtt-10'>''</span></span><span id='textcolor1670'><span class='cmtt-10'>.</span></span><span class='cmtt-10'> Diz</span><span id='textcolor1671'><span class='cmtt-10'>-</span></span><span class='cmtt-10'>se que um elemento \((i,j)\) de \(F\) é \emph{ativado} quando é atribuída a</span> 
+<a id='x29-157196r23'></a><span class='cmr-6'>23</span><span class='cmtt-10'>\(F[i,j]\) o valor de \(E[i,j]\), isto é, quando \(F[i,j] \leftarrow E[i,j]\)</span><span id='textcolor1672'><span class='cmtt-10'>.</span></span><span class='cmtt-10'> O</span> 
+<a id='x29-157198r24'></a><span class='cmr-6'>24</span><span class='cmtt-10'>seu programa deve também imprimir a matriz \(F\) depois de ativar todos os seus</span> 
+<a id='x29-157200r25'></a><span class='cmr-6'>25</span><span class='cmtt-10'>elementos que são \textbf{[[code:direcao]]  [[code:maiormenor]]}</span><span id='textcolor1673'><span class='cmtt-10'>.</span></span><span class='cmtt-10'> Veja a seguir</span> 
+<a id='x29-157202r26'></a><span class='cmr-6'>26</span><span class='cmtt-10'>um exemplo \([[code:Linhas]] \times [[code:Colunas]]\) com a entrada e a saída</span> 
+<a id='x29-157204r27'></a><span class='cmr-6'>27</span><span class='cmtt-10'>correspondente</span><span id='textcolor1674'><span class='cmtt-10'>.</span></span><span class='cmtt-10'> \\</span> 
+<a id='x29-157206r28'></a><span class='cmr-6'>28</span> 
+<a id='x29-157208r29'></a><span class='cmr-6'>29</span><span class='cmtt-10'>\noindent {\bf Obs</span><span id='textcolor1675'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>:} considere \(a_0</span><span id='textcolor1676'><span class='cmtt-10'>=</span></span><span class='cmtt-10'>(i,j)\) não pertencer a um pixel de borda, isto</span> 
+<a id='x29-157210r30'></a><span class='cmr-6'>30</span><span class='cmtt-10'>é, na matriz \(F\) todos os elementos de borda ficam com valor </span><span class='colorbox' id='colorbox1677'><span class='cmtt-10'>``</span></span><span id='textcolor1678'><span class='cmtt-10'>-</span></span><span id='textcolor1679'><span class='cmtt-10'>1</span></span><span id='textcolor1680'><span class='cmtt-10'>''</span></span><span id='textcolor1681'><span class='cmtt-10'>.</span></span><span class='cmtt-10'> O seu programa</span> 
+<a id='x29-157212r31'></a><span class='cmr-6'>31</span><span class='cmtt-10'>deve funcionar para matrizes de quaisquer dimensões</span><span id='textcolor1682'><span class='cmtt-10'>.</span></span> 
+<a id='x29-157214r32'></a><span class='cmr-6'>32</span> 
+<a id='x29-157216r33'></a><span class='cmr-6'>33</span><span class='cmtt-10'>\begin{table}[h</span><span class='colorbox' id='colorbox1683'><span class='cmtt-10'>!</span></span><span class='cmtt-10'>]\vspace{</span><span id='textcolor1684'><span class='cmtt-10'>-</span></span><span id='textcolor1685'><span class='cmtt-10'>4</span></span><span class='cmtt-10'>mm}</span> 
+<a id='x29-157218r34'></a><span class='cmr-6'>34</span><span class='cmtt-10'>\begin{tabular}{cc}</span> 
+<a id='x29-157220r35'></a><span class='cmr-6'>35</span><span class='cmtt-10'>\includegraphics[scale</span><span id='textcolor1686'><span class='cmtt-10'>=</span></span><span id='textcolor1687'><span class='cmtt-10'>0.56</span></span><span class='cmtt-10'>]{[[code:</span><span id='textcolor1688'><span class='cmtt-10'>f</span></span><span id='textcolor1689'><span class='cmtt-10'>"./tmp/imgs180days/</span></span><span id='textcolor1690'><span class='cmtt-10'>{</span></span><span class='cmtt-10'>pathGraficoA</span><span id='textcolor1691'><span class='cmtt-10'>}</span></span><span id='textcolor1692'><span class='cmtt-10'>"</span></span><span class='cmtt-10'>]]}  </span><span id='textcolor1693'><span class='cmtt-10'>&amp;</span></span> 
+<a id='x29-157222r36'></a><span class='cmr-6'>36</span><span class='cmtt-10'>\includegraphics[scale</span><span id='textcolor1694'><span class='cmtt-10'>=</span></span><span id='textcolor1695'><span class='cmtt-10'>0.56</span></span><span class='cmtt-10'>]{[[code:</span><span id='textcolor1696'><span class='cmtt-10'>f</span></span><span id='textcolor1697'><span class='cmtt-10'>"./tmp/imgs180days/</span></span><span id='textcolor1698'><span class='cmtt-10'>{</span></span><span class='cmtt-10'>pathGraficoB</span><span id='textcolor1699'><span class='cmtt-10'>}</span></span><span id='textcolor1700'><span class='cmtt-10'>"</span></span><span class='cmtt-10'>]]}</span> 
+<a id='x29-157224r37'></a><span class='cmr-6'>37</span><span class='cmtt-10'>\end{tabular}</span> 
+<a id='x29-157226r38'></a><span class='cmr-6'>38</span><span class='cmtt-10'>\end{table}</span> 
+<a id='x29-157228r39'></a><span class='cmr-6'>39</span> 
+<a id='x29-157230r40'></a><span class='cmr-6'>40</span><span class='cmtt-10'>\end{table}</span></pre>
+ 
+</div> 
+</div>
+<a id='x29-157231r6'></a>
+<a id='x29-157232'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+                                                                                                  
+                                                                                                  
+<p class='indent'>       </p> 
+<figure class='float' id='-questao-parametrica-com-matriz-parte-bloco-de-codigo-em-python-'>
+                                                                                                  
+                                                                                                  
+<div class='tcolorbox myboxCode' id='tcolobox-113'>    
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
+_________________________________________________________________________________
+<pre class='fancyvrb' id='fancyvrb31'><a id='x29-157282r1'></a><span class='cmr-6'>1</span><span class='cmtt-10'>[[def:</span> 
+<a id='x29-157284r2'></a><span class='cmr-6'>2</span><span id='textcolor1701'><span class='cmtt-10'>import</span></span><span class='cmtt-10'> </span><span id='textcolor1702'><span class='cmtt-10'>json</span></span><span id='textcolor1703'><span class='cmtt-10'>,</span></span><span class='cmtt-10'> </span><span id='textcolor1704'><span class='cmtt-10'>random</span></span><span id='textcolor1705'><span class='cmtt-10'>,</span></span><span class='cmtt-10'> </span><span id='textcolor1706'><span class='cmtt-10'>numpy</span></span><span class='cmtt-10'> </span><span id='textcolor1707'><span class='cmtt-10'>as</span></span><span class='cmtt-10'> </span><span id='textcolor1708'><span class='cmtt-10'>np</span></span> 
+<a id='x29-157286r3'></a><span class='cmr-6'>3</span> 
+<a id='x29-157288r4'></a><span class='cmr-6'>4</span><span id='textcolor1709'><span class='cmtt-10'>def</span></span><span class='cmtt-10'> </span><span id='textcolor1710'><span class='cmtt-10'>direcoes</span></span><span class='cmtt-10'>(offset, </span><span id='textcolor1711'><span class='cmtt-10'>dir</span></span><span class='cmtt-10'>):</span> 
+<a id='x29-157290r5'></a><span class='cmr-6'>5</span><span id='textcolor1712'><span class='cmtt-10'>  </span></span><span id='textcolor1713'><span class='cmitt-10'>""" Método que retorna as direções adjacentes à direção dada. """</span></span> 
+<a id='x29-157292r6'></a><span class='cmr-6'>6</span><span class='cmtt-10'>  dir1, dir2 </span><span id='textcolor1714'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> (</span><span id='textcolor1715'><span class='cmtt-10'>dir</span></span><span class='cmtt-10'> </span><span id='textcolor1716'><span class='cmtt-10'>-</span></span><span class='cmtt-10'> </span><span id='textcolor1717'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>) </span><span id='textcolor1718'><span class='cmtt-10'>%</span></span><span class='cmtt-10'> </span><span id='textcolor1719'><span class='cmtt-10'>8</span></span><span class='cmtt-10'> </span><span id='textcolor1720'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> </span><span id='textcolor1721'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>, (</span><span id='textcolor1722'><span class='cmtt-10'>dir</span></span><span class='cmtt-10'> </span><span id='textcolor1723'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> </span><span id='textcolor1724'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>) </span><span id='textcolor1725'><span class='cmtt-10'>%</span></span><span class='cmtt-10'> </span><span id='textcolor1726'><span class='cmtt-10'>8</span></span><span class='cmtt-10'> </span><span id='textcolor1727'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> </span><span id='textcolor1728'><span class='cmtt-10'>1</span></span> 
+<a id='x29-157294r7'></a><span class='cmr-6'>7</span><span class='cmtt-10'>  </span><span id='textcolor1729'><span class='cmtt-10'>return</span></span><span class='cmtt-10'> (dir1, </span><span id='textcolor1730'><span class='cmtt-10'>dir</span></span><span class='cmtt-10'>, dir2)</span> 
+<a id='x29-157296r8'></a><span class='cmr-6'>8</span> 
+<a id='x29-157298r9'></a><span class='cmr-6'>9</span><span id='textcolor1731'><span class='cmitt-10'># Parâmetros utilizados no enunciado da questão</span></span> 
+<a id='x29-157300r10'></a><span class='cmr-6'>10</span><span id='textcolor1732'><span class='cmitt-10'>#</span><span class='cmmi-10'>&gt;&gt;&gt;&gt;</span><span class='cmitt-10'> BEGIN</span></span> 
+<a id='x29-157302r11'></a><span class='cmr-6'>11</span><span id='textcolor1733'><span class='cmtt-10'>dir</span></span><span class='cmtt-10'> </span><span id='textcolor1734'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> random</span><span id='textcolor1735'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>choice([</span><span id='textcolor1736'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>,</span><span id='textcolor1737'><span class='cmtt-10'>2</span></span><span class='cmtt-10'>,</span><span id='textcolor1738'><span class='cmtt-10'>3</span></span><span class='cmtt-10'>,</span><span id='textcolor1739'><span class='cmtt-10'>4</span></span><span class='cmtt-10'>,</span><span id='textcolor1740'><span class='cmtt-10'>5</span></span><span class='cmtt-10'>,</span><span id='textcolor1741'><span class='cmtt-10'>6</span></span><span class='cmtt-10'>,</span><span id='textcolor1742'><span class='cmtt-10'>7</span></span><span class='cmtt-10'>,</span><span id='textcolor1743'><span class='cmtt-10'>8</span></span><span class='cmtt-10'>])</span> 
+<a id='x29-157304r12'></a><span class='cmr-6'>12</span><span class='cmtt-10'>direcaoAll </span><span id='textcolor1744'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> [</span><span id='textcolor1745'><span class='cmtt-10'>"Norte"</span></span><span class='cmtt-10'>,</span><span id='textcolor1746'><span class='cmtt-10'>"Nordeste"</span></span><span class='cmtt-10'>,</span><span id='textcolor1747'><span class='cmtt-10'>"Oeste"</span></span><span class='cmtt-10'>,</span><span id='textcolor1748'><span class='cmtt-10'>"Sudeste"</span></span><span class='cmtt-10'>,</span><span id='textcolor1749'><span class='cmtt-10'>"Sul"</span></span><span class='cmtt-10'>,</span><span id='textcolor1750'><span class='cmtt-10'>"Sudoeste"</span></span><span class='cmtt-10'>,</span><span id='textcolor1751'><span class='cmtt-10'>"Leste"</span></span><span class='cmtt-10'>,</span><span id='textcolor1752'><span class='cmtt-10'>"Noroeste"</span></span><span class='cmtt-10'>]</span> 
+<a id='x29-157306r13'></a><span class='cmr-6'>13</span><span class='cmtt-10'>direcao </span><span id='textcolor1753'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> direcaoAll[</span><span id='textcolor1754'><span class='cmtt-10'>dir</span></span><span id='textcolor1755'><span class='cmtt-10'>-</span></span><span id='textcolor1756'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>]</span> 
+<a id='x29-157308r14'></a><span class='cmr-6'>14</span> 
+<a id='x29-157310r15'></a><span class='cmr-6'>15</span><span class='cmtt-10'>maiormenor </span><span id='textcolor1757'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> random</span><span id='textcolor1758'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>choice([</span><span id='textcolor1759'><span class='cmtt-10'>"maior"</span></span><span class='cmtt-10'>, </span><span id='textcolor1760'><span class='cmtt-10'>"menor"</span></span><span class='cmtt-10'>])</span> 
+<a id='x29-157312r16'></a><span class='cmr-6'>16</span><span class='cmtt-10'>m, n </span><span id='textcolor1761'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> random</span><span id='textcolor1762'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>randrange(</span><span id='textcolor1763'><span class='cmtt-10'>7</span></span><span class='cmtt-10'>, </span><span id='textcolor1764'><span class='cmtt-10'>9</span></span><span class='cmtt-10'>, </span><span id='textcolor1765'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>), random</span><span id='textcolor1766'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>randrange(</span><span id='textcolor1767'><span class='cmtt-10'>15</span></span><span class='cmtt-10'>, </span><span id='textcolor1768'><span class='cmtt-10'>21</span></span><span class='cmtt-10'>, </span><span id='textcolor1769'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>)</span> 
+<a id='x29-157314r17'></a><span class='cmr-6'>17</span><span class='cmtt-10'>Linhas, Colunas </span><span id='textcolor1770'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> m, n</span> 
+<a id='x29-157316r18'></a><span class='cmr-6'>18</span> 
+<a id='x29-157318r19'></a><span class='cmr-6'>19</span><span id='textcolor1771'><span class='cmitt-10'>#direcoes  0      1      2     3     4     5      6      7       8</span></span> 
+<a id='x29-157320r20'></a><span class='cmr-6'>20</span><span class='cmtt-10'>offset </span><span id='textcolor1772'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> [[</span><span id='textcolor1773'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>,</span><span id='textcolor1774'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>],[</span><span id='textcolor1775'><span class='cmtt-10'>-</span></span><span id='textcolor1776'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>,</span><span id='textcolor1777'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>],[</span><span id='textcolor1778'><span class='cmtt-10'>-</span></span><span id='textcolor1779'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>,</span><span id='textcolor1780'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>],[</span><span id='textcolor1781'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>,</span><span id='textcolor1782'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>],[</span><span id='textcolor1783'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>,</span><span id='textcolor1784'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>],[</span><span id='textcolor1785'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>,</span><span id='textcolor1786'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>],[</span><span id='textcolor1787'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>,</span><span id='textcolor1788'><span class='cmtt-10'>-</span></span><span id='textcolor1789'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>],[</span><span id='textcolor1790'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>,</span><span id='textcolor1791'><span class='cmtt-10'>-</span></span><span id='textcolor1792'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>],[</span><span id='textcolor1793'><span class='cmtt-10'>-</span></span><span id='textcolor1794'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>,</span><span id='textcolor1795'><span class='cmtt-10'>-</span></span><span id='textcolor1796'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>]]</span> 
+<a id='x29-157322r21'></a><span class='cmr-6'>21</span><span class='cmtt-10'>(dir1,dir0,dir2) </span><span id='textcolor1797'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> direcoes(offset,</span><span id='textcolor1798'><span class='cmtt-10'>dir</span></span><span class='cmtt-10'>)</span> 
+<a id='x29-157324r22'></a><span class='cmr-6'>22</span><span class='cmtt-10'>direcao_viz </span><span id='textcolor1799'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> </span><span id='textcolor1800'><span class='cmtt-10'>"$a_"</span></span><span id='textcolor1801'><span class='cmtt-10'>+</span></span><span id='textcolor1802'><span class='cmtt-10'>str</span></span><span class='cmtt-10'>(dir1)</span><span id='textcolor1803'><span class='cmtt-10'>+</span></span><span id='textcolor1804'><span class='cmtt-10'>"$, $a_"</span></span><span id='textcolor1805'><span class='cmtt-10'>+</span></span><span id='textcolor1806'><span class='cmtt-10'>str</span></span><span class='cmtt-10'>(dir0)</span><span id='textcolor1807'><span class='cmtt-10'>+</span></span><span id='textcolor1808'><span class='cmtt-10'>"$, $a_"</span></span><span id='textcolor1809'><span class='cmtt-10'>+</span></span><span id='textcolor1810'><span class='cmtt-10'>str</span></span><span class='cmtt-10'>(dir2)</span><span id='textcolor1811'><span class='cmtt-10'>+</span></span><span id='textcolor1812'><span class='cmtt-10'>"$"</span></span> 
+<a id='x29-157326r23'></a><span class='cmr-6'>23</span><span id='textcolor1813'><span class='cmitt-10'>#</span><span class='cmmi-10'>&lt;&lt;&lt;&lt;</span><span class='cmitt-10'> END</span></span> 
+<a id='x29-157328r24'></a><span class='cmr-6'>24</span> 
+<a id='x29-157330r25'></a><span class='cmr-6'>25</span><span class='cmtt-10'>A </span><span id='textcolor1814'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> (np</span><span id='textcolor1815'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>random</span><span id='textcolor1816'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>random((m, n)) </span><span id='textcolor1817'><span class='cmtt-10'>*</span></span><span class='cmtt-10'> </span><span id='textcolor1818'><span class='cmtt-10'>10</span></span><span class='cmtt-10'>)</span><span id='textcolor1819'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>astype(</span><span id='textcolor1820'><span class='cmtt-10'>int</span></span><span class='cmtt-10'>)</span> 
+<a id='x29-157332r26'></a><span class='cmr-6'>26</span><span class='cmtt-10'>B </span><span id='textcolor1821'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> (np</span><span id='textcolor1822'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>zeros(A</span><span id='textcolor1823'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>shape) </span><span id='textcolor1824'><span class='cmtt-10'>-</span></span><span class='cmtt-10'> </span><span id='textcolor1825'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>)</span><span id='textcolor1826'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>astype(</span><span id='textcolor1827'><span class='cmtt-10'>int</span></span><span class='cmtt-10'>)</span> 
+<a id='x29-157334r27'></a><span class='cmr-6'>27</span><span id='textcolor1828'><span class='cmtt-10'>for</span></span><span class='cmtt-10'> i </span><span id='textcolor1829'><span class='cmtt-10'>in</span></span><span class='cmtt-10'> </span><span id='textcolor1830'><span class='cmtt-10'>range</span></span><span class='cmtt-10'>(</span><span id='textcolor1831'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>, m </span><span id='textcolor1832'><span class='cmtt-10'>-</span></span><span class='cmtt-10'> </span><span id='textcolor1833'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>):</span> 
+<a id='x29-157336r28'></a><span class='cmr-6'>28</span><span class='cmtt-10'>  </span><span id='textcolor1834'><span class='cmtt-10'>for</span></span><span class='cmtt-10'> j </span><span id='textcolor1835'><span class='cmtt-10'>in</span></span><span class='cmtt-10'> </span><span id='textcolor1836'><span class='cmtt-10'>range</span></span><span class='cmtt-10'>(</span><span id='textcolor1837'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>, n </span><span id='textcolor1838'><span class='cmtt-10'>-</span></span><span class='cmtt-10'> </span><span id='textcolor1839'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>):</span> 
+<a id='x29-157338r29'></a><span class='cmr-6'>29</span><span class='cmtt-10'>    </span><span id='textcolor1840'><span class='cmtt-10'>if</span></span><span class='cmtt-10'> maiormenor </span><span id='textcolor1841'><span class='cmtt-10'>==</span></span><span class='cmtt-10'> </span><span id='textcolor1842'><span class='cmtt-10'>"menor"</span></span><span class='cmtt-10'>:</span> 
+<a id='x29-157340r30'></a><span class='cmr-6'>30</span><span class='cmtt-10'>      </span><span id='textcolor1843'><span class='cmtt-10'>if</span></span><span class='cmtt-10'> (A[i </span><span id='textcolor1844'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir1][</span><span id='textcolor1845'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>], j </span><span id='textcolor1846'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir1][</span><span id='textcolor1847'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>]] </span><span id='textcolor1848'><span class='cmmi-10'>&gt;</span></span><span class='cmtt-10'> A[i, j]</span> 
+<a id='x29-157342r31'></a><span class='cmr-6'>31</span><span class='cmtt-10'>        </span><span id='textcolor1849'><span class='cmtt-10'>and</span></span><span class='cmtt-10'> A[i </span><span id='textcolor1850'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir0][</span><span id='textcolor1851'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>], j </span><span id='textcolor1852'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir0][</span><span id='textcolor1853'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>]] </span><span id='textcolor1854'><span class='cmmi-10'>&gt;</span></span><span class='cmtt-10'> A[i, j]</span> 
+<a id='x29-157344r32'></a><span class='cmr-6'>32</span><span class='cmtt-10'>        </span><span id='textcolor1855'><span class='cmtt-10'>and</span></span><span class='cmtt-10'> A[i </span><span id='textcolor1856'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir2][</span><span id='textcolor1857'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>], j </span><span id='textcolor1858'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir2][</span><span id='textcolor1859'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>]] </span><span id='textcolor1860'><span class='cmmi-10'>&gt;</span></span><span class='cmtt-10'> A[i, j]):</span> 
+<a id='x29-157346r33'></a><span class='cmr-6'>33</span><span class='cmtt-10'>        B[i, j] </span><span id='textcolor1861'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> A[i, j]</span> 
+<a id='x29-157348r34'></a><span class='cmr-6'>34</span><span class='cmtt-10'>    </span><span id='textcolor1862'><span class='cmtt-10'>else</span></span><span class='cmtt-10'>:</span> 
+<a id='x29-157350r35'></a><span class='cmr-6'>35</span><span class='cmtt-10'>      </span><span id='textcolor1863'><span class='cmtt-10'>if</span></span><span class='cmtt-10'> (A[i </span><span id='textcolor1864'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir1][</span><span id='textcolor1865'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>], j </span><span id='textcolor1866'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir1][</span><span id='textcolor1867'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>]] </span><span id='textcolor1868'><span class='cmmi-10'>&lt;</span></span><span class='cmtt-10'> A[i, j]</span> 
+<a id='x29-157352r36'></a><span class='cmr-6'>36</span><span class='cmtt-10'>        </span><span id='textcolor1869'><span class='cmtt-10'>and</span></span><span class='cmtt-10'> A[i </span><span id='textcolor1870'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir0][</span><span id='textcolor1871'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>], j </span><span id='textcolor1872'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir0][</span><span id='textcolor1873'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>]] </span><span id='textcolor1874'><span class='cmmi-10'>&lt;</span></span><span class='cmtt-10'> A[i, j]</span> 
+<a id='x29-157354r37'></a><span class='cmr-6'>37</span><span class='cmtt-10'>        </span><span id='textcolor1875'><span class='cmtt-10'>and</span></span><span class='cmtt-10'> A[i </span><span id='textcolor1876'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir2][</span><span id='textcolor1877'><span class='cmtt-10'>0</span></span><span class='cmtt-10'>], j </span><span id='textcolor1878'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> offset[dir2][</span><span id='textcolor1879'><span class='cmtt-10'>1</span></span><span class='cmtt-10'>]] </span><span id='textcolor1880'><span class='cmmi-10'>&lt;</span></span><span class='cmtt-10'> A[i, j]):</span> 
+<a id='x29-157356r38'></a><span class='cmr-6'>38</span><span class='cmtt-10'>        B[i, j] </span><span id='textcolor1881'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> A[i, j]</span> 
+<a id='x29-157358r39'></a><span class='cmr-6'>39</span> 
+<a id='x29-157360r40'></a><span class='cmr-6'>40</span><span id='textcolor1882'><span class='cmtt-10'>import</span></span><span class='cmtt-10'> </span><span id='textcolor1883'><span class='cmtt-10'>hashlib</span></span> 
+<a id='x29-157362r41'></a><span class='cmr-6'>41</span><span class='cmtt-10'>s </span><span id='textcolor1884'><span class='cmtt-10'>=</span></span><span id='textcolor1885'><span class='cmtt-10'>''</span></span><span id='textcolor1886'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>join([</span><span id='textcolor1887'><span class='cmtt-10'>str</span></span><span class='cmtt-10'>(i) </span><span id='textcolor1888'><span class='cmtt-10'>for</span></span><span class='cmtt-10'> i </span><span id='textcolor1889'><span class='cmtt-10'>in</span></span><span class='cmtt-10'> A</span><span id='textcolor1890'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>flatten()]) </span><span id='textcolor1891'><span class='cmitt-10'># 2d to 1d to str</span></span> 
+<a id='x29-157364r42'></a><span class='cmr-6'>42</span><span class='cmtt-10'>h </span><span id='textcolor1892'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> hashlib</span><span id='textcolor1893'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>md5(s</span><span id='textcolor1894'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>encode()) </span><span id='textcolor1895'><span class='cmitt-10'># create hash - arquivo único</span></span> 
+<a id='x29-157366r43'></a><span class='cmr-6'>43</span><span class='cmtt-10'>pathGrafico </span><span id='textcolor1896'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> </span><span id='textcolor1897'><span class='cmtt-10'>'figRosa('</span></span><span class='cmtt-10'> </span><span id='textcolor1898'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> direcao </span><span id='textcolor1899'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> </span><span id='textcolor1900'><span class='cmtt-10'>')('</span></span><span class='cmtt-10'> </span><span id='textcolor1901'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> maiormenor </span><span id='textcolor1902'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> </span><span id='textcolor1903'><span class='cmtt-10'>')('</span></span><span class='cmtt-10'> </span><span id='textcolor1904'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> </span><span id='textcolor1905'><span class='cmtt-10'>str</span></span><span class='cmtt-10'>(h</span><span id='textcolor1906'><span class='cmtt-10'>.</span></span><span class='cmtt-10'>hexdigest()) </span><span id='textcolor1907'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> </span><span id='textcolor1908'><span class='cmtt-10'>')'</span></span> 
+<a id='x29-157368r44'></a><span class='cmr-6'>44</span><span class='cmtt-10'>pathGraficoA, pathGraficoB </span><span id='textcolor1909'><span class='cmtt-10'>=</span></span><span class='cmtt-10'> pathGrafico </span><span id='textcolor1910'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> </span><span id='textcolor1911'><span class='cmtt-10'>'a.png'</span></span><span class='cmtt-10'>, pathGrafico </span><span id='textcolor1912'><span class='cmtt-10'>+</span></span><span class='cmtt-10'> </span><span id='textcolor1913'><span class='cmtt-10'>'b.png'</span></span> 
+<a id='x29-157370r45'></a><span class='cmr-6'>45</span> 
+<a id='x29-157372r46'></a><span class='cmr-6'>46</span><span class='cmtt-10'>drawMatrix(A, pathGraficoA)</span> 
+<a id='x29-157374r47'></a><span class='cmr-6'>47</span><span class='cmtt-10'>drawMatrix(B, pathGraficoB)</span> 
+<a id='x29-157376r48'></a><span class='cmr-6'>48</span><span class='cmtt-10'>]]</span></pre>
+ 
+</div> 
+</div>
+<a id='x29-157377r7'></a>
+<a id='x29-157378'></a>
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-parametrica-com-matriz-criada-pelos-codigos-lstquestaomatrizrosaparte-e-lstquestaomatrizrosaparte-'><img alt='PIC' height='461' src='./figs-br//cap12_questaoMatrizRosaPDF.png' width='460' /> <a id='x29-157379r7'></a>
+<a id='x29-157380'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.7: </span><span class='content'>Recorte do PDF gerado para a questão paramétrica com matriz criada pelos Códigos
+<a href='#x29-157231r6'>12.6<!-- tex4ht:ref: lst:questaoMatrizRosaParte1  --></a> e <a href='#x29-157377r7'>12.7<!-- tex4ht:ref: lst:questaoMatrizRosaParte2  --></a>.
+</span></figcaption><!-- tex4ht:label?: x29-157379r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <h5 class='likesubsubsectionHead' id='resultados1'><a id='x29-1580001'></a>Resultados</h5>
+<p class='noindent'>O MCTest foi aplicado na disciplina de Processamento da Informação. Os resultados indicam que o
+método é eficaz na geração de exames com variações nos textos, mantendo o mesmo conteúdo e
+nível de dificuldade. Além disso, os estudantes consideraram as questões claras e relevantes para o
+conteúdo da disciplina.
+</p> 
+<p class='indent'>       Foram apresentados três exemplos de questões paramétricas, mas a quantidade de tipos e
+variações está diretamente relacionada à criatividade do professor que as prepara.
+<a id='x29-158001r279'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='artigo-descrevendo-o-mctest-em-conjunto-com-google-forms-e-google-sheets'><span class='titlemark'>12.2.2   </span> <a id='x29-1590002'></a>Artigo descrevendo o MCTest em conjunto com <span class='cmti-12'>Google Forms </span>e <span class='cmti-12'>Google Sheets</span></h4>
+<p class='noindent'>O artigo de Zampirolli, Batista, Iriarte e Junior (2020) aborda a adaptação do MCTest para solucionar o
+problema de avaliação a distância durante a pandemia. A solução permite criar questões
+paramétricas com Python e LaTeX. A correção automática é feita com o <span class='cmti-12'>Google Forms </span>e <span class='cmti-12'>Google
+</span><span class='cmti-12'>Sheets</span>, constituindo uma contribuição original. A solução adaptada foi aplicada com sucesso em uma
+turma de Cálculo 1 com 100 estudantes.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='metodo5'><a id='x29-1600002'></a>Método</h5>
+<p class='noindent'>O MCTest permite a geração eficiente de QTs ou de QMs que podem ser modificadas parametricamente,
+produzindo muitas variações dessas questões. Isso é realizado por meio de várias bibliotecas da
+linguagem de programação Python, com as quais o MCTest calcula respostas automaticamente. O
+MCTest tem a vantagem de permitir questões paramétricas criadas com LaTeX e Python, com exemplos
+de uso apresentados no artigo e reproduzidos nesta seção.
+</p> 
+<p class='indent'>       O artigo descreve um desafio enfrentado na adaptação do MCTest para avaliações <span class='cmti-12'>online</span>
+durante a pandemia, já que o sistema originalmente gerava exames em papel para serem aplicados em sala
+de aula. Para solucionar esse desafio, os autores propõem uma solução adaptada do MCTest que gera
+exames e os envia por e-mail aos estudantes em formato PDF, com submissões realizadas em uma planilha
+do <span class='cmti-12'>Google Forms </span>preenchida pelos estudantes e compilada ao professor em uma planilha do <span class='cmti-12'>Google
+</span><span class='cmti-12'>Sheets</span>.
+</p> 
+<p class='indent'>       A planilha do <span class='cmti-12'>Google Sheets </span>é adaptada para a correção automática, conforme apresentado na
+Figura <a href='#x29-160001r8'>12.8<!-- tex4ht:ref: fig:cap12_examesSheets_planilha  --></a>. Esta planilha também está disponível em <a href='https://github.com/fzampirolli/mctest'>github.com/fzampirolli/mctest</a>, no arquivo
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>static/MCTest_Forms.ods</span></span></span>. A nota do estudante é calculada com base nas respostas enviadas, na chave
+de respostas armazenada na aba <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>templateAV1</span></span></span> e nas variações sorteadas para cada estudante na aba
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>variationsAV1</span></span></span>. A identificação, nome e e-mail de cada estudante são armazenados na aba
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>listStudents</span></span></span>. Todas essas abas são preenchidas com cópias dos arquivos enviados pelo MCTest,
+exemplificados a seguir. A pontuação é calculada para cada questão, incluindo uma QT com resposta
+exata, nas colunas H e I (Q4 e Q5, respectivamente). Os autores explicam em detalhes como a correção
+automática é realizada nas planilhas do <span class='cmti-12'>Google Sheets</span>, incluindo a correção manual pelo
+                                                                                                  
+                                                                                                  
+professor para avaliar a demonstração da resposta exata apresentada pelo estudante para essa
+QT.
+</p> 
+<p class='indent'>       Os autores estenderam o código do MCTest para permitir a correção automática de QTs,
+incluindo a possibilidade do professor receber dois arquivos CSV: um com as chaves de respostas para cada
+questão e outro com o número da variação enviada para cada estudante. Além disso, o código foi
+adaptado para permitir a criação de QTs com respostas paramétricas exatas, inseridas em um arquivo
+CSV e posteriormente na planilha do <span class='cmti-12'>Google Sheets</span>. Os autores apresentam exemplos de QMs e QTs, como
+a apresentada na Seção <a href='#equacoes-parametricas-com-equacao-e-figura-utilizando-a-biblioteca-sympy'>12.2.1<!-- tex4ht:ref: sec:equacao_sympy_figura  --></a> – <a href='#equacoes-parametricas-com-equacao-e-figura-utilizando-a-biblioteca-sympy'>Equações paramétricas com equação e figura utilizando a
+biblioteca <span class='cmtt-12'>sympy</span><!-- tex4ht:ref: sec:equacao_sympy_figura  --></a>, e explicam em detalhes como o MCTest lida com questões paramétricas
+e a correção automática de QTs. Um exemplo de QT exata foi apresentado no Código
+<a href='livroch8.xhtml#x24-104022r1'>8.1<!-- tex4ht:ref: lst:questaoQT_exata  --></a>.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-planilha-mostrando-o-questionario-preenchido-de-um-estudante-adaptado-de-zampirollibatistaea-'><img alt='PIC' height='461' src='./figs-br//cap12_examesSheets_planilha.png' width='460' /> <a id='x29-160001r8'></a>
+<a id='x29-160002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.8:  </span><span class='content'>Planilha  mostrando  o  questionário  preenchido  de  um  estudante.  Adaptado  de
+Zampirolli, Batista, Iriarte e Junior (2020).                                                       </span></figcaption><!-- tex4ht:label?: x29-160001r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <div class='tcolorbox myboxCode' id='tcolobox-114'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo  CSV  copiado  na  aba  </span><span class='cmtt-10x-x-109'>templateAV1</span><span class='cmbx-10x-x-109'>,  com  os  gabaritos.  Ver  explicações  na
+</span><span class='cmbx-10x-x-109'>Seção </span><a href='livroch8.xhtml#detalhando-os-gabaritos-no-arquivo-csv'><span class='cmbx-10x-x-109'>8.3</span><!-- tex4ht:ref: sec:QMgabarito  --></a> <span class='cmbx-10x-x-109'>– </span><a href='livroch8.xhtml#detalhando-os-gabaritos-no-arquivo-csv'><span class='cmbx-10x-x-109'>Detalhando os gabaritos no arquivo CSV</span><!-- tex4ht:ref: sec:QMgabarito  --></a> <span class='cmbx-10x-x-109'>(as colunas são separadas por
+</span><span class='cmbx-10x-x-109'>vírgula)</span>______________________________________________________________________________________________________
+</p> 
+<pre class='verbatim' id='verbatim-35'>
+variation Q1 Q2 Q3 Q4    Q5
+1         C  E  D  3.47
+2         B  D  B  3.99
+3         A  B  C  4.07
+4         D  E  C  4.11
+5         E  B  A  4.29
+6         E  A  C  3.94
+7         B  B  D  3.56
+8         B  B  D  4.16
+9         B  E  B  3.73
+10        C  D  B  4.63
+</pre>
+<p class='noindent'> </p> 
+ 
+</div> 
+</div>
+       <div class='tcolorbox myboxCode' id='tcolobox-115'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo CSV copiado na aba </span><span class='cmtt-10x-x-109'>variationsAV1</span><span class='cmbx-10x-x-109'>, com os estudantes. Ver explicações na
+</span><span class='cmbx-10x-x-109'>Seção </span><a href='livroch8.xhtml#criando-o-pdf-do-exame-com-qrqmqt'><span class='cmbx-10x-x-109'>8.4</span><!-- tex4ht:ref: sec:exameQM_QT_criarPDF  --></a> <span class='cmbx-10x-x-109'>– </span><a href='livroch8.xhtml#criando-o-pdf-do-exame-com-qrqmqt'><span class='cmbx-10x-x-109'>Criando o PDF do exame com QR+QM+QT</span><!-- tex4ht:ref: sec:exameQM_QT_criarPDF  --></a>____________________________________
+</p> 
+<pre class='verbatim' id='verbatim-36'>
+Room    ID  Name         Variation
+Room1 1111  Student One         10
+Room1 2222  Student Two          8
+</pre>
+<p class='noindent'> </p> 
+ 
+</div> 
+</div>
+       <div class='tcolorbox myboxCode' id='tcolobox-116'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo CSV copiado na aba </span><span class='cmtt-10x-x-109'>listStudents</span><span class='cmbx-10x-x-109'>, com as variações. Ver explicações na
+</span><span class='cmbx-10x-x-109'>Seção </span><a href='livroch3.xhtml#criar-turma-com-arquivo-csv'><span class='cmbx-10x-x-109'>3.3.1</span><!-- tex4ht:ref: sec:professorCriarTurma  --></a> <span class='cmbx-10x-x-109'>– </span><a href='livroch3.xhtml#criar-turma-com-arquivo-csv'><span class='cmbx-10x-x-109'>Criar turma com arquivo CSV</span><!-- tex4ht:ref: sec:professorCriarTurma  --></a>_____________________________________________________
+</p> 
+<pre class='verbatim' id='verbatim-37'>
+1111  Student One  student1@email.com
+2222  Student Two  student2@email.com
+</pre>
+<p class='noindent'> </p> 
+ 
+</div> 
+</div>
+                                                                                                  
+                                                                                                  
+       <h5 class='likesubsubsectionHead' id='experimentos6'><a id='x29-1610002'></a>Experimentos</h5>
+<p class='noindent'>Os autores aplicaram o MCTest em uma turma da disciplina de Cálculo 1 na Universidade Federal do
+ABC, composta por 100 estudantes. A disciplina é parte do Bacharelado em Ciência e Tecnologia e
+possui alta taxa de reprovação. Durante sete semanas, os estudantes assistiram às aulas <span class='cmti-12'>online </span>e fizeram
+dois testes formativos, cada um contendo cinco questões paramétricas, duas QTs e três QMs. Os testes
+foram dados no mesmo formato do modelo apresentado na Figura <a href='#x29-161001r9'>12.9<!-- tex4ht:ref: fig:cap12_examesPDF_MCTestS  --></a>, com questões e alternativas
+sorteadas. O Teste 1 foi aplicado <span class='cmti-12'>online </span>e os estudantes tiveram 24 horas para responder. O Teste 2, assim
+como o Exame 1, foram mais complexos e contaram para a nota final. Os estudantes tiveram dificuldades
+nas QTs, mas obtiveram bom desempenho nas QMs. A taxa de erros foi baixa nos testes e
+exames, e os estudantes não relataram problemas técnicos na submissão das respostas.
+Os autores suspeitam que a facilidade de acesso a recursos <span class='cmti-12'>online </span>possa ter influenciado no
+desempenho dos estudantes nas QTs. Para manter os estudantes engajados, o professor aplicou um
+terceiro exame contendo apenas QTs com submissão de imagens digitalizadas das respostas
+manuscritas.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-exemplo-de-exame-utilizado-em-calculo-adaptado-de-zampirollibatistaea-'><img alt='PIC' height='461' src='./figs-br//cap12_examesPDF_MCTestS.png' width='460' /> <a id='x29-161001r9'></a>
+<a id='x29-161002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.9: </span><span class='content'>Exemplo de exame utilizado em Cálculo 1. Adaptado de Zampirolli, Batista, Iriarte e
+Junior (2020).                                                                                    </span></figcaption><!-- tex4ht:label?: x29-161001r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Os autores abordam a questão do plágio em contextos <span class='cmti-12'>online </span>e propõem medidas preventivas,
+incluindo a administração de exames individualizados, a imposição de restrições temporais e a
+supervisão por meio de <span class='cmti-12'>webcams</span>. Contudo, eles reconhecem que em circunstâncias extraordinárias, como
+a pandemia, torna-se necessário empregar ferramentas que viabilizem as atividades de aprendizado, como
+mencionado no artigo.
+</p> 
+<p class='indent'>       Os resultados dos experimentos mostraram ser importante elaborar questões <span class='cmti-12'>online </span>com enunciados
+melhor elaborados para os estudantes poderem raciocinar para achar as soluções e não achar
+respostas prontas na internet. Os autores destacam que o MCTest pode ser uma ferramenta
+valiosa para manter os estudantes engajados em atividades com QMs e sugerem a aplicação de
+vários exames desse tipo, com correção automática, para estimular a participação dos
+estudantes.
+<a id='x29-161003r292'></a>
+       </p> 
+
+       <h4 class='subsectionHead' id='artigo-descrevendo-a-adocao-de-qms-com-pesos-diferentes-nas-alterna-skip-skip-tivas'><span class='titlemark'>12.2.3   </span> <a id='x29-1620003'></a>Artigo descrevendo a adoção de QMs com  pesos diferentes  nas  alternativas</h4>
+<p class='noindent'>O artigo de Zampirolli, Batista, Rodriguez, Rocha e Goya (2021) apresenta uma adaptação do sistema
+MCTest que permite a avaliação automatizada de QMs com respostas ponderadas.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='metodo6'><a id='x29-1630003'></a>Método</h5>
+<p class='noindent'>O sistema MCTest original produz um arquivo CSV que inclui as respostas para cada QM, com as
+pontuações atribuídas a cada alternativa. A adaptação proposta neste artigo introduz uma coluna
+adicional no arquivo de respostas para cada questão, indicando o peso de cada alternativa. O sistema de
+avaliação automática calcula a nota do estudante ponderando a pontuação de cada alternativa de
+acordo com seu respectivo peso.
+</p> 
+<p class='indent'>       O processo de criação de questões e exames é o mesmo apresentado nos capítulos anteriores.
+A diferença está na forma de calcular a nota do estudante. Esta seção detalhará esse
+processo.
+</p> 
+<p class='indent'>       A planilha utilizada no artigo disponível no GitHub, em <a href='https://github.com/fzampirolli/mctest'>github.com/fzampirolli/mctest</a>, no arquivo
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>static/GRADE.ods</span></span></span>. Essa planilha possui duas abas principais. A primeira é a aba BD, contendo as
+correções geradas pelo MCTest ao submeter os exames digitalizados, conforme visualizado na
+Figura <a href='#x29-163001r10'>12.10<!-- tex4ht:ref: fig:cap12_examesMCTest_pesos_BD  --></a>. A segunda aba é para o cálculo da nota final, como apresentado na Figura
+<a href='#x29-163003r11'>12.11<!-- tex4ht:ref: fig:cap12_examesMCTest_pesos_Final  --></a>.
+       </p> 
+<figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-visualizacao-do-arquivo-csv-com-as-correcoes-adaptado-de-zampirollibatistaea-'><img alt='PIC' height='512' src='./figs-br//cap12_examesMCTest_pesos_BD.png' width='512' /> <a id='x29-163001r10'></a>
+<a id='x29-163002'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.10: </span><span class='content'>Visualização do arquivo CSV com as correções. Adaptado de Zampirolli, Batista,
+Rodriguez, Rocha e Goya (2021).                                                                 </span></figcaption><!-- tex4ht:label?: x29-163001r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+       <figure class='figure'> 
+
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent' id='-calculo-final-do-exame-adaptado-de-zampirollibatistaea-'><img alt='PIC' height='512' src='./figs-br//cap12_examesMCTest_pesos_Final.png' width='512' /> <a id='x29-163003r11'></a>
+<a id='x29-163004'></a>
+</p> 
+<figcaption class='caption'><span class='id'>Figura 12.11: </span><span class='content'>Cálculo final do exame. Adaptado de Zampirolli, Batista, Rodriguez, Rocha e Goya
+(2021).                                                                                           </span></figcaption><!-- tex4ht:label?: x29-163003r12  -->
+                                                                                                  
+                                                                                                  
+       </figure>
+<p class='indent'>       Na Figura <a href='#x29-163001r10'>12.10<!-- tex4ht:ref: fig:cap12_examesMCTest_pesos_BD  --></a>, as colunas Q a Z na planilha mostram o ID da questão no BD e a ordem das
+alternativas sorteadas para os estudantes. A célula Q2, por exemplo, possui o valor 11261203, onde 1126
+é o ID da questão e 1203 indica a ordem das alternativas sorteadas (A=1, B=2, C=0, D=3). Com
+fórmulas simples, é possível calcular a nota final atribuindo pesos às alternativas. Na Figura <a href='#x29-163003r11'>12.11<!-- tex4ht:ref: fig:cap12_examesMCTest_pesos_Final  --></a>, o
+peso da alternativa correta é 1, as parcialmente corretas têm peso 0,2 cada e a alternativa absurda tem
+peso 0. O campo amarelo na Figura <a href='#x29-163003r11'>12.11<!-- tex4ht:ref: fig:cap12_examesMCTest_pesos_Final  --></a> exibe a pontuação de cada questão, onde cada linha
+corresponde ao QR de um estudante. A nota total do estudante para o exame é calculada somando as
+notas de cada questão.
+</p> 
+<p class='indent'>       O sistema MCTest pode ser usado para avaliar exames realizados em formato físico ou <span class='cmti-12'>online</span>. No
+caso de exames realizados em formato físico, os estudantes respondem às questões em um QR impresso,
+como apresentado na Figura <a href='#x29-161001r9'>12.9<!-- tex4ht:ref: fig:cap12_examesPDF_MCTestS  --></a>. O QR impresso é então digitalizado e o sistema MCTest é usado para
+corrigir as respostas. No caso de exames realizados em formato <span class='cmti-12'>online</span>, os estudantes respondem às
+questões em um navegador da web, como descrito na Seção <a href='#artigo-descrevendo-o-mctest-em-conjunto-com-google-forms-e-google-sheets'>12.2.2<!-- tex4ht:ref: sec:experMCTestForms  --></a> – <a href='#artigo-descrevendo-o-mctest-em-conjunto-com-google-forms-e-google-sheets'>Artigo descrevendo o MCTest em
+conjunto com <span class='cmti-12'>Google Forms </span>e <span class='cmti-12'>Google Sheets</span><!-- tex4ht:ref: sec:experMCTestForms  --></a>.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='experimentos7'><a id='x29-1640003'></a>Experimentos</h5>
+<p class='noindent'>O método deste artigo foi aplicado a exames realizados em formato físico ou <span class='cmti-12'>online </span>e validado com um
+total de 607 estudantes de três diferentes disciplinas: Redes e Comunicações, Natureza da Informação
+e Compiladores. Os resultados mostraram que o sistema de correção automática é preciso e confiável.
+O sistema foi bem avaliado pelos estudantes, que o consideraram uma ferramenta útil para a avaliação
+de seus conhecimentos.
+       </p> 
+
+       <h4 class='likesubsectionHead' id='artigo-comparando-diferentes-processos-seletivos-na-epufabc'><a id='x29-1650003'></a>Artigo comparando diferentes processos seletivos na EPUFABC</h4>
+<p class='noindent'>O artigo de Zampirolli, Batista, Josko, Steil e Trevisan (2021) analisa o processo de seleção para a Escola
+Preparatória da UFABC (EPUFABC) aplicado a milhares de candidatos de escolas públicas da região. A
+EPUFABC oferece um curso gratuito voltado exclusivamente para estudantes de baixa renda que se
+inscreverão em exames de entrada na universidade. O processo de seleção emprega a Teoria Clássica ao
+Item (TCI), mas há dúvidas sobre a imparcialidade dos critérios de desempate. Por isso, os autores
+contrastam a abordagem atual do processo com a Teoria da Resposta ao Item (TRI) (BIRNBAUM, 1968).
+Os resultados mostram que o método TRI pode melhorar substancialmente o processo de seleção do
+EPUFABC.
+</p> 
+<p class='indent'>       O artigo menciona que o exame de entrada da Universidade de São Paulo (USP) é um exemplo de
+seleção desafiadora, com inúmeros candidatos para poucas vagas. Para exames com alta taxa de
+inscrição, lidar com a nota de corte, na qual muitos candidatos provavelmente terão pontuação igual,
+é um desafio.
+</p> 
+<p class='indent'>       Para resolver esse problema, o Exame Nacional do Ensino Médio (ENEM) no Brasil passou a
+utilizar a Teoria da Resposta ao Item (TRI) desde 2009. A TRI também é empregada em outros países,
+                                                                                                  
+                                                                                                  
+como nos Estados Unidos, em exames como o TOEFL.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='metodo7'><a id='x29-1660003'></a>Método</h5>
+<p class='noindent'>Os autores foram inspirados pela metodologia do ENEM e avaliaram o processo de seleção utilizado
+pela EPUFABC, que atende a milhares de candidatos desde 2010. O exame de admissão da
+EPUFABC é composto por 10 QMs para cada área de conhecimento, além de um exame de
+Gramática Portuguesa, que substitui a redação exigida pelo ENEM. As áreas avaliadas são:
+Ciências Humanas, Ciências da Natureza, Línguas e Códigos (Inglês-Espanhol-Português) e
+Matemática.
+</p> 
+<p class='indent'>       A avaliação comparou o Processo de Seleção do EPUFABC aplicado de 2019 a 2021 com o
+ENEM, que adota o modelo logístico de três parâmetros da TRI. Foram desenvolvidos três <span class='cmti-12'>scripts </span>em
+Python e R no <span class='cmti-12'>Google Colab </span>para realizar as análises. Cada <span class='cmti-12'>script </span>passa por três etapas:
+pré-processamento, geração da matriz de respostas (em Python) e análise estatística (em R). Todos
+os dados utilizados no artigo podem ser baixados em <a href='http://vision.ufabc.edu.br/MCTest/public/IRT2021'>vision.ufabc.edu.br/MCTest/public/IRT2021</a>,
+que inclui todos os arquivos CSV utilizados pelos Notebooks, mas sem a identificação dos
+candidatos.
+</p> 
+<p class='indent'>       Para comparações, foram utilizados também os microdados do ENEM de 2019 disponibilizados
+pelo Ministério da Educação. Os dados do ENEM requerem um pré-processamento complexo devido
+ao seu tamanho, envolvendo segmentação, extração de colunas relevantes e geração de matrizes de
+respostas.
+       </p> 
+
+       <h5 class='likesubsubsectionHead' id='experimentos8'><a id='x29-1670003'></a>Experimentos</h5>
+<p class='noindent'>Este estudo baseia-se em três conjuntos de dados: (1) MCTest (2019 e 2020), (2) Moodle (2021) e (3)
+ENEM (2019). Tanto a Teoria Clássica ao Item (TCI) quanto a Teoria da Resposta ao Item (TRI) foram
+utilizadas para analisar e comparar os resultados.
+</p> 
+<p class='indent'>       Os exames TCI de 2019 e 2020 foram realizados presencialmente em um sábado, com 50 QMs nas
+cinco áreas de conhecimento referidas anteriormente. Os exames foram corrigidos automaticamente
+pelo sistema MCTest, conforme explicado no Capítulo <a href='livroch7.xhtml#exames-com-quadro-de-respostas-qr'>7<!-- tex4ht:ref: ch:examesQR  --></a> – <a href='livroch7.xhtml#exames-com-quadro-de-respostas-qr'>Exames com Quadro de Respostas
+(QR)<!-- tex4ht:ref: ch:examesQR  --></a>. Em 2021, devido à pandemia de COVID-19, o processo de seleção foi adaptado para
+exames <span class='cmti-12'>online</span>, realizados ao longo de cinco dias. Os candidatos acessaram material de ensino
+(videoaulas) e QMs na plataforma Moodle e tiveram 24 horas para responder. A pontuação final
+considerou o número de respostas corretas, presença nos cinco dias de exame e idade do
+candidato.
+</p> 
+<p class='indent'>       Em 2019, houve 2.033 candidatos no TCI, enquanto em 2020 houve 2.043 candidatos. Em ambos os
+anos, 633 candidatos foram selecionados para a EPUFABC, sendo metade para aulas no período da tarde
+e a outra metade no período da noite.
+</p> 
+<p class='indent'>       No exame de 2021, os candidatos realizaram o exame <span class='cmti-12'>online </span>na plataforma Moodle,
+totalizando 2.768 participantes. A EPUFABC ofereceu 380 vagas para o ano de 2021, sendo
+190 vagas para cada período, e as aulas foram disponibilizadas remotamente na plataforma
+                                                                                                  
+                                                                                                  
+Moodle.
+</p> 
+<p class='indent'>       Foram calculadas médias e desvios padrão para os exames de todas as áreas de conhecimento dos
+processos TCI2019, TCI2020 e ENEM2019. As análises também incluíram Curvas Características do
+Item (CCI) da TRI. A comparação entre TCI e TRI mostrou que o método TRI pode ser útil como
+critério de desempate em processos de seleção, já que considera a habilidade do candidato em
+responder corretamente às questões.
+</p> 
+<p class='indent'>       O estudo também destacou a melhora significativa nas notas dos candidatos no TCI2021, que foi
+realizado <span class='cmti-12'>online </span>com mais tempo disponível para responder às questões, em comparação com os
+processos presenciais anteriores. As análises mostraram que as habilidades dos candidatos em TCI2021,
+representadas pelas curvas CCI, estavam mais concentradas no lado direito da escala, indicando que
+candidatos com habilidades menores conseguiram acertar mais questões devido ao tempo extra para
+responder cada exame.
+</p> 
+<p class='indent'>       Após a continuidade deste trabalho, outro artigo de Zampirolli, Junior, Steil e Jr. (2021) foi
+publicado, descrevendo o desenvolvimento de um sistema interativo chamado ENEM interativo e
+disponível em <a href='http://mctest.ufabc.edu.br:8000/ENEM'>mctest.ufabc.edu.br:8000/ENEM</a>. Esse sistema permite que os estudantes utilizem exames
+antigos do ENEM e os microdados disponibilizados pelo INEP para estudo. No ENEM Interativo, os
+exames em formato PDF são convertidos para HTML e, automaticamente, botões de resposta são
+incorporados para cada questão. Ao finalizar cada exame, o botão de estatísticas abre uma nova
+página que apresenta informações como o gabarito, as respostas dos estudantes, as habilidades (valores
+fornecidos pelo INEP) e gráficos. O sistema proporciona uma plataforma mais interativa e acessível
+para os estudantes explorarem exames anteriores do ENEM e analisarem seu desempenho em
+detalhes, incluindo informações estatísticas relevantes para a compreensão de seu progresso e
+habilidades.
+<a id='x29-167001r278'></a>
+       </p> 
+
+       <h3 class='sectionHead' id='consideracoes-finais10'><span class='titlemark'>12.3   </span> <a id='x29-1680003'></a>Considerações finais</h3>
+<p class='noindent'>Neste capítulo, foram discutidas as versões 4 e 5 do MCTest, assim como os artigos que as
+acompanharam. Ao longo do tempo, o MCTest passou por uma significativa evolução, saindo de suas
+primeiras versões focadas em exames impressos e se tornando uma versão web atual, integrada
+também ao Moodle. Essa transformação trouxe diversos benefícios e avanços para o
+sistema.
+</p> 
+<p class='indent'>       Os experimentos e casos de uso apresentados nos artigos destacaram a aplicabilidade bem-sucedida
+do MCTest em diversas situações reais de ensino. Isso reforça a eficiência e versatilidade do sistema em
+diferentes contextos, abrangendo exames presenciais, <span class='cmti-12'>online</span>, individualizados e integração com
+plataformas como o <span class='cmti-12'>Google Forms</span>. Esse recurso mostrou-se especialmente relevante durante a pandemia
+de COVID-19, permitindo a continuidade da avaliação educacional mesmo em cenários
+remotos.
+</p> 
+<p class='indent'>       O MCTest-4 é um software desenvolvido para a correção de exames com QMs. Ele automatiza o
+processo de correção, gerando resultados precisos e poupando tempo dos educadores. Já o
+MCTest-4.G foi criado para a geração de exames com QMs, permitindo a criação de exames
+                                                                                                  
+                                                                                                  
+distintos e aleatórios para cada estudante, proporcionando maior segurança na aplicação dos
+exames.
+</p> 
+<p class='indent'>       A versão mais recente, o MCTest-5, é considerada um software web altamente funcional. Além de
+possuir as funcionalidades do MCTest-4, o MCTest-5 permite a criação, correção e compartilhamento
+de questões, apresentando recursos avançados e integração com outras plataformas educacionais, como
+o Moodle. No próximo capítulo, serão destacadas especialmente as especificidades das questões que
+envolvem EPs integrados ao <span class='cmti-12'>plugin </span>VPL do Moodle.
+</p> 
+<p class='indent'>       Por fim, é relevante ressaltar que a maioria das publicações efetuadas nesta versão
+web do MCTest foram subsidiadas pelo projeto FAPESP, sob o processo <a href='https://bv.fapesp.br/pt/auxilios/105047/um-sistema-universal-para-geracao-e-correcao-automatica-de-questoes-parametrizadas'>2018/23561-1</a>, cujo
+título é “Um sistema universal para a geração e correção automática de questões
+parametrizadas”.
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+       </p> 
+<!-- l. 1 --><div class='crosslinks'><p class='noindent'></p></div>
+        
+</body> 
+</html>

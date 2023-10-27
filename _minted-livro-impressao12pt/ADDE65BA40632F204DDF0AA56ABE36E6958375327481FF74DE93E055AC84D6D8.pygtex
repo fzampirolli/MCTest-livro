@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Qual} \PYG{n}{é} \PYG{n}{a} \PYG{n}{área} \PYG{n}{do} \PYG{n}{círculo} \PYG{n}{de} \PYG{n}{raio} \PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{raio1}\PYG{p}{]]}\PYG{err}{?}
+
+\PYG{p}{[[}\PYG{n}{def}\PYG{p}{:}
+\PYG{k+kn}{import} \PYG{n+nn}{random}
+
+\PYG{k}{def} \PYG{n+nf}{area\PYGZus{}circulo}\PYG{p}{(}\PYG{n}{raio}\PYG{p}{):}
+    \PYG{k+kn}{import} \PYG{n+nn}{math} \PYG{c+c1}{\PYGZsh{} necessário importar biblioteca(s) no método}
+    \PYG{k}{return} \PYG{n}{math}\PYG{o}{.}\PYG{n}{pi} \PYG{o}{*} \PYG{n}{raio} \PYG{o}{**} \PYG{l+m+mi}{2}
+
+\PYG{n}{raio1} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{51}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} sorteia valor entre 10 e 50}
+
+\PYG{k}{global} \PYG{n}{correctAnswer} \PYG{c+c1}{\PYGZsh{} variável necessária para usar o método}
+\PYG{c+c1}{\PYGZsh{} createWrongAnswers, a resposta deve ter valor inteiro}
+\PYG{n}{correctAnswer} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{area\PYGZus{}circulo}\PYG{p}{(}\PYG{n}{raio1}\PYG{p}{))}
+
+\PYG{c+c1}{\PYGZsh{} incluir nas alternativas da questão:}
+\PYG{c+c1}{\PYGZsh{} [[code:correctAnswer]] \PYGZpc{} primeira alternativa (sempre) correta}
+\PYG{c+c1}{\PYGZsh{} [[code:createWrongAnswers([3,10])]] \PYGZpc{} cria 3 alter. erradas +/\PYGZhy{} 10}
+\PYG{p}{]]}
+\end{Verbatim}

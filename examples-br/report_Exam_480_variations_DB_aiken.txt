@@ -1,0 +1,360 @@
+############# variation ########## 0
+
+#c:1 #id:2465 #topic:Topico Exemplo #type:QM #diff:1
+
+Uma pessoa tem x anos e seu irmão tem y anos. Se a diferença entre suas idades é de 2 anos, e a soma das idades é 28, determine as idades da pessoa e do irmão, respectivamente. 
+
+
+A) 15 e 13
+
+B) 20 e  1
+
+C) 11 e  2
+
+D) 18 e  1
+
+ANSWER: A
+
+#c:2 #id:2449 #topic:Topico Exemplo #type:QM #diff:1
+
+Qual é a área do círculo de raio \( 25 \)?
+
+% comentário em LaTex. Observe que a variável raio1, após "code:" 
+% foi definida na linha 18 abaixo
+
+
+A) 2827.43
+
+B) 3019.07
+
+C) 1809.56
+
+D) 1963.50
+
+ANSWER: D
+
+#c:3 #id:2464 #topic:Topico Exemplo #type:QM #diff:1
+
+Qual é a equação da reta que passa pelos pontos (2, 7) e (8, 6)?
+
+
+A) y = 1.00x + -2.00
+
+B) y = -0.17x + 7.33
+
+C) y = 2.00x + 1.00
+
+D) y = 1.00x + 4.00
+
+ANSWER: B
+
+#c:4 #id:2466 #topic:Topico Exemplo #type:QT #diff:1
+
+Dado um vetor de inteiros de tamanho \( n = 27\), ordenar o tre$$ $$cho do 
+vetor que começa no índice \( inicio = 10 \) e termina no índice 
+\( fim = 16\). Onde, \( 0<início<fim<n \)n, ou seja, o tre$$ $$cho a ser
+ordenado está nos limites do vetor. Vale ressaltar que os índices do 
+vetor começam em 0 e terminam em \( n-1\). \\
+
+\noindent\textbf{Considere esta entrada:}
+\begin{verbatim}
+9 7 8 6 5 5 6 7 0 2 8 2 9 6 0 8 6 1 3 1 4 7 4 7 8 8 3
+
+\end{verbatim}
+
+% Saída exata
+%%{9 7 8 6 5 5 6 7 0 2 0 2 6 6 8 8 9 1 3 1 4 7 4 7 8 8 3
+}%%
+
+
+ANSWER: 9 7 8 6 5 5 6 7 0 2 0 2 6 6 8 8 9 1 3 1 4 7 4 7 8 8 3
+
+
+############# variation ########## 1
+
+#c:1 #id:2464 #topic:Topico Exemplo #type:QM #diff:1
+
+Qual é a equação da reta que passa pelos pontos (9, 8) e (2, 6)?
+
+
+A) y = -0.50x + 7.50
+
+B) y = -0.83x + 7.67
+
+C) y = -3.00x + 19.00
+
+D) y = 0.29x + 5.43
+
+ANSWER: D
+
+#c:2 #id:2465 #topic:Topico Exemplo #type:QM #diff:1
+
+Uma pessoa tem x anos e seu irmão tem y anos. Se a diferença entre suas idades é de 13 anos, e a soma das idades é 29, determine as idades da pessoa e do irmão, respectivamente. 
+
+
+A) 25 e  1
+
+B) 21 e  8
+
+C)  8 e  1
+
+D) 15 e  1
+
+ANSWER: B
+
+#c:3 #id:2449 #topic:Topico Exemplo #type:QM #diff:1
+
+Qual é a área do círculo de raio \( 31 \)?
+
+% comentário em LaTex. Observe que a variável raio1, após "code:" 
+% foi definida na linha 18 abaixo
+
+
+A) 2463.01
+
+B) 3019.07
+
+C) 7542.96
+
+D) 1661.90
+
+ANSWER: B
+
+#c:4 #id:2466 #topic:Topico Exemplo #type:QT #diff:1
+
+Dado um vetor de inteiros de tamanho \( n = 24\), ordenar o tre$$ $$cho do 
+vetor que começa no índice \( inicio = 7 \) e termina no índice 
+\( fim = 18\). Onde, \( 0<início<fim<n \)n, ou seja, o tre$$ $$cho a ser
+ordenado está nos limites do vetor. Vale ressaltar que os índices do 
+vetor começam em 0 e terminam em \( n-1\). \\
+
+\noindent\textbf{Considere esta entrada:}
+\begin{verbatim}
+4 9 9 1 2 8 0 5 0 6 5 5 0 5 6 8 1 8 1 2 5 6 2 6
+
+\end{verbatim}
+
+% Saída exata
+%%{4 9 9 1 2 8 0 0 0 1 1 5 5 5 5 6 6 8 8 2 5 6 2 6
+}%%
+
+
+ANSWER: 4 9 9 1 2 8 0 0 0 1 1 5 5 5 5 6 6 8 8 2 5 6 2 6
+
+
+############# variation ########## 2
+
+#c:1 #id:2464 #topic:Topico Exemplo #type:QM #diff:1
+
+Qual é a equação da reta que passa pelos pontos (6, 2) e (9, 8)?
+
+
+A) y = -0.50x + 4.50
+
+B) y = 2.00x + -13.00
+
+C) y = 2.00x + -10.00
+
+D) y = -2.00x + 21.00
+
+ANSWER: C
+
+#c:2 #id:2465 #topic:Topico Exemplo #type:QM #diff:1
+
+Uma pessoa tem x anos e seu irmão tem y anos. Se a diferença entre suas idades é de 8 anos, e a soma das idades é 24, determine as idades da pessoa e do irmão, respectivamente. 
+
+
+A) 16 e  8
+
+B)  3 e  1
+
+C)  8 e  6
+
+D) 15 e  7
+
+ANSWER: A
+
+#c:3 #id:2449 #topic:Topico Exemplo #type:QM #diff:1
+
+Qual é a área do círculo de raio \( 45 \)?
+
+% comentário em LaTex. Observe que a variável raio1, após "code:" 
+% foi definida na linha 18 abaixo
+
+
+A) 1809.56
+
+B) 6361.73
+
+C) 4536.46
+
+D) 2123.72
+
+ANSWER: B
+
+#c:4 #id:2466 #topic:Topico Exemplo #type:QT #diff:1
+
+Dado um vetor de inteiros de tamanho \( n = 36\), ordenar o tre$$ $$cho do 
+vetor que começa no índice \( inicio = 15 \) e termina no índice 
+\( fim = 29\). Onde, \( 0<início<fim<n \)n, ou seja, o tre$$ $$cho a ser
+ordenado está nos limites do vetor. Vale ressaltar que os índices do 
+vetor começam em 0 e terminam em \( n-1\). \\
+
+\noindent\textbf{Considere esta entrada:}
+\begin{verbatim}
+3 0 5 9 7 6 5 2 1 0 1 5 5 2 6 3 3 0 7 4 4 4 2 0 5 8 4 6 8 5 9 8 7 7 8 3
+
+\end{verbatim}
+
+% Saída exata
+%%{3 0 5 9 7 6 5 2 1 0 1 5 5 2 6 0 0 2 3 3 4 4 4 4 5 5 6 7 8 8 9 8 7 7 8 3
+}%%
+
+
+ANSWER: 3 0 5 9 7 6 5 2 1 0 1 5 5 2 6 0 0 2 3 3 4 4 4 4 5 5 6 7 8 8 9 8 7 7 8 3
+
+
+############# variation ########## 3
+
+#c:1 #id:2449 #topic:Topico Exemplo #type:QM #diff:1
+
+Qual é a área do círculo de raio \( 50 \)?
+
+% comentário em LaTex. Observe que a variável raio1, após "code:" 
+% foi definida na linha 18 abaixo
+
+
+A) 7853.98
+
+B) 1963.50
+
+C) 4300.84
+
+D) 3848.45
+
+ANSWER: A
+
+#c:2 #id:2464 #topic:Topico Exemplo #type:QM #diff:1
+
+Qual é a equação da reta que passa pelos pontos (2, 8) e (7, 6)?
+
+
+A) y = 1.00x + 1.00
+
+B) y = -2.00x + 17.00
+
+C) y = -5.00x + 41.00
+
+D) y = -0.40x + 8.80
+
+ANSWER: D
+
+#c:3 #id:2465 #topic:Topico Exemplo #type:QM #diff:1
+
+Uma pessoa tem x anos e seu irmão tem y anos. Se a diferença entre suas idades é de 17 anos, e a soma das idades é 27, determine as idades da pessoa e do irmão, respectivamente. 
+
+
+A) 11 e  3
+
+B)  6 e  3
+
+C) 22 e  5
+
+D) 15 e  4
+
+ANSWER: C
+
+#c:4 #id:2466 #topic:Topico Exemplo #type:QT #diff:1
+
+Dado um vetor de inteiros de tamanho \( n = 21\), ordenar o tre$$ $$cho do 
+vetor que começa no índice \( inicio = 3 \) e termina no índice 
+\( fim = 12\). Onde, \( 0<início<fim<n \)n, ou seja, o tre$$ $$cho a ser
+ordenado está nos limites do vetor. Vale ressaltar que os índices do 
+vetor começam em 0 e terminam em \( n-1\). \\
+
+\noindent\textbf{Considere esta entrada:}
+\begin{verbatim}
+8 2 2 9 1 5 3 5 9 9 7 6 3 3 7 3 0 6 7 8 5
+
+\end{verbatim}
+
+% Saída exata
+%%{8 2 2 1 3 3 5 5 6 7 9 9 9 3 7 3 0 6 7 8 5
+}%%
+
+
+ANSWER: 8 2 2 1 3 3 5 5 6 7 9 9 9 3 7 3 0 6 7 8 5
+
+
+############# variation ########## 4
+
+#c:1 #id:2465 #topic:Topico Exemplo #type:QM #diff:1
+
+Uma pessoa tem x anos e seu irmão tem y anos. Se a diferença entre suas idades é de 8 anos, e a soma das idades é 18, determine as idades da pessoa e do irmão, respectivamente. 
+
+
+A) 18 e  4
+
+B) 16 e  2
+
+C) 13 e  5
+
+D) 10 e  1
+
+ANSWER: C
+
+#c:2 #id:2449 #topic:Topico Exemplo #type:QM #diff:1
+
+Qual é a área do círculo de raio \( 22 \)?
+
+% comentário em LaTex. Observe que a variável raio1, após "code:" 
+% foi definida na linha 18 abaixo
+
+
+A) 2290.22
+
+B) 1661.90
+
+C) 4071.50
+
+D) 1520.53
+
+ANSWER: D
+
+#c:3 #id:2464 #topic:Topico Exemplo #type:QM #diff:1
+
+Qual é a equação da reta que passa pelos pontos (6, 5) e (3, 7)?
+
+
+A) y = -0.67x + 9.00
+
+B) y = -0.29x + 7.57
+
+C) y = 5.00x + -27.00
+
+D) y = -0.50x + 5.50
+
+ANSWER: A
+
+#c:4 #id:2466 #topic:Topico Exemplo #type:QT #diff:1
+
+Dado um vetor de inteiros de tamanho \( n = 38\), ordenar o tre$$ $$cho do 
+vetor que começa no índice \( inicio = 3 \) e termina no índice 
+\( fim = 30\). Onde, \( 0<início<fim<n \)n, ou seja, o tre$$ $$cho a ser
+ordenado está nos limites do vetor. Vale ressaltar que os índices do 
+vetor começam em 0 e terminam em \( n-1\). \\
+
+\noindent\textbf{Considere esta entrada:}
+\begin{verbatim}
+1 5 0 9 9 5 3 9 7 6 3 8 6 9 7 2 6 1 8 2 2 8 5 3 0 0 4 7 2 4 2 9 1 5 8 3 9 3
+
+\end{verbatim}
+
+% Saída exata
+%%{1 5 0 0 0 1 2 2 2 2 2 3 3 3 4 4 5 5 6 6 6 7 7 7 8 8 8 9 9 9 9 9 1 5 8 3 9 3
+}%%
+
+
+ANSWER: 1 5 0 0 0 1 2 2 2 2 2 3 3 3 4 4 5 5 6 6 6 7 7 7 8 8 8 9 9 9 9 9 1 5 8 3 9 3
+
+

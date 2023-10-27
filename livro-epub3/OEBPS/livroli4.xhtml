@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+<html lang='pt' xmlns:epub='http://www.idpf.org/2007/ops' xmlns='http://www.w3.org/1999/xhtml'> 
+<head><title>Prefacio</title> 
+<meta charset='UTF-8' /> 
+<meta content='TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)' name='generator' /> 
+<link href='livro.css' rel='stylesheet' type='text/css' /> 
+</head><body>
+       <!-- l. 1 --><div class='crosslinks'><p class='noindent'></p></div>
+       <h2 class='likechapterHead' id='prefacio'><a id='x5-4000'></a>Prefácio</h2>
+<p class='noindent'>A avaliação dos estudantes é uma atividade crucial para o trabalho de um professor, ao permitir avaliar
+de maneira precisa o desempenho dos estudantes ao longo do curso, fornecendo <span class='cmti-12'>feedback </span>importante para o
+seu desenvolvimento acadêmico. Além disso, a avaliação também é um meio importante para
+aprimorar a prática educativa, permitindo que os professores identifiquem pontos fortes e fracos de sua
+metodologia e aprimorem sua abordagem pedagógica para proporcionar um melhor aprendizado aos
+estudantes.
+</p> 
+<p class='indent'>       Avaliar inúmeros estudantes individualizadamente é uma tarefa desafiadora para professores em
+todos os níveis de ensino, especialmente em disciplinas que exigem habilidades e competências
+específicas. Esse desafio é ainda maior em exames que envolvem exercícios de programação (EP),
+uma vez que exigem uma avaliação minuciosa dos processos de resolução de problemas, além da
+compreensão do código e da lógica utilizados pelos estudantes.
+</p> 
+<p class='indent'>       Este livro visa prover uma solução abrangente e eficaz para a avaliação de estudantes. A
+abordagem colaborativa adotada por docentes da Universidade Federal do ABC (UFABC), empregando o
+sistema de código aberto MCTest, viabiliza a reutilização de conjuntos de questões previamente
+utilizados por outros colegas que ministram a mesma disciplina.
+</p> 
+<p class='indent'>       O MCTest permite a criação e correção de exames de múltipla escolha e dissertativa, incluindo
+EP no <span class='cmti-12'>plugin </span>VPL (<a href='https://vpl.dis.ulpgc.es'><span class='cmti-12'>Virtual Programming Lab</span></a>) do ambiente Moodle. Ele oferece questões parametrizadas e
+exames individualizados que podem ser usados por várias turmas simultaneamente. A principal
+contribuição desse sistema reside na capacidade de compartilhar questões parametrizadas, que
+incorporam enunciados em LaTeX intercalados com códigos em Python.
+</p> 
+<p class='indent'>       Este livro consolida mais de uma década de experiência na avaliação anual de milhares de
+estudantes, a partir de 2012, quando se deu início à automatização do processo seletivo da
+Especialização em Tecnologias e Sistemas de Informação (TSI) da UFABC, com a criação da
+primeira versão do MCTest, desenvolvida em Matlab. Desde então, o sistema passou por um substancial
+processo de evolução, beneficiando-se da colaboração de diversos colegas da UFABC, cujas
+contribuições permitiram identificar novas necessidades e aprimorar suas funcionalidades. A versão web
+mais recente abordada neste livro é a 5.2 e encontrando-se disponível para instalação no endereço
+<a href='https://github.com/fzampirolli/mctest'>github.com/fzampirolli/mctest</a>. Duas implantações ativas do sistema estão em execução na UFABC:
+                                                                                                  
+                                                                                                  
+a versão de produção, hospedada em <a href='http://mctest.ufabc.edu.br'>mctest.ufabc.edu.br</a>; e a versão de desenvolvimento, <span class='cmti-12'>backup </span>e
+divulgação em <a href='http://vision.ufabc.edu.br'>vision.ufabc.edu.br</a>.
+</p> 
+<p class='indent'>       É de extrema importância enfatizar que o MCTest não tem um caráter comercial e não segue
+rigidamente o ciclo de vida convencional de desenvolvimento de software. Sua abordagem é fundamentada
+na prototipagem, seguindo os princípios da Engenharia de Software, em suma, novos requisitos e
+protótipo rápido para validação de conceitos. No entanto, até o momento, o sistema ainda não
+atingiu sua versão final, desenvolvido predominantemente por um único programador (com exceção da
+adaptação realizada no VPL, pelo Heitor Rodrigues Savegnago e seu orientador Prof. Dr. Paulo
+Henrique Pisani, a quem expresso minha sincera gratidão). Para poder progredir em direção
+a um produto comercial, seriam necessários processos de engenharia reversa e contínuos
+aprimoramentos.
+</p> 
+<p class='indent'>       Apesar das limitações acima mencionadas, o MCTest é utilizado por alguns docentes
+e gestores da UFABC, desempenhando um papel de significativa relevância no âmbito da
+avaliação discente. Essa utilização resulta não apenas em uma notável redução da carga de
+trabalho repetitivo, mas também contribui para a mitigação de possíveis ocorrências de
+falhas.
+</p> 
+<p class='indent'>       A implantação do sistema é agilizada por meio da adoção do ambiente <span class='cmti-12'>VirtualBox</span>
+(<a href='https://www.virtualbox.org'>virtualbox.org</a>), que permite uma implantação local para fins de teste em uma máquina com bom
+desempenho de processamento, armazenamento (5 GB livre) e memória RAM (<span class='cmsy-10x-x-120'>≥ </span>8 GB). Ao optar pela
+instalação dos sistemas operacionais Ubuntu ou Mint, seguida pela subsequente execução do arquivo
+<a href='https://github.com/fzampirolli/mctest/blob/master/_setup-all.sh'>_setup-all.sh</a> disponibilizado no repositório GitHub (<a href='https://github.com/fzampirolli/mctest'>github.com/fzampirolli/mctest</a>), mediante privilégios
+de administrador, o MCTest é instalado de forma contínua, estando acompanhado por um conjunto
+inicial de dados de teste presente no arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>mctest.sql</span></span></span>. Os exemplos ilustrativos apresentados neste
+trabalho encontram-se no arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>book/1ed-br/mctestLivro.sql</span></span></span>, estando também acessíveis no
+repositório GitHub. A fim de empregar esses exemplos no MCTest, é necessário observar as instruções
+fornecidas no arquivo <a href='https://github.com/fzampirolli/mctest/blob/master/_setup-all.sh'>_setup-all.sh</a>.
+</p> 
+<p class='indent'>       A obra foi elaborada em 14 capítulos, divididos em quatro partes principais. A Parte <a href='livropa1.xhtml#fundamentos-do-mctest'>I<!-- tex4ht:ref: part:fundamentos  --></a> tem como
+principal objetivo introduzir os leitores ao sistema, oferecendo detalhes sobre seus componentes e
+funcionalidades essenciais. A Parte <a href='livropa2.xhtml#questoes-no-mctest'>II<!-- tex4ht:ref: part:questoesMCTest  --></a> explora a variedade de tipos de questões disponíveis. A Parte <a href='livropa3.xhtml#exames-no-mctest'>III<!-- tex4ht:ref: part:exames  --></a>
+abrange a criação e administração de exames. Por fim, a Parte <a href='livropa4.xhtml#experimentos'>IV<!-- tex4ht:ref: part:experimentos  --></a> proporciona estudos de caso e
+exemplos práticos, sendo estes últimos divulgados em artigos científicos. Estes experimentos foram
+realizados em modalidades híbridas, totalmente remotas e totalmente presenciais. Para aqueles sem
+interesse na parte paramétrica, que requer conhecimentos de programação, ou sem usar o banco de
+questões, há a possibilidade de pular diversos capítulos, conforme explicado no final do Capítulo
+<a href='livroch1.xhtml#introducao'>1<!-- tex4ht:ref: ch:introducao  --></a>.
+</p> 
+<p class='indent'>       Ao usar o MCTest, os professores têm à disposição uma ferramenta para aprimorar a
+avaliação das habilidades e competências dos estudantes. Assim, os docentes conseguem reduzir o
+esforço exigido na criação e correção de exames e atividades práticas. No entanto, o ponto crucial
+desse processo reside na ampla coleção de questões elaboradas e disponibilizadas pelos professores da
+UFABC, que atualmente totalizam 2.273 questões, embora limitadas aos docentes de cada
+                                                                                                  
+                                                                                                  
+disciplina.
+</p> 
+<p class='indent'>       O MCTest permanece em constante processo de evolução e aprimoramento, incentivando os
+usuários a contribuírem com suas experiências para torná-lo ainda mais eficiente e alinhado com as
+demandas educacionais em constante transformação.
+</p> 
+<p class='indent'>       Ao longo desta obra, as funcionalidades do MCTest serão exploradas, permitindo aos leitores
+compreenderem suas características e recursos. Espera-se que esse trabalho proveja um guia completo
+sobre como empregar o MCTest em ambientes educacionais.
+</p> 
+<p class='indent'>       A partir de 2023, estudantes de Trabalho de Conclusão de Curso e Mestrado em Ciência da
+Computação na UFABC desempenham um papel ativo no processo de implementação de melhorias no
+sistema. Há expectativas de que essas melhorias sejam incorporadas à versão atual disponibilizada no
+GitHub. É importante ressaltar, contudo, que ainda existem áreas que demandam aprimoramento. Isso
+inclui a navegação entre as interfaces e a avaliação das competências e habilidades dos estudantes.
+Por exemplo, em um EP submetido por meio do VPL, quando se requer a utilização de estruturas de
+repetição com o comando <span class='cmti-12'>while</span>, a avaliação deve ser condizente com o cumprimento ou
+descumprimento dessa especificação.
+</p> 
+<p class='indent'>       Com o intuito de aprimorar a compreensão durante a leitura, é importante salientar
+que os seguintes termos serão amplamente utilizados ao longo deste trabalho: exercício de
+programação (EP), questão de múltipla escolha (QM), questão dissertativa ou de texto (QT) e
+quadro de respostas (QR). Nesse contexto, os estudantes efetuam as marcações das QMs no
+QR.
+</p> 
+<p class='indent'>       Leitores interessados em adquirir versões impressas deste livro podem encontrar mais informações
+na pasta <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>book</span></span></span> disponível no seguinte endereço: <a href='https://github.com/fzampirolli/mctest/tree/master/book/1ed-br'>github.com/fzampirolli/mctest</a>.
+</p> 
+<p class='indent'>       Este livro foi concebido e elaborado exclusivamente pelo autor. No entanto, lamentavelmente, não
+passou por um processo de revisão formal. Os textos apresentados foram predominantemente avaliados por
+meio de consultas a redes generativas, pertencentes a uma categoria de modelos de aprendizado de
+máquina. A compreensão dos colegas interessados é confiada para o aprimoramento de edições futuras
+por meio de seus valiosos <span class='cmti-12'>feedbacks </span>construtivos.
+</p> 
+<p class='indent'>       Finalmente, é de suma importância enfatizar que as opiniões e declarações apresentadas
+nesta obra são devidamente embasadas por referências sempre que possível, ou por meio de
+experimentos realizados e devidamente citados no próprio livro. Nos casos em que a obtenção de
+referências se torna inviável, tais posicionamentos refletem a perspectiva pessoal do autor e não
+devem ser considerados uma representação oficial da instituição à qual o autor está
+afiliado.
+       </p> 
+<div class='verse'>
+         <p class='indent'> </p> 
+
+                                                                                            <div class='flushright'>
+<p class='indent'>
+                                                                                                  
+                                                                                                  
+ Francisco de Assis Zampirolli<br />
+27 de outubro de 2023</p> 
+</div>
+</div>
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+<p class='indent'>
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+</p> 
+<p class='indent'>
+                                                                                                  
+                                                                                                  
+                                                                                                  
+                                                                                                  
+       </p> 
+<!-- l. 24 --><div class='crosslinks'><p class='noindent'></p></div>
+        
+</body> 
+</html>
