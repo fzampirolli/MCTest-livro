@@ -6,10 +6,10 @@
 <link href='livro.css' rel='stylesheet' type='text/css' /> 
 </head><body>
        <!-- l. 1 --><div class='crosslinks'><p class='noindent'></p></div>
-       <h2 class='chapterHead' id='variacoes-de-exames-com-qmqt-para-o-moodle'><span class='titlemark'>Capítulo 9</span><br /><a id='x25-1110009'></a>Variações de exames com QM+QT para o Moodle</h2>
+       <h2 class='chapterHead' id='variacoes-de-exames-com-qmqt-para-o-moodle'><span class='titlemark'>Capítulo 9</span><br /><a id='x25-1130009'></a>Variações de exames com QM+QT para o Moodle</h2>
        <hr />
        <hr />
-       <div class='tcolorbox mybox' id='tcolobox-78'>    
+       <div class='tcolorbox mybox' id='tcolobox-80'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-12x-x-120'>Conteúdo</span>___________________________________________________________________________
@@ -38,21 +38,21 @@ curingas.
 <p class='indent'>       Assim, apesar dos recursos disponíveis no Moodle, ele ainda tem limitações na criação de
 questões. Neste capítulo, será apresentado como tentar contornar essas restrições para criar exames
 de qualidade.
-<a id='x25-111001r202'></a>
+<a id='x25-113001r204'></a>
        </p> 
 
-       <h3 class='sectionHead' id='criando-exames-e-exportando-arquivos-aiken-e-xml'><span class='titlemark'>9.1   </span> <a id='x25-1120001'></a>Criando exames e exportando arquivos Aiken e XML</h3>
+       <h3 class='sectionHead' id='criando-exames-e-exportando-arquivos-aiken-e-xml'><span class='titlemark'>9.1   </span> <a id='x25-1140001'></a>Criando exames e exportando arquivos Aiken e XML</h3>
 <p class='noindent'>Será criado um exame com três QMs paramétricas, com quatro alternativas e uma QT com resposta
 exata. A primeira questão é a área do círculo, apresentada no segundo exemplo da Seção <a href='livroch5.xhtml#qm-parametrica-no-mctest'>5.1.2<!-- tex4ht:ref: sec:QMparametrica  --></a> –
 <a href='livroch5.xhtml#qm-parametrica-no-mctest'>QM paramétrica no MCTest<!-- tex4ht:ref: sec:QMparametrica  --></a>. As três próximas questões estão definidas nas próximas
 seções.
-<a id='x25-112001r184'></a>
+<a id='x25-114001r186'></a>
        </p> 
 
                                                                                                   
                                                                                                   
-       <h4 class='subsectionHead' id='qm-equacao-de-primeiro-grau-idade'><span class='titlemark'>9.1.1   </span> <a id='x25-1130001'></a>QM – equação de primeiro grau – idade</h4>
-<p class='noindent'>O Código <a href='#x25-113112r1'>9.1<!-- tex4ht:ref: lst:questaoQM_EquacaoIdade  --></a> apresenta um algoritmo que soluciona o problema de encontrar as idades de duas pessoas,
+       <h4 class='subsectionHead' id='qm-equacao-de-primeiro-grau-idade'><span class='titlemark'>9.1.1   </span> <a id='x25-1150001'></a>QM – equação de primeiro grau – idade</h4>
+<p class='noindent'>O Código <a href='#x25-115112r1'>9.1<!-- tex4ht:ref: lst:questaoQM_EquacaoIdade  --></a> apresenta um algoritmo que soluciona o problema de encontrar as idades de duas pessoas,
 dada a soma e a diferença entre elas. O método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>calcular_idades</span></span></span> recebe como parâmetros esses dois
 valores e utiliza equações matemáticas para determinar as idades da pessoa e do irmão. As idades são
 retornadas como uma <span class='cmti-12'>string </span>no formato “x e y”, onde x e y são as idades da pessoa e do irmão,
@@ -63,7 +63,7 @@ vazia.
 diferença no intervalo de 2 a 30. Para cada par de valores gerado, o programa chama o método
 <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>calcular_idades</span></span></span> e armazena as respostas válidas em uma lista. A alternativa correta da questão,
 apresentada na linha 36, considera os dados do enunciado e utiliza o método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>calcular_idades</span></span></span> para
-determinar as idades dos irmãos apresentados na Figura <a href='#x25-113114r1'>9.1<!-- tex4ht:ref: fig:cap09_questaoQM_EquacaoIdadePDFb  --></a>.
+determinar as idades dos irmãos apresentados na Figura <a href='#x25-115114r1'>9.1<!-- tex4ht:ref: fig:cap09_questaoQM_EquacaoIdadePDFb  --></a>.
                                                                                                   
                                                                                                   
 </p> 
@@ -71,53 +71,53 @@ determinar as idades dos irmãos apresentados na Figura <a href='#x25-113114r1'>
 <figure class='float' id='-exemplo-de-qm-parametrica-para-calcular-as-idades-dos-irmaos-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-79'>    
+<div class='tcolorbox myboxCode' id='tcolobox-81'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
 _________________________________________________________________________________
-<pre class='fancyvrb' id='fancyvrb16'><a id='x25-113039r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Uma pessoa tem x anos e seu irmão tem y anos</span><span id='textcolor756'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Se a diferença entre suas idades é</span> 
-<a id='x25-113041r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>de [[code:diferenca]] anos, e a soma das idades é [[code:soma]], determine </span><span id='textcolor757'><span class='cmtt-10x-x-109'>as</span></span> 
-<a id='x25-113043r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>idades da pessoa e do irmão, respectivamente</span><span id='textcolor758'><span class='cmtt-10x-x-109'>.</span></span> 
-<a id='x25-113045r4'></a><span class='cmr-6'>4</span> 
-<a id='x25-113047r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>[[def:</span> 
-<a id='x25-113049r6'></a><span class='cmr-6'>6</span><span id='textcolor759'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor760'><span class='cmtt-10x-x-109'>random</span></span> 
-<a id='x25-113051r7'></a><span class='cmr-6'>7</span> 
-<a id='x25-113053r8'></a><span class='cmr-6'>8</span><span id='textcolor761'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor762'><span class='cmtt-10x-x-109'>calcular_idades</span></span><span class='cmtt-10x-x-109'>(soma, diferenca):</span> 
-<a id='x25-113055r9'></a><span class='cmr-6'>9</span><span id='textcolor763'><span class='cmtt-10x-x-109'>  </span></span><span id='textcolor764'><span class='cmitt-10x-x-109'>"""Calcula idades, dados soma e diferença.</span></span> 
-<a id='x25-113057r10'></a><span class='cmr-6'>10</span><span id='textcolor765'><span class='cmitt-10x-x-109'>  x - y = diferenca e x + y = soma ==</span><span class='cmmi-10x-x-109'>&gt;</span><span class='cmitt-10x-x-109'> 2x = (soma + diferenca)"""</span></span> 
-<a id='x25-113059r11'></a><span class='cmr-6'>11</span> 
-<a id='x25-113061r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor766'><span class='cmitt-10x-x-109'># Calcular a idade da pessoa</span></span> 
-<a id='x25-113063r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>  x </span><span id='textcolor767'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> (soma </span><span id='textcolor768'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> diferenca) </span><span id='textcolor769'><span class='cmtt-10x-x-109'>/</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor770'><span class='cmtt-10x-x-109'>2</span></span> 
-<a id='x25-113065r14'></a><span class='cmr-6'>14</span> 
-<a id='x25-113067r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor771'><span class='cmitt-10x-x-109'># Calcular a idade do irmão</span></span> 
-<a id='x25-113069r16'></a><span class='cmr-6'>16</span><span class='cmtt-10x-x-109'>  y </span><span id='textcolor772'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor773'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> x</span> 
-<a id='x25-113071r17'></a><span class='cmr-6'>17</span> 
-<a id='x25-113073r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor774'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor775'><span class='cmtt-10x-x-109'>not</span></span><span class='cmtt-10x-x-109'> x</span><span id='textcolor776'><span class='cmtt-10x-x-109'>%</span></span><span id='textcolor777'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor778'><span class='cmtt-10x-x-109'>and</span></span><span class='cmtt-10x-x-109'> x</span><span id='textcolor779'><span class='cmmi-10x-x-109'>&gt;</span></span><span id='textcolor780'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor781'><span class='cmtt-10x-x-109'>and</span></span><span class='cmtt-10x-x-109'> y</span><span id='textcolor782'><span class='cmmi-10x-x-109'>&gt;</span></span><span id='textcolor783'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor784'><span class='cmitt-10x-x-109'># somente inteiros positivos</span></span> 
-<a id='x25-113075r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor785'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor786'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor787'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor788'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>x</span><span id='textcolor789'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor790'><span class='cmtt-10x-x-109'>2.0f</span></span><span id='textcolor791'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor792'><span class='cmtt-10x-x-109'> e </span></span><span id='textcolor793'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>y</span><span id='textcolor794'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor795'><span class='cmtt-10x-x-109'>2.0f</span></span><span id='textcolor796'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor797'><span class='cmtt-10x-x-109'>"</span></span> 
-<a id='x25-113077r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor798'><span class='cmtt-10x-x-109'>else</span></span><span class='cmtt-10x-x-109'>:</span> 
-<a id='x25-113079r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor799'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor800'><span class='cmtt-10x-x-109'>""</span></span> 
-<a id='x25-113081r22'></a><span class='cmr-6'>22</span> 
-<a id='x25-113083r23'></a><span class='cmr-6'>23</span><span id='textcolor801'><span class='cmitt-10x-x-109'># Lista de respostas</span></span> 
-<a id='x25-113085r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>respostas </span><span id='textcolor802'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> []</span> 
-<a id='x25-113087r25'></a><span class='cmr-6'>25</span> 
-<a id='x25-113089r26'></a><span class='cmr-6'>26</span><span id='textcolor803'><span class='cmitt-10x-x-109'># Gerar 4 equações de reta aleatórias</span></span> 
-<a id='x25-113091r27'></a><span class='cmr-6'>27</span><span id='textcolor804'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor805'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(respostas) </span><span id='textcolor806'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor807'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>:</span> 
-<a id='x25-113093r28'></a><span class='cmr-6'>28</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor808'><span class='cmitt-10x-x-109'># Gerar 2 valores aleatórios</span></span> 
-<a id='x25-113095r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>  soma, diferenca </span><span id='textcolor809'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor810'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sample(</span><span id='textcolor811'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor812'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor813'><span class='cmtt-10x-x-109'>30</span></span><span class='cmtt-10x-x-109'>), </span><span id='textcolor814'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x25-113097r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>  r </span><span id='textcolor815'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> calcular_idades(soma, diferenca)</span> 
-<a id='x25-113099r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor816'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor817'><span class='cmtt-10x-x-109'>not</span></span><span class='cmtt-10x-x-109'> r: </span><span id='textcolor818'><span class='cmitt-10x-x-109'># somente inteiros positivos</span></span> 
-<a id='x25-113101r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor819'><span class='cmtt-10x-x-109'>continue</span></span> 
-<a id='x25-113103r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor820'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> r </span><span id='textcolor821'><span class='cmtt-10x-x-109'>not</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor822'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> respostas: </span><span id='textcolor823'><span class='cmitt-10x-x-109'># respostas distintas</span></span> 
-<a id='x25-113105r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>    respostas</span><span id='textcolor824'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(r)</span> 
-<a id='x25-113107r35'></a><span class='cmr-6'>35</span> 
-<a id='x25-113109r36'></a><span class='cmr-6'>36</span><span id='textcolor825'><span class='cmitt-10x-x-109'># [[code:respostas[3]]] # última será a correta</span></span> 
-<a id='x25-113111r37'></a><span class='cmr-6'>37</span><span class='cmtt-10x-x-109'>]]</span></pre>
+<pre class='fancyvrb' id='fancyvrb16'><a id='x25-115039r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Uma pessoa tem x anos e seu irmão tem y anos</span><span id='textcolor756'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Se a diferença entre suas idades é</span> 
+<a id='x25-115041r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>de [[code:diferenca]] anos, e a soma das idades é [[code:soma]], determine </span><span id='textcolor757'><span class='cmtt-10x-x-109'>as</span></span> 
+<a id='x25-115043r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>idades da pessoa e do irmão, respectivamente</span><span id='textcolor758'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x25-115045r4'></a><span class='cmr-6'>4</span> 
+<a id='x25-115047r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x25-115049r6'></a><span class='cmr-6'>6</span><span id='textcolor759'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor760'><span class='cmtt-10x-x-109'>random</span></span> 
+<a id='x25-115051r7'></a><span class='cmr-6'>7</span> 
+<a id='x25-115053r8'></a><span class='cmr-6'>8</span><span id='textcolor761'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor762'><span class='cmtt-10x-x-109'>calcular_idades</span></span><span class='cmtt-10x-x-109'>(soma, diferenca):</span> 
+<a id='x25-115055r9'></a><span class='cmr-6'>9</span><span id='textcolor763'><span class='cmtt-10x-x-109'>  </span></span><span id='textcolor764'><span class='cmitt-10x-x-109'>"""Calcula idades, dados soma e diferença.</span></span> 
+<a id='x25-115057r10'></a><span class='cmr-6'>10</span><span id='textcolor765'><span class='cmitt-10x-x-109'>  x - y = diferenca e x + y = soma ==</span><span class='cmmi-10x-x-109'>&gt;</span><span class='cmitt-10x-x-109'> 2x = (soma + diferenca)"""</span></span> 
+<a id='x25-115059r11'></a><span class='cmr-6'>11</span> 
+<a id='x25-115061r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor766'><span class='cmitt-10x-x-109'># Calcular a idade da pessoa</span></span> 
+<a id='x25-115063r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>  x </span><span id='textcolor767'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> (soma </span><span id='textcolor768'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> diferenca) </span><span id='textcolor769'><span class='cmtt-10x-x-109'>/</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor770'><span class='cmtt-10x-x-109'>2</span></span> 
+<a id='x25-115065r14'></a><span class='cmr-6'>14</span> 
+<a id='x25-115067r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor771'><span class='cmitt-10x-x-109'># Calcular a idade do irmão</span></span> 
+<a id='x25-115069r16'></a><span class='cmr-6'>16</span><span class='cmtt-10x-x-109'>  y </span><span id='textcolor772'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> soma </span><span id='textcolor773'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> x</span> 
+<a id='x25-115071r17'></a><span class='cmr-6'>17</span> 
+<a id='x25-115073r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor774'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor775'><span class='cmtt-10x-x-109'>not</span></span><span class='cmtt-10x-x-109'> x</span><span id='textcolor776'><span class='cmtt-10x-x-109'>%</span></span><span id='textcolor777'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor778'><span class='cmtt-10x-x-109'>and</span></span><span class='cmtt-10x-x-109'> x</span><span id='textcolor779'><span class='cmmi-10x-x-109'>&gt;</span></span><span id='textcolor780'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor781'><span class='cmtt-10x-x-109'>and</span></span><span class='cmtt-10x-x-109'> y</span><span id='textcolor782'><span class='cmmi-10x-x-109'>&gt;</span></span><span id='textcolor783'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>: </span><span id='textcolor784'><span class='cmitt-10x-x-109'># somente inteiros positivos</span></span> 
+<a id='x25-115075r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor785'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor786'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor787'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor788'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>x</span><span id='textcolor789'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor790'><span class='cmtt-10x-x-109'>2.0f</span></span><span id='textcolor791'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor792'><span class='cmtt-10x-x-109'> e </span></span><span id='textcolor793'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>y</span><span id='textcolor794'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor795'><span class='cmtt-10x-x-109'>2.0f</span></span><span id='textcolor796'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor797'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x25-115077r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor798'><span class='cmtt-10x-x-109'>else</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x25-115079r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor799'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor800'><span class='cmtt-10x-x-109'>""</span></span> 
+<a id='x25-115081r22'></a><span class='cmr-6'>22</span> 
+<a id='x25-115083r23'></a><span class='cmr-6'>23</span><span id='textcolor801'><span class='cmitt-10x-x-109'># Lista de respostas</span></span> 
+<a id='x25-115085r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>respostas </span><span id='textcolor802'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> []</span> 
+<a id='x25-115087r25'></a><span class='cmr-6'>25</span> 
+<a id='x25-115089r26'></a><span class='cmr-6'>26</span><span id='textcolor803'><span class='cmitt-10x-x-109'># Gerar 4 equações de reta aleatórias</span></span> 
+<a id='x25-115091r27'></a><span class='cmr-6'>27</span><span id='textcolor804'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor805'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(respostas) </span><span id='textcolor806'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor807'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x25-115093r28'></a><span class='cmr-6'>28</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor808'><span class='cmitt-10x-x-109'># Gerar 2 valores aleatórios</span></span> 
+<a id='x25-115095r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>  soma, diferenca </span><span id='textcolor809'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor810'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sample(</span><span id='textcolor811'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor812'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor813'><span class='cmtt-10x-x-109'>30</span></span><span class='cmtt-10x-x-109'>), </span><span id='textcolor814'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x25-115097r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>  r </span><span id='textcolor815'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> calcular_idades(soma, diferenca)</span> 
+<a id='x25-115099r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor816'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor817'><span class='cmtt-10x-x-109'>not</span></span><span class='cmtt-10x-x-109'> r: </span><span id='textcolor818'><span class='cmitt-10x-x-109'># somente inteiros positivos</span></span> 
+<a id='x25-115101r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor819'><span class='cmtt-10x-x-109'>continue</span></span> 
+<a id='x25-115103r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor820'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> r </span><span id='textcolor821'><span class='cmtt-10x-x-109'>not</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor822'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> respostas: </span><span id='textcolor823'><span class='cmitt-10x-x-109'># respostas distintas</span></span> 
+<a id='x25-115105r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>    respostas</span><span id='textcolor824'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(r)</span> 
+<a id='x25-115107r35'></a><span class='cmr-6'>35</span> 
+<a id='x25-115109r36'></a><span class='cmr-6'>36</span><span id='textcolor825'><span class='cmitt-10x-x-109'># [[code:respostas[3]]] # última será a correta</span></span> 
+<a id='x25-115111r37'></a><span class='cmr-6'>37</span><span class='cmtt-10x-x-109'>]]</span></pre>
  
 </div> 
 </div>
-<a id='x25-113112r1'></a>
-<a id='x25-113113'></a>
+<a id='x25-115112r1'></a>
+<a id='x25-115113'></a>
                                                                                                   
                                                                                                   
        </figure>
@@ -127,23 +127,23 @@ ________________________________________________________________________________
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-das-idades-dos-irmaos-referente-ao-codigo-lstquestaoqmequacaoidade-'><img alt='PIC' height='461' src='./figs-br//cap09_questaoQM_EquacaoIdadePDF.png' width='460' /> <a id='x25-113114r1'></a>
-<a id='x25-113115'></a>
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-das-idades-dos-irmaos-referente-ao-codigo-lstquestaoqmequacaoidade-'><img alt='PIC' height='461' src='./figs-br//cap09_questaoQM_EquacaoIdadePDF.png' width='460' /> <a id='x25-115114r1'></a>
+<a id='x25-115115'></a>
 </p> 
 <figcaption class='caption'><span class='id'>Figura 9.1: </span><span class='content'>Recorte do PDF gerado para a questão das idades dos irmãos, referente ao Código
-<a href='#x25-113112r1'>9.1<!-- tex4ht:ref: lst:questaoQM_EquacaoIdade  --></a>.
-</span></figcaption><!-- tex4ht:label?: x25-113114r9  -->
+<a href='#x25-115112r1'>9.1<!-- tex4ht:ref: lst:questaoQM_EquacaoIdade  --></a>.
+</span></figcaption><!-- tex4ht:label?: x25-115114r9  -->
                                                                                                   
                                                                                                   
        </figure>
-<p><a id='x25-113116r205'></a></p>
-       <h4 class='subsectionHead' id='qm-equacao-da-reta'><span class='titlemark'>9.1.2   </span> <a id='x25-1140002'></a>QM – equação da reta</h4>
-<p class='noindent'>O Código <a href='#x25-114082r2'>9.2<!-- tex4ht:ref: lst:questaoQM_EquacaoReta  --></a> implementa um algoritmo para gerar quatro equações de reta aleatórias a partir de
+<p><a id='x25-115116r207'></a></p>
+       <h4 class='subsectionHead' id='qm-equacao-da-reta'><span class='titlemark'>9.1.2   </span> <a id='x25-1160002'></a>QM – equação da reta</h4>
+<p class='noindent'>O Código <a href='#x25-116082r2'>9.2<!-- tex4ht:ref: lst:questaoQM_EquacaoReta  --></a> implementa um algoritmo para gerar quatro equações de reta aleatórias a partir de
 pontos com coordenadas inteiras entre 1 e 9. O método <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>equacao_reta</span></span></span> é utilizado para calcular a
 equação da reta que passa pelos dois pontos fornecidos. Para evitar duplicatas, o código verifica se a
 equação já está na lista de respostas antes de adicioná-la. Caso uma reta vertical seja gerada, ela é
 ignorada. A última alternativa da questão na linha 26 considera os dois pontos fornecidos no enunciado,
-apresentado na Figura <a href='#x25-114084r2'>9.2<!-- tex4ht:ref: fig:cap09_questaoQM_EquacaoRetaPDF  --></a>.
+apresentado na Figura <a href='#x25-116084r2'>9.2<!-- tex4ht:ref: fig:cap09_questaoQM_EquacaoRetaPDF  --></a>.
                                                                                                   
                                                                                                   
 </p> 
@@ -151,43 +151,43 @@ apresentado na Figura <a href='#x25-114084r2'>9.2<!-- tex4ht:ref: fig:cap09_ques
 <figure class='float' id='-exemplo-de-qm-parametrica-para-calcular-a-equacao-da-reta-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-80'>    
+<div class='tcolorbox myboxCode' id='tcolobox-82'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
 _________________________________________________________________________________
-<pre class='fancyvrb' id='fancyvrb17'><a id='x25-114029r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Qual é a equação da reta que passa pelos pontos ([[code:x1]], [[code:y1]]) e</span> 
-<a id='x25-114031r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>([[code:x2]], [[code:y2]])</span><span class='colorbox' id='colorbox826'><span class='cmtt-10x-x-109'>?</span></span>  
-<a id='x25-114033r3'></a><span class='cmr-6'>3</span>  
-<a id='x25-114035r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>[[def:</span> 
-<a id='x25-114037r5'></a><span class='cmr-6'>5</span><span id='textcolor827'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor828'><span class='cmtt-10x-x-109'>random</span></span> 
-<a id='x25-114039r6'></a><span class='cmr-6'>6</span> 
-<a id='x25-114041r7'></a><span class='cmr-6'>7</span><span id='textcolor829'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor830'><span class='cmtt-10x-x-109'>equacao_reta</span></span><span class='cmtt-10x-x-109'>(x1, y1, x2, y2):</span> 
-<a id='x25-114043r8'></a><span class='cmr-6'>8</span><span id='textcolor831'><span class='cmtt-10x-x-109'>  </span></span><span id='textcolor832'><span class='cmitt-10x-x-109'>"""Calcula a equação da reta que passa pelos pontos (x1, y1) e (x2, y2)"""</span></span> 
-<a id='x25-114045r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>  m </span><span id='textcolor833'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> (y2 </span><span id='textcolor834'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> y1) </span><span id='textcolor835'><span class='cmtt-10x-x-109'>/</span></span><span class='cmtt-10x-x-109'> (x2 </span><span id='textcolor836'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> x1)</span> 
-<a id='x25-114047r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>  b </span><span id='textcolor837'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> y1 </span><span id='textcolor838'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> m </span><span id='textcolor839'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> x1</span> 
-<a id='x25-114049r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor840'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor841'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor842'><span class='cmtt-10x-x-109'>"y = </span></span><span id='textcolor843'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>m</span><span id='textcolor844'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor845'><span class='cmtt-10x-x-109'>.2f</span></span><span id='textcolor846'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor847'><span class='cmtt-10x-x-109'>x + </span></span><span id='textcolor848'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>b</span><span id='textcolor849'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor850'><span class='cmtt-10x-x-109'>.2f</span></span><span id='textcolor851'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor852'><span class='cmtt-10x-x-109'>"</span></span> 
-<a id='x25-114051r12'></a><span class='cmr-6'>12</span> 
-<a id='x25-114053r13'></a><span class='cmr-6'>13</span><span id='textcolor853'><span class='cmitt-10x-x-109'># Lista de respostas</span></span> 
-<a id='x25-114055r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>respostas </span><span id='textcolor854'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> []</span> 
-<a id='x25-114057r15'></a><span class='cmr-6'>15</span> 
-<a id='x25-114059r16'></a><span class='cmr-6'>16</span><span id='textcolor855'><span class='cmitt-10x-x-109'># Gerar 4 equações de reta aleatórias e distintas</span></span> 
-<a id='x25-114061r17'></a><span class='cmr-6'>17</span><span id='textcolor856'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor857'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(respostas) </span><span id='textcolor858'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor859'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>:</span> 
-<a id='x25-114063r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>  x1,y1,x2,y2 </span><span id='textcolor860'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor861'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sample(</span><span id='textcolor862'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor863'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor864'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>), </span><span id='textcolor865'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>) </span><span id='textcolor866'><span class='cmitt-10x-x-109'># Gerar 2 pontos aleatórios</span></span> 
-<a id='x25-114065r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor867'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> x1 </span><span id='textcolor868'><span class='cmtt-10x-x-109'>==</span></span><span class='cmtt-10x-x-109'> x2: </span><span id='textcolor869'><span class='cmitt-10x-x-109'># A reta é vertical: não é possível calcular a inclinação m</span></span> 
-<a id='x25-114067r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor870'><span class='cmtt-10x-x-109'>continue</span></span> 
-<a id='x25-114069r21'></a><span class='cmr-6'>21</span> 
-<a id='x25-114071r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>  equacao </span><span id='textcolor871'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> equacao_reta(x1, y1, x2, y2)</span> 
-<a id='x25-114073r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor872'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> equacao </span><span id='textcolor873'><span class='cmtt-10x-x-109'>not</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor874'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> respostas:</span> 
-<a id='x25-114075r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>      respostas</span><span id='textcolor875'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(equacao)</span> 
-<a id='x25-114077r25'></a><span class='cmr-6'>25</span> 
-<a id='x25-114079r26'></a><span class='cmr-6'>26</span><span id='textcolor876'><span class='cmitt-10x-x-109'># [[code:respostas[3]]] # última será a correta</span></span> 
-<a id='x25-114081r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>]]</span></pre>
+<pre class='fancyvrb' id='fancyvrb17'><a id='x25-116029r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Qual é a equação da reta que passa pelos pontos ([[code:x1]], [[code:y1]]) e</span> 
+<a id='x25-116031r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>([[code:x2]], [[code:y2]])</span><span class='colorbox' id='colorbox826'><span class='cmtt-10x-x-109'>?</span></span>  
+<a id='x25-116033r3'></a><span class='cmr-6'>3</span>  
+<a id='x25-116035r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x25-116037r5'></a><span class='cmr-6'>5</span><span id='textcolor827'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor828'><span class='cmtt-10x-x-109'>random</span></span> 
+<a id='x25-116039r6'></a><span class='cmr-6'>6</span> 
+<a id='x25-116041r7'></a><span class='cmr-6'>7</span><span id='textcolor829'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor830'><span class='cmtt-10x-x-109'>equacao_reta</span></span><span class='cmtt-10x-x-109'>(x1, y1, x2, y2):</span> 
+<a id='x25-116043r8'></a><span class='cmr-6'>8</span><span id='textcolor831'><span class='cmtt-10x-x-109'>  </span></span><span id='textcolor832'><span class='cmitt-10x-x-109'>"""Calcula a equação da reta que passa pelos pontos (x1, y1) e (x2, y2)"""</span></span> 
+<a id='x25-116045r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>  m </span><span id='textcolor833'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> (y2 </span><span id='textcolor834'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> y1) </span><span id='textcolor835'><span class='cmtt-10x-x-109'>/</span></span><span class='cmtt-10x-x-109'> (x2 </span><span id='textcolor836'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> x1)</span> 
+<a id='x25-116047r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>  b </span><span id='textcolor837'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> y1 </span><span id='textcolor838'><span class='cmtt-10x-x-109'>-</span></span><span class='cmtt-10x-x-109'> m </span><span id='textcolor839'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'> x1</span> 
+<a id='x25-116049r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor840'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor841'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor842'><span class='cmtt-10x-x-109'>"y = </span></span><span id='textcolor843'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>m</span><span id='textcolor844'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor845'><span class='cmtt-10x-x-109'>.2f</span></span><span id='textcolor846'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor847'><span class='cmtt-10x-x-109'>x + </span></span><span id='textcolor848'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>b</span><span id='textcolor849'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor850'><span class='cmtt-10x-x-109'>.2f</span></span><span id='textcolor851'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor852'><span class='cmtt-10x-x-109'>"</span></span> 
+<a id='x25-116051r12'></a><span class='cmr-6'>12</span> 
+<a id='x25-116053r13'></a><span class='cmr-6'>13</span><span id='textcolor853'><span class='cmitt-10x-x-109'># Lista de respostas</span></span> 
+<a id='x25-116055r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>respostas </span><span id='textcolor854'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> []</span> 
+<a id='x25-116057r15'></a><span class='cmr-6'>15</span> 
+<a id='x25-116059r16'></a><span class='cmr-6'>16</span><span id='textcolor855'><span class='cmitt-10x-x-109'># Gerar 4 equações de reta aleatórias e distintas</span></span> 
+<a id='x25-116061r17'></a><span class='cmr-6'>17</span><span id='textcolor856'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor857'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(respostas) </span><span id='textcolor858'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor859'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x25-116063r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>  x1,y1,x2,y2 </span><span id='textcolor860'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> random</span><span id='textcolor861'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sample(</span><span id='textcolor862'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor863'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor864'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>), </span><span id='textcolor865'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>) </span><span id='textcolor866'><span class='cmitt-10x-x-109'># Gerar 2 pontos aleatórios</span></span> 
+<a id='x25-116065r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor867'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> x1 </span><span id='textcolor868'><span class='cmtt-10x-x-109'>==</span></span><span class='cmtt-10x-x-109'> x2: </span><span id='textcolor869'><span class='cmitt-10x-x-109'># A reta é vertical: não é possível calcular a inclinação m</span></span> 
+<a id='x25-116067r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor870'><span class='cmtt-10x-x-109'>continue</span></span> 
+<a id='x25-116069r21'></a><span class='cmr-6'>21</span> 
+<a id='x25-116071r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>  equacao </span><span id='textcolor871'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> equacao_reta(x1, y1, x2, y2)</span> 
+<a id='x25-116073r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>  </span><span id='textcolor872'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> equacao </span><span id='textcolor873'><span class='cmtt-10x-x-109'>not</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor874'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> respostas:</span> 
+<a id='x25-116075r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>      respostas</span><span id='textcolor875'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(equacao)</span> 
+<a id='x25-116077r25'></a><span class='cmr-6'>25</span> 
+<a id='x25-116079r26'></a><span class='cmr-6'>26</span><span id='textcolor876'><span class='cmitt-10x-x-109'># [[code:respostas[3]]] # última será a correta</span></span> 
+<a id='x25-116081r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>]]</span></pre>
  
 </div> 
 </div>
-<a id='x25-114082r2'></a>
-<a id='x25-114083'></a>
+<a id='x25-116082r2'></a>
+<a id='x25-116083'></a>
                                                                                                   
                                                                                                   
        </figure>
@@ -197,22 +197,22 @@ ________________________________________________________________________________
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-da-equacao-da-reta-definida-no-codigo-lstquestaoqmequacaoreta-'><img alt='PIC' height='461' src='./figs-br//cap09_questaoQM_EquacaoRetaPDF.png' width='460' /> <a id='x25-114084r2'></a>
-<a id='x25-114085'></a>
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-da-equacao-da-reta-definida-no-codigo-lstquestaoqmequacaoreta-'><img alt='PIC' height='461' src='./figs-br//cap09_questaoQM_EquacaoRetaPDF.png' width='460' /> <a id='x25-116084r2'></a>
+<a id='x25-116085'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 9.2: </span><span class='content'>Recorte do PDF gerado para a questão da equação da reta definida no Código <a href='#x25-114082r2'>9.2<!-- tex4ht:ref: lst:questaoQM_EquacaoReta  --></a>.
-</span></figcaption><!-- tex4ht:label?: x25-114084r9  -->
+<figcaption class='caption'><span class='id'>Figura 9.2: </span><span class='content'>Recorte do PDF gerado para a questão da equação da reta definida no Código <a href='#x25-116082r2'>9.2<!-- tex4ht:ref: lst:questaoQM_EquacaoReta  --></a>.
+</span></figcaption><!-- tex4ht:label?: x25-116084r9  -->
                                                                                                   
                                                                                                   
        </figure>
-<p><a id='x25-114086r208'></a></p>
-       <h4 class='subsectionHead' id='qt-com-resposta-exata-ordena-parte-do-vetor'><span class='titlemark'>9.1.3   </span> <a id='x25-1150003'></a>QT com resposta exata – ordena parte do vetor</h4>
-<p class='noindent'>Na Seção <a href='livroch8.xhtml#criando-qms-e-uma-qt'>8.1<!-- tex4ht:ref: sec:questoesQM_QT  --></a> – <a href='livroch8.xhtml#criando-qms-e-uma-qt'>Criando QMs e uma QT<!-- tex4ht:ref: sec:questoesQM_QT  --></a>, foi apresentado o Código <a href='livroch8.xhtml#x24-104022r1'>8.1<!-- tex4ht:ref: lst:questaoQT_exata  --></a>, que descreve como criar uma QT
+<p><a id='x25-116086r210'></a></p>
+       <h4 class='subsectionHead' id='qt-com-resposta-exata-ordena-parte-do-vetor'><span class='titlemark'>9.1.3   </span> <a id='x25-1170003'></a>QT com resposta exata – ordena parte do vetor</h4>
+<p class='noindent'>Na Seção <a href='livroch8.xhtml#criando-qms-e-uma-qt'>8.1<!-- tex4ht:ref: sec:questoesQM_QT  --></a> – <a href='livroch8.xhtml#criando-qms-e-uma-qt'>Criando QMs e uma QT<!-- tex4ht:ref: sec:questoesQM_QT  --></a>, foi apresentado o Código <a href='livroch8.xhtml#x24-106022r1'>8.1<!-- tex4ht:ref: lst:questaoQT_exata  --></a>, que descreve como criar uma QT
 com resposta exata. Nesta seção, será apresentado um exemplo prático deste recurso,
-por meio da adaptação dos Códigos <a href='livroch5.xhtml#x20-80061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a> e <a href='livroch5.xhtml#x20-80061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a> de questão paramétrica integrada ao
+por meio da adaptação dos Códigos <a href='livroch5.xhtml#x20-82061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a> e <a href='livroch5.xhtml#x20-82061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a> de questão paramétrica integrada ao
 VPL.
 </p> 
-<p class='indent'>       Os Códigos <a href='#x25-115031r3'>9.3<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte1  --></a> e <a href='#x25-115171r4'>9.4<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte2  --></a> implementam uma questão paramétrica exata, utilizando o método
+<p class='indent'>       Os Códigos <a href='#x25-117031r3'>9.3<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte1  --></a> e <a href='#x25-117171r4'>9.4<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte2  --></a> implementam uma questão paramétrica exata, utilizando o método
 <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>ordena_parte_vetor</span></span></span>. Esse método recebe como entrada um vetor de números inteiros, um índice de
 início e um índice de fim, e ordena apenas uma parte do vetor, delimitada pelos índices de início e
 fim.
@@ -224,11 +224,11 @@ aninhados: o primeiro percorre os elementos da parte do vetor a ser ordenada, en
 os elementos ainda não ordenados. A cada iteração do segundo laço, é verificado se o elemento atual
 é menor do que o elemento selecionado pelo primeiro laço. Se for o caso, os elementos são trocados de
 posição. O método retorna o vetor ordenado, e a ordenação é realizada <span class='cmti-12'>in-place</span>, ou seja, o vetor
-original é modificado diretamente pelo método. A Figura <a href='#x25-115173r3'>9.3<!-- tex4ht:ref: fig:cap09_questaoQT_Exata_PDF  --></a> apresenta um exemplo para esta
+original é modificado diretamente pelo método. A Figura <a href='#x25-117173r3'>9.3<!-- tex4ht:ref: fig:cap09_questaoQT_Exata_PDF  --></a> apresenta um exemplo para esta
 questão.
 </p> 
-<p class='indent'>       A questão apresentada nos Códigos <a href='#x25-115031r3'>9.3<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte1  --></a> e <a href='#x25-115171r4'>9.4<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte2  --></a> já está preparada para ser aplicada em atividades
-VPL, seguindo os Códigos <a href='livroch5.xhtml#x20-80061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a> e <a href='livroch5.xhtml#x20-80061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a>. No entanto, a parte crítica é a formatação da questão,
+<p class='indent'>       A questão apresentada nos Códigos <a href='#x25-117031r3'>9.3<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte1  --></a> e <a href='#x25-117171r4'>9.4<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte2  --></a> já está preparada para ser aplicada em atividades
+VPL, seguindo os Códigos <a href='livroch5.xhtml#x20-82061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a> e <a href='livroch5.xhtml#x20-82061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a>. No entanto, a parte crítica é a formatação da questão,
 limitada pelo Moodle, como serão apresentadas nas próximas seções.
 </p> 
 <p class='indent'>       Esta questão de ordenar vetor é um exemplo típico que não pode ser implementado
@@ -242,26 +242,26 @@ Moodle.
 <figure class='float' id='-exemplo-de-questao-parametrica-exata-parte-descricao-de-questao-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-81'>    
+<div class='tcolorbox myboxCode' id='tcolobox-83'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
 _________________________________________________________________________________
-<pre class='fancyvrb' id='fancyvrb18'><a id='x25-115012r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Dado um vetor de inteiros de tamanho \( n </span><span id='textcolor877'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [[code:n]]\), ordenar o trecho do</span> 
-<a id='x25-115014r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>vetor que começa no índice \( inicio </span><span id='textcolor878'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [[code:inicio]] \) e termina no índice</span> 
-<a id='x25-115016r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>\( fim </span><span id='textcolor879'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [[code:fim]]\)</span><span id='textcolor880'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Onde, \( </span><span id='textcolor881'><span class='cmtt-10x-x-109'>0</span></span><span id='textcolor882'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'>início</span><span id='textcolor883'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'>fim</span><span id='textcolor884'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'>n \), ou seja, o trecho a ser</span> 
-<a id='x25-115018r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>ordenado está entre início (inclusive) e fim (inclusive)</span><span id='textcolor885'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Vale ressaltar que</span> 
-<a id='x25-115020r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>os índices do vetor começam em </span><span id='textcolor886'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'> e terminam em \( n</span><span id='textcolor887'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor888'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>\)</span><span id='textcolor889'><span class='cmtt-10x-x-109'>.</span></span> 
-<a id='x25-115022r6'></a><span class='cmr-6'>6</span> 
-<a id='x25-115024r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>Considere esta entrada:}</span> 
-<a id='x25-115026r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>[[code:caso0_inp]]</span> 
-<a id='x25-115028r9'></a><span class='cmr-6'>9</span> 
-<a id='x25-115030r10'></a><span class='cmr-6'>10</span><span id='textcolor890'><span class='cmtt-10x-x-109'>%%</span></span><span class='cmtt-10x-x-109'>{[[code:caso0_out]]}</span><span id='textcolor891'><span class='cmtt-10x-x-109'>%%</span></span></pre>
+<pre class='fancyvrb' id='fancyvrb18'><a id='x25-117012r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Dado um vetor de inteiros de tamanho \( n </span><span id='textcolor877'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [[code:n]]\), ordenar o trecho do</span> 
+<a id='x25-117014r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>vetor que começa no índice \( inicio </span><span id='textcolor878'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [[code:inicio]] \) e termina no índice</span> 
+<a id='x25-117016r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>\( fim </span><span id='textcolor879'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [[code:fim]]\)</span><span id='textcolor880'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Onde, \( </span><span id='textcolor881'><span class='cmtt-10x-x-109'>0</span></span><span id='textcolor882'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'>início</span><span id='textcolor883'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'>fim</span><span id='textcolor884'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'>n \), ou seja, o trecho a ser</span> 
+<a id='x25-117018r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>ordenado está entre início (inclusive) e fim (inclusive)</span><span id='textcolor885'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Vale ressaltar que</span> 
+<a id='x25-117020r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>os índices do vetor começam em </span><span id='textcolor886'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'> e terminam em \( n</span><span id='textcolor887'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor888'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>\)</span><span id='textcolor889'><span class='cmtt-10x-x-109'>.</span></span> 
+<a id='x25-117022r6'></a><span class='cmr-6'>6</span> 
+<a id='x25-117024r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>Considere esta entrada:}</span> 
+<a id='x25-117026r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>[[code:caso0_inp]]</span> 
+<a id='x25-117028r9'></a><span class='cmr-6'>9</span> 
+<a id='x25-117030r10'></a><span class='cmr-6'>10</span><span id='textcolor890'><span class='cmtt-10x-x-109'>%%</span></span><span class='cmtt-10x-x-109'>{[[code:caso0_out]]}</span><span id='textcolor891'><span class='cmtt-10x-x-109'>%%</span></span></pre>
  
 </div> 
 </div>
-<a id='x25-115031r3'></a>
-<a id='x25-115032'></a>
+<a id='x25-117031r3'></a>
+<a id='x25-117032'></a>
                                                                                                   
                                                                                                   
        </figure>
@@ -271,62 +271,62 @@ ________________________________________________________________________________
 <figure class='float' id='-exemplo-de-questao-parametrica-exata-parte-bloco-de-codigo-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-82'>    
+<div class='tcolorbox myboxCode' id='tcolobox-84'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
 _________________________________________________________________________________
-<pre class='fancyvrb' id='fancyvrb19'><a id='x25-115080r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>[[def:</span> 
-<a id='x25-115082r2'></a><span class='cmr-6'>2</span><span id='textcolor892'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor893'><span class='cmtt-10x-x-109'>json</span></span><span id='textcolor894'><span class='cmtt-10x-x-109'>,</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor895'><span class='cmtt-10x-x-109'>numpy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor896'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor897'><span class='cmtt-10x-x-109'>np</span></span> 
-<a id='x25-115084r3'></a><span class='cmr-6'>3</span> 
-<a id='x25-115086r4'></a><span class='cmr-6'>4</span><span id='textcolor898'><span class='cmitt-10x-x-109'># Passo 1: Criar os parâmetros do enunciado da questão</span></span> 
-<a id='x25-115088r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>n </span><span id='textcolor899'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor900'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor901'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor902'><span class='cmtt-10x-x-109'>20</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor903'><span class='cmtt-10x-x-109'>40</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x25-115090r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>inicio </span><span id='textcolor904'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor905'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor906'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor907'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>,n</span><span id='textcolor908'><span class='cmtt-10x-x-109'>//</span></span><span id='textcolor909'><span class='cmtt-10x-x-109'>2</span></span><span id='textcolor910'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor911'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x25-115092r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>fim </span><span id='textcolor912'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor913'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor914'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(n</span><span id='textcolor915'><span class='cmtt-10x-x-109'>//</span></span><span id='textcolor916'><span class='cmtt-10x-x-109'>2</span></span><span id='textcolor917'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor918'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>,n</span><span id='textcolor919'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor920'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x25-115094r8'></a><span class='cmr-6'>8</span> 
-<a id='x25-115096r9'></a><span class='cmr-6'>9</span><span id='textcolor921'><span class='cmitt-10x-x-109'># Passo 2: Criar os casos de teste</span></span> 
-<a id='x25-115098r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>inp_list, out_list </span><span id='textcolor922'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [], []  </span><span id='textcolor923'><span class='cmitt-10x-x-109'># Listas vazias para armazenar os casos de teste</span></span> 
-<a id='x25-115100r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>casos_teste </span><span id='textcolor924'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor925'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>  </span><span id='textcolor926'><span class='cmitt-10x-x-109'># Número de casos de teste desejado</span></span> 
-<a id='x25-115102r12'></a><span class='cmr-6'>12</span> 
-<a id='x25-115104r13'></a><span class='cmr-6'>13</span><span id='textcolor927'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor928'><span class='cmtt-10x-x-109'>ordena_parte_vetor</span></span><span class='cmtt-10x-x-109'>(vetor,inicio,fim):</span> 
-<a id='x25-115106r14'></a><span class='cmr-6'>14</span><span id='textcolor929'><span class='cmtt-10x-x-109'>    </span></span><span id='textcolor930'><span class='cmitt-10x-x-109'>""" Ordenação da parte do vetor entre inicio e fim"""</span></span> 
-<a id='x25-115108r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor931'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor932'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor933'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(inicio, fim</span><span id='textcolor934'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor935'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>):</span> 
-<a id='x25-115110r16'></a><span class='cmr-6'>16</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor936'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> j </span><span id='textcolor937'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor938'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(i</span><span id='textcolor939'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor940'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>, fim</span><span id='textcolor941'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor942'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>):</span> 
-<a id='x25-115112r17'></a><span class='cmr-6'>17</span><span class='cmtt-10x-x-109'>            </span><span id='textcolor943'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> vetor[i] </span><span id='textcolor944'><span class='cmmi-10x-x-109'>&gt;</span></span><span class='cmtt-10x-x-109'> vetor[j]:</span> 
-<a id='x25-115114r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>                vetor[i], vetor[j] </span><span id='textcolor945'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> vetor[j], vetor[i]</span> 
-<a id='x25-115116r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor946'><span class='cmitt-10x-x-109'># Retorno do vetor ordenado</span></span> 
-<a id='x25-115118r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor947'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> vetor</span> 
-<a id='x25-115120r21'></a><span class='cmr-6'>21</span> 
-<a id='x25-115122r22'></a><span class='cmr-6'>22</span><span id='textcolor948'><span class='cmitt-10x-x-109'># Para cada caso de teste:</span></span> 
-<a id='x25-115124r23'></a><span class='cmr-6'>23</span><span id='textcolor949'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor950'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor951'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(casos_teste):</span> 
-<a id='x25-115126r24'></a><span class='cmr-6'>24</span> 
-<a id='x25-115128r25'></a><span class='cmr-6'>25</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor952'><span class='cmitt-10x-x-109'>#</span><span class='cmmi-10x-x-109'>&gt;&gt;&gt;&gt;</span><span class='cmitt-10x-x-109'> begin - casos de teste</span></span> 
-<a id='x25-115130r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor953'><span class='cmitt-10x-x-109'># Gerar valores aleatórios entre 0 e 9 para a matriz</span></span> 
-<a id='x25-115132r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>    v </span><span id='textcolor954'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor955'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor956'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor957'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>, size</span><span id='textcolor958'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>n)</span> 
-<a id='x25-115134r28'></a><span class='cmr-6'>28</span> 
-<a id='x25-115136r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor959'><span class='cmitt-10x-x-109'># Criar a entrada do caso de teste como uma string</span></span> 
-<a id='x25-115138r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>    inp </span><span id='textcolor960'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor961'><span class='cmtt-10x-x-109'>' '</span></span><span id='textcolor962'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>join(</span><span id='textcolor963'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(i) </span><span id='textcolor964'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor965'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> v) </span><span id='textcolor966'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor967'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor968'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor969'><span class='cmtt-10x-x-109'>'</span></span> 
-<a id='x25-115140r31'></a><span class='cmr-6'>31</span> 
-<a id='x25-115142r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor970'><span class='cmitt-10x-x-109'># Calcular o vetor de saída</span></span> 
-<a id='x25-115144r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'>    out </span><span id='textcolor971'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor972'><span class='cmtt-10x-x-109'>' '</span></span><span id='textcolor973'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>join(</span><span id='textcolor974'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(i) </span><span id='textcolor975'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor976'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> ordena_parte_vetor(v,inicio,fim)) </span><span id='textcolor977'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor978'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor979'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor980'><span class='cmtt-10x-x-109'>'</span></span> 
-<a id='x25-115146r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor981'><span class='cmitt-10x-x-109'>#</span><span class='cmmi-10x-x-109'>&lt;&lt;&lt;&lt;</span><span class='cmitt-10x-x-109'> end - casos de teste</span></span> 
-<a id='x25-115148r35'></a><span class='cmr-6'>35</span> 
-<a id='x25-115150r36'></a><span class='cmr-6'>36</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor982'><span class='cmitt-10x-x-109'># Adicionar a entrada e saída do caso de teste às listas</span></span> 
-<a id='x25-115152r37'></a><span class='cmr-6'>37</span><span class='cmtt-10x-x-109'>    inp_list</span><span id='textcolor983'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(inp), out_list</span><span id='textcolor984'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(out)</span> 
-<a id='x25-115154r38'></a><span class='cmr-6'>38</span> 
-<a id='x25-115156r39'></a><span class='cmr-6'>39</span><span id='textcolor985'><span class='cmitt-10x-x-109'># Passo 3: Criar o dicionário com os casos de teste</span></span> 
-<a id='x25-115158r40'></a><span class='cmr-6'>40</span><span class='cmtt-10x-x-109'>cases </span><span id='textcolor986'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> {}</span> 
-<a id='x25-115160r41'></a><span class='cmr-6'>41</span><span class='cmtt-10x-x-109'>cases[</span><span id='textcolor987'><span class='cmtt-10x-x-109'>'input'</span></span><span class='cmtt-10x-x-109'>]  </span><span id='textcolor988'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor989'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>array(inp_list)</span><span id='textcolor990'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>tolist()</span> 
-<a id='x25-115162r42'></a><span class='cmr-6'>42</span><span class='cmtt-10x-x-109'>cases[</span><span id='textcolor991'><span class='cmtt-10x-x-109'>'output'</span></span><span class='cmtt-10x-x-109'>] </span><span id='textcolor992'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor993'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>array(out_list)</span><span id='textcolor994'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>tolist()</span> 
-<a id='x25-115164r43'></a><span class='cmr-6'>43</span> 
-<a id='x25-115166r44'></a><span class='cmr-6'>44</span><span id='textcolor995'><span class='cmitt-10x-x-109'># Passo 4: Mostrar um exemplo no enunciado da questão</span></span> 
-<a id='x25-115168r45'></a><span class='cmr-6'>45</span><span class='cmtt-10x-x-109'>caso0_inp, caso0_out </span><span id='textcolor996'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> cases[</span><span id='textcolor997'><span class='cmtt-10x-x-109'>'input'</span></span><span class='cmtt-10x-x-109'>][</span><span id='textcolor998'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>], cases[</span><span id='textcolor999'><span class='cmtt-10x-x-109'>'output'</span></span><span class='cmtt-10x-x-109'>][</span><span id='textcolor1000'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>]</span> 
-<a id='x25-115170r46'></a><span class='cmr-6'>46</span><span class='cmtt-10x-x-109'>]]</span></pre>
+<pre class='fancyvrb' id='fancyvrb19'><a id='x25-117080r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x25-117082r2'></a><span class='cmr-6'>2</span><span id='textcolor892'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor893'><span class='cmtt-10x-x-109'>json</span></span><span id='textcolor894'><span class='cmtt-10x-x-109'>,</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor895'><span class='cmtt-10x-x-109'>numpy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor896'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor897'><span class='cmtt-10x-x-109'>np</span></span> 
+<a id='x25-117084r3'></a><span class='cmr-6'>3</span> 
+<a id='x25-117086r4'></a><span class='cmr-6'>4</span><span id='textcolor898'><span class='cmitt-10x-x-109'># Passo 1: Criar os parâmetros do enunciado da questão</span></span> 
+<a id='x25-117088r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>n </span><span id='textcolor899'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor900'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor901'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor902'><span class='cmtt-10x-x-109'>20</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor903'><span class='cmtt-10x-x-109'>40</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x25-117090r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>inicio </span><span id='textcolor904'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor905'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor906'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor907'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>,n</span><span id='textcolor908'><span class='cmtt-10x-x-109'>//</span></span><span id='textcolor909'><span class='cmtt-10x-x-109'>2</span></span><span id='textcolor910'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor911'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x25-117092r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>fim </span><span id='textcolor912'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor913'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor914'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(n</span><span id='textcolor915'><span class='cmtt-10x-x-109'>//</span></span><span id='textcolor916'><span class='cmtt-10x-x-109'>2</span></span><span id='textcolor917'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor918'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>,n</span><span id='textcolor919'><span class='cmtt-10x-x-109'>-</span></span><span id='textcolor920'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x25-117094r8'></a><span class='cmr-6'>8</span> 
+<a id='x25-117096r9'></a><span class='cmr-6'>9</span><span id='textcolor921'><span class='cmitt-10x-x-109'># Passo 2: Criar os casos de teste</span></span> 
+<a id='x25-117098r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>inp_list, out_list </span><span id='textcolor922'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [], []  </span><span id='textcolor923'><span class='cmitt-10x-x-109'># Listas vazias para armazenar os casos de teste</span></span> 
+<a id='x25-117100r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>casos_teste </span><span id='textcolor924'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor925'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>  </span><span id='textcolor926'><span class='cmitt-10x-x-109'># Número de casos de teste desejado</span></span> 
+<a id='x25-117102r12'></a><span class='cmr-6'>12</span> 
+<a id='x25-117104r13'></a><span class='cmr-6'>13</span><span id='textcolor927'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor928'><span class='cmtt-10x-x-109'>ordena_parte_vetor</span></span><span class='cmtt-10x-x-109'>(vetor,inicio,fim):</span> 
+<a id='x25-117106r14'></a><span class='cmr-6'>14</span><span id='textcolor929'><span class='cmtt-10x-x-109'>    </span></span><span id='textcolor930'><span class='cmitt-10x-x-109'>""" Ordenação da parte do vetor entre inicio e fim"""</span></span> 
+<a id='x25-117108r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor931'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor932'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor933'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(inicio, fim</span><span id='textcolor934'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor935'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>):</span> 
+<a id='x25-117110r16'></a><span class='cmr-6'>16</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor936'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> j </span><span id='textcolor937'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor938'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(i</span><span id='textcolor939'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor940'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>, fim</span><span id='textcolor941'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor942'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'>):</span> 
+<a id='x25-117112r17'></a><span class='cmr-6'>17</span><span class='cmtt-10x-x-109'>            </span><span id='textcolor943'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> vetor[i] </span><span id='textcolor944'><span class='cmmi-10x-x-109'>&gt;</span></span><span class='cmtt-10x-x-109'> vetor[j]:</span> 
+<a id='x25-117114r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>                vetor[i], vetor[j] </span><span id='textcolor945'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> vetor[j], vetor[i]</span> 
+<a id='x25-117116r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor946'><span class='cmitt-10x-x-109'># Retorno do vetor ordenado</span></span> 
+<a id='x25-117118r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor947'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> vetor</span> 
+<a id='x25-117120r21'></a><span class='cmr-6'>21</span> 
+<a id='x25-117122r22'></a><span class='cmr-6'>22</span><span id='textcolor948'><span class='cmitt-10x-x-109'># Para cada caso de teste:</span></span> 
+<a id='x25-117124r23'></a><span class='cmr-6'>23</span><span id='textcolor949'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor950'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor951'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(casos_teste):</span> 
+<a id='x25-117126r24'></a><span class='cmr-6'>24</span> 
+<a id='x25-117128r25'></a><span class='cmr-6'>25</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor952'><span class='cmitt-10x-x-109'>#</span><span class='cmmi-10x-x-109'>&gt;&gt;&gt;&gt;</span><span class='cmitt-10x-x-109'> begin - casos de teste</span></span> 
+<a id='x25-117130r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor953'><span class='cmitt-10x-x-109'># Gerar valores aleatórios entre 0 e 9 para a matriz</span></span> 
+<a id='x25-117132r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>    v </span><span id='textcolor954'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor955'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor956'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor957'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>, size</span><span id='textcolor958'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>n)</span> 
+<a id='x25-117134r28'></a><span class='cmr-6'>28</span> 
+<a id='x25-117136r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor959'><span class='cmitt-10x-x-109'># Criar a entrada do caso de teste como uma string</span></span> 
+<a id='x25-117138r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>    inp </span><span id='textcolor960'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor961'><span class='cmtt-10x-x-109'>' '</span></span><span id='textcolor962'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>join(</span><span id='textcolor963'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(i) </span><span id='textcolor964'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor965'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> v) </span><span id='textcolor966'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor967'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor968'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor969'><span class='cmtt-10x-x-109'>'</span></span> 
+<a id='x25-117140r31'></a><span class='cmr-6'>31</span> 
+<a id='x25-117142r32'></a><span class='cmr-6'>32</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor970'><span class='cmitt-10x-x-109'># Calcular o vetor de saída</span></span> 
+<a id='x25-117144r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'>    out </span><span id='textcolor971'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor972'><span class='cmtt-10x-x-109'>' '</span></span><span id='textcolor973'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>join(</span><span id='textcolor974'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(i) </span><span id='textcolor975'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor976'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> ordena_parte_vetor(v,inicio,fim)) </span><span id='textcolor977'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor978'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor979'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor980'><span class='cmtt-10x-x-109'>'</span></span> 
+<a id='x25-117146r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor981'><span class='cmitt-10x-x-109'>#</span><span class='cmmi-10x-x-109'>&lt;&lt;&lt;&lt;</span><span class='cmitt-10x-x-109'> end - casos de teste</span></span> 
+<a id='x25-117148r35'></a><span class='cmr-6'>35</span> 
+<a id='x25-117150r36'></a><span class='cmr-6'>36</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor982'><span class='cmitt-10x-x-109'># Adicionar a entrada e saída do caso de teste às listas</span></span> 
+<a id='x25-117152r37'></a><span class='cmr-6'>37</span><span class='cmtt-10x-x-109'>    inp_list</span><span id='textcolor983'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(inp), out_list</span><span id='textcolor984'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(out)</span> 
+<a id='x25-117154r38'></a><span class='cmr-6'>38</span> 
+<a id='x25-117156r39'></a><span class='cmr-6'>39</span><span id='textcolor985'><span class='cmitt-10x-x-109'># Passo 3: Criar o dicionário com os casos de teste</span></span> 
+<a id='x25-117158r40'></a><span class='cmr-6'>40</span><span class='cmtt-10x-x-109'>cases </span><span id='textcolor986'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> {}</span> 
+<a id='x25-117160r41'></a><span class='cmr-6'>41</span><span class='cmtt-10x-x-109'>cases[</span><span id='textcolor987'><span class='cmtt-10x-x-109'>'input'</span></span><span class='cmtt-10x-x-109'>]  </span><span id='textcolor988'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor989'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>array(inp_list)</span><span id='textcolor990'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>tolist()</span> 
+<a id='x25-117162r42'></a><span class='cmr-6'>42</span><span class='cmtt-10x-x-109'>cases[</span><span id='textcolor991'><span class='cmtt-10x-x-109'>'output'</span></span><span class='cmtt-10x-x-109'>] </span><span id='textcolor992'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor993'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>array(out_list)</span><span id='textcolor994'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>tolist()</span> 
+<a id='x25-117164r43'></a><span class='cmr-6'>43</span> 
+<a id='x25-117166r44'></a><span class='cmr-6'>44</span><span id='textcolor995'><span class='cmitt-10x-x-109'># Passo 4: Mostrar um exemplo no enunciado da questão</span></span> 
+<a id='x25-117168r45'></a><span class='cmr-6'>45</span><span class='cmtt-10x-x-109'>caso0_inp, caso0_out </span><span id='textcolor996'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> cases[</span><span id='textcolor997'><span class='cmtt-10x-x-109'>'input'</span></span><span class='cmtt-10x-x-109'>][</span><span id='textcolor998'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>], cases[</span><span id='textcolor999'><span class='cmtt-10x-x-109'>'output'</span></span><span class='cmtt-10x-x-109'>][</span><span id='textcolor1000'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>]</span> 
+<a id='x25-117170r46'></a><span class='cmr-6'>46</span><span class='cmtt-10x-x-109'>]]</span></pre>
  
 </div> 
 </div>
-<a id='x25-115171r4'></a>
-<a id='x25-115172'></a>
+<a id='x25-117171r4'></a>
+<a id='x25-117172'></a>
                                                                                                   
                                                                                                   
        </figure>
@@ -336,23 +336,23 @@ ________________________________________________________________________________
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-com-resposta-exata-definida-pelos-codigos-lstquestaoqtexataparte-e-lstquestaoqtexataparte-'><img alt='PIC' height='461' src='./figs-br//cap09_questaoQT_Exata_PDF.png' width='460' /> <a id='x25-115173r3'></a>
-<a id='x25-115174'></a>
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-com-resposta-exata-definida-pelos-codigos-lstquestaoqtexataparte-e-lstquestaoqtexataparte-'><img alt='PIC' height='461' src='./figs-br//cap09_questaoQT_Exata_PDF.png' width='460' /> <a id='x25-117173r3'></a>
+<a id='x25-117174'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 9.3: </span><span class='content'>Recorte do PDF gerado para a questão com resposta exata definida pelos Códigos <a href='#x25-115031r3'>9.3<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte1  --></a>
-e <a href='#x25-115171r4'>9.4<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte2  --></a>.
-</span></figcaption><!-- tex4ht:label?: x25-115173r9  -->
+<figcaption class='caption'><span class='id'>Figura 9.3: </span><span class='content'>Recorte do PDF gerado para a questão com resposta exata definida pelos Códigos <a href='#x25-117031r3'>9.3<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte1  --></a>
+e <a href='#x25-117171r4'>9.4<!-- tex4ht:ref: lst:questaoQT_Exata_1_parte2  --></a>.
+</span></figcaption><!-- tex4ht:label?: x25-117173r9  -->
                                                                                                   
                                                                                                   
        </figure>
-<p><a id='x25-115175r211'></a></p>
-       <h4 class='subsectionHead' id='criando-exame-e-exportando-as-variacoes'><span class='titlemark'>9.1.4   </span> <a id='x25-1160004'></a>Criando exame e exportando as variações</h4>
+<p><a id='x25-117175r213'></a></p>
+       <h4 class='subsectionHead' id='criando-exame-e-exportando-as-variacoes'><span class='titlemark'>9.1.4   </span> <a id='x25-1180004'></a>Criando exame e exportando as variações</h4>
 <p class='noindent'>Com as questões definidas anteriormente, é possível agora criar um exame seguindo as
 instruções apresentadas no Capítulo <a href='livroch6.xhtml#visao-geral-dos-exames'>6<!-- tex4ht:ref: ch:exames  --></a> – <a href='livroch6.xhtml#visao-geral-dos-exames'>Visão geral dos exames<!-- tex4ht:ref: ch:exames  --></a>, e exportar as variações
 necessárias.
 </p> 
 <p class='indent'>       Após a criação do exame, é possível selecionar as quatro questões apresentadas na Figura
-<a href='#x25-116001r4'>9.4<!-- tex4ht:ref: fig:cap09_exameVariacoes_questoes  --></a>. Os detalhes do exame são apresentados na Figura <a href='#x25-116003r5'>9.5<!-- tex4ht:ref: fig:cap09_exameVariacoes_detalhes  --></a>. É importante notar que foi decidido criar
+<a href='#x25-118001r4'>9.4<!-- tex4ht:ref: fig:cap09_exameVariacoes_questoes  --></a>. Os detalhes do exame são apresentados na Figura <a href='#x25-118003r5'>9.5<!-- tex4ht:ref: fig:cap09_exameVariacoes_detalhes  --></a>. É importante notar que foi decidido criar
 somente cinco variações.
        </p> 
 <figure class='figure'> 
@@ -361,10 +361,10 @@ somente cinco variações.
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-da-tela-do-exame-com-as-quatro-questoes-marcadas-'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_questoes.png' width='460' /> <a id='x25-116001r4'></a>
-<a id='x25-116002'></a>
+<p class='indent' id='-recorte-da-tela-do-exame-com-as-quatro-questoes-marcadas-'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_questoes.png' width='460' /> <a id='x25-118001r4'></a>
+<a id='x25-118002'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 9.4: </span><span class='content'>Recorte da tela do exame com as quatro questões marcadas.                         </span></figcaption><!-- tex4ht:label?: x25-116001r9  -->
+<figcaption class='caption'><span class='id'>Figura 9.4: </span><span class='content'>Recorte da tela do exame com as quatro questões marcadas.                         </span></figcaption><!-- tex4ht:label?: x25-118001r9  -->
                                                                                                   
                                                                                                   
        </figure>
@@ -374,22 +374,22 @@ somente cinco variações.
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-da-tela-do-exame-com-os-detalhes-da-configuracao-'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_detalhes.png' width='460' /> <a id='x25-116003r5'></a>
-<a id='x25-116004'></a>
+<p class='indent' id='-recorte-da-tela-do-exame-com-os-detalhes-da-configuracao-'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_detalhes.png' width='460' /> <a id='x25-118003r5'></a>
+<a id='x25-118004'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 9.5: </span><span class='content'>Recorte da tela do exame com os detalhes da configuração.                         </span></figcaption><!-- tex4ht:label?: x25-116003r9  -->
+<figcaption class='caption'><span class='id'>Figura 9.5: </span><span class='content'>Recorte da tela do exame com os detalhes da configuração.                         </span></figcaption><!-- tex4ht:label?: x25-118003r9  -->
                                                                                                   
                                                                                                   
        </figure>
 <p class='indent'>       Para prosseguir com a criação das variações, é necessário selecionar as opções “Aiken” e
-“XML”, conforme ilustrado na Figura <a href='#x25-116005r6'>9.6<!-- tex4ht:ref: fig:cap09_exameVariacoes_variacoes  --></a>, e em seguida clicar em “Criar-Variações”. O professor
+“XML”, conforme ilustrado na Figura <a href='#x25-118005r6'>9.6<!-- tex4ht:ref: fig:cap09_exameVariacoes_variacoes  --></a>, e em seguida clicar em “Criar-Variações”. O professor
 receberá um e-mail contendo dois anexos: um no formato Aiken (TXT) e outro no formato XML, como
-mostrado na Figura <a href='#x25-116007r7'>9.7<!-- tex4ht:ref: fig:cap09_xameVariacoes_variacoes_email  --></a>. No caso deste exame com ID 480 recém-criado, os arquivos recebidos
+mostrado na Figura <a href='#x25-118007r7'>9.7<!-- tex4ht:ref: fig:cap09_xameVariacoes_variacoes_email  --></a>. No caso deste exame com ID 480 recém-criado, os arquivos recebidos
 serão:<br class='newline' />
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox myboxCode' id='tcolobox-83'>    
+<div class='tcolorbox myboxCode' id='tcolobox-85'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivos em formatos Aiken (TXT) e XML</span>_________________________________________________________
@@ -408,10 +408,10 @@ report_Exam_480_variations_DB.xml
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-da-tela-do-exame-com-os-detalhes-da-configuracao-1'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_variacoes.png' width='460' /> <a id='x25-116005r6'></a>
-<a id='x25-116006'></a>
+<p class='indent' id='-recorte-da-tela-do-exame-com-os-detalhes-da-configuracao-1'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_variacoes.png' width='460' /> <a id='x25-118005r6'></a>
+<a id='x25-118006'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 9.6: </span><span class='content'>Recorte da tela do exame com os detalhes da configuração.                         </span></figcaption><!-- tex4ht:label?: x25-116005r9  -->
+<figcaption class='caption'><span class='id'>Figura 9.6: </span><span class='content'>Recorte da tela do exame com os detalhes da configuração.                         </span></figcaption><!-- tex4ht:label?: x25-118005r9  -->
                                                                                                   
                                                                                                   
        </figure>
@@ -421,15 +421,15 @@ report_Exam_480_variations_DB.xml
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-do-email-recebido-apos-clicar-em-criarvariacoes-'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_variacoes_email.png' width='460' /> <a id='x25-116007r7'></a>
-<a id='x25-116008'></a>
+<p class='indent' id='-recorte-do-email-recebido-apos-clicar-em-criarvariacoes-'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_variacoes_email.png' width='460' /> <a id='x25-118007r7'></a>
+<a id='x25-118008'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 9.7: </span><span class='content'>Recorte do e-mail recebido após clicar em “Criar-Variações”.                      </span></figcaption><!-- tex4ht:label?: x25-116007r9  -->
+<figcaption class='caption'><span class='id'>Figura 9.7: </span><span class='content'>Recorte do e-mail recebido após clicar em “Criar-Variações”.                      </span></figcaption><!-- tex4ht:label?: x25-118007r9  -->
                                                                                                   
                                                                                                   
        </figure>
-       <h5 class='likesubsubsectionHead' id='detalhando-o-arquivo-no-formato-aiken'><a id='x25-1170004'></a>Detalhando o arquivo no formato Aiken</h5>
-<p class='noindent'>A seguir, são apresentadas as três QMs da primeira variação. Vale ressaltar que, na Figura <a href='#x25-116003r5'>9.5<!-- tex4ht:ref: fig:cap09_exameVariacoes_detalhes  --></a>, foram
+       <h5 class='likesubsubsectionHead' id='detalhando-o-arquivo-no-formato-aiken'><a id='x25-1190004'></a>Detalhando o arquivo no formato Aiken</h5>
+<p class='noindent'>A seguir, são apresentadas as três QMs da primeira variação. Vale ressaltar que, na Figura <a href='#x25-118003r5'>9.5<!-- tex4ht:ref: fig:cap09_exameVariacoes_detalhes  --></a>, foram
 solicitadas cinco variações no formato Aiken, geradas pelo MCTest. No entanto, antes de importá-las no
 Moodle, é necessário remover os comentários adicionados pelo MCTest apenas para controle. Em
 versões de produção do MCTest, esses comentários podem ser facilmente removidos. Além disso, um
@@ -438,7 +438,7 @@ exata.
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox myboxCode' id='tcolobox-84'>    
+<div class='tcolorbox myboxCode' id='tcolobox-86'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Conteúdo do arquivo </span><span class='cmtt-10x-x-109'>*_aiken.txt</span><span class='cmbx-10x-x-109'>, variação 0 e questão 1.</span>_________________________________
@@ -462,7 +462,7 @@ ANSWER: A
  
 </div> 
 </div>
-       <div class='tcolorbox myboxCode' id='tcolobox-85'>    
+       <div class='tcolorbox myboxCode' id='tcolobox-87'>    
 <div class='tcolorbox-title'>
                                                                                                   
                                                                                                   
@@ -487,7 +487,7 @@ ANSWER: D
  
 </div> 
 </div>
-       <div class='tcolorbox myboxCode' id='tcolobox-86'>    
+       <div class='tcolorbox myboxCode' id='tcolobox-88'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Conteúdo do arquivo </span><span class='cmtt-10x-x-109'>*_aiken.txt</span><span class='cmbx-10x-x-109'>, variação 0 e questão 3.</span>_________________________________
@@ -508,7 +508,7 @@ ANSWER: B
  
 </div> 
 </div>
-       <h5 class='likesubsubsectionHead' id='detalhando-o-arquivo-no-formato-xml-para-qm'><a id='x25-1180004'></a>Detalhando o arquivo no formato XML para QM</h5>
+       <h5 class='likesubsubsectionHead' id='detalhando-o-arquivo-no-formato-xml-para-qm'><a id='x25-1200004'></a>Detalhando o arquivo no formato XML para QM</h5>
 <p class='noindent'>A seguir é detalhado o arquivo no formato XML que contém a primeira QM da primeira variação.
 Diferentemente do formato Aiken, os comentários iniciados com o símbolo “#” neste formato XML não
 precisam ser removidos. No entanto, antes de importá-las no Moodle, é necessário remover os
@@ -531,7 +531,7 @@ categoria <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>mul
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox myboxCode' id='tcolobox-87'>    
+<div class='tcolorbox myboxCode' id='tcolobox-89'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Conteúdo do arquivo </span><span class='cmtt-10x-x-109'>*.xml</span><span class='cmbx-10x-x-109'>, variação 0 e questão 1 – categoria.</span>_________________________
@@ -571,7 +571,7 @@ categoria <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>mul
  
 </div> 
 </div>
-       <div class='tcolorbox myboxCode' id='tcolobox-88'>    
+       <div class='tcolorbox myboxCode' id='tcolobox-90'>    
 <div class='tcolorbox-title'>
                                                                                                   
                                                                                                   
@@ -641,7 +641,7 @@ categoria <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>mul
 </div>
                                                                                                   
                                                                                                   
-       <div class='tcolorbox myboxCode' id='tcolobox-89'>    
+       <div class='tcolorbox myboxCode' id='tcolobox-91'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Conteúdo do arquivo </span><span class='cmtt-10x-x-109'>*.xml</span><span class='cmbx-10x-x-109'>, variação 0 e questão 1 – alternativas.</span>______________________
@@ -701,7 +701,7 @@ categoria <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>mul
 </div>
                                                                                                   
                                                                                                   
-       <h5 class='likesubsubsectionHead' id='detalhando-o-arquivo-no-formato-xml-questao-com-resposta-exata'><a id='x25-1190004'></a>Detalhando o arquivo no formato XML – questão com resposta exata</h5>
+       <h5 class='likesubsubsectionHead' id='detalhando-o-arquivo-no-formato-xml-questao-com-resposta-exata'><a id='x25-1210004'></a>Detalhando o arquivo no formato XML – questão com resposta exata</h5>
 <p class='noindent'>A seguir, serão apresentados os detalhes do arquivo XML referente à questão com resposta exata. A
 hierarquia desta questão foi <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>top/shortanswer/Topico Exemplo/diff1/resposta exata</span></span></span>. É relevante
 ressaltar que essa questão foi agrupada na categoria <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>shortanswer</span></span></span>, diferentemente das QMs, que utilizam a
@@ -711,7 +711,7 @@ formatação.
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox myboxCode' id='tcolobox-90'>    
+<div class='tcolorbox myboxCode' id='tcolobox-92'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Conteúdo do arquivo </span><span class='cmtt-10x-x-109'>*.xml</span><span class='cmbx-10x-x-109'>, variação 0 e questão com resposta exata – categoria.</span>__
@@ -738,7 +738,7 @@ formatação.
  
 </div> 
 </div>
-       <div class='tcolorbox myboxCode' id='tcolobox-91'>    
+       <div class='tcolorbox myboxCode' id='tcolobox-93'>    
 <div class='tcolorbox-title'>
                                                                                                   
                                                                                                   
@@ -778,7 +778,7 @@ Considere esta entrada:
  
 </div> 
 </div>
-       <div class='tcolorbox myboxCode' id='tcolobox-92'>    
+       <div class='tcolorbox myboxCode' id='tcolobox-94'>    
 <div class='tcolorbox-title'>
                                                                                                   
                                                                                                   
@@ -840,10 +840,10 @@ Considere esta entrada:
  
 </div> 
 </div>
-<p><a id='x25-119001r204'></a></p>
+<p><a id='x25-121001r206'></a></p>
                                                                                                   
                                                                                                   
-       <h3 class='sectionHead' id='importando-arquivo-xml-no-moodle'><span class='titlemark'>9.2   </span> <a id='x25-1200002'></a>Importando arquivo XML no Moodle</h3>
+       <h3 class='sectionHead' id='importando-arquivo-xml-no-moodle'><span class='titlemark'>9.2   </span> <a id='x25-1220002'></a>Importando arquivo XML no Moodle</h3>
 <p class='noindent'>Como o formato Aiken apresenta algumas limitações, como a impossibilidade de criar questões com
 resposta exata, será apresentado a seguir um tutorial para importar e criar questionários no Moodle
 usando o formato XML.
@@ -852,11 +852,11 @@ usando o formato XML.
 Dados”, presente no menu de configurações, representado por uma engrenagem. Em seguida, basta
 escolher a opção “Importação”, selecionar o formato XML e mover o arquivo correspondente para a
 área especificada. Ao clicar em “Importar”, as 20 questões serão carregadas e poderão ser visualizadas,
-como ilustrado na Figura <a href='#x25-120001r8'>9.8<!-- tex4ht:ref: fig:cap09_exameVariacoes_QM_moodle  --></a> para uma QM e na Figura <a href='#x25-120003r9'>9.9<!-- tex4ht:ref: fig:cap09_exameVariacoes_exata_moodle  --></a> para uma questão com resposta exata. Na
-Figura <a href='#x25-116003r5'>9.5<!-- tex4ht:ref: fig:cap09_exameVariacoes_detalhes  --></a> foram 3 QMs, 1 QT e 5 variações ((3 + 1) <span class='cmsy-10x-x-120'>∗ </span>5 = 20).
+como ilustrado na Figura <a href='#x25-122001r8'>9.8<!-- tex4ht:ref: fig:cap09_exameVariacoes_QM_moodle  --></a> para uma QM e na Figura <a href='#x25-122003r9'>9.9<!-- tex4ht:ref: fig:cap09_exameVariacoes_exata_moodle  --></a> para uma questão com resposta exata. Na
+Figura <a href='#x25-118003r5'>9.5<!-- tex4ht:ref: fig:cap09_exameVariacoes_detalhes  --></a> foram 3 QMs, 1 QT e 5 variações ((3 + 1) <span class='cmsy-10x-x-120'>∗ </span>5 = 20).
 </p> 
 <p class='indent'>       Vale ressaltar que o uso de formatação em LaTeX no Moodle apresenta muitas limitações em
-comparação com o PDF gerado pelo MCTest, como ilustrado na Figura <a href='#x25-120003r9'>9.9<!-- tex4ht:ref: fig:cap09_exameVariacoes_exata_moodle  --></a>.
+comparação com o PDF gerado pelo MCTest, como ilustrado na Figura <a href='#x25-122003r9'>9.9<!-- tex4ht:ref: fig:cap09_exameVariacoes_exata_moodle  --></a>.
        </p> 
 <figure class='figure'> 
 
@@ -864,10 +864,10 @@ comparação com o PDF gerado pelo MCTest, como ilustrado na Figura <a href='#x2
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-exemplo-de-qm-no-moodle-'><img alt='PIC' height='358' src='./figs-br//cap09_exameVariacoes_QM_moodle.png' width='358' /> <a id='x25-120001r8'></a>
-<a id='x25-120002'></a>
+<p class='indent' id='-exemplo-de-qm-no-moodle-'><img alt='PIC' height='358' src='./figs-br//cap09_exameVariacoes_QM_moodle.png' width='358' /> <a id='x25-122001r8'></a>
+<a id='x25-122002'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 9.8: </span><span class='content'>Exemplo de QM no Moodle.                                                          </span></figcaption><!-- tex4ht:label?: x25-120001r9  -->
+<figcaption class='caption'><span class='id'>Figura 9.8: </span><span class='content'>Exemplo de QM no Moodle.                                                          </span></figcaption><!-- tex4ht:label?: x25-122001r9  -->
                                                                                                   
                                                                                                   
        </figure>
@@ -877,14 +877,14 @@ comparação com o PDF gerado pelo MCTest, como ilustrado na Figura <a href='#x2
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-exemplo-da-questao-exata-do-moodle-'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_exata_moodle.png' width='460' /> <a id='x25-120003r9'></a>
-<a id='x25-120004'></a>
+<p class='indent' id='-exemplo-da-questao-exata-do-moodle-'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_exata_moodle.png' width='460' /> <a id='x25-122003r9'></a>
+<a id='x25-122004'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 9.9: </span><span class='content'>Exemplo da questão exata do Moodle.                                               </span></figcaption><!-- tex4ht:label?: x25-120003r9  -->
+<figcaption class='caption'><span class='id'>Figura 9.9: </span><span class='content'>Exemplo da questão exata do Moodle.                                               </span></figcaption><!-- tex4ht:label?: x25-122003r9  -->
                                                                                                   
                                                                                                   
        </figure>
-<p class='indent'>       Em termos de comparação, observe na Figura <a href='#x25-120005r10'>9.10<!-- tex4ht:ref: fig:cap09_exameVariacoes_PDF_MCTest  --></a> como seria um exame em PDF
+<p class='indent'>       Em termos de comparação, observe na Figura <a href='#x25-122005r10'>9.10<!-- tex4ht:ref: fig:cap09_exameVariacoes_PDF_MCTest  --></a> como seria um exame em PDF
 gerado pelo MCTest com essas variações das 3 QMs, seguido por uma QT com resposta
 exata. O professor também pode corrigir esse estilo de exame digitalizando-o para corrigir as
 QMs. Quanto à QT, o professor pode corrigi-la manualmente, comparando a resposta exata do
@@ -900,15 +900,15 @@ na Seção <a href='livroch12.xhtml#artigo-descrevendo-o-mctest-em-conjunto-com-
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-exemplo-exame-gerado-pelo-mctest-'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_PDF_MCTest.png' width='460' /> <a id='x25-120005r10'></a>
-<a id='x25-120006'></a>
+<p class='indent' id='-exemplo-exame-gerado-pelo-mctest-'><img alt='PIC' height='461' src='./figs-br//cap09_exameVariacoes_PDF_MCTest.png' width='460' /> <a id='x25-122005r10'></a>
+<a id='x25-122006'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 9.10: </span><span class='content'>Exemplo exame gerado pelo MCTest.                                                </span></figcaption><!-- tex4ht:label?: x25-120005r9  -->
+<figcaption class='caption'><span class='id'>Figura 9.10: </span><span class='content'>Exemplo exame gerado pelo MCTest.                                                </span></figcaption><!-- tex4ht:label?: x25-122005r9  -->
                                                                                                   
                                                                                                   
        </figure>
-<p><a id='x25-120007r223'></a></p>
-       <h3 class='sectionHead' id='consideracoes-finais7'><span class='titlemark'>9.3   </span> <a id='x25-1210003'></a>Considerações finais</h3>
+<p><a id='x25-122007r225'></a></p>
+       <h3 class='sectionHead' id='consideracoes-finais7'><span class='titlemark'>9.3   </span> <a id='x25-1230003'></a>Considerações finais</h3>
 <p class='noindent'>Neste capítulo apresentou-se a utilização do recurso do MCTest que permite exportar variações de
 um exame nos formatos Aiken e XML para o Moodle, a fim de criar um banco de questões. Utilizou-se
 uma questão apresentada no Capítulo <a href='livroch8.xhtml#exames-com-qrqm-eou-qt'>8<!-- tex4ht:ref: ch:examesQM_QT  --></a> - <a href='livroch8.xhtml#exames-com-qrqm-eou-qt'>Exames com QR+QM e/ou QT<!-- tex4ht:ref: ch:examesQM_QT  --></a>, além de criar novas
