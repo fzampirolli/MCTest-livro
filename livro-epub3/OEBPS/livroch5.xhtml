@@ -219,12 +219,25 @@ são variáveis definidas em Python entre as marcações <span class='obeylines-
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Marcações principais definidas no MCTest:</span><br class='newline' />___________________________________________________________________________________________________________ </p> 
 <dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
    1.  </dt><dd class='enumerate-enumitem'>Instruções que podem representar a parte paramétrica do enunciado da questão
-        são colocadas entre as marcações <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code:</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>, conforme exemplificado na linha 1
-        do Código <a href='#x20-64102r2'>5.2<!-- tex4ht:ref: lst:questaoQM_AreaCirculoEx1  --></a>;
+        ou  das  alternativas  são  colocadas  entre  as  marcações  <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code:</span></span></span> e  <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>,  conforme
+        exemplificado na linha 1 do Código <a href='#x20-64102r2'>5.2<!-- tex4ht:ref: lst:questaoQM_AreaCirculoEx1  --></a>;
         </dd><dt class='enumerate-enumitem'>
     2.  </dt><dd class='enumerate-enumitem'>Após esse enunciado, um único bloco de código em Python deve ser definido entre
         as marcações <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[def:</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>, como ilustrado entre as linhas 6 e 30 do exemplo. Todo o
         texto após esse bloco é descartado do enunciado da questão.</dd></dl>
+ 
+</div> 
+</div>
+       <div class='tcolorbox mybox' id='tcolobox-30'>    
+<div class='tcolorbox-title'>
+       </div> 
+<div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Destaque:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
+<p class='indent'>Em alguns casos, ocorre um erro no retorno da expressão regular para capturar as variáveis
+ou instruções delimitadas por <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code:</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>. Nesses casos, é necessário adicionar um
+espaço  antes  de  <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code:</span></span></span> e  após  <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>.  O  método  <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>get_code</span></span></span> disponível  no  GitHub  em
+<a href='https://github.com/fzampirolli/mctest/blob/master/topic/UtilsMCTest4.py'>UtilsMCTest4.py</a> propõe uma sugestão de modificação na expressão regular. No entanto,
+essa sugestão apresenta uma falha quando ocorre uma sequência de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span> dentro de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[def:</span></span></span> e
+<span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>. Assim, para evitar problemas, use sempre espaços antes de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>[[code:</span></span></span> e após <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>]]</span></span></span>. </p> 
  
 </div> 
 </div>
@@ -239,7 +252,7 @@ exemplos:
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox myboxCode' id='tcolobox-30'>    
+<div class='tcolorbox myboxCode' id='tcolobox-31'>    
 <div class='tcolorbox-title'>
                                                                                                   
                                                                                                   
@@ -277,7 +290,7 @@ MCTest.
 <figure class='float' id='-exemplo-de-qm-parametrica-para-calcular-a-area-do-circulo-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-31'>    
+<div class='tcolorbox myboxCode' id='tcolobox-32'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
@@ -348,7 +361,7 @@ erradas criadas pelo método <span class='obeylines-h'><span class='verb'><span 
 <figure class='float' id='-exemplo-de-qm-parametrica-para-calcular-a-area-do-circulo-utilizando-o-metodo-createwronganswers-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-32'>    
+<div class='tcolorbox myboxCode' id='tcolobox-33'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
@@ -425,7 +438,7 @@ apresentado na Figura <a href='#x20-67126r2'>5.2<!-- tex4ht:ref: fig:cap05_quest
 <figure class='float' id='-exemplo-simples-de-descricao-de-qt-parametrica-para-teste-de-mesa-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-33'>    
+<div class='tcolorbox myboxCode' id='tcolobox-34'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
@@ -560,7 +573,7 @@ a 14 linhas serão consideradas.
 <figure class='float' id='-exemplo-pratico-de-teste-de-mesa-parametrico-mostrando-o-gabarito-parte-descricao-de-questao-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-34'>    
+<div class='tcolorbox myboxCode' id='tcolobox-35'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
@@ -619,7 +632,7 @@ ________________________________________________________________________________
 <figure class='float' id='-exemplo-pratico-de-teste-de-mesa-parametrico-mostrando-o-gabarito-parte-bloco-de-codigo-em-python-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-35'>    
+<div class='tcolorbox myboxCode' id='tcolobox-36'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
@@ -742,7 +755,7 @@ para imprimir informações adicionais ou para armazenar informações em um arq
 <figure class='float' id='-exemplo-de-uso-de-syssettrace-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-36'>    
+<div class='tcolorbox myboxCode' id='tcolobox-37'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
@@ -777,7 +790,7 @@ seguir:
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox myboxCode' id='tcolobox-37'>    
+<div class='tcolorbox myboxCode' id='tcolobox-38'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Saída do Código </span><a href='#x20-70049r7'><span class='cmbx-10x-x-109'>5.7</span><!-- tex4ht:ref: lst:questaoQT_TesteMesaEx4Parte1  --></a><span class='cmbx-10x-x-109'>:</span>___________________________________________________________________________________
@@ -847,7 +860,7 @@ desejado.
 <figure class='float' id='-exemplo-pratico-de-teste-de-mesa-parametrico-utilizando-syssettrace-parte-descricao-de-questao-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-38'>    
+<div class='tcolorbox myboxCode' id='tcolobox-39'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
@@ -902,7 +915,7 @@ ________________________________________________________________________________
 <figure class='float' id='-exemplo-pratico-de-teste-de-mesa-parametrico-utilizando-syssettrace-parte-bloco-de-codigo-em-python-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-39'>    
+<div class='tcolorbox myboxCode' id='tcolobox-40'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
@@ -1037,7 +1050,7 @@ de um número:
       por exemplo;
       </dd><dt class='enumerate-enumitem'>
    5. </dt><dd class='enumerate-enumitem'>Na seção “Casos de teste”, você pode definir os casos de teste da seguinte maneira:
-      <div class='tcolorbox myboxCode' id='tcolobox-40'>    
+      <div class='tcolorbox myboxCode' id='tcolobox-41'>    
 <div class='tcolorbox-title'>
       </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo com os casos de teste:</span>___________________________________________________________________
@@ -1083,7 +1096,7 @@ calculado.
 <figure class='float' id='-programa-em-python-para-calculo-do-fatorial-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-41'>    
+<div class='tcolorbox myboxCode' id='tcolobox-42'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Código:  </span><span class='cmr-10x-x-109'>Exemplo de uso de atividade Moodle+VPL</span>
@@ -1134,7 +1147,7 @@ também devem ser incluídos nesse campo. A versão utilizada neste livro está 
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox mybox' id='tcolobox-42'>    
+<div class='tcolorbox mybox' id='tcolobox-43'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
@@ -1172,7 +1185,7 @@ Moodle.
 <figure class='float' id='-programa-em-python-para-calculo-de-parcelas-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-43'>    
+<div class='tcolorbox myboxCode' id='tcolobox-44'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Código:  </span><span class='cmr-10x-x-109'>Exemplo de uso de atividade Moodle+VPL – Parcelas</span>
@@ -1201,7 +1214,7 @@ para o exemplo de cálculo de parcelas sem juros:
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox myboxCode' id='tcolobox-44'>    
+<div class='tcolorbox myboxCode' id='tcolobox-45'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Dicionário usado no MCTest contendo os casos de teste:</span>_______________________________________
@@ -1222,7 +1235,7 @@ equivalente aos seguintes casos de teste.
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox myboxCode' id='tcolobox-45'>    
+<div class='tcolorbox myboxCode' id='tcolobox-46'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivo com os casos de teste:</span>__________________________________________________________________________
@@ -1262,7 +1275,7 @@ teste.
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox mybox' id='tcolobox-46'>    
+<div class='tcolorbox mybox' id='tcolobox-47'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
@@ -1288,7 +1301,7 @@ Moodle.
 <figure class='float' id='-exemplo-de-qt-parametrica-utilizando-mctestmoodlevpl-parte-descricao-de-questao-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-47'>    
+<div class='tcolorbox myboxCode' id='tcolobox-48'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
@@ -1337,7 +1350,7 @@ MCTest.
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox mybox' id='tcolobox-48'>    
+<div class='tcolorbox mybox' id='tcolobox-49'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Atenção:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
@@ -1355,7 +1368,7 @@ tornando o processo de criação mais flexível e personalizado. </p>
 <figure class='float' id='-exemplo-de-qt-parametrica-utilizando-mctestmoodlevpl-parte-bloco-de-codigo-em-python-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-49'>    
+<div class='tcolorbox myboxCode' id='tcolobox-50'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>

@@ -6,10 +6,10 @@
 <link href='livro.css' rel='stylesheet' type='text/css' /> 
 </head><body>
        <!-- l. 1 --><div class='crosslinks'><p class='noindent'></p></div>
-       <h2 class='chapterHead' id='exames-com-mctestmoodlevpl'><span class='titlemark'>Capítulo 10</span><br /><a id='x26-12400010'></a>Exames com MCTest+Moodle+VPL</h2>
+       <h2 class='chapterHead' id='exames-com-mctestmoodlevpl'><span class='titlemark'>Capítulo 10</span><br /><a id='x26-12500010'></a>Exames com MCTest+Moodle+VPL</h2>
        <hr />
        <hr />
-       <div class='tcolorbox mybox' id='tcolobox-95'>    
+       <div class='tcolorbox mybox' id='tcolobox-106'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-12x-x-120'>Conteúdo</span>___________________________________________________________________________
@@ -56,10 +56,10 @@ partir de 2019, resumidas em <a href='http://vision.ufabc.edu.br'>vision.ufabc.e
 modificações realizadas nesses arquivos de configuração, mas apenas será destacado como
 incluir os arquivos gerados pelo MCTest, necessários para a correção automática no <span class='cmti-12'>plugin</span>
 VPL.
-<a id='x26-124001r229'></a>
+<a id='x26-125001r230'></a>
        </p> 
 
-       <h3 class='sectionHead' id='criando-um-exame-com-qt-integrado-ao-vpl'><span class='titlemark'>10.1   </span> <a id='x26-1250001'></a>Criando um exame com QT integrado ao VPL</h3>
+       <h3 class='sectionHead' id='criando-um-exame-com-qt-integrado-ao-vpl'><span class='titlemark'>10.1   </span> <a id='x26-1260001'></a>Criando um exame com QT integrado ao VPL</h3>
 <p class='noindent'>Como já foi introduzido na Seção <a href='livroch5.xhtml#qt-parametrica-com-codigo'>5.3<!-- tex4ht:ref: sec:questoesQT_VPL  --></a> – <a href='livroch5.xhtml#qt-parametrica-com-codigo'>QT paramétrica, com código<!-- tex4ht:ref: sec:questoesQT_VPL  --></a>, o VPL é um <span class='cmti-12'>plugin </span>do Moodle
 para correção de atividades em que os estudantes devem submeter seus EPs para correção
 automática. Basicamente, são dois arquivos criados pelo MCTest que devem ser inseridos
@@ -76,14 +76,14 @@ do exame.
 demonstrado nos Códigos <a href='livroch5.xhtml#x20-82061r12'>5.12<!-- tex4ht:ref: lst:questaoQT_EP_1_parte1  --></a> e <a href='livroch5.xhtml#x20-82195r13'>5.13<!-- tex4ht:ref: lst:questaoQT_EP_1_parte2  --></a>. Uma versão alterada dessa questão também foi ilustrada na
 Figura <a href='livroch5.xhtml#x20-82197r5'>5.5<!-- tex4ht:ref: fig:cap05_questaoQT_EP_1  --></a>. Posteriormente, uma questão simples será acrescentada, com integração ao VPL, para ser
 incluída neste novo exame.
-<a id='x26-125001r217'></a>
+<a id='x26-126001r218'></a>
        </p> 
 
-       <h4 class='subsectionHead' id='criando-uma-nova-questao-integrada-ao-vpl'><span class='titlemark'>10.1.1   </span> <a id='x26-1260001'></a>Criando uma nova questão integrada ao VPL</h4>
+       <h4 class='subsectionHead' id='criando-uma-nova-questao-integrada-ao-vpl'><span class='titlemark'>10.1.1   </span> <a id='x26-1270001'></a>Criando uma nova questão integrada ao VPL</h4>
 <p class='noindent'>Considere a seguinte questão sobre matrizes para a disciplina CS1, apresentada nos Códigos
-<a href='#x26-126061r1'>10.1<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte1  --></a> e <a href='#x26-126198r2'>10.2<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte2  --></a>. Nesta questão, o usuário deve ler os elementos de uma matriz de dimensões
+<a href='#x26-127061r1'>10.1<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte1  --></a> e <a href='#x26-127198r2'>10.2<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte2  --></a>. Nesta questão, o usuário deve ler os elementos de uma matriz de dimensões
 paramétricas, calcular a soma dos elementos e exibir o resultado, como apresentado na Figura
-<a href='#x26-126241r1'>10.1<!-- tex4ht:ref: fig:cap10_questaoQT_EP_2_matriz  --></a>.
+<a href='#x26-127241r1'>10.1<!-- tex4ht:ref: fig:cap10_questaoQT_EP_2_matriz  --></a>.
                                                                                                   
                                                                                                   
 </p> 
@@ -91,36 +91,36 @@ paramétricas, calcular a soma dos elementos e exibir o resultado, como apresent
 <figure class='float' id='-exemplo-de-questao-com-matriz-utilizando-mctestmoodlevpl-parte-descricao-de-questao-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-96'>    
+<div class='tcolorbox myboxCode' id='tcolobox-107'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
 _________________________________________________________________________________
-<pre class='fancyvrb' id='fancyvrb20'><a id='x26-126022r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Considere uma matriz de inteiros de dimensões \([[code:Linhas]] \times</span> 
-<a id='x26-126024r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>[[code:Colunas]]\)</span><span id='textcolor1001'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Escreva um programa capaz de calcular a soma de todos</span> 
-<a id='x26-126026r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>os elementos dessa matriz</span><span id='textcolor1002'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> O programa deve solicitar ao usuário os números</span> 
-<a id='x26-126028r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>inteiros da matriz, linha por linha</span><span id='textcolor1003'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Ao final, o programa deve exibir a</span> 
-<a id='x26-126030r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>soma de todos os elementos da matriz</span><span id='textcolor1004'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Veja exemplo a seguir: \\</span> 
-<a id='x26-126032r6'></a><span class='cmr-6'>6</span> 
-<a id='x26-126034r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>\noindent\textbf{Exemplo de Entrada:}</span> 
-<a id='x26-126036r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
-<a id='x26-126038r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>[[code:caso0_inp]]</span> 
-<a id='x26-126040r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
-<a id='x26-126042r11'></a><span class='cmr-6'>11</span> 
-<a id='x26-126044r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>\noindent\textbf{Exemplo de Saída:}</span> 
-<a id='x26-126046r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
-<a id='x26-126048r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>[[code:caso0_out]]</span> 
-<a id='x26-126050r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
-<a id='x26-126052r16'></a><span class='cmr-6'>16</span> 
-<a id='x26-126054r17'></a><span class='cmr-6'>17</span><span id='textcolor1005'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> necessário para gerar casos de testes no moodle</span> 
-<a id='x26-126056r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>\begin{comment}</span> 
-<a id='x26-126058r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>[[code:moodle_cases]]</span> 
-<a id='x26-126060r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>\end{comment}</span></pre>
+<pre class='fancyvrb' id='fancyvrb20'><a id='x26-127022r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>Considere uma matriz de inteiros de dimensões \([[code:Linhas]] \times</span> 
+<a id='x26-127024r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>[[code:Colunas]]\)</span><span id='textcolor1001'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Escreva um programa capaz de calcular a soma de todos</span> 
+<a id='x26-127026r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>os elementos dessa matriz</span><span id='textcolor1002'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> O programa deve solicitar ao usuário os números</span> 
+<a id='x26-127028r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>inteiros da matriz, linha por linha</span><span id='textcolor1003'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Ao final, o programa deve exibir a</span> 
+<a id='x26-127030r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>soma de todos os elementos da matriz</span><span id='textcolor1004'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'> Veja exemplo a seguir: \\</span> 
+<a id='x26-127032r6'></a><span class='cmr-6'>6</span> 
+<a id='x26-127034r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>\noindent\textbf{Exemplo de Entrada:}</span> 
+<a id='x26-127036r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
+<a id='x26-127038r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>[[code:caso0_inp]]</span> 
+<a id='x26-127040r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
+<a id='x26-127042r11'></a><span class='cmr-6'>11</span> 
+<a id='x26-127044r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>\noindent\textbf{Exemplo de Saída:}</span> 
+<a id='x26-127046r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>\begin{verbatim}</span> 
+<a id='x26-127048r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>[[code:caso0_out]]</span> 
+<a id='x26-127050r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>\end{verbatim}</span> 
+<a id='x26-127052r16'></a><span class='cmr-6'>16</span> 
+<a id='x26-127054r17'></a><span class='cmr-6'>17</span><span id='textcolor1005'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> necessário para gerar casos de testes no moodle</span> 
+<a id='x26-127056r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>\begin{comment}</span> 
+<a id='x26-127058r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>[[code:moodle_cases]]</span> 
+<a id='x26-127060r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>\end{comment}</span></pre>
  
 </div> 
 </div>
-<a id='x26-126061r1'></a>
-<a id='x26-126062'></a>
+<a id='x26-127061r1'></a>
+<a id='x26-127062'></a>
                                                                                                   
                                                                                                   
        </figure>
@@ -130,65 +130,65 @@ ________________________________________________________________________________
 <figure class='float' id='-exemplo-de-questao-com-matriz-utilizando-mctestmoodlevpl-parte-bloco-de-codigo-em-python-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-97'>    
+<div class='tcolorbox myboxCode' id='tcolobox-108'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
 _________________________________________________________________________________
-<pre class='fancyvrb' id='fancyvrb21'><a id='x26-126109r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>[[def:</span> 
-<a id='x26-126111r2'></a><span class='cmr-6'>2</span><span id='textcolor1006'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1007'><span class='cmtt-10x-x-109'>json</span></span><span id='textcolor1008'><span class='cmtt-10x-x-109'>,</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1009'><span class='cmtt-10x-x-109'>numpy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1010'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1011'><span class='cmtt-10x-x-109'>np</span></span> 
-<a id='x26-126113r3'></a><span class='cmr-6'>3</span> 
-<a id='x26-126115r4'></a><span class='cmr-6'>4</span><span id='textcolor1012'><span class='cmitt-10x-x-109'># Passo 1: Criar os parâmetros do enunciado da questão</span></span> 
-<a id='x26-126117r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>Linhas, Colunas </span><span id='textcolor1013'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>  np</span><span id='textcolor1014'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor1015'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor1016'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1017'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>, size</span><span id='textcolor1018'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1019'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x26-126119r6'></a><span class='cmr-6'>6</span> 
-<a id='x26-126121r7'></a><span class='cmr-6'>7</span><span id='textcolor1020'><span class='cmitt-10x-x-109'># Passo 2: Criar os casos de teste</span></span> 
-<a id='x26-126123r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>inp_list, out_list </span><span id='textcolor1021'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [], []  </span><span id='textcolor1022'><span class='cmitt-10x-x-109'># Listas vazias para armazenar os casos de teste</span></span> 
-<a id='x26-126125r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>casos_teste </span><span id='textcolor1023'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1024'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>  </span><span id='textcolor1025'><span class='cmitt-10x-x-109'># Número de casos de teste desejado</span></span> 
-<a id='x26-126127r10'></a><span class='cmr-6'>10</span><span id='textcolor1026'><span class='cmitt-10x-x-109'># Aumentar esse número após validar a questão também na atividade VPL do Moodle</span></span> 
-<a id='x26-126129r11'></a><span class='cmr-6'>11</span> 
-<a id='x26-126131r12'></a><span class='cmr-6'>12</span><span id='textcolor1027'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1028'><span class='cmtt-10x-x-109'>matriz2texto</span></span><span class='cmtt-10x-x-109'>(M):</span> 
-<a id='x26-126133r13'></a><span class='cmr-6'>13</span><span id='textcolor1029'><span class='cmtt-10x-x-109'>    </span></span><span id='textcolor1030'><span class='cmitt-10x-x-109'>"""Converte uma matriz em formato de texto."""</span></span> 
-<a id='x26-126135r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>    texto </span><span id='textcolor1031'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1032'><span class='cmtt-10x-x-109'>''</span></span> 
-<a id='x26-126137r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1033'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> linha </span><span id='textcolor1034'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> M:</span> 
-<a id='x26-126139r16'></a><span class='cmr-6'>16</span><span class='cmtt-10x-x-109'>        texto </span><span id='textcolor1035'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1036'><span class='cmtt-10x-x-109'>' '</span></span><span id='textcolor1037'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>join(</span><span id='textcolor1038'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor1039'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor1040'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>elemento</span><span id='textcolor1041'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor1042'><span class='cmtt-10x-x-109'>1d</span></span><span id='textcolor1043'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1044'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1045'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> elemento </span><span id='textcolor1046'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> linha) </span><span id='textcolor1047'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1048'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor1049'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor1050'><span class='cmtt-10x-x-109'>'</span></span> 
-<a id='x26-126141r17'></a><span class='cmr-6'>17</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1051'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> texto</span> 
-<a id='x26-126143r18'></a><span class='cmr-6'>18</span> 
-<a id='x26-126145r19'></a><span class='cmr-6'>19</span><span id='textcolor1052'><span class='cmitt-10x-x-109'># Para cada caso de teste:</span></span> 
-<a id='x26-126147r20'></a><span class='cmr-6'>20</span><span id='textcolor1053'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor1054'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1055'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(casos_teste):</span> 
-<a id='x26-126149r21'></a><span class='cmr-6'>21</span> 
-<a id='x26-126151r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1056'><span class='cmitt-10x-x-109'>#</span><span class='cmmi-10x-x-109'>&gt;&gt;&gt;&gt;</span><span class='cmitt-10x-x-109'> begin - casos de teste</span></span> 
-<a id='x26-126153r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1057'><span class='cmitt-10x-x-109'># Gerar valores aleatórios entre 0 e 9 para a matriz</span></span> 
-<a id='x26-126155r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>    M </span><span id='textcolor1058'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1059'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor1060'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor1061'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>, size</span><span id='textcolor1062'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>(Linhas, Colunas))</span> 
-<a id='x26-126157r25'></a><span class='cmr-6'>25</span> 
-<a id='x26-126159r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1063'><span class='cmitt-10x-x-109'># Criar a entrada do caso de teste como uma string</span></span> 
-<a id='x26-126161r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>    inp </span><span id='textcolor1064'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> matriz2texto(M) </span><span id='textcolor1065'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor1066'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor1067'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor1068'><span class='cmtt-10x-x-109'>'</span></span> 
-<a id='x26-126163r28'></a><span class='cmr-6'>28</span> 
-<a id='x26-126165r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1069'><span class='cmitt-10x-x-109'># Calcular o valor da parcela arredondado para duas casas decimais</span></span> 
-<a id='x26-126167r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>    out </span><span id='textcolor1070'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1071'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor1072'><span class='cmtt-10x-x-109'>'soma = </span></span><span id='textcolor1073'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>np</span><span id='textcolor1074'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sum(M)</span><span id='textcolor1075'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1076'><span class='cmtt-10x-x-109'>'</span></span> 
-<a id='x26-126169r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1077'><span class='cmitt-10x-x-109'>#</span><span class='cmmi-10x-x-109'>&lt;&lt;&lt;&lt;</span><span class='cmitt-10x-x-109'> end - casos de teste</span></span> 
-<a id='x26-126171r32'></a><span class='cmr-6'>32</span> 
-<a id='x26-126173r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1078'><span class='cmitt-10x-x-109'># Adicionar a entrada e saída do caso de teste às listas</span></span> 
-<a id='x26-126175r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>    inp_list</span><span id='textcolor1079'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(inp), out_list</span><span id='textcolor1080'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(out)</span> 
-<a id='x26-126177r35'></a><span class='cmr-6'>35</span> 
-<a id='x26-126179r36'></a><span class='cmr-6'>36</span><span id='textcolor1081'><span class='cmitt-10x-x-109'># Passo 3: Criar o dicionário com os casos de teste</span></span> 
-<a id='x26-126181r37'></a><span class='cmr-6'>37</span><span class='cmtt-10x-x-109'>cases </span><span id='textcolor1082'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> {}</span> 
-<a id='x26-126183r38'></a><span class='cmr-6'>38</span><span class='cmtt-10x-x-109'>cases[</span><span id='textcolor1083'><span class='cmtt-10x-x-109'>'input'</span></span><span class='cmtt-10x-x-109'>]  </span><span id='textcolor1084'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1085'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>array(inp_list)</span><span id='textcolor1086'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>tolist()</span> 
-<a id='x26-126185r39'></a><span class='cmr-6'>39</span><span class='cmtt-10x-x-109'>cases[</span><span id='textcolor1087'><span class='cmtt-10x-x-109'>'output'</span></span><span class='cmtt-10x-x-109'>] </span><span id='textcolor1088'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1089'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>array(out_list)</span><span id='textcolor1090'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>tolist()</span> 
-<a id='x26-126187r40'></a><span class='cmr-6'>40</span><span class='cmtt-10x-x-109'>moodle_cases </span><span id='textcolor1091'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> json</span><span id='textcolor1092'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>dumps(cases)</span> 
-<a id='x26-126189r41'></a><span class='cmr-6'>41</span> 
-<a id='x26-126191r42'></a><span class='cmr-6'>42</span><span id='textcolor1093'><span class='cmitt-10x-x-109'># Passo 4: Mostrar um exemplo no enunciado da questão</span></span> 
-<a id='x26-126193r43'></a><span class='cmr-6'>43</span><span class='cmtt-10x-x-109'>caso0_inp, caso0_out </span><span id='textcolor1094'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> cases[</span><span id='textcolor1095'><span class='cmtt-10x-x-109'>'input'</span></span><span class='cmtt-10x-x-109'>][</span><span id='textcolor1096'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>], cases[</span><span id='textcolor1097'><span class='cmtt-10x-x-109'>'output'</span></span><span class='cmtt-10x-x-109'>][</span><span id='textcolor1098'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>]</span> 
-<a id='x26-126195r44'></a><span class='cmr-6'>44</span><span id='textcolor1099'><span class='cmitt-10x-x-109'>#print(moodle_cases) # para testar em uma IDE</span></span> 
-<a id='x26-126197r45'></a><span class='cmr-6'>45</span><span class='cmtt-10x-x-109'>]]</span></pre>
+<pre class='fancyvrb' id='fancyvrb21'><a id='x26-127109r1'></a><span class='cmr-6'>1</span><span class='cmtt-10x-x-109'>[[def:</span> 
+<a id='x26-127111r2'></a><span class='cmr-6'>2</span><span id='textcolor1006'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1007'><span class='cmtt-10x-x-109'>json</span></span><span id='textcolor1008'><span class='cmtt-10x-x-109'>,</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1009'><span class='cmtt-10x-x-109'>numpy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1010'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1011'><span class='cmtt-10x-x-109'>np</span></span> 
+<a id='x26-127113r3'></a><span class='cmr-6'>3</span> 
+<a id='x26-127115r4'></a><span class='cmr-6'>4</span><span id='textcolor1012'><span class='cmitt-10x-x-109'># Passo 1: Criar os parâmetros do enunciado da questão</span></span> 
+<a id='x26-127117r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>Linhas, Colunas </span><span id='textcolor1013'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>  np</span><span id='textcolor1014'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor1015'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor1016'><span class='cmtt-10x-x-109'>4</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1017'><span class='cmtt-10x-x-109'>8</span></span><span class='cmtt-10x-x-109'>, size</span><span id='textcolor1018'><span class='cmtt-10x-x-109'>=</span></span><span id='textcolor1019'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x26-127119r6'></a><span class='cmr-6'>6</span> 
+<a id='x26-127121r7'></a><span class='cmr-6'>7</span><span id='textcolor1020'><span class='cmitt-10x-x-109'># Passo 2: Criar os casos de teste</span></span> 
+<a id='x26-127123r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>inp_list, out_list </span><span id='textcolor1021'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [], []  </span><span id='textcolor1022'><span class='cmitt-10x-x-109'># Listas vazias para armazenar os casos de teste</span></span> 
+<a id='x26-127125r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>casos_teste </span><span id='textcolor1023'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1024'><span class='cmtt-10x-x-109'>2</span></span><span class='cmtt-10x-x-109'>  </span><span id='textcolor1025'><span class='cmitt-10x-x-109'># Número de casos de teste desejado</span></span> 
+<a id='x26-127127r10'></a><span class='cmr-6'>10</span><span id='textcolor1026'><span class='cmitt-10x-x-109'># Aumentar esse número após validar a questão também na atividade VPL do Moodle</span></span> 
+<a id='x26-127129r11'></a><span class='cmr-6'>11</span> 
+<a id='x26-127131r12'></a><span class='cmr-6'>12</span><span id='textcolor1027'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1028'><span class='cmtt-10x-x-109'>matriz2texto</span></span><span class='cmtt-10x-x-109'>(M):</span> 
+<a id='x26-127133r13'></a><span class='cmr-6'>13</span><span id='textcolor1029'><span class='cmtt-10x-x-109'>    </span></span><span id='textcolor1030'><span class='cmitt-10x-x-109'>"""Converte uma matriz em formato de texto."""</span></span> 
+<a id='x26-127135r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>    texto </span><span id='textcolor1031'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1032'><span class='cmtt-10x-x-109'>''</span></span> 
+<a id='x26-127137r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1033'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> linha </span><span id='textcolor1034'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> M:</span> 
+<a id='x26-127139r16'></a><span class='cmr-6'>16</span><span class='cmtt-10x-x-109'>        texto </span><span id='textcolor1035'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1036'><span class='cmtt-10x-x-109'>' '</span></span><span id='textcolor1037'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>join(</span><span id='textcolor1038'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor1039'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor1040'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>elemento</span><span id='textcolor1041'><span class='cmtt-10x-x-109'>:</span></span><span id='textcolor1042'><span class='cmtt-10x-x-109'>1d</span></span><span id='textcolor1043'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1044'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1045'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> elemento </span><span id='textcolor1046'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> linha) </span><span id='textcolor1047'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1048'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor1049'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor1050'><span class='cmtt-10x-x-109'>'</span></span> 
+<a id='x26-127141r17'></a><span class='cmr-6'>17</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1051'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> texto</span> 
+<a id='x26-127143r18'></a><span class='cmr-6'>18</span> 
+<a id='x26-127145r19'></a><span class='cmr-6'>19</span><span id='textcolor1052'><span class='cmitt-10x-x-109'># Para cada caso de teste:</span></span> 
+<a id='x26-127147r20'></a><span class='cmr-6'>20</span><span id='textcolor1053'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor1054'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1055'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(casos_teste):</span> 
+<a id='x26-127149r21'></a><span class='cmr-6'>21</span> 
+<a id='x26-127151r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1056'><span class='cmitt-10x-x-109'>#</span><span class='cmmi-10x-x-109'>&gt;&gt;&gt;&gt;</span><span class='cmitt-10x-x-109'> begin - casos de teste</span></span> 
+<a id='x26-127153r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1057'><span class='cmitt-10x-x-109'># Gerar valores aleatórios entre 0 e 9 para a matriz</span></span> 
+<a id='x26-127155r24'></a><span class='cmr-6'>24</span><span class='cmtt-10x-x-109'>    M </span><span id='textcolor1058'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1059'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>random</span><span id='textcolor1060'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>randint(</span><span id='textcolor1061'><span class='cmtt-10x-x-109'>10</span></span><span class='cmtt-10x-x-109'>, size</span><span id='textcolor1062'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'>(Linhas, Colunas))</span> 
+<a id='x26-127157r25'></a><span class='cmr-6'>25</span> 
+<a id='x26-127159r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1063'><span class='cmitt-10x-x-109'># Criar a entrada do caso de teste como uma string</span></span> 
+<a id='x26-127161r27'></a><span class='cmr-6'>27</span><span class='cmtt-10x-x-109'>    inp </span><span id='textcolor1064'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> matriz2texto(M) </span><span id='textcolor1065'><span class='cmtt-10x-x-109'>+</span></span><span id='textcolor1066'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor1067'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor1068'><span class='cmtt-10x-x-109'>'</span></span> 
+<a id='x26-127163r28'></a><span class='cmr-6'>28</span> 
+<a id='x26-127165r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1069'><span class='cmitt-10x-x-109'># Calcular o valor da parcela arredondado para duas casas decimais</span></span> 
+<a id='x26-127167r30'></a><span class='cmr-6'>30</span><span class='cmtt-10x-x-109'>    out </span><span id='textcolor1070'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1071'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor1072'><span class='cmtt-10x-x-109'>'soma = </span></span><span id='textcolor1073'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>np</span><span id='textcolor1074'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sum(M)</span><span id='textcolor1075'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1076'><span class='cmtt-10x-x-109'>'</span></span> 
+<a id='x26-127169r31'></a><span class='cmr-6'>31</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1077'><span class='cmitt-10x-x-109'>#</span><span class='cmmi-10x-x-109'>&lt;&lt;&lt;&lt;</span><span class='cmitt-10x-x-109'> end - casos de teste</span></span> 
+<a id='x26-127171r32'></a><span class='cmr-6'>32</span> 
+<a id='x26-127173r33'></a><span class='cmr-6'>33</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1078'><span class='cmitt-10x-x-109'># Adicionar a entrada e saída do caso de teste às listas</span></span> 
+<a id='x26-127175r34'></a><span class='cmr-6'>34</span><span class='cmtt-10x-x-109'>    inp_list</span><span id='textcolor1079'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(inp), out_list</span><span id='textcolor1080'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(out)</span> 
+<a id='x26-127177r35'></a><span class='cmr-6'>35</span> 
+<a id='x26-127179r36'></a><span class='cmr-6'>36</span><span id='textcolor1081'><span class='cmitt-10x-x-109'># Passo 3: Criar o dicionário com os casos de teste</span></span> 
+<a id='x26-127181r37'></a><span class='cmr-6'>37</span><span class='cmtt-10x-x-109'>cases </span><span id='textcolor1082'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> {}</span> 
+<a id='x26-127183r38'></a><span class='cmr-6'>38</span><span class='cmtt-10x-x-109'>cases[</span><span id='textcolor1083'><span class='cmtt-10x-x-109'>'input'</span></span><span class='cmtt-10x-x-109'>]  </span><span id='textcolor1084'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1085'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>array(inp_list)</span><span id='textcolor1086'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>tolist()</span> 
+<a id='x26-127185r39'></a><span class='cmr-6'>39</span><span class='cmtt-10x-x-109'>cases[</span><span id='textcolor1087'><span class='cmtt-10x-x-109'>'output'</span></span><span class='cmtt-10x-x-109'>] </span><span id='textcolor1088'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1089'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>array(out_list)</span><span id='textcolor1090'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>tolist()</span> 
+<a id='x26-127187r40'></a><span class='cmr-6'>40</span><span class='cmtt-10x-x-109'>moodle_cases </span><span id='textcolor1091'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> json</span><span id='textcolor1092'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>dumps(cases)</span> 
+<a id='x26-127189r41'></a><span class='cmr-6'>41</span> 
+<a id='x26-127191r42'></a><span class='cmr-6'>42</span><span id='textcolor1093'><span class='cmitt-10x-x-109'># Passo 4: Mostrar um exemplo no enunciado da questão</span></span> 
+<a id='x26-127193r43'></a><span class='cmr-6'>43</span><span class='cmtt-10x-x-109'>caso0_inp, caso0_out </span><span id='textcolor1094'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> cases[</span><span id='textcolor1095'><span class='cmtt-10x-x-109'>'input'</span></span><span class='cmtt-10x-x-109'>][</span><span id='textcolor1096'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>], cases[</span><span id='textcolor1097'><span class='cmtt-10x-x-109'>'output'</span></span><span class='cmtt-10x-x-109'>][</span><span id='textcolor1098'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>]</span> 
+<a id='x26-127195r44'></a><span class='cmr-6'>44</span><span id='textcolor1099'><span class='cmitt-10x-x-109'>#print(moodle_cases) # para testar em uma IDE</span></span> 
+<a id='x26-127197r45'></a><span class='cmr-6'>45</span><span class='cmtt-10x-x-109'>]]</span></pre>
  
 </div> 
 </div>
-<a id='x26-126198r2'></a>
-<a id='x26-126199'></a>
+<a id='x26-127198r2'></a>
+<a id='x26-127199'></a>
                                                                                                   
                                                                                                   
        </figure>
-<p class='indent'>       O Código <a href='#x26-126198r2'>10.2<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte2  --></a> utiliza as bibliotecas <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>json</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>numpy</span></span></span> para criar valores paramétricos e casos de teste
+<p class='indent'>       O Código <a href='#x26-127198r2'>10.2<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte2  --></a> utiliza as bibliotecas <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>json</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>numpy</span></span></span> para criar valores paramétricos e casos de teste
 de uma questão envolvendo matrizes. No passo 1, são definidos os parâmetros Linhas e Colunas, que
 representam o tamanho da matriz e serão incluídos no enunciado da questão. No passo 2, são criados
 casos de teste com valores aleatórios na matriz e, em seguida, é gerada a entrada e saída para cada
@@ -199,7 +199,7 @@ exemplo no enunciado da questão, exibindo a entrada e saída do primeiro caso d
 código pode ser utilizado para gerar casos de teste para uma questão relacionada a matrizes e
 cálculos.
 </p> 
-<p class='indent'>       Um método mais genérico para <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>matriz2texto</span></span></span> é apresentado no Código <a href='#x26-126239r3'>10.3<!-- tex4ht:ref: lst:matriz2texto2  --></a> para
+<p class='indent'>       Um método mais genérico para <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>matriz2texto</span></span></span> é apresentado no Código <a href='#x26-127239r3'>10.3<!-- tex4ht:ref: lst:matriz2texto2  --></a> para
 formatar uma matriz com elementos de vários dígitos. O método recebe uma matriz <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>f</span></span></span>
 representada como uma matriz <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>numpy ndarray</span></span></span>. O método tem o propósito de converter essa matriz
 em uma representação de texto adequada para impressão. Primeiro, o método obtém o
@@ -223,34 +223,34 @@ matriz.
 <figure class='float' id='-metodo-mais-generico-que-matriztexto-para-formatar-uma-matriz-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-98'>    
+<div class='tcolorbox myboxCode' id='tcolobox-109'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
 _________________________________________________________________________________
-<pre class='fancyvrb' id='fancyvrb22'><a id='x26-126214r1'></a><span class='cmr-6'>1</span><span id='textcolor1100'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1101'><span class='cmtt-10x-x-109'>matriz2texto2</span></span><span class='cmtt-10x-x-109'>(f):</span> 
-<a id='x26-126216r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>    l, c </span><span id='textcolor1102'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> f</span><span id='textcolor1103'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>shape</span> 
-<a id='x26-126218r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1104'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1105'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>min(f) </span><span id='textcolor1106'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1107'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>:</span> 
-<a id='x26-126220r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>        num_digitos </span><span id='textcolor1108'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1109'><span class='cmtt-10x-x-109'>'%'</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1110'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1111'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1112'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1113'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1114'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1115'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(np</span><span id='textcolor1116'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>max(f)))) </span><span id='textcolor1117'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1118'><span class='cmtt-10x-x-109'>'d '</span></span> 
-<a id='x26-126222r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1119'><span class='cmtt-10x-x-109'>else</span></span><span class='cmtt-10x-x-109'>:</span> 
-<a id='x26-126224r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>        num_digitos </span><span id='textcolor1120'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1121'><span class='cmtt-10x-x-109'>'%'</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1122'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1123'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1124'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1125'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(np</span><span id='textcolor1126'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>max(f)))) </span><span id='textcolor1127'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1128'><span class='cmtt-10x-x-109'>'d '</span></span> 
-<a id='x26-126226r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1129'><span class='cmitt-10x-x-109'>#print('"'+num_digitos+'"')</span></span> 
-<a id='x26-126228r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>    texto </span><span id='textcolor1130'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1131'><span class='cmtt-10x-x-109'>''</span></span> 
-<a id='x26-126230r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1132'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor1133'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1134'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(l):</span> 
-<a id='x26-126232r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor1135'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> j </span><span id='textcolor1136'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1137'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(c):</span> 
-<a id='x26-126234r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>            texto </span><span id='textcolor1138'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> num_digitos </span><span id='textcolor1139'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> f[i][j]</span> 
-<a id='x26-126236r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>        texto </span><span id='textcolor1140'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1141'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor1142'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor1143'><span class='cmtt-10x-x-109'>'</span></span> 
-<a id='x26-126238r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1144'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> texto</span></pre>
+<pre class='fancyvrb' id='fancyvrb22'><a id='x26-127214r1'></a><span class='cmr-6'>1</span><span id='textcolor1100'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1101'><span class='cmtt-10x-x-109'>matriz2texto2</span></span><span class='cmtt-10x-x-109'>(f):</span> 
+<a id='x26-127216r2'></a><span class='cmr-6'>2</span><span class='cmtt-10x-x-109'>    l, c </span><span id='textcolor1102'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> f</span><span id='textcolor1103'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>shape</span> 
+<a id='x26-127218r3'></a><span class='cmr-6'>3</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1104'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1105'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>min(f) </span><span id='textcolor1106'><span class='cmmi-10x-x-109'>&lt;</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1107'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x26-127220r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>        num_digitos </span><span id='textcolor1108'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1109'><span class='cmtt-10x-x-109'>'%'</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1110'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1111'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1112'><span class='cmtt-10x-x-109'>1</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1113'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1114'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1115'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(np</span><span id='textcolor1116'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>max(f)))) </span><span id='textcolor1117'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1118'><span class='cmtt-10x-x-109'>'d '</span></span> 
+<a id='x26-127222r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1119'><span class='cmtt-10x-x-109'>else</span></span><span class='cmtt-10x-x-109'>:</span> 
+<a id='x26-127224r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>        num_digitos </span><span id='textcolor1120'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1121'><span class='cmtt-10x-x-109'>'%'</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1122'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1123'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1124'><span class='cmtt-10x-x-109'>len</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1125'><span class='cmtt-10x-x-109'>str</span></span><span class='cmtt-10x-x-109'>(np</span><span id='textcolor1126'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>max(f)))) </span><span id='textcolor1127'><span class='cmtt-10x-x-109'>+</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1128'><span class='cmtt-10x-x-109'>'d '</span></span> 
+<a id='x26-127226r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1129'><span class='cmitt-10x-x-109'>#print('"'+num_digitos+'"')</span></span> 
+<a id='x26-127228r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>    texto </span><span id='textcolor1130'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1131'><span class='cmtt-10x-x-109'>''</span></span> 
+<a id='x26-127230r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1132'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor1133'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1134'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(l):</span> 
+<a id='x26-127232r10'></a><span class='cmr-6'>10</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor1135'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> j </span><span id='textcolor1136'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1137'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(c):</span> 
+<a id='x26-127234r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>            texto </span><span id='textcolor1138'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> num_digitos </span><span id='textcolor1139'><span class='cmtt-10x-x-109'>%</span></span><span class='cmtt-10x-x-109'> f[i][j]</span> 
+<a id='x26-127236r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>        texto </span><span id='textcolor1140'><span class='cmtt-10x-x-109'>+=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1141'><span class='cmtt-10x-x-109'>'</span></span><span id='textcolor1142'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor1143'><span class='cmtt-10x-x-109'>'</span></span> 
+<a id='x26-127238r13'></a><span class='cmr-6'>13</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1144'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> texto</span></pre>
  
 </div> 
 </div>
-<a id='x26-126239r3'></a>
-<a id='x26-126240'></a>
+<a id='x26-127239r3'></a>
+<a id='x26-127240'></a>
                                                                                                   
                                                                                                   
        </figure>
-<p class='indent'>       Essa questão apresentada nos Códigos <a href='#x26-126061r1'>10.1<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte1  --></a> e <a href='#x26-126198r2'>10.2<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte2  --></a> é parametrizada apenas nas dimensões da
-matriz, que variam entre 4 e 7, conforme indicado na linha 5 do Código <a href='#x26-126198r2'>10.2<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte2  --></a>. Para torná-la
+<p class='indent'>       Essa questão apresentada nos Códigos <a href='#x26-127061r1'>10.1<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte1  --></a> e <a href='#x26-127198r2'>10.2<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte2  --></a> é parametrizada apenas nas dimensões da
+matriz, que variam entre 4 e 7, conforme indicado na linha 5 do Código <a href='#x26-127198r2'>10.2<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte2  --></a>. Para torná-la
 ainda mais parametrizável, seria possível variar o enunciado para calcular a soma, máximo,
 mínimo ou média dos elementos, considerando os índices ou valores pares, ou ímpares.
 Com essas variações, seria possível criar um total de 16 variações, sem considerar as
@@ -270,19 +270,19 @@ exame.
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-de-matriz-definida-nos-codigos-lstquestaoqtepmatrizparte-e-lstquestaoqtepmatrizparte-'><img alt='PIC' height='461' src='./figs-br//cap10_questaoQT_EP_2_matriz.png' width='460' /> <a id='x26-126241r1'></a>
-<a id='x26-126242'></a>
+<p class='indent' id='-recorte-do-pdf-gerado-para-a-questao-de-matriz-definida-nos-codigos-lstquestaoqtepmatrizparte-e-lstquestaoqtepmatrizparte-'><img alt='PIC' height='461' src='./figs-br//cap10_questaoQT_EP_2_matriz.png' width='460' /> <a id='x26-127241r1'></a>
+<a id='x26-127242'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 10.1: </span><span class='content'>Recorte do PDF gerado para a questão de matriz definida nos Códigos <a href='#x26-126061r1'>10.1<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte1  --></a> e <a href='#x26-126198r2'>10.2<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte2  --></a>.
-</span></figcaption><!-- tex4ht:label?: x26-126241r10  -->
+<figcaption class='caption'><span class='id'>Figura 10.1: </span><span class='content'>Recorte do PDF gerado para a questão de matriz definida nos Códigos <a href='#x26-127061r1'>10.1<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte1  --></a> e <a href='#x26-127198r2'>10.2<!-- tex4ht:ref: lst:questaoQT_EP_2_matriz_parte2  --></a>.
+</span></figcaption><!-- tex4ht:label?: x26-127241r10  -->
                                                                                                   
                                                                                                   
        </figure>
-<p><a id='x26-126243r232'></a></p>
-       <h4 class='subsectionHead' id='criando-as-variacoes-e-imprimindo-o-pdf-do-exame'><span class='titlemark'>10.1.2   </span> <a id='x26-1270002'></a>Criando as variações e imprimindo o PDF do exame</h4>
+<p><a id='x26-127243r233'></a></p>
+       <h4 class='subsectionHead' id='criando-as-variacoes-e-imprimindo-o-pdf-do-exame'><span class='titlemark'>10.1.2   </span> <a id='x26-1280002'></a>Criando as variações e imprimindo o PDF do exame</h4>
 <p class='noindent'>Para criar um novo exame, siga os passos descritos no Capítulo <a href='livroch6.xhtml#visao-geral-dos-exames'>6<!-- tex4ht:ref: ch:exames  --></a> – <a href='livroch6.xhtml#visao-geral-dos-exames'>Visão geral dos exames<!-- tex4ht:ref: ch:exames  --></a>. Após
 definir o nome do exame, escolha a turma e as questões, preencha o restante do formulário conforme
-apresentado na Figura <a href='#x26-127001r2'>10.2<!-- tex4ht:ref: fig:cap10_figExameVPL_Atualiza4  --></a>, realizando as devidas alterações nos campos “Dificuldade 1”, “Dissertativa”
+apresentado na Figura <a href='#x26-128001r2'>10.2<!-- tex4ht:ref: fig:cap10_figExameVPL_Atualiza4  --></a>, realizando as devidas alterações nos campos “Dificuldade 1”, “Dissertativa”
 e “Respostas/Questões/Ambos”. Finalize clicando no botão “Salvar”.
 </p> 
 <p class='indent'>       Agora, para criar as variações, é importante selecionar a opção “Json” antes de clicar no
@@ -294,15 +294,15 @@ botão “Criar-Variações”.
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-da-tela-de-exame-configurando-os-detalhes-do-exame-com-integracao-vpl-'><img alt='PIC' height='461' src='./figs-br//cap10_figExameVPL_Atualiza4.png' width='460' /> <a id='x26-127001r2'></a>
-<a id='x26-127002'></a>
+<p class='indent' id='-recorte-da-tela-de-exame-configurando-os-detalhes-do-exame-com-integracao-vpl-'><img alt='PIC' height='461' src='./figs-br//cap10_figExameVPL_Atualiza4.png' width='460' /> <a id='x26-128001r2'></a>
+<a id='x26-128002'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 10.2: </span><span class='content'>Recorte da tela de exame, configurando os detalhes do exame com integração VPL.</span></figcaption><!-- tex4ht:label?: x26-127001r10  -->
+<figcaption class='caption'><span class='id'>Figura 10.2: </span><span class='content'>Recorte da tela de exame, configurando os detalhes do exame com integração VPL.</span></figcaption><!-- tex4ht:label?: x26-128001r10  -->
                                                                                                   
                                                                                                   
        </figure>
 <p class='indent'>       Ao fazer isso, um arquivo no formato JSON com o nome <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>*_linker.json</span></span></span> será gerado e enviado para
-o e-mail do professor. Esse arquivo deve ser renomeado para <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>linker.json</span></span></span>. Veja na Figura <a href='#x26-127003r3'>10.3<!-- tex4ht:ref: fig:cap10_figExameVPL_email  --></a> o e-mail
+o e-mail do professor. Esse arquivo deve ser renomeado para <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>linker.json</span></span></span>. Veja na Figura <a href='#x26-128003r3'>10.3<!-- tex4ht:ref: fig:cap10_figExameVPL_email  --></a> o e-mail
 recebido, com remetente <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>webmctest@ufabc.edu.br</span></span></span>. O arquivo JSON contém informações detalhadas
 sobre as variações do exame, incluindo as questões, as entradas utilizadas e as respostas
 esperadas.
@@ -313,10 +313,10 @@ esperadas.
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-do-email-recebido-apos-clicar-em-criarvariacoes-1'><img alt='PIC' height='461' src='./figs-br//cap10_figExameVPL_email.png' width='460' /> <a id='x26-127003r3'></a>
-<a id='x26-127004'></a>
+<p class='indent' id='-recorte-do-email-recebido-apos-clicar-em-criarvariacoes-1'><img alt='PIC' height='461' src='./figs-br//cap10_figExameVPL_email.png' width='460' /> <a id='x26-128003r3'></a>
+<a id='x26-128004'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 10.3: </span><span class='content'>Recorte do e-mail recebido após clicar em “Criar-Variações”.                     </span></figcaption><!-- tex4ht:label?: x26-127003r10  -->
+<figcaption class='caption'><span class='id'>Figura 10.3: </span><span class='content'>Recorte do e-mail recebido após clicar em “Criar-Variações”.                     </span></figcaption><!-- tex4ht:label?: x26-128003r10  -->
                                                                                                   
                                                                                                   
        </figure>
@@ -324,7 +324,7 @@ esperadas.
 estudantes. No entanto, antes de fazer isso, uma boa estratégia seria validar a atividade VPL no Moodle.
 Para isso, crie uma turma de teste incluindo somente o professor como estudante. Escolha essa turma no
 exame e, em seguida, clique no botão “Criar-PDF”. Um PDF com o exame será enviado
-ao professor, conforme mostrado na Figura <a href='#x26-127005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  --></a>. No mesmo e-mail, será anexado o arquivo
+ao professor, conforme mostrado na Figura <a href='#x26-128005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  --></a>. No mesmo e-mail, será anexado o arquivo
 <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>*_students_variations.csv</span></span></span>, que deve ser renomeado para <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>students_variations.csv</span></span></span>. Este arquivo
 contém as variações de cada estudante.
        </p> 
@@ -334,15 +334,15 @@ contém as variações de cada estudante.
                                                                                                   
                                                                                                   
                                                                                                   
-<p class='indent' id='-recorte-da-tela-do-pdf-do-exame-com-integracao-vpl-'><img alt='PIC' height='461' src='./figs-br//cap10_figExameVPL_PDF.png' width='460' /> <a id='x26-127005r4'></a>
-<a id='x26-127006'></a>
+<p class='indent' id='-recorte-da-tela-do-pdf-do-exame-com-integracao-vpl-'><img alt='PIC' height='461' src='./figs-br//cap10_figExameVPL_PDF.png' width='460' /> <a id='x26-128005r4'></a>
+<a id='x26-128006'></a>
 </p> 
-<figcaption class='caption'><span class='id'>Figura 10.4: </span><span class='content'>Recorte da tela do PDF do exame com integração VPL.                           </span></figcaption><!-- tex4ht:label?: x26-127005r10  -->
+<figcaption class='caption'><span class='id'>Figura 10.4: </span><span class='content'>Recorte da tela do PDF do exame com integração VPL.                           </span></figcaption><!-- tex4ht:label?: x26-128005r10  -->
                                                                                                   
                                                                                                   
        </figure>
-<p><a id='x26-127007r237'></a></p>
-       <h4 class='subsectionHead' id='criando-e-configurando-a-atividade-vpl-para-o-exame'><span class='titlemark'>10.1.3   </span> <a id='x26-1280003'></a>Criando e configurando a atividade VPL para o exame</h4>
+<p><a id='x26-128007r238'></a></p>
+       <h4 class='subsectionHead' id='criando-e-configurando-a-atividade-vpl-para-o-exame'><span class='titlemark'>10.1.3   </span> <a id='x26-1290003'></a>Criando e configurando a atividade VPL para o exame</h4>
 <p class='noindent'>Adaptando as instruções definidas na Seção <a href='livroch5.xhtml#qt-parametrica-com-codigo'>5.3<!-- tex4ht:ref: sec:questoesQT_VPL  --></a> – <a href='livroch5.xhtml#qt-parametrica-com-codigo'>QT paramétrica, com código<!-- tex4ht:ref: sec:questoesQT_VPL  --></a> para criar uma
 atividade VPL no Moodle:
       </p> 
@@ -370,7 +370,7 @@ atividade VPL no Moodle:
    6. </dt><dd class='enumerate-enumitem'>Para                  que                  o                  Moodle                  escolha                  a
       variação correta do exame, é necessário que o nome e sobrenome sejam exatamente iguais
       no Moodle e também no arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>students_variations.csv</span></span></span>. Portanto, é necessário alterar
-      o nome do estudante de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Estudante Exemplo Sobrenome</span></span></span>, conforme mostrado na Figura <a href='#x26-127005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  --></a>,
+      o nome do estudante de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Estudante Exemplo Sobrenome</span></span></span>, conforme mostrado na Figura <a href='#x26-128005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  --></a>,
       para <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Francisco Exemplo Zampirolli</span></span></span>;
       </dd><dt class='enumerate-enumitem'>
    7. </dt><dd class='enumerate-enumitem'>Em “Arquivos a serem mantidos durante a execução”, marque todas as opções e clique
@@ -384,12 +384,12 @@ atividade VPL no Moodle:
       criar um segundo arquivo, clique no ícone “+” e o ícone para criar um novo arquivo, em
       seguida utilize exatamente o nome do arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q2.py</span></span></span>.
       </dd></dl>
-<p><a id='x26-128009r241'></a></p>
-       <h4 class='subsectionHead' id='solucoes-da-atividade-vpl-para-o-exame'><span class='titlemark'>10.1.4   </span> <a id='x26-1290004'></a>Soluções da atividade VPL para o exame</h4>
+<p><a id='x26-129009r242'></a></p>
+       <h4 class='subsectionHead' id='solucoes-da-atividade-vpl-para-o-exame'><span class='titlemark'>10.1.4   </span> <a id='x26-1300004'></a>Soluções da atividade VPL para o exame</h4>
 <p class='noindent'>Após criar os arquivos <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q1.py</span></span></span> e <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q2.py</span></span></span>, inclua soluções para resolver essas questões. Por exemplo,
-confira no Código <a href='#x26-129097r4'>10.4<!-- tex4ht:ref: lst:ExameVPLsolucaoQ1  --></a> uma solução para a primeira questão de matriz. A parte crítica desta
+confira no Código <a href='#x26-130097r4'>10.4<!-- tex4ht:ref: lst:ExameVPLsolucaoQ1  --></a> uma solução para a primeira questão de matriz. A parte crítica desta
 questão é o estudante ter que ler 7 linhas, contendo 6 elementos em cada linha, conforme ilustrado na
-Figura <a href='#x26-127005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  --></a>.
+Figura <a href='#x26-128005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  --></a>.
                                                                                                   
                                                                                                   
 </p> 
@@ -397,54 +397,54 @@ Figura <a href='#x26-127005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  -
 <figure class='float' id='-exemplo-de-solucao-para-a-questao-de-matriz-do-exame-no-vpl-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-99'>    
+<div class='tcolorbox myboxCode' id='tcolobox-110'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
 _________________________________________________________________________________
-<pre class='fancyvrb' id='fancyvrb23'><a id='x26-129034r1'></a><span class='cmr-6'>1</span><span id='textcolor1145'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1146'><span class='cmtt-10x-x-109'>numpy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1147'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1148'><span class='cmtt-10x-x-109'>np</span></span> 
-<a id='x26-129036r2'></a><span class='cmr-6'>2</span> 
-<a id='x26-129038r3'></a><span class='cmr-6'>3</span><span id='textcolor1149'><span class='cmitt-10x-x-109'># Definição das variáveis que indicam o número de linhas e colunas da matriz</span></span> 
-<a id='x26-129040r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>linhas, colunas </span><span id='textcolor1150'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1151'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1152'><span class='cmtt-10x-x-109'>6</span></span> 
-<a id='x26-129042r5'></a><span class='cmr-6'>5</span> 
-<a id='x26-129044r6'></a><span class='cmr-6'>6</span><span id='textcolor1153'><span class='cmitt-10x-x-109'># Inicialização da matriz M como uma lista vazia</span></span> 
-<a id='x26-129046r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>M </span><span id='textcolor1154'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> []</span> 
-<a id='x26-129048r8'></a><span class='cmr-6'>8</span> 
-<a id='x26-129050r9'></a><span class='cmr-6'>9</span><span id='textcolor1155'><span class='cmitt-10x-x-109'># Loop para preenchimento da matriz M</span></span> 
-<a id='x26-129052r10'></a><span class='cmr-6'>10</span><span id='textcolor1156'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> l </span><span id='textcolor1157'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1158'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(linhas):</span> 
-<a id='x26-129054r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1159'><span class='cmitt-10x-x-109'># Inicialização da linha l da matriz M como uma lista vazia</span></span> 
-<a id='x26-129056r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>    linha </span><span id='textcolor1160'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> []</span> 
-<a id='x26-129058r13'></a><span class='cmr-6'>13</span> 
-<a id='x26-129060r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1161'><span class='cmitt-10x-x-109'># Leitura da linha l da matriz como uma string separada por espaços em branco</span></span> 
-<a id='x26-129062r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>    linhaChar </span><span id='textcolor1162'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1163'><span class='cmtt-10x-x-109'>input</span></span><span class='cmtt-10x-x-109'>()</span><span id='textcolor1164'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>split(</span><span id='textcolor1165'><span class='cmtt-10x-x-109'>' '</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x26-129064r16'></a><span class='cmr-6'>16</span> 
-<a id='x26-129066r17'></a><span class='cmr-6'>17</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1166'><span class='cmitt-10x-x-109'># Loop para preencher a linha l da matriz M com os valores lidos pelo usuário</span></span> 
-<a id='x26-129068r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1167'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> c </span><span id='textcolor1168'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> linhaChar:</span> 
-<a id='x26-129070r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor1169'><span class='cmitt-10x-x-109'># Verificação se o caractere não é vazio</span></span> 
-<a id='x26-129072r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor1170'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> c:</span> 
-<a id='x26-129074r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>            </span><span id='textcolor1171'><span class='cmitt-10x-x-109'># Conversão e inserção do valor na linha l da matriz M</span></span> 
-<a id='x26-129076r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>            valor </span><span id='textcolor1172'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1173'><span class='cmtt-10x-x-109'>int</span></span><span class='cmtt-10x-x-109'>(c)</span> 
-<a id='x26-129078r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>            linha</span><span id='textcolor1174'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(valor)</span> 
-<a id='x26-129080r24'></a><span class='cmr-6'>24</span> 
-<a id='x26-129082r25'></a><span class='cmr-6'>25</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1175'><span class='cmitt-10x-x-109'># Adição da linha l à matriz M</span></span> 
-<a id='x26-129084r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>    M</span><span id='textcolor1176'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(linha)</span> 
-<a id='x26-129086r27'></a><span class='cmr-6'>27</span> 
-<a id='x26-129088r28'></a><span class='cmr-6'>28</span><span id='textcolor1177'><span class='cmitt-10x-x-109'># Cálculo da soma de todos os elementos da matriz M utilizando o método sum</span></span> 
-<a id='x26-129090r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>soma </span><span id='textcolor1178'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1179'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sum(M)</span> 
-<a id='x26-129092r30'></a><span class='cmr-6'>30</span> 
-<a id='x26-129094r31'></a><span class='cmr-6'>31</span><span id='textcolor1180'><span class='cmitt-10x-x-109'># Impressão do resultado da soma</span></span> 
-<a id='x26-129096r32'></a><span class='cmr-6'>32</span><span id='textcolor1181'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1182'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor1183'><span class='cmtt-10x-x-109'>'soma = </span></span><span id='textcolor1184'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>soma</span><span id='textcolor1185'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1186'><span class='cmtt-10x-x-109'>'</span></span><span class='cmtt-10x-x-109'>)</span></pre>
+<pre class='fancyvrb' id='fancyvrb23'><a id='x26-130034r1'></a><span class='cmr-6'>1</span><span id='textcolor1145'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1146'><span class='cmtt-10x-x-109'>numpy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1147'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1148'><span class='cmtt-10x-x-109'>np</span></span> 
+<a id='x26-130036r2'></a><span class='cmr-6'>2</span> 
+<a id='x26-130038r3'></a><span class='cmr-6'>3</span><span id='textcolor1149'><span class='cmitt-10x-x-109'># Definição das variáveis que indicam o número de linhas e colunas da matriz</span></span> 
+<a id='x26-130040r4'></a><span class='cmr-6'>4</span><span class='cmtt-10x-x-109'>linhas, colunas </span><span id='textcolor1150'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1151'><span class='cmtt-10x-x-109'>7</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor1152'><span class='cmtt-10x-x-109'>6</span></span> 
+<a id='x26-130042r5'></a><span class='cmr-6'>5</span> 
+<a id='x26-130044r6'></a><span class='cmr-6'>6</span><span id='textcolor1153'><span class='cmitt-10x-x-109'># Inicialização da matriz M como uma lista vazia</span></span> 
+<a id='x26-130046r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>M </span><span id='textcolor1154'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> []</span> 
+<a id='x26-130048r8'></a><span class='cmr-6'>8</span> 
+<a id='x26-130050r9'></a><span class='cmr-6'>9</span><span id='textcolor1155'><span class='cmitt-10x-x-109'># Loop para preenchimento da matriz M</span></span> 
+<a id='x26-130052r10'></a><span class='cmr-6'>10</span><span id='textcolor1156'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> l </span><span id='textcolor1157'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1158'><span class='cmtt-10x-x-109'>range</span></span><span class='cmtt-10x-x-109'>(linhas):</span> 
+<a id='x26-130054r11'></a><span class='cmr-6'>11</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1159'><span class='cmitt-10x-x-109'># Inicialização da linha l da matriz M como uma lista vazia</span></span> 
+<a id='x26-130056r12'></a><span class='cmr-6'>12</span><span class='cmtt-10x-x-109'>    linha </span><span id='textcolor1160'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> []</span> 
+<a id='x26-130058r13'></a><span class='cmr-6'>13</span> 
+<a id='x26-130060r14'></a><span class='cmr-6'>14</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1161'><span class='cmitt-10x-x-109'># Leitura da linha l da matriz como uma string separada por espaços em branco</span></span> 
+<a id='x26-130062r15'></a><span class='cmr-6'>15</span><span class='cmtt-10x-x-109'>    linhaChar </span><span id='textcolor1162'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1163'><span class='cmtt-10x-x-109'>input</span></span><span class='cmtt-10x-x-109'>()</span><span id='textcolor1164'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>split(</span><span id='textcolor1165'><span class='cmtt-10x-x-109'>' '</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x26-130064r16'></a><span class='cmr-6'>16</span> 
+<a id='x26-130066r17'></a><span class='cmr-6'>17</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1166'><span class='cmitt-10x-x-109'># Loop para preencher a linha l da matriz M com os valores lidos pelo usuário</span></span> 
+<a id='x26-130068r18'></a><span class='cmr-6'>18</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1167'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> c </span><span id='textcolor1168'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> linhaChar:</span> 
+<a id='x26-130070r19'></a><span class='cmr-6'>19</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor1169'><span class='cmitt-10x-x-109'># Verificação se o caractere não é vazio</span></span> 
+<a id='x26-130072r20'></a><span class='cmr-6'>20</span><span class='cmtt-10x-x-109'>        </span><span id='textcolor1170'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> c:</span> 
+<a id='x26-130074r21'></a><span class='cmr-6'>21</span><span class='cmtt-10x-x-109'>            </span><span id='textcolor1171'><span class='cmitt-10x-x-109'># Conversão e inserção do valor na linha l da matriz M</span></span> 
+<a id='x26-130076r22'></a><span class='cmr-6'>22</span><span class='cmtt-10x-x-109'>            valor </span><span id='textcolor1172'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1173'><span class='cmtt-10x-x-109'>int</span></span><span class='cmtt-10x-x-109'>(c)</span> 
+<a id='x26-130078r23'></a><span class='cmr-6'>23</span><span class='cmtt-10x-x-109'>            linha</span><span id='textcolor1174'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(valor)</span> 
+<a id='x26-130080r24'></a><span class='cmr-6'>24</span> 
+<a id='x26-130082r25'></a><span class='cmr-6'>25</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1175'><span class='cmitt-10x-x-109'># Adição da linha l à matriz M</span></span> 
+<a id='x26-130084r26'></a><span class='cmr-6'>26</span><span class='cmtt-10x-x-109'>    M</span><span id='textcolor1176'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append(linha)</span> 
+<a id='x26-130086r27'></a><span class='cmr-6'>27</span> 
+<a id='x26-130088r28'></a><span class='cmr-6'>28</span><span id='textcolor1177'><span class='cmitt-10x-x-109'># Cálculo da soma de todos os elementos da matriz M utilizando o método sum</span></span> 
+<a id='x26-130090r29'></a><span class='cmr-6'>29</span><span class='cmtt-10x-x-109'>soma </span><span id='textcolor1178'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> np</span><span id='textcolor1179'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sum(M)</span> 
+<a id='x26-130092r30'></a><span class='cmr-6'>30</span> 
+<a id='x26-130094r31'></a><span class='cmr-6'>31</span><span id='textcolor1180'><span class='cmitt-10x-x-109'># Impressão do resultado da soma</span></span> 
+<a id='x26-130096r32'></a><span class='cmr-6'>32</span><span id='textcolor1181'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1182'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor1183'><span class='cmtt-10x-x-109'>'soma = </span></span><span id='textcolor1184'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>soma</span><span id='textcolor1185'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1186'><span class='cmtt-10x-x-109'>'</span></span><span class='cmtt-10x-x-109'>)</span></pre>
  
 </div> 
 </div>
-<a id='x26-129097r4'></a>
-<a id='x26-129098'></a>
+<a id='x26-130097r4'></a>
+<a id='x26-130098'></a>
                                                                                                   
                                                                                                   
        </figure>
-<p class='indent'>       Uma solução mais concisa e genérica para a questão Q1 é apresentada no Código <a href='#x26-129132r5'>10.5<!-- tex4ht:ref: lst:ExameVPLsolucao2Q1  --></a>. É
+<p class='indent'>       Uma solução mais concisa e genérica para a questão Q1 é apresentada no Código <a href='#x26-130132r5'>10.5<!-- tex4ht:ref: lst:ExameVPLsolucao2Q1  --></a>. É
 importante ressaltar que essa solução é viável porque todos os casos de teste gerarão entradas no
-mesmo formato, como exemplificado na Figura <a href='#x26-127005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  --></a>.
+mesmo formato, como exemplificado na Figura <a href='#x26-128005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  --></a>.
 </p> 
 <p class='indent'>       Essa solução consegue ler matrizes de quaisquer dimensões, caso possuam os mesmos tipos de
 elementos, que neste exemplo são inteiros, separados por espaços, e cada linha da matriz seja
@@ -470,39 +470,39 @@ conhecimentos e habilidades em diferentes contextos.
 <figure class='float' id='-exemplo-de-solucao-compacta-e-generica-para-a-questao-de-matriz-do-exame-no-vpl-'>
                                                                                                   
                                                                                                   
-<div class='tcolorbox myboxCode' id='tcolobox-100'>    
+<div class='tcolorbox myboxCode' id='tcolobox-111'>    
 <div class='tcolorbox-title'>
 </div> 
 <div class='tcolorbox-content'><span class='cmbx-10x-x-109'>Questão:</span>
 _________________________________________________________________________________
-<pre class='fancyvrb' id='fancyvrb24'><a id='x26-129111r1'></a><span class='cmr-6'>1</span><span id='textcolor1187'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1188'><span class='cmtt-10x-x-109'>numpy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1189'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1190'><span class='cmtt-10x-x-109'>np</span></span> 
-<a id='x26-129113r2'></a><span class='cmr-6'>2</span> 
-<a id='x26-129115r3'></a><span class='cmr-6'>3</span><span id='textcolor1191'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1192'><span class='cmtt-10x-x-109'>lerMatriz</span></span><span class='cmtt-10x-x-109'>():</span> 
-<a id='x26-129117r4'></a><span class='cmr-6'>4</span><span id='textcolor1193'><span class='cmtt-10x-x-109'>    </span></span><span id='textcolor1194'><span class='cmitt-10x-x-109'>"""ler matriz de inteiros"""</span></span> 
-<a id='x26-129119r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>    M, ler_linha </span><span id='textcolor1195'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [], </span><span id='textcolor1196'><span class='cmtt-10x-x-109'>input</span></span><span class='cmtt-10x-x-109'>()</span> 
-<a id='x26-129121r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1197'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> ler_linha:</span> 
-<a id='x26-129123r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>        M</span><span id='textcolor1198'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append([</span><span id='textcolor1199'><span class='cmtt-10x-x-109'>int</span></span><span class='cmtt-10x-x-109'>(i) </span><span id='textcolor1200'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor1201'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> ler_linha</span><span id='textcolor1202'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>split(</span><span id='textcolor1203'><span class='cmtt-10x-x-109'>' '</span></span><span class='cmtt-10x-x-109'>) </span><span id='textcolor1204'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> i])</span> 
-<a id='x26-129125r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>        ler_linha </span><span id='textcolor1205'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1206'><span class='cmtt-10x-x-109'>input</span></span><span class='cmtt-10x-x-109'>()</span> 
-<a id='x26-129127r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1207'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> M</span> 
-<a id='x26-129129r10'></a><span class='cmr-6'>10</span> 
-<a id='x26-129131r11'></a><span class='cmr-6'>11</span><span id='textcolor1208'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1209'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor1210'><span class='cmtt-10x-x-109'>'soma = </span></span><span id='textcolor1211'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>np</span><span id='textcolor1212'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sum(lerMatriz())</span><span id='textcolor1213'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1214'><span class='cmtt-10x-x-109'>'</span></span><span class='cmtt-10x-x-109'>)</span></pre>
+<pre class='fancyvrb' id='fancyvrb24'><a id='x26-130111r1'></a><span class='cmr-6'>1</span><span id='textcolor1187'><span class='cmtt-10x-x-109'>import</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1188'><span class='cmtt-10x-x-109'>numpy</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1189'><span class='cmtt-10x-x-109'>as</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1190'><span class='cmtt-10x-x-109'>np</span></span> 
+<a id='x26-130113r2'></a><span class='cmr-6'>2</span> 
+<a id='x26-130115r3'></a><span class='cmr-6'>3</span><span id='textcolor1191'><span class='cmtt-10x-x-109'>def</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1192'><span class='cmtt-10x-x-109'>lerMatriz</span></span><span class='cmtt-10x-x-109'>():</span> 
+<a id='x26-130117r4'></a><span class='cmr-6'>4</span><span id='textcolor1193'><span class='cmtt-10x-x-109'>    </span></span><span id='textcolor1194'><span class='cmitt-10x-x-109'>"""ler matriz de inteiros"""</span></span> 
+<a id='x26-130119r5'></a><span class='cmr-6'>5</span><span class='cmtt-10x-x-109'>    M, ler_linha </span><span id='textcolor1195'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> [], </span><span id='textcolor1196'><span class='cmtt-10x-x-109'>input</span></span><span class='cmtt-10x-x-109'>()</span> 
+<a id='x26-130121r6'></a><span class='cmr-6'>6</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1197'><span class='cmtt-10x-x-109'>while</span></span><span class='cmtt-10x-x-109'> ler_linha:</span> 
+<a id='x26-130123r7'></a><span class='cmr-6'>7</span><span class='cmtt-10x-x-109'>        M</span><span id='textcolor1198'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>append([</span><span id='textcolor1199'><span class='cmtt-10x-x-109'>int</span></span><span class='cmtt-10x-x-109'>(i) </span><span id='textcolor1200'><span class='cmtt-10x-x-109'>for</span></span><span class='cmtt-10x-x-109'> i </span><span id='textcolor1201'><span class='cmtt-10x-x-109'>in</span></span><span class='cmtt-10x-x-109'> ler_linha</span><span id='textcolor1202'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>split(</span><span id='textcolor1203'><span class='cmtt-10x-x-109'>' '</span></span><span class='cmtt-10x-x-109'>) </span><span id='textcolor1204'><span class='cmtt-10x-x-109'>if</span></span><span class='cmtt-10x-x-109'> i])</span> 
+<a id='x26-130125r8'></a><span class='cmr-6'>8</span><span class='cmtt-10x-x-109'>        ler_linha </span><span id='textcolor1205'><span class='cmtt-10x-x-109'>=</span></span><span class='cmtt-10x-x-109'> </span><span id='textcolor1206'><span class='cmtt-10x-x-109'>input</span></span><span class='cmtt-10x-x-109'>()</span> 
+<a id='x26-130127r9'></a><span class='cmr-6'>9</span><span class='cmtt-10x-x-109'>    </span><span id='textcolor1207'><span class='cmtt-10x-x-109'>return</span></span><span class='cmtt-10x-x-109'> M</span> 
+<a id='x26-130129r10'></a><span class='cmr-6'>10</span> 
+<a id='x26-130131r11'></a><span class='cmr-6'>11</span><span id='textcolor1208'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor1209'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor1210'><span class='cmtt-10x-x-109'>'soma = </span></span><span id='textcolor1211'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>np</span><span id='textcolor1212'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>sum(lerMatriz())</span><span id='textcolor1213'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor1214'><span class='cmtt-10x-x-109'>'</span></span><span class='cmtt-10x-x-109'>)</span></pre>
  
 </div> 
 </div>
-<a id='x26-129132r5'></a>
-<a id='x26-129133'></a>
+<a id='x26-130132r5'></a>
+<a id='x26-130133'></a>
                                                                                                   
                                                                                                   
        </figure>
 <p class='indent'>       A segunda questão sobre parcelas sem juros, a ser inserida no arquivo de código <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q2.py</span></span></span> da
 atividade VPL, pode ser resolvida com o seguinte comando: <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>print(f"{float(input())/12:.2f}")</span></span></span>. Este
 comando lê a entrada fornecida, converte para o formato <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>float</span></span></span>, divide por 12 parcelas (como
-definido no enunciado da segunda questão na Figura <a href='#x26-127005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  --></a>) e formata o resultado com duas casas
+definido no enunciado da segunda questão na Figura <a href='#x26-128005r4'>10.4<!-- tex4ht:ref: fig:cap10_figExameVPL_PDF  --></a>) e formata o resultado com duas casas
 decimais.
-<a id='x26-129134r231'></a>
+<a id='x26-130134r232'></a>
        </p> 
 
-       <h3 class='sectionHead' id='detalhando-o-arquivo-linkerjson'><span class='titlemark'>10.2   </span> <a id='x26-1300002'></a>Detalhando o arquivo <span class='cmtt-12'>linker.json</span></h3>
+       <h3 class='sectionHead' id='detalhando-o-arquivo-linkerjson'><span class='titlemark'>10.2   </span> <a id='x26-1310002'></a>Detalhando o arquivo <span class='cmtt-12'>linker.json</span></h3>
 <p class='noindent'>Esta seção detalha o arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>linker.json</span></span></span>, sendo amplamente utilizado para trocar dados entre
 sistemas e fornece uma maneira fácil de armazenar e acessar informações estruturadas. Com o
 arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>linker.json</span></span></span>, o professor pode facilmente importar as variações do exame em um
@@ -561,14 +561,14 @@ criação de diferentes variações de questões com pesos e habilidades diferen
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox myboxCode' id='tcolobox-101'>    
+<div class='tcolorbox myboxCode' id='tcolobox-112'>    
 <div class='tcolorbox-title'>
                                                                                                   
                                                                                                   
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Conteúdo do arquivo linker.json de até </span><span class='cmbx-10x-x-109'>a primeira questão:</span>________________________________
 </p> 
-<pre class='verbatim' id='verbatim-32'>
+<pre class='verbatim' id='verbatim-39'>
 {
   "variations": [
     {
@@ -620,14 +620,14 @@ forma mais abrangente.
 </p> 
 <p class='indent'>       </p> 
 
-<div class='tcolorbox myboxCode' id='tcolobox-102'>    
+<div class='tcolorbox myboxCode' id='tcolobox-113'>    
 <div class='tcolorbox-title'>
                                                                                                   
                                                                                                   
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Conteúdo do arquivo linker.json da segunda questão:</span>__________________________________________
 </p> 
-<pre class='verbatim' id='verbatim-33'>
+<pre class='verbatim' id='verbatim-40'>
         ...
         {
           "key": "2454",
@@ -668,8 +668,8 @@ forma mais abrangente.
  
 </div> 
 </div>
-<p><a id='x26-130001r245'></a></p>
-       <h3 class='sectionHead' id='consideracoes-finais8'><span class='titlemark'>10.3   </span> <a id='x26-1310003'></a>Considerações finais</h3>
+<p><a id='x26-131001r246'></a></p>
+       <h3 class='sectionHead' id='consideracoes-finais8'><span class='titlemark'>10.3   </span> <a id='x26-1320003'></a>Considerações finais</h3>
 <p class='noindent'>Neste capítulo, foi apresentado como criar exames integrados ao <span class='cmti-12'>plugin </span>VPL do Moodle, contendo QTs
 paramétricas nas quais os estudantes devem submeter EP. Esse tipo de avaliação tem sido amplamente
 utilizado em disciplinas de cursos de graduação e pós-graduação da UFABC, principalmente nas

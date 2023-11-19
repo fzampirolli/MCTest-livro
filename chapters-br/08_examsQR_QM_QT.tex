@@ -217,9 +217,10 @@ Ao observar a Figura \ref{fig:cap08_figexameCriarPDF_Email}, é possível verifi
 \begin{myboxCode}{corCSV}{\textbf{Arquivos anexados ao e-mail enviado ao professor}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-_e477_class_670_varID_60970.pdf
-_e477_class_670_varID_60970.tex
-report_Exam_477_varID_60970_students_variations.csv
+_e477_varID_60970_class_670.pdf
+_e477_varID_60970_class_670.tex
+_e477_varID_60970_class_670_students_variations.csv
+_e477_varID_60970_class_670_variations.csv
 \end{verbatim}
 \end{myboxCode}
  
@@ -231,7 +232,7 @@ report_Exam_477_varID_60970_students_variations.csv
 \end{figure}
 
 
-\begin{myboxCode}{corCSV}{\textbf{Arquivo CSV, com as variações de cada estudante (as colunas são separadas por vírgula)}}\vspace{3mm}
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e477\_varID\_60970\_students\_variations.csv}, com as variações de cada estudante}}\vspace{3mm}
 \hrule
 \begin{verbatim}
 Name                          Variation
@@ -239,6 +240,13 @@ Estudante Exemplo Sobrenome      1
 \end{verbatim}
 \end{myboxCode}
 
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e477\_varID\_60970\_variations.csv}, com as variações de cada estudante, com turma e soma das notas de exames anteriores}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+Room           ID     Name                 Variation SumLatestGrades
+fz-turmaTeste 00001 Estudante Exemplo Sobrenome 1          0
+\end{verbatim}
+\end{myboxCode}
 
 \begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
 Foi adotado o seguinte critério de sorteio de variações para os estudantes:
@@ -272,12 +280,17 @@ Além disso, o professor receberá as correções realizadas em um arquivo ZIP, 
 \begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar a correção do exame no botão ``Upload-PDF''}}\vspace{3mm}
 \hrule
 \begin{verbatim}
+studentEmail_e477.zip
 _e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN__.csv
 _e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_irt.csv
 _e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_p001_s1_q006.png
 _e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_statistics.csv
 \end{verbatim}
 \end{myboxCode}
+
+\begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+O arquivo \verb|studentEmail_e477.zip| contém todos os arquivos PDF enviados aos estudantes, caso tenham escolhido ``Retorno=SIM'' no formulário do exame. Um exemplo é apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan}, exibindo também as perguntas, as respostas do estudante e a alternativa correta. Esses enunciados são incluídos no PDF quando a caixa abaixo do botão ``Upload-PDF'' é marcada; caso contrário, apenas a imagem, as informações do estudante e sua nota são enviadas.
+\end{mybox}
 
 Conforme explicado na Seção \ref{sec:CSVcorrecoesQR} -- \nameref{sec:CSVcorrecoesQR}, o primeiro arquivo CSV, \verb|*_.csv|, apresenta o seguinte conteúdo:
 
@@ -300,9 +313,103 @@ No arquivo em questão, é possível observar nas colunas \verb|Q1| até \verb|Q
 
 A Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} apresenta um relatório com os dados do estudante, a nota obtida e os enunciados das questões, incluindo as marcações realizadas e a alternativa correta de cada questão. As colunas \verb|K1| até \verb|K6| foram previamente explicadas na Seção \ref{sec:QMgabarito} -- \nameref{sec:QMgabarito}.
 
-\begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
-Se o professor enviar \textit{feedback} ao estudante, ele também receberá um arquivo chamado \verb|studentEmail_eXXX.zip|, onde \verb|XXX| é o número de identificação do exame. Esse arquivo conterá todos os PDFs enviados aos estudantes.
-\end{mybox}
+% NOVO
+\section{Exames adaptativos}\label{sec:testeAdaptativo}
+
+Abaixo do botão ``Criar-PDF'' na tela de exame, conforme ilustrado na Figura \ref{fig:cap06_figExameAtualiza1}, encontram-se duas barras de rolagem. A primeira permite definir o tamanho da fonte do arquivo PDF gerado com o exame. A segunda barra de rolagem possibilita definir o número de exames anteriores realizados por cada estudante a ser considerado. Por exemplo, se o valor selecionado for 1, será considerada apenas a nota do último exame para definir qual variação deste será destinada aos estudantes.
+
+Para que este método de exame adaptativo funcione adequadamente, é necessário definir a taxonomia de Bloom para cada questão, nos 6 possíveis níveis: lembrar, compreender, aplicar, analisar, avaliar e criar. Cada um desses níveis recebe um valor de 1 a 6, respectivamente. Quando, para cada nível de dificuldade, são escolhidas várias questões com taxonomias distintas, cada variação do exame poderá apresentar pesos diferentes considerando essas taxonomias. Por exemplo, se um exame definir 5 questões com dificuldade 1, porém houver 10 questões marcadas para esse mesmo nível 1, além disso, foi decidida a criação de 20 variações de exames, teremos então variações com somatórios distintos dos pesos dos níveis dessa taxonomia.
+
+Para ilustrar esse processo, foi criado um exame com 3 QM e 1 QT, todas com dificuldade 1. Além disso, foram selecionadas 6 QM para serem sorteadas, com apenas 3 delas sendo escolhidas com base no desempenho do estudante em exames recentes. Na barra de rolagem, foi escolhido o número 6 para o exame adaptativo, ou seja, serão somadas as 6 últimas notas dos exames realizados pelo estudante. Foram solicitadas a criação de 20 variações de exames após clicar no botão ``Criar-Variações''. Também foram selecionadas duas turmas. Após clicar no botão ``Criar-PDF'', os arquivos foram enviados para o email do professor, além de um \textit{download} de um arquivo compactado contendo os seguintes arquivos.
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar criar PDF com o botão``Criar-PDF''}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+_e482_varID_61011_adaptive_test.csv
+_e482_varID_61011_adaptive_test_variations_by_bloom.csv
+_e482_varID_61011_class_669.pdf
+_e482_varID_61011_class_669.tex
+_e482_varID_61011_class_670.pdf
+_e482_varID_61011_class_670.tex
+_e482_varID_61011_students_variations.csv
+_e482_varID_61011_variations.csv
+\end{verbatim}
+\end{myboxCode}
+
+O primeiro arquivo \verb|_e482_varID_61011_adaptive_test.csv| possui na primeira coluna as 20 variações do exame, na segunda coluna a chave das variações no BD e na terceira coluna a soma dos níveis da taxonomia de Bloom para as questões sorteadas para cada variação, em ordem crescente. Observam-se as questões com variações 7 e 13 com o mesmo nível de dificuldade 7. Além disso, apenas a variação 9 tem dificuldade 15.
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e482\_varID\_61011\_adaptive\_test.csv}}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+Variation  VariationID  SumBloomQuestions
+ 7            61017        7
+13            61023        7
+ 6            61016        8
+12            61022        9
+14            61024        9
+15            61025        9
+17            61027        9
+ 3            61013       10
+ 4            61014       10
+20            61030       10
+16            61026       11
+18            61028       11
+ 2            61012       12
+ 8            61018       12
+11            61021       12
+ 1            61011       13
+10            61020       13
+19            61029       13
+ 5            61015       14
+ 9            61019       15
+\end{verbatim}
+\end{myboxCode}
+
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e482\_varID\_61011\_adaptive\_test.csv}}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+RoomID RoomCode      NomeAluno                             EmailAluno               
+670    fz-turmaTeste Estudante Exemplo Sobrenome           fzampirolli@ufabc.edu.br 
+669    Turma Exemplo João da Silva                         joao@aluno.ufabc.edu.br  
+669    Turma Exemplo Maria da Silva Andrade de S Gonçalves maria@aluno.ufabc.edu.br 
+\end{verbatim}
+\end{myboxCode}
+
+\begin{myboxCode}{corCSV}{\textbf{Continuação do arquivo \texttt{\_e482\_varID\_61011\_adaptive\_test.csv}}}\vspace{3mm}
+  \hrule
+  \begin{verbatim}
+IDExame1 DataExame1 GradeExame1  IDExame2 DataExame2  GradeExame2 
+476      2023-07-06 18.0         477      2023-07-09  1.0         
+475      2023-04-17              482      2023-11-19  0.0  
+475      2023-04-17              482      2023-11-19  0.0   
+\end{verbatim}
+\end{myboxCode}
+
+
+\begin{myboxCode}{corCSV}{\textbf{Continuação do arquivo \texttt{\_e482\_varID\_61011\_adaptive\_test.csv}}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+DExame3 DataExame3  SumLatestGrades
+478.0    2023-07-11  19.0
+  
+ 
+\end{verbatim}
+\end{myboxCode}
+
+O último valor de cada linha representa o somatório das últimas 6 avaliações do estudante. As avaliações de 4 a 6 não foram apresentadas, pois não tiveram notas associadas. O arquivo \verb|_e482_varID_61011_variations.csv| a seguir resume esses dados, com a variação sorteada para cada estudante. Observa-se que as duas variações (7 e 13) com a menor soma pela taxonomia de Bloom (7) foram sorteadas para os alunos da turma \verb|Turma Exemplo|.
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e482\_varID\_61011\_variations.csv}}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+Room          ID  Name                               Variation  SumLatestGrades
+fz-turmaTeste   1 Estudante Exemplo Sobrenome             9            19.0
+Turma Exemplo 123 João da Silva                           7            0.0
+Turma Exemplo 987 Maria da Silva Andrade de S Gonçalves  13            0.0
+\end{verbatim}
+\end{myboxCode}
+
+Uma parte crucial desse processo adaptativo é a seleção adequada das questões, classificadas com base na taxonomia de Bloom. É fundamental garantir que as questões sejam bem definidas e alinhadas aos objetivos de aprendizagem. Além disso, esse método adaptativo deve ser utilizado para motivar os estudantes a permanecerem engajados na disciplina, em vez de penalizá-los com exames excessivamente difíceis ou fáceis. É importante ressaltar que sua aplicação não deve resultar em penalizações injustas, evitando a escolha de avaliações excessivamente desafiadoras para alguns e excessivamente simples para outros.
 
 % melhorar escrita formal e científica, mantendo a formatação LaTex: 
 
