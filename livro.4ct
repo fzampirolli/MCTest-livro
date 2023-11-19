@@ -160,15 +160,15 @@
 \doTocEntry\tocsection{6.2}{\csname a:TocLink\endcsname{22}{x22-870002}{QQ2-22-159}{Recorte I da tela de exame}}{290}\relax 
 \doTocEntry\toclof{}{\csname a:TocLink\endcsname{22}{x22-87002}{}{\numberline {6.4}{\ignorespaces Recorte I da tela de exame -- ver explicações no texto sobre os botões.\relax }}}{292}\relax 
 \doTocEntry\tocsubsection{6.2.1}{\csname a:TocLink\endcsname{22}{x22-880001}{QQ2-22-161}{Área à esquerda}}{293}\relax 
-\doTocEntry\tocsubsection{6.2.2}{\csname a:TocLink\endcsname{22}{x22-890002}{QQ2-22-162}{Área central}}{294}\relax 
-\doTocEntry\tocsubsection{6.2.3}{\csname a:TocLink\endcsname{22}{x22-900003}{QQ2-22-163}{Área à direita}}{295}\relax 
-\doTocEntry\tocsection{6.3}{\csname a:TocLink\endcsname{22}{x22-910003}{QQ2-22-164}{Recorte II da tela de exame -- turmas}}{296}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{22}{x22-91002}{}{\numberline {6.5}{\ignorespaces Recorte II da tela de exame, com as turmas do professor.\relax }}}{298}\relax 
-\doTocEntry\tocsection{6.4}{\csname a:TocLink\endcsname{22}{x22-920004}{QQ2-22-166}{Recorte III da tela de exame -- questões}}{299}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{22}{x22-92002}{}{\numberline {6.6}{\ignorespaces Recorte III da tela de exame, com as questões da disciplina.\relax }}}{301}\relax 
-\doTocEntry\tocsection{6.5}{\csname a:TocLink\endcsname{22}{x22-930005}{QQ2-22-168}{Recorte IV da tela de exame -- configurando os detalhes}}{302}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{22}{x22-93002}{}{\numberline {6.7}{\ignorespaces Recorte IV da tela de exame, configurando os detalhes do exame.\relax }}}{304}\relax 
-\doTocEntry\tocsection{6.6}{\csname a:TocLink\endcsname{22}{x22-940006}{QQ2-22-170}{Considerações finais}}{307}\relax 
+\doTocEntry\tocsubsection{6.2.2}{\csname a:TocLink\endcsname{22}{x22-890002}{QQ2-22-162}{Área central}}{295}\relax 
+\doTocEntry\tocsubsection{6.2.3}{\csname a:TocLink\endcsname{22}{x22-900003}{QQ2-22-163}{Área à direita}}{296}\relax 
+\doTocEntry\tocsection{6.3}{\csname a:TocLink\endcsname{22}{x22-910003}{QQ2-22-164}{Recorte II da tela de exame -- turmas}}{297}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{22}{x22-91002}{}{\numberline {6.5}{\ignorespaces Recorte II da tela de exame, com as turmas do professor.\relax }}}{299}\relax 
+\doTocEntry\tocsection{6.4}{\csname a:TocLink\endcsname{22}{x22-920004}{QQ2-22-166}{Recorte III da tela de exame -- questões}}{300}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{22}{x22-92002}{}{\numberline {6.6}{\ignorespaces Recorte III da tela de exame, com as questões da disciplina.\relax }}}{302}\relax 
+\doTocEntry\tocsection{6.5}{\csname a:TocLink\endcsname{22}{x22-930005}{QQ2-22-168}{Recorte IV da tela de exame -- configurando os detalhes}}{303}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{22}{x22-93002}{}{\numberline {6.7}{\ignorespaces Recorte IV da tela de exame, configurando os detalhes do exame.\relax }}}{305}\relax 
+\doTocEntry\tocsection{6.6}{\csname a:TocLink\endcsname{22}{x22-940006}{QQ2-22-170}{Considerações finais}}{308}\relax 
 \doTocEntry\tocchapter{7}{\csname a:TocLink\endcsname{23}{x23-950007}{QQ2-23-171}{Exames com Quadro de Respostas (QR)}}{314}\relax 
 \doTocEntry\tocsection{7.1}{\csname a:TocLink\endcsname{23}{x23-960001}{QQ2-23-172}{Utilizando exames exclusivamente com QR}}{314}\relax 
 \doTocEntry\tocsubsection{7.1.1}{\csname a:TocLink\endcsname{23}{x23-970001}{QQ2-23-173}{Estilo vertical}}{315}\relax 
@@ -181,157 +181,158 @@
 \doTocEntry\toclof{}{\csname a:TocLink\endcsname{23}{x23-99004}{}{\numberline {7.5}{\ignorespaces Exemplo de PDF de um exame com 18 questões, cinco questões por bloco e dois blocos por linha.\relax }}}{329}\relax 
 \doTocEntry\tocsection{7.3}{\csname a:TocLink\endcsname{23}{x23-1000003}{QQ2-23-181}{Corrigindo exames com QR}}{330}\relax 
 \doTocEntry\toclof{}{\csname a:TocLink\endcsname{23}{x23-100002}{}{\numberline {7.6}{\ignorespaces Exemplos de exames digitalizados a partir do PDF mostrado na Figura \ref {fig:cap07_figquestoesPorBloco}.\relax }}}{332}\relax 
-\doTocEntry\tocsubsection{7.3.1}{\csname a:TocLink\endcsname{23}{x23-1010001}{QQ2-23-183}{Arquivo CSV com as correções}}{333}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{23}{x23-101004}{}{\numberline {7.7}{\ignorespaces Recortes das questões marcadas erradamente na Figura \ref {fig:cap07_figquestoesPorBlocoScan}--(b).\relax }}}{336}\relax 
-\doTocEntry\tocsubsection{7.3.2}{\csname a:TocLink\endcsname{23}{x23-1020002}{QQ2-23-185}{Teoria de Resposta ao Item}}{337}\relax 
-\doTocEntry\tocsubsection{7.3.3}{\csname a:TocLink\endcsname{23}{x23-1030003}{QQ2-23-186}{\textit  {Feedback} ao estudante}}{339}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{23}{x23-103002}{}{\numberline {7.8}{\ignorespaces PDF com o \textit {feedback} das correções enviado para o e-mail do estudante.\relax }}}{341}\relax 
-\doTocEntry\tocsection{7.4}{\csname a:TocLink\endcsname{23}{x23-1040004}{QQ2-23-188}{Considerações finais}}{342}\relax 
-\doTocEntry\tocchapter{8}{\csname a:TocLink\endcsname{24}{x24-1050008}{QQ2-24-189}{Exames com QR+QM e/ou QT}}{348}\relax 
-\doTocEntry\tocsection{8.1}{\csname a:TocLink\endcsname{24}{x24-1060001}{QQ2-24-190}{Criando QMs e uma QT}}{349}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{24}{x24-106023}{}{\numberline {8.1}{\ignorespaces Exemplo de QT com resposta exata.\relax }}}{353}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-106025}{}{\numberline {8.1}{\ignorespaces Recorte da tela de configuração do exame.\relax }}}{356}\relax 
-\doTocEntry\tocsection{8.2}{\csname a:TocLink\endcsname{24}{x24-1070002}{QQ2-24-193}{Criando as variações}}{357}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-107002}{}{\numberline {8.2}{\ignorespaces Recorte da tela de configuração do exame, detalhando o botão ``Criar-Variações''.\relax }}}{359}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-107004}{}{\numberline {8.3}{\ignorespaces Mensagem após clicar no botão ``Criar-Variações''.\relax }}}{362}\relax 
-\doTocEntry\tocsection{8.3}{\csname a:TocLink\endcsname{24}{x24-1080003}{QQ2-24-196}{Detalhando os gabaritos no arquivo CSV}}{363}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-108002}{}{\numberline {8.4}{\ignorespaces E-mail enviado ao professor após clicar no botão ``Criar-Variações''.\relax }}}{365}\relax 
-\doTocEntry\tocsection{8.4}{\csname a:TocLink\endcsname{24}{x24-1090004}{QQ2-24-198}{Criando o PDF do exame com QR+QM+QT}}{367}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-109002}{}{\numberline {8.5}{\ignorespaces Recorte do PDF do exame gerado após a ação do botão ``Criar-PDF''.\relax }}}{370}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-109004}{}{\numberline {8.6}{\ignorespaces E-mail enviado ao professor após clicar no botão ``Criar-PDF''.\relax }}}{373}\relax 
-\doTocEntry\tocsection{8.5}{\csname a:TocLink\endcsname{24}{x24-1100005}{QQ2-24-201}{Corrigindo exames com QR+QM}}{374}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-110002}{}{\numberline {8.7}{\ignorespaces Recorte do e-mail com parte do PDF do exame enviado como \textit {feedaback} ao estudante, após a ação do botão ``Upload-PDF''.\relax }}}{377}\relax 
-\doTocEntry\tocsection{8.6}{\csname a:TocLink\endcsname{24}{x24-1110006}{QQ2-24-203}{Recomendações para realização tranquila de exames presenciais}}{379}\relax 
-\doTocEntry\tocsection{8.7}{\csname a:TocLink\endcsname{24}{x24-1120007}{QQ2-24-204}{Considerações finais}}{381}\relax 
-\doTocEntry\tocchapter{9}{\csname a:TocLink\endcsname{25}{x25-1130009}{QQ2-25-205}{Variações de exames com QM+QT para o Moodle}}{388}\relax 
-\doTocEntry\tocsection{9.1}{\csname a:TocLink\endcsname{25}{x25-1140001}{QQ2-25-206}{Criando exames e exportando arquivos Aiken e XML}}{388}\relax 
-\doTocEntry\tocsubsection{9.1.1}{\csname a:TocLink\endcsname{25}{x25-1150001}{QQ2-25-207}{QM -- equação de primeiro grau -- idade}}{389}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{25}{x25-115113}{}{\numberline {9.1}{\ignorespaces Exemplo de QM paramétrica para calcular as idades dos irmãos.\relax }}}{391}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-115115}{}{\numberline {9.1}{\ignorespaces Recorte do PDF gerado para a questão das idades dos irmãos, referente ao Código \ref {lst:questaoQM_EquacaoIdade}.\relax }}}{394}\relax 
-\doTocEntry\tocsubsection{9.1.2}{\csname a:TocLink\endcsname{25}{x25-1160002}{QQ2-25-210}{QM -- equação da reta}}{395}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{25}{x25-116083}{}{\numberline {9.2}{\ignorespaces Exemplo de QM paramétrica para calcular a equação da reta.\relax }}}{397}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-116085}{}{\numberline {9.2}{\ignorespaces Recorte do PDF gerado para a questão da equação da reta definida no Código \ref {lst:questaoQM_EquacaoReta}.\relax }}}{400}\relax 
-\doTocEntry\tocsubsection{9.1.3}{\csname a:TocLink\endcsname{25}{x25-1170003}{QQ2-25-213}{QT com resposta exata -- ordena parte do vetor}}{401}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{25}{x25-117032}{}{\numberline {9.3}{\ignorespaces Exemplo de questão paramétrica exata -- Parte 1: Descrição de questão.\relax }}}{403}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{25}{x25-117172}{}{\numberline {9.4}{\ignorespaces Exemplo de questão paramétrica exata -- Parte 2: Bloco de código.\relax }}}{406}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-117174}{}{\numberline {9.3}{\ignorespaces Recorte do PDF gerado para a questão com resposta exata definida pelos Códigos \ref {lst:questaoQT_Exata_1_parte1} e \ref {lst:questaoQT_Exata_1_parte2}.\relax }}}{409}\relax 
-\doTocEntry\tocsubsection{9.1.4}{\csname a:TocLink\endcsname{25}{x25-1180004}{QQ2-25-217}{Criando exame e exportando as variações}}{410}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-118002}{}{\numberline {9.4}{\ignorespaces Recorte da tela do exame com as quatro questões marcadas.\relax }}}{412}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-118004}{}{\numberline {9.5}{\ignorespaces Recorte da tela do exame com os detalhes da configuração.\relax }}}{415}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-118006}{}{\numberline {9.6}{\ignorespaces Recorte da tela do exame com os detalhes da configuração.\relax }}}{418}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-118008}{}{\numberline {9.7}{\ignorespaces Recorte do e-mail recebido após clicar em ``Criar-Variações''.\relax }}}{421}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{25}{x25-1190004}{QQ2-25-222}{Detalhando o arquivo no formato Aiken}}{422}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{25}{x25-1200004}{QQ2-25-223}{Detalhando o arquivo no formato XML para QM}}{423}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{25}{x25-1210004}{QQ2-25-224}{Detalhando o arquivo no formato XML -- questão com resposta exata}}{427}\relax 
-\doTocEntry\tocsection{9.2}{\csname a:TocLink\endcsname{25}{x25-1220002}{QQ2-25-225}{Importando arquivo XML no Moodle}}{430}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-122002}{}{\numberline {9.8}{\ignorespaces Exemplo de QM no Moodle.\relax }}}{432}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-122004}{}{\numberline {9.9}{\ignorespaces Exemplo da questão exata do Moodle.\relax }}}{435}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-122006}{}{\numberline {9.10}{\ignorespaces Exemplo exame gerado pelo MCTest.\relax }}}{438}\relax 
-\doTocEntry\tocsection{9.3}{\csname a:TocLink\endcsname{25}{x25-1230003}{QQ2-25-229}{Considerações finais}}{439}\relax 
-\doTocEntry\tocchapter{10}{\csname a:TocLink\endcsname{26}{x26-12400010}{QQ2-26-230}{Exames com MCTest+Moodle+VPL}}{446}\relax 
-\doTocEntry\tocsection{10.1}{\csname a:TocLink\endcsname{26}{x26-1250001}{QQ2-26-231}{Criando um exame com QT integrado ao VPL}}{447}\relax 
-\doTocEntry\tocsubsection{10.1.1}{\csname a:TocLink\endcsname{26}{x26-1260001}{QQ2-26-232}{Criando uma nova questão integrada ao VPL}}{447}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{26}{x26-126062}{}{\numberline {10.1}{\ignorespaces Exemplo de questão com matriz utilizando MCTest+Moodle+VPL -- Parte 1: Descrição de questão.\relax }}}{449}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{26}{x26-126199}{}{\numberline {10.2}{\ignorespaces Exemplo de questão com matriz utilizando MCTest+Moodle+VPL -- Parte 2: Bloco de código em Python.\relax }}}{452}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{26}{x26-126240}{}{\numberline {10.3}{\ignorespaces Método mais genérico que \texttt {matriz2texto} para formatar uma matriz.\relax }}}{455}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{26}{x26-126242}{}{\numberline {10.1}{\ignorespaces Recorte do PDF gerado para a questão de matriz definida nos Códigos \ref {lst:questaoQT_EP_2_matriz_parte1} e \ref {lst:questaoQT_EP_2_matriz_parte2}.\relax }}}{458}\relax 
-\doTocEntry\tocsubsection{10.1.2}{\csname a:TocLink\endcsname{26}{x26-1270002}{QQ2-26-237}{Criando as variações e imprimindo o PDF do exame}}{459}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{26}{x26-127002}{}{\numberline {10.2}{\ignorespaces Recorte da tela de exame, configurando os detalhes do exame com integração VPL.\relax }}}{461}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{26}{x26-127004}{}{\numberline {10.3}{\ignorespaces Recorte do e-mail recebido após clicar em ``Criar-Variações''.\relax }}}{464}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{26}{x26-127006}{}{\numberline {10.4}{\ignorespaces Recorte da tela do PDF do exame com integração VPL.\relax }}}{467}\relax 
-\doTocEntry\tocsubsection{10.1.3}{\csname a:TocLink\endcsname{26}{x26-1280003}{QQ2-26-241}{Criando e configurando a atividade VPL para o exame}}{468}\relax 
-\doTocEntry\tocsubsection{10.1.4}{\csname a:TocLink\endcsname{26}{x26-1290004}{QQ2-26-242}{Soluções da atividade VPL para o exame}}{469}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{26}{x26-129098}{}{\numberline {10.4}{\ignorespaces Exemplo de solução para a questão de matriz do exame no VPL.\relax }}}{471}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{26}{x26-129133}{}{\numberline {10.5}{\ignorespaces Exemplo de solução compacta e genérica para a questão de matriz do exame no VPL.\relax }}}{474}\relax 
-\doTocEntry\tocsection{10.2}{\csname a:TocLink\endcsname{26}{x26-1300002}{QQ2-26-245}{Detalhando o arquivo \texttt  {linker.json}}}{475}\relax 
-\doTocEntry\tocsection{10.3}{\csname a:TocLink\endcsname{26}{x26-1310003}{QQ2-26-246}{Considerações finais}}{478}\relax 
-\doTocEntry\tocpart{IV}{\csname a:TocLink\endcsname{27}{x27-1320004}{QQ2-27-247}{Experimentos}}{486}\relax 
-\doTocEntry\tocchapter{11}{\csname a:TocLink\endcsname{28}{x28-13300011}{QQ2-28-248}{MCTest versões 1, 2 e 3 - Quadro de Respostas (QR)}}{491}\relax 
-\doTocEntry\tocsection{11.1}{\csname a:TocLink\endcsname{28}{x28-1340001}{QQ2-28-249}{MCTest-1: versão no Matlab}}{492}\relax 
-\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{28}{x28-1350001}{QQ2-28-250}{Artigo descrevendo a parte de visão computacional do MCTest-1}}{492}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{28}{x28-135002}{}{\numberline {11.1}{\ignorespaces Recorte do PDF com o QR utilizado no MCTest-1.\relax }}}{494}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{28}{x28-1360001}{QQ2-28-252}{Método}}{495}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{28}{x28-1370001}{QQ2-28-253}{Experimentos}}{495}\relax 
-\doTocEntry\tocsection{11.2}{\csname a:TocLink\endcsname{28}{x28-1380002}{QQ2-28-254}{MCTest-2: versão no Android}}{496}\relax 
-\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{28}{x28-1390002}{QQ2-28-255}{Artigo descrevendo o MCTest-2 para dispositivos móveis}}{496}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{28}{x28-1400002}{QQ2-28-256}{Método}}{496}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{28}{x28-140002}{}{\numberline {11.2}{\ignorespaces Demonstração da captura a partir de um gabarito impresso.\relax }}}{499}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{28}{x28-140004}{}{\numberline {11.3}{\ignorespaces As questões marcadas na parte inferior indicam um valor ponderado atribuído a questão, as maras à direita representam diferentes gabaritos e a identificação do gabarito é a marca à direita e abaixo. Fonte: \citeonline {2016:China.Zampirolli.ea}.\relax }}}{502}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{28}{x28-140006}{}{\numberline {11.4}{\ignorespaces Estatísticas sobre o número de respostas corretas em uma turma. Fonte: \citeonline {2016:China.Zampirolli.ea}.\relax }}}{505}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{28}{x28-1410002}{QQ2-28-260}{Experimentos}}{506}\relax 
-\doTocEntry\tocsection{11.3}{\csname a:TocLink\endcsname{28}{x28-1420003}{QQ2-28-261}{Considerações finais}}{506}\relax 
-\doTocEntry\tocchapter{12}{\csname a:TocLink\endcsname{29}{x29-14300012}{QQ2-29-262}{MCTest versões 4, 4.G e 5}}{512}\relax 
-\doTocEntry\tocsection{12.1}{\csname a:TocLink\endcsname{29}{x29-1440001}{QQ2-29-263}{MCTest-4: gerando e corrigindo questões criadas no LaTeX}}{512}\relax 
-\doTocEntry\tocsubsection{12.1.1}{\csname a:TocLink\endcsname{29}{x29-1450001}{QQ2-29-264}{Artigo descrevendo as versões do MCTest 4 e 4.G}}{513}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1460001}{QQ2-29-265}{Método}}{513}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-146002}{}{\numberline {12.1}{\ignorespaces Estrutura de pastas do MCTest-4. \ Fonte: \ \citeonline {2016:Zampirolli.Batista.ea}.\relax }}}{515}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1470001}{QQ2-29-267}{Experimentos}}{516}\relax 
-\doTocEntry\tocsubsection{12.1.2}{\csname a:TocLink\endcsname{29}{x29-1480002}{QQ2-29-268}{Artigo comparando as modalidades semipresencial e presencial CS1 com base na utilidade do MCTest-4}}{517}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1490002}{QQ2-29-269}{Método}}{517}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1500002}{QQ2-29-270}{Experimentos}}{518}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-150002}{}{\numberline {12.2}{\ignorespaces Recorte de um exame gerado com MCTest-4.G.\relax }}}{520}\relax 
-\doTocEntry\tocsubsection{12.1.3}{\csname a:TocLink\endcsname{29}{x29-1510003}{QQ2-29-272}{Artigo definindo a parametrização do MCTest após a versão 4}}{521}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1520003}{QQ2-29-273}{Movimento Retilíneo Uniforme com a biblioteca \texttt  {symbols}}}{521}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-152113}{}{\numberline {12.1}{\ignorespaces Exemplo de QM paramétrica para calcular MRU.\relax }}}{523}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-152115}{}{\numberline {12.3}{\ignorespaces Recorte do PDF gerado para a questão de MRU do Código \ref {lst:questaoQM_MRU}.\relax }}}{526}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1530003}{QQ2-29-276}{Criação de Matriz}}{527}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-153095}{}{\numberline {12.2}{\ignorespaces Exemplo de QM paramétrica para criar uma matriz.\relax }}}{529}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-153097}{}{\numberline {12.4}{\ignorespaces Recorte do PDF gerado para a questão para criar uma matriz do Código \ref {lst:questaoQM_criaMatriz}.\relax }}}{532}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1540003}{QQ2-29-279}{Experimentos}}{533}\relax 
-\doTocEntry\tocsection{12.2}{\csname a:TocLink\endcsname{29}{x29-1550002}{QQ2-29-280}{MCTest-5: a versão web}}{533}\relax 
-\doTocEntry\tocsubsection{12.2.1}{\csname a:TocLink\endcsname{29}{x29-1560001}{QQ2-29-281}{Artigo apresentando a primeira versão web do MCTest}}{533}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1570001}{QQ2-29-282}{Equações paramétricas com equação e figura utilizando a biblioteca \texttt  {sympy}}}{534}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-157120}{}{\numberline {12.3}{\ignorespaces Questão paramétrica com equação e figura.\relax }}}{537}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-157122}{}{\numberline {12.5}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com equação e figura referente ao Código \ref {lst:questaoQM_equacaoFigura}.\relax }}}{540}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1580001}{QQ2-29-285}{Questão paramétrica com grafo e figura}}{541}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-158134}{}{\numberline {12.4}{\ignorespaces QM paramétrica com grafo e figura.\relax }}}{543}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-158136}{}{\numberline {12.6}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com grafo e figura referente ao Código \ref {lst:questaoQM_grafo}.\relax }}}{546}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1590001}{QQ2-29-288}{Questão paramétrica com matriz e figura}}{547}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-159110}{}{\numberline {12.5}{\ignorespaces Método para desenhar matriz.\relax }}}{549}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-159232}{}{\numberline {12.6}{\ignorespaces Questão paramétrica com matriz -- Parte 1: Descrição de questão.\relax }}}{552}\relax 
-\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-159378}{}{\numberline {12.7}{\ignorespaces Questão paramétrica com matriz -- Parte 2: Bloco de código em Python.\relax }}}{555}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-159380}{}{\numberline {12.7}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com matriz criada pelos Códigos \ref {lst:questaoMatrizRosaParte1} e \ref {lst:questaoMatrizRosaParte2}.\relax }}}{558}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1600001}{QQ2-29-293}{Resultados}}{559}\relax 
-\doTocEntry\tocsubsection{12.2.2}{\csname a:TocLink\endcsname{29}{x29-1610002}{QQ2-29-294}{Artigo descrevendo o MCTest em conjunto com \textit  {Google Forms} e \textit  {Google Sheets}}}{559}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1620002}{QQ2-29-295}{Método}}{559}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-162002}{}{\numberline {12.8}{\ignorespaces Planilha mostrando o questionário preenchido de um estudante. Adaptado de \citeonline {2020:Zampirolli.Batista.ea}.\relax }}}{562}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1630002}{QQ2-29-297}{Experimentos}}{564}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-163002}{}{\numberline {12.9}{\ignorespaces Exemplo de exame utilizado em Cálculo 1. Adaptado de \citeonline {2020:Zampirolli.Batista.ea}.\relax }}}{566}\relax 
-\doTocEntry\tocsubsection{12.2.3}{\csname a:TocLink\endcsname{29}{x29-1640003}{QQ2-29-299}{Artigo descrevendo a adoção de QMs com  pesos diferentes  nas  alterna\nobreak  \hskip \z@skip \discretionary {-}{}{}\nobreak  \hskip \z@skip tivas}}{567}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1650003}{QQ2-29-300}{Método}}{567}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-165002}{}{\numberline {12.10}{\ignorespaces Visualização do arquivo CSV com as correções. Adaptado de \citeonline {2021:Zampirolli.Batista.ea*2}.\relax }}}{569}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-165004}{}{\numberline {12.11}{\ignorespaces Cálculo final do exame. Adaptado de \citeonline {2021:Zampirolli.Batista.ea*2}.\relax }}}{572}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1660003}{QQ2-29-303}{Experimentos}}{573}\relax 
-\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{29}{x29-1670003}{QQ2-29-304}{Artigo comparando diferentes processos seletivos na EPUFABC}}{573}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1680003}{QQ2-29-305}{Método}}{574}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1690003}{QQ2-29-306}{Experimentos}}{574}\relax 
-\doTocEntry\tocsection{12.3}{\csname a:TocLink\endcsname{29}{x29-1700003}{QQ2-29-307}{Considerações finais}}{575}\relax 
-\doTocEntry\tocchapter{13}{\csname a:TocLink\endcsname{30}{x30-17100013}{QQ2-30-308}{MCTest+Moodle+VPL}}{582}\relax 
-\doTocEntry\tocsection{13.1}{\csname a:TocLink\endcsname{30}{x30-1720001}{QQ2-30-309}{MCTest-5, com Moodle}}{582}\relax 
-\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{30}{x30-1730001}{QQ2-30-310}{Artigo sobre a exportação de questões paramétricas para o Moodle usando o MCTest}}{582}\relax 
-\doTocEntry\tocsection{13.2}{\csname a:TocLink\endcsname{30}{x30-1740002}{QQ2-30-311}{MCTest-5, com Moodle+VPL}}{583}\relax 
-\doTocEntry\tocsubsection{13.2.1}{\csname a:TocLink\endcsname{30}{x30-1750001}{QQ2-30-312}{Artigo com a primeira integração entre MCTest+Moodle+VPL}}{583}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1760001}{QQ2-30-313}{Método}}{584}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1770001}{QQ2-30-314}{Experimentos}}{585}\relax 
-\doTocEntry\tocsubsection{13.2.2}{\csname a:TocLink\endcsname{30}{x30-1780002}{QQ2-30-315}{Artigo aplicando a integração MCTest+Moodle+VPL em CS0}}{585}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1790002}{QQ2-30-316}{Método}}{585}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1800002}{QQ2-30-317}{Experimentos}}{586}\relax 
-\doTocEntry\tocsubsection{13.2.3}{\csname a:TocLink\endcsname{30}{x30-1810003}{QQ2-30-318}{Artigo sobre o uso de múltiplas linguagens de programação em CS1}}{587}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1820003}{QQ2-30-319}{Método}}{587}\relax 
-\doTocEntry\toclof{}{\csname a:TocLink\endcsname{30}{x30-182002}{}{\numberline {13.1}{\ignorespaces (a) estrutura de arquivos e pastas; (b) recorte da estrutura de arquivos e pastas gerados automaticamente, detalhando a pasta \texttt {1.py} para Python. Fonte: \citeonline {2021:Zampirolli.Teubl.ea}.\relax }}}{589}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1830003}{QQ2-30-321}{Experimentos}}{590}\relax 
-\doTocEntry\tocsubsection{13.2.4}{\csname a:TocLink\endcsname{30}{x30-1840004}{QQ2-30-322}{Artigo aplicando a integração MCTest+Moodle+VPL em CS1}}{590}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1850004}{QQ2-30-323}{Método}}{591}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1860004}{QQ2-30-324}{Experimentos}}{591}\relax 
-\doTocEntry\tocsubsection{13.2.5}{\csname a:TocLink\endcsname{30}{x30-1870005}{QQ2-30-325}{Artigo explorando a integração de jogos no ensino de CS0}}{591}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1880005}{QQ2-30-326}{Método}}{592}\relax 
-\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1890005}{QQ2-30-327}{Experimentos}}{592}\relax 
-\doTocEntry\tocsection{13.3}{\csname a:TocLink\endcsname{30}{x30-1900003}{QQ2-30-328}{Considerações finais}}{592}\relax 
-\doTocEntry\tocchapter{14}{\csname a:TocLink\endcsname{31}{x31-19100014}{QQ2-31-329}{Conclusões}}{600}\relax 
-\doTocEntry\tocsection{14.1}{\csname a:TocLink\endcsname{31}{x31-1920001}{QQ2-31-330}{Novas possibilidades de aprimoramento}}{601}\relax 
-\doTocEntry\tocsection{14.2}{\csname a:TocLink\endcsname{31}{x31-1930002}{QQ2-31-331}{Novas publicações}}{603}\relax 
-\doTocEntry\tocsection{14.3}{\csname a:TocLink\endcsname{31}{x31-1940003}{QQ2-31-332}{Novas edições deste livro}}{604}\relax 
-\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{32}{x32-1950003}{QQ2-32-333}{}}{609}\relax 
-\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{33}{x33-1960003}{QQ2-33-334}{Bibliografia}}{609}\relax 
-\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{33}{Q1-33-335}{}{Bibliografia}}{609}\relax 
+\doTocEntry\tocsubsection{7.3.1}{\csname a:TocLink\endcsname{23}{x23-1010001}{QQ2-23-183}{Arquivo CSV com as correções}}{334}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{23}{x23-101004}{}{\numberline {7.7}{\ignorespaces Recortes das questões marcadas erradamente na Figura \ref {fig:cap07_figquestoesPorBlocoScan}--(b).\relax }}}{337}\relax 
+\doTocEntry\tocsubsection{7.3.2}{\csname a:TocLink\endcsname{23}{x23-1020002}{QQ2-23-185}{Teoria de Resposta ao Item}}{338}\relax 
+\doTocEntry\tocsubsection{7.3.3}{\csname a:TocLink\endcsname{23}{x23-1030003}{QQ2-23-186}{\textit  {Feedback} ao estudante}}{340}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{23}{x23-103002}{}{\numberline {7.8}{\ignorespaces PDF com o \textit {feedback} das correções enviado para o e-mail do estudante.\relax }}}{342}\relax 
+\doTocEntry\tocsection{7.4}{\csname a:TocLink\endcsname{23}{x23-1040004}{QQ2-23-188}{Considerações finais}}{343}\relax 
+\doTocEntry\tocchapter{8}{\csname a:TocLink\endcsname{24}{x24-1050008}{QQ2-24-189}{Exames com QR+QM e/ou QT}}{350}\relax 
+\doTocEntry\tocsection{8.1}{\csname a:TocLink\endcsname{24}{x24-1060001}{QQ2-24-190}{Criando QMs e uma QT}}{351}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{24}{x24-106023}{}{\numberline {8.1}{\ignorespaces Exemplo de QT com resposta exata.\relax }}}{355}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-106025}{}{\numberline {8.1}{\ignorespaces Recorte da tela de configuração do exame.\relax }}}{358}\relax 
+\doTocEntry\tocsection{8.2}{\csname a:TocLink\endcsname{24}{x24-1070002}{QQ2-24-193}{Criando as variações}}{359}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-107002}{}{\numberline {8.2}{\ignorespaces Recorte da tela de configuração do exame, detalhando o botão ``Criar-Variações''.\relax }}}{361}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-107004}{}{\numberline {8.3}{\ignorespaces Mensagem após clicar no botão ``Criar-Variações''.\relax }}}{364}\relax 
+\doTocEntry\tocsection{8.3}{\csname a:TocLink\endcsname{24}{x24-1080003}{QQ2-24-196}{Detalhando os gabaritos no arquivo CSV}}{365}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-108002}{}{\numberline {8.4}{\ignorespaces E-mail enviado ao professor após clicar no botão ``Criar-Variações''.\relax }}}{367}\relax 
+\doTocEntry\tocsection{8.4}{\csname a:TocLink\endcsname{24}{x24-1090004}{QQ2-24-198}{Criando o PDF do exame com QR+QM+QT}}{369}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-109002}{}{\numberline {8.5}{\ignorespaces Recorte do PDF do exame gerado após a ação do botão ``Criar-PDF''.\relax }}}{372}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-109004}{}{\numberline {8.6}{\ignorespaces E-mail enviado ao professor após clicar no botão ``Criar-PDF''.\relax }}}{375}\relax 
+\doTocEntry\tocsection{8.5}{\csname a:TocLink\endcsname{24}{x24-1100005}{QQ2-24-201}{Corrigindo exames com QR+QM}}{377}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{24}{x24-110002}{}{\numberline {8.7}{\ignorespaces Recorte do e-mail com parte do PDF do exame enviado como \textit {feedaback} ao estudante, após a ação do botão ``Upload-PDF''.\relax }}}{379}\relax 
+\doTocEntry\tocsection{8.6}{\csname a:TocLink\endcsname{24}{x24-1110006}{QQ2-24-203}{Exames adaptativos}}{381}\relax 
+\doTocEntry\tocsection{8.7}{\csname a:TocLink\endcsname{24}{x24-1120007}{QQ2-24-204}{Recomendações para realização tranquila de exames presenciais}}{385}\relax 
+\doTocEntry\tocsection{8.8}{\csname a:TocLink\endcsname{24}{x24-1130008}{QQ2-24-205}{Considerações finais}}{387}\relax 
+\doTocEntry\tocchapter{9}{\csname a:TocLink\endcsname{25}{x25-1140009}{QQ2-25-206}{Variações de exames com QM+QT para o Moodle}}{394}\relax 
+\doTocEntry\tocsection{9.1}{\csname a:TocLink\endcsname{25}{x25-1150001}{QQ2-25-207}{Criando exames e exportando arquivos Aiken e XML}}{394}\relax 
+\doTocEntry\tocsubsection{9.1.1}{\csname a:TocLink\endcsname{25}{x25-1160001}{QQ2-25-208}{QM -- equação de primeiro grau -- idade}}{395}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{25}{x25-116113}{}{\numberline {9.1}{\ignorespaces Exemplo de QM paramétrica para calcular as idades dos irmãos.\relax }}}{397}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-116115}{}{\numberline {9.1}{\ignorespaces Recorte do PDF gerado para a questão das idades dos irmãos, referente ao Código \ref {lst:questaoQM_EquacaoIdade}.\relax }}}{400}\relax 
+\doTocEntry\tocsubsection{9.1.2}{\csname a:TocLink\endcsname{25}{x25-1170002}{QQ2-25-211}{QM -- equação da reta}}{401}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{25}{x25-117083}{}{\numberline {9.2}{\ignorespaces Exemplo de QM paramétrica para calcular a equação da reta.\relax }}}{403}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-117085}{}{\numberline {9.2}{\ignorespaces Recorte do PDF gerado para a questão da equação da reta definida no Código \ref {lst:questaoQM_EquacaoReta}.\relax }}}{406}\relax 
+\doTocEntry\tocsubsection{9.1.3}{\csname a:TocLink\endcsname{25}{x25-1180003}{QQ2-25-214}{QT com resposta exata -- ordena parte do vetor}}{407}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{25}{x25-118032}{}{\numberline {9.3}{\ignorespaces Exemplo de questão paramétrica exata -- Parte 1: Descrição de questão.\relax }}}{409}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{25}{x25-118172}{}{\numberline {9.4}{\ignorespaces Exemplo de questão paramétrica exata -- Parte 2: Bloco de código.\relax }}}{412}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-118174}{}{\numberline {9.3}{\ignorespaces Recorte do PDF gerado para a questão com resposta exata definida pelos Códigos \ref {lst:questaoQT_Exata_1_parte1} e \ref {lst:questaoQT_Exata_1_parte2}.\relax }}}{415}\relax 
+\doTocEntry\tocsubsection{9.1.4}{\csname a:TocLink\endcsname{25}{x25-1190004}{QQ2-25-218}{Criando exame e exportando as variações}}{416}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-119002}{}{\numberline {9.4}{\ignorespaces Recorte da tela do exame com as quatro questões marcadas.\relax }}}{418}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-119004}{}{\numberline {9.5}{\ignorespaces Recorte da tela do exame com os detalhes da configuração.\relax }}}{421}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-119006}{}{\numberline {9.6}{\ignorespaces Recorte da tela do exame com os detalhes da configuração.\relax }}}{424}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-119008}{}{\numberline {9.7}{\ignorespaces Recorte do e-mail recebido após clicar em ``Criar-Variações''.\relax }}}{427}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{25}{x25-1200004}{QQ2-25-223}{Detalhando o arquivo no formato Aiken}}{428}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{25}{x25-1210004}{QQ2-25-224}{Detalhando o arquivo no formato XML para QM}}{429}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{25}{x25-1220004}{QQ2-25-225}{Detalhando o arquivo no formato XML -- questão com resposta exata}}{433}\relax 
+\doTocEntry\tocsection{9.2}{\csname a:TocLink\endcsname{25}{x25-1230002}{QQ2-25-226}{Importando arquivo XML no Moodle}}{436}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-123002}{}{\numberline {9.8}{\ignorespaces Exemplo de QM no Moodle.\relax }}}{438}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-123004}{}{\numberline {9.9}{\ignorespaces Exemplo da questão exata do Moodle.\relax }}}{441}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{25}{x25-123006}{}{\numberline {9.10}{\ignorespaces Exemplo exame gerado pelo MCTest.\relax }}}{444}\relax 
+\doTocEntry\tocsection{9.3}{\csname a:TocLink\endcsname{25}{x25-1240003}{QQ2-25-230}{Considerações finais}}{445}\relax 
+\doTocEntry\tocchapter{10}{\csname a:TocLink\endcsname{26}{x26-12500010}{QQ2-26-231}{Exames com MCTest+Moodle+VPL}}{452}\relax 
+\doTocEntry\tocsection{10.1}{\csname a:TocLink\endcsname{26}{x26-1260001}{QQ2-26-232}{Criando um exame com QT integrado ao VPL}}{453}\relax 
+\doTocEntry\tocsubsection{10.1.1}{\csname a:TocLink\endcsname{26}{x26-1270001}{QQ2-26-233}{Criando uma nova questão integrada ao VPL}}{453}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{26}{x26-127062}{}{\numberline {10.1}{\ignorespaces Exemplo de questão com matriz utilizando MCTest+Moodle+VPL -- Parte 1: Descrição de questão.\relax }}}{455}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{26}{x26-127199}{}{\numberline {10.2}{\ignorespaces Exemplo de questão com matriz utilizando MCTest+Moodle+VPL -- Parte 2: Bloco de código em Python.\relax }}}{458}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{26}{x26-127240}{}{\numberline {10.3}{\ignorespaces Método mais genérico que \texttt {matriz2texto} para formatar uma matriz.\relax }}}{461}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{26}{x26-127242}{}{\numberline {10.1}{\ignorespaces Recorte do PDF gerado para a questão de matriz definida nos Códigos \ref {lst:questaoQT_EP_2_matriz_parte1} e \ref {lst:questaoQT_EP_2_matriz_parte2}.\relax }}}{464}\relax 
+\doTocEntry\tocsubsection{10.1.2}{\csname a:TocLink\endcsname{26}{x26-1280002}{QQ2-26-238}{Criando as variações e imprimindo o PDF do exame}}{465}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{26}{x26-128002}{}{\numberline {10.2}{\ignorespaces Recorte da tela de exame, configurando os detalhes do exame com integração VPL.\relax }}}{467}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{26}{x26-128004}{}{\numberline {10.3}{\ignorespaces Recorte do e-mail recebido após clicar em ``Criar-Variações''.\relax }}}{470}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{26}{x26-128006}{}{\numberline {10.4}{\ignorespaces Recorte da tela do PDF do exame com integração VPL.\relax }}}{473}\relax 
+\doTocEntry\tocsubsection{10.1.3}{\csname a:TocLink\endcsname{26}{x26-1290003}{QQ2-26-242}{Criando e configurando a atividade VPL para o exame}}{474}\relax 
+\doTocEntry\tocsubsection{10.1.4}{\csname a:TocLink\endcsname{26}{x26-1300004}{QQ2-26-243}{Soluções da atividade VPL para o exame}}{475}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{26}{x26-130098}{}{\numberline {10.4}{\ignorespaces Exemplo de solução para a questão de matriz do exame no VPL.\relax }}}{477}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{26}{x26-130133}{}{\numberline {10.5}{\ignorespaces Exemplo de solução compacta e genérica para a questão de matriz do exame no VPL.\relax }}}{480}\relax 
+\doTocEntry\tocsection{10.2}{\csname a:TocLink\endcsname{26}{x26-1310002}{QQ2-26-246}{Detalhando o arquivo \texttt  {linker.json}}}{481}\relax 
+\doTocEntry\tocsection{10.3}{\csname a:TocLink\endcsname{26}{x26-1320003}{QQ2-26-247}{Considerações finais}}{484}\relax 
+\doTocEntry\tocpart{IV}{\csname a:TocLink\endcsname{27}{x27-1330004}{QQ2-27-248}{Experimentos}}{492}\relax 
+\doTocEntry\tocchapter{11}{\csname a:TocLink\endcsname{28}{x28-13400011}{QQ2-28-249}{MCTest versões 1, 2 e 3 - Quadro de Respostas (QR)}}{497}\relax 
+\doTocEntry\tocsection{11.1}{\csname a:TocLink\endcsname{28}{x28-1350001}{QQ2-28-250}{MCTest-1: versão no Matlab}}{498}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{28}{x28-1360001}{QQ2-28-251}{Artigo descrevendo a parte de visão computacional do MCTest-1}}{498}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{28}{x28-136002}{}{\numberline {11.1}{\ignorespaces Recorte do PDF com o QR utilizado no MCTest-1.\relax }}}{500}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{28}{x28-1370001}{QQ2-28-253}{Método}}{501}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{28}{x28-1380001}{QQ2-28-254}{Experimentos}}{501}\relax 
+\doTocEntry\tocsection{11.2}{\csname a:TocLink\endcsname{28}{x28-1390002}{QQ2-28-255}{MCTest-2: versão no Android}}{502}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{28}{x28-1400002}{QQ2-28-256}{Artigo descrevendo o MCTest-2 para dispositivos móveis}}{502}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{28}{x28-1410002}{QQ2-28-257}{Método}}{502}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{28}{x28-141002}{}{\numberline {11.2}{\ignorespaces Demonstração da captura a partir de um gabarito impresso.\relax }}}{505}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{28}{x28-141004}{}{\numberline {11.3}{\ignorespaces As questões marcadas na parte inferior indicam um valor ponderado atribuído a questão, as maras à direita representam diferentes gabaritos e a identificação do gabarito é a marca à direita e abaixo. Fonte: \citeonline {2016:China.Zampirolli.ea}.\relax }}}{508}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{28}{x28-141006}{}{\numberline {11.4}{\ignorespaces Estatísticas sobre o número de respostas corretas em uma turma. Fonte: \citeonline {2016:China.Zampirolli.ea}.\relax }}}{511}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{28}{x28-1420002}{QQ2-28-261}{Experimentos}}{512}\relax 
+\doTocEntry\tocsection{11.3}{\csname a:TocLink\endcsname{28}{x28-1430003}{QQ2-28-262}{Considerações finais}}{512}\relax 
+\doTocEntry\tocchapter{12}{\csname a:TocLink\endcsname{29}{x29-14400012}{QQ2-29-263}{MCTest versões 4, 4.G e 5}}{518}\relax 
+\doTocEntry\tocsection{12.1}{\csname a:TocLink\endcsname{29}{x29-1450001}{QQ2-29-264}{MCTest-4: gerando e corrigindo questões criadas no LaTeX}}{518}\relax 
+\doTocEntry\tocsubsection{12.1.1}{\csname a:TocLink\endcsname{29}{x29-1460001}{QQ2-29-265}{Artigo descrevendo as versões do MCTest 4 e 4.G}}{519}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1470001}{QQ2-29-266}{Método}}{519}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-147002}{}{\numberline {12.1}{\ignorespaces Estrutura de pastas do MCTest-4. \ Fonte: \ \citeonline {2016:Zampirolli.Batista.ea}.\relax }}}{521}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1480001}{QQ2-29-268}{Experimentos}}{522}\relax 
+\doTocEntry\tocsubsection{12.1.2}{\csname a:TocLink\endcsname{29}{x29-1490002}{QQ2-29-269}{Artigo comparando as modalidades semipresencial e presencial CS1 com base na utilidade do MCTest-4}}{523}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1500002}{QQ2-29-270}{Método}}{523}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1510002}{QQ2-29-271}{Experimentos}}{524}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-151002}{}{\numberline {12.2}{\ignorespaces Recorte de um exame gerado com MCTest-4.G.\relax }}}{526}\relax 
+\doTocEntry\tocsubsection{12.1.3}{\csname a:TocLink\endcsname{29}{x29-1520003}{QQ2-29-273}{Artigo definindo a parametrização do MCTest após a versão 4}}{527}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1530003}{QQ2-29-274}{Movimento Retilíneo Uniforme com a biblioteca \texttt  {symbols}}}{527}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-153113}{}{\numberline {12.1}{\ignorespaces Exemplo de QM paramétrica para calcular MRU.\relax }}}{529}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-153115}{}{\numberline {12.3}{\ignorespaces Recorte do PDF gerado para a questão de MRU do Código \ref {lst:questaoQM_MRU}.\relax }}}{532}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1540003}{QQ2-29-277}{Criação de Matriz}}{533}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-154095}{}{\numberline {12.2}{\ignorespaces Exemplo de QM paramétrica para criar uma matriz.\relax }}}{535}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-154097}{}{\numberline {12.4}{\ignorespaces Recorte do PDF gerado para a questão para criar uma matriz do Código \ref {lst:questaoQM_criaMatriz}.\relax }}}{538}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1550003}{QQ2-29-280}{Experimentos}}{539}\relax 
+\doTocEntry\tocsection{12.2}{\csname a:TocLink\endcsname{29}{x29-1560002}{QQ2-29-281}{MCTest-5: a versão web}}{539}\relax 
+\doTocEntry\tocsubsection{12.2.1}{\csname a:TocLink\endcsname{29}{x29-1570001}{QQ2-29-282}{Artigo apresentando a primeira versão web do MCTest}}{539}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1580001}{QQ2-29-283}{Equações paramétricas com equação e figura utilizando a biblioteca \texttt  {sympy}}}{540}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-158120}{}{\numberline {12.3}{\ignorespaces Questão paramétrica com equação e figura.\relax }}}{543}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-158122}{}{\numberline {12.5}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com equação e figura referente ao Código \ref {lst:questaoQM_equacaoFigura}.\relax }}}{546}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1590001}{QQ2-29-286}{Questão paramétrica com grafo e figura}}{547}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-159134}{}{\numberline {12.4}{\ignorespaces QM paramétrica com grafo e figura.\relax }}}{549}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-159136}{}{\numberline {12.6}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com grafo e figura referente ao Código \ref {lst:questaoQM_grafo}.\relax }}}{552}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1600001}{QQ2-29-289}{Questão paramétrica com matriz e figura}}{553}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-160110}{}{\numberline {12.5}{\ignorespaces Método para desenhar matriz.\relax }}}{555}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-160232}{}{\numberline {12.6}{\ignorespaces Questão paramétrica com matriz -- Parte 1: Descrição de questão.\relax }}}{558}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{29}{x29-160378}{}{\numberline {12.7}{\ignorespaces Questão paramétrica com matriz -- Parte 2: Bloco de código em Python.\relax }}}{561}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-160380}{}{\numberline {12.7}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com matriz criada pelos Códigos \ref {lst:questaoMatrizRosaParte1} e \ref {lst:questaoMatrizRosaParte2}.\relax }}}{564}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1610001}{QQ2-29-294}{Resultados}}{565}\relax 
+\doTocEntry\tocsubsection{12.2.2}{\csname a:TocLink\endcsname{29}{x29-1620002}{QQ2-29-295}{Artigo descrevendo o MCTest em conjunto com \textit  {Google Forms} e \textit  {Google Sheets}}}{565}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1630002}{QQ2-29-296}{Método}}{565}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-163002}{}{\numberline {12.8}{\ignorespaces Planilha mostrando o questionário preenchido de um estudante. Adaptado de \citeonline {2020:Zampirolli.Batista.ea}.\relax }}}{568}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1640002}{QQ2-29-298}{Experimentos}}{570}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-164002}{}{\numberline {12.9}{\ignorespaces Exemplo de exame utilizado em Cálculo 1. Adaptado de \citeonline {2020:Zampirolli.Batista.ea}.\relax }}}{572}\relax 
+\doTocEntry\tocsubsection{12.2.3}{\csname a:TocLink\endcsname{29}{x29-1650003}{QQ2-29-300}{Artigo descrevendo a adoção de QMs com  pesos diferentes  nas  alterna\nobreak  \hskip \z@skip \discretionary {-}{}{}\nobreak  \hskip \z@skip tivas}}{573}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1660003}{QQ2-29-301}{Método}}{573}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-166002}{}{\numberline {12.10}{\ignorespaces Visualização do arquivo CSV com as correções. Adaptado de \citeonline {2021:Zampirolli.Batista.ea*2}.\relax }}}{575}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{29}{x29-166004}{}{\numberline {12.11}{\ignorespaces Cálculo final do exame. Adaptado de \citeonline {2021:Zampirolli.Batista.ea*2}.\relax }}}{578}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1670003}{QQ2-29-304}{Experimentos}}{579}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{29}{x29-1680003}{QQ2-29-305}{Artigo comparando diferentes processos seletivos na EPUFABC}}{579}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1690003}{QQ2-29-306}{Método}}{580}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{29}{x29-1700003}{QQ2-29-307}{Experimentos}}{580}\relax 
+\doTocEntry\tocsection{12.3}{\csname a:TocLink\endcsname{29}{x29-1710003}{QQ2-29-308}{Considerações finais}}{581}\relax 
+\doTocEntry\tocchapter{13}{\csname a:TocLink\endcsname{30}{x30-17200013}{QQ2-30-309}{MCTest+Moodle+VPL}}{588}\relax 
+\doTocEntry\tocsection{13.1}{\csname a:TocLink\endcsname{30}{x30-1730001}{QQ2-30-310}{MCTest-5, com Moodle}}{588}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{30}{x30-1740001}{QQ2-30-311}{Artigo sobre a exportação de questões paramétricas para o Moodle usando o MCTest}}{588}\relax 
+\doTocEntry\tocsection{13.2}{\csname a:TocLink\endcsname{30}{x30-1750002}{QQ2-30-312}{MCTest-5, com Moodle+VPL}}{589}\relax 
+\doTocEntry\tocsubsection{13.2.1}{\csname a:TocLink\endcsname{30}{x30-1760001}{QQ2-30-313}{Artigo com a primeira integração entre MCTest+Moodle+VPL}}{589}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1770001}{QQ2-30-314}{Método}}{590}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1780001}{QQ2-30-315}{Experimentos}}{591}\relax 
+\doTocEntry\tocsubsection{13.2.2}{\csname a:TocLink\endcsname{30}{x30-1790002}{QQ2-30-316}{Artigo aplicando a integração MCTest+Moodle+VPL em CS0}}{591}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1800002}{QQ2-30-317}{Método}}{591}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1810002}{QQ2-30-318}{Experimentos}}{592}\relax 
+\doTocEntry\tocsubsection{13.2.3}{\csname a:TocLink\endcsname{30}{x30-1820003}{QQ2-30-319}{Artigo sobre o uso de múltiplas linguagens de programação em CS1}}{593}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1830003}{QQ2-30-320}{Método}}{593}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{30}{x30-183002}{}{\numberline {13.1}{\ignorespaces (a) estrutura de arquivos e pastas; (b) recorte da estrutura de arquivos e pastas gerados automaticamente, detalhando a pasta \texttt {1.py} para Python. Fonte: \citeonline {2021:Zampirolli.Teubl.ea}.\relax }}}{595}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1840003}{QQ2-30-322}{Experimentos}}{596}\relax 
+\doTocEntry\tocsubsection{13.2.4}{\csname a:TocLink\endcsname{30}{x30-1850004}{QQ2-30-323}{Artigo aplicando a integração MCTest+Moodle+VPL em CS1}}{596}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1860004}{QQ2-30-324}{Método}}{597}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1870004}{QQ2-30-325}{Experimentos}}{597}\relax 
+\doTocEntry\tocsubsection{13.2.5}{\csname a:TocLink\endcsname{30}{x30-1880005}{QQ2-30-326}{Artigo explorando a integração de jogos no ensino de CS0}}{597}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1890005}{QQ2-30-327}{Método}}{598}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{30}{x30-1900005}{QQ2-30-328}{Experimentos}}{598}\relax 
+\doTocEntry\tocsection{13.3}{\csname a:TocLink\endcsname{30}{x30-1910003}{QQ2-30-329}{Considerações finais}}{598}\relax 
+\doTocEntry\tocchapter{14}{\csname a:TocLink\endcsname{31}{x31-19200014}{QQ2-31-330}{Conclusões}}{606}\relax 
+\doTocEntry\tocsection{14.1}{\csname a:TocLink\endcsname{31}{x31-1930001}{QQ2-31-331}{Novas possibilidades de aprimoramento}}{607}\relax 
+\doTocEntry\tocsection{14.2}{\csname a:TocLink\endcsname{31}{x31-1940002}{QQ2-31-332}{Novas publicações}}{609}\relax 
+\doTocEntry\tocsection{14.3}{\csname a:TocLink\endcsname{31}{x31-1950003}{QQ2-31-333}{Novas edições deste livro}}{610}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{32}{x32-1960003}{QQ2-32-334}{}}{615}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{33}{x33-1970003}{QQ2-33-335}{Bibliografia}}{615}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{33}{Q1-33-336}{}{Bibliografia}}{615}\relax 
 \par 

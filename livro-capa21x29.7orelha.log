@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.27)  31 OCT 2023 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.27)  19 NOV 2023 11:42
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -614,7 +614,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip79
 )
-(./livro-capa21x29.7orelha.aux)
+No file livro-capa21x29.7orelha.aux.
 \openout1 = `livro-capa21x29.7orelha.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -635,7 +635,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -728,8 +727,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 32.
 LaTeX Info: Redefining \pageref on input line 32.
 LaTeX Info: Redefining \nameref on input line 32.
-
-(./livro-capa21x29.7orelha.out) (./livro-capa21x29.7orelha.out)
 \@outlinefile=\write4
 \openout4 = `livro-capa21x29.7orelha.out'.
 
@@ -889,13 +886,19 @@ Package pdftex.def Info: ./figures/verso.png  used on input line 153.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/img2.png> <./fig
 ures/frente.png> <./figures/zampirolli.png> <./figures/qrcode.png> <./figures/b
 arcode-impresso.png> <./figures/verso.png>] (./livro-capa21x29.7orelha.aux)
-Package rerunfilecheck Info: File `livro-capa21x29.7orelha.out' has not changed
-.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package rerunfilecheck Warning: File `livro-capa21x29.7orelha.out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `livro-capa21x29.7orelha.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23397 strings out of 478287
- 450208 string characters out of 5849289
+ 23391 strings out of 478287
+ 450040 string characters out of 5849289
  1011583 words of memory out of 5000000
  41146 multiletter control sequences out of 15000+600000
  476721 words of font info for 83 fonts, out of 8000000 for 9000

@@ -108,9 +108,13 @@ Veja uma descrição da questão paramétrica para calcular a área de um círcu
 
 \begin{mybox}{corCopia}{\textbf{Marcações principais definidas no MCTest:\\\vspace{-3mm}\hrule\vspace{1mm}}}
 \begin{enumerate}
-    \item Instruções que podem representar a parte paramétrica do enunciado da questão são colocadas entre as marcações \verb|[[code:| e \verb|]]|, conforme exemplificado na linha 1 do Código \ref{lst:questaoQM_AreaCirculoEx1};
+    \item Instruções que podem representar a parte paramétrica do enunciado da questão ou das alternativas são colocadas entre as marcações \verb|[[code:| e \verb|]]|, conforme exemplificado na linha 1 do Código \ref{lst:questaoQM_AreaCirculoEx1};
     \item Após esse enunciado, um único bloco de código em Python deve ser definido entre as marcações \verb|[[def:| e \verb|]]|, como ilustrado entre as linhas 6 e 30 do exemplo. Todo o texto após esse bloco é descartado do enunciado da questão.
 \end{enumerate}
+\end{mybox}
+
+\begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+Em alguns casos, ocorre um erro no retorno da expressão regular para capturar as variáveis ou instruções delimitadas por \verb|[[code:| e \verb|]]|. Nesses casos, é necessário adicionar um espaço antes de \verb|[[code:| e após \verb|]]|. O método \verb|get_code| disponível no GitHub em \href{https://github.com/fzampirolli/mctest/blob/master/topic/UtilsMCTest4.py}{UtilsMCTest4.py} propõe uma sugestão de modificação na expressão regular. No entanto, essa sugestão apresenta uma falha quando ocorre uma sequência de \verb|]]| dentro de \verb|[[def:| e \verb|]]|. Assim, para evitar problemas, use sempre espaços antes de \verb|[[code:| e após \verb|]]|.
 \end{mybox}
 
 Se as marcações de início e fim de bloco ou instruções aparecerem erroneamente, ou se houver algum erro no código Python, mensagens de erro do compilador Python poderão ser exibidas, mas sem fornecer muitos detalhes sobre o erro específico. Portanto, é fundamental testar o código Python fora do MCTest, por exemplo, utilizando o \textit{notebook} do Google Colab. Para acessar o \textit{notebook}, basta clicar no botão ``Compile-Colab'' nas telas de alteração de questão, como mostrado na Figura \ref{fig:cap04_figQuestaoAtualiza}. Experimente adicionar espaços inesperados, como \verb|[[code: raio1]]| ou \verb|[ [code:raio1]]|, salve e clique em ``Cria-PDF''. Isso permitirá identificar erros e depurar a questão no MCTest, seguindo os seguintes exemplos:

@@ -59,77 +59,77 @@
 \contentsline {xchapter}{Questões paramétricas}{71}{chapter.5}%
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Recorte do PDF gerado para a questão definida no Código \ref {lst:questaoQM_AreaCirculoEx2}.\relax }}{77}{figure.caption.59}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Recorte do PDF gerado para a questão definida no Código \ref {lst:questaoQT_TesteMesaEx2}.\relax }}{78}{figure.caption.60}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Recorte do PDF gerado para a questão definida nos Códigos \ref {lst:questaoQT_TesteMesaEx3Parte1} e \ref {lst:questaoQT_TesteMesaEx3Parte2}.\relax }}{95}{figure.caption.61}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Recorte do PDF gerado para a questão definida nos Códigos \ref {lst:questaoQT_TesteMesaEx4Parte2} e \ref {lst:questaoQT_TesteMesaEx4Parte3}.\relax }}{96}{figure.caption.64}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Recorte do PDF gerado para a QT definida nos Códigos \ref {lst:questaoQT_EP_1_parte1} e \ref {lst:questaoQT_EP_1_parte2}.\relax }}{96}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Recorte do PDF gerado para a questão definida nos Códigos \ref {lst:questaoQT_TesteMesaEx3Parte1} e \ref {lst:questaoQT_TesteMesaEx3Parte2}.\relax }}{96}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Recorte do PDF gerado para a questão definida nos Códigos \ref {lst:questaoQT_TesteMesaEx4Parte2} e \ref {lst:questaoQT_TesteMesaEx4Parte3}.\relax }}{97}{figure.caption.64}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Recorte do PDF gerado para a QT definida nos Códigos \ref {lst:questaoQT_EP_1_parte1} e \ref {lst:questaoQT_EP_1_parte2}.\relax }}{97}{figure.caption.72}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Visão geral dos exames}{99}{chapter.6}%
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Tela de exames do professor.\relax }}{100}{figure.caption.73}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Tela para criar um novo exame.\relax }}{101}{figure.caption.74}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Recorte do PDF gerado com as configurações padrão, contendo apenas o cabeçalho e o QR.\relax }}{102}{figure.caption.75}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Recorte I da tela de exame -- ver explicações no texto sobre os botões.\relax }}{103}{figure.caption.76}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Recorte II da tela de exame, com as turmas do professor.\relax }}{106}{figure.caption.77}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Recorte III da tela de exame, com as questões da disciplina.\relax }}{107}{figure.caption.78}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Recorte IV da tela de exame, configurando os detalhes do exame.\relax }}{108}{figure.caption.79}%
+\contentsline {xchapter}{Visão geral dos exames}{101}{chapter.6}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Tela de exames do professor.\relax }}{102}{figure.caption.73}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Tela para criar um novo exame.\relax }}{103}{figure.caption.74}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Recorte do PDF gerado com as configurações padrão, contendo apenas o cabeçalho e o QR.\relax }}{104}{figure.caption.75}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Recorte I da tela de exame -- ver explicações no texto sobre os botões.\relax }}{105}{figure.caption.76}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Recorte II da tela de exame, com as turmas do professor.\relax }}{109}{figure.caption.77}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Recorte III da tela de exame, com as questões da disciplina.\relax }}{110}{figure.caption.78}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Recorte IV da tela de exame, configurando os detalhes do exame.\relax }}{110}{figure.caption.79}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Exames com Quadro de Respostas (QR)}{111}{chapter.7}%
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Recorte de um exame digitalizado em formato PDF no estilo vertical.\relax }}{113}{figure.caption.80}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Recorte de um exame em formato PDF no estilo vertical, com as instruções.\relax }}{113}{figure.caption.81}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Recorte de um exame digitalizado em formato PDF no estilo vertical.\relax }}{114}{figure.caption.82}%
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Exemplos de PDFs de exames com 245 questões no estilo horizontal e 200 questões no estilo vertical.\relax }}{115}{figure.caption.83}%
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Exemplo de PDF de um exame com 18 questões, cinco questões por bloco e dois blocos por linha.\relax }}{116}{figure.caption.84}%
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Exemplos de exames digitalizados a partir do PDF mostrado na Figura \ref {fig:cap07_figquestoesPorBloco}.\relax }}{117}{figure.caption.85}%
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Recortes das questões marcadas erradamente na Figura \ref {fig:cap07_figquestoesPorBlocoScan}--(b).\relax }}{118}{figure.caption.86}%
-\contentsline {figure}{\numberline {7.8}{\ignorespaces PDF com o \textit {feedback} das correções enviado para o e-mail do estudante.\relax }}{121}{figure.caption.87}%
+\contentsline {xchapter}{Exames com Quadro de Respostas (QR)}{113}{chapter.7}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Recorte de um exame digitalizado em formato PDF no estilo vertical.\relax }}{115}{figure.caption.80}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Recorte de um exame em formato PDF no estilo vertical, com as instruções.\relax }}{115}{figure.caption.81}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Recorte de um exame digitalizado em formato PDF no estilo vertical.\relax }}{116}{figure.caption.82}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Exemplos de PDFs de exames com 245 questões no estilo horizontal e 200 questões no estilo vertical.\relax }}{117}{figure.caption.83}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Exemplo de PDF de um exame com 18 questões, cinco questões por bloco e dois blocos por linha.\relax }}{118}{figure.caption.84}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Exemplos de exames digitalizados a partir do PDF mostrado na Figura \ref {fig:cap07_figquestoesPorBloco}.\relax }}{119}{figure.caption.85}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Recortes das questões marcadas erradamente na Figura \ref {fig:cap07_figquestoesPorBlocoScan}--(b).\relax }}{120}{figure.caption.86}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces PDF com o \textit {feedback} das correções enviado para o e-mail do estudante.\relax }}{123}{figure.caption.87}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Exames com QR+QM e/ou QT}{123}{chapter.8}%
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Recorte da tela de configuração do exame.\relax }}{126}{figure.caption.88}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Recorte da tela de configuração do exame, detalhando o botão ``Criar-Variações''.\relax }}{127}{figure.caption.89}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Mensagem após clicar no botão ``Criar-Variações''.\relax }}{127}{figure.caption.90}%
-\contentsline {figure}{\numberline {8.4}{\ignorespaces E-mail enviado ao professor após clicar no botão ``Criar-Variações''.\relax }}{128}{figure.caption.91}%
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Recorte do PDF do exame gerado após a ação do botão ``Criar-PDF''.\relax }}{130}{figure.caption.92}%
-\contentsline {figure}{\numberline {8.6}{\ignorespaces E-mail enviado ao professor após clicar no botão ``Criar-PDF''.\relax }}{131}{figure.caption.93}%
-\contentsline {figure}{\numberline {8.7}{\ignorespaces Recorte do e-mail com parte do PDF do exame enviado como \textit {feedaback} ao estudante, após a ação do botão ``Upload-PDF''.\relax }}{133}{figure.caption.94}%
+\contentsline {xchapter}{Exames com QR+QM e/ou QT}{125}{chapter.8}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Recorte da tela de configuração do exame.\relax }}{128}{figure.caption.88}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Recorte da tela de configuração do exame, detalhando o botão ``Criar-Variações''.\relax }}{129}{figure.caption.89}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Mensagem após clicar no botão ``Criar-Variações''.\relax }}{129}{figure.caption.90}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces E-mail enviado ao professor após clicar no botão ``Criar-Variações''.\relax }}{130}{figure.caption.91}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Recorte do PDF do exame gerado após a ação do botão ``Criar-PDF''.\relax }}{132}{figure.caption.92}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces E-mail enviado ao professor após clicar no botão ``Criar-PDF''.\relax }}{133}{figure.caption.93}%
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Recorte do e-mail com parte do PDF do exame enviado como \textit {feedaback} ao estudante, após a ação do botão ``Upload-PDF''.\relax }}{135}{figure.caption.94}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Variações de exames com QM+QT para o Moodle}{137}{chapter.9}%
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Recorte do PDF gerado para a questão das idades dos irmãos, referente ao Código \ref {lst:questaoQM_EquacaoIdade}.\relax }}{138}{figure.caption.95}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Recorte do PDF gerado para a questão da equação da reta definida no Código \ref {lst:questaoQM_EquacaoReta}.\relax }}{140}{figure.caption.96}%
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Recorte do PDF gerado para a questão com resposta exata definida pelos Códigos \ref {lst:questaoQT_Exata_1_parte1} e \ref {lst:questaoQT_Exata_1_parte2}.\relax }}{143}{figure.caption.97}%
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Recorte da tela do exame com as quatro questões marcadas.\relax }}{143}{figure.caption.98}%
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Recorte da tela do exame com os detalhes da configuração.\relax }}{143}{figure.caption.99}%
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Recorte da tela do exame com os detalhes da configuração.\relax }}{144}{figure.caption.100}%
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Recorte do e-mail recebido após clicar em ``Criar-Variações''.\relax }}{144}{figure.caption.101}%
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Exemplo de QM no Moodle.\relax }}{151}{figure.caption.105}%
-\contentsline {figure}{\numberline {9.9}{\ignorespaces Exemplo da questão exata do Moodle.\relax }}{152}{figure.caption.106}%
-\contentsline {figure}{\numberline {9.10}{\ignorespaces Exemplo exame gerado pelo MCTest.\relax }}{152}{figure.caption.107}%
+\contentsline {xchapter}{Variações de exames com QM+QT para o Moodle}{143}{chapter.9}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Recorte do PDF gerado para a questão das idades dos irmãos, referente ao Código \ref {lst:questaoQM_EquacaoIdade}.\relax }}{144}{figure.caption.95}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Recorte do PDF gerado para a questão da equação da reta definida no Código \ref {lst:questaoQM_EquacaoReta}.\relax }}{146}{figure.caption.96}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Recorte do PDF gerado para a questão com resposta exata definida pelos Códigos \ref {lst:questaoQT_Exata_1_parte1} e \ref {lst:questaoQT_Exata_1_parte2}.\relax }}{149}{figure.caption.97}%
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Recorte da tela do exame com as quatro questões marcadas.\relax }}{149}{figure.caption.98}%
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Recorte da tela do exame com os detalhes da configuração.\relax }}{149}{figure.caption.99}%
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Recorte da tela do exame com os detalhes da configuração.\relax }}{150}{figure.caption.100}%
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Recorte do e-mail recebido após clicar em ``Criar-Variações''.\relax }}{150}{figure.caption.101}%
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Exemplo de QM no Moodle.\relax }}{157}{figure.caption.105}%
+\contentsline {figure}{\numberline {9.9}{\ignorespaces Exemplo da questão exata do Moodle.\relax }}{158}{figure.caption.106}%
+\contentsline {figure}{\numberline {9.10}{\ignorespaces Exemplo exame gerado pelo MCTest.\relax }}{158}{figure.caption.107}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Exames com MCTest+Moodle+VPL}{155}{chapter.10}%
-\contentsline {figure}{\numberline {10.1}{\ignorespaces Recorte do PDF gerado para a questão de matriz definida nos Códigos \ref {lst:questaoQT_EP_2_matriz_parte1} e \ref {lst:questaoQT_EP_2_matriz_parte2}.\relax }}{159}{figure.caption.108}%
-\contentsline {figure}{\numberline {10.2}{\ignorespaces Recorte da tela de exame, configurando os detalhes do exame com integração VPL.\relax }}{160}{figure.caption.109}%
-\contentsline {figure}{\numberline {10.3}{\ignorespaces Recorte do e-mail recebido após clicar em ``Criar-Variações''.\relax }}{161}{figure.caption.110}%
-\contentsline {figure}{\numberline {10.4}{\ignorespaces Recorte da tela do PDF do exame com integração VPL.\relax }}{162}{figure.caption.111}%
+\contentsline {xchapter}{Exames com MCTest+Moodle+VPL}{161}{chapter.10}%
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Recorte do PDF gerado para a questão de matriz definida nos Códigos \ref {lst:questaoQT_EP_2_matriz_parte1} e \ref {lst:questaoQT_EP_2_matriz_parte2}.\relax }}{165}{figure.caption.108}%
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Recorte da tela de exame, configurando os detalhes do exame com integração VPL.\relax }}{166}{figure.caption.109}%
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Recorte do e-mail recebido após clicar em ``Criar-Variações''.\relax }}{167}{figure.caption.110}%
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Recorte da tela do PDF do exame com integração VPL.\relax }}{168}{figure.caption.111}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{MCTest versões 1, 2 e 3 - Quadro de Respostas (QR)}{171}{chapter.11}%
-\contentsline {figure}{\numberline {11.1}{\ignorespaces Recorte do PDF com o QR utilizado no MCTest-1.\relax }}{172}{figure.caption.112}%
-\contentsline {figure}{\numberline {11.2}{\ignorespaces Demonstração da captura a partir de um gabarito impresso.\relax }}{175}{figure.caption.116}%
-\contentsline {figure}{\numberline {11.3}{\ignorespaces As questões marcadas na parte inferior indicam um valor ponderado atribuído a questão, as maras à direita representam diferentes gabaritos e a identificação do gabarito é a marca à direita e abaixo. Fonte: \citeonline {2016:China.Zampirolli.ea}.\relax }}{175}{figure.caption.117}%
-\contentsline {figure}{\numberline {11.4}{\ignorespaces Estatísticas sobre o número de respostas corretas em uma turma. Fonte: \citeonline {2016:China.Zampirolli.ea}.\relax }}{176}{figure.caption.118}%
+\contentsline {xchapter}{MCTest versões 1, 2 e 3 - Quadro de Respostas (QR)}{177}{chapter.11}%
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Recorte do PDF com o QR utilizado no MCTest-1.\relax }}{178}{figure.caption.112}%
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Demonstração da captura a partir de um gabarito impresso.\relax }}{181}{figure.caption.116}%
+\contentsline {figure}{\numberline {11.3}{\ignorespaces As questões marcadas na parte inferior indicam um valor ponderado atribuído a questão, as maras à direita representam diferentes gabaritos e a identificação do gabarito é a marca à direita e abaixo. Fonte: \citeonline {2016:China.Zampirolli.ea}.\relax }}{181}{figure.caption.117}%
+\contentsline {figure}{\numberline {11.4}{\ignorespaces Estatísticas sobre o número de respostas corretas em uma turma. Fonte: \citeonline {2016:China.Zampirolli.ea}.\relax }}{182}{figure.caption.118}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{MCTest versões 4, 4.G e 5}{179}{chapter.12}%
-\contentsline {figure}{\numberline {12.1}{\ignorespaces Estrutura de pastas do MCTest-4. \ Fonte: \ \citeonline {2016:Zampirolli.Batista.ea}.\relax }}{181}{figure.caption.121}%
-\contentsline {figure}{\numberline {12.2}{\ignorespaces Recorte de um exame gerado com MCTest-4.G.\relax }}{184}{figure.caption.125}%
-\contentsline {figure}{\numberline {12.3}{\ignorespaces Recorte do PDF gerado para a questão de MRU do Código \ref {lst:questaoQM_MRU}.\relax }}{185}{figure.caption.127}%
-\contentsline {figure}{\numberline {12.4}{\ignorespaces Recorte do PDF gerado para a questão para criar uma matriz do Código \ref {lst:questaoQM_criaMatriz}.\relax }}{187}{figure.caption.129}%
-\contentsline {figure}{\numberline {12.5}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com equação e figura referente ao Código \ref {lst:questaoQM_equacaoFigura}.\relax }}{191}{figure.caption.132}%
-\contentsline {figure}{\numberline {12.6}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com grafo e figura referente ao Código \ref {lst:questaoQM_grafo}.\relax }}{192}{figure.caption.134}%
-\contentsline {figure}{\numberline {12.7}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com matriz criada pelos Códigos \ref {lst:questaoMatrizRosaParte1} e \ref {lst:questaoMatrizRosaParte2}.\relax }}{197}{figure.caption.136}%
-\contentsline {figure}{\numberline {12.8}{\ignorespaces Planilha mostrando o questionário preenchido de um estudante. Adaptado de \citeonline {2020:Zampirolli.Batista.ea}.\relax }}{198}{figure.caption.139}%
-\contentsline {figure}{\numberline {12.9}{\ignorespaces Exemplo de exame utilizado em Cálculo 1. Adaptado de \citeonline {2020:Zampirolli.Batista.ea}.\relax }}{200}{figure.caption.141}%
-\contentsline {figure}{\numberline {12.10}{\ignorespaces Visualização do arquivo CSV com as correções. Adaptado de \citeonline {2021:Zampirolli.Batista.ea*2}.\relax }}{201}{figure.caption.143}%
-\contentsline {figure}{\numberline {12.11}{\ignorespaces Cálculo final do exame. Adaptado de \citeonline {2021:Zampirolli.Batista.ea*2}.\relax }}{202}{figure.caption.144}%
+\contentsline {xchapter}{MCTest versões 4, 4.G e 5}{185}{chapter.12}%
+\contentsline {figure}{\numberline {12.1}{\ignorespaces Estrutura de pastas do MCTest-4. \ Fonte: \ \citeonline {2016:Zampirolli.Batista.ea}.\relax }}{187}{figure.caption.121}%
+\contentsline {figure}{\numberline {12.2}{\ignorespaces Recorte de um exame gerado com MCTest-4.G.\relax }}{190}{figure.caption.125}%
+\contentsline {figure}{\numberline {12.3}{\ignorespaces Recorte do PDF gerado para a questão de MRU do Código \ref {lst:questaoQM_MRU}.\relax }}{191}{figure.caption.127}%
+\contentsline {figure}{\numberline {12.4}{\ignorespaces Recorte do PDF gerado para a questão para criar uma matriz do Código \ref {lst:questaoQM_criaMatriz}.\relax }}{193}{figure.caption.129}%
+\contentsline {figure}{\numberline {12.5}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com equação e figura referente ao Código \ref {lst:questaoQM_equacaoFigura}.\relax }}{197}{figure.caption.132}%
+\contentsline {figure}{\numberline {12.6}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com grafo e figura referente ao Código \ref {lst:questaoQM_grafo}.\relax }}{198}{figure.caption.134}%
+\contentsline {figure}{\numberline {12.7}{\ignorespaces Recorte do PDF gerado para a questão paramétrica com matriz criada pelos Códigos \ref {lst:questaoMatrizRosaParte1} e \ref {lst:questaoMatrizRosaParte2}.\relax }}{203}{figure.caption.136}%
+\contentsline {figure}{\numberline {12.8}{\ignorespaces Planilha mostrando o questionário preenchido de um estudante. Adaptado de \citeonline {2020:Zampirolli.Batista.ea}.\relax }}{204}{figure.caption.139}%
+\contentsline {figure}{\numberline {12.9}{\ignorespaces Exemplo de exame utilizado em Cálculo 1. Adaptado de \citeonline {2020:Zampirolli.Batista.ea}.\relax }}{206}{figure.caption.141}%
+\contentsline {figure}{\numberline {12.10}{\ignorespaces Visualização do arquivo CSV com as correções. Adaptado de \citeonline {2021:Zampirolli.Batista.ea*2}.\relax }}{207}{figure.caption.143}%
+\contentsline {figure}{\numberline {12.11}{\ignorespaces Cálculo final do exame. Adaptado de \citeonline {2021:Zampirolli.Batista.ea*2}.\relax }}{208}{figure.caption.144}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{MCTest+Moodle+VPL}{207}{chapter.13}%
-\contentsline {figure}{\numberline {13.1}{\ignorespaces (a) estrutura de arquivos e pastas; (b) recorte da estrutura de arquivos e pastas gerados automaticamente, detalhando a pasta \texttt {1.py} para Python. Fonte: \citeonline {2021:Zampirolli.Teubl.ea}.\relax }}{212}{figure.caption.152}%
+\contentsline {xchapter}{MCTest+Moodle+VPL}{213}{chapter.13}%
+\contentsline {figure}{\numberline {13.1}{\ignorespaces (a) estrutura de arquivos e pastas; (b) recorte da estrutura de arquivos e pastas gerados automaticamente, detalhando a pasta \texttt {1.py} para Python. Fonte: \citeonline {2021:Zampirolli.Teubl.ea}.\relax }}{218}{figure.caption.152}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusões}{217}{chapter.14}%
+\contentsline {xchapter}{Conclusões}{223}{chapter.14}%
 \contentsfinish 
