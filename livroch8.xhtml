@@ -538,16 +538,26 @@ _e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_statistics.csv
  
 </div> 
 </div>
-       <div class='tcolorbox mybox' id='tcolobox-83'>    
+<p class='indent'>       O arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>studentEmail_e477.zip</span></span></span> contém todos os arquivos PDF enviados aos estudantes, caso
+tenham escolhido “Retorno=SIM” no formulário do exame. Um exemplo é apresentado na
+Figura <a href='#x24-110001r7'>8.7<!-- tex4ht:ref: fig:cap08_figexameQR_QM_QT_PDFScan  --></a>, exibindo também as questões, as respostas do estudante e a alternativa correta.
+Esses enunciados são incluídos no PDF quando a caixa abaixo do botão “Upload-PDF” é
+marcada; caso contrário, apenas a imagem, as informações do estudante e sua nota são
+enviadas.
+</p> 
+<p class='indent'>       </p> 
+
+<div class='tcolorbox mybox' id='tcolobox-83'>    
 <div class='tcolorbox-title'>
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-12'>Destaque:</span><br class='newline' />___________________________________________________________________________________________________________</p> 
-<p class='indent'>O arquivo <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>studentEmail_e477.zip</span></span></span> contém todos os arquivos PDF enviados aos estudantes,
-caso tenham escolhido “Retorno=SIM” no formulário do exame. Um exemplo é apresentado
-na Figura <a href='#x24-110001r7'>8.7<!-- tex4ht:ref: fig:cap08_figexameQR_QM_QT_PDFScan  --></a>, exibindo também as perguntas, as respostas do estudante e a alternativa
-correta.  Esses  enunciados  são  incluídos  no  PDF  quando  a  caixa  abaixo  do  botão
-“Upload-PDF” é marcada; caso contrário, apenas a imagem, as informações do estudante
-e sua nota são enviadas. </p> 
+<p class='indent'>Um destaque incluído na versão mais recente do MCTest é apresentar as questões e
+as  alternativas  armazenadas  nas  variações  salvas  no  banco  de  dados.  Ou  seja,  quando
+há questões paramétricas, é exibida a “fotografia” da questão criada no momento em
+que o botão “Criar-Variações” foi pressionado. Já o <span class='cmti-12'>feedback </span>é apresentado obtendo o
+atributo da própria questão, que não pode ser parametrizado e pode ser alterado a qualquer
+momento, sendo incluído no PDF a ser enviado ao estudante. Para isso, foi necessário incluir
+no QRCode informações da chave da variação do exame sorteada para cada estudante. </p> 
  
 </div> 
 </div>
@@ -558,6 +568,8 @@ e sua nota são enviadas. </p>
 
 <div class='tcolorbox myboxCode' id='tcolobox-84'>    
 <div class='tcolorbox-title'>
+                                                                                                  
+                                                                                                  
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Conteúdo do arquivo </span><span class='cmtt-10x-x-109'>*_.csv </span><span class='cmbx-10x-x-109'>gerado (as colunas são separadas por vírgula)</span>___________
 </p> 
@@ -571,8 +583,6 @@ Pag ID Resp Quest Inv Grad Q1  Q2  Q3  Q4 Q5 Q6     K1   �
 </div>
 <p class='indent'>       No arquivo em questão, é possível observar nas colunas <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q1</span></span></span> até <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q6</span></span></span> a notação
 apresentada na Seção <a href='livroch7.xhtml#arquivo-csv-com-as-correcoes'>7.3.1<!-- tex4ht:ref: sec:CSVcorrecoesQR  --></a>, agora com a adição de <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>resposta marcada/resposta correta</span></span></span>.
-                                                                                                  
-                                                                                                  
 Por exemplo, na questão <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q1</span></span></span> tem a notação <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>E/C</span></span></span>, indicando que a alternativa marcada pelo
 estudante foi a <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>E</span></span></span>, enquanto a resposta correta é a <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>C</span></span></span>. Também é possível notar a presença de
 uma questão inválida na coluna <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Inv</span></span></span>, referente à questão <span class='obeylines-h'><span class='verb'><span class='cmtt-12'>Q6</span></span></span>, que apresenta o conteúdo
@@ -604,6 +614,8 @@ cada variação do exame poderá apresentar pesos diferentes considerando essas 
 Por exemplo, se um exame definir 5 questões com dificuldade 1, porém houver 10 questões
 marcadas para esse mesmo nível 1, além disso, foi decidida a criação de 20 variações de
 exames, teremos então variações com somatórios distintos dos pesos dos níveis dessa
+                                                                                                  
+                                                                                                  
 taxonomia.
 </p> 
 <p class='indent'>       Para ilustrar esse processo, foi criado um exame com 3 QM e 1 QT, todas com dificuldade 1. Além
@@ -619,8 +631,6 @@ arquivos.
 
 <div class='tcolorbox myboxCode' id='tcolobox-85'>    
 <div class='tcolorbox-title'>
-                                                                                                  
-                                                                                                  
        </div> 
 <div class='tcolorbox-content'><p class='indent'><span class='cmbx-10x-x-109'>Arquivos gerados ao solicitar criar PDF com o botão“Criar-PDF”</span>__________________________
 </p> 
@@ -752,13 +762,12 @@ Turma Exemplo 987 Maria da Silva Andrade de S Gonçalves  13    �
 </div>
                                                                                                   
                                                                                                   
-<p class='indent'>       Uma parte crucial desse processo adaptativo é a seleção adequada das questões, classificadas
-com base na taxonomia de Bloom. É fundamental garantir que as questões sejam bem definidas e
-alinhadas aos objetivos de aprendizagem. Além disso, esse método adaptativo deve ser utilizado para
-motivar os estudantes a permanecerem engajados na disciplina, em vez de penalizá-los com exames
-excessivamente difíceis ou fáceis. É importante ressaltar que sua aplicação não deve resultar em
-penalizações injustas, evitando a escolha de avaliações excessivamente desafiadoras para alguns e
-excessivamente simples para outros.
+<p class='indent'>       Uma parte crucial desse processo adaptativo é a seleção apropriada das questões, classificadas
+com base na taxonomia de Bloom. É essencial garantir que as questões sejam bem definidas e alinhadas
+aos objetivos de aprendizagem. Além disso, esse método adaptativo deve motivar os estudantes a
+permanecerem engajados na disciplina, evitando a imposição de exames excessivamente difíceis como
+forma de penalização ou demasiadamente fáceis, o que resultaria em atribuição injusta de
+conceitos.
 <a id='x24-111001r203'></a>
        </p> 
 
@@ -791,9 +800,9 @@ desempenho de todos os envolvidos:
       estudantes por e-mail antes da aplicação;
       </dd><dt class='enumerate-enumitem'>
    6. </dt><dd class='enumerate-enumitem'>Imprima um único exemplar do exame antes de produzir toda a tiragem, a fim de validar.
-                                                                                                  
-                                                                                                  
       Preencha o exame, digitalize e solicite a correção automática enviando o PDF e selecionando
+                                                                                                  
+                                                                                                  
       o botão “Upload-PDF”. Isso permite verificar se o sistema gerou o exame corretamente e
       realizou a correção automática adequadamente. Além disso, verifique se todos os exames
       ocupam apenas uma página frente e verso, evitando a necessidade de grampear folhas. Se todos
@@ -830,9 +839,9 @@ desempenho de todos os envolvidos:
 É essencial revisar as questões, criar variações e verificar os IDs tanto na página do exame quanto no
 PDF. Garantir a impressão correta do PDF, sem cortes no QR, é importante. Além disso, realizar a
 validação das correções antes de enviar os resultados assegura a qualidade e precisão do
-                                                                                                  
-                                                                                                  
 processo. Ao seguir essas recomendações, é possível promover a eficiência da correção
+                                                                                                  
+                                                                                                  
 automatizada.
 <a id='x24-112012r204'></a>
        </p> 

@@ -101,7 +101,7 @@
 \contentsline {section}{\numberline {8.5}Corrigindo exames com QR+QM}{132}{section.8.5}%
 \contentsline {section}{\numberline {8.6}Exames adaptativos}{134}{section.8.6}%
 \contentsline {section}{\numberline {8.7}Recomendações para realização tranquila de exames presenciais}{137}{section.8.7}%
-\contentsline {section}{\numberline {8.8}Considerações finais}{138}{section.8.8}%
+\contentsline {section}{\numberline {8.8}Considerações finais}{139}{section.8.8}%
 \contentsline {chapter}{\numberline {9}Variações de exames com QM+QT para o Moodle}{141}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Criando exames e exportando arquivos Aiken e XML}{142}{section.9.1}%
 \contentsline {subsection}{\numberline {9.1.1}QM -- equação de primeiro grau -- idade}{142}{subsection.9.1.1}%
