@@ -272,7 +272,7 @@ Imprimindo o PDF apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDF}, sel
   \centering
   \includegraphics[width=0.9\textwidth]{cap08_figexameQR_QM_QT_PDFScan.png}
    \caption{Recorte do e-mail com parte do PDF do exame enviado como \textit{feedaback} ao estudante, após a ação do botão ``Upload-PDF''.}
-\label{fig:cap08_figexameQR_QM_QT_PDFScan}
+\label{fig:cap08_figexameQR_QM_QT_PDFScan} 
 \end{figure}
 
 Além disso, o professor receberá as correções realizadas em um arquivo ZIP, conforme detalhado na Seção \ref{sec:examesCorrigirQR}, que conterá os seguintes arquivos:
@@ -288,8 +288,10 @@ _e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_statistics.csv
 \end{verbatim}
 \end{myboxCode}
 
+O arquivo \verb|studentEmail_e477.zip| contém todos os arquivos PDF enviados aos estudantes, caso tenham escolhido ``Retorno=SIM'' no formulário do exame. Um exemplo é apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan}, exibindo também as questões, as respostas do estudante e a alternativa correta. Esses enunciados são incluídos no PDF quando a caixa abaixo do botão ``Upload-PDF'' é marcada; caso contrário, apenas a imagem, as informações do estudante e sua nota são enviadas. 
+
 \begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
-O arquivo \verb|studentEmail_e477.zip| contém todos os arquivos PDF enviados aos estudantes, caso tenham escolhido ``Retorno=SIM'' no formulário do exame. Um exemplo é apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan}, exibindo também as perguntas, as respostas do estudante e a alternativa correta. Esses enunciados são incluídos no PDF quando a caixa abaixo do botão ``Upload-PDF'' é marcada; caso contrário, apenas a imagem, as informações do estudante e sua nota são enviadas.
+  Um destaque incluído na versão mais recente do MCTest é apresentar as questões e as alternativas armazenadas nas variações salvas no banco de dados. Ou seja, quando há questões paramétricas, é exibida a ``fotografia'' da questão criada no momento em que o botão ``Criar-Variações'' foi pressionado. Já o \textit{feedback} é apresentado obtendo o atributo da própria questão, que não pode ser parametrizado e pode ser alterado a qualquer momento, sendo incluído no PDF a ser enviado ao estudante. Para isso, foi necessário incluir no QRCode informações da chave da variação do exame sorteada para cada estudante.
 \end{mybox}
 
 Conforme explicado na Seção \ref{sec:CSVcorrecoesQR} -- \nameref{sec:CSVcorrecoesQR}, o primeiro arquivo CSV, \verb|*_.csv|, apresenta o seguinte conteúdo:
@@ -409,7 +411,9 @@ Turma Exemplo 987 Maria da Silva Andrade de S Gonçalves  13            0.0
 \end{verbatim}
 \end{myboxCode}
 
-Uma parte crucial desse processo adaptativo é a seleção adequada das questões, classificadas com base na taxonomia de Bloom. É fundamental garantir que as questões sejam bem definidas e alinhadas aos objetivos de aprendizagem. Além disso, esse método adaptativo deve ser utilizado para motivar os estudantes a permanecerem engajados na disciplina, em vez de penalizá-los com exames excessivamente difíceis ou fáceis. É importante ressaltar que sua aplicação não deve resultar em penalizações injustas, evitando a escolha de avaliações excessivamente desafiadoras para alguns e excessivamente simples para outros.
+
+Uma parte crucial desse processo adaptativo é a seleção apropriada das questões, classificadas com base na taxonomia de Bloom. É essencial garantir que as questões sejam bem definidas e alinhadas aos objetivos de aprendizagem. Além disso, esse método adaptativo deve motivar os estudantes a permanecerem engajados na disciplina, evitando a imposição de exames excessivamente difíceis como forma de penalização ou demasiadamente fáceis, o que resultaria em atribuição injusta de conceitos.
+
 
 % melhorar escrita formal e científica, mantendo a formatação LaTex: 
 
