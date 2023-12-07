@@ -6,8 +6,8 @@
 <dc:identifier id='dcidid'>http://example.com/livro</dc:identifier> 
 <dc:creator>Francisco de Assis Zampirolli</dc:creator> 
 
-<dc:date>2023-11-19T16:45:00Z</dc:date>  
-<meta property='dcterms:modified'>2023-11-19T16:45:00Z</meta></metadata>   
+<dc:date>2023-12-07T19:32:00Z</dc:date>  
+<meta property='dcterms:modified'>2023-12-07T19:32:00Z</meta></metadata>   
 <manifest> 
 <item href='livro.ncx' id='ncx' media-type='application/x-dtbncx+xml'></item> 
 <item href='livro.css' id='stylesheet' media-type='text/css'></item> 
@@ -92,6 +92,7 @@
 <item href='./figs-br//cap04_figQuestaoCria.png' id='figs-brcap04_figQuestaoCria_png' media-type='image/png'></item>
 <item href='./figs-br//cap04_figQuestaoCria2.png' id='figs-brcap04_figQuestaoCria2_png' media-type='image/png'></item>
 <item href='./figs-br//cap04_figQuestaoAtualiza.png' id='figs-brcap04_figQuestaoAtualiza_png' media-type='image/png'></item>
+<item href='./figs-br//cap04_figQuestaoAtualiza2.png' id='figs-brcap04_figQuestaoAtualiza2_png' media-type='image/png'></item>
 <item href='./figs-br//cap04_figQuestaoAtualizaPDF.png' id='figs-brcap04_figQuestaoAtualizaPDF_png' media-type='image/png'></item>
 <item href='./figs-br//cap04_figQuestaoAtualizaPDF2.png' id='figs-brcap04_figQuestaoAtualizaPDF2_png' media-type='image/png'></item>
 <item href='./figs-br//cap04_figQuestaoAtualizaPDF3.png' id='figs-brcap04_figQuestaoAtualizaPDF3_png' media-type='image/png'></item>
@@ -106,9 +107,10 @@
 <item href='./figs-br//cap06_figExameCria.png' id='figs-brcap06_figExameCria_png' media-type='image/png'></item>
 <item href='./figs-br//cap06_figExamePDF_QRpadrao.png' id='figs-brcap06_figExamePDF_QRpadrao_png' media-type='image/png'></item>
 <item href='./figs-br//cap06_figExameAtualiza1.png' id='figs-brcap06_figExameAtualiza1_png' media-type='image/png'></item>
-<item href='./figs-br//cap06_figExameAtualiza2.png' id='figs-brcap06_figExameAtualiza2_png' media-type='image/png'></item>
-<item href='./figs-br//cap06_figExameAtualiza3.png' id='figs-brcap06_figExameAtualiza3_png' media-type='image/png'></item>
-<item href='./figs-br//cap06_figExameAtualiza4.png' id='figs-brcap06_figExameAtualiza4_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExameAtualizaTurmas.png' id='figs-brcap06_figExameAtualizaTurmas_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExameAtualizaTopicos.png' id='figs-brcap06_figExameAtualizaTopicos_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExameAtualizaQuestoes.png' id='figs-brcap06_figExameAtualizaQuestoes_png' media-type='image/png'></item>
+<item href='./figs-br//cap06_figExameAtualizaConfiguracoes.png' id='figs-brcap06_figExameAtualizaConfiguracoes_png' media-type='image/png'></item>
 <item href='./figs-br//cap07_figvertical.png' id='figs-brcap07_figvertical_png' media-type='image/png'></item>
 <item href='./figs-br//cap07_figinstrucoes.png' id='figs-brcap07_figinstrucoes_png' media-type='image/png'></item>
 <item href='./figs-br//cap07_fighorizontal.png' id='figs-brcap07_fighorizontal_png' media-type='image/png'></item>

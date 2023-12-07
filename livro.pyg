@@ -1,0 +1,48 @@
+[[def:
+import json, random, numpy as np
+
+def direcoes(offset, dir):
+  """ Método que retorna as direções adjacentes à direção dada. """
+  dir1, dir2 = (dir - 1) % 8 + 1, (dir + 1) % 8 + 1
+  return (dir1, dir, dir2)
+
+# Parâmetros utilizados no enunciado da questão
+#>>>> BEGIN
+dir = random.choice([1,2,3,4,5,6,7,8])
+direcaoAll = ["Norte","Nordeste","Oeste","Sudeste","Sul","Sudoeste","Leste","Noroeste"]
+direcao = direcaoAll[dir-1]
+
+maiormenor = random.choice(["maior", "menor"])
+m, n = random.randrange(7, 9, 1), random.randrange(15, 21, 1)
+Linhas, Colunas = m, n
+
+#direcoes  0      1      2     3     4     5      6      7       8
+offset = [[0,0],[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1],[-1,-1]]
+(dir1,dir0,dir2) = direcoes(offset,dir)
+direcao_viz = "$a_"+str(dir1)+"$, $a_"+str(dir0)+"$, $a_"+str(dir2)+"$"
+#<<<< END
+
+A = (np.random.random((m, n)) * 10).astype(int)
+B = (np.zeros(A.shape) - 1).astype(int)
+for i in range(1, m - 1):
+  for j in range(1, n - 1):
+    if maiormenor == "menor":
+      if (A[i + offset[dir1][0], j + offset[dir1][1]] > A[i, j]
+        and A[i + offset[dir0][0], j + offset[dir0][1]] > A[i, j]
+        and A[i + offset[dir2][0], j + offset[dir2][1]] > A[i, j]):
+        B[i, j] = A[i, j]
+    else:
+      if (A[i + offset[dir1][0], j + offset[dir1][1]] < A[i, j]
+        and A[i + offset[dir0][0], j + offset[dir0][1]] < A[i, j]
+        and A[i + offset[dir2][0], j + offset[dir2][1]] < A[i, j]):
+        B[i, j] = A[i, j]
+
+import hashlib
+s =''.join([str(i) for i in A.flatten()]) # 2d to 1d to str
+h = hashlib.md5(s.encode()) # create hash - arquivo único
+pathGrafico = 'figRosa(' + direcao + ')(' + maiormenor + ')(' + str(h.hexdigest()) + ')'
+pathGraficoA, pathGraficoB = pathGrafico + 'a.png', pathGrafico + 'b.png'
+
+drawMatrix(A, pathGraficoA)
+drawMatrix(B, pathGraficoB)
+]]

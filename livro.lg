@@ -1,10 +1,10 @@
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
 htfcss: cmitt font-family: monospace,monospace; font-style: italic;
 htfcss: cmtt font-family: monospace,monospace;
 htfcss: cmtt font-family: monospace,monospace;
 htfcss: cmtt font-family: monospace,monospace;
 htfcss: cmti  font-style: italic;
-htfcss: cmmi font-style: italic;
-htfcss: cmmib font-style: italic; font-weight: bold;
 htfcss: cmitt font-family: monospace,monospace; font-style: italic;
 htfcss: cmtt font-family: monospace,monospace;
 htfcss: cmtt font-family: monospace,monospace;
@@ -172,7 +172,7 @@ Css: div.maketitle{ margin-bottom: 2em; }
 Css: div.author, div.date {text-align:center;}
 Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
 Css: div.author{white-space: nowrap;}
-Font_Size: 12
+Font_Size: 11
 Css: h1.partHead{text-align: center}
 Css:  .chapterToc, .likechapterToc {margin-left:0em;}
 Css:  .chapterToc ~ .likesectionToc, .chapterToc ~ .sectionToc, .likechapterToc ~ .likesectionToc, .likechapterToc ~ .sectionToc {margin-left:2em;}
@@ -340,16 +340,21 @@ Css: #tcolobox-24 .tcolorbox-title{color: #FFFFFF; background-color: #FFE5EB;}
 Css: #tcolobox-24 .tcolorbox-content{color: #000000; background-color: #FFF9FA; border: 1px solid #FFE5EB;}
 Css: #tcolobox-25 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
 Css: #tcolobox-25 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
+Css: #tcolobox-26 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
+Css: #tcolobox-26 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
+Css: #tcolobox-27 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
+Css: #tcolobox-27 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
 File: ./figs-br//cap04_figQuestaoAtualiza.png
+File: ./figs-br//cap04_figQuestaoAtualiza2.png
 File: ./figs-br//cap04_figQuestaoAtualizaPDF.png
 File: ./figs-br//cap04_figQuestaoAtualizaPDF2.png
 File: ./figs-br//cap04_figQuestaoAtualizaPDF3.png
 File: ./figs-br//cap04_figQuestaoAtualizaTesteMesa.png
 File: ./figs-br//cap04_figQuestaoAtualizaPDF4.png
-Css: #tcolobox-26 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
-Css: #tcolobox-26 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
-Css: #tcolobox-27 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-27 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-28 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
+Css: #tcolobox-28 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
+Css: #tcolobox-29 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-29 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1{color:rgb(0,127,0)}
 Css: span#textcolor2{color:rgb(0,0,255)}
 Css: span#textcolor3{color:rgb(0,127,0)}
@@ -361,16 +366,16 @@ Css: span#textcolor8{color:rgb(101,101,101)}
 Css: span#textcolor9{color:rgb(101,101,101)}
 Css: .columns-4 p:first-child { margin-top: 0em; }
 Css: .columns-4{-moz-column-count:4; -webkit-column-count:4; column-count:4; -moz-column-gap: 10.0pt; -webkit-column-gap: 10.0pt; column-gap: 10.0pt; -moz-column-rule-width: 0.0pt; -webkit-column-rule-width: 0.0pt; column-rule-rule-width: 0.0pt; -moz-column-rule-color: #555;; -webkit-column-rule-color: #555;; column-rule-color: #555;; -moz-column-rule-style: outset; -webkit-column-rule-style: outset; column-rule-style: outset; -moz-column-fill: balance; -webkit-column-fill: balance; column-fill: balance; }
-Css: #tcolobox-28 .tcolorbox-title{color: #FFFFFF; background-color: #FFE5EB;}
-Css: #tcolobox-28 .tcolorbox-content{color: #000000; background-color: #FFF9FA; border: 1px solid #FFE5EB;}
-Css: #tcolobox-29 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-29 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
-Css: #tcolobox-30 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
-Css: #tcolobox-30 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
-Css: #tcolobox-31 .tcolorbox-title{color: #FFFFFF; background-color: #FFE5EB;}
-Css: #tcolobox-31 .tcolorbox-content{color: #000000; background-color: #FFF9FA; border: 1px solid #FFE5EB;}
-Css: #tcolobox-32 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-32 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-30 .tcolorbox-title{color: #FFFFFF; background-color: #FFE5EB;}
+Css: #tcolobox-30 .tcolorbox-content{color: #000000; background-color: #FFF9FA; border: 1px solid #FFE5EB;}
+Css: #tcolobox-31 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-31 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-32 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
+Css: #tcolobox-32 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
+Css: #tcolobox-33 .tcolorbox-title{color: #FFFFFF; background-color: #FFE5EB;}
+Css: #tcolobox-33 .tcolorbox-content{color: #000000; background-color: #FFF9FA; border: 1px solid #FFE5EB;}
+Css: #tcolobox-34 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-34 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: #colorbox10{border: solid 1px rgb(255,0,0);}
 Css: #colorbox10{background-color: rgb(255,255,255);}
 Css: span#textcolor11{color:rgb(101,101,101)}
@@ -440,8 +445,8 @@ Css: span#textcolor74{color:rgb(61,122,122)}
 Css: span#textcolor75{color:rgb(61,122,122)}
 Css: span#textcolor76{color:rgb(61,122,122)}
 Css: span#textcolor77{color:rgb(101,101,101)}
-Css: #tcolobox-33 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-33 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-35 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-35 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: #colorbox78{border: solid 1px rgb(255,0,0);}
 Css: #colorbox78{background-color: rgb(255,255,255);}
 Css: span#textcolor79{color:rgb(0,127,0)}
@@ -470,8 +475,8 @@ Css: span#textcolor101{color:rgb(61,122,122)}
 Css: span#textcolor102{color:rgb(61,122,122)}
 Css: span#textcolor103{color:rgb(61,122,122)}
 File: ./figs-br//cap05_questaoQM_AreaCirculoPDF.png
-Css: #tcolobox-34 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-34 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-36 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-36 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor104{color:rgb(101,101,101)}
 Css: span#textcolor105{color:rgb(101,101,101)}
 Css: span#textcolor106{color:rgb(101,101,101)}
@@ -536,8 +541,8 @@ Css: span#textcolor164{color:rgb(101,101,101)}
 Css: span#textcolor165{color:rgb(101,101,101)}
 Css: span#textcolor166{color:rgb(101,101,101)}
 File: ./figs-br//cap05_questaoQT_TesteMesaEx2PDF.png
-Css: #tcolobox-35 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-35 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-37 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-37 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor167{color:rgb(101,101,101)}
 Css: span#textcolor168{color:rgb(101,101,101)}
 Css: span#textcolor169{color:rgb(101,101,101)}
@@ -587,8 +592,8 @@ Css: span#textcolor212{color:rgb(101,101,101)}
 Css: span#textcolor213{color:rgb(101,101,101)}
 Css: span#textcolor214{color:rgb(101,101,101)}
 Css: span#textcolor215{color:rgb(101,101,101)}
-Css: #tcolobox-36 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-36 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-38 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-38 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor216{color:rgb(0,127,0)}
 Css: span#textcolor217{color:rgb(0,0,255)}
 Css: span#textcolor218{color:rgb(0,127,0)}
@@ -709,8 +714,8 @@ Css: span#textcolor332{color:rgb(101,101,101)}
 Css: span#textcolor333{color:rgb(101,101,101)}
 Css: span#textcolor334{color:rgb(0,127,0)}
 File: ./figs-br//cap05_questaoQT_TesteMesaEx3PDF.png
-Css: #tcolobox-37 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-37 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-39 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-39 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor335{color:rgb(0,127,0)}
 Css: span#textcolor336{color:rgb(0,0,255)}
 Css: span#textcolor337{color:rgb(0,127,0)}
@@ -741,8 +746,8 @@ Css: span#textcolor361{color:rgb(101,101,101)}
 Css: span#textcolor362{color:rgb(101,101,101)}
 Css: span#textcolor363{color:rgb(101,101,101)}
 Css: span#textcolor364{color:rgb(0,127,0)}
-Css: #tcolobox-38 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-38 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-40 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-40 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 Css: span#textcolor365{color:rgb(101,101,101)}
 Css: span#textcolor366{color:rgb(186,33,33)}
 Css: span#textcolor367{color:rgb(101,101,101)}
@@ -856,8 +861,8 @@ Css: span#textcolor474{color:rgb(101,101,101)}
 Css: span#textcolor475{color:rgb(186,33,33)}
 Css: span#textcolor476{color:rgb(101,101,101)}
 Css: span#textcolor477{color:rgb(101,101,101)}
-Css: #tcolobox-39 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-39 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-41 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-41 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor478{color:rgb(101,101,101)}
 Css: span#textcolor479{color:rgb(101,101,101)}
 Css: span#textcolor480{color:rgb(101,101,101)}
@@ -912,8 +917,8 @@ Css: span#textcolor528{color:rgb(101,101,101)}
 Css: span#textcolor529{color:rgb(101,101,101)}
 Css: span#textcolor530{color:rgb(101,101,101)}
 Css: span#textcolor531{color:rgb(101,101,101)}
-Css: #tcolobox-40 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-40 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-42 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-42 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor532{color:rgb(0,127,0)}
 Css: span#textcolor533{color:rgb(0,0,255)}
 Css: span#textcolor534{color:rgb(101,101,101)}
@@ -1017,10 +1022,10 @@ Css: span#textcolor631{color:rgb(101,101,101)}
 Css: span#textcolor632{color:rgb(101,101,101)}
 Css: span#textcolor633{color:rgb(0,127,0)}
 File: ./figs-br//cap05_questaoQT_TesteMesaEx4PDF.png
-Css: #tcolobox-41 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-41 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-42 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-42 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-43 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-43 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-44 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-44 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor634{color:rgb(0,127,0)}
 Css: span#textcolor635{color:rgb(0,0,255)}
 Css: span#textcolor636{color:rgb(0,127,0)}
@@ -1042,10 +1047,10 @@ Css: span#textcolor651{color:rgb(0,127,0)}
 Css: span#textcolor652{color:rgb(186,33,33)}
 Css: span#textcolor653{color:rgb(186,33,33)}
 Css: span#textcolor654{color:rgb(186,33,33)}
-Css: #tcolobox-43 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-43 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
-Css: #tcolobox-44 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-44 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-45 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-45 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-46 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-46 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor655{color:rgb(101,101,101)}
 Css: span#textcolor656{color:rgb(0,127,0)}
 Css: span#textcolor657{color:rgb(0,127,0)}
@@ -1062,22 +1067,22 @@ Css: span#textcolor667{color:rgb(163,89,119)}
 Css: span#textcolor668{color:rgb(186,33,33)}
 Css: span#textcolor669{color:rgb(163,89,119)}
 Css: span#textcolor670{color:rgb(186,33,33)}
-Css: #tcolobox-45 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-45 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-46 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-46 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-47 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-47 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
-Css: #tcolobox-48 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-48 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
-Css: span#textcolor671{color:rgb(101,101,101)}
-Css: span#textcolor672{color:rgb(101,101,101)}
-Css: span#textcolor673{color:rgb(101,101,101)}
-Css: span#textcolor674{color:rgb(101,101,101)}
+Css: #tcolobox-47 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-47 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-48 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-48 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 Css: #tcolobox-49 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
 Css: #tcolobox-49 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
 Css: #tcolobox-50 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
 Css: #tcolobox-50 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: span#textcolor671{color:rgb(101,101,101)}
+Css: span#textcolor672{color:rgb(101,101,101)}
+Css: span#textcolor673{color:rgb(101,101,101)}
+Css: span#textcolor674{color:rgb(101,101,101)}
+Css: #tcolobox-51 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-51 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-52 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-52 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor675{color:rgb(61,122,122)}
 Css: span#textcolor676{color:rgb(61,122,122)}
 Css: span#textcolor677{color:rgb(0,127,0)}
@@ -1156,39 +1161,40 @@ Css: span#textcolor749{color:rgb(186,33,33)}
 Css: span#textcolor750{color:rgb(101,101,101)}
 Css: span#textcolor751{color:rgb(61,122,122)}
 File: ./figs-br//cap05_questaoQT_EP_1.png
-Css: #tcolobox-51 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
-Css: #tcolobox-51 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
+Css: #tcolobox-53 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
+Css: #tcolobox-53 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
 File: ./figs-br//cap06_figExame.png
 File: ./figs-br//cap06_figExameCria.png
-Css: #tcolobox-52 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-52 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-54 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-54 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
 File: ./figs-br//cap06_figExamePDF_QRpadrao.png
 File: ./figs-br//cap06_figExameAtualiza1.png
-Css: #tcolobox-53 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
-Css: #tcolobox-53 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
-Css: #tcolobox-54 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
-Css: #tcolobox-54 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
-Css: #tcolobox-55 .tcolorbox-title{color: #FFFFFF; background-color: #CC99B2;}
-Css: #tcolobox-55 .tcolorbox-content{color: #000000; background-color: #F2E5EC; border: 1px solid #CC99B2;}
-Css: #tcolobox-56 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-56 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-55 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
+Css: #tcolobox-55 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
+Css: #tcolobox-56 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
+Css: #tcolobox-56 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
 Css: #tcolobox-57 .tcolorbox-title{color: #FFFFFF; background-color: #CC99B2;}
 Css: #tcolobox-57 .tcolorbox-content{color: #000000; background-color: #F2E5EC; border: 1px solid #CC99B2;}
-Css: #tcolobox-58 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
-Css: #tcolobox-58 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
+Css: #tcolobox-58 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-58 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
 Css: #tcolobox-59 .tcolorbox-title{color: #FFFFFF; background-color: #CC99B2;}
 Css: #tcolobox-59 .tcolorbox-content{color: #000000; background-color: #F2E5EC; border: 1px solid #CC99B2;}
-File: ./figs-br//cap06_figExameAtualiza2.png
-File: ./figs-br//cap06_figExameAtualiza3.png
-File: ./figs-br//cap06_figExameAtualiza4.png
-Css: #tcolobox-60 .tcolorbox-title{color: #FFFFFF; background-color: #FFE5EB;}
-Css: #tcolobox-60 .tcolorbox-content{color: #000000; background-color: #FFF9FA; border: 1px solid #FFE5EB;}
-Css: #tcolobox-61 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-61 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-60 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
+Css: #tcolobox-60 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
+Css: #tcolobox-61 .tcolorbox-title{color: #FFFFFF; background-color: #CC99B2;}
+Css: #tcolobox-61 .tcolorbox-content{color: #000000; background-color: #F2E5EC; border: 1px solid #CC99B2;}
+File: ./figs-br//cap06_figExameAtualizaTurmas.png
+File: ./figs-br//cap06_figExameAtualizaTopicos.png
+File: ./figs-br//cap06_figExameAtualizaQuestoes.png
+File: ./figs-br//cap06_figExameAtualizaConfiguracoes.png
 Css: #tcolobox-62 .tcolorbox-title{color: #FFFFFF; background-color: #FFE5EB;}
 Css: #tcolobox-62 .tcolorbox-content{color: #000000; background-color: #FFF9FA; border: 1px solid #FFE5EB;}
-Css: #tcolobox-63 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
-Css: #tcolobox-63 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
+Css: #tcolobox-63 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-63 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-64 .tcolorbox-title{color: #FFFFFF; background-color: #FFE5EB;}
+Css: #tcolobox-64 .tcolorbox-content{color: #000000; background-color: #FFF9FA; border: 1px solid #FFE5EB;}
+Css: #tcolobox-65 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
+Css: #tcolobox-65 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
 File: ./figs-br//cap07_figvertical.png
 File: ./figs-br//cap07_figinstrucoes.png
 File: ./figs-br//cap07_fighorizontal.png
@@ -1197,35 +1203,35 @@ File: ./figs-br//cap07_figmaxVertigal.png
 File: ./figs-br//cap07_figquestoesPorBloco.png
 File: ./figs-br//cap07_figquestoesPorBlocoScan1.png
 File: ./figs-br//cap07_figquestoesPorBlocoScan2.png
-Css: #tcolobox-64 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
-Css: #tcolobox-64 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
-Css: #tcolobox-65 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-65 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-66 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-66 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-67 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-67 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-66 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
+Css: #tcolobox-66 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
+Css: #tcolobox-67 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-67 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-68 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-68 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-69 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-69 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
 File: ./figs-br//cap07_figquestoes_q002.png
 File: ./figs-br//cap07_figquestoes_q003.png
 File: ./figs-br//cap07_figquestoes_q004.png
 File: ./figs-br//cap07_figquestoes_q005.png
-Css: #tcolobox-68 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-68 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-69 .tcolorbox-title{color: #FFFFFF; background-color: #FFE5E5;}
-Css: #tcolobox-69 .tcolorbox-content{color: #000000; background-color: #FFF9F9; border: 1px solid #FFE5E5;}
 Css: #tcolobox-70 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-70 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-File: ./figs-br//cap07_figFeedback.png
-Css: #tcolobox-71 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
-Css: #tcolobox-71 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
+Css: #tcolobox-71 .tcolorbox-title{color: #FFFFFF; background-color: #FFE5E5;}
+Css: #tcolobox-71 .tcolorbox-content{color: #000000; background-color: #FFF9F9; border: 1px solid #FFE5E5;}
 Css: #tcolobox-72 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-72 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-73 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-73 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+File: ./figs-br//cap07_figFeedback.png
+Css: #tcolobox-73 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
+Css: #tcolobox-73 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
 Css: #tcolobox-74 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-74 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-75 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-75 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-75 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-75 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-76 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-76 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-77 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-77 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor752{color:rgb(101,101,101)}
 Css: span#textcolor753{color:rgb(101,101,101)}
 Css: span#textcolor754{color:rgb(101,101,101)}
@@ -1233,30 +1239,26 @@ Css: span#textcolor755{color:rgb(101,101,101)}
 File: ./figs-br//cap08_figexameQR_QT.png
 File: ./figs-br//cap08_figexameCriarVariacoes.png
 File: ./figs-br//cap08_figexameCriarVariacoesMsg.png
-Css: #tcolobox-76 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-76 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-File: ./figs-br//cap08_figexameCriarVariacoesEmail.png
-Css: #tcolobox-77 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-77 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
-File: ./figs-br//cap08_figexameQR_QM_QT_PDF.png
 Css: #tcolobox-78 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-78 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-File: ./figs-br//cap08_figexameCriarPDF_Email.png
-Css: #tcolobox-79 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-79 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+File: ./figs-br//cap08_figexameCriarVariacoesEmail.png
+Css: #tcolobox-79 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-79 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+File: ./figs-br//cap08_figexameQR_QM_QT_PDF.png
 Css: #tcolobox-80 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-80 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-81 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-81 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
-File: ./figs-br//cap08_figexameQR_QM_QT_PDFScan.png
+File: ./figs-br//cap08_figexameCriarPDF_Email.png
+Css: #tcolobox-81 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-81 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 Css: #tcolobox-82 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-82 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-83 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
-Css: #tcolobox-83 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
+Css: #tcolobox-83 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-83 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+File: ./figs-br//cap08_figexameQR_QM_QT_PDFScan.png
 Css: #tcolobox-84 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-84 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-85 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-85 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-85 .tcolorbox-title{color: #FFFFFF; background-color: #ADE0F5;}
+Css: #tcolobox-85 .tcolorbox-content{color: #000000; background-color: #EBF7FC; border: 1px solid #ADE0F5;}
 Css: #tcolobox-86 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-86 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 Css: #tcolobox-87 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
@@ -1267,10 +1269,14 @@ Css: #tcolobox-89 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-89 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 Css: #tcolobox-90 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-90 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-91 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
-Css: #tcolobox-91 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
-Css: #tcolobox-92 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-92 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-91 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-91 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-92 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-92 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-93 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
+Css: #tcolobox-93 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
+Css: #tcolobox-94 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-94 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor756{color:rgb(101,101,101)}
 Css: span#textcolor757{color:rgb(0,127,0)}
 Css: span#textcolor758{color:rgb(101,101,101)}
@@ -1342,8 +1348,8 @@ Css: span#textcolor823{color:rgb(61,122,122)}
 Css: span#textcolor824{color:rgb(101,101,101)}
 Css: span#textcolor825{color:rgb(61,122,122)}
 File: ./figs-br//cap09_questaoQM_EquacaoIdadePDF.png
-Css: #tcolobox-93 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-93 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-95 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-95 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: #colorbox826{border: solid 1px rgb(255,0,0);}
 Css: #colorbox826{background-color: rgb(255,255,255);}
 Css: span#textcolor827{color:rgb(0,127,0)}
@@ -1397,8 +1403,8 @@ Css: span#textcolor874{color:rgb(170,33,255)}
 Css: span#textcolor875{color:rgb(101,101,101)}
 Css: span#textcolor876{color:rgb(61,122,122)}
 File: ./figs-br//cap09_questaoQM_EquacaoRetaPDF.png
-Css: #tcolobox-94 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-94 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-96 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-96 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor877{color:rgb(101,101,101)}
 Css: span#textcolor878{color:rgb(101,101,101)}
 Css: span#textcolor879{color:rgb(101,101,101)}
@@ -1414,8 +1420,8 @@ Css: span#textcolor888{color:rgb(101,101,101)}
 Css: span#textcolor889{color:rgb(101,101,101)}
 Css: span#textcolor890{color:rgb(101,101,101)}
 Css: span#textcolor891{color:rgb(101,101,101)}
-Css: #tcolobox-95 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-95 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-97 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-97 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor892{color:rgb(0,127,0)}
 Css: span#textcolor893{color:rgb(0,0,255)}
 Css: span#textcolor894{color:rgb(101,101,101)}
@@ -1528,14 +1534,10 @@ Css: span#textcolor1000{color:rgb(101,101,101)}
 File: ./figs-br//cap09_questaoQT_Exata_PDF.png
 File: ./figs-br//cap09_exameVariacoes_questoes.png
 File: ./figs-br//cap09_exameVariacoes_detalhes.png
-Css: #tcolobox-96 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-96 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-File: ./figs-br//cap09_exameVariacoes_variacoes.png
-File: ./figs-br//cap09_exameVariacoes_variacoes_email.png
-Css: #tcolobox-97 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-97 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 Css: #tcolobox-98 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-98 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+File: ./figs-br//cap09_exameVariacoes_variacoes.png
+File: ./figs-br//cap09_exameVariacoes_variacoes_email.png
 Css: #tcolobox-99 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-99 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 Css: #tcolobox-100 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
@@ -1550,20 +1552,24 @@ Css: #tcolobox-104 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-104 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 Css: #tcolobox-105 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-105 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-106 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-106 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-107 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-107 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 File: ./figs-br//cap09_exameVariacoes_QM_moodle.png
 File: ./figs-br//cap09_exameVariacoes_exata_moodle.png
 File: ./figs-br//cap09_exameVariacoes_PDF_MCTest.png
-Css: #tcolobox-106 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
-Css: #tcolobox-106 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
-Css: #tcolobox-107 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-107 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-108 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
+Css: #tcolobox-108 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
+Css: #tcolobox-109 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-109 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1001{color:rgb(101,101,101)}
 Css: span#textcolor1002{color:rgb(101,101,101)}
 Css: span#textcolor1003{color:rgb(101,101,101)}
 Css: span#textcolor1004{color:rgb(101,101,101)}
 Css: span#textcolor1005{color:rgb(101,101,101)}
-Css: #tcolobox-108 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-108 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-110 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-110 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1006{color:rgb(0,127,0)}
 Css: span#textcolor1007{color:rgb(0,0,255)}
 Css: span#textcolor1008{color:rgb(101,101,101)}
@@ -1658,8 +1664,8 @@ Css: span#textcolor1096{color:rgb(101,101,101)}
 Css: span#textcolor1097{color:rgb(186,33,33)}
 Css: span#textcolor1098{color:rgb(101,101,101)}
 Css: span#textcolor1099{color:rgb(61,122,122)}
-Css: #tcolobox-109 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-109 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-111 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-111 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1100{color:rgb(0,127,0)}
 Css: span#textcolor1101{color:rgb(0,0,255)}
 Css: span#textcolor1102{color:rgb(101,101,101)}
@@ -1709,8 +1715,8 @@ File: ./figs-br//cap10_questaoQT_EP_2_matriz.png
 File: ./figs-br//cap10_figExameVPL_Atualiza4.png
 File: ./figs-br//cap10_figExameVPL_email.png
 File: ./figs-br//cap10_figExameVPL_PDF.png
-Css: #tcolobox-110 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-110 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-112 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-112 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1145{color:rgb(0,127,0)}
 Css: span#textcolor1146{color:rgb(0,0,255)}
 Css: span#textcolor1147{color:rgb(0,127,0)}
@@ -1753,8 +1759,8 @@ Css: span#textcolor1183{color:rgb(186,33,33)}
 Css: span#textcolor1184{color:rgb(163,89,119)}
 Css: span#textcolor1185{color:rgb(163,89,119)}
 Css: span#textcolor1186{color:rgb(186,33,33)}
-Css: #tcolobox-111 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-111 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-113 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-113 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1187{color:rgb(0,127,0)}
 Css: span#textcolor1188{color:rgb(0,0,255)}
 Css: span#textcolor1189{color:rgb(0,127,0)}
@@ -1783,24 +1789,24 @@ Css: span#textcolor1211{color:rgb(163,89,119)}
 Css: span#textcolor1212{color:rgb(101,101,101)}
 Css: span#textcolor1213{color:rgb(163,89,119)}
 Css: span#textcolor1214{color:rgb(186,33,33)}
-Css: #tcolobox-112 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-112 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-113 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-113 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-114 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
-Css: #tcolobox-114 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
+Css: #tcolobox-114 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-114 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-115 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-115 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-116 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
+Css: #tcolobox-116 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
 File: ./figs-br//cap11_mctest1_folha.png
 File: ./figs-br//cap11_mctest2_folha.png
 File: ./figs-br//cap11_mctest2_QR.jpg
-Css: #tcolobox-115 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-115 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-117 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-117 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 File: ./figs-br//cap11_mctest2_estatisticas.png
-Css: #tcolobox-116 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
-Css: #tcolobox-116 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
+Css: #tcolobox-118 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
+Css: #tcolobox-118 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
 File: ./figs-br//cap12_mctest4_pastas.png
 File: ./figs-br//cap12_mctest4_folha.png
-Css: #tcolobox-117 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-117 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-119 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-119 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1215{color:rgb(101,101,101)}
 Css: span#textcolor1216{color:rgb(101,101,101)}
 Css: span#textcolor1217{color:rgb(101,101,101)}
@@ -1862,8 +1868,8 @@ Css: span#textcolor1272{color:rgb(61,122,122)}
 Css: span#textcolor1273{color:rgb(61,122,122)}
 Css: span#textcolor1274{color:rgb(61,122,122)}
 File: ./figs-br//cap12_questaoQM_MRUPDF.png
-Css: #tcolobox-118 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-118 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-120 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-120 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
 --- needs --- livro.idv[2] ==> livro0x.png ---
 --- needs --- livro.idv[3] ==> livro1x.png ---
 --- needs --- livro.idv[4] ==> livro2x.png ---
@@ -1873,8 +1879,8 @@ Css: #tcolobox-118 .tcolorbox-content{color: #000000; background-color: #FFE5E5;
 --- needs --- livro.idv[8] ==> livro6x.png ---
 --- needs --- livro.idv[9] ==> livro7x.png ---
 --- needs --- livro.idv[10] ==> livro8x.png ---
-Css: #tcolobox-119 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-119 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-121 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-121 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1275{color:rgb(101,101,101)}
 Css: span#textcolor1276{color:rgb(101,101,101)}
 Css: span#textcolor1277{color:rgb(101,101,101)}
@@ -1947,10 +1953,10 @@ Css: span#textcolor1343{color:rgb(61,122,122)}
 Css: span#textcolor1344{color:rgb(61,122,122)}
 Css: span#textcolor1345{color:rgb(61,122,122)}
 File: ./figs-br//cap12_questaoQM_criaMatrizPDF.png
-Css: #tcolobox-120 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-120 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
-Css: #tcolobox-121 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-121 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-122 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-122 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-123 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-123 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1346{color:rgb(101,101,101)}
 Css: span#textcolor1347{color:rgb(101,101,101)}
 Css: #colorbox1348{border: solid 1px rgb(255,0,0);}
@@ -2035,16 +2041,16 @@ Css: span#textcolor1425{color:rgb(101,101,101)}
 Css: span#textcolor1426{color:rgb(101,101,101)}
 Css: span#textcolor1427{color:rgb(61,122,122)}
 File: ./figs-br//cap12_questaoQM_equacaoFiguraPDF.png
-Css: #tcolobox-122 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
-Css: #tcolobox-122 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
+Css: #tcolobox-124 .tcolorbox-title{color: #FFFFFF; background-color: #FF9999;}
+Css: #tcolobox-124 .tcolorbox-content{color: #000000; background-color: #FFE5E5; border: 1px solid #FF9999;}
 --- needs --- livro.idv[12] ==> livro9x.png ---
 --- needs --- livro.idv[13] ==> livro10x.png ---
 --- needs --- livro.idv[14] ==> livro11x.png ---
 --- needs --- livro.idv[15] ==> livro12x.png ---
 --- needs --- livro.idv[16] ==> livro13x.png ---
 --- needs --- livro.idv[17] ==> livro14x.png ---
-Css: #tcolobox-123 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-123 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-125 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-125 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1428{color:rgb(101,101,101)}
 Css: span#textcolor1429{color:rgb(101,101,101)}
 Css: #colorbox1430{border: solid 1px rgb(255,0,0);}
@@ -2159,8 +2165,8 @@ Css: span#textcolor1536{color:rgb(101,101,101)}
 Css: span#textcolor1537{color:rgb(186,33,33)}
 Css: span#textcolor1538{color:rgb(101,101,101)}
 File: ./figs-br//cap12_questaoQM_grafoPDF.png
-Css: #tcolobox-124 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-124 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-126 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-126 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1539{color:rgb(0,127,0)}
 Css: span#textcolor1540{color:rgb(0,0,255)}
 Css: span#textcolor1541{color:rgb(186,186,186)}
@@ -2235,8 +2241,8 @@ Css: span#textcolor1602{color:rgb(101,101,101)}
 --- needs --- livro.idv[26] ==> livro22x.png ---
 --- needs --- livro.idv[27] ==> livro23x.png ---
 --- needs --- livro.idv[28] ==> livro24x.png ---
-Css: #tcolobox-125 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-125 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-127 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-127 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1603{color:rgb(101,101,101)}
 Css: span#textcolor1604{color:rgb(0,127,0)}
 Css: #colorbox1605{border: solid 1px rgb(255,0,0);}
@@ -2339,8 +2345,8 @@ Css: span#textcolor1697{color:rgb(186,33,33)}
 Css: span#textcolor1698{color:rgb(163,89,119)}
 Css: span#textcolor1699{color:rgb(163,89,119)}
 Css: span#textcolor1700{color:rgb(186,33,33)}
-Css: #tcolobox-126 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
-Css: #tcolobox-126 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
+Css: #tcolobox-128 .tcolorbox-title{color: #FFFFFF; background-color: #D6D6D6;}
+Css: #tcolobox-128 .tcolorbox-content{color: #000000; background-color: #F5F5F5; border: 1px solid #D6D6D6;}
 Css: span#textcolor1701{color:rgb(0,127,0)}
 Css: span#textcolor1702{color:rgb(0,0,255)}
 Css: span#textcolor1703{color:rgb(101,101,101)}
@@ -2556,44 +2562,44 @@ Css: span#textcolor1912{color:rgb(101,101,101)}
 Css: span#textcolor1913{color:rgb(186,33,33)}
 File: ./figs-br//cap12_questaoMatrizRosaPDF.png
 File: ./figs-br//cap12_examesSheets_planilha.png
-Css: #tcolobox-127 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-127 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
-Css: #tcolobox-128 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
-Css: #tcolobox-128 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 Css: #tcolobox-129 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
 Css: #tcolobox-129 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-130 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-130 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
+Css: #tcolobox-131 .tcolorbox-title{color: #FFFFFF; background-color: #FFDB99;}
+Css: #tcolobox-131 .tcolorbox-content{color: #000000; background-color: #FFF6E5; border: 1px solid #FFDB99;}
 File: ./figs-br//cap12_examesPDF_MCTestS.png
 File: ./figs-br//cap12_examesMCTest_pesos_BD.png
 File: ./figs-br//cap12_examesMCTest_pesos_Final.png
-Css: #tcolobox-130 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
-Css: #tcolobox-130 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
+Css: #tcolobox-132 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
+Css: #tcolobox-132 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
 File: ./figs-br//cap13_fig01.png
 File: ./figs-br//cap13_fig03.png
-Css: #tcolobox-131 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
-Css: #tcolobox-131 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
+Css: #tcolobox-133 .tcolorbox-title{color: #FFFFFF; background-color: #FFE599;}
+Css: #tcolobox-133 .tcolorbox-content{color: #000000; background-color: #FFF9E5; border: 1px solid #FFE599;}
 --- characters ---
 Font("cmr","10","10","100")
 Font("cmmi","10","10","100")
+Font("cmr","10","10","109")
+Font("cmr","17","17","100")
 Font("cmr","12","12","100")
-Font("cmr","17","17","120")
-Font("cmr","12","12","120")
-Font("tcrm","1200","12","100")
-Font("cmti","12","12","100")
-Font("cmbx","12","12","100")
 Font("cmr","8","8","100")
 Font("cmr","6","6","100")
-Font("cmmi","12","12","100")
 Font("cmmi","8","8","100")
-Font("cmsy","10","10","120")
-Font("cmtt","12","12","100")
-Font("cmbx","12","12","120")
-Font("cmr","10","10","109")
-Font("cmbx","10","10","109")
-Font("cmtt","10","10","109")
+Font("tcrm","1095","10","100")
 Font("cmti","10","10","109")
-Font("cmitt","10","10","109")
+Font("cmbx","10","10","109")
 Font("cmmi","10","10","109")
-Font("cmti","10","10","100")
+Font("cmsy","10","10","109")
+Font("cmtt","10","10","109")
+Font("cmbx","12","12","100")
+Font("cmbx","10","10","100")
 Font("cmtt","10","10","100")
-Font("cmtt","8","8","100")
+Font("cmr","9","9","100")
+Font("cmti","10","10","100")
 Font("cmitt","10","10","100")
+Font("cmti","9","9","100")
+Font("cmtt","9","9","100")
+Font("cmtt","8","8","100")
+Font("cmitt","10","10","90")
+Font("cmmi","9","9","100")

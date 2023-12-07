@@ -71,7 +71,7 @@ Nas situações em que se deseja criar exclusivamente exames com QRs, como ilust
 O botão de vídeo ao lado do botão ``Criar-PDF'' foi criado com o intuito de fornecer uma explicação detalhada do processo de criação de exames com exercícios de programação e correção automática na atividade VPL do Moodle. Esse tópico será abordado em um capítulo futuro, com mais detalhes e instruções específicas.
 
 \begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
-A primeira barra de rolagem abaixo do botão ``Criar-PDF'' na Figura \ref{fig:cap06_figExameAtualiza1} define o tamanho da fonte que irá aparecer no PDF. O valor padrão é o mínimo de \verb|10pt| e o valor máximo vai até \verb|12pt|. É muito importante observar que o QRCode que irá aparecer no PDF deve ficar no interior do retângulo imaginário definido pelos quatro discos pretos. Esse QRCode vai deslocando para a direita, conforme o tamanho do nome do estudante. Assim, recomenda-se fortemente verificar se esse QRCode está posicionado corretamente em todos os exames contidos no PDF gerado.
+A primeira barra de rolagem abaixo do botão ``Criar-PDF'' na Figura \ref{fig:cap06_figExameAtualiza1} define o tamanho da fonte que irá aparecer no PDF. O valor padrão é \verb|11pt|, o mínimo é \verb|10pt| e o valor máximo é \verb|12pt|. É muito importante observar que o QRCode que irá aparecer no PDF deve ficar no interior do retângulo imaginário definido pelos quatro discos pretos. Esse QRCode vai deslocando para a direita, conforme o tamanho do nome do estudante. Assim, recomenda-se fortemente verificar se esse QRCode está posicionado corretamente em todos os exames contidos no PDF gerado.
 \end{mybox}
 
 \begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
@@ -107,14 +107,14 @@ Após a aplicação das atividades com QMs, é possível realizar a correção d
     \item Antes de digitalizar os exames realizados pelos estudantes, verifique se todos os círculos foram preenchidos corretamente. Se houver falhas ou borrões no contorno dos círculos, o corretor pode não funcionar adequadamente;
     \item Digitalize a página de frente (para exames com QMs) em níveis de cinza, com uma resolução de 150 dpi (se a decodificação do código QR falhar, use 200 dpi) e salve como um arquivo PDF por turma;
     \item Verifique se os 4 discos pretos estão completamente preenchidos e sem falhas;
-    \item Se a opção ``Respostas'' foi selecionada no campo ``Questões/Respostas/Ambos'' na tela de Exame, no Recorte III, a primeira página do PDF deve conter o gabarito, e todas as questões marcadas serão desconsideradas;
+    \item Se a opção ``Respostas'' foi selecionada no campo ``Questões/Respostas/Ambos'' na tela de Exame, no Recorte IV, a primeira página do PDF deve conter o gabarito, e todas as questões marcadas serão desconsideradas;
     \item Se a opção ``Retorno: SIM'' foi escolhida na tela de Exame, ao cadastrar os estudantes da turma, será necessário incluir também o e-mail do estudante. Nesse caso, siga as instruções no lado direito da página ``Enviar Retornos aos Estudantes'' para cada estudante receber a correção do seu exame por e-mail.
 \end{enumerate}
 }
 \end{myboxCode}
 
 \begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
-A Figura \ref{fig:cap06_figExameAtualiza1} foi atualizada para permitir que o professor, caso deseje fornecer \textit{feedback} aos alunos, envie tanto as questões quanto os gabaritos. Isso pode ser feito marcando a caixa de seleção localizada abaixo da opção ``Upload-PDF''.
+O conteúdo da Figura \ref{fig:cap06_figExameAtualiza1} foi modificado para viabilizar a opção do professor fornecer \textit{feedback} aos alunos, possibilitando o envio tanto das questões quanto dos gabaritos. Essa operação é realizada marcando a opção ``Retorno=SIM'', salvando o formulário, selecionando a caixa de verificação abaixo da opção ``Upload-PDF'' e, por fim, submetendo o arquivo PDF digitalizado ao clicar no botão ``Upload-PDF''. Se essa caixa de verificação não for selecionada, apenas a imagem e informações do estudante, juntamente com os pontos obtidos, serão anexados ao PDF.
 \end{mybox}
 
 \subsection{Área à direita}\label{sec:areaDireita}
@@ -134,55 +134,65 @@ Esta área é destinada aos exames com QTs e correção manual realizadas nas fo
 
 \section{Recorte II da tela de exame -- turmas}\label{sec:exameTurmas}
 
-A Figura \ref{fig:cap06_figExameAtualiza2} apresenta a seção para selecionar as turmas associadas ao exame. Nessa seção, o professor pode escolher as turmas nas quais deseja aplicar a avaliação, marcando a caixa de seleção na primeira coluna. Após realizar as seleções, as turmas escolhidas serão sempre exibidas no topo da lista de turmas ao atualizar a página clicando no botão ``Salvar''. 
+A Figura \ref{fig:cap06_figExameAtualizaTurmas} apresenta a seção para selecionar as turmas associadas ao exame. Nessa seção, o professor pode escolher as turmas nas quais deseja aplicar a avaliação, marcando a caixa de seleção na primeira coluna. Após realizar as seleções, as turmas escolhidas serão sempre exibidas no topo da lista de turmas ao atualizar a página clicando no botão ``Salvar''. 
 
-Na Figura \ref{fig:cap06_figExameAtualiza2}, também são apresentados os seguintes detalhes sobre cada turma: disciplina, código, tipo (prática ou teórica), localização da sala, período ou semestre letivo, número de estudantes e professor(es) responsável(is) pela turma. A última coluna, intitulada ``Ver'', contém um botão com o ID da turma no banco de dados. Ao clicar nesse botão, será exibida uma lista com todos os estudantes da respectiva turma.
+Na Figura \ref{fig:cap06_figExameAtualizaTurmas}, também são apresentados os seguintes detalhes sobre cada turma: disciplina, código, tipo (prática ou teórica), localização da sala, período ou semestre letivo, número de estudantes e professor(es) responsável(is) pela turma. A última coluna, intitulada ``Ver'', contém um botão com o ID da turma no banco de dados. Ao clicar nesse botão, será exibida uma lista com todos os estudantes da respectiva turma.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.9\textwidth]{cap06_figExameAtualiza2.png}
+  \includegraphics[width=0.9\textwidth]{cap06_figExameAtualizaTurmas.png}
   \caption{Recorte II da tela de exame, com as turmas do professor.}
-  \label{fig:cap06_figExameAtualiza2}\vspace{-3mm}
+  \label{fig:cap06_figExameAtualizaTurmas}\vspace{-3mm}
 \end{figure}
 
-\section{Recorte III da tela de exame -- questões}
+\section{Recorte III da tela de exame -- tópicos}
 
-O professor tem a opção de selecionar as questões desejadas para aplicar na avaliação, conforme ilustrado na Figura \ref{fig:cap06_figExameAtualiza3}. Essa seleção é feita marcando a caixa de seleção na primeira coluna correspondente a cada questão desejada. As questões marcadas serão sempre exibidas no topo da lista de questões, após clicar no botão ``Salvar''. Essa lista contém todas as questões da disciplina à qual o exame está vinculado, pois um dos objetivos do MCTest é compartilhar esforços entre os professores na elaboração de questões.
+No MCTest 5.3, foi adicionada uma nova área à tela do exame, que permite a seleção dos tópicos da disciplina, ver Figura \ref{fig:cap06_figExameAtualizaTopicos}. Esse recurso se mostrou necessário, pois a tela anterior estava demorando muito para carregar todas as questões cadastradas nos tópicos da disciplina. Agora, o professor pode primeiro escolher o(s) tópico(s), clicar no botão ``Salvar'' e, no próximo Recorte IV da tela, serão apresentadas apenas as questões correspondentes ao(s) tópico(s) selecionado(s).
 
-Na Figura \ref{fig:cap06_figExameAtualiza3}, também são exibidos os seguintes detalhes sobre cada questão: tópico, descrição curta, tipo QM ou QT, seguido pelo número de alternativas (é importante ressaltar que todas as questões devem ter o mesmo número de alternativas em cada exame), dificuldade (as questões de dificuldade 1 são apresentadas primeiro, seguidas pelas questões de dificuldade 2, e assim por diante; em seguida, são apresentadas as QTs, também nessa ordem), grupo (apenas uma questão por grupo é sorteada em cada exame) e, por fim, se a questão é paramétrica ou não.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap06_figExameAtualizaTopicos.png}
+  \caption{Recorte III da tela de exame, com os tópicos da disciplina.}
+  \label{fig:cap06_figExameAtualizaTopicos}\vspace{-3mm}
+\end{figure}
+
+\section{Recorte IV da tela de exame -- questões}
+
+O professor tem a opção de selecionar as questões desejadas para aplicar na avaliação, conforme ilustrado na Figura \ref{fig:cap06_figExameAtualizaQuestoes}. Essa seleção é feita marcando a caixa de seleção na primeira coluna correspondente a cada questão desejada. As questões marcadas serão sempre exibidas no topo da lista de questões, após clicar no botão ``Salvar''. Essa lista contém todas as questões da disciplina à qual o exame está vinculado, pois um dos objetivos do MCTest é compartilhar esforços entre os professores na elaboração de questões.
+
+Na Figura \ref{fig:cap06_figExameAtualizaQuestoes}, também são exibidos os seguintes detalhes sobre cada questão: tópico, descrição curta, tipo QM ou QT, seguido pelo número de alternativas (é importante ressaltar que todas as questões devem ter o mesmo número de alternativas em cada exame), dificuldade (as questões de dificuldade 1 são apresentadas primeiro, seguidas pelas questões de dificuldade 2, e assim por diante; em seguida, são apresentadas as QTs, também nessa ordem), grupo (apenas uma questão por grupo é sorteada em cada exame) e, por fim, se a questão é paramétrica ou não.
 
 A última coluna, intitulada ``Ver'', exibe o ID da questão. Ao clicar nesse botão, o professor poderá visualizar a questão em detalhes.
 
 \begin{figure}[!t]
   \centering
-  \includegraphics[width=0.9\textwidth]{cap06_figExameAtualiza3.png}
-  \caption{Recorte III da tela de exame, com as questões da disciplina.}
-  \label{fig:cap06_figExameAtualiza3}\vspace{-3mm}
+  \includegraphics[width=0.9\textwidth]{cap06_figExameAtualizaQuestoes.png}
+  \caption{Recorte IV da tela de exame, com as questões da disciplina.}
+  \label{fig:cap06_figExameAtualizaQuestoes}\vspace{-3mm}
 \end{figure}
 
-\section{Recorte IV da tela de exame -- configurando os detalhes}\label{sec:exameDetalhes}
+\section{Recorte V da tela de exame -- configurando os detalhes}\label{sec:exameDetalhes}
 
-Na Figura \ref{fig:cap06_figExameAtualiza4}, são apresentados os campos de configuração de um exame. Cada questão possui uma dificuldade variando de 1 a 5. O professor deve selecionar a quantidade de QMs (na Figura \ref{fig:cap06_figExameAtualiza3}) que deseja incluir em cada exame. As questões serão exibidas em ordem crescente de dificuldade, começando pela dificuldade 1 e assim por diante. É importante observar que todas as QMs de um exame devem ter o mesmo número de alternativas. Além disso, é possível criar exames que contenham QTs, seguindo a ordem de dificuldade de cada questão.
-
+Na Figura \ref{fig:cap06_figExameAtualizaConfiguracoes}, são apresentados os campos de configuração de um exame. Cada questão possui uma dificuldade variando de 1 a 5. O professor deve selecionar a quantidade de QMs (na Figura \ref{fig:cap06_figExameAtualizaQuestoes}) que deseja incluir em cada exame. As questões serão exibidas em ordem crescente de dificuldade, começando pela dificuldade 1 e assim por diante. É importante observar que todas as QMs de um exame devem ter o mesmo número de alternativas. Além disso, é possível criar exames que contenham QTs, seguindo a ordem de dificuldade de cada questão.
 
 \begin{figure}[!t]
   \centering
-  \includegraphics[width=0.9\textwidth]{cap06_figExameAtualiza4.png}
-  \caption{Recorte IV da tela de exame, configurando os detalhes do exame.}
-  \label{fig:cap06_figExameAtualiza4}\vspace{-3mm}
+  \includegraphics[width=0.9\textwidth]{cap06_figExameAtualizaConfiguracoes.png}
+  \caption{Recorte V da tela de exame, configurando os detalhes do exame.}
+  \label{fig:cap06_figExameAtualizaConfiguracoes}\vspace{-3mm}
 \end{figure}
 
 \begin{myboxCode}{corObs}{\textbf{Alguns exemplos de erros comuns que podem ocorrer:\\\vspace{-3mm}\hrule\vspace{3mm}}}
-Na Figura \ref{fig:cap06_figExameAtualiza4}, o número de questões por dificuldade de 1 a 5 é aplicável apenas a QM. O número de QTs não é contabilizado por dificuldade.
+Na Figura \ref{fig:cap06_figExameAtualizaConfiguracoes}, o número de questões por dificuldade de 1 a 5 é aplicável apenas a QM. O número de QTs não é contabilizado por dificuldade.
 Quanto ao número de questões por dificuldade:
 \begin{enumerate}[itemsep=-1mm]
-    \item É comum ocorrer um erro ao definir uma quantidade inferior de QMs em relação à quantidade selecionada anteriormente (Figura \ref{fig:cap06_figExameAtualiza2}) para cada dificuldade, especialmente quando as questões possuem grupos. Lembre-se de que em cada exame é sorteada apenas uma questão por grupo. Portanto, se você selecionar 10 questões do grupo X, deve considerar apenas uma questão para contabilizar a quantidade correta;
+    \item É comum ocorrer um erro ao definir uma quantidade inferior de QMs em relação à quantidade selecionada anteriormente (Figura \ref{fig:cap06_figExameAtualizaTurmas}) para cada dificuldade, especialmente quando as questões possuem grupos. Lembre-se de que em cada exame é sorteada apenas uma questão por grupo. Portanto, se você selecionar 10 questões do grupo X, deve considerar apenas uma questão para contabilizar a quantidade correta;
     \item Também é comum ocorrer o erro de selecionar QMs com um número diferente de alternativas;
     \item Finalmente, ocorre erro ao contabilizar questões com diferentes dificuldades.
 \end{enumerate}
 \end{myboxCode}
 
-Na Figura \ref{fig:cap06_figExameAtualiza4}, à direita, é possível visualizar o estilo do(s) bloco(s) de respostas ou QRs, onde os estudantes devem marcar as alternativas. Esses QRs aparecem na primeira folha da avaliação. Diversos estilos estão disponíveis em \href{http://vision.ufabc.edu.br/MCTest/MCTest5-Experiments/}{vision.ufabc.edu.br/MCTest/MCTest5-Experiments}. Se a opção ``Ecológico'' for definida como ``NÃO'', cada QT será desenhada em uma única folha, frente e verso.
+Na Figura \ref{fig:cap06_figExameAtualizaConfiguracoes}, à direita, é possível visualizar o estilo do(s) bloco(s) de respostas ou QRs, onde os estudantes devem marcar as alternativas. Esses QRs aparecem na primeira folha da avaliação. Diversos estilos estão disponíveis em \href{http://vision.ufabc.edu.br/MCTest/MCTest5-Experiments/}{vision.ufabc.edu.br/MCTest/MCTest5-Experiments}. Se a opção ``Ecológico'' for definida como ``NÃO'', cada QT será desenhada em uma única folha, frente e verso.
 
 \begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{1mm}}}
 \begin{enumerate}[itemsep=-1mm]
@@ -190,7 +200,7 @@ Na Figura \ref{fig:cap06_figExameAtualiza4}, à direita, é possível visualizar
     \item Um exame só existe se estiver associado a uma turma. Portanto:
     \begin{itemize}[itemsep=-1mm]
         \item Antes de excluir as turmas, certifique-se de que todos os exames estejam associados a uma única turma. Somente após isso, você poderá excluir as outras turmas;
-        \item Se um exame for deixado sem uma turma selecionada na Figura \ref{fig:cap06_figExameAtualiza2} e você clicar em ``Salvar'', ocorrerá um erro. Nesse caso, será possível corrigir apenas se o administrador fizer alterações diretamente no BD, o que não é recomendado;
+        \item Se um exame for deixado sem uma turma selecionada na Figura \ref{fig:cap06_figExameAtualizaTurmas} e você clicar em ``Salvar'', ocorrerá um erro. Nesse caso, será possível corrigir apenas se o administrador fizer alterações diretamente no BD, o que não é recomendado;
         \item Foram adicionadas várias mensagens de erro para tentar lidar com esses problemas.
     \end{itemize}
 \end{enumerate}

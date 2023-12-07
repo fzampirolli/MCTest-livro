@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.27)  19 NOV 2023 16:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.27)  7 DEC 2023 19:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1464,7 +1464,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[9])
+[9]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1473,14 +1473,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10]
+[10])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12
+
+
+
+]
 \tf@toc=\write8
 \openout8 = `livro-impressao11pt.toc'.
 
- [11
-
-
-
+pdfTeX warning (ext4): destination with the same identifier (name{page.xi}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.24 \tableofcontents\cleardoublepage
+                                      [11
 
 
 ]
@@ -1492,7 +1516,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[12]
+pdfTeX warning (ext4): destination with the same identifier (name{page.xii}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.24 \tableofcontents\cleardoublepage
+                                      [12]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -1554,9 +1583,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [19]
-Underfull \vbox (badness 1831) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1754,7 +1780,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [9]
-<./figs-br//cap01_MCTest-book-v3.png, id=1331, 889.3225pt x 533.995pt>
+<./figs-br//cap01_MCTest-book-v3.png, id=1348, 889.3225pt x 533.995pt>
 File: ./figs-br//cap01_MCTest-book-v3.png Graphic file (type png)
 <use ./figs-br//cap01_MCTest-book-v3.png>
 Package pdftex.def Info: ./figs-br//cap01_MCTest-book-v3.png  used on input lin
@@ -1827,12 +1853,12 @@ Package minitoc Info: I0006
 
 
 ]
-<./figs-br//cap02_figMCTest.png, id=1412, 523.9575pt x 741.77126pt>
+<./figs-br//cap02_figMCTest.png, id=1429, 530.98375pt x 731.73375pt>
 File: ./figs-br//cap02_figMCTest.png Graphic file (type png)
 <use ./figs-br//cap02_figMCTest.png>
 Package pdftex.def Info: ./figs-br//cap02_figMCTest.png  used on input line 18.
 
-(pdftex.def)             Requested size: 429.17871pt x 607.61122pt.
+(pdftex.def)             Requested size: 429.17871pt x 591.45058pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1843,39 +1869,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [16]
-<./figs-br//cap02_figNavega01.png, id=1425, 658.46pt x 32.12pt>
+<./figs-br//cap02_figNavega01.png, id=1442, 658.46pt x 32.12pt>
 File: ./figs-br//cap02_figNavega01.png Graphic file (type png)
 <use ./figs-br//cap02_figNavega01.png>
 Package pdftex.def Info: ./figs-br//cap02_figNavega01.png  used on input line 3
 4.
 (pdftex.def)             Requested size: 429.17871pt x 20.93605pt.
-<./figs-br//cap02_figNavega02.png, id=1426, 658.46pt x 34.1275pt>
+<./figs-br//cap02_figNavega02.png, id=1443, 658.46pt x 34.1275pt>
 File: ./figs-br//cap02_figNavega02.png Graphic file (type png)
 <use ./figs-br//cap02_figNavega02.png>
 Package pdftex.def Info: ./figs-br//cap02_figNavega02.png  used on input line 3
 6.
 (pdftex.def)             Requested size: 429.17871pt x 22.24455pt.
-<./figs-br//cap02_figNavega03.png, id=1427, 658.46pt x 32.12pt>
+<./figs-br//cap02_figNavega03.png, id=1444, 658.46pt x 32.12pt>
 File: ./figs-br//cap02_figNavega03.png Graphic file (type png)
 <use ./figs-br//cap02_figNavega03.png>
 Package pdftex.def Info: ./figs-br//cap02_figNavega03.png  used on input line 3
 8.
 (pdftex.def)             Requested size: 429.17871pt x 20.93605pt.
-<./figs-br//cap02_figNavega04.png, id=1428, 657.45625pt x 31.11626pt>
+<./figs-br//cap02_figNavega04.png, id=1445, 657.45625pt x 31.11626pt>
 File: ./figs-br//cap02_figNavega04.png Graphic file (type png)
 <use ./figs-br//cap02_figNavega04.png>
 Package pdftex.def Info: ./figs-br//cap02_figNavega04.png  used on input line 4
 0.
 (pdftex.def)             Requested size: 429.17871pt x 20.31267pt.
-<./figs-br//cap02_figNavega05.png, id=1429, 659.46375pt x 33.12375pt>
+<./figs-br//cap02_figNavega05.png, id=1446, 659.46375pt x 33.12375pt>
 File: ./figs-br//cap02_figNavega05.png Graphic file (type png)
 <use ./figs-br//cap02_figNavega05.png>
 Package pdftex.def Info: ./figs-br//cap02_figNavega05.png  used on input line 4
 2.
 (pdftex.def)             Requested size: 429.17871pt x 21.55746pt.
-
-Underfull \vbox (badness 1142) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1900,7 +1923,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [18 <./figs-br//cap02_figNavega01.png> <./figs-br//cap02_figNavega02.png> <./fi
 gs-br//cap02_figNavega03.png> <./figs-br//cap02_figNavega04.png> <./figs-br//ca
 p02_figNavega05.png>]
-<./figs-br//cap02_figInscrever.png, id=1452, 526.96875pt x 365.365pt>
+<./figs-br//cap02_figInscrever.png, id=1468, 526.96875pt x 365.365pt>
 File: ./figs-br//cap02_figInscrever.png Graphic file (type png)
 <use ./figs-br//cap02_figInscrever.png>
 Package pdftex.def Info: ./figs-br//cap02_figInscrever.png  used on input line 
@@ -1916,25 +1939,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [19 <./figs-br//cap02_figInscrever.png>]
-<./figs-br//cap02_figInstituto.png, id=1465, 527.9725pt x 480.79625pt>
+<./figs-br//cap02_figInstituto.png, id=1481, 527.9725pt x 480.79625pt>
 File: ./figs-br//cap02_figInstituto.png Graphic file (type png)
 <use ./figs-br//cap02_figInstituto.png>
 Package pdftex.def Info: ./figs-br//cap02_figInstituto.png  used on input line 
 89.
 (pdftex.def)             Requested size: 429.17871pt x 390.82939pt.
-<figs-br/cap02_figInstitutoCria.png, id=1467, 1365.1pt x 624.3325pt>
+<figs-br/cap02_figInstitutoCria.png, id=1483, 1365.1pt x 624.3325pt>
 File: figs-br/cap02_figInstitutoCria.png Graphic file (type png)
 <use figs-br/cap02_figInstitutoCria.png>
 Package pdftex.def Info: figs-br/cap02_figInstitutoCria.png  used on input line
  100.
 (pdftex.def)             Requested size: 429.17871pt x 196.28471pt.
-<./figs-br//cap02_figInstitutoDetalha.png, id=1468, 595.22375pt x 620.3175pt>
+<./figs-br//cap02_figInstitutoDetalha.png, id=1484, 595.22375pt x 620.3175pt>
 File: ./figs-br//cap02_figInstitutoDetalha.png Graphic file (type png)
 <use ./figs-br//cap02_figInstitutoDetalha.png>
 Package pdftex.def Info: ./figs-br//cap02_figInstitutoDetalha.png  used on inpu
 t line 114.
 (pdftex.def)             Requested size: 429.17871pt x 447.2719pt.
-<./figs-br//cap02_figInstitutoRemover.png, id=1469, 577.15625pt x 142.5325pt>
+<./figs-br//cap02_figInstitutoRemover.png, id=1485, 577.15625pt x 142.5325pt>
 File: ./figs-br//cap02_figInstitutoRemover.png Graphic file (type png)
 <use ./figs-br//cap02_figInstitutoRemover.png>
 Package pdftex.def Info: ./figs-br//cap02_figInstitutoRemover.png  used on inpu
@@ -1977,7 +2000,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [22 <./figs-br//cap02_figInstitutoDetalha.png> <./figs-br//cap02_figInstitutoRe
 mover.png>]
-<./figs-br//cap02_figCurso.png, id=1487, 525.965pt x 480.79625pt>
+<./figs-br//cap02_figCurso.png, id=1505, 525.965pt x 480.79625pt>
 File: ./figs-br//cap02_figCurso.png Graphic file (type png)
 <use ./figs-br//cap02_figCurso.png>
 Package pdftex.def Info: ./figs-br//cap02_figCurso.png  used on input line 146.
@@ -1993,19 +2016,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [23 <./figs-br//cap02_figCurso.png>]
-<./figs-br//cap02_figCursoCria.png, id=1497, 527.9725pt x 219.82124pt>
+<./figs-br//cap02_figCursoCria.png, id=1513, 527.9725pt x 219.82124pt>
 File: ./figs-br//cap02_figCursoCria.png Graphic file (type png)
 <use ./figs-br//cap02_figCursoCria.png>
 Package pdftex.def Info: ./figs-br//cap02_figCursoCria.png  used on input line 
 157.
 (pdftex.def)             Requested size: 429.17871pt x 178.68816pt.
-<./figs-br//cap02_figCursoDetalha.png, id=1500, 526.96875pt x 550.055pt>
+<./figs-br//cap02_figCursoDetalha.png, id=1516, 526.96875pt x 550.055pt>
 File: ./figs-br//cap02_figCursoDetalha.png Graphic file (type png)
 <use ./figs-br//cap02_figCursoDetalha.png>
 Package pdftex.def Info: ./figs-br//cap02_figCursoDetalha.png  used on input li
 ne 171.
 (pdftex.def)             Requested size: 429.17871pt x 448.0013pt.
-<./figs-br//cap02_figDisciplina.png, id=1502, 526.96875pt x 480.79625pt>
+<./figs-br//cap02_figDisciplina.png, id=1518, 526.96875pt x 480.79625pt>
 File: ./figs-br//cap02_figDisciplina.png Graphic file (type png)
 <use ./figs-br//cap02_figDisciplina.png>
 Package pdftex.def Info: ./figs-br//cap02_figDisciplina.png  used on input line
@@ -2033,32 +2056,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [25 <./figs-br//cap02_figCursoDetalha.png>]
-<./figs-br//cap02_figDisciplinaCria.png, id=1517, 526.96875pt x 430.60875pt>
+<./figs-br//cap02_figDisciplinaCria.png, id=1533, 526.96875pt x 430.60875pt>
 File: ./figs-br//cap02_figDisciplinaCria.png Graphic file (type png)
 <use ./figs-br//cap02_figDisciplinaCria.png>
 Package pdftex.def Info: ./figs-br//cap02_figDisciplinaCria.png  used on input 
 line 205.
 (pdftex.def)             Requested size: 429.17871pt x 350.71634pt.
-<./figs-br//cap02_figDisciplinaAtualiza2.png, id=1518, 521.95pt x 310.15875pt>
+<./figs-br//cap02_figDisciplinaAtualiza2.png, id=1534, 521.95pt x 310.15875pt>
 File: ./figs-br//cap02_figDisciplinaAtualiza2.png Graphic file (type png)
 <use ./figs-br//cap02_figDisciplinaAtualiza2.png>
 Package pdftex.def Info: ./figs-br//cap02_figDisciplinaAtualiza2.png  used on i
 nput line 212.
 (pdftex.def)             Requested size: 429.17871pt x 255.03224pt.
-<./figs-br//cap02_figDisciplinaDetalha.png, id=1522, 526.96875pt x 556.0775pt>
+<./figs-br//cap02_figDisciplinaDetalha.png, id=1538, 526.96875pt x 556.0775pt>
 File: ./figs-br//cap02_figDisciplinaDetalha.png Graphic file (type png)
 <use ./figs-br//cap02_figDisciplinaDetalha.png>
 Package pdftex.def Info: ./figs-br//cap02_figDisciplinaDetalha.png  used on inp
 ut line 221.
 (pdftex.def)             Requested size: 429.17871pt x 452.90643pt.
-<./figs-br//cap02_figDisciplinaDetalha2.png, id=1523, 492.84125pt x 459.7175pt>
+<./figs-br//cap02_figDisciplinaDetalha2.png, id=1539, 492.84125pt x 459.7175pt>
 
 File: ./figs-br//cap02_figDisciplinaDetalha2.png Graphic file (type png)
 <use ./figs-br//cap02_figDisciplinaDetalha2.png>
 Package pdftex.def Info: ./figs-br//cap02_figDisciplinaDetalha2.png  used on in
 put line 228.
 (pdftex.def)             Requested size: 429.17871pt x 400.35083pt.
-<./figs-br//cap02_figTurma.png, id=1526, 495.8525pt x 499.8675pt>
+<./figs-br//cap02_figTurma.png, id=1542, 495.8525pt x 499.8675pt>
 File: ./figs-br//cap02_figTurma.png Graphic file (type png)
 <use ./figs-br//cap02_figTurma.png>
 Package pdftex.def Info: ./figs-br//cap02_figTurma.png  used on input line 259.
@@ -2074,25 +2097,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [26 <./figs-br//cap02_figDisciplina.png>]
-<./figs-br//cap02_figTurmaCriar.png, id=1532, 526.96875pt x 407.5225pt>
+<./figs-br//cap02_figTurmaCriar.png, id=1548, 526.96875pt x 407.5225pt>
 File: ./figs-br//cap02_figTurmaCriar.png Graphic file (type png)
 <use ./figs-br//cap02_figTurmaCriar.png>
 Package pdftex.def Info: ./figs-br//cap02_figTurmaCriar.png  used on input line
  268.
 (pdftex.def)             Requested size: 429.17871pt x 331.91338pt.
-<./figs-br//cap02_figTurmaAtualiza.png, id=1537, 492.84125pt x 528.97626pt>
+<./figs-br//cap02_figTurmaAtualiza.png, id=1553, 492.84125pt x 528.97626pt>
 File: ./figs-br//cap02_figTurmaAtualiza.png Graphic file (type png)
 <use ./figs-br//cap02_figTurmaAtualiza.png>
 Package pdftex.def Info: ./figs-br//cap02_figTurmaAtualiza.png  used on input l
 ine 277.
 (pdftex.def)             Requested size: 429.17871pt x 460.6657pt.
-<./figs-br//cap02_figTurmaAtualiza2.png, id=1543, 1379.1525pt x 1361.085pt>
+<./figs-br//cap02_figTurmaAtualiza2.png, id=1559, 1379.1525pt x 1361.085pt>
 File: ./figs-br//cap02_figTurmaAtualiza2.png Graphic file (type png)
 <use ./figs-br//cap02_figTurmaAtualiza2.png>
 Package pdftex.def Info: ./figs-br//cap02_figTurmaAtualiza2.png  used on input 
 line 289.
 (pdftex.def)             Requested size: 429.17871pt x 423.55194pt.
-<./figs-br//cap02_figTurmaAtualiza3.png, id=1545, 1361.085pt x 341.275pt>
+<./figs-br//cap02_figTurmaAtualiza3.png, id=1561, 1361.085pt x 341.275pt>
 File: ./figs-br//cap02_figTurmaAtualiza3.png Graphic file (type png)
 <use ./figs-br//cap02_figTurmaAtualiza3.png>
 Package pdftex.def Info: ./figs-br//cap02_figTurmaAtualiza3.png  used on input 
@@ -2108,25 +2131,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [27 <./figs-br//cap02_figDisciplinaCria.png>]
-<./figs-br//cap02_figTopico.png, id=1552, 492.84125pt x 499.8675pt>
+<./figs-br//cap02_figTopico.png, id=1569, 492.84125pt x 499.8675pt>
 File: ./figs-br//cap02_figTopico.png Graphic file (type png)
 <use ./figs-br//cap02_figTopico.png>
 Package pdftex.def Info: ./figs-br//cap02_figTopico.png  used on input line 320
 .
 (pdftex.def)             Requested size: 429.17871pt x 435.31596pt.
-<./figs-br//cap02_figTopicoAtualiza.png, id=1554, 493.845pt x 365.365pt>
+<./figs-br//cap02_figTopicoAtualiza.png, id=1571, 493.845pt x 365.365pt>
 File: ./figs-br//cap02_figTopicoAtualiza.png Graphic file (type png)
 <use ./figs-br//cap02_figTopicoAtualiza.png>
 Package pdftex.def Info: ./figs-br//cap02_figTopicoAtualiza.png  used on input 
 line 329.
 (pdftex.def)             Requested size: 429.17871pt x 317.51933pt.
-<./figs-br//cap02_figTopicoDetalha.png, id=1558, 496.85625pt x 593.21625pt>
+<./figs-br//cap02_figTopicoDetalha.png, id=1575, 496.85625pt x 593.21625pt>
 File: ./figs-br//cap02_figTopicoDetalha.png Graphic file (type png)
 <use ./figs-br//cap02_figTopicoDetalha.png>
 Package pdftex.def Info: ./figs-br//cap02_figTopicoDetalha.png  used on input l
 ine 338.
 (pdftex.def)             Requested size: 429.17871pt x 512.41896pt.
-<./figs-br//cap02_figTopicoDetalha2.png, id=1559, 554.07pt x 589.20125pt>
+<./figs-br//cap02_figTopicoDetalha2.png, id=1576, 554.07pt x 589.20125pt>
 File: ./figs-br//cap02_figTopicoDetalha2.png Graphic file (type png)
 <use ./figs-br//cap02_figTopicoDetalha2.png>
 Package pdftex.def Info: ./figs-br//cap02_figTopicoDetalha2.png  used on input 
@@ -2246,25 +2269,25 @@ Package minitoc Info: I0006
 
 
 ]
-<./figs-br//cap03_figInstituto2.png, id=1650, 497.86pt x 480.79625pt>
+<./figs-br//cap03_figInstituto2.png, id=1667, 497.86pt x 480.79625pt>
 File: ./figs-br//cap03_figInstituto2.png Graphic file (type png)
 <use ./figs-br//cap03_figInstituto2.png>
 Package pdftex.def Info: ./figs-br//cap03_figInstituto2.png  used on input line
  23.
 (pdftex.def)             Requested size: 429.17871pt x 414.47444pt.
-<./figs-br//cap03_figCursoListar2.png, id=1651, 493.845pt x 479.7925pt>
+<./figs-br//cap03_figCursoListar2.png, id=1668, 493.845pt x 479.7925pt>
 File: ./figs-br//cap03_figCursoListar2.png Graphic file (type png)
 <use ./figs-br//cap03_figCursoListar2.png>
 Package pdftex.def Info: ./figs-br//cap03_figCursoListar2.png  used on input li
 ne 30.
 (pdftex.def)             Requested size: 429.17871pt x 416.96219pt.
-<./figs-br//cap03_figCursoCria2.png, id=1652, 498.86375pt x 223.83624pt>
+<./figs-br//cap03_figCursoCria2.png, id=1669, 498.86375pt x 223.83624pt>
 File: ./figs-br//cap03_figCursoCria2.png Graphic file (type png)
 <use ./figs-br//cap03_figCursoCria2.png>
 Package pdftex.def Info: ./figs-br//cap03_figCursoCria2.png  used on input line
  37.
 (pdftex.def)             Requested size: 429.17871pt x 192.57396pt.
-<./figs-br//cap03_figCursoListar3.png, id=1653, 497.86pt x 482.80376pt>
+<./figs-br//cap03_figCursoListar3.png, id=1670, 497.86pt x 482.80376pt>
 File: ./figs-br//cap03_figCursoListar3.png Graphic file (type png)
 <use ./figs-br//cap03_figCursoListar3.png>
 Package pdftex.def Info: ./figs-br//cap03_figCursoListar3.png  used on input li
@@ -2292,7 +2315,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [41 <./figs-br//cap03_figInstituto2.png>]
-<./figs-br//cap03_figDisciplina2.png, id=1671, 495.8525pt x 476.78125pt>
+<./figs-br//cap03_figDisciplina2.png, id=1687, 495.8525pt x 476.78125pt>
 File: ./figs-br//cap03_figDisciplina2.png Graphic file (type png)
 <use ./figs-br//cap03_figDisciplina2.png>
 Package pdftex.def Info: ./figs-br//cap03_figDisciplina2.png  used on input lin
@@ -2308,7 +2331,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [42 <./figs-br//cap03_figCursoListar2.png>]
-<./figs-br//cap03_figAdminBD.png, id=1678, 496.85625pt x 683.55376pt>
+<./figs-br//cap03_figAdminBD.png, id=1694, 496.85625pt x 683.55376pt>
 File: ./figs-br//cap03_figAdminBD.png Graphic file (type png)
 <use ./figs-br//cap03_figAdminBD.png>
 Package pdftex.def Info: ./figs-br//cap03_figAdminBD.png  used on input line 82
@@ -2360,26 +2383,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [46 <./figs-br//cap03_figAdminBD.png>]
-<./figs-br//cap03_figTopico2.png, id=1703, 494.84875pt x 500.87125pt>
+<./figs-br//cap03_figTopico2.png, id=1720, 494.84875pt x 500.87125pt>
 File: ./figs-br//cap03_figTopico2.png Graphic file (type png)
 <use ./figs-br//cap03_figTopico2.png>
 Package pdftex.def Info: ./figs-br//cap03_figTopico2.png  used on input line 12
 3.
 (pdftex.def)             Requested size: 429.17871pt x 434.4017pt.
-<./figs-br//cap03_figDisciplina3.png, id=1704, 496.85625pt x 602.25pt>
+<./figs-br//cap03_figDisciplina3.png, id=1721, 496.85625pt x 602.25pt>
 File: ./figs-br//cap03_figDisciplina3.png Graphic file (type png)
 <use ./figs-br//cap03_figDisciplina3.png>
 Package pdftex.def Info: ./figs-br//cap03_figDisciplina3.png  used on input lin
 e 130.
 (pdftex.def)             Requested size: 429.17871pt x 520.22229pt.
-<./figs-br//cap03_figDisciplinaAtualiza2a.png, id=1712, 496.85625pt x 404.51125
+<./figs-br//cap03_figDisciplinaAtualiza2a.png, id=1729, 496.85625pt x 404.51125
 pt>
 File: ./figs-br//cap03_figDisciplinaAtualiza2a.png Graphic file (type png)
 <use ./figs-br//cap03_figDisciplinaAtualiza2a.png>
 Package pdftex.def Info: ./figs-br//cap03_figDisciplinaAtualiza2a.png  used on 
 input line 148.
 (pdftex.def)             Requested size: 429.17871pt x 349.41597pt.
-<./figs-br//cap03_figDisciplinaAtualiza22.png, id=1713, 521.95pt x 310.15875pt>
+<./figs-br//cap03_figDisciplinaAtualiza22.png, id=1730, 521.95pt x 310.15875pt>
 
 File: ./figs-br//cap03_figDisciplinaAtualiza22.png Graphic file (type png)
 <use ./figs-br//cap03_figDisciplinaAtualiza22.png>
@@ -2438,7 +2461,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [51 <./figs-br//cap03_figDisciplinaAtualiza22.png>]
-<./figs-br//cap03_figTurmaCSV.png, id=1757, 481.8pt x 119.44624pt>
+<./figs-br//cap03_figTurmaCSV.png, id=1774, 481.8pt x 119.44624pt>
 File: ./figs-br//cap03_figTurmaCSV.png Graphic file (type png)
 <use ./figs-br//cap03_figTurmaCSV.png>
 Package pdftex.def Info: ./figs-br//cap03_figTurmaCSV.png  used on input line 2
@@ -2499,13 +2522,13 @@ Package minitoc Info: I0006
 
 
 ]
-<./figs-br//cap04_figQuestao.png, id=1797, 587.19376pt x 555.07375pt>
+<./figs-br//cap04_figQuestao.png, id=1814, 587.19376pt x 555.07375pt>
 File: ./figs-br//cap04_figQuestao.png Graphic file (type png)
 <use ./figs-br//cap04_figQuestao.png>
 Package pdftex.def Info: ./figs-br//cap04_figQuestao.png  used on input line 16
 .
 (pdftex.def)             Requested size: 429.17871pt x 405.70016pt.
-<./figs-br//cap04_figQuestaoErro.png, id=1799, 516.93124pt x 75.28125pt>
+<./figs-br//cap04_figQuestaoErro.png, id=1816, 516.93124pt x 75.28125pt>
 File: ./figs-br//cap04_figQuestaoErro.png Graphic file (type png)
 <use ./figs-br//cap04_figQuestaoErro.png>
 Package pdftex.def Info: ./figs-br//cap04_figQuestaoErro.png  used on input lin
@@ -2524,7 +2547,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [58 <./figs-br//cap04_figQuestao.png>]
-<./figs-br//cap04_figQuestaoView.png, id=1807, 760.8425pt x 501.875pt>
+<./figs-br//cap04_figQuestaoView.png, id=1824, 760.8425pt x 501.875pt>
 File: ./figs-br//cap04_figQuestaoView.png Graphic file (type png)
 <use ./figs-br//cap04_figQuestaoView.png>
 Package pdftex.def Info: ./figs-br//cap04_figQuestaoView.png  used on input lin
@@ -2541,7 +2564,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [59 <./figs-br//cap04_figQuestaoErro.png> <./figs-br//cap04_figQuestaoView.png>
 ]
-<./figs-br//cap04_figQuestaoMy.png, id=1818, 518.93875pt x 505.89pt>
+<./figs-br//cap04_figQuestaoMy.png, id=1834, 518.93875pt x 505.89pt>
 File: ./figs-br//cap04_figQuestaoMy.png Graphic file (type png)
 <use ./figs-br//cap04_figQuestaoMy.png>
 Package pdftex.def Info: ./figs-br//cap04_figQuestaoMy.png  used on input line 
@@ -2557,13 +2580,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [60]
-<./figs-br//cap04_figQuestaoCria.png, id=1835, 517.935pt x 449.68pt>
+<./figs-br//cap04_figQuestaoCria.png, id=1851, 517.935pt x 449.68pt>
 File: ./figs-br//cap04_figQuestaoCria.png Graphic file (type png)
 <use ./figs-br//cap04_figQuestaoCria.png>
 Package pdftex.def Info: ./figs-br//cap04_figQuestaoCria.png  used on input lin
 e 80.
 (pdftex.def)             Requested size: 429.17871pt x 372.63734pt.
-<./figs-br//cap04_figQuestaoCria2.png, id=1836, 519.9425pt x 443.6575pt>
+<./figs-br//cap04_figQuestaoCria2.png, id=1852, 519.9425pt x 443.6575pt>
 File: ./figs-br//cap04_figQuestaoCria2.png Graphic file (type png)
 <use ./figs-br//cap04_figQuestaoCria2.png>
 Package pdftex.def Info: ./figs-br//cap04_figQuestaoCria2.png  used on input li
@@ -2579,6 +2602,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [61 <./figs-br//cap04_figQuestaoMy.png>]
+
+LaTeX Warning: Reference `cap04_figQuestaoAtualiza2' on page 62 undefined on in
+put line 98.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -2600,25 +2627,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [63 <./figs-br//cap04_figQuestaoCria2.png>]
-<./figs-br//cap04_figQuestaoAtualiza.png, id=1870, 528.97626pt x 756.8275pt>
+<./figs-br//cap04_figQuestaoAtualiza.png, id=1890, 523.9575pt x 461.725pt>
 File: ./figs-br//cap04_figQuestaoAtualiza.png Graphic file (type png)
 <use ./figs-br//cap04_figQuestaoAtualiza.png>
 Package pdftex.def Info: ./figs-br//cap04_figQuestaoAtualiza.png  used on input
- line 123.
-(pdftex.def)             Requested size: 429.17871pt x 614.04317pt.
-<./figs-br//cap04_figQuestaoAtualizaPDF.png, id=1871, 195.73125pt x 171.64125pt
+ line 131.
+(pdftex.def)             Requested size: 429.17871pt x 378.21536pt.
+<./figs-br//cap04_figQuestaoAtualiza2.png, id=1891, 523.9575pt x 423.5825pt>
+File: ./figs-br//cap04_figQuestaoAtualiza2.png Graphic file (type png)
+<use ./figs-br//cap04_figQuestaoAtualiza2.png>
+Package pdftex.def Info: ./figs-br//cap04_figQuestaoAtualiza2.png  used on inpu
+t line 138.
+(pdftex.def)             Requested size: 429.17871pt x 346.97148pt.
+<./figs-br//cap04_figQuestaoAtualizaPDF.png, id=1892, 195.73125pt x 171.64125pt
 >
 File: ./figs-br//cap04_figQuestaoAtualizaPDF.png Graphic file (type png)
 <use ./figs-br//cap04_figQuestaoAtualizaPDF.png>
 Package pdftex.def Info: ./figs-br//cap04_figQuestaoAtualizaPDF.png  used on in
-put line 129.
+put line 144.
 (pdftex.def)             Requested size: 166.90686pt x 146.37239pt.
-<./figs-br//cap04_figQuestaoAtualizaPDF2.png, id=1876, 575.14874pt x 200.75pt>
-File: ./figs-br//cap04_figQuestaoAtualizaPDF2.png Graphic file (type png)
-<use ./figs-br//cap04_figQuestaoAtualizaPDF2.png>
-Package pdftex.def Info: ./figs-br//cap04_figQuestaoAtualizaPDF2.png  used on i
-nput line 138.
-(pdftex.def)             Requested size: 476.86847pt x 166.4509pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2629,8 +2656,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [64]
-
-LaTeX Warning: Text page 65 contains only floats.
+<./figs-br//cap04_figQuestaoAtualizaPDF2.png, id=1903, 575.14874pt x 200.75pt>
+File: ./figs-br//cap04_figQuestaoAtualizaPDF2.png Graphic file (type png)
+<use ./figs-br//cap04_figQuestaoAtualizaPDF2.png>
+Package pdftex.def Info: ./figs-br//cap04_figQuestaoAtualizaPDF2.png  used on i
+nput line 153.
+(pdftex.def)             Requested size: 476.86847pt x 166.4509pt.
+<./figs-br//cap04_figQuestaoAtualizaPDF3.png, id=1908, 773.89125pt x 371.3875pt
+>
+File: ./figs-br//cap04_figQuestaoAtualizaPDF3.png Graphic file (type png)
+<use ./figs-br//cap04_figQuestaoAtualizaPDF3.png>
+Package pdftex.def Info: ./figs-br//cap04_figQuestaoAtualizaPDF3.png  used on i
+nput line 166.
+(pdftex.def)             Requested size: 476.86847pt x 228.8468pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2641,28 +2679,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
 [65 <./figs-br//cap04_figQuestaoAtualiza.png>]
-<./figs-br//cap04_figQuestaoAtualizaPDF3.png, id=1893, 773.89125pt x 371.3875pt
->
-File: ./figs-br//cap04_figQuestaoAtualizaPDF3.png Graphic file (type png)
-<use ./figs-br//cap04_figQuestaoAtualizaPDF3.png>
-Package pdftex.def Info: ./figs-br//cap04_figQuestaoAtualizaPDF3.png  used on i
-nput line 151.
-(pdftex.def)             Requested size: 476.86847pt x 228.8468pt.
-<./figs-br//cap04_figQuestaoAtualizaTesteMesa.png, id=1899, 434.62375pt x 376.4
+<./figs-br//cap04_figQuestaoAtualizaTesteMesa.png, id=1919, 434.62375pt x 376.4
 0625pt>
 File: ./figs-br//cap04_figQuestaoAtualizaTesteMesa.png Graphic file (type png)
 <use ./figs-br//cap04_figQuestaoAtualizaTesteMesa.png>
 Package pdftex.def Info: ./figs-br//cap04_figQuestaoAtualizaTesteMesa.png  used
- on input line 159.
+ on input line 174.
 (pdftex.def)             Requested size: 476.86847pt x 413.01431pt.
-<./figs-br//cap04_figQuestaoAtualizaPDF4.png, id=1900, 570.13pt x 484.81125pt>
-File: ./figs-br//cap04_figQuestaoAtualizaPDF4.png Graphic file (type png)
-<use ./figs-br//cap04_figQuestaoAtualizaPDF4.png>
-Package pdftex.def Info: ./figs-br//cap04_figQuestaoAtualizaPDF4.png  used on i
-nput line 168.
-(pdftex.def)             Requested size: 476.86847pt x 405.50763pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1616) has occurred while \output is active []
 
 
 
@@ -2673,8 +2698,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[66 <./figs-br//cap04_figQuestaoAtualizaPDF.png> <./figs-br//cap04_figQuestaoAt
-ualizaPDF2.png>])
+[66 <./figs-br//cap04_figQuestaoAtualiza2.png> <./figs-br//cap04_figQuestaoAtua
+lizaPDF.png>]
+<./figs-br//cap04_figQuestaoAtualizaPDF4.png, id=1926, 570.13pt x 484.81125pt>
+File: ./figs-br//cap04_figQuestaoAtualizaPDF4.png Graphic file (type png)
+<use ./figs-br//cap04_figQuestaoAtualizaPDF4.png>
+Package pdftex.def Info: ./figs-br//cap04_figQuestaoAtualizaPDF4.png  used on i
+nput line 183.
+(pdftex.def)             Requested size: 476.86847pt x 405.50763pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -2683,7 +2715,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[67 <./figs-br//cap04_figQuestaoAtualizaPDF3.png>]
+[67 <./figs-br//cap04_figQuestaoAtualizaPDF2.png> <./figs-br//cap04_figQuestaoA
+tualizaPDF3.png>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -2790,7 +2823,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (./_minted-livro-impressao11pt/ADDE65BA40632F204DDF0AA56ABE36E63FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap05_questaoQM_AreaCirculoPDF.png, id=2009, 311.1625pt x 262.9825p
+<./figs-br//cap05_questaoQM_AreaCirculoPDF.png, id=2031, 311.1625pt x 262.9825p
 t>
 File: ./figs-br//cap05_questaoQM_AreaCirculoPDF.png Graphic file (type png)
 <use ./figs-br//cap05_questaoQM_AreaCirculoPDF.png>
@@ -2821,7 +2854,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (./_minted-livro-impressao11pt/4AACD0AEC9A1B3310D7D0E750E90640C3FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap05_questaoQT_TesteMesaEx2PDF.png, id=2028, 760.8425pt x 651.4337
+<./figs-br//cap05_questaoQT_TesteMesaEx2PDF.png, id=2049, 760.8425pt x 651.4337
 5pt>
 File: ./figs-br//cap05_questaoQT_TesteMesaEx2PDF.png Graphic file (type png)
 <use ./figs-br//cap05_questaoQT_TesteMesaEx2PDF.png>
@@ -2860,7 +2893,7 @@ EE922617A5C9DF9D.pygtex)
 
 (./_minted-livro-impressao11pt/361B1D9D34B84532DB6F4D6D691713EF3FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap05_questaoQT_TesteMesaEx3PDF.png, id=2046, 766.865pt x 600.2425p
+<./figs-br//cap05_questaoQT_TesteMesaEx3PDF.png, id=2067, 766.865pt x 600.2425p
 t>
 File: ./figs-br//cap05_questaoQT_TesteMesaEx3PDF.png Graphic file (type png)
 <use ./figs-br//cap05_questaoQT_TesteMesaEx3PDF.png>
@@ -2932,7 +2965,7 @@ EE922617A5C9DF9D.pygtex)
 
 (./_minted-livro-impressao11pt/25758FB8008F2834EE87C1586EF0027C3FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap05_questaoQT_TesteMesaEx4PDF.png, id=2079, 767.86874pt x 525.965
+<./figs-br//cap05_questaoQT_TesteMesaEx4PDF.png, id=2100, 767.86874pt x 525.965
 pt>
 File: ./figs-br//cap05_questaoQT_TesteMesaEx4PDF.png Graphic file (type png)
 <use ./figs-br//cap05_questaoQT_TesteMesaEx4PDF.png>
@@ -3047,7 +3080,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (./_minted-livro-impressao11pt/7B06A1AE26112C89AA97EA73C51A227E3FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap05_questaoQT_EP_1.png, id=2146, 767.86874pt x 409.53pt>
+<./figs-br//cap05_questaoQT_EP_1.png, id=2167, 767.86874pt x 409.53pt>
 File: ./figs-br//cap05_questaoQT_EP_1.png Graphic file (type png)
 <use ./figs-br//cap05_questaoQT_EP_1.png>
 Package pdftex.def Info: ./figs-br//cap05_questaoQT_EP_1.png  used on input lin
@@ -3129,12 +3162,12 @@ Package minitoc Info: I0006
 
 
 ]
-<./figs-br//cap06_figExame.png, id=2202, 867.24pt x 500.87125pt>
+<./figs-br//cap06_figExame.png, id=2226, 867.24pt x 500.87125pt>
 File: ./figs-br//cap06_figExame.png Graphic file (type png)
 <use ./figs-br//cap06_figExame.png>
 Package pdftex.def Info: ./figs-br//cap06_figExame.png  used on input line 20.
 (pdftex.def)             Requested size: 429.17871pt x 247.87471pt.
-<./figs-br//cap06_figExameCria.png, id=2208, 562.1pt x 575.14874pt>
+<./figs-br//cap06_figExameCria.png, id=2232, 562.1pt x 575.14874pt>
 File: ./figs-br//cap06_figExameCria.png Graphic file (type png)
 <use ./figs-br//cap06_figExameCria.png>
 Package pdftex.def Info: ./figs-br//cap06_figExameCria.png  used on input line 
@@ -3150,28 +3183,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [100 <./figs-br//cap06_figExame.png>]
-<./figs-br//cap06_figExamePDF_QRpadrao.png, id=2219, 595.22375pt x 411.5375pt>
+<./figs-br//cap06_figExamePDF_QRpadrao.png, id=2242, 595.22375pt x 411.5375pt>
 File: ./figs-br//cap06_figExamePDF_QRpadrao.png Graphic file (type png)
 <use ./figs-br//cap06_figExamePDF_QRpadrao.png>
 Package pdftex.def Info: ./figs-br//cap06_figExamePDF_QRpadrao.png  used on inp
 ut line 47.
 (pdftex.def)             Requested size: 429.17871pt x 296.73378pt.
-<./figs-br//cap06_figExameAtualiza1.png, id=2221, 807.015pt x 663.47874pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.4521pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.4521pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
+
+[101 <./figs-br//cap06_figExameCria.png>]
+<./figs-br//cap06_figExameAtualiza1.png, id=2249, 806.01125pt x 673.51625pt>
 File: ./figs-br//cap06_figExameAtualiza1.png Graphic file (type png)
 <use ./figs-br//cap06_figExameAtualiza1.png>
 Package pdftex.def Info: ./figs-br//cap06_figExameAtualiza1.png  used on input 
 line 58.
-(pdftex.def)             Requested size: 429.17871pt x 352.84679pt.
+(pdftex.def)             Requested size: 429.17871pt x 358.62679pt.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[101 <./figs-br//cap06_figExameCria.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -3181,7 +3218,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [102 <./figs-br//cap06_figExamePDF_QRpadrao.png>]
-Underfull \vbox (badness 2318) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -3193,6 +3230,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [103 <./figs-br//cap06_figExameAtualiza1.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -3202,15 +3242,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [104]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
-[]\OT1/cmr/m/n/9 Altere ma-nu-al-mente os no-mes dos ar-qui-vos de cada quest~a
-o da se-guinte forma:
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3220,13 +3251,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [105]
-<./figs-br//cap06_figExameAtualiza2.png, id=2269, 795.97375pt x 551.05875pt>
-File: ./figs-br//cap06_figExameAtualiza2.png Graphic file (type png)
-<use ./figs-br//cap06_figExameAtualiza2.png>
-Package pdftex.def Info: ./figs-br//cap06_figExameAtualiza2.png  used on input 
-line 143.
-(pdftex.def)             Requested size: 429.17871pt x 297.12163pt.
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+[]\OT1/cmr/m/n/9 Altere ma-nu-al-mente os no-mes dos ar-qui-vos de cada quest~a
+o da se-guinte forma:
+ []
 
+<./figs-br//cap06_figExameAtualizaTurmas.png, id=2292, 796.9775pt x 579.16376pt
+>
+File: ./figs-br//cap06_figExameAtualizaTurmas.png Graphic file (type png)
+<use ./figs-br//cap06_figExameAtualizaTurmas.png>
+Package pdftex.def Info: ./figs-br//cap06_figExameAtualizaTurmas.png  used on i
+nput line 143.
+(pdftex.def)             Requested size: 429.17871pt x 311.88655pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -3236,20 +3272,50 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [106]
-<./figs-br//cap06_figExameAtualiza3.png, id=2281, 814.04124pt x 526.96875pt>
-File: ./figs-br//cap06_figExameAtualiza3.png Graphic file (type png)
-<use ./figs-br//cap06_figExameAtualiza3.png>
-Package pdftex.def Info: ./figs-br//cap06_figExameAtualiza3.png  used on input 
-line 158.
-(pdftex.def)             Requested size: 429.17871pt x 277.82866pt.
-<./figs-br//cap06_figExameAtualiza4.png, id=2284, 828.09375pt x 636.3775pt>
-File: ./figs-br//cap06_figExameAtualiza4.png Graphic file (type png)
-<use ./figs-br//cap06_figExameAtualiza4.png>
-Package pdftex.def Info: ./figs-br//cap06_figExameAtualiza4.png  used on input 
-line 170.
-(pdftex.def)             Requested size: 429.17871pt x 329.82094pt.
+<./figs-br//cap06_figExameAtualizaTopicos.png, id=2303, 805.0075pt x 527.9725pt
+>
+File: ./figs-br//cap06_figExameAtualizaTopicos.png Graphic file (type png)
+<use ./figs-br//cap06_figExameAtualizaTopicos.png>
+Package pdftex.def Info: ./figs-br//cap06_figExameAtualizaTopicos.png  used on 
+input line 154.
+(pdftex.def)             Requested size: 429.17871pt x 281.4756pt.
+<./figs-br//cap06_figExameAtualizaQuestoes.png, id=2306, 805.0075pt x 522.95375
+pt>
+File: ./figs-br//cap06_figExameAtualizaQuestoes.png Graphic file (type png)
+<use ./figs-br//cap06_figExameAtualizaQuestoes.png>
+Package pdftex.def Info: ./figs-br//cap06_figExameAtualizaQuestoes.png  used on
+ input line 169.
+(pdftex.def)             Requested size: 429.17871pt x 278.79999pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.161pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.161pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
+
+[107 <./figs-br//cap06_figExameAtualizaTurmas.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.4521pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.4521pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
+
+[108 <./figs-br//cap06_figExameAtualizaTopicos.png> <./figs-br//cap06_figExameA
+tualizaQuestoes.png>]
+<./figs-br//cap06_figExameAtualizaConfiguracoes.png, id=2320, 815.045pt x 636.3
+775pt>
+File: ./figs-br//cap06_figExameAtualizaConfiguracoes.png Graphic file (type png
+)
+<use ./figs-br//cap06_figExameAtualizaConfiguracoes.png>
+Package pdftex.def Info: ./figs-br//cap06_figExameAtualizaConfiguracoes.png  us
+ed on input line 180.
+(pdftex.def)             Requested size: 429.17871pt x 335.09364pt.
+
+Underfull \vbox (badness 1259) has occurred while \output is active []
 
 
 
@@ -3260,10 +3326,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[107 <./figs-br//cap06_figExameAtualiza2.png>]
-
-LaTeX Warning: Text page 108 contains only floats.
-
+[109 <./figs-br//cap06_figExameAtualizaConfiguracoes.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -3272,20 +3335,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[108 <./figs-br//cap06_figExameAtualiza3.png> <./figs-br//cap06_figExameAtualiz
-a4.png>]
-Underfull \vbox (badness 7133) has occurred while \output is active []
-
-
+[110])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                Make it at least 14.161pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.161pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[109])
+[111]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -3294,7 +3353,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[110]
+[112
+
+
+
+]
 \openout2 = `chapters-br//07_examsQR.aux'.
 
  (./chapters-br//07_examsQR.tex
@@ -3302,22 +3365,24 @@ Cap\'{\i }tulo 7.
 Package minitoc Info: I0006
 (minitoc)             livro-impressao11pt.mtc7 is empty on input line 2.
 (./livro-impressao11pt.ptc)
+
+LaTeX Warning: Reference `fig:cap06_figExameAtualiza4' on page 113 undefined on
+ input line 8.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [111
-
-
-
+ [113
 
 
 ]
-<./figs-br//cap07_figvertical.png, id=2341, 825.0825pt x 693.59125pt>
+<./figs-br//cap07_figvertical.png, id=2374, 825.0825pt x 693.59125pt>
 File: ./figs-br//cap07_figvertical.png Graphic file (type png)
 <use ./figs-br//cap07_figvertical.png>
 Package pdftex.def Info: ./figs-br//cap07_figvertical.png  used on input line 1
 6.
 (pdftex.def)             Requested size: 429.17871pt x 360.78593pt.
-<./figs-br//cap07_figinstrucoes.png, id=2343, 825.0825pt x 247.92625pt>
+<./figs-br//cap07_figinstrucoes.png, id=2376, 825.0825pt x 247.92625pt>
 File: ./figs-br//cap07_figinstrucoes.png Graphic file (type png)
 <use ./figs-br//cap07_figinstrucoes.png>
 Package pdftex.def Info: ./figs-br//cap07_figinstrucoes.png  used on input line
@@ -3332,7 +3397,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[112]
+[114]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3341,20 +3406,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[113 <./figs-br//cap07_figvertical.png> <./figs-br//cap07_figinstrucoes.png>]
-<./figs-br//cap07_fighorizontal.png, id=2362, 803.0pt x 484.81125pt>
+[115 <./figs-br//cap07_figvertical.png> <./figs-br//cap07_figinstrucoes.png>]
+<./figs-br//cap07_fighorizontal.png, id=2394, 803.0pt x 484.81125pt>
 File: ./figs-br//cap07_fighorizontal.png Graphic file (type png)
 <use ./figs-br//cap07_fighorizontal.png>
 Package pdftex.def Info: ./figs-br//cap07_fighorizontal.png  used on input line
  38.
 (pdftex.def)             Requested size: 429.17871pt x 259.12363pt.
-<./figs-br//cap07_figmaxHorizontal.png, id=2364, 593.21625pt x 842.14626pt>
+<./figs-br//cap07_figmaxHorizontal.png, id=2396, 593.21625pt x 842.14626pt>
 File: ./figs-br//cap07_figmaxHorizontal.png Graphic file (type png)
 <use ./figs-br//cap07_figmaxHorizontal.png>
 Package pdftex.def Info: ./figs-br//cap07_figmaxHorizontal.png  used on input l
 ine 52.
 (pdftex.def)             Requested size: 233.66817pt x 331.72534pt.
-<./figs-br//cap07_figmaxVertigal.png, id=2365, 587.19376pt x 822.07124pt>
+<./figs-br//cap07_figmaxVertigal.png, id=2397, 587.19376pt x 822.07124pt>
 File: ./figs-br//cap07_figmaxVertigal.png Graphic file (type png)
 <use ./figs-br//cap07_figmaxVertigal.png>
 Package pdftex.def Info: ./figs-br//cap07_figmaxVertigal.png  used on input lin
@@ -3369,7 +3434,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[114 <./figs-br//cap07_fighorizontal.png>]
+[116 <./figs-br//cap07_fighorizontal.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -3378,22 +3443,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[115 <./figs-br//cap07_figmaxHorizontal.png> <./figs-br//cap07_figmaxVertigal.p
+[117 <./figs-br//cap07_figmaxHorizontal.png> <./figs-br//cap07_figmaxVertigal.p
 ng>]
-<./figs-br//cap07_figquestoesPorBloco.png, id=2378, 752.8125pt x 485.815pt>
+<./figs-br//cap07_figquestoesPorBloco.png, id=2411, 752.8125pt x 485.815pt>
 File: ./figs-br//cap07_figquestoesPorBloco.png Graphic file (type png)
 <use ./figs-br//cap07_figquestoesPorBloco.png>
 Package pdftex.def Info: ./figs-br//cap07_figquestoesPorBloco.png  used on inpu
 t line 64.
 (pdftex.def)             Requested size: 429.17871pt x 276.96931pt.
-<./figs-br//cap07_figquestoesPorBlocoScan1.png, id=2382, 780.9175pt x 517.935pt
+<./figs-br//cap07_figquestoesPorBlocoScan1.png, id=2415, 780.9175pt x 517.935pt
 >
 File: ./figs-br//cap07_figquestoesPorBlocoScan1.png Graphic file (type png)
 <use ./figs-br//cap07_figquestoesPorBlocoScan1.png>
 Package pdftex.def Info: ./figs-br//cap07_figquestoesPorBlocoScan1.png  used on
  input line 76.
 (pdftex.def)             Requested size: 233.66817pt x 154.97864pt.
-<./figs-br//cap07_figquestoesPorBlocoScan2.png, id=2383, 816.04875pt x 575.1487
+<./figs-br//cap07_figquestoesPorBlocoScan2.png, id=2416, 816.04875pt x 575.1487
 4pt>
 File: ./figs-br//cap07_figquestoesPorBlocoScan2.png Graphic file (type png)
 <use ./figs-br//cap07_figquestoesPorBlocoScan2.png>
@@ -3412,7 +3477,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[116 <./figs-br//cap07_figquestoesPorBloco.png>]
+[118 <./figs-br//cap07_figquestoesPorBloco.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3424,27 +3489,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[117 <./figs-br//cap07_figquestoesPorBlocoScan1.png> <./figs-br//cap07_figquest
+[119 <./figs-br//cap07_figquestoesPorBlocoScan1.png> <./figs-br//cap07_figquest
 oesPorBlocoScan2.png>]
-<./figs-br//cap07_figquestoes_q002.png, id=2406, 22.0825pt x 155.58125pt>
+<./figs-br//cap07_figquestoes_q002.png, id=2439, 22.0825pt x 155.58125pt>
 File: ./figs-br//cap07_figquestoes_q002.png Graphic file (type png)
 <use ./figs-br//cap07_figquestoes_q002.png>
 Package pdftex.def Info: ./figs-br//cap07_figquestoes_q002.png  used on input l
 ine 131.
 (pdftex.def)             Requested size: 22.89166pt x 161.28314pt.
-<./figs-br//cap07_figquestoes_q003.png, id=2407, 22.0825pt x 155.58125pt>
+<./figs-br//cap07_figquestoes_q003.png, id=2440, 22.0825pt x 155.58125pt>
 File: ./figs-br//cap07_figquestoes_q003.png Graphic file (type png)
 <use ./figs-br//cap07_figquestoes_q003.png>
 Package pdftex.def Info: ./figs-br//cap07_figquestoes_q003.png  used on input l
 ine 132.
 (pdftex.def)             Requested size: 22.89166pt x 161.28314pt.
-<./figs-br//cap07_figquestoes_q004.png, id=2408, 23.08624pt x 155.58125pt>
+<./figs-br//cap07_figquestoes_q004.png, id=2441, 23.08624pt x 155.58125pt>
 File: ./figs-br//cap07_figquestoes_q004.png Graphic file (type png)
 <use ./figs-br//cap07_figquestoes_q004.png>
 Package pdftex.def Info: ./figs-br//cap07_figquestoes_q004.png  used on input l
 ine 133.
 (pdftex.def)             Requested size: 23.84486pt x 160.6944pt.
-<./figs-br//cap07_figquestoes_q005.png, id=2409, 23.08624pt x 155.58125pt>
+<./figs-br//cap07_figquestoes_q005.png, id=2442, 23.08624pt x 155.58125pt>
 File: ./figs-br//cap07_figquestoes_q005.png Graphic file (type png)
 <use ./figs-br//cap07_figquestoes_q005.png>
 Package pdftex.def Info: ./figs-br//cap07_figquestoes_q005.png  used on input l
@@ -3459,7 +3524,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[118]
+[120]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3468,10 +3533,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[119 <./figs-br//cap07_figquestoes_q002.png (PNG copy)> <./figs-br//cap07_figqu
+[121 <./figs-br//cap07_figquestoes_q002.png (PNG copy)> <./figs-br//cap07_figqu
 estoes_q003.png (PNG copy)> <./figs-br//cap07_figquestoes_q004.png (PNG copy)> 
 <./figs-br//cap07_figquestoes_q005.png (PNG copy)>]
-<./figs-br//cap07_figFeedback.png, id=2434, 592.2125pt x 426.59375pt>
+<./figs-br//cap07_figFeedback.png, id=2467, 592.2125pt x 426.59375pt>
 File: ./figs-br//cap07_figFeedback.png Graphic file (type png)
 <use ./figs-br//cap07_figFeedback.png>
 Package pdftex.def Info: ./figs-br//cap07_figFeedback.png  used on input line 2
@@ -3486,7 +3551,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[120])
+[122])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -3495,7 +3560,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[121 <./figs-br//cap07_figFeedback.png>]
+[123 <./figs-br//cap07_figFeedback.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -3504,7 +3569,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[122
+[124
 
 
 
@@ -3518,7 +3583,7 @@ Package minitoc Info: I0006
 (./livro-impressao11pt.ptc)
 Underfull \vbox (badness 1430) has occurred while \output is active []
 
- [123
+ [125
 
 
 ]
@@ -3533,7 +3598,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[124]
+[126]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3542,13 +3607,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[125]
+[127]
 \openout4 = `livro-impressao11pt.pyg'.
 
 
 (./_minted-livro-impressao11pt/93B7C2EE5F3718AE8C42B065E31DA4AA3FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap08_figexameQR_QT.png, id=2490, 809.0225pt x 482.80376pt>
+<./figs-br//cap08_figexameQR_QT.png, id=2522, 809.0225pt x 482.80376pt>
 File: ./figs-br//cap08_figexameQR_QT.png Graphic file (type png)
 <use ./figs-br//cap08_figexameQR_QT.png>
 Package pdftex.def Info: ./figs-br//cap08_figexameQR_QT.png  used on input line
@@ -3563,15 +3628,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[126 <./figs-br//cap08_figexameQR_QT.png>]
-<./figs-br//cap08_figexameCriarVariacoes.png, id=2498, 767.86874pt x 79.29625pt
+[128 <./figs-br//cap08_figexameQR_QT.png>]
+<./figs-br//cap08_figexameCriarVariacoes.png, id=2530, 767.86874pt x 79.29625pt
 >
 File: ./figs-br//cap08_figexameCriarVariacoes.png Graphic file (type png)
 <use ./figs-br//cap08_figexameCriarVariacoes.png>
 Package pdftex.def Info: ./figs-br//cap08_figexameCriarVariacoes.png  used on i
 nput line 135.
 (pdftex.def)             Requested size: 429.17871pt x 44.32088pt.
-<./figs-br//cap08_figexameCriarVariacoesMsg.png, id=2501, 768.8725pt x 279.0425
+<./figs-br//cap08_figexameCriarVariacoesMsg.png, id=2533, 768.8725pt x 279.0425
 pt>
 File: ./figs-br//cap08_figexameCriarVariacoesMsg.png Graphic file (type png)
 <use ./figs-br//cap08_figexameCriarVariacoesMsg.png>
@@ -3590,9 +3655,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[127 <./figs-br//cap08_figexameCriarVariacoes.png> <./figs-br//cap08_figexameCr
+[129 <./figs-br//cap08_figexameCriarVariacoes.png> <./figs-br//cap08_figexameCr
 iarVariacoesMsg.png>]
-<./figs-br//cap08_figexameCriarVariacoesEmail.png, id=2509, 672.5125pt x 339.26
+<./figs-br//cap08_figexameCriarVariacoesEmail.png, id=2542, 672.5125pt x 339.26
 75pt>
 File: ./figs-br//cap08_figexameCriarVariacoesEmail.png Graphic file (type png)
 <use ./figs-br//cap08_figexameCriarVariacoesEmail.png>
@@ -3608,8 +3673,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[128 <./figs-br//cap08_figexameCriarVariacoesEmail.png>]
-<./figs-br//cap08_figexameQR_QM_QT_PDF.png, id=2524, 729.72626pt x 739.76375pt>
+[130 <./figs-br//cap08_figexameCriarVariacoesEmail.png>]
+<./figs-br//cap08_figexameQR_QM_QT_PDF.png, id=2557, 729.72626pt x 739.76375pt>
 
 File: ./figs-br//cap08_figexameQR_QM_QT_PDF.png Graphic file (type png)
 <use ./figs-br//cap08_figexameQR_QM_QT_PDF.png>
@@ -3625,7 +3690,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[129]
+[131]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -3634,8 +3699,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[130 <./figs-br//cap08_figexameQR_QM_QT_PDF.png>]
-<./figs-br//cap08_figexameCriarPDF_Email.png, id=2538, 465.74pt x 359.3425pt>
+[132 <./figs-br//cap08_figexameQR_QM_QT_PDF.png>]
+<./figs-br//cap08_figexameCriarPDF_Email.png, id=2572, 465.74pt x 359.3425pt>
 File: ./figs-br//cap08_figexameCriarPDF_Email.png Graphic file (type png)
 <use ./figs-br//cap08_figexameCriarPDF_Email.png>
 Package pdftex.def Info: ./figs-br//cap08_figexameCriarPDF_Email.png  used on i
@@ -3653,40 +3718,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[131 <./figs-br//cap08_figexameCriarPDF_Email.png>]
-<./figs-br//cap08_figexameQR_QM_QT_PDFScan.png, id=2552, 526.96875pt x 684.5575
+[133 <./figs-br//cap08_figexameCriarPDF_Email.png>]
+<./figs-br//cap08_figexameQR_QM_QT_PDFScan.png, id=2585, 526.96875pt x 684.5575
 pt>
 File: ./figs-br//cap08_figexameQR_QM_QT_PDFScan.png Graphic file (type png)
 <use ./figs-br//cap08_figexameQR_QM_QT_PDFScan.png>
 Package pdftex.def Info: ./figs-br//cap08_figexameQR_QM_QT_PDFScan.png  used on
  input line 273.
 (pdftex.def)             Requested size: 429.17871pt x 557.54906pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.4521pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.4521pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
-
-[132]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[133 <./figs-br//cap08_figexameQR_QM_QT_PDFScan.png>]
-Overfull \hbox (9.186pt too wide) in paragraph at lines 306--306
-[]\OT1/cmtt/m/n/8 1  001    5     6   1   1 E/C D/A C/B B/E A 2/E 245612043 245
-503421 245830214 245741320 246104132 246032140[] 
- []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3708,7 +3747,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[135]
+[135 <./figs-br//cap08_figexameQR_QM_QT_PDFScan.png>]
+Overfull \hbox (9.186pt too wide) in paragraph at lines 307--307
+[]\OT1/cmtt/m/n/8 1  001    5     6   1   1 E/C D/A C/B B/E A 2/E 245612043 245
+503421 245830214 245741320 246104132 246032140[] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -3718,13 +3762,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [136]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.161pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.161pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [137]
 
@@ -3735,7 +3782,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[138])
+[138]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -3753,7 +3800,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[140
+[140])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.161pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.161pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
+
+[141]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.4521pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.4521pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
+
+[142
 
 
 
@@ -3764,7 +3829,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Cap\'{\i }tulo 9.
 Package minitoc Info: I0006
 (minitoc)             livro-impressao11pt.mtc9 is empty on input line 1.
-(./livro-impressao11pt.ptc) [141
+(./livro-impressao11pt.ptc) [143
 
 
 ]
@@ -3773,7 +3838,7 @@ Package minitoc Info: I0006
 
 (./_minted-livro-impressao11pt/D2B179FFA1B208906B53FA1F80E909263FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap09_questaoQM_EquacaoIdadePDF.png, id=2640, 763.85374pt x 273.02p
+<./figs-br//cap09_questaoQM_EquacaoIdadePDF.png, id=2673, 763.85374pt x 273.02p
 t>
 File: ./figs-br//cap09_questaoQM_EquacaoIdadePDF.png Graphic file (type png)
 <use ./figs-br//cap09_questaoQM_EquacaoIdadePDF.png>
@@ -3793,8 +3858,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[142 <./figs-br//cap09_questaoQM_EquacaoIdadePDF.png>]
-<./figs-br//cap09_questaoQM_EquacaoRetaPDF.png, id=2650, 635.37375pt x 258.9675
+[144 <./figs-br//cap09_questaoQM_EquacaoIdadePDF.png>]
+<./figs-br//cap09_questaoQM_EquacaoRetaPDF.png, id=2684, 635.37375pt x 258.9675
 pt>
 File: ./figs-br//cap09_questaoQM_EquacaoRetaPDF.png Graphic file (type png)
 <use ./figs-br//cap09_questaoQM_EquacaoRetaPDF.png>
@@ -3810,7 +3875,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[143]
+[145]
 Underfull \vbox (badness 5331) has occurred while \output is active []
 
 
@@ -3822,7 +3887,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[144 <./figs-br//cap09_questaoQM_EquacaoRetaPDF.png>]
+[146 <./figs-br//cap09_questaoQM_EquacaoRetaPDF.png>]
 \openout4 = `livro-impressao11pt.pyg'.
 
 
@@ -3836,7 +3901,7 @@ EE922617A5C9DF9D.pygtex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figs-br//cap09_questaoQT_Exata_PDF.png, id=2676, 762.85pt x 278.03876pt>
+<./figs-br//cap09_questaoQT_Exata_PDF.png, id=2708, 762.85pt x 278.03876pt>
 File: ./figs-br//cap09_questaoQT_Exata_PDF.png Graphic file (type png)
 <use ./figs-br//cap09_questaoQT_Exata_PDF.png>
 Package pdftex.def Info: ./figs-br//cap09_questaoQT_Exata_PDF.png  used on inpu
@@ -3850,7 +3915,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[145 <./figs-br//cap09_questaoQT_Exata_PDF.png>]
+[147 <./figs-br//cap09_questaoQT_Exata_PDF.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3862,15 +3927,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[146]
-<./figs-br//cap09_exameVariacoes_questoes.png, id=2694, 872.25874pt x 363.3575p
+[148]
+<./figs-br//cap09_exameVariacoes_questoes.png, id=2727, 872.25874pt x 363.3575p
 t>
 File: ./figs-br//cap09_exameVariacoes_questoes.png Graphic file (type png)
 <use ./figs-br//cap09_exameVariacoes_questoes.png>
 Package pdftex.def Info: ./figs-br//cap09_exameVariacoes_questoes.png  used on 
 input line 225.
 (pdftex.def)             Requested size: 429.17871pt x 178.78412pt.
-<./figs-br//cap09_exameVariacoes_detalhes.png, id=2695, 879.285pt x 388.45125pt
+<./figs-br//cap09_exameVariacoes_detalhes.png, id=2728, 879.285pt x 388.45125pt
 >
 File: ./figs-br//cap09_exameVariacoes_detalhes.png Graphic file (type png)
 <use ./figs-br//cap09_exameVariacoes_detalhes.png>
@@ -3890,16 +3955,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[147 <./figs-br//cap09_exameVariacoes_questoes.png> <./figs-br//cap09_exameVari
+[149 <./figs-br//cap09_exameVariacoes_questoes.png> <./figs-br//cap09_exameVari
 acoes_detalhes.png>]
-<./figs-br//cap09_exameVariacoes_variacoes.png, id=2704, 903.375pt x 97.36375pt
+<./figs-br//cap09_exameVariacoes_variacoes.png, id=2737, 903.375pt x 97.36375pt
 >
 File: ./figs-br//cap09_exameVariacoes_variacoes.png Graphic file (type png)
 <use ./figs-br//cap09_exameVariacoes_variacoes.png>
 Package pdftex.def Info: ./figs-br//cap09_exameVariacoes_variacoes.png  used on
  input line 251.
 (pdftex.def)             Requested size: 429.17871pt x 46.25716pt.
-<./figs-br//cap09_exameVariacoes_variacoes_email.png, id=2705, 602.25pt x 343.2
+<./figs-br//cap09_exameVariacoes_variacoes_email.png, id=2738, 602.25pt x 343.2
 825pt>
 File: ./figs-br//cap09_exameVariacoes_variacoes_email.png Graphic file (type pn
 g)
@@ -3919,7 +3984,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[148 <./figs-br//cap09_exameVariacoes_variacoes.png> <./figs-br//cap09_exameVar
+[150 <./figs-br//cap09_exameVariacoes_variacoes.png> <./figs-br//cap09_exameVar
 iacoes_variacoes_email.png>]
 Underfull \vbox (badness 7012) has occurred while \output is active []
 
@@ -3932,7 +3997,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[149]
+[151]
 Overfull \hbox (13.43607pt too wide) in paragraph at lines 342--342
 []    \OT1/cmtt/m/n/8 <!-- category:  #id:2449 #type:multichoice #topic:Topico 
 Exemplo #diff:1 #descr:^^Sarea c^^S^^Prculo - ex.1  -->[] 
@@ -3956,7 +4021,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[150]
+[152]
 Overfull \vbox (8.34814pt too high) has occurred while \output is active []
 
 
@@ -3968,7 +4033,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[151]
+[153]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -3977,7 +4042,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[152]
+[154]
 Overfull \hbox (9.186pt too wide) in paragraph at lines 499--499
 []        \OT1/cmtt/m/n/8 <!-- category:#id:2466#type:shortanswer#topic:Topico 
 Exemplo#diff:1#descr:resposta exata - vetor-->[] 
@@ -4001,7 +4066,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[153]
+[155]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -4013,22 +4078,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[154]
-<./figs-br//cap09_exameVariacoes_QM_moodle.png, id=2745, 377.41pt x 246.9225pt>
+[156]
+<./figs-br//cap09_exameVariacoes_QM_moodle.png, id=2778, 377.41pt x 246.9225pt>
 
 File: ./figs-br//cap09_exameVariacoes_QM_moodle.png Graphic file (type png)
 <use ./figs-br//cap09_exameVariacoes_QM_moodle.png>
 Package pdftex.def Info: ./figs-br//cap09_exameVariacoes_QM_moodle.png  used on
  input line 620.
 (pdftex.def)             Requested size: 333.80647pt x 218.39262pt.
-<./figs-br//cap09_exameVariacoes_exata_moodle.png, id=2746, 491.8375pt x 256.96
+<./figs-br//cap09_exameVariacoes_exata_moodle.png, id=2779, 491.8375pt x 256.96
 pt>
 File: ./figs-br//cap09_exameVariacoes_exata_moodle.png Graphic file (type png)
 <use ./figs-br//cap09_exameVariacoes_exata_moodle.png>
 Package pdftex.def Info: ./figs-br//cap09_exameVariacoes_exata_moodle.png  used
  on input line 627.
 (pdftex.def)             Requested size: 429.17871pt x 224.2317pt.
-<./figs-br//cap09_exameVariacoes_PDF_MCTest.png, id=2752, 743.77875pt x 618.31p
+<./figs-br//cap09_exameVariacoes_PDF_MCTest.png, id=2785, 743.77875pt x 618.31p
 t>
 File: ./figs-br//cap09_exameVariacoes_PDF_MCTest.png Graphic file (type png)
 <use ./figs-br//cap09_exameVariacoes_PDF_MCTest.png>
@@ -4047,9 +4112,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[155 <./figs-br//cap09_exameVariacoes_QM_moodle.png>]
+[157 <./figs-br//cap09_exameVariacoes_QM_moodle.png>]
 
-LaTeX Warning: Text page 156 contains only floats.
+LaTeX Warning: Text page 158 contains only floats.
 
 
 Underfull \vbox (badness 3049) has occurred while \output is active []
@@ -4063,7 +4128,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[156 <./figs-br//cap09_exameVariacoes_exata_moodle.png> <./figs-br//cap09_exame
+[158 <./figs-br//cap09_exameVariacoes_exata_moodle.png> <./figs-br//cap09_exame
 Variacoes_PDF_MCTest.png>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4073,7 +4138,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[157]
+[159]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -4082,7 +4147,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[158
+[160
 
 
 
@@ -4093,7 +4158,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Cap\'{\i }tulo 10.
 Package minitoc Info: I0006
 (minitoc)             livro-impressao11pt.mtc10 is empty on input line 1.
-(./livro-impressao11pt.ptc) [159
+(./livro-impressao11pt.ptc) [161
 
 
 ]
@@ -4115,7 +4180,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[160]
+[162]
 Underfull \vbox (badness 1270) has occurred while \output is active []
 
 
@@ -4127,7 +4192,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[161]
+[163]
 \openout4 = `livro-impressao11pt.pyg'.
 
 
@@ -4144,8 +4209,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[162]
-<./figs-br//cap10_questaoQT_EP_2_matriz.png, id=2823, 764.8575pt x 298.11375pt>
+[164]
+<./figs-br//cap10_questaoQT_EP_2_matriz.png, id=2855, 764.8575pt x 298.11375pt>
 
 File: ./figs-br//cap10_questaoQT_EP_2_matriz.png Graphic file (type png)
 <use ./figs-br//cap10_questaoQT_EP_2_matriz.png>
@@ -4164,21 +4229,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[163 <./figs-br//cap10_questaoQT_EP_2_matriz.png>]
-<./figs-br//cap10_figExameVPL_Atualiza4.png, id=2836, 791.95876pt x 541.02126pt
+[165 <./figs-br//cap10_questaoQT_EP_2_matriz.png>]
+<./figs-br//cap10_figExameVPL_Atualiza4.png, id=2869, 791.95876pt x 541.02126pt
 >
 File: ./figs-br//cap10_figExameVPL_Atualiza4.png Graphic file (type png)
 <use ./figs-br//cap10_figExameVPL_Atualiza4.png>
 Package pdftex.def Info: ./figs-br//cap10_figExameVPL_Atualiza4.png  used on in
 put line 160.
 (pdftex.def)             Requested size: 429.17871pt x 293.19554pt.
-<./figs-br//cap10_figExameVPL_email.png, id=2838, 631.35875pt x 457.71pt>
+<./figs-br//cap10_figExameVPL_email.png, id=2871, 631.35875pt x 457.71pt>
 File: ./figs-br//cap10_figExameVPL_email.png Graphic file (type png)
 <use ./figs-br//cap10_figExameVPL_email.png>
 Package pdftex.def Info: ./figs-br//cap10_figExameVPL_email.png  used on input 
 line 169.
 (pdftex.def)             Requested size: 429.17871pt x 311.14091pt.
-<./figs-br//cap10_figExameVPL_PDF.png, id=2840, 662.475pt x 654.445pt>
+<./figs-br//cap10_figExameVPL_PDF.png, id=2873, 662.475pt x 654.445pt>
 File: ./figs-br//cap10_figExameVPL_PDF.png Graphic file (type png)
 <use ./figs-br//cap10_figExameVPL_PDF.png>
 Package pdftex.def Info: ./figs-br//cap10_figExameVPL_PDF.png  used on input li
@@ -4196,7 +4261,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[164 <./figs-br//cap10_figExameVPL_Atualiza4.png>]
+[166 <./figs-br//cap10_figExameVPL_Atualiza4.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4205,7 +4270,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[165 <./figs-br//cap10_figExameVPL_email.png>]
+[167 <./figs-br//cap10_figExameVPL_email.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -4214,7 +4279,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[166 <./figs-br//cap10_figExameVPL_PDF.png>]
+[168 <./figs-br//cap10_figExameVPL_PDF.png>]
 \openout4 = `livro-impressao11pt.pyg'.
 
 
@@ -4236,7 +4301,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[167]
+[169]
 Underfull \vbox (badness 2012) has occurred while \output is active []
 
 
@@ -4248,7 +4313,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[168]
+[170]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4257,7 +4322,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[169]
+[171]
 Overfull \hbox (13.43607pt too wide) in paragraph at lines 329--329
 []             \OT1/cmtt/m/n/8 "8 2 8 8 7 3\n0 4 9 3 9 8\n5 1 5 1 6 2\n2 1 0 7 
 7 1\n5 8 6 6 3 3\n4 7 9 5 9 9\n3 3 7 2 1 4\n\n"[] 
@@ -4281,7 +4346,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[170]
+[172]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -4290,7 +4355,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[171])
+[173])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -4299,7 +4364,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[172] (./livro-impressao11pt.ptc) [173
+[174] (./livro-impressao11pt.ptc) [175
 
 
 
@@ -4313,7 +4378,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[174
+[176
 
 ]
 \openout2 = `chapters-br//11_experimentsMCTest_1_2_3.aux'.
@@ -4322,11 +4387,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Cap\'{\i }tulo 11.
 Package minitoc Info: I0006
 (minitoc)             livro-impressao11pt.mtc11 is empty on input line 1.
-(./livro-impressao11pt.ptc) [175
+(./livro-impressao11pt.ptc) [177
 
 
 ]
-<./figs-br//cap11_mctest1_folha.png, id=2932, 314.17375pt x 87.32625pt>
+<./figs-br//cap11_mctest1_folha.png, id=2965, 314.17375pt x 87.32625pt>
 File: ./figs-br//cap11_mctest1_folha.png Graphic file (type png)
 <use ./figs-br//cap11_mctest1_folha.png>
 Package pdftex.def Info: ./figs-br//cap11_mctest1_folha.png  used on input line
@@ -4341,7 +4406,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[176 <./figs-br//cap11_mctest1_folha.png>]
+[178 <./figs-br//cap11_mctest1_folha.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -4350,14 +4415,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[177]
-<./figs-br//cap11_mctest2_folha.png, id=2965, 592.2125pt x 409.53pt>
+[179]
+<./figs-br//cap11_mctest2_folha.png, id=2998, 592.2125pt x 409.53pt>
 File: ./figs-br//cap11_mctest2_folha.png Graphic file (type png)
 <use ./figs-br//cap11_mctest2_folha.png>
 Package pdftex.def Info: ./figs-br//cap11_mctest2_folha.png  used on input line
  74.
 (pdftex.def)             Requested size: 381.49622pt x 263.823pt.
-<./figs-br//cap11_mctest2_QR.jpg, id=2967, 769.87625pt x 397.485pt>
+<./figs-br//cap11_mctest2_QR.jpg, id=3000, 769.87625pt x 397.485pt>
 File: ./figs-br//cap11_mctest2_QR.jpg Graphic file (type jpg)
 <use ./figs-br//cap11_mctest2_QR.jpg>
 Package pdftex.def Info: ./figs-br//cap11_mctest2_QR.jpg  used on input line 83
@@ -4372,7 +4437,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[178]
+[180]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -4384,8 +4449,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[179 <./figs-br//cap11_mctest2_folha.png> <./figs-br//cap11_mctest2_QR.jpg>]
-<./figs-br//cap11_mctest2_estatisticas.png, id=2987, 384.43625pt x 691.58376pt>
+[181 <./figs-br//cap11_mctest2_folha.png> <./figs-br//cap11_mctest2_QR.jpg>]
+<./figs-br//cap11_mctest2_estatisticas.png, id=3020, 384.43625pt x 691.58376pt>
 
 File: ./figs-br//cap11_mctest2_estatisticas.png Graphic file (type png)
 <use ./figs-br//cap11_mctest2_estatisticas.png>
@@ -4401,7 +4466,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[180 <./figs-br//cap11_mctest2_estatisticas.png>])
+[182 <./figs-br//cap11_mctest2_estatisticas.png>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -4410,7 +4475,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[181]
+[183]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -4419,7 +4484,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[182
+[184
 
 
 
@@ -4430,11 +4495,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Cap\'{\i }tulo 12.
 Package minitoc Info: I0006
 (minitoc)             livro-impressao11pt.mtc12 is empty on input line 1.
-(./livro-impressao11pt.ptc) [183
+(./livro-impressao11pt.ptc) [185
 
 
 ]
-<./figs-br//cap12_mctest4_pastas.png, id=3032, 1103.12125pt x 730.73pt>
+<./figs-br//cap12_mctest4_pastas.png, id=3065, 1103.12125pt x 730.73pt>
 File: ./figs-br//cap12_mctest4_pastas.png Graphic file (type png)
 <use ./figs-br//cap12_mctest4_pastas.png>
 Package pdftex.def Info: ./figs-br//cap12_mctest4_pastas.png  used on input lin
@@ -4449,7 +4514,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[184]
+[186]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -4458,7 +4523,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[185 <./figs-br//cap12_mctest4_pastas.png>]
+[187 <./figs-br//cap12_mctest4_pastas.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -4467,13 +4532,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[186]
+[188]
 Overfull \hbox (4.26178pt too wide) in paragraph at lines 73--74
 \OT1/cmr/m/n/10.95 fo-ram en-vi-a-das por meio da pla-ta-forma AVA (Am-bi-ente 
 Vir-tual de Apren-di-za-gem) [][]ti-dia4.ufabc.edu.br[][].
  []
 
-<./figs-br//cap12_mctest4_folha.png, id=3076, 863.225pt x 484.81125pt>
+<./figs-br//cap12_mctest4_folha.png, id=3108, 863.225pt x 484.81125pt>
 File: ./figs-br//cap12_mctest4_folha.png Graphic file (type png)
 <use ./figs-br//cap12_mctest4_folha.png>
 Package pdftex.def Info: ./figs-br//cap12_mctest4_folha.png  used on input line
@@ -4487,7 +4552,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[187]
+[189]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -4496,13 +4561,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[188 <./figs-br//cap12_mctest4_folha.png>]
+[190 <./figs-br//cap12_mctest4_folha.png>]
 \openout4 = `livro-impressao11pt.pyg'.
 
 
 (./_minted-livro-impressao11pt/EF48313D0DDE14BA893CE10C2D65F1FA3FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap12_questaoQM_MRUPDF.png, id=3099, 766.865pt x 266.9975pt>
+<./figs-br//cap12_questaoQM_MRUPDF.png, id=3132, 766.865pt x 266.9975pt>
 File: ./figs-br//cap12_questaoQM_MRUPDF.png Graphic file (type png)
 <use ./figs-br//cap12_questaoQM_MRUPDF.png>
 Package pdftex.def Info: ./figs-br//cap12_questaoQM_MRUPDF.png  used on input l
@@ -4517,13 +4582,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[189]
+[191]
 \openout4 = `livro-impressao11pt.pyg'.
 
 
 (./_minted-livro-impressao11pt/9591FC9976A4AE7B53A5C2277266C3C03FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap12_questaoQM_criaMatrizPDF.png, id=3111, 760.8425pt x 270.00874p
+<./figs-br//cap12_questaoQM_criaMatrizPDF.png, id=3145, 760.8425pt x 270.00874p
 t>
 File: ./figs-br//cap12_questaoQM_criaMatrizPDF.png Graphic file (type png)
 <use ./figs-br//cap12_questaoQM_criaMatrizPDF.png>
@@ -4539,7 +4604,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[190 <./figs-br//cap12_questaoQM_MRUPDF.png>]
+[192 <./figs-br//cap12_questaoQM_MRUPDF.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -4548,7 +4613,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[191 <./figs-br//cap12_questaoQM_criaMatrizPDF.png>]
+[193 <./figs-br//cap12_questaoQM_criaMatrizPDF.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -4557,13 +4622,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[192]
+[194]
 \openout4 = `livro-impressao11pt.pyg'.
 
 
 (./_minted-livro-impressao11pt/1DFCFB86520560AFC5831832C8C973773FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap12_questaoQM_equacaoFiguraPDF.png, id=3153, 764.8575pt x 647.418
+<./figs-br//cap12_questaoQM_equacaoFiguraPDF.png, id=3185, 764.8575pt x 647.418
 75pt>
 File: ./figs-br//cap12_questaoQM_equacaoFiguraPDF.png Graphic file (type png)
 <use ./figs-br//cap12_questaoQM_equacaoFiguraPDF.png>
@@ -4582,7 +4647,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[193]
+[195]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -4594,7 +4659,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[194]
+[196]
 \openout4 = `livro-impressao11pt.pyg'.
 
 
@@ -4608,8 +4673,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[195 <./figs-br//cap12_questaoQM_equacaoFiguraPDF.png>]
-<./figs-br//cap12_questaoQM_grafoPDF.png, id=3179, 780.9175pt x 673.51625pt>
+[197 <./figs-br//cap12_questaoQM_equacaoFiguraPDF.png>]
+<./figs-br//cap12_questaoQM_grafoPDF.png, id=3212, 780.9175pt x 673.51625pt>
 File: ./figs-br//cap12_questaoQM_grafoPDF.png Graphic file (type png)
 <use ./figs-br//cap12_questaoQM_grafoPDF.png>
 Package pdftex.def Info: ./figs-br//cap12_questaoQM_grafoPDF.png  used on input
@@ -4634,7 +4699,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[196]
+[198]
 \openout4 = `livro-impressao11pt.pyg'.
 
 
@@ -4651,7 +4716,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[197 <./figs-br//cap12_questaoQM_grafoPDF.png>]
+[199 <./figs-br//cap12_questaoQM_grafoPDF.png>]
 \openout4 = `livro-impressao11pt.pyg'.
 
 
@@ -4665,7 +4730,7 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
 
 (./_minted-livro-impressao11pt/4059F9B83804FD496BF20AFB66D9467B3FDFBE80DACC6742
 EE922617A5C9DF9D.pygtex)
-<./figs-br//cap12_questaoMatrizRosaPDF.png, id=3198, 769.87625pt x 623.32875pt>
+<./figs-br//cap12_questaoMatrizRosaPDF.png, id=3230, 769.87625pt x 623.32875pt>
 
 File: ./figs-br//cap12_questaoMatrizRosaPDF.png Graphic file (type png)
 <use ./figs-br//cap12_questaoMatrizRosaPDF.png>
@@ -4684,7 +4749,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[198]
+[200]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -4696,7 +4761,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[199]
+[201]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -4708,7 +4773,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[200]
+[202]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -4717,8 +4782,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[201 <./figs-br//cap12_questaoMatrizRosaPDF.png>]
-<./figs-br//cap12_examesSheets_planilha.png, id=3229, 1014.79124pt x 251.94125p
+[203 <./figs-br//cap12_questaoMatrizRosaPDF.png>]
+<./figs-br//cap12_examesSheets_planilha.png, id=3263, 1014.79124pt x 251.94125p
 t>
 File: ./figs-br//cap12_examesSheets_planilha.png Graphic file (type png)
 <use ./figs-br//cap12_examesSheets_planilha.png>
@@ -4737,8 +4802,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[202 <./figs-br//cap12_examesSheets_planilha.png>]
-<./figs-br//cap12_examesPDF_MCTestS.png, id=3248, 688.5725pt x 660.4675pt>
+[204 <./figs-br//cap12_examesSheets_planilha.png>]
+<./figs-br//cap12_examesPDF_MCTestS.png, id=3282, 688.5725pt x 660.4675pt>
 File: ./figs-br//cap12_examesPDF_MCTestS.png Graphic file (type png)
 <use ./figs-br//cap12_examesPDF_MCTestS.png>
 Package pdftex.def Info: ./figs-br//cap12_examesPDF_MCTestS.png  used on input 
@@ -4753,7 +4818,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[203]
+[205]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -4765,14 +4830,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[204 <./figs-br//cap12_examesPDF_MCTestS.png>]
-<./figs-br//cap12_examesMCTest_pesos_BD.png, id=3271, 851.18pt x 398.48875pt>
+[206 <./figs-br//cap12_examesPDF_MCTestS.png>]
+<./figs-br//cap12_examesMCTest_pesos_BD.png, id=3303, 851.18pt x 398.48875pt>
 File: ./figs-br//cap12_examesMCTest_pesos_BD.png Graphic file (type png)
 <use ./figs-br//cap12_examesMCTest_pesos_BD.png>
 Package pdftex.def Info: ./figs-br//cap12_examesMCTest_pesos_BD.png  used on in
 put line 688.
 (pdftex.def)             Requested size: 476.86847pt x 223.25554pt.
-<./figs-br//cap12_examesMCTest_pesos_Final.png, id=3276, 971.63pt x 322.20375pt
+<./figs-br//cap12_examesMCTest_pesos_Final.png, id=3308, 971.63pt x 322.20375pt
 >
 File: ./figs-br//cap12_examesMCTest_pesos_Final.png Graphic file (type png)
 <use ./figs-br//cap12_examesMCTest_pesos_Final.png>
@@ -4788,7 +4853,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[205 <./figs-br//cap12_examesMCTest_pesos_BD.png>]
+[207 <./figs-br//cap12_examesMCTest_pesos_BD.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -4797,25 +4862,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[206 <./figs-br//cap12_examesMCTest_pesos_Final.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.161pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.161pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
-
-[207]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.4521pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.4521pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
-
-[208])
+[208 <./figs-br//cap12_examesMCTest_pesos_Final.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -4833,7 +4880,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[210
+[210])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.161pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.161pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
+
+[211]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.4521pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.4521pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
+
+[212
 
 
 
@@ -4844,33 +4909,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Cap\'{\i }tulo 13.
 Package minitoc Info: I0006
 (minitoc)             livro-impressao11pt.mtc13 is empty on input line 1.
-(./livro-impressao11pt.ptc) [211
+(./livro-impressao11pt.ptc) [213
 
 
 ]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.4521pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.4521pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
-
-[212]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[213]
-Overfull \hbox (1.47343pt too wide) in paragraph at lines 61--62
-[]\OT1/cmr/m/n/10.95 Os C^^Sodigos [][]5.12[][] e [][]5.13[][] in-tro-du-zi-ram
- as QTs pa-ram^^Setricas com a in-te-gra^^Xc~ao MC-Test+Moodle+
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.4521pt, for example:
@@ -4889,6 +4931,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [215]
+Overfull \hbox (1.47343pt too wide) in paragraph at lines 61--62
+[]\OT1/cmr/m/n/10.95 Os C^^Sodigos [][]5.12[][] e [][]5.13[][] in-tro-du-zi-ram
+ as QTs pa-ram^^Setricas com a in-te-gra^^Xc~ao MC-Test+Moodle+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.4521pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.4521pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
+
+[216]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[217]
 Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
@@ -4898,12 +4963,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-<./figs-br//cap13_fig01.png, id=3407, 368.37625pt x 315.1775pt>
+<./figs-br//cap13_fig01.png, id=3439, 368.37625pt x 315.1775pt>
 File: ./figs-br//cap13_fig01.png Graphic file (type png)
 <use ./figs-br//cap13_fig01.png>
 Package pdftex.def Info: ./figs-br//cap13_fig01.png  used on input line 107.
 (pdftex.def)             Requested size: 176.439pt x 150.95645pt.
-<./figs-br//cap13_fig03.png, id=3408, 524.96124pt x 312.16624pt>
+<./figs-br//cap13_fig03.png, id=3440, 524.96124pt x 312.16624pt>
 File: ./figs-br//cap13_fig03.png Graphic file (type png)
 <use ./figs-br//cap13_fig03.png>
 Package pdftex.def Info: ./figs-br//cap13_fig03.png  used on input line 108.
@@ -4916,7 +4981,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[216 <./figs-br//cap13_fig01.png> <./figs-br//cap13_fig03.png>]
+[218 <./figs-br//cap13_fig01.png> <./figs-br//cap13_fig03.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4924,24 +4989,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[217]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.4521pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.4521pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
-
-[218])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.161pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.161pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
 [219]
 
@@ -4952,7 +4999,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[220
+[220])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.161pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.161pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
+
+[221]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.4521pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.4521pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
+
+[222
 
 
 
@@ -4963,7 +5028,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Cap\'{\i }tulo 14.
 Package minitoc Info: I0006
 (minitoc)             livro-impressao11pt.mtc14 is empty on input line 1.
-(./livro-impressao11pt.ptc) [221
+(./livro-impressao11pt.ptc) [223
 
 
 ]
@@ -4975,7 +5040,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[222]
+[224]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.161pt, for example:
@@ -4984,7 +5049,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.161pt}.
 
-[223]
+[225]
 Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
@@ -4998,7 +5063,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
-[224] (./livro-impressao11pt.bbl [225
+[226] (./livro-impressao11pt.bbl [227
 
 
 
@@ -5012,7 +5077,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[226]))
+[228]))
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -5021,7 +5086,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[227]
+[229]
 Underfull \hbox (badness 10000) in paragraph at lines 24--28
 
  []
@@ -5062,7 +5127,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[228] (./livro-impressao11pt.aux (./chapters-br//catalografica.aux)
+[230] (./livro-impressao11pt.aux (./chapters-br//catalografica.aux)
 (./chapters-br//dedicatoria.aux) (./chapters-br//epigrafe.aux)
 (./chapters-br//prefacio.aux) (./chapters-br//siglas.aux)
 (./chapters-br//01-introduction.aux) (./chapters-br//02-vision.aux)
@@ -5077,16 +5142,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `livro-impressao11pt.out' has not changed.
-(rerunfilecheck)             Checksum: 7C71571604A33ACAC88BD0F3F10C52D8;29132.
+(rerunfilecheck)             Checksum: DECC8A787BD25EE01B0F8CC6FC4EAA1D;29395.
 runsystem(rm livro-impressao11pt.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 36734 strings out of 478287
- 724985 string characters out of 5849289
- 1183176 words of memory out of 5000000
- 52989 multiletter control sequences out of 15000+600000
+ 36763 strings out of 478287
+ 726155 string characters out of 5849289
+ 1183628 words of memory out of 5000000
+ 53011 multiletter control sequences out of 15000+600000
  487858 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,95p,1733b,916s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -5110,10 +5178,10 @@ public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on livro-impressao11pt.pdf (254 pages, 15568436 bytes).
+Output written on livro-impressao11pt.pdf (258 pages, 15638672 bytes).
 PDF statistics:
- 3801 PDF objects out of 4296 (max. 8388607)
- 3201 compressed objects within 33 object streams
- 717 named destinations out of 1000 (max. 500000)
- 1660 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3835 PDF objects out of 4296 (max. 8388607)
+ 3227 compressed objects within 33 object streams
+ 722 named destinations out of 1000 (max. 500000)
+ 1678 words of extra memory for PDF output out of 10000 (max. 10000000)
 

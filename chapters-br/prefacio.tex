@@ -57,20 +57,25 @@ Finalmente, é de suma importância enfatizar que as opiniões e declarações a
 
 \newpage
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section*{Prefácio da segunda edição -- em construção}
 
-As melhorias e correções realizadas no texto da primeira edição serão incluídas nesta segunda edição. Agradeço aos colegas que apontaram algumas informações que geralmente não foram destacadas no texto inicial sendo inseridas neste novo texto, como segue:
+As melhorias e correções realizadas no texto da primeira edição (MCTest 5.2) serão incorporadas nesta segunda edição (MCTest 5.3). No arquivo \href{https://github.com/fzampirolli/mctest/blob/master/_setup-all.sh}{\_setup-all.sh}, estão detalhadas as instruções para a instalação destas versões. Agradeço aos colegas que destacaram informações que não foram ressaltadas no texto inicial, sendo inseridas nesta nova versão, conforme segue:
 
 \begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
 Este é um exemplo de destaque para chamar a atenção do leitor em algum ponto.
 \end{mybox}
 
-Além disso, foi inserida a Seção \ref{sec:recomendacoesCap8} -- \nameref{sec:recomendacoesCap8}, para destacar algumas recomendações essenciais para garantir a realização de um exame impresso com questões de múltipla escolha. Por exemplo, o método de correção automática \textbf{NÃO} funcionará se os quatro discos pretos não estiverem na página digitalizada. Além disso, ao utilizar questões disponíveis no banco de dados do MCTest, é necessário clicar no botão ``Criar-Variações'' antes de clicar no botão ``Criar-PDF''. Adicionalmente, o número ID exibido ao lado do botão ``Criar-Variações'' \textbf{DEVE} ser o mesmo número exibido em vermelho na folha do exame impresso, abaixo do cabeçalho. Caso esses números sejam diferentes das páginas digitalizadas, a correção automática \textbf{NÃO} funcionará. O código foi adaptado para incluir a variação do exame também no QRCode. No entanto, para aceitar as variações anteriores, seria necessário armazenar todas as variações geradas no banco de dados, o que consumiria muito espaço em disco, sendo inviável no momento.
-
-Foi criada a subseção \ref{sec:testeAdaptativo} -- \nameref{sec:testeAdaptativo} para explicar o funcionamento de uma nova funcionalidade que permite a criação de exames adaptativos, considerando o desempenho do estudante em exames anteriores. Para que essa funcionalidade opere corretamente, é necessário que as questões de múltipla escolha estejam classificadas conforme a taxonomia de Bloom e que sejam geradas várias variações do exame. Dessa forma, os estudantes que não obtiveram um bom desempenho em exames anteriores receberão exames personalizados, com níveis de questões classificados nos primeiros níveis dessa taxonomia.
+Além disso, foi inserida a Seção \ref{sec:recomendacoesCap8} -- \nameref{sec:recomendacoesCap8}, para destacar algumas recomendações essenciais para garantir a realização de um exame impresso com questões de múltipla escolha. Por exemplo, o método de correção automática \textbf{NÃO} funcionará se os quatro discos pretos não estiverem intactos na página digitalizada. Além disso, ao utilizar questões disponíveis no banco de dados do MCTest, é necessário clicar no botão ``Criar-Variações'' antes de clicar no botão ``Criar-PDF''. Adicionalmente, o número ID exibido ao lado do botão ``Criar-Variações'' \textbf{DEVE} ser o mesmo número exibido em vermelho na folha do exame impresso, abaixo do cabeçalho. Caso esses números difiram das páginas digitalizadas, a correção automática \textbf{NÃO} funcionará. O código foi adaptado para incluir a variação do exame também no QRCode. No entanto, para aceitar as variações anteriores, seria necessário armazenar todas as variações geradas no banco de dados, o que consumiria muito espaço em disco, sendo inviável no momento.
 
 É altamente aconselhável seguir a prática de, antes de administrar um exame para uma ou diversas turmas com inúmeros estudantes, imprimir uma cópia, preenchê-la e submetê-la a uma correção automatizada. Caso essa abordagem demonstre eficácia durante essa simulação preliminar, é razoável esperar que funcione de maneira adequada durante a situação real de aplicação, correção e fornecimento de \textit{feedback} do exame.
 
+Foi criada a Seção \ref{sec:testeAdaptativo} -- \nameref{sec:testeAdaptativo} para explicar o funcionamento de uma nova funcionalidade opcional que permite a criação de exames adaptativos, considerando o desempenho do estudante em exames anteriores. Para que essa funcionalidade opere corretamente, é necessário que as questões de múltipla escolha estejam classificadas conforme a taxonomia de Bloom e que sejam geradas várias variações do exame. Dessa forma, os estudantes que não obtiveram um bom desempenho em exames anteriores receberão exames personalizados, com níveis de questões classificados nos primeiros níveis dessa taxonomia.
+
+No formulário de atualização de questões, foram adicionados cinco novos campos: contador de correções, contador de acertos e, para a Teoria de Resposta ao Item, os parâmetros a-discriminação, b-habilidade e c-chute. Esses parâmetros são fundamentais para a criação de exames adaptativos.
+
+No formulário de atualizar exame, foi adicionado um novo campo para a seleção dos tópicos da disciplina que serão considerados na avaliação. Após escolher o tópico desejado e clicar no botão ``Salvar'', apenas as questões relacionadas a esse tópico serão apresentadas. Este novo recurso é crucial para otimizar o tempo de carregamento do formulário, especialmente em situações em que a disciplina possui inúmeras questões, resultando em uma melhoria significativa na eficiência do processo.
 
 % \begin{verse}
 %     \vspace*{2mm}

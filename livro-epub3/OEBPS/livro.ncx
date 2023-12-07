@@ -30,7 +30,7 @@ Epígrafe</text>
  
 <navPoint id='navPoint-4' playOrder='4'> 
 <navLabel> 
-<text>  Prefáceis</text> 
+<text>   Prefáceis</text> 
 </navLabel> 
 <content src='livroli4.xhtml#x5-4000'></content> 
 <navPoint id='navPoint-5' playOrder='5'> 
@@ -92,8 +92,8 @@ de Figuras</text>
  
 <navPoint id='navPoint-14' playOrder='14'> 
 <navLabel> 
-<text> Lista
-de Códigos</text> 
+<text> Lista de
+Códigos</text> 
 </navLabel> 
 <content src='livroli10.xhtml#x11-12000'></content></navPoint> 
  
@@ -105,14 +105,14 @@ de Códigos</text>
  
 <navPoint id='navPoint-16' playOrder='16'> 
 <navLabel> 
-<text>   Lista de Abreviaturas e Siglas</text> 
+<text>  Lista de Abreviaturas e Siglas</text> 
 </navLabel> 
 <content src='livroli12.xhtml#x13-14000'></content></navPoint> 
  
 <navPoint id='navPoint-17' playOrder='17'> 
 <navLabel> 
-<text> Lista de
-Abreviaturas e Siglas</text> 
+<text> Lista de Abreviaturas e
+Siglas</text> 
 </navLabel> 
 <content src='livroli12.xhtml#Q1-13-17'></content></navPoint> 
  
@@ -128,14 +128,14 @@ Abreviaturas e Siglas</text>
 <content src='livroch1.xhtml#x14-160001'></content> 
 <navPoint id='navPoint-20' playOrder='20'> 
 <navLabel> 
-<text>1.1.1
-Objetivo</text> 
+<text>1.1.1 Objetivo</text> 
 </navLabel> 
 <content src='livroch1.xhtml#x14-170001'></content></navPoint> 
  
 <navPoint id='navPoint-21' playOrder='21'> 
 <navLabel> 
-<text>1.1.2 Método</text> 
+<text>1.1.2
+Método</text> 
 </navLabel> 
 <content src='livroch1.xhtml#x14-180002'></content></navPoint> 
  
@@ -148,13 +148,13 @@ Objetivo</text>
  
 <navPoint id='navPoint-23' playOrder='23'> 
 <navLabel> 
-<text>1.2 Breve histórico do
-MCTest</text> 
+<text>1.2 Breve histórico do MCTest</text> 
 </navLabel> 
 <content src='livroch1.xhtml#x14-200002'></content> 
 <navPoint id='navPoint-24' playOrder='24'> 
 <navLabel> 
-<text>1.2.1 MCTest no TSI</text> 
+<text>1.2.1
+MCTest no TSI</text> 
 </navLabel> 
 <content src='livroch1.xhtml#x14-210001'></content></navPoint> 
  
@@ -166,15 +166,15 @@ MCTest</text>
  
 <navPoint id='navPoint-26' playOrder='26'> 
 <navLabel> 
-<text>1.2.3
-MCTest nos processos seletivos e exames de disciplinas do TSI</text> 
+<text>1.2.3 MCTest nos
+processos seletivos e exames de disciplinas do TSI</text> 
 </navLabel> 
 <content src='livroch1.xhtml#x14-230003'></content></navPoint> 
  
 <navPoint id='navPoint-27' playOrder='27'> 
 <navLabel> 
-<text>1.2.4
-MCTest na Escola Preparatória</text> 
+<text>1.2.4 MCTest na Escola
+Preparatória</text> 
 </navLabel> 
 <content src='livroch1.xhtml#x14-240004'></content> 
 <navPoint id='navPoint-28' playOrder='28'> 
@@ -185,8 +185,8 @@ MCTest na Escola Preparatória</text>
  
 <navPoint id='navPoint-29' playOrder='29'> 
 <navLabel> 
-<text> Comparações
-de três métodos de seleção</text> 
+<text> Comparações de três métodos de
+seleção</text> 
 </navLabel> 
 <content src='livroch1.xhtml#x14-260004'></content></navPoint> 
 </navPoint> 
@@ -199,22 +199,22 @@ de três métodos de seleção</text>
 <content src='livroch1.xhtml#x14-270003'></content> 
 <navPoint id='navPoint-31' playOrder='31'> 
 <navLabel> 
-<text>1.3.1 Direitos
-autorais do software</text> 
+<text>1.3.1 Direitos autorais do software</text> 
 </navLabel> 
 <content src='livroch1.xhtml#x14-280001'></content></navPoint> 
  
 <navPoint id='navPoint-32' playOrder='32'> 
 <navLabel> 
-<text>1.3.2 Direitos autorais das questões disponíveis
-no BD</text> 
+<text>1.3.2
+Direitos autorais das questões disponíveis no BD</text> 
 </navLabel> 
 <content src='livroch1.xhtml#x14-290002'></content></navPoint> 
 </navPoint> 
  
 <navPoint id='navPoint-33' playOrder='33'> 
 <navLabel> 
-<text>1.4 Instalando o MCTest</text> 
+<text>1.4 Instalando o
+MCTest</text> 
 </navLabel> 
 <content src='livroch1.xhtml#x14-300004'></content></navPoint> 
  
@@ -227,31 +227,30 @@ no BD</text>
  
 <navPoint id='navPoint-35' playOrder='35'> 
 <navLabel> 
-<text>I
-Fundamentos do MCTest</text> 
+<text>I  Fundamentos do MCTest</text> 
 </navLabel> 
 <content src='livropa1.xhtml#x15-320001'></content> 
 <navPoint id='navPoint-36' playOrder='36'> 
 <navLabel> 
-<text>2   Visão geral do MCTest</text> 
+<text>2
+Visão geral do MCTest</text> 
 </navLabel> 
 <content src='livroch2.xhtml#x16-330002'></content> 
 <navPoint id='navPoint-37' playOrder='37'> 
 <navLabel> 
-<text>2.1
-Navegação geral e usuários</text> 
+<text>2.1 Navegação geral e usuários</text> 
 </navLabel> 
 <content src='livroch2.xhtml#x16-340001'></content></navPoint> 
  
 <navPoint id='navPoint-38' playOrder='38'> 
 <navLabel> 
-<text>2.2 Criar entidades</text> 
+<text>2.2 Criar
+entidades</text> 
 </navLabel> 
 <content src='livroch2.xhtml#x16-350002'></content> 
 <navPoint id='navPoint-39' playOrder='39'> 
 <navLabel> 
-<text>2.2.1
-Instituto</text> 
+<text>2.2.1 Instituto</text> 
 </navLabel> 
 <content src='livroch2.xhtml#x16-360001'></content></navPoint> 
  
@@ -269,14 +268,14 @@ Instituto</text>
  
 <navPoint id='navPoint-42' playOrder='42'> 
 <navLabel> 
-<text>2.2.4 Turma</text> 
+<text>2.2.4
+Turma</text> 
 </navLabel> 
 <content src='livroch2.xhtml#x16-390004'></content></navPoint> 
  
 <navPoint id='navPoint-43' playOrder='43'> 
 <navLabel> 
-<text>2.2.5
-Tópico</text> 
+<text>2.2.5 Tópico</text> 
 </navLabel> 
 <content src='livroch2.xhtml#x16-400005'></content></navPoint> 
 </navPoint> 
@@ -290,32 +289,32 @@ Tópico</text>
  
 <navPoint id='navPoint-45' playOrder='45'> 
 <navLabel> 
-<text>3  Recursos avançados</text> 
+<text>3   Recursos
+avançados</text> 
 </navLabel> 
 <content src='livroch3.xhtml#x17-420003'></content> 
 <navPoint id='navPoint-46' playOrder='46'> 
 <navLabel> 
-<text>3.1
-Administrador</text> 
+<text>3.1 Administrador</text> 
 </navLabel> 
 <content src='livroch3.xhtml#x17-430001'></content> 
 <navPoint id='navPoint-47' playOrder='47'> 
 <navLabel> 
-<text>3.1.1 Criar um curso relacionado a dois institutos</text> 
+<text>3.1.1 Criar um curso relacionado a dois
+institutos</text> 
 </navLabel> 
 <content src='livroch3.xhtml#x17-440001'></content></navPoint> 
  
 <navPoint id='navPoint-48' playOrder='48'> 
 <navLabel> 
-<text>3.1.2
-Criar uma disciplina relacionada a dois cursos</text> 
+<text>3.1.2 Criar uma disciplina relacionada a dois cursos</text> 
 </navLabel> 
 <content src='livroch3.xhtml#x17-450002'></content></navPoint> 
  
 <navPoint id='navPoint-49' playOrder='49'> 
 <navLabel> 
-<text>3.1.3 Acesso ao banco de
-dados</text> 
+<text>3.1.3
+Acesso ao banco de dados</text> 
 </navLabel> 
 <content src='livroch3.xhtml#x17-460003'></content></navPoint> 
 </navPoint> 
@@ -327,22 +326,22 @@ dados</text>
 <content src='livroch3.xhtml#x17-470002'></content> 
 <navPoint id='navPoint-51' playOrder='51'> 
 <navLabel> 
-<text>3.2.1 Criar um tópico relacionado a duas
-ou mais disciplinas</text> 
+<text>3.2.1 Criar um tópico
+relacionado a duas ou mais disciplinas</text> 
 </navLabel> 
 <content src='livroch3.xhtml#x17-480001'></content></navPoint> 
  
 <navPoint id='navPoint-52' playOrder='52'> 
 <navLabel> 
-<text>3.2.2 Criar várias turmas com arquivo CSV</text> 
+<text>3.2.2 Criar várias turmas com arquivo
+CSV</text> 
 </navLabel> 
 <content src='livroch3.xhtml#x17-490002'></content></navPoint> 
 </navPoint> 
  
 <navPoint id='navPoint-53' playOrder='53'> 
 <navLabel> 
-<text>3.3
-Professor</text> 
+<text>3.3 Professor</text> 
 </navLabel> 
 <content src='livroch3.xhtml#x17-500003'></content> 
 <navPoint id='navPoint-54' playOrder='54'> 
@@ -353,8 +352,8 @@ Professor</text>
  
 <navPoint id='navPoint-55' playOrder='55'> 
 <navLabel> 
-<text>3.3.2 Criar turma
-com arquivo CSV – restrições</text> 
+<text>3.3.2 Criar
+turma com arquivo CSV – restrições</text> 
 </navLabel> 
 <content src='livroch3.xhtml#x17-520002'></content></navPoint> 
 </navPoint> 
@@ -375,40 +374,40 @@ Questões no MCTest</text>
 <content src='livropa2.xhtml#x18-540002'></content> 
 <navPoint id='navPoint-58' playOrder='58'> 
 <navLabel> 
-<text>4   Questões estáticas</text> 
+<text>4  Questões estáticas</text> 
 </navLabel> 
 <content src='livroch4.xhtml#x19-550004'></content> 
 <navPoint id='navPoint-59' playOrder='59'> 
 <navLabel> 
-<text>4.1 Tutoriais
-gerais sobre a navegação de questões</text> 
+<text>4.1 Tutoriais gerais sobre
+a navegação de questões</text> 
 </navLabel> 
 <content src='livroch4.xhtml#x19-560001'></content></navPoint> 
  
 <navPoint id='navPoint-60' playOrder='60'> 
 <navLabel> 
-<text>4.2 Questão de múltipla
-escolha (QM)</text> 
+<text>4.2 Questão de múltipla escolha (QM)</text> 
 </navLabel> 
 <content src='livroch4.xhtml#x19-570002'></content></navPoint> 
  
 <navPoint id='navPoint-61' playOrder='61'> 
 <navLabel> 
-<text>4.3 Questão dissertativa (QT)</text> 
+<text>4.3
+Questão dissertativa (QT)</text> 
 </navLabel> 
 <content src='livroch4.xhtml#x19-580003'></content></navPoint> 
  
 <navPoint id='navPoint-62' playOrder='62'> 
 <navLabel> 
-<text>4.4 Considerações
-finais</text> 
+<text>4.4 Considerações finais</text> 
 </navLabel> 
 <content src='livroch4.xhtml#x19-590004'></content></navPoint> 
 </navPoint> 
  
 <navPoint id='navPoint-63' playOrder='63'> 
 <navLabel> 
-<text>5  Questões paramétricas</text> 
+<text>5  Questões
+paramétricas</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-600005'></content> 
 <navPoint id='navPoint-64' playOrder='64'> 
@@ -418,14 +417,14 @@ finais</text>
 <content src='livroch5.xhtml#x20-610001'></content> 
 <navPoint id='navPoint-65' playOrder='65'> 
 <navLabel> 
-<text>5.1.1
-Um exemplo</text> 
+<text>5.1.1 Um exemplo</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-620001'></content></navPoint> 
  
 <navPoint id='navPoint-66' playOrder='66'> 
 <navLabel> 
-<text>5.1.2 QM paramétrica no MCTest</text> 
+<text>5.1.2
+QM paramétrica no MCTest</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-630002'></content> 
 <navPoint id='navPoint-67' playOrder='67'> 
@@ -436,8 +435,7 @@ Um exemplo</text>
  
 <navPoint id='navPoint-68' playOrder='68'> 
 <navLabel> 
-<text>
-Exemplo 2</text> 
+<text> Exemplo 2</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-650002'></content></navPoint> 
 </navPoint> 
@@ -445,39 +443,39 @@ Exemplo 2</text>
  
 <navPoint id='navPoint-69' playOrder='69'> 
 <navLabel> 
-<text>5.2 QT paramétrica</text> 
+<text>5.2 QT
+paramétrica</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-660002'></content> 
 <navPoint id='navPoint-70' playOrder='70'> 
 <navLabel> 
-<text>5.2.1 Exemplo 1 – Teste de
-mesa</text> 
+<text>5.2.1 Exemplo 1 – Teste de mesa</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-670001'></content></navPoint> 
  
 <navPoint id='navPoint-71' playOrder='71'> 
 <navLabel> 
-<text>5.2.2 Exemplo 2 – Teste de mesa e gabarito</text> 
+<text>5.2.2 Exemplo 2 – Teste de
+mesa e gabarito</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-680002'></content></navPoint> 
  
 <navPoint id='navPoint-72' playOrder='72'> 
 <navLabel> 
-<text>5.2.3 Exemplo
-3 – Teste de mesa e gabarito com settrace</text> 
+<text>5.2.3 Exemplo 3 – Teste de mesa e gabarito com settrace</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-690003'></content> 
 <navPoint id='navPoint-73' playOrder='73'> 
 <navLabel> 
-<text> Exemplo de uso do
-método settrace para rastreamento de código</text> 
+<text>
+Exemplo de uso do método settrace para rastreamento de código</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-700003'></content></navPoint> 
  
 <navPoint id='navPoint-74' playOrder='74'> 
 <navLabel> 
-<text> Teste de mesa com
-rastreamento de código usando settrace</text> 
+<text> Teste
+de mesa com rastreamento de código usando settrace</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-710003'></content></navPoint> 
 </navPoint> 
@@ -485,8 +483,8 @@ rastreamento de código usando settrace</text>
  
 <navPoint id='navPoint-75' playOrder='75'> 
 <navLabel> 
-<text>5.3 QT paramétrica, com
-código</text> 
+<text>5.3 QT paramétrica,
+com código</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-720003'></content> 
 <navPoint id='navPoint-76' playOrder='76'> 
@@ -497,14 +495,14 @@ código</text>
  
 <navPoint id='navPoint-77' playOrder='77'> 
 <navLabel> 
-<text>5.3.2 Questão
-com exercício de programação no Moodle+VPL</text> 
+<text>5.3.2 Questão com
+exercício de programação no Moodle+VPL</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-740002'></content> 
 <navPoint id='navPoint-78' playOrder='78'> 
 <navLabel> 
-<text> Um exemplo
-de atividade Moodle+VPL</text> 
+<text> Um exemplo de atividade
+Moodle+VPL</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-750002'></content></navPoint> 
  
@@ -523,36 +521,33 @@ de atividade Moodle+VPL</text>
  
 <navPoint id='navPoint-81' playOrder='81'> 
 <navLabel> 
-<text>5.3.3
-Questão com exercício de programação no MCTest+Moodle+VPL</text> 
+<text>5.3.3 Questão com
+exercício de programação no MCTest+Moodle+VPL</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-780003'></content> 
 <navPoint id='navPoint-82' playOrder='82'> 
 <navLabel> 
-<text>
-Primeiro desafio</text> 
+<text> Primeiro desafio</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-790003'></content></navPoint> 
  
 <navPoint id='navPoint-83' playOrder='83'> 
 <navLabel> 
-<text> Segundo desafio</text> 
+<text>
+Segundo desafio</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-800003'></content></navPoint> 
  
 <navPoint id='navPoint-84' playOrder='84'> 
 <navLabel> 
-<text> Um exemplo simples de
-cálculo de parcelas sem juros</text> 
+<text> Um exemplo simples de cálculo de parcelas sem juros</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-810003'></content></navPoint> 
  
 <navPoint id='navPoint-85' playOrder='85'> 
 <navLabel> 
-<text> Criando uma QT paramétrica
-                                                                                                  
-                                                                                                  
-para integração MCTest+Moodle+VPL</text> 
+<text>
+Criando uma QT paramétrica para integração MCTest+Moodle+VPL</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-820003'></content></navPoint> 
 </navPoint> 
@@ -560,8 +555,8 @@ para integração MCTest+Moodle+VPL</text>
  
 <navPoint id='navPoint-86' playOrder='86'> 
 <navLabel> 
-<text>5.4 Considerações
-finais</text> 
+<text>5.4
+Considerações finais</text> 
 </navLabel> 
 <content src='livroch5.xhtml#x20-830004'></content></navPoint> 
 </navPoint> 
@@ -569,30 +564,32 @@ finais</text>
  
 <navPoint id='navPoint-87' playOrder='87'> 
 <navLabel> 
-<text>III  Exames no MCTest</text> 
+<text>III   Exames no MCTest</text> 
 </navLabel> 
 <content src='livropa3.xhtml#x21-840003'></content> 
 <navPoint id='navPoint-88' playOrder='88'> 
 <navLabel> 
-<text>6  Visão geral dos exames</text> 
+<text>6   Visão geral
+dos exames</text> 
 </navLabel> 
 <content src='livroch6.xhtml#x22-850006'></content> 
 <navPoint id='navPoint-89' playOrder='89'> 
 <navLabel> 
-<text>6.1
-Acesso à tela de exames</text> 
+<text>6.1 Acesso à tela de exames</text> 
 </navLabel> 
 <content src='livroch6.xhtml#x22-860001'></content></navPoint> 
  
 <navPoint id='navPoint-90' playOrder='90'> 
 <navLabel> 
-<text>6.2 Recorte I da tela de exame</text> 
+<text>6.2 Recorte I da tela de
+                                                                                           
+                                                                                           
+exame</text> 
 </navLabel> 
 <content src='livroch6.xhtml#x22-870002'></content> 
 <navPoint id='navPoint-91' playOrder='91'> 
 <navLabel> 
-<text>6.2.1
-Área à esquerda</text> 
+<text>6.2.1 Área à esquerda</text> 
 </navLabel> 
 <content src='livroch6.xhtml#x22-880001'></content></navPoint> 
  
@@ -604,727 +601,729 @@ Acesso à tela de exames</text>
  
 <navPoint id='navPoint-93' playOrder='93'> 
 <navLabel> 
-<text>6.2.3 Área à direita</text> 
+<text>6.2.3 Área à
+direita</text> 
 </navLabel> 
 <content src='livroch6.xhtml#x22-900003'></content></navPoint> 
 </navPoint> 
  
 <navPoint id='navPoint-94' playOrder='94'> 
 <navLabel> 
-<text>6.3
-Recorte II da tela de exame – turmas</text> 
+<text>6.3 Recorte II da tela de exame – turmas</text> 
 </navLabel> 
 <content src='livroch6.xhtml#x22-910003'></content></navPoint> 
  
 <navPoint id='navPoint-95' playOrder='95'> 
 <navLabel> 
-<text>6.4 Recorte III da tela de
-exame – questões</text> 
+<text>6.4 Recorte III da tela
+de exame – tópicos</text> 
 </navLabel> 
 <content src='livroch6.xhtml#x22-920004'></content></navPoint> 
  
 <navPoint id='navPoint-96' playOrder='96'> 
 <navLabel> 
-<text>6.5 Recorte IV da tela de exame – configurando os
-detalhes</text> 
+<text>6.5 Recorte IV da tela de exame – questões</text> 
 </navLabel> 
 <content src='livroch6.xhtml#x22-930005'></content></navPoint> 
  
 <navPoint id='navPoint-97' playOrder='97'> 
 <navLabel> 
-<text>6.6 Considerações finais</text> 
+<text>6.6
+Recorte V da tela de exame – configurando os detalhes</text> 
 </navLabel> 
 <content src='livroch6.xhtml#x22-940006'></content></navPoint> 
-</navPoint> 
  
 <navPoint id='navPoint-98' playOrder='98'> 
 <navLabel> 
-<text>7   Exames com Quadro de
-Respostas (QR)</text> 
+<text>6.7 Considerações
+finais</text> 
 </navLabel> 
-<content src='livroch7.xhtml#x23-950007'></content> 
+<content src='livroch6.xhtml#x22-950007'></content></navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-99' playOrder='99'> 
 <navLabel> 
-<text>7.1 Utilizando exames exclusivamente com QR</text> 
+<text>7   Exames com Quadro de Respostas (QR)</text> 
 </navLabel> 
-<content src='livroch7.xhtml#x23-960001'></content> 
+<content src='livroch7.xhtml#x23-960007'></content> 
 <navPoint id='navPoint-100' playOrder='100'> 
 <navLabel> 
-<text>7.1.1
-Estilo vertical</text> 
+<text>7.1 Utilizando
+exames exclusivamente com QR</text> 
 </navLabel> 
-<content src='livroch7.xhtml#x23-970001'></content></navPoint> 
- 
+<content src='livroch7.xhtml#x23-970001'></content> 
 <navPoint id='navPoint-101' playOrder='101'> 
 <navLabel> 
-<text>7.1.2 Estilo horizontal</text> 
+<text>7.1.1 Estilo vertical</text> 
 </navLabel> 
-<content src='livroch7.xhtml#x23-980002'></content></navPoint> 
-</navPoint> 
+<content src='livroch7.xhtml#x23-980001'></content></navPoint> 
  
 <navPoint id='navPoint-102' playOrder='102'> 
 <navLabel> 
-<text>7.2 Restrições nos
-QRs</text> 
+<text>7.1.2 Estilo
+horizontal</text> 
 </navLabel> 
 <content src='livroch7.xhtml#x23-990002'></content></navPoint> 
+</navPoint> 
  
 <navPoint id='navPoint-103' playOrder='103'> 
 <navLabel> 
-<text>7.3 Corrigindo exames com QR</text> 
+<text>7.2 Restrições nos QRs</text> 
 </navLabel> 
-<content src='livroch7.xhtml#x23-1000003'></content> 
+<content src='livroch7.xhtml#x23-1000002'></content></navPoint> 
+ 
 <navPoint id='navPoint-104' playOrder='104'> 
 <navLabel> 
-<text>7.3.1 Arquivo CSV
-com as correções</text> 
+<text>7.3 Corrigindo exames
+com QR</text> 
 </navLabel> 
-<content src='livroch7.xhtml#x23-1010001'></content></navPoint> 
- 
+<content src='livroch7.xhtml#x23-1010003'></content> 
 <navPoint id='navPoint-105' playOrder='105'> 
 <navLabel> 
-<text>7.3.2 Teoria de Resposta ao Item</text> 
+<text>7.3.1 Arquivo CSV com as correções</text> 
 </navLabel> 
-<content src='livroch7.xhtml#x23-1020002'></content></navPoint> 
+<content src='livroch7.xhtml#x23-1020001'></content></navPoint> 
  
 <navPoint id='navPoint-106' playOrder='106'> 
 <navLabel> 
-<text>7.3.3
-Feedback ao estudante</text> 
+<text>7.3.2 Teoria de
+Resposta ao Item</text> 
 </navLabel> 
-<content src='livroch7.xhtml#x23-1030003'></content></navPoint> 
-</navPoint> 
+<content src='livroch7.xhtml#x23-1030002'></content></navPoint> 
  
 <navPoint id='navPoint-107' playOrder='107'> 
 <navLabel> 
-<text>7.4 Considerações finais</text> 
+<text>7.3.3 Feedback ao estudante</text> 
 </navLabel> 
-<content src='livroch7.xhtml#x23-1040004'></content></navPoint> 
+<content src='livroch7.xhtml#x23-1040003'></content></navPoint> 
 </navPoint> 
  
 <navPoint id='navPoint-108' playOrder='108'> 
 <navLabel> 
-<text>8  Exames
-com QR+QM e/ou QT</text> 
+<text>7.4 Considerações
+finais</text> 
 </navLabel> 
-<content src='livroch8.xhtml#x24-1050008'></content> 
+<content src='livroch7.xhtml#x23-1050004'></content></navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-109' playOrder='109'> 
 <navLabel> 
-<text>8.1 Criando QMs e uma QT</text> 
+<text>8  Exames com QR+QM e/ou QT</text> 
 </navLabel> 
-<content src='livroch8.xhtml#x24-1060001'></content></navPoint> 
- 
+<content src='livroch8.xhtml#x24-1060008'></content> 
 <navPoint id='navPoint-110' playOrder='110'> 
 <navLabel> 
-<text>8.2
-Criando as variações</text> 
+<text>8.1 Criando QMs e uma
+QT</text> 
 </navLabel> 
-<content src='livroch8.xhtml#x24-1070002'></content></navPoint> 
+<content src='livroch8.xhtml#x24-1070001'></content></navPoint> 
  
 <navPoint id='navPoint-111' playOrder='111'> 
 <navLabel> 
-<text>8.3 Detalhando os gabaritos no arquivo
-CSV</text> 
+<text>8.2 Criando as variações</text> 
 </navLabel> 
-<content src='livroch8.xhtml#x24-1080003'></content></navPoint> 
+<content src='livroch8.xhtml#x24-1080002'></content></navPoint> 
  
 <navPoint id='navPoint-112' playOrder='112'> 
 <navLabel> 
-<text>8.4 Criando o PDF do exame com QR+QM+QT</text> 
+<text>8.3 Detalhando os gabaritos no
+arquivo CSV</text> 
 </navLabel> 
-<content src='livroch8.xhtml#x24-1090004'></content></navPoint> 
+<content src='livroch8.xhtml#x24-1090003'></content></navPoint> 
  
 <navPoint id='navPoint-113' playOrder='113'> 
+<navLabel> 
+<text>8.4 Criando o PDF do exame com QR+QM+QT</text> 
+</navLabel> 
+<content src='livroch8.xhtml#x24-1100004'></content></navPoint> 
+ 
+<navPoint id='navPoint-114' playOrder='114'> 
 <navLabel> 
 <text>8.5
 Corrigindo exames com QR+QM</text> 
 </navLabel> 
-<content src='livroch8.xhtml#x24-1100005'></content></navPoint> 
+<content src='livroch8.xhtml#x24-1110005'></content></navPoint> 
  
-<navPoint id='navPoint-114' playOrder='114'> 
+<navPoint id='navPoint-115' playOrder='115'> 
 <navLabel> 
 <text>8.6 Exames adaptativos</text> 
 </navLabel> 
-<content src='livroch8.xhtml#x24-1110006'></content></navPoint> 
+<content src='livroch8.xhtml#x24-1120006'></content></navPoint> 
  
-<navPoint id='navPoint-115' playOrder='115'> 
+<navPoint id='navPoint-116' playOrder='116'> 
 <navLabel> 
 <text>8.7
 Recomendações para realização tranquila de exames presenciais</text> 
 </navLabel> 
-<content src='livroch8.xhtml#x24-1120007'></content></navPoint> 
+<content src='livroch8.xhtml#x24-1130007'></content></navPoint> 
  
-<navPoint id='navPoint-116' playOrder='116'> 
+<navPoint id='navPoint-117' playOrder='117'> 
 <navLabel> 
 <text>8.8
 Considerações finais</text> 
 </navLabel> 
-<content src='livroch8.xhtml#x24-1130008'></content></navPoint> 
+<content src='livroch8.xhtml#x24-1140008'></content></navPoint> 
 </navPoint> 
  
-<navPoint id='navPoint-117' playOrder='117'> 
-<navLabel> 
-<text>9   Variações de exames com QM+QT
-para o Moodle</text> 
-</navLabel> 
-<content src='livroch9.xhtml#x25-1140009'></content> 
 <navPoint id='navPoint-118' playOrder='118'> 
 <navLabel> 
-<text>9.1 Criando exames e exportando arquivos Aiken e
-XML</text> 
+<text>9  Variações de exames com QM+QT para o
+Moodle</text> 
 </navLabel> 
-<content src='livroch9.xhtml#x25-1150001'></content> 
+<content src='livroch9.xhtml#x25-1150009'></content> 
 <navPoint id='navPoint-119' playOrder='119'> 
 <navLabel> 
-<text>9.1.1 QM – equação de primeiro grau – idade</text> 
+<text>9.1 Criando exames e exportando arquivos Aiken e XML</text> 
 </navLabel> 
-<content src='livroch9.xhtml#x25-1160001'></content></navPoint> 
- 
+<content src='livroch9.xhtml#x25-1160001'></content> 
 <navPoint id='navPoint-120' playOrder='120'> 
 <navLabel> 
-<text>9.1.2
-QM – equação da reta</text> 
+<text>9.1.1
+QM – equação de primeiro grau – idade</text> 
 </navLabel> 
-<content src='livroch9.xhtml#x25-1170002'></content></navPoint> 
+<content src='livroch9.xhtml#x25-1170001'></content></navPoint> 
  
 <navPoint id='navPoint-121' playOrder='121'> 
 <navLabel> 
-<text>9.1.3 QT com resposta exata – ordena parte
-do vetor</text> 
+<text>9.1.2 QM – equação da
+reta</text> 
 </navLabel> 
-<content src='livroch9.xhtml#x25-1180003'></content></navPoint> 
+<content src='livroch9.xhtml#x25-1180002'></content></navPoint> 
  
 <navPoint id='navPoint-122' playOrder='122'> 
 <navLabel> 
-<text>9.1.4 Criando exame e exportando as variações</text> 
+<text>9.1.3 QT com resposta exata – ordena parte do vetor</text> 
 </navLabel> 
-<content src='livroch9.xhtml#x25-1190004'></content> 
+<content src='livroch9.xhtml#x25-1190003'></content></navPoint> 
+ 
 <navPoint id='navPoint-123' playOrder='123'> 
 <navLabel> 
-<text>
-Detalhando o arquivo no formato Aiken</text> 
+<text>9.1.4 Criando
+exame e exportando as variações</text> 
 </navLabel> 
-<content src='livroch9.xhtml#x25-1200004'></content></navPoint> 
- 
+<content src='livroch9.xhtml#x25-1200004'></content> 
 <navPoint id='navPoint-124' playOrder='124'> 
 <navLabel> 
-<text> Detalhando o arquivo no
-formato XML para QM</text> 
+<text> Detalhando o arquivo no formato
+Aiken</text> 
 </navLabel> 
 <content src='livroch9.xhtml#x25-1210004'></content></navPoint> 
  
 <navPoint id='navPoint-125' playOrder='125'> 
 <navLabel> 
-<text> Detalhando o arquivo no formato XML
-– questão com resposta exata</text> 
+<text> Detalhando o arquivo no formato XML para QM</text> 
 </navLabel> 
 <content src='livroch9.xhtml#x25-1220004'></content></navPoint> 
-</navPoint> 
-</navPoint> 
  
 <navPoint id='navPoint-126' playOrder='126'> 
 <navLabel> 
-<text>9.2 Importando arquivo XML
-no Moodle</text> 
+<text> Detalhando
+o arquivo no formato XML – questão com resposta exata</text> 
 </navLabel> 
-<content src='livroch9.xhtml#x25-1230002'></content></navPoint> 
+<content src='livroch9.xhtml#x25-1230004'></content></navPoint> 
+</navPoint> 
+</navPoint> 
  
 <navPoint id='navPoint-127' playOrder='127'> 
 <navLabel> 
-<text>9.3 Considerações finais</text> 
+<text>9.2 Importando
+arquivo XML no Moodle</text> 
 </navLabel> 
-<content src='livroch9.xhtml#x25-1240003'></content></navPoint> 
-</navPoint> 
+<content src='livroch9.xhtml#x25-1240002'></content></navPoint> 
  
 <navPoint id='navPoint-128' playOrder='128'> 
 <navLabel> 
-<text>10   Exames com
-MCTest+Moodle+VPL</text> 
+<text>9.3 Considerações finais</text> 
 </navLabel> 
-<content src='livroch10.xhtml#x26-12500010'></content> 
+<content src='livroch9.xhtml#x25-1250003'></content></navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-129' playOrder='129'> 
 <navLabel> 
-<text>10.1 Criando um exame com QT integrado ao
-VPL</text> 
+<text>10  Exames
+com MCTest+Moodle+VPL</text> 
 </navLabel> 
-<content src='livroch10.xhtml#x26-1260001'></content> 
+<content src='livroch10.xhtml#x26-12600010'></content> 
 <navPoint id='navPoint-130' playOrder='130'> 
+<navLabel> 
+<text>10.1 Criando um exame com QT integrado
+ao VPL</text> 
+</navLabel> 
+<content src='livroch10.xhtml#x26-1270001'></content> 
+<navPoint id='navPoint-131' playOrder='131'> 
 <navLabel> 
 <text>10.1.1 Criando uma nova questão integrada ao VPL</text> 
 </navLabel> 
-<content src='livroch10.xhtml#x26-1270001'></content></navPoint> 
+<content src='livroch10.xhtml#x26-1280001'></content></navPoint> 
  
-<navPoint id='navPoint-131' playOrder='131'> 
+<navPoint id='navPoint-132' playOrder='132'> 
 <navLabel> 
 <text>10.1.2
 Criando as variações e imprimindo o PDF do exame</text> 
 </navLabel> 
-<content src='livroch10.xhtml#x26-1280002'></content></navPoint> 
- 
-<navPoint id='navPoint-132' playOrder='132'> 
-<navLabel> 
-<text>10.1.3
-Criando e configurando a atividade VPL para o exame</text> 
-</navLabel> 
-<content src='livroch10.xhtml#x26-1290003'></content></navPoint> 
+<content src='livroch10.xhtml#x26-1290002'></content></navPoint> 
  
 <navPoint id='navPoint-133' playOrder='133'> 
 <navLabel> 
-<text>10.1.4
-Soluções da atividade VPL para o exame</text> 
+<text>10.1.3 Criando e
+configurando a atividade VPL para o exame</text> 
 </navLabel> 
-<content src='livroch10.xhtml#x26-1300004'></content></navPoint> 
-</navPoint> 
+<content src='livroch10.xhtml#x26-1300003'></content></navPoint> 
  
 <navPoint id='navPoint-134' playOrder='134'> 
 <navLabel> 
-<text>10.2 Detalhando
-o arquivo linker.json</text> 
+<text>10.1.4 Soluções da atividade
+VPL para o exame</text> 
 </navLabel> 
-<content src='livroch10.xhtml#x26-1310002'></content></navPoint> 
+<content src='livroch10.xhtml#x26-1310004'></content></navPoint> 
+</navPoint> 
  
 <navPoint id='navPoint-135' playOrder='135'> 
 <navLabel> 
-<text>10.3 Considerações finais</text> 
+<text>10.2 Detalhando o arquivo linker.json</text> 
 </navLabel> 
-<content src='livroch10.xhtml#x26-1320003'></content></navPoint> 
-</navPoint> 
-</navPoint> 
+<content src='livroch10.xhtml#x26-1320002'></content></navPoint> 
  
 <navPoint id='navPoint-136' playOrder='136'> 
 <navLabel> 
-<text>IV
-Experimentos</text> 
+<text>10.3
+Considerações finais</text> 
 </navLabel> 
-<content src='livropa4.xhtml#x27-1330004'></content> 
+<content src='livroch10.xhtml#x26-1330003'></content></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-137' playOrder='137'> 
 <navLabel> 
-<text>11  MCTest versões 1, 2 e 3 - Quadro de Respostas
-(QR)</text> 
+<text>IV  Experimentos</text> 
 </navLabel> 
-<content src='livroch11.xhtml#x28-13400011'></content> 
+<content src='livropa4.xhtml#x27-1340004'></content> 
 <navPoint id='navPoint-138' playOrder='138'> 
 <navLabel> 
-<text>11.1 MCTest-1: versão no Matlab</text> 
+<text>11  MCTest versões 1, 2
+e 3 - Quadro de Respostas (QR)</text> 
 </navLabel> 
-<content src='livroch11.xhtml#x28-1350001'></content> 
+<content src='livroch11.xhtml#x28-13500011'></content> 
 <navPoint id='navPoint-139' playOrder='139'> 
 <navLabel> 
-<text> Artigo descrevendo
-a parte de visão computacional do MCTest-1</text> 
+<text>11.1 MCTest-1: versão no Matlab</text> 
 </navLabel> 
 <content src='livroch11.xhtml#x28-1360001'></content> 
 <navPoint id='navPoint-140' playOrder='140'> 
 <navLabel> 
-<text> Método</text> 
+<text>
+Artigo descrevendo a parte de visão computacional do MCTest-1</text> 
 </navLabel> 
-<content src='livroch11.xhtml#x28-1370001'></content></navPoint> 
- 
+<content src='livroch11.xhtml#x28-1370001'></content> 
 <navPoint id='navPoint-141' playOrder='141'> 
 <navLabel> 
 <text>
-Experimentos</text> 
+Método</text> 
 </navLabel> 
 <content src='livroch11.xhtml#x28-1380001'></content></navPoint> 
-</navPoint> 
-</navPoint> 
  
 <navPoint id='navPoint-142' playOrder='142'> 
 <navLabel> 
-<text>11.2 MCTest-2: versão no Android</text> 
+<text> Experimentos</text> 
 </navLabel> 
-<content src='livroch11.xhtml#x28-1390002'></content> 
+<content src='livroch11.xhtml#x28-1390001'></content></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-143' playOrder='143'> 
 <navLabel> 
-<text> Artigo
-descrevendo o MCTest-2 para dispositivos móveis</text> 
+<text>11.2 MCTest-2: versão no Android</text> 
 </navLabel> 
 <content src='livroch11.xhtml#x28-1400002'></content> 
 <navPoint id='navPoint-144' playOrder='144'> 
 <navLabel> 
+<text>
+Artigo descrevendo o MCTest-2 para dispositivos móveis</text> 
+</navLabel> 
+<content src='livroch11.xhtml#x28-1410002'></content> 
+<navPoint id='navPoint-145' playOrder='145'> 
+<navLabel> 
 <text> Método</text> 
 </navLabel> 
-<content src='livroch11.xhtml#x28-1410002'></content></navPoint> 
+<content src='livroch11.xhtml#x28-1420002'></content></navPoint> 
  
-<navPoint id='navPoint-145' playOrder='145'> 
+<navPoint id='navPoint-146' playOrder='146'> 
 <navLabel> 
 <text>
 Experimentos</text> 
 </navLabel> 
-<content src='livroch11.xhtml#x28-1420002'></content></navPoint> 
+<content src='livroch11.xhtml#x28-1430002'></content></navPoint> 
 </navPoint> 
-</navPoint> 
- 
-<navPoint id='navPoint-146' playOrder='146'> 
-<navLabel> 
-<text>11.3 Considerações finais</text> 
-</navLabel> 
-<content src='livroch11.xhtml#x28-1430003'></content></navPoint> 
 </navPoint> 
  
 <navPoint id='navPoint-147' playOrder='147'> 
 <navLabel> 
+<text>11.3 Considerações finais</text> 
+</navLabel> 
+<content src='livroch11.xhtml#x28-1440003'></content></navPoint> 
+</navPoint> 
+ 
+<navPoint id='navPoint-148' playOrder='148'> 
+<navLabel> 
 <text>12  MCTest versões
 4, 4.G e 5</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-14400012'></content> 
-<navPoint id='navPoint-148' playOrder='148'> 
-<navLabel> 
-<text>12.1 MCTest-4: gerando e corrigindo questões criadas
-no LaTeX</text> 
-</navLabel> 
-<content src='livroch12.xhtml#x29-1450001'></content> 
+<content src='livroch12.xhtml#x29-14500012'></content> 
 <navPoint id='navPoint-149' playOrder='149'> 
 <navLabel> 
-<text>12.1.1 Artigo descrevendo as versões do MCTest 4 e
-                                                                                                  
-                                                                                                  
-4.G</text> 
+<text>12.1 MCTest-4: gerando e corrigindo questões criadas no
+LaTeX</text> 
 </navLabel> 
 <content src='livroch12.xhtml#x29-1460001'></content> 
 <navPoint id='navPoint-150' playOrder='150'> 
 <navLabel> 
-<text> Método</text> 
+<text>12.1.1 Artigo descrevendo as versões do MCTest 4 e 4.G</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1470001'></content></navPoint> 
- 
+<content src='livroch12.xhtml#x29-1470001'></content> 
 <navPoint id='navPoint-151' playOrder='151'> 
 <navLabel> 
-<text> Experimentos</text> 
+<text>
+Método</text> 
 </navLabel> 
 <content src='livroch12.xhtml#x29-1480001'></content></navPoint> 
-</navPoint> 
  
 <navPoint id='navPoint-152' playOrder='152'> 
 <navLabel> 
-<text>12.1.2 Artigo comparando
-as modalidades semipresencial e presencial CS1 com base na utilidade
-do MCTest-4</text> 
-</navLabel> 
-<content src='livroch12.xhtml#x29-1490002'></content> 
-<navPoint id='navPoint-153' playOrder='153'> 
-<navLabel> 
-<text> Método</text> 
-</navLabel> 
-<content src='livroch12.xhtml#x29-1500002'></content></navPoint> 
- 
-<navPoint id='navPoint-154' playOrder='154'> 
-<navLabel> 
 <text> Experimentos</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1510002'></content></navPoint> 
+<content src='livroch12.xhtml#x29-1490001'></content></navPoint> 
 </navPoint> 
+ 
+<navPoint id='navPoint-153' playOrder='153'> 
+<navLabel> 
+<text>12.1.2 Artigo comparando as modalidades
+semipresencial e presencial CS1 com base na utilidade do MCTest-4</text> 
+</navLabel> 
+<content src='livroch12.xhtml#x29-1500002'></content> 
+<navPoint id='navPoint-154' playOrder='154'> 
+<navLabel> 
+<text>
+Método</text> 
+</navLabel> 
+<content src='livroch12.xhtml#x29-1510002'></content></navPoint> 
  
 <navPoint id='navPoint-155' playOrder='155'> 
 <navLabel> 
-<text>12.1.3 Artigo
-definindo a parametrização do MCTest após a versão 4</text> 
+<text> Experimentos</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1520003'></content> 
+<content src='livroch12.xhtml#x29-1520002'></content></navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-156' playOrder='156'> 
 <navLabel> 
-<text> Movimento
-Retilíneo Uniforme com a biblioteca symbols</text> 
+<text>12.1.3 Artigo definindo a parametrização
+do MCTest após a versão 4</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1530003'></content></navPoint> 
- 
+<content src='livroch12.xhtml#x29-1530003'></content> 
 <navPoint id='navPoint-157' playOrder='157'> 
 <navLabel> 
-<text> Criação de
-Matriz</text> 
+<text> Movimento Retilíneo Uniforme com a
+biblioteca symbols</text> 
 </navLabel> 
 <content src='livroch12.xhtml#x29-1540003'></content></navPoint> 
  
 <navPoint id='navPoint-158' playOrder='158'> 
 <navLabel> 
-<text> Experimentos</text> 
+<text> Criação de Matriz</text> 
 </navLabel> 
 <content src='livroch12.xhtml#x29-1550003'></content></navPoint> 
-</navPoint> 
-</navPoint> 
  
 <navPoint id='navPoint-159' playOrder='159'> 
 <navLabel> 
-<text>12.2 MCTest-5: a versão web</text> 
+<text> Experimentos</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1560002'></content> 
+<content src='livroch12.xhtml#x29-1560003'></content></navPoint> 
+</navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-160' playOrder='160'> 
 <navLabel> 
-<text>12.2.1
-Artigo apresentando a primeira versão web do MCTest</text> 
+<text>12.2
+                                                                                           
+                                                                                           
+MCTest-5: a versão web</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1570001'></content> 
+<content src='livroch12.xhtml#x29-1570002'></content> 
 <navPoint id='navPoint-161' playOrder='161'> 
 <navLabel> 
-<text> Equações
-paramétricas com equação e figura utilizando a biblioteca sympy</text> 
+<text>12.2.1 Artigo apresentando a primeira versão web
+do MCTest</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1580001'></content></navPoint> 
- 
+<content src='livroch12.xhtml#x29-1580001'></content> 
 <navPoint id='navPoint-162' playOrder='162'> 
 <navLabel> 
-<text>
-Questão paramétrica com grafo e figura</text> 
+<text> Equações paramétricas com equação e figura utilizando
+a biblioteca sympy</text> 
 </navLabel> 
 <content src='livroch12.xhtml#x29-1590001'></content></navPoint> 
  
 <navPoint id='navPoint-163' playOrder='163'> 
 <navLabel> 
-<text> Questão paramétrica com
-matriz e figura</text> 
+<text> Questão paramétrica com grafo e figura</text> 
 </navLabel> 
 <content src='livroch12.xhtml#x29-1600001'></content></navPoint> 
  
 <navPoint id='navPoint-164' playOrder='164'> 
 <navLabel> 
-<text> Resultados</text> 
+<text>
+Questão paramétrica com matriz e figura</text> 
 </navLabel> 
 <content src='livroch12.xhtml#x29-1610001'></content></navPoint> 
-</navPoint> 
  
 <navPoint id='navPoint-165' playOrder='165'> 
 <navLabel> 
-<text>12.2.2 Artigo descrevendo o MCTest
-em conjunto com Google Forms e Google Sheets</text> 
+<text> Resultados</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1620002'></content> 
+<content src='livroch12.xhtml#x29-1620001'></content></navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-166' playOrder='166'> 
+<navLabel> 
+<text>12.2.2
+Artigo descrevendo o MCTest em conjunto com Google Forms e Google
+Sheets</text> 
+</navLabel> 
+<content src='livroch12.xhtml#x29-1630002'></content> 
+<navPoint id='navPoint-167' playOrder='167'> 
 <navLabel> 
 <text> Método</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1630002'></content></navPoint> 
- 
-<navPoint id='navPoint-167' playOrder='167'> 
-<navLabel> 
-<text>
-Experimentos</text> 
-</navLabel> 
 <content src='livroch12.xhtml#x29-1640002'></content></navPoint> 
-</navPoint> 
  
 <navPoint id='navPoint-168' playOrder='168'> 
 <navLabel> 
-<text>12.2.3 Artigo descrevendo a adoção de QMs com
-pesos diferentes nas alternativas</text> 
+<text> Experimentos</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1650003'></content> 
+<content src='livroch12.xhtml#x29-1650002'></content></navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-169' playOrder='169'> 
+<navLabel> 
+<text>12.2.3 Artigo descrevendo a
+adoção de QMs com pesos diferentes nas alternativas</text> 
+</navLabel> 
+<content src='livroch12.xhtml#x29-1660003'></content> 
+<navPoint id='navPoint-170' playOrder='170'> 
 <navLabel> 
 <text> Método</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1660003'></content></navPoint> 
- 
-<navPoint id='navPoint-170' playOrder='170'> 
-<navLabel> 
-<text> Experimentos</text> 
-</navLabel> 
 <content src='livroch12.xhtml#x29-1670003'></content></navPoint> 
-</navPoint> 
  
 <navPoint id='navPoint-171' playOrder='171'> 
 <navLabel> 
 <text>
-Artigo comparando diferentes processos seletivos na EPUFABC</text> 
+Experimentos</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1680003'></content> 
+<content src='livroch12.xhtml#x29-1680003'></content></navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-172' playOrder='172'> 
 <navLabel> 
-<text>
-Método</text> 
+<text> Artigo comparando diferentes processos seletivos na
+EPUFABC</text> 
 </navLabel> 
-<content src='livroch12.xhtml#x29-1690003'></content></navPoint> 
- 
+<content src='livroch12.xhtml#x29-1690003'></content> 
 <navPoint id='navPoint-173' playOrder='173'> 
 <navLabel> 
-<text> Experimentos</text> 
+<text> Método</text> 
 </navLabel> 
 <content src='livroch12.xhtml#x29-1700003'></content></navPoint> 
-</navPoint> 
-</navPoint> 
  
 <navPoint id='navPoint-174' playOrder='174'> 
 <navLabel> 
-<text>12.3 Considerações finais</text> 
+<text> Experimentos</text> 
 </navLabel> 
 <content src='livroch12.xhtml#x29-1710003'></content></navPoint> 
+</navPoint> 
 </navPoint> 
  
 <navPoint id='navPoint-175' playOrder='175'> 
 <navLabel> 
-<text>13
-MCTest+Moodle+VPL</text> 
+<text>12.3 Considerações
+finais</text> 
 </navLabel> 
-<content src='livroch13.xhtml#x30-17200013'></content> 
-<navPoint id='navPoint-176' playOrder='176'> 
-<navLabel> 
-<text>13.1 MCTest-5, com Moodle</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1730001'></content> 
-<navPoint id='navPoint-177' playOrder='177'> 
-<navLabel> 
-<text>
-Artigo sobre a exportação de questões paramétricas para o Moodle
-usando o MCTest</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1740001'></content></navPoint> 
+<content src='livroch12.xhtml#x29-1720003'></content></navPoint> 
 </navPoint> 
  
+<navPoint id='navPoint-176' playOrder='176'> 
+<navLabel> 
+<text>13   MCTest+Moodle+VPL</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-17300013'></content> 
+<navPoint id='navPoint-177' playOrder='177'> 
+<navLabel> 
+<text>13.1 MCTest-5, com
+Moodle</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1740001'></content> 
 <navPoint id='navPoint-178' playOrder='178'> 
+<navLabel> 
+<text> Artigo sobre a exportação de questões paramétricas para o
+Moodle usando o MCTest</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1750001'></content></navPoint> 
+</navPoint> 
+ 
+<navPoint id='navPoint-179' playOrder='179'> 
 <navLabel> 
 <text>13.2 MCTest-5, com Moodle+VPL</text> 
 </navLabel> 
-<content src='livroch13.xhtml#x30-1750002'></content> 
-<navPoint id='navPoint-179' playOrder='179'> 
+<content src='livroch13.xhtml#x30-1760002'></content> 
+<navPoint id='navPoint-180' playOrder='180'> 
 <navLabel> 
 <text>13.2.1
 Artigo com a primeira integração entre MCTest+Moodle+VPL</text> 
 </navLabel> 
-<content src='livroch13.xhtml#x30-1760001'></content> 
-<navPoint id='navPoint-180' playOrder='180'> 
+<content src='livroch13.xhtml#x30-1770001'></content> 
+<navPoint id='navPoint-181' playOrder='181'> 
 <navLabel> 
 <text>
 Método</text> 
 </navLabel> 
-<content src='livroch13.xhtml#x30-1770001'></content></navPoint> 
- 
-<navPoint id='navPoint-181' playOrder='181'> 
-<navLabel> 
-<text> Experimentos</text> 
-</navLabel> 
 <content src='livroch13.xhtml#x30-1780001'></content></navPoint> 
-</navPoint> 
  
 <navPoint id='navPoint-182' playOrder='182'> 
 <navLabel> 
-<text>13.2.2 Artigo aplicando a
-integração MCTest+Moodle+VPL em CS0</text> 
+<text> Experimentos</text> 
 </navLabel> 
-<content src='livroch13.xhtml#x30-1790002'></content> 
+<content src='livroch13.xhtml#x30-1790001'></content></navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-183' playOrder='183'> 
+<navLabel> 
+<text>13.2.2 Artigo aplicando a integração
+MCTest+Moodle+VPL em CS0</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1800002'></content> 
+<navPoint id='navPoint-184' playOrder='184'> 
 <navLabel> 
 <text> Método</text> 
 </navLabel> 
-<content src='livroch13.xhtml#x30-1800002'></content></navPoint> 
+<content src='livroch13.xhtml#x30-1810002'></content></navPoint> 
  
-<navPoint id='navPoint-184' playOrder='184'> 
+<navPoint id='navPoint-185' playOrder='185'> 
+<navLabel> 
+<text> Experimentos</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1820002'></content></navPoint> 
+</navPoint> 
+ 
+<navPoint id='navPoint-186' playOrder='186'> 
+<navLabel> 
+<text>13.2.3
+Artigo sobre o uso de múltiplas linguagens de programação em CS1</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1830003'></content> 
+<navPoint id='navPoint-187' playOrder='187'> 
+<navLabel> 
+<text>
+Método</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1840003'></content></navPoint> 
+ 
+<navPoint id='navPoint-188' playOrder='188'> 
+<navLabel> 
+<text> Experimentos</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1850003'></content></navPoint> 
+</navPoint> 
+ 
+<navPoint id='navPoint-189' playOrder='189'> 
+<navLabel> 
+<text>13.2.4 Artigo aplicando a integração
+MCTest+Moodle+VPL em CS1</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1860004'></content> 
+<navPoint id='navPoint-190' playOrder='190'> 
+<navLabel> 
+<text> Método</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1870004'></content></navPoint> 
+ 
+<navPoint id='navPoint-191' playOrder='191'> 
+<navLabel> 
+<text> Experimentos</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1880004'></content></navPoint> 
+</navPoint> 
+ 
+<navPoint id='navPoint-192' playOrder='192'> 
+<navLabel> 
+<text>13.2.5
+Artigo explorando a integração de jogos no ensino de CS0</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1890005'></content> 
+<navPoint id='navPoint-193' playOrder='193'> 
+<navLabel> 
+<text> Método</text> 
+</navLabel> 
+<content src='livroch13.xhtml#x30-1900005'></content></navPoint> 
+ 
+<navPoint id='navPoint-194' playOrder='194'> 
 <navLabel> 
 <text>
 Experimentos</text> 
 </navLabel> 
-<content src='livroch13.xhtml#x30-1810002'></content></navPoint> 
+<content src='livroch13.xhtml#x30-1910005'></content></navPoint> 
 </navPoint> 
- 
-<navPoint id='navPoint-185' playOrder='185'> 
-<navLabel> 
-<text>13.2.3 Artigo sobre o uso de múltiplas linguagens de
-programação em CS1</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1820003'></content> 
-<navPoint id='navPoint-186' playOrder='186'> 
-<navLabel> 
-<text> Método</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1830003'></content></navPoint> 
- 
-<navPoint id='navPoint-187' playOrder='187'> 
-<navLabel> 
-<text> Experimentos</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1840003'></content></navPoint> 
-</navPoint> 
- 
-<navPoint id='navPoint-188' playOrder='188'> 
-<navLabel> 
-<text>13.2.4
-Artigo aplicando a integração MCTest+Moodle+VPL em CS1</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1850004'></content> 
-<navPoint id='navPoint-189' playOrder='189'> 
-<navLabel> 
-<text>
-Método</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1860004'></content></navPoint> 
- 
-<navPoint id='navPoint-190' playOrder='190'> 
-<navLabel> 
-<text> Experimentos</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1870004'></content></navPoint> 
-</navPoint> 
- 
-<navPoint id='navPoint-191' playOrder='191'> 
-<navLabel> 
-<text>13.2.5 Artigo explorando a integração
-de jogos no ensino de CS0</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1880005'></content> 
-<navPoint id='navPoint-192' playOrder='192'> 
-<navLabel> 
-<text> Método</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1890005'></content></navPoint> 
- 
-<navPoint id='navPoint-193' playOrder='193'> 
-<navLabel> 
-<text> Experimentos</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1900005'></content></navPoint> 
-</navPoint> 
-</navPoint> 
- 
-<navPoint id='navPoint-194' playOrder='194'> 
-<navLabel> 
-<text>13.3
-Considerações finais</text> 
-</navLabel> 
-<content src='livroch13.xhtml#x30-1910003'></content></navPoint> 
 </navPoint> 
  
 <navPoint id='navPoint-195' playOrder='195'> 
 <navLabel> 
-<text>14  Conclusões</text> 
+<text>13.3 Considerações finais</text> 
 </navLabel> 
-<content src='livroch14.xhtml#x31-19200014'></content> 
+<content src='livroch13.xhtml#x30-1920003'></content></navPoint> 
+</navPoint> 
+ 
 <navPoint id='navPoint-196' playOrder='196'> 
 <navLabel> 
-<text>14.1 Novas possibilidades
-de aprimoramento</text> 
+<text>14  Conclusões</text> 
 </navLabel> 
-<content src='livroch14.xhtml#x31-1930001'></content></navPoint> 
- 
+<content src='livroch14.xhtml#x31-19300014'></content> 
 <navPoint id='navPoint-197' playOrder='197'> 
 <navLabel> 
-<text>14.2 Novas publicações</text> 
+<text>14.1
+Novas possibilidades de aprimoramento</text> 
 </navLabel> 
-<content src='livroch14.xhtml#x31-1940002'></content></navPoint> 
+<content src='livroch14.xhtml#x31-1940001'></content></navPoint> 
  
 <navPoint id='navPoint-198' playOrder='198'> 
 <navLabel> 
-<text>14.3 Novas
-edições deste livro</text> 
+<text>14.2 Novas publicações</text> 
 </navLabel> 
-<content src='livroch14.xhtml#x31-1950003'></content></navPoint> 
-</navPoint> 
+<content src='livroch14.xhtml#x31-1950002'></content></navPoint> 
  
 <navPoint id='navPoint-199' playOrder='199'> 
 <navLabel> 
-<text></text> 
+<text>14.3
+Novas edições deste livro</text> 
 </navLabel> 
-<content src='livroli13.xhtml#x32-1960003'></content></navPoint> 
+<content src='livroch14.xhtml#x31-1960003'></content></navPoint> 
+</navPoint> 
  
 <navPoint id='navPoint-200' playOrder='200'> 
 <navLabel> 
+<text></text> 
+</navLabel> 
+<content src='livroli13.xhtml#x32-1970003'></content></navPoint> 
+ 
+<navPoint id='navPoint-201' playOrder='201'> 
+<navLabel> 
 <text>   Bibliografia</text> 
 </navLabel> 
-<content src='livroli14.xhtml#x33-1970003'></content></navPoint> 
+<content src='livroli14.xhtml#x33-1980003'></content></navPoint> 
  
  
-</navPoint><navPoint id='navPoint-201' playOrder='201'> 
+</navPoint><navPoint id='navPoint-202' playOrder='202'> 
 <navLabel> 
 <text> Bibliografia</text> 
 </navLabel> 
-<content src='livroli14.xhtml#Q1-33-336'></content>
+<content src='livroli14.xhtml#Q1-33-339'></content>
 </navPoint> 
 </navMap>
 </ncx>
