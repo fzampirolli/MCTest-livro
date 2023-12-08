@@ -40,4 +40,14 @@ ebook-convert $1.html $1.epub --language en --no-default-epub-cover
 
 rm -rf *.png *.aux */*.aux livro-epub* *.bbl *.lof *.log *.blg *.lol *.maf *.mtc* *.out *.ptc *~ *.toc *.xhtml *.css *.dvi *.tmp *.xref *.idv *.lg *.ncx *.pyg *.4* _min* *.opf
 
+
+git config user.name "fzampirolli"
+git config user.email "fzampirolli@gmail.com"
+
+# mudar <token> 
+git remote set-url origin https://<token>@github.com/fzampirolli/MCTest-livro.git
+
+git commit -m "2ed"
+git push origin main:main
+
 '''
