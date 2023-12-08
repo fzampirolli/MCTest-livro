@@ -33,21 +33,7 @@ pdflatex --shell-escape $1-capa21x29.7orelha.tex
 #tex4ebook -f epub3 $1 mathml
 tex4ebook -f epub3 $1.tex --shell-scape
 
-'''
-latexml --dest=$1.xml $1.tex
-latexmlpost -dest=$1.html $1.xml
-ebook-convert $1.html $1.epub --language en --no-default-epub-cover
-
-rm -rf *.png *.aux */*.aux livro-epub* *.bbl *.lof *.log *.blg *.lol *.maf *.mtc* *.out *.ptc *~ *.toc *.xhtml *.css *.dvi *.tmp *.xref *.idv *.lg *.ncx *.pyg *.4* _min* *.opf
-
-
-git config user.name "fzampirolli"
-git config user.email "fzampirolli@gmail.com"
-
-# mudar <token> 
-git remote set-url origin https://<token>@github.com/fzampirolli/MCTest-livro.git
-
-git commit -m "2ed"
-git push origin main:main
-
-'''
+#latexml --dest=$1.xml $1.tex
+#latexmlpost -dest=$1.html $1.xml
+#ebook-convert $1.html $1.epub --language en --no-default-epub-cover
+# rm -rf *.png *.aux */*.aux livro-epub* *.bbl *.lof *.log *.blg *.lol *.maf *.mtc* *.out *.ptc *~ *.toc *.xhtml *.css *.dvi *.tmp *.xref *.idv *.lg *.ncx *.pyg *.4* _min* *.opf
