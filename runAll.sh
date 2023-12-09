@@ -38,11 +38,14 @@ latexml --dest=$1.xml $1.tex
 latexmlpost -dest=$1.html $1.xml
 ebook-convert $1.html $1.epub --language en --no-default-epub-cover
 
-rm -rf *.png *.aux */*.aux livro-epub* *.bbl *.lof *.log *.blg *.lol *.maf *.mtc* *.out *.ptc *~ *.toc *.xhtml *.css *.dvi *.tmp *.xref *.idv *.lg *.ncx *.pyg *.4* _min* *.opf
-
-
 # para mover para o github
 git commit -am "2ed"
 git push origin main
 
 '''
+
+rm -rf *.png *.aux */*.aux livro-epub* *.bbl *.lof *.log *.blg *.lol *.maf *.mtc* *.out *.ptc *.toc *.xhtml *.css *.dvi *.tmp *.xref *.idv *.lg *.ncx *.pyg *.4* _min* *.opf
+
+cp *.pdf /Users/fz/PycharmProjects/mctest/book/2ed-br_in_progress/
+cp *.html /Users/fz/PycharmProjects/mctest/book/2ed-br_in_progress/
+cp *.epub /Users/fz/PycharmProjects/mctest/book/2ed-br_in_progress/

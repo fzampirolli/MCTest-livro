@@ -97,7 +97,7 @@ Nos exemplos ilustrativos apresentados, o método \verb|area_circulo| pode ser u
 
 \begin{mybox}{corObs}{\textbf{Observações:\\\vspace{-3mm}\hrule\vspace{1mm}}}
 \begin{enumerate}
-    \item A descrição da questão no MCTest (campo ``Descrição'' na Figura \ref{fig:cap04_figQuestaoAtualiza}), que pode incluir textos em \LaTeX{} integrados com códigos em Python, é a parte mais importante na criação de questões paramétricas. A partir deste capítulo, não será mais apresentada uma captura de tela do formulário da questão, como foram realizados nos dois capítulos anteriores. Para criar uma QM ou QT paramétrica basta alterar o parâmetro ``Paramétrica'' de ``Não'' para ``Sim'', nas telas de criação ou alteração de questão;
+    \item A descrição da questão no MCTest (campo ``Descrição'' na Figura \ref{fig:cap04_figQuestaoAtualiza}), que pode incluir textos em \LaTeX{} integrados com códigos em Python, é a parte mais importante na criação de questões paramétricas. A partir deste capítulo, não será mais apresentada uma captura de tela da questão, como foram realizados nos dois capítulos anteriores. Para criar uma QM ou QT paramétrica basta alterar o parâmetro ``Paramétrica'' de ``Não'' para ``Sim'', nas telas de criação ou alteração de questão;
     \item A parte mais complicada na criação de questões paramétricas no MCTest é lidar com possíveis erros que podem ser retornados pelo MCTest ao tentar criar o PDF. Para tentar resolver esse problema, foi criado um \textit{notebook} no Google Colab, acessado ao clicar no botão ``Compile-Colab'' nas telas de alteração de questão, como apresentado na Figura \ref{fig:cap04_figQuestaoAtualiza}.
 \end{enumerate}
 \end{mybox}
@@ -196,7 +196,7 @@ Primeiramente, é necessário criar uma variável global chamada \verb|correctAn
 No que diz respeito às alternativas da questão, é importante incluir na primeira alternativa o conteúdo da linha 17, sem o comentário. Na segunda alternativa, deve-se utilizar o conteúdo da linha 18, também sem o comentário. Na linha 18, o método irá gerar três valores aleatórios distintos entre \verb|correctAnswer|$-10$ e \verb|correctAnswer|$+10$. 
 
 É importante observar que, nesse caso, as questões geradas não são consideradas ``ótimas'', pois os estudantes podem deduzir que a resposta correta não está nos extremos dos valores fornecidos, conforme ilustrado na Figura \ref{fig:cap05_questaoQM_AreaCirculoPDF}. 
-Em QMs, o texto em verde (\verb|#2450|) representa a identificação da questão no banco de dados. Azul (\verb|#0|) representa a primeira alternativa no formulário de criação ou alteração da questão. As demais alternativas em vermelho (\verb|*1|, \verb|*2| e \verb|*3|) são as três alternativas erradas criadas pelo método \verb|createWrongAnswers|.
+Em QMs, o texto em verde (\verb|#2450|) representa a identificação da questão no banco de dados. Azul (\verb|#0|) representa a primeira alternativa na tela de criação ou alteração da questão. As demais alternativas em vermelho (\verb|*1|, \verb|*2| e \verb|*3|) são as três alternativas erradas criadas pelo método \verb|createWrongAnswers|.
 
 
 \begin{listing}[!ht]

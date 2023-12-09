@@ -75,7 +75,7 @@ A primeira barra de rolagem abaixo do botão ``Criar-PDF'' na Figura \ref{fig:ca
 \end{mybox}
 
 \begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
-A segunda barra de rolagem, localizada abaixo do botão ``Criar-PDF'' na Figura \ref{fig:cap06_figExameAtualiza1}, tem a função de configurar a geração de exames adaptativos, levando em consideração exames anteriores. Por enquanto, esse recurso se aplica apenas a exames compostos exclusivamente por questões de múltipla escolha disponíveis no banco de dados. Essa barra de rolagem permite selecionar a quantidade de exames anteriores a serem considerados, variando de zero a 20 exames, ordenados pela data especificada no formulário do exame. O valor padrão é zero, indicando que o teste não será adaptativo. Detalhes mais aprofundados sobre esse recurso serão abordados em capítulos futuros.
+A segunda barra de rolagem, localizada abaixo do botão ``Criar-PDF'' na Figura \ref{fig:cap06_figExameAtualiza1}, tem a função de configurar a geração de exames adaptativos, levando em consideração exames anteriores. Por enquanto, esse recurso se aplica apenas a exames compostos exclusivamente por questões de múltipla escolha disponíveis no banco de dados. Essa barra de rolagem permite selecionar a quantidade de exames anteriores a serem considerados, variando de zero a 20 exames, ordenados pela data especificada na tela do exame. O valor padrão é zero, indicando que o teste não será adaptativo. Detalhes mais aprofundados sobre esse recurso serão abordados em capítulos futuros.
 \end{mybox}
 
 Ao acionar o botão ``Criar-PDF'' na Figura \ref{fig:cap06_figExameAtualiza1}, será gerado um arquivo PDF para cada turma. Se houver mais de uma turma vinculada ao exame, o navegador irá retornar um arquivo ZIP contendo todos os arquivos PDF. Esse arquivo em formato PDF, ou o arquivo ZIP, também serão enviados para o e-mail do professor. Para imprimir o PDF, siga as seguintes orientações: 
@@ -145,7 +145,7 @@ Na Figura \ref{fig:cap06_figExameAtualizaTurmas}, também são apresentados os s
   \label{fig:cap06_figExameAtualizaTurmas}\vspace{-3mm}
 \end{figure}
 
-\section{Recorte III da tela de exame -- tópicos}
+\section{Recorte III da tela de exame -- tópicos}\label{sec:exameTopicos}
 
 No MCTest 5.3, foi adicionada uma nova área à tela do exame, que permite a seleção dos tópicos da disciplina, ver Figura \ref{fig:cap06_figExameAtualizaTopicos}. Esse recurso se mostrou necessário, pois a tela anterior estava demorando muito para carregar todas as questões cadastradas nos tópicos da disciplina. Agora, o professor pode primeiro escolher o(s) tópico(s), clicar no botão ``Salvar'' e, no próximo Recorte IV da tela, serão apresentadas apenas as questões correspondentes ao(s) tópico(s) selecionado(s).
 

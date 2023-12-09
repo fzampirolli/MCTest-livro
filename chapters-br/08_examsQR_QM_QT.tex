@@ -6,7 +6,7 @@ Esse estilo de exame com QR+QM tem sido amplamente utilizado na Especialização
 
 Além das QMs, também é possível incluir questões dissertativas (QTs) nos exames, após a apresentação das QMs. Essa abordagem permite uma maior diversidade nos tipos de questões e uma avaliação mais abrangente das habilidades dos estudantes.
 
-No Capítulo \ref{ch:exames} -- \nameref{ch:exames}, foi introduzido como criar exames contendo QR+QM, abordando detalhes sobre o formulário do exame. Agora, será colocada em prática a criação de exemplos de exames contendo QR+QM+QT, além de detalhar o processo de correção automática.
+No Capítulo \ref{ch:exames} -- \nameref{ch:exames}, foi introduzido como criar exames contendo QR+QM, abordando detalhes sobre a tela do exame. Agora, será colocada em prática a criação de exemplos de exames contendo QR+QM+QT, além de detalhar o processo de correção automática.
 
 \section{Criando QMs e uma QT}\label{sec:questoesQM_QT}
 
@@ -111,9 +111,14 @@ um papel fundamental.
 \label{lst:questaoQT_exata}
 \end{listing}
 
+Após importar esse arquivo TXT com as novas questões no tópico ``DE-TIC'' da ``Disciplina Exemplo'', criar um novo exame. Antes disso, crie uma turma de teste para essa disciplina. Ao abrir a tela para atualizar esse exame, escolha o tópico ``DE-TIC'' e, em seguida, clique no botão ``Salvar''. Dessa forma, todas as questões recentemente criadas desse tópico irão aparecer na tela do exame. Selecione essas questões, conforme Figura \ref{fig:cap08_figexameQR_QTquestoes}. Em seguida, defina duas questões em cada nível de dificuldade, conforme ilustrado na Figura \ref{fig:cap08_figexameQR_QT}. Além disso, inclua uma questão dissertativa (QT) como exemplo. Certifique-se de marcar a opção ``Respostas/Questões/Ambos=Ambos'' para incluir tanto o QR quanto as questões (QM e QT) no exame. Mais informações sobre essa configuração podem ser encontradas na Seção \ref{sec:exameDetalhes} -- \nameref{sec:exameDetalhes}.
 
-
-Ao criar o exame, selecione as sete QMs, escolhendo duas questões em cada nível de dificuldade, conforme ilustrado na Figura \ref{fig:cap08_figexameQR_QT}. Além disso, inclua uma QT como exemplo. Certifique-se de marcar a opção ``Respostas/Questões/Ambos=Ambos'' para incluir tanto o QR quanto as questões (QM e QT) no exame. Mais informações sobre essa configuração podem ser encontradas na Seção \ref{sec:exameDetalhes} -- \nameref{sec:exameDetalhes}.
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap08_figexameQR_QTquestoes.png}
+   \caption{Recorte da tela com as quesões escolhidas do exame.}
+\label{fig:cap08_figexameQR_QTquestoes}
+\end{figure}
 
 \begin{figure}[!ht]
   \centering
@@ -156,11 +161,13 @@ Após clicar em ``Criar-Variações'', selecionando antes a opção ``Template''
 {\footnotesize
 \begin{verbatim}
 variation Q1 Q2 Q3 Q4 Q5 Q6    Q7     K1        K2        K3        K4        K5        K6
-    0      A  B  C  A  A  A exata 245604231 245540123 245823041 245703214 245904132 246002413
-    1      C  A  B  E  A  E exata 245612043 245503421 245830214 245741320 246104132 246032140
+    0      A  D  D  E  B  A exata 245604231 245521304 245843102 245723410 246130421 246001432
+    1      D  D  E  C  B  E exata 245521403 245632104 245814230 245721034 246010243 246113240
 \end{verbatim}
 }
 \end{myboxCode}
+%    0      A  B  C  A  A  A exata 245604231 245540123 245823041 245703214 245904132 246002413
+%    1      C  A  B  E  A  E exata 245612043 245503421 245830214 245741320 246104132 246032140
 
 \begin{figure}[!ht]
   \centering
@@ -174,17 +181,21 @@ No arquivo em questão, a primeira coluna \verb|variation| apresenta a variaçã
 
 A questão \verb|Q7| é uma QT e foi definida em seu enunciado a sequência \verb|%%{exata}%%|, indicando para o MCTest que essa questão tem uma resposta exata contendo o texto ``exata''. É importante ressaltar que é possível incluir questões paramétricas, onde cada variação pode apresentar uma resposta correta diferente. Essa flexibilidade é discutida em detalhes no trabalho de \citeonline{2020:Zampirolli.Batista.ea}, que descreve a aplicação dessas técnicas na disciplina de Cálculo 1. Na parte de experimentos deste livro, essas abordagens serão apresentadas de forma mais detalhada, explorando suas aplicações e resultados.
 
-Após as respostas corretas, são criadas novas colunas de \verb|K1| até \verb|K6| para detalhar o sorteio realizado em cada variação do exame para as QMs. Por exemplo, na variação 1 (segunda variação), a questão \verb|K1| tem o valor 245612043. Como são QMs com 5 alternativas, o valor 12043 indica a ordem das alternativas da questão 2456 (ID da questão no banco de dados). Sabendo que a alternativa correta sempre é a primeira (índice 0), pode-se concluir que a alternativa correta para essa questão é a letra C. Portanto, a alternativa A corresponde à segunda alternativa no banco de dados (índice 1), a alternativa B corresponde à terceira (índice 2), a alternativa C corresponde à primeira correta (índice 0), a alternativa D corresponde à quinta (índice 4) e a alternativa E corresponde à quarta (índice 3), resultando na sequência 12043. 
+Após as respostas corretas, são criadas novas colunas de \verb|K1| até \verb|K6| para detalhar o sorteio realizado em cada variação do exame para as QMs. Por exemplo, na variação 1 (segunda variação), a questão \verb|K1| tem o valor 245521403. Como são QMs com 5 alternativas, o valor 21403 indica a ordem das alternativas da questão 2455 (ID da questão no banco de dados). Sabendo que a alternativa correta sempre é a primeira (índice 0), pode-se concluir que a alternativa correta para essa questão é a letra D. Portanto, a alternativa A corresponde à terceira alternativa no banco de dados (índice 2), a alternativa B corresponde à segunda (índice 1), a alternativa C corresponde à quinta alternativa (índice 4), a alternativa D é a correta (índice 0) e a alternativa E corresponde à quarta (índice 3), resultando na sequência 21403. 
 
-Ao analisar o sorteio das questões em ambas as variações, foram selecionadas sete QMs. No entanto, para cada exame, apenas seis questões serão sorteadas, conforme a configuração previamente definida. No arquivo CSV, é possível observar que apenas a questão \verb|Q5| apresentou variações diferentes das demais questões (consulte a coluna \verb|K5|, com questões de ID 2459 e 2461).
+Ao analisar o sorteio das questões em ambas as variações, foram selecionadas sete QMs. No entanto, para cada exame, apenas seis questões serão sorteadas, conforme a configuração previamente definida. No arquivo CSV, é possível observar que apenas as questões \verb|Q3| e \verb|Q4| apresentaram variações diferentes (consulte as colunas \verb|K3| e \verb|K4|, com questões de ID 2458 e 2457, intercaladas nestas colunas). No entanto, em todas as questões houve embaralhamento das alternativas.
 
 Uma estrutura de atribuição de pesos diferentes para cada alternativa marcada é detalhada no trabalho de  \citeonline{2020:Zampirolli.Batista.ea}, onde são apresentadas abordagens para avaliar o desempenho dos estudantes considerando a relevância das respostas em QMs.
 
 \begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
 É extremamente importante verificar se o gabarito gerado corresponde ao PDF que será distribuído aos estudantes.
 \begin{enumerate}
+
+%  #E485#V61031 -- 2023-12-09 -- 10:59:04
+%  #E477#V60970 -- 2023-07-09 -- 14:58:34
+
 \item O ID da variação será alterado toda vez que o botão ``Criar-Variações'' for acionado;
-\item Esse número de ID também será impresso no PDF gerado, abaixo do cabeçalho do exame, em vermelho. Por exemplo, {\color{red} \verb|#E477#V60970 -- 2023-07-09 -- 14:58:34|}. No exemplo mencionado, o exame possui o ID 477 e a variação é 60970;
+\item Esse número de ID também será impresso no PDF gerado, abaixo do cabeçalho do exame, em vermelho. Por exemplo, {\color{red} \verb|#E485#V61031 -- 2023-12-09 -- 10:59:04|}. No exemplo mencionado, o exame possui o ID 485 e a variação é 61031;
 \item No momento em que o botão ``Criar-Variações'' é acionado, uma ``fotografia'' das questões selecionadas no exame é armazenada no banco de dados para cada variação. Essa ``fotografia'' representa o estado atual das questões e é independente de eventuais alterações realizadas posteriormente pelo coordenador da disciplina ou professor que criou alguma destas questões. Esse recurso de segurança garante que as variações do exame permaneçam consistentes, mesmo que haja modificações nas questões originais.
 \end{enumerate}
 \end{mybox}
@@ -207,9 +218,9 @@ Além disso, é válido ressaltar que será criado um PDF para cada turma seleci
 \label{fig:cap08_figexameQR_QM_QT_PDF}
 \end{figure}
 
-Após a geração do PDF do exame, será enviado por e-mail ao professor o arquivo \LaTeX{} correspondente a cada turma selecionada. Esse arquivo pode ser útil caso o professor deseje realizar alterações manuais no exame, embora seja importante ressaltar que o QRcode é específico de cada estudante, para garantir a correção automática. No exemplo fornecido, o arquivo gerado é o \verb|_e477_class_670_varID_60970.tex|. 
+Após a geração do PDF do exame, será enviado por e-mail ao professor o arquivo \LaTeX{} correspondente a cada turma selecionada. Esse arquivo pode ser útil caso o professor deseje realizar alterações manuais no exame, embora seja importante ressaltar que o QRcode é específico de cada estudante, para garantir a correção automática. No exemplo fornecido, o arquivo gerado é o \verb|_e485_class_671_varID_61031.tex|. 
 
-Além do arquivo \LaTeX{}, o e-mail também conterá um arquivo CSV anexado, que apresenta as variações sorteadas para cada estudante. No exemplo mencionado, o arquivo é denominado \verb|report_Exam_477_varID_60970_students_variations.csv|. Caso haja mais turmas selecionadas para o exame, todos os estudantes de todas as turmas serão listados em um único arquivo CSV, que corresponde ao exame com o ID 477.
+Além do arquivo \LaTeX{}, o e-mail também conterá um arquivo CSV anexado, que apresenta as variações sorteadas para cada estudante. No exemplo mencionado, o arquivo é denominado \verb|report_Exam_485_varID_61031_students_variations.csv|. Caso haja mais turmas selecionadas para o exame, todos os estudantes de todas as turmas serão listados em um único arquivo CSV, que corresponde ao exame com o ID 485.
 
 % melhorar escrita formal e científica, mantendo a formatação LaTex: 
 Ao observar a Figura \ref{fig:cap08_figexameCriarPDF_Email}, é possível verificar um trecho do e-mail encaminhado ao professor após acionar o botão ``Criar-PDF'' contendo os três arquivos a seguir:
@@ -217,10 +228,10 @@ Ao observar a Figura \ref{fig:cap08_figexameCriarPDF_Email}, é possível verifi
 \begin{myboxCode}{corCSV}{\textbf{Arquivos anexados ao e-mail enviado ao professor}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-_e477_varID_60970_class_670.pdf
-_e477_varID_60970_class_670.tex
-_e477_varID_60970_class_670_students_variations.csv
-_e477_varID_60970_class_670_variations.csv
+_e485_varID_61031_class_671.pdf
+_e485_varID_61031_class_671.tex
+_e485_varID_61031_class_671_students_variations.csv
+_e485_varID_61031_class_671_variations.csv
 \end{verbatim}
 \end{myboxCode}
  
@@ -232,19 +243,19 @@ _e477_varID_60970_class_670_variations.csv
 \end{figure}
 
 
-\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e477\_varID\_60970\_students\_variations.csv}, com as variações de cada estudante}}\vspace{3mm}
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e485\_varID\_61031\_students\_variations.csv}, com as variações de cada estudante}}\vspace{3mm}
 \hrule
 \begin{verbatim}
 Name                          Variation
-Estudante Exemplo Sobrenome      1
+Estudante Exemplo Sobrenome      0
 \end{verbatim}
 \end{myboxCode}
 
-\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e477\_varID\_60970\_variations.csv}, com as variações de cada estudante, com turma e soma das notas de exames anteriores}}\vspace{3mm}
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e485\_varID\_61031\_variations.csv}, com as variações de cada estudante, com turma e soma das notas de exames anteriores}}\vspace{3mm}
 \hrule
 \begin{verbatim}
 Room           ID     Name                 Variation SumLatestGrades
-fz-turmaTeste 00001 Estudante Exemplo Sobrenome 1          0
+fz-turmaTeste 00001 Estudante Exemplo Sobrenome 0          0
 \end{verbatim}
 \end{myboxCode}
 
@@ -263,7 +274,7 @@ Ao corrigir exames que contêm QR e QMs utilizando o MCTest, o processo é mais 
 
 O gabarito de cada exame é armazenado no servidor do MCTest. Ele é identificado através da decodificação do QRcode, sendo criptografado e compactado, como ilustrado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDF}.
 
-É possível verificar as respostas correspondentes ao gabarito apresentado no CSV na Seção \ref{sec:QMgabarito} -- \nameref{sec:QMgabarito}, considerando a variação 1, conforme apresentado no CSV da seção anterior. Portanto, as respostas para as questões \verb|Q1| até \verb|Q7| são, respectivamente: \verb|C, A, B, E, A, E, exata|.
+É possível verificar as respostas correspondentes ao gabarito apresentado no CSV na Seção \ref{sec:QMgabarito} -- \nameref{sec:QMgabarito}, considerando a variação 0, conforme apresentado no CSV da seção anterior. Portanto, as respostas para as questões \verb|Q1| até \verb|Q7| são, respectivamente: \verb|A, D, D, E, B, A, exata|.
 
 Imprimindo o PDF apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDF}, selecionando a opção ``Retorno=Sim'' e salvando o exame, preenchendo as questões, digitalizando e enviando para o botão ``Upload-PDF'',  o estudante receberá o \textit{feedback} apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} por e-mail.
 
@@ -280,15 +291,15 @@ Além disso, o professor receberá as correções realizadas em um arquivo ZIP, 
 \begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar a correção do exame no botão ``Upload-PDF''}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-studentEmail_e477.zip
-_e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN__.csv
-_e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_irt.csv
-_e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_p001_s1_q006.png
-_e477_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_statistics.csv
+studentEmail_e485.zip
+_e485_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN__.csv
+_e485_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_irt.csv
+_e485_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_p001_s1_q006.png
+_e485_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_statistics.csv
 \end{verbatim}
 \end{myboxCode}
 
-O arquivo \verb|studentEmail_e477.zip| contém todos os arquivos PDF enviados aos estudantes, caso tenham escolhido ``Retorno=SIM'' no formulário do exame. Um exemplo é apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan}, exibindo também as questões, as respostas do estudante e a alternativa correta. Esses enunciados são incluídos no PDF quando a caixa abaixo do botão ``Upload-PDF'' é marcada; caso contrário, apenas a imagem, as informações do estudante e sua nota são enviadas. 
+O arquivo \verb|studentEmail_e485.zip| contém todos os arquivos PDF enviados aos estudantes, caso tenham escolhido ``Retorno=SIM'' na tela do exame. Um exemplo é apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan}, exibindo também as questões, as respostas do estudante e a alternativa correta. Esses enunciados são incluídos no PDF quando a caixa abaixo do botão ``Upload-PDF'' é marcada; caso contrário, apenas a imagem, as informações do estudante e sua nota são enviadas. 
 
 \begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
   Um destaque incluído na versão mais recente do MCTest é apresentar as questões e as alternativas armazenadas nas variações salvas no banco de dados. Ou seja, quando há questões paramétricas, é exibida a ``fotografia'' da questão criada no momento em que o botão ``Criar-Variações'' foi pressionado. O \textit{feedback} é apresentado obtendo o atributo também da ``fotografia'' gerada, que agora pode ser parametrizado, sendo incluído no PDF a ser enviado ao estudante. Para isso, foi necessário incluir no QRCode informações da chave da variação do exame sorteada para cada estudante.
@@ -303,16 +314,17 @@ Conforme explicado na Seção \ref{sec:CSVcorrecoesQR} -- \nameref{sec:CSVcorrec
 \hrule
 {\scriptsize
 \begin{verbatim}
-Pag ID Resp Quest Inv Grad Q1  Q2  Q3  Q4 Q5 Q6     K1        K2        K3        K4        K5        K6
-1  001    5     6   1   1 E/C D/A C/B B/E A 2/E 245612043 245503421 245830214 245741320 246104132 246032140
+Pag ID Resp Quest Inv Grad Q1 Q2 Q3  Q4  Q5  Q6  K1        K2        K3        K4        K5        K6
+1   1  5    6     1   1   E/A D  C/D B/E A/B 2/A 245604231 245521304 245843102 245723410 246130421 246001432
 \end{verbatim}
 }
 \end{myboxCode}
+%1  001    5     6   1   1 E/C D/A C/B B/E A 2/E 245612043 245503421 245830214 245741320 246104132 246032140
 
 
 % melhorar escrita formal e científica, mantendo a formatação LaTex: 
 
-No arquivo em questão, é possível observar nas colunas \verb|Q1| até \verb|Q6| a notação apresentada na Seção \ref{sec:CSVcorrecoesQR}, agora com a adição de \verb|resposta marcada/resposta correta|. Por exemplo, na questão \verb|Q1| tem a notação \verb|E/C|, indicando que a alternativa marcada pelo estudante foi a \verb|E|, enquanto a resposta correta é a \verb|C|. Também é possível notar a presença de uma questão inválida na coluna \verb|Inv|, referente à questão \verb|Q6|, que apresenta o conteúdo \verb|2/E|. Isso indica que duas alternativas foram marcadas, sendo que na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} é possível observar que a alternativa \verb|A| foi marcada, mas também foi realizada uma pequena marcação na alternativa \verb|E|, invalidando a questão. Neste exemplo, a única marcação correta é na questão \verb|Q5|.
+No arquivo em questão, é possível observar nas colunas \verb|Q1| até \verb|Q6| a notação apresentada na Seção \ref{sec:CSVcorrecoesQR}, agora com a adição de \verb|resposta marcada/resposta correta|. Por exemplo, na questão \verb|Q1| tem a notação \verb|E/A|, indicando que a alternativa marcada pelo estudante foi a \verb|E|, enquanto a resposta correta é a \verb|A|. Também é possível notar a presença de uma questão inválida na coluna \verb|Inv|, referente à questão \verb|Q6|, que apresenta o conteúdo \verb|2/E|. Isso indica que duas alternativas foram marcadas, sendo que na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} é possível observar que a alternativa \verb|A| foi marcada, mas também foi realizada uma pequena marcação na alternativa \verb|E|, invalidando a questão. Neste exemplo, a única marcação correta é na questão \verb|Q2|.
 
 A Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} apresenta um relatório com os dados do estudante, a nota obtida e os enunciados das questões, incluindo as marcações realizadas e a alternativa correta de cada questão. As colunas \verb|K1| até \verb|K6| foram previamente explicadas na Seção \ref{sec:QMgabarito} -- \nameref{sec:QMgabarito}.
 
@@ -332,8 +344,8 @@ _e482_varID_61011_adaptive_test.csv
 _e482_varID_61011_adaptive_test_variations_by_bloom.csv
 _e482_varID_61011_class_669.pdf
 _e482_varID_61011_class_669.tex
-_e482_varID_61011_class_670.pdf
-_e482_varID_61011_class_670.tex
+_e482_varID_61011_class_671.pdf
+_e482_varID_61011_class_671.tex
 _e482_varID_61011_students_variations.csv
 _e482_varID_61011_variations.csv
 \end{verbatim}
@@ -373,7 +385,7 @@ Variation  VariationID  SumBloomQuestions
 \hrule
 \begin{verbatim}
 RoomID RoomCode      NomeAluno                             EmailAluno               
-670    fz-turmaTeste Estudante Exemplo Sobrenome           fzampirolli@ufabc.edu.br 
+671    fz-turmaTeste Estudante Exemplo Sobrenome           fzampirolli@ufabc.edu.br 
 669    Turma Exemplo João da Silva                         joao@aluno.ufabc.edu.br  
 669    Turma Exemplo Maria da Silva Andrade de S Gonçalves maria@aluno.ufabc.edu.br 
 \end{verbatim}
@@ -383,7 +395,7 @@ RoomID RoomCode      NomeAluno                             EmailAluno
   \hrule
   \begin{verbatim}
 IDExame1 DataExame1 GradeExame1  IDExame2 DataExame2  GradeExame2 
-476      2023-07-06 18.0         477      2023-07-09  1.0         
+476      2023-07-06 18.0         485      2023-12-09  1.0         
 475      2023-04-17              482      2023-11-19  0.0  
 475      2023-04-17              482      2023-11-19  0.0   
 \end{verbatim}
