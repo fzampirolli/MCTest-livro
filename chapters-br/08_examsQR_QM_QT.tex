@@ -286,7 +286,7 @@ Imprimindo o PDF apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDF}, sel
 \label{fig:cap08_figexameQR_QM_QT_PDFScan} 
 \end{figure}
 
-Além disso, o professor receberá as correções realizadas em um arquivo ZIP, conforme detalhado na Seção \ref{sec:examesCorrigirQR}, que conterá os seguintes arquivos:
+Além disso, o professor receberá as correções realizadas em um arquivo ZIP, conforme detalhado na Seção \ref{sec:examesCorrigirQR} -- \nameref{sec:examesCorrigirQR}, que conterá os seguintes arquivos:
  
 \begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar a correção do exame no botão ``Upload-PDF''}}\vspace{3mm}
 \hrule
@@ -324,7 +324,7 @@ Pag ID Resp Quest Inv Grad Q1 Q2 Q3  Q4  Q5  Q6  K1        K2        K3        K
 
 % melhorar escrita formal e científica, mantendo a formatação LaTex: 
 
-No arquivo em questão, é possível observar nas colunas \verb|Q1| até \verb|Q6| a notação apresentada na Seção \ref{sec:CSVcorrecoesQR}, agora com a adição de \verb|resposta marcada/resposta correta|. Por exemplo, na questão \verb|Q1| tem a notação \verb|E/A|, indicando que a alternativa marcada pelo estudante foi a \verb|E|, enquanto a resposta correta é a \verb|A|. Também é possível notar a presença de uma questão inválida na coluna \verb|Inv|, referente à questão \verb|Q6|, que apresenta o conteúdo \verb|2/E|. Isso indica que duas alternativas foram marcadas, sendo que na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} é possível observar que a alternativa \verb|A| foi marcada, mas também foi realizada uma pequena marcação na alternativa \verb|E|, invalidando a questão. Neste exemplo, a única marcação correta é na questão \verb|Q2|.
+No arquivo em questão, é possível observar nas colunas \verb|Q1| até \verb|Q6| a notação apresentada na Seção \ref{sec:CSVcorrecoesQR} -- \nameref{sec:CSVcorrecoesQR}, agora com a adição de \verb|resposta marcada| / \verb|resposta correta|. Por exemplo, na questão \verb|Q1| tem a notação \verb|E/A|, indicando que a alternativa marcada pelo estudante foi a \verb|E|, enquanto a resposta correta é a \verb|A|. Também é possível notar a presença de uma questão inválida na coluna \verb|Inv|, referente à questão \verb|Q6|, que apresenta o conteúdo \verb|2/E|. Isso indica que duas alternativas foram marcadas, sendo que na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} é possível observar que a alternativa \verb|A| foi marcada, mas também foi realizada uma pequena marcação na alternativa \verb|E|, invalidando a questão. Neste exemplo, a única marcação correta é na questão \verb|Q2|.
 
 A Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} apresenta um relatório com os dados do estudante, a nota obtida e os enunciados das questões, incluindo as marcações realizadas e a alternativa correta de cada questão. As colunas \verb|K1| até \verb|K6| foram previamente explicadas na Seção \ref{sec:QMgabarito} -- \nameref{sec:QMgabarito}.
 
@@ -333,100 +333,90 @@ A Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} apresenta um relatório com os
 
 Abaixo do botão ``Criar-PDF'' na tela de exame, conforme ilustrado na Figura \ref{fig:cap06_figExameAtualiza1}, encontram-se duas barras de rolagem. A primeira permite definir o tamanho da fonte do arquivo PDF gerado com o exame. A segunda barra de rolagem possibilita definir o número de exames anteriores realizados por cada estudante a ser considerado. Por exemplo, se o valor selecionado for 1, será considerada apenas a nota do último exame para definir qual variação deste será destinada aos estudantes.
 
-Para que este método de exame adaptativo funcione adequadamente, é necessário definir a taxonomia de Bloom para cada questão, nos 6 possíveis níveis: lembrar, compreender, aplicar, analisar, avaliar e criar. Cada um desses níveis recebe um valor de 1 a 6, respectivamente. Quando, para cada nível de dificuldade, são escolhidas várias questões com taxonomias distintas, cada variação do exame poderá apresentar pesos diferentes considerando essas taxonomias. Por exemplo, se um exame definir 5 questões com dificuldade 1, porém houver 10 questões marcadas para esse mesmo nível 1, além disso, foi decidida a criação de 20 variações de exames, teremos então variações com somatórios distintos dos pesos dos níveis dessa taxonomia.
+Para que este método de exame adaptativo funcione adequadamente, é necessário definir a taxonomia de Bloom para cada questão, nos 6 possíveis níveis: lembrar, compreender, aplicar, analisar, avaliar e criar. Cada um desses níveis recebe um valor de 1 a 6, respectivamente. Quando, para cada nível de dificuldade, são escolhidas várias questões com taxonomias distintas, cada variação do exame poderá apresentar pesos diferentes considerando essas taxonomias. Por exemplo, se um exame definir 5 questões com dificuldade 1, porém houver 10 questões marcadas para esse mesmo nível 1, além disso, foi decidida a criação de 20 variações de exames, teremos então variações com somatórios com diferentes pesos dos níveis dessa taxonomia.
 
-Para ilustrar esse processo, foi criado um exame com 3 QM e 1 QT, todas com dificuldade 1. Além disso, foram selecionadas 6 QM para serem sorteadas, com apenas 3 delas sendo escolhidas com base no desempenho do estudante em exames recentes. Na barra de rolagem, foi escolhido o número 6 para o exame adaptativo, ou seja, serão somadas as 6 últimas notas dos exames realizados pelo estudante. Foram solicitadas a criação de 20 variações de exames após clicar no botão ``Criar-Variações''. Também foram selecionadas duas turmas. Após clicar no botão ``Criar-PDF'', os arquivos foram enviados para o email do professor, além de um \textit{download} de um arquivo compactado contendo os seguintes arquivos.
+Para ilustrar esse processo, foi criado um exame com 3 QM e 1 QT, todas com dificuldade 1. Além disso, foram selecionadas 6 QM para serem sorteadas, com apenas 3 delas sendo escolhidas com base no desempenho do estudante em exames recentes. Na barra de rolagem, foi escolhido o número 2 para o exame adaptativo, ou seja, serão somadas as 2 últimas notas dos exames realizados pelo estudante. Foram solicitadas a criação de 20 variações de exames após clicar no botão ``Criar-Variações''. Também foram selecionadas duas turmas. Após clicar no botão ``Criar-PDF'', os arquivos foram enviados para o email do professor, além de um \textit{download} de um arquivo compactado contendo os seguintes arquivos.
 
 \begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar criar PDF com o botão``Criar-PDF''}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-_e482_varID_61011_adaptive_test.csv
-_e482_varID_61011_adaptive_test_variations_by_bloom.csv
-_e482_varID_61011_class_669.pdf
-_e482_varID_61011_class_669.tex
-_e482_varID_61011_class_671.pdf
-_e482_varID_61011_class_671.tex
-_e482_varID_61011_students_variations.csv
-_e482_varID_61011_variations.csv
+_e486_varID_61093_adaptive_test.csv
+_e486_varID_61093_adaptive_test_variations_by_bloom.csv
+_e486_varID_61093_class_671.pdf
+_e486_varID_61093_class_671.tex
+_e486_varID_61093_class_672.pdf
+_e486_varID_61093_class_672.tex
+_e486_varID_61093_students_variations.csv
+_e486_varID_61093_variations.csv
 \end{verbatim}
 \end{myboxCode}
 
-O primeiro arquivo \verb|_e482_varID_61011_adaptive_test.csv| possui na primeira coluna as 20 variações do exame, na segunda coluna a chave das variações no BD e na terceira coluna a soma dos níveis da taxonomia de Bloom para as questões sorteadas para cada variação, em ordem crescente. Observam-se as questões com variações 7 e 13 com o mesmo nível de dificuldade 7. Além disso, apenas a variação 9 tem dificuldade 15.
+O primeiro arquivo \verb|_e486_varID_61093_adaptive_test_variations_by_bloom.csv| possui na primeira coluna as 20 variações do exame, na segunda coluna a chave das variações no BD e na terceira coluna a soma dos níveis da taxonomia de Bloom para as questões sorteadas para cada variação, em ordem crescente. Observam-se as questões com variações 4, 9, 12, 17 e 19 com o mesmo nível de dificuldade 8. Além disso, as variações 2, 5, 14 e 18 com dificuldade 15.
 
-\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e482\_varID\_61011\_adaptive\_test.csv}}}\vspace{3mm}
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e486\_varID\_61093\_adaptive\_test\_variations\_by\_bloom}}}\vspace{3mm}
 \hrule
 \begin{verbatim}
 Variation  VariationID  SumBloomQuestions
- 7            61017        7
-13            61023        7
- 6            61016        8
-12            61022        9
-14            61024        9
-15            61025        9
-17            61027        9
- 3            61013       10
- 4            61014       10
-20            61030       10
-16            61026       11
-18            61028       11
- 2            61012       12
- 8            61018       12
-11            61021       12
- 1            61011       13
-10            61020       13
-19            61029       13
- 5            61015       14
- 9            61019       15
+ 4         61096         8
+ 9         61101         8
+12         61104         8
+17         61109         8
+19         61111         8
+ 6         61098         9
+15         61107         9
+ 1         61093        10
+ 3         61095        11
+11         61103        11
+13         61105        11
+16         61108        11
+ 7         61099        12
+10         61102        12
+ 8         61100        13
+20         61112        13
+ 2         61094        15
+ 5         61097        15
+14         61106        15
+18         61110        15
 \end{verbatim}
 \end{myboxCode}
 
 
-\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e482\_varID\_61011\_adaptive\_test.csv}}}\vspace{3mm}
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e486\_varID\_61093\_adaptive\_test.csv}}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-RoomID RoomCode      NomeAluno                             EmailAluno               
-671    fz-turmaTeste Estudante Exemplo Sobrenome           fzampirolli@ufabc.edu.br 
-669    Turma Exemplo João da Silva                         joao@aluno.ufabc.edu.br  
-669    Turma Exemplo Maria da Silva Andrade de S Gonçalves maria@aluno.ufabc.edu.br 
+RoomID RoomCode      NomeAluno                             EmailAluno
+671    fz-turmaTeste Estudante Exemplo Sobrenome           fzampirolli@gmail.com 
+672    Turma Exemplo João da Silva                         fzampirolli@gmail.com 
+672    Turma Exemplo Maria da Silva Andrade de S Gonçalves fzampirolli@gmail.com    
 \end{verbatim}
 \end{myboxCode}
 
-\begin{myboxCode}{corCSV}{\textbf{Continuação do arquivo \texttt{\_e482\_varID\_61011\_adaptive\_test.csv}}}\vspace{3mm}
+O último valor de cada linha do arquivo \verb|_e486_varID_61093_adaptive_test.csv| representa o somatório das últimas 2 avaliações do estudante. O arquivo \verb|_e486_varID_61093_variations.csv| a seguir resume esses dados, com a variação sorteada para cada estudante. Observa-se que as variações 19 e 17 com a menor soma pela taxonomia de Bloom (8) foram sorteadas para os alunos da turma \verb|Turma Exemplo|.
+
+\begin{myboxCode}{corCSV}{\textbf{Continuação do arquivo \texttt{\_e486\_varID\_61093\_adaptive\_test.csv}}}\vspace{3mm}
   \hrule
   \begin{verbatim}
-IDExame1 DataExame1 GradeExame1  IDExame2 DataExame2  GradeExame2 
-476      2023-07-06 18.0         485      2023-12-09  1.0         
-475      2023-04-17              482      2023-11-19  0.0  
-475      2023-04-17              482      2023-11-19  0.0   
+IDExame1 DataExame1 GradeExame1 IDExame2 DataExame2 GradeExame2 SumLatestGrades
+485      2023-12-07 1.0         486.0    2023-12-09             1.0 
+486      2023-12-09                                             0.0 
+486      2023-12-09                                             0.0
 \end{verbatim}
 \end{myboxCode}
 
 
-\begin{myboxCode}{corCSV}{\textbf{Continuação do arquivo \texttt{\_e482\_varID\_61011\_adaptive\_test.csv}}}\vspace{3mm}
-\hrule
-\begin{verbatim}
-DExame3 DataExame3  SumLatestGrades
-478.0    2023-07-11  19.0
-  
- 
-\end{verbatim}
-\end{myboxCode}
-
-O último valor de cada linha representa o somatório das últimas 6 avaliações do estudante. As avaliações de 4 a 6 não foram apresentadas, pois não tiveram notas associadas. O arquivo \verb|_e482_varID_61011_variations.csv| a seguir resume esses dados, com a variação sorteada para cada estudante. Observa-se que as duas variações (7 e 13) com a menor soma pela taxonomia de Bloom (7) foram sorteadas para os alunos da turma \verb|Turma Exemplo|.
-
-\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e482\_varID\_61011\_variations.csv}}}\vspace{3mm}
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e486\_varID\_61093\_variations.csv}}}\vspace{3mm}
 \hrule
 \begin{verbatim}
 Room          ID  Name                               Variation  SumLatestGrades
-fz-turmaTeste   1 Estudante Exemplo Sobrenome             9            19.0
-Turma Exemplo 123 João da Silva                           7            0.0
-Turma Exemplo 987 Maria da Silva Andrade de S Gonçalves  13            0.0
+fz-turmaTeste   1 Estudante Exemplo Sobrenome            18         1.0
+Turma Exemplo 123 João da Silva                          19         0.0
+Turma Exemplo 987 Maria da Silva Andrade de S Gonçalves  17         0.0
 \end{verbatim}
 \end{myboxCode}
 
 
-Uma parte crucial desse processo adaptativo é a seleção apropriada das questões, classificadas com base na taxonomia de Bloom. É essencial garantir que as questões sejam bem definidas e alinhadas aos objetivos de aprendizagem. Além disso, esse método adaptativo deve motivar os estudantes a permanecerem engajados na disciplina, evitando a imposição de exames excessivamente difíceis como forma de penalização ou demasiadamente fáceis, o que resultaria em atribuição injusta de conceitos.
-
+Uma parte crucial desse processo adaptativo reside na seleção apropriada das questões, classificadas com base na taxonomia de Bloom. É essencial assegurar que as questões sejam precisamente definidas e estejam alinhadas aos objetivos de aprendizagem. Ademais, o método adaptativo em questão deve estimular os estudantes a manterem-se engajados na disciplina, evitando a imposição de exames excessivamente difíceis como forma de penalização ou excessivamente fáceis, o que resultaria em uma atribuição injusta de conceitos. Uma estratégia promissora talvez seja a atribuição de notas de participação, independentemente do desempenho obtido nos exames adaptativos. Dessa forma, essas atividades são consideradas formativas e não avaliativas.
 
 % melhorar escrita formal e científica, mantendo a formatação LaTex: 
 

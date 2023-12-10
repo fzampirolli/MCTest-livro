@@ -1,0 +1,505 @@
+\documentclass[11pt,brazil,a4paper]{exam}
+
+\usepackage[utf8]{inputenc}
+%\usepackage[portuguese]{babel}
+\usepackage[brazilian]{babel}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage[hidelinks]{hyperref}
+%cachedir=./tmp/
+%outputdir=./tmp/
+%\usepackage[outputdir=tmp]{minted}
+%\newcommand{\mintedoptions}{cachedir=./,outputdir=./tmp/_minted/}
+%\usepackage[\mintedoptions]{minted}
+\usepackage[cache=false]{minted}
+
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+
+%sudo apt install linuxbrew-wrapper
+%sudo apt install texlive-extra-utils
+%sudo apt install texlive-font-utils
+
+\usepackage[pdftex]{graphicx}
+\usepackage[dvips]{graphicx}
+\usepackage{epstopdf}
+\graphicspath{{./tmp/}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.eps}
+\usepackage[outdir=./]{epstopdf}
+
+\usepackage{listings} % para códigos
+
+\usepackage[top=5mm, bottom=0mm, left=10mm, right=10mm]{geometry}
+%\textheight=6in
+\usepackage{tikz}
+\usepackage{enumitem}
+%\usepackage[shortlabels]{enumerate}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb,amsthm}
+\usepackage{changepage,ifthen}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{amsfonts}
+\usepackage{multicol}
+
+\usepackage{mathtools}
+\usepackage{siunitx}
+\makeatletter
+\def\zz\ignorespaces{\@ifnextchar-{}{\phantom{-}}}
+\newcolumntype{C}{>{\zz}{c}}
+\makeatother
+
+%\usepackage[T1]{fontenc}
+%\usepackage{times}         
+%\usepackage{multido}  % border
+%\usepackage{pst-barcode}
+
+%\setlength{\textwidth}{185mm}
+%\setlength{\oddsidemargin}{-0.5in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\columnsep}{8mm}
+%\setlength{\topmargin}{-28mm}
+%\setlength{\textheight}{287mm}
+%\setlength{\itemsep}{0in}
+\setlength{\paperheight}{881pt}
+
+\newcommand*\varhrulefill[1][0.4pt]{\leavevmode\leaders\hrule height#1\hfill\kern0pt}
+\def\drawLines#1{{\color{lightgray}\foreach \x in {1,...,#1}{\par\vspace{2mm}\noindent\hrulefill}}}       
+% cyan
+\newcommand{\qid}[1]{\textcolor{white}{{\tiny #1}\hspace{0mm}}} %question identification (invisible text #1)
+\usepackage[table,xcdraw]{xcolor}
+
+%\renewcommand{\thefootnote}{\color{white}{\faGears}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\definecolor{bubbles}{rgb}{0.71, 1.0, 1.0}
+
+\begin{document}
+\pagestyle{empty}
+
+\pagenumbering{gobble}
+%\newgeometry{bottom=0.1cm}
+
+
+%%%%%%%%%%%% algorithms by py2tex https://github.com/zhafen/py2tex
+
+%\NeedsTeXFormat{LaTeX2e}
+%\ProvidesPackage{py2tex}[09/05/2019 v0.0 Macros for py2tex]
+
+                           %~~~~~New commands~~~~~%
+
+%For bold sans serif
+\newcommand \textbs[1]{\textsf{\textbf{#1}}}
+
+\algrenewcommand\algorithmicprocedure{{\textbs{Função}}}
+\algrenewcommand\algorithmicfunction{{\textbs{function}}}
+\algrenewcommand\algorithmicif{{\textbs{Se}}}
+\algrenewcommand\algorithmicthen{{\textbs{Então}}}
+\algrenewcommand\algorithmicelse{{\textbs{Senão}}}
+\algrenewcommand\algorithmicwhile{{\textbs{Enquanto}}}
+\algrenewcommand\algorithmicdo{{\textbs{Faça}}}
+\algrenewcommand\algorithmicend{{\textbs{Fim}}}
+\algrenewcommand\algorithmicrepeat{{\textbs{Faça}}}
+\algrenewcommand\algorithmicuntil{{\textbs{Enquanto}}}
+\algrenewcommand\algorithmicreturn{\State{{\textbs{Retorna}}}}
+
+\algblock[Name]{Start}{End}
+\algblockdefx[NAME]{START}{END}%
+[2][Unknown]{Start #1(#2)}%
+{Ending}
+\algblockdefx[NAME]{}{OTHEREND}%
+[1]{Until (#1)}
+
+                           %~~~~~Operators~~~~~%
+\newcommand{\PyAdd}[0]{+}
+\newcommand{\PyAnd}[0]{\textbf{ and }}
+\newcommand{\PyAnnotation}[2]{\ensuremath{\textbs{variable }#1\colon \texttt{#2}}}
+\newcommand{\PyArg}[1]{\texttt{#1}}
+\newcommand{\PyArgAnnotation}[2]{\ensuremath{\texttt{#1} \colon \texttt{#2}}}
+\newcommand{\PyArgSep}[0]{,~}
+\newcommand{\PyAssign}[2]{\ensuremath{#1 \gets #2}}
+\newcommand{\PyAssignSep}[0]{,~}
+
+\newcommand{\PyCall}[2]{
+	\ifnum\pdfstrcmp{#1}{print}=0
+  	\textbs{output~} { \tt#2}
+	\else
+		\textsc{#1}( {\tt#2} )
+	\fi
+}
+\newcommand{\PyCallSep}[0]{,~}
+
+\newcommand{\PyDiv}[0]{\mathop{\texttt{/}}}
+
+\newcommand{\PyEq}[0]{=}
+\newcommand{\PyExpr}[1]{\ensuremath{#1}}
+
+\newcommand{\PyFalse}[0]{\texttt{false}}
+
+\newcommand{\PyGt}[0]{>}
+\newcommand{\PyGtE}[0]{\ge}
+
+%\newcommand{\PyIn}[0]{}
+%\newcommand{\PyIs}[0]{}
+%\newcommand{\PyIsNot}[0]{}
+
+\newcommand{\PyList}[1]{[#1]}
+\newcommand{\PyListSep}[0]{, }
+\newcommand{\PyLt}[0]{<}
+\newcommand{\PyLtE}[0]{\le}
+
+\newcommand{\PyMod}[0]{\mathop{\textsc{ mod }}}
+\newcommand{\PyMult}[0]{\times}
+
+\newcommand{\PyOr}[0]{\textbf{ or }}
+
+\newcommand{\PyName}[1]{\texttt{#1}}
+%\newcommand{\PyNone}[0]{\textt{}}
+\newcommand{\PyNot}[1]{\textbf{ not }#1}
+\newcommand{\PyNotEq}[0]{\neq}
+%\newcommand{\PyNotIn}[0]{}
+\newcommand{\PyNum}[1]{\texttt{#1}}
+
+\newcommand{\PyPar}[1]{\left ( #1 \right )}
+\newcommand{\PyPow}[0]{\texttt{^}}
+
+\newcommand{\PyStr}[1]{\texttt{``#1''}}
+\newcommand{\PySub}[0]{-}
+\newcommand{\PySubscript}[2]{#1[#2]}
+
+\newcommand{\PyTrue}[0]{\texttt{true}}
+
+\newcommand{\PyUAdd}[1]{+ #1}
+\newcommand{\PyUSub}[1]{- #1}
+
+
+% Linhas verticais
+
+%\PassOptionsToPackage{noend}{algpseudocode}% comment out if want end's to show
+%\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+
+\errorcontextlines\maxdimen
+
+% begin vertical rule patch for algorithmicx (http://tex.stackexchange.com/questions/144840/vertical-loop-block-lines-in-algorithmicx-with-noend-option)
+\makeatletter
+% start with some helper code
+% This is the vertical rule that is inserted
+\newcommand*{\algrule}[1][\algorithmicindent]{\makebox[#1][l]{\hspace*{.5em}\vrule height .75\baselineskip depth .25\baselineskip}}%
+
+\newcount\ALG@printindent@tempcnta
+\def\ALG@printindent{%
+    \ifnum \theALG@nested>0% is there anything to print
+        \ifx\ALG@text\ALG@x@notext% is this an end group without any text?
+            % do nothing
+            \addvspace{-3pt}% FUDGE for cases where no text is shown, to make the rules line up
+        \else
+            \unskip
+            % draw a rule for each indent level
+            \ALG@printindent@tempcnta=1
+            \loop
+                \algrule[\csname ALG@ind@\the\ALG@printindent@tempcnta\endcsname]%
+                \advance \ALG@printindent@tempcnta 1
+            \ifnum \ALG@printindent@tempcnta<\numexpr\theALG@nested+1\relax% can't do <=, so add one to RHS and use < instead
+            \repeat
+        \fi
+    \fi
+    }%
+
+%\usepackage{etoolbox}
+% the following line injects our new indent handling code in place of the default spacing
+\patchcmd{\ALG@doentity}{\noindent\hskip\ALG@tlm}{\ALG@printindent}{}{\errmessage{failed to patch}}
+\makeatother
+% end vertical rule patch for algorithmicx
+
+\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\makeatother
+\cleardoublepage
+\newpage
+
+% drawCircles
+\vspace{-5mm}
+\leavevmode\put(-11,0){\color{black}\circle*{15}}\hspace{-0mm}
+\leavevmode\put(509,0){\color{black}\circle*{15}}
+        \vspace{-1mm}\hspace{5mm}\begin{table}[h]
+\begin{tabular}{|l|p{10.85cm}|c}
+ \cline{1-2}\multirow{7}{*}{\vspace{8mm}\includegraphics[width=2cm]{./figs/ufabc}} 
+&\textbf{Instituto Exemplo} 
+              &\multirow{7}{*}[2.5mm]{\hspace{-2mm}\includegraphics[scale=1.8833333333333335]{./tmp/QRCode_672_486_123.eps}}\\ 
+&\textbf{Curso Exemplo}                        & \\ 
+&\textbf{Disciplina:} Disciplina Exemplo \hfill                        & \\ 
+&\textbf{Prof.:} Francisco Zampirolli   & \\ 
+&\textbf{Turma:} Turma Exemplo
+ \hfill \textbf{Sala:} virtual
+  & \\ 
+&\textbf{Exame:} exameTesteAdaptQR-QM \hfill \textbf{Data:} 09-12-2023           & \\ 
+ \cline{1-2}\multicolumn{2}{|l|}{}      & \\ 
+\multicolumn{2}{|l|}{\textbf{Ass.: }\rule{5cm}{0.1pt}} & \\ 
+ \multicolumn{2}{|l|}{\textbf{\small{Estudante:}} João da Silva \hfill \textbf{\small{ID/RA:}} 123}           & \\ 
+ \cline{1-2}\end{tabular}
+\end{table}
+\footnote[2]{\vspace{10mm}\color{lightgray}\textbf{MCTest:} gerador e corretor de exames disponível para professores - \textbf{\url{www.ufabc.edu.br}}}
+
+
+
+ \vspace{-7mm}\hfill {\tiny {\color{red}\#E486\#V61093 - 2023-12-09 - 16:24:26\hspace{55mm}}}
+
+\vspace{0.4mm}\vspace{1.5mm}
+
+\vspace{-6mm}\begin{center}\textbf{}\end{center}
+\begin{center} 
+
+ \vspace{-5mm} \ \hspace{-7mm} 
+\begin{tikzpicture}[font=\tiny,fill=black]
+  \foreach \numLab in {1,...,3} {
+    \node[inner sep=3pt] at ({(\numLab-1+1) * 0.5},-0.1) {\numLab};
+  }
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,3} {
+           \draw[fill=gray] ({\position * 0.5 - 0.2},-0.2) rectangle ({\position * 0.5+0.2},0.2); 
+           \node[fill=white,draw,circle,inner sep=2.3pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 mm}
+
+ \ \ 
+\end{center}
+
+% drawCircles
+\vspace{-5mm}
+\leavevmode\put(-11,0){\color{black}\circle*{15}}\hspace{-0mm}
+\leavevmode\put(509,0){\color{black}\circle*{15}}
+        
+%drawInstructions
+\vspace{3mm}\noindent{\small\textbf{Instruções:}\vspace{-1mm}
+\begin{enumerate}[label=(\alph*)]
+\itemsep0pt\parskip0pt\parsep0pt
+\item desligar o celular
+\end{enumerate}}\normalsize
+
+            
+
+% QUESTOES DE MULTIPLA ESCOLHA
+
+\\\vspace{2mm}\hspace{-5mm}\noindent\textbf{Questões de Múltipla Escolha:}\vspace{2mm}
+
+
+\hspace{-15mm}{\tiny {\color{white}\@2445}} \hspace{0mm} 1. Terceira questao\vspace{0mm}
+
+\begin{oneparchoices}
+
+\choice 5a alternativa criada
+
+\choice 3a alternativa criada
+
+\choice 2a alternativa criada
+
+\choice 1a alternativa criada
+
+\choice 4a alternativa criada
+\end{oneparchoices}\vspace{1mm}
+
+
+
+\hspace{-15mm}{\tiny {\color{white}\@2456}} \hspace{0mm} 2. Qual é o componente principal de um computador que armazena dados e programas?\vspace{0mm}
+
+\begin{oneparchoices}
+
+\choice Placa-mãe
+
+\choice Memória RAM
+
+\choice Teclado
+
+\choice Placa de vídeo
+
+\choice Processador
+\end{oneparchoices}\vspace{1mm}
+
+
+
+\hspace{-15mm}{\tiny {\color{white}\@2468}} \hspace{0mm} 3. Criar uma matriz \( 6 \times 7 \) com elementos 
+\( (i,j) = ((((i+1) * 13) + ( ( j+1) * 11)) \mod{100}) \). 
+Calcular a soma dos elementos desta matriz. Os índices \(i\) são as linhas
+e \(j\) as colunas iniciadas com o valor \(0\).
+
+\vspace{0mm}
+
+\begin{oneparchoices}
+
+\choice 2159
+
+
+\choice 2162
+
+\choice 2149
+
+\choice 2152
+
+\choice 2154
+\end{oneparchoices}\vspace{1mm}
+
+\\\vspace{2mm}\noindent\textbf{Questões Dissertativas}  \hfill {\color{white} \#v19}} \
+
+
+% QUESTOES DISSERTATIVAS
+
+
+
+\hspace{-15mm}{\tiny {\color{white}\@2462}} \hspace{0mm} 4. Descreva brevemente a importância da tecnologia da informação (TI) na sociedade moderna e mencione pelo menos duas áreas onde a TI desempenha um papel fundamental.
+
+%%{exata}%%
+
+\drawLines{10}\\
+
+ \ \ \ 
+ \newpage
+\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\makeatother
+\cleardoublepage
+\newpage
+
+% drawCircles
+\vspace{-5mm}
+\leavevmode\put(-11,0){\color{black}\circle*{15}}\hspace{-0mm}
+\leavevmode\put(509,0){\color{black}\circle*{15}}
+        \vspace{-1mm}\hspace{5mm}\begin{table}[h]
+\begin{tabular}{|l|p{10.85cm}|c}
+ \cline{1-2}\multirow{7}{*}{\vspace{8mm}\includegraphics[width=2cm]{./figs/ufabc}} 
+&\textbf{Instituto Exemplo} 
+              &\multirow{7}{*}[2.5mm]{\hspace{-2mm}\includegraphics[scale=1.8833333333333335]{./tmp/QRCode_672_486_987.eps}}\\ 
+&\textbf{Curso Exemplo}                        & \\ 
+&\textbf{Disciplina:} Disciplina Exemplo \hfill                        & \\ 
+&\textbf{Prof.:} Francisco Zampirolli   & \\ 
+&\textbf{Turma:} Turma Exemplo
+ \hfill \textbf{Sala:} virtual
+  & \\ 
+&\textbf{Exame:} exameTesteAdaptQR-QM \hfill \textbf{Data:} 09-12-2023           & \\ 
+ \cline{1-2}\multicolumn{2}{|l|}{}      & \\ 
+\multicolumn{2}{|l|}{\textbf{Ass.: }\rule{5cm}{0.1pt}} & \\ 
+ \multicolumn{2}{|l|}{\textbf{\small{Estudante:}} {\small Maria da Silva Andrade de S Gonçalves} \hfill \textbf{\small{ID/RA:}} 987}           & \\ 
+ \cline{1-2}\end{tabular}
+\end{table}
+\footnote[2]{\vspace{10mm}\color{lightgray}\textbf{MCTest:} gerador e corretor de exames disponível para professores - \textbf{\url{www.ufabc.edu.br}}}
+
+
+
+ \vspace{-7mm}\hfill {\tiny {\color{red}\#E486\#V61093 - 2023-12-09 - 16:24:26\hspace{55mm}}}
+
+\vspace{0.4mm}\vspace{1.5mm}
+
+\vspace{-6mm}\begin{center}\textbf{}\end{center}
+\begin{center} 
+
+ \vspace{-5mm} \ \hspace{-7mm} 
+\begin{tikzpicture}[font=\tiny,fill=black]
+  \foreach \numLab in {1,...,3} {
+    \node[inner sep=3pt] at ({(\numLab-1+1) * 0.5},-0.1) {\numLab};
+  }
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,3} {
+           \draw[fill=gray] ({\position * 0.5 - 0.2},-0.2) rectangle ({\position * 0.5+0.2},0.2); 
+           \node[fill=white,draw,circle,inner sep=2.3pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 mm}
+
+ \ \ 
+\end{center}
+
+% drawCircles
+\vspace{-5mm}
+\leavevmode\put(-11,0){\color{black}\circle*{15}}\hspace{-0mm}
+\leavevmode\put(509,0){\color{black}\circle*{15}}
+        
+%drawInstructions
+\vspace{3mm}\noindent{\small\textbf{Instruções:}\vspace{-1mm}
+\begin{enumerate}[label=(\alph*)]
+\itemsep0pt\parskip0pt\parsep0pt
+\item desligar o celular
+\end{enumerate}}\normalsize
+
+            
+
+% QUESTOES DE MULTIPLA ESCOLHA
+
+\\\vspace{2mm}\hspace{-5mm}\noindent\textbf{Questões de Múltipla Escolha:}\vspace{2mm}
+
+
+\hspace{-15mm}{\tiny {\color{white}\@2468}} \hspace{0mm} 1. Criar uma matriz \( 5 \times 7 \) com elementos 
+\( (i,j) = ((((i+1) * 19) + ( ( j+1) * 23)) \mod{100}) \). 
+Calcular a soma dos elementos desta matriz. Os índices \(i\) são as linhas
+e \(j\) as colunas iniciadas com o valor \(0\).
+
+\vspace{0mm}
+
+\begin{oneparchoices}
+
+\choice 1814
+
+\choice 1809
+
+\choice 1818
+
+\choice 1812
+
+\choice 1815
+
+\end{oneparchoices}\vspace{1mm}
+
+
+
+\hspace{-15mm}{\tiny {\color{white}\@2445}} \hspace{0mm} 2. Terceira questao\vspace{0mm}
+
+\begin{oneparchoices}
+
+\choice 3a alternativa criada
+
+\choice 2a alternativa criada
+
+\choice 1a alternativa criada
+
+\choice 4a alternativa criada
+
+\choice 5a alternativa criada
+\end{oneparchoices}\vspace{1mm}
+
+
+
+\hspace{-15mm}{\tiny {\color{white}\@2444}} \hspace{0mm} 3. Segunda Questao\vspace{0mm}
+
+\begin{oneparchoices}
+
+\choice 5a alternativa criada
+
+\choice 3a alternativa criada
+
+\choice 1a alternativa criada
+
+\choice 2a alternativa criada
+
+\choice 4a alternativa criada
+\end{oneparchoices}\vspace{1mm}
+
+\\\vspace{2mm}\noindent\textbf{Questões Dissertativas}  \hfill {\color{white} \#v17}} \
+
+
+% QUESTOES DISSERTATIVAS
+
+
+
+\hspace{-15mm}{\tiny {\color{white}\@2462}} \hspace{0mm} 4. Descreva brevemente a importância da tecnologia da informação (TI) na sociedade moderna e mencione pelo menos duas áreas onde a TI desempenha um papel fundamental.
+
+%%{exata}%%
+
+\drawLines{10}\\
+
+ \ \ \ 
+ \newpage
+\end{document}
