@@ -20,7 +20,7 @@ A criação de QMs é uma tarefa comum para professores de diversas áreas do co
 
 \subsection{Um exemplo}
 
-Suponha que você seja um professor de matemática e deseje criar várias QMs sobre a fórmula da área do círculo. Embora este exemplo seja bastante simples, é possível generalizar para questões mais complexas. Para alcançar esse objetivo, você pode utilizar o seguinte método em Python:
+Suponha que você seja um professor de matemática e deseje criar várias QMs sobre a fórmula da área do círculo. Embora este exemplo seja bastante simples, é possível generalizar para questões mais complexas. Para alcançar esse objetivo, você pode utilizar o método em Python apresentado no Código \ref{lst:codigoAreaCirculo}.
 
 
 \begin{listing}[!ht]
@@ -245,9 +245,7 @@ Esses exemplos mostram o poder da parametrização no MCTest para criar questõe
 
 \subsection{Exemplo 1 -- Teste de mesa}
 
-Nesta seção, será abordada a parametrização da questão de teste de mesa ilustrada na Figura \ref{fig:cap05_questaoQT_TesteMesaEx2PDF} e apresentada no Código \ref{lst:questaoQT_TesteMesaEx2}, para exemplificar o processo. As partes paramétricas estão localizadas nas linhas 7, 8 e 9 da questão, com os parâmetros \verb|N1|, \verb|N2| e \verb|N3|, cujos valores são definidos aleatoriamente no bloco de código Python nas linhas 38, 39 e 40, respectivamente. O PDF correspondente a essa questão é apresentado na Figura \ref{fig:cap05_questaoQT_TesteMesaEx2PDF}.
-
-
+Nesta seção, será abordada a parametrização da questão de teste de mesa ilustrada na Figura \ref{fig:cap05_questaoQT_TesteMesaEx1PDF} e apresentada no Código \ref{lst:questaoQT_TesteMesaEx1}, para exemplificar o processo. As partes paramétricas estão localizadas nas linhas 4, 7, 8 e 9 na questão, com os parâmetros \verb|N1|, \verb|N2| e \verb|N3|, cujos valores são definidos aleatoriamente no bloco de código Python nas linhas 38, 39 e 40, respectivamente. O PDF correspondente a essa questão é apresentado na Figura \ref{fig:cap05_questaoQT_TesteMesaEx1PDF}.
 
 
 \begin{listing}[!ht]
@@ -257,13 +255,13 @@ Nesta seção, será abordada a parametrização da questão de teste de mesa il
 Preencha a tabela com os valores corretos das variáveis contador e soma 
 em cada iteração do laço.  Além disso, considere os números das linhas do 
 código para preencher a tabela, a fim de facilitar a referência. Considere 
-inicialmente N=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
+inicialmente maximo=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
 
 \begin{verbatim}
-1. Inicializar a variável N com [[code:N1]]
+1. Inicializar a variável maximo com [[code:N1]]
 2. Inicializar a variável contador com [[code:N2]]
 3. Inicializar a variável soma com [[code:N3]]
-4. Enquanto contador <= N faça
+4. Enquanto contador <= maximo faça
 5.     Se contador é par então
 6.         soma = soma + contador
 7.     Senão
@@ -276,17 +274,17 @@ inicialmente N=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
 
 \begin{tabular}{|c|c|c|c|}
 \hline
-\textbf{linha} & \textbf{contador} & \textbf{soma} \\
+\textbf{linha} & \textbf{maximo} & \textbf{contador} & \textbf{soma} \\
 \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
+& & & \\ \hline
+& & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
 \end{tabular}
 
 [[def:
@@ -298,33 +296,33 @@ N3 = random.randint(1,5)
 \end{minted}
 \end{myboxCode}
 \caption{Exemplo simples de descrição de QT paramétrica para teste de mesa.}
-\label{lst:questaoQT_TesteMesaEx2}
+\label{lst:questaoQT_TesteMesaEx1}
 \end{listing}
 
 \begin{figure}[!ht]
-  \includegraphics[width=0.9\textwidth]{cap05_questaoQT_TesteMesaEx2PDF.png}
-  \caption{Recorte do PDF gerado para a questão definida no Código \ref{lst:questaoQT_TesteMesaEx2}.}
-  \label{fig:cap05_questaoQT_TesteMesaEx2PDF}
+  \includegraphics[width=0.9\textwidth]{cap05_questaoQT_TesteMesaEx1PDF.png}
+  \caption{Recorte do PDF gerado para a questão definida no Código \ref{lst:questaoQT_TesteMesaEx1}.}
+  \label{fig:cap05_questaoQT_TesteMesaEx1PDF}
 \end{figure}
 
 \subsection{Exemplo 2 -- Teste de mesa e gabarito}
 
-É possível aprimorar o exemplo anterior expandindo-o para gerar o gabarito correspondente a cada valor aleatório gerado para as variáveis \verb|N1|, \verb|N2| e \verb|N3|. Para essa finalidade, foi criado um método em Python que implementa o algoritmo da questão. Devido à quantidade de linhas na descrição dessa questão, os códigos correspondentes foram divididos e estão disponíveis nos fragmentos dos Códigos \ref{lst:questaoQT_TesteMesaEx3Parte1} e  \ref{lst:questaoQT_TesteMesaEx3Parte2}.
+É possível aprimorar o exemplo anterior expandindo-o para gerar o gabarito correspondente a cada valor aleatório gerado para as variáveis \verb|N1|, \verb|N2| e \verb|N3|. Para essa finalidade, foi criado um método em Python que implementa o algoritmo da questão. Devido à quantidade de linhas na descrição dessa questão, os códigos correspondentes foram divididos e estão disponíveis nos fragmentos dos Códigos \ref{lst:questaoQT_TesteMesaEx2Parte1} e  \ref{lst:questaoQT_TesteMesaEx2Parte2}.
 
-Nesta nova versão, o gabarito foi adicionado ao PDF utilizando as linhas 36 a 40 do Código \ref{lst:questaoQT_TesteMesaEx3Parte1}. Na linha 36, azul e o tamanho \verb|small| foram definidos para a variável \verb|tabela|, conforme mostrado na Figura \ref{fig:cap05_questaoQT_TesteMesaEx3PDF}. Caso o professor não deseje exibir esse gabarito na folha de atividade, basta utilizar a cor \verb|white|. Na linha 38, a variável \verb|tabela|, sendo uma \textit{string}, é definida na segunda parte do código, no Código \ref{lst:questaoQT_TesteMesaEx3Parte2}.
+Nesta nova versão, o gabarito foi adicionado ao PDF utilizando as linhas 37 a 41 do Código \ref{lst:questaoQT_TesteMesaEx2Parte1}. Na linha 37, azul e o tamanho \verb|small| foram definidos para a variável \verb|tabela|, conforme mostrado na Figura \ref{fig:cap05_questaoQT_TesteMesaEx2PDF}. Caso o professor não deseje exibir esse gabarito na folha de atividade, basta utilizar a cor \verb|white|. Na linha 39, a variável \verb|tabela|, sendo uma \textit{string}, é definida na segunda parte do código, no Código \ref{lst:questaoQT_TesteMesaEx2Parte2}.
 
-Nesta versão, foi criado o método \verb|gerar_gabarito| para retornar a tabela atualizada para incluir as linhas específicas do algoritmo com os espaços correspondentes para preencher com os valores corretos das variáveis \verb|contador| e \verb|soma|. 
+Nesta versão, foi criado o método \verb|gerar_gabarito| para retornar a tabela atualizada para incluir as linhas específicas do algoritmo com os espaços correspondentes para preencher com os valores corretos das variáveis \verb|maximo|, \verb|contador| e \verb|soma|. 
 
-O trecho entre as linhas 27 e 31 do Código \ref{lst:questaoQT_TesteMesaEx3Parte2} apresenta um exemplo de uso do código, no qual são gerados valores aleatórios para \verb|N1|, \verb|N2| e \verb|N3| até que a tabela gerada tenha entre 10 e 15 linhas (exclusivamente). Esse trecho será analisado linha por linha:
+O trecho entre as linhas 30 e 34 do Código \ref{lst:questaoQT_TesteMesaEx2Parte2} apresenta um exemplo de uso do código, no qual são gerados valores aleatórios para \verb|N1|, \verb|N2| e \verb|N3| até que a tabela gerada tenha entre 10 e 15 linhas (exclusivamente). Esse trecho será analisado linha por linha:
 
 \begin{description}
-    \item \verb|while True|: isso cria um \textit{loop} infinito que será executado até que a condição na linha 30 seja satisfeita e o \textit{loop} seja interrompido na linha 31;
+    \item \verb|while True|: isso cria um \textit{loop} infinito que será executado até que a condição na linha 33 seja satisfeita e o \textit{loop} seja interrompido na linha 34;
     \item \verb|N1, N2, N3 = random.sample(range(4, 20), 3)|: aqui é usado o método \verb|sample| da biblioteca \verb|random| para gerar três valores aleatórios, sem repetição, no intervalo de 4 a 19. Esses valores são atribuídos às variáveis \verb|N1|, \verb|N2| e \verb|N3|;
-    \item \verb|tabela = gerar_gabarito(N1, N2, N3)|: o método é chamado \verb|gerar_gabarito| passando os valores aleatórios \verb|N1|, \verb|N2| e \verb|N3| como argumentos. Esse método retorna a tabela formatada com os valores corretos das variáveis \verb|contador| e \verb|soma|;
+    \item \verb|tabela = gerar_gabarito(N1, N2, N3)|: o método é chamado \verb|gerar_gabarito| passando os valores aleatórios \verb|N1|, \verb|N2| e \verb|N3| como argumentos. Esse método retorna a tabela formatada com os valores corretos das variáveis \verb|maximo|, \verb|contador| e \verb|soma|;
     \item \verb|if 10 < len(tabela.split('\n')) < 15: break|: aqui é verificado o número de linhas na tabela gerada. Se o número de linhas estiver entre 10 e 15 (exclusivamente), a condição é satisfeita e o \textit{loop} é interrompido com o uso do comando \textit{break}.
 \end{description}
 
-Dessa forma, esse trecho de código permite gerar valores aleatórios para as variáveis \verb|N1|, \verb|N2| e \verb|N3| repetidamente até que a tabela gerada tenha o número de linhas desejado. Isso garante que todas as variações tenham dificuldades de resolução semelhantes, testando diferentes casos. Neste exemplo simples, é possível gerar $15*15*15$ variações, mas apenas aquelas que resultarem em tabelas com 11 a 14 linhas serão consideradas.
+Dessa forma, esse trecho de código permite gerar valores aleatórios para as variáveis \verb|N1|, \verb|N2| e \verb|N3| repetidamente até que a tabela gerada tenha o número de linhas desejado. Isso garante que todas as variações tenham dificuldades de resolução semelhantes, testando diferentes casos. Neste exemplo simples, é possível gerar $15*14*13$ variações (pois os valores sortados não se repetem usando o comando \verb|random.sample(range(4, 20), 3)|), mas apenas aquelas que resultarem em tabelas com 11 a 14 linhas serão consideradas.
 
 \begin{listing}[!ht]
 \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
@@ -333,13 +331,13 @@ Dessa forma, esse trecho de código permite gerar valores aleatórios para as va
 Preencha a tabela com os valores corretos das variáveis contador e soma 
 em cada iteração do laço.  Além disso, considere os números das linhas do 
 código para preencher a tabela, a fim de facilitar a referência. Considere 
-inicialmente N=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
+inicialmente maximo=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
 
 \begin{verbatim}
-1. Inicializar a variável N com [[code:N1]]
+1. Inicializar a variável maximo com [[code:N1]]
 2. Inicializar a variável contador com [[code:N2]]
 3. Inicializar a variável soma com [[code:N3]]
-4. Enquanto contador <= N faça
+4. Enquanto contador <= maximo faça
 5.     Se contador é par então
 6.         soma = soma + contador
 7.     Senão
@@ -350,19 +348,20 @@ inicialmente N=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
 12. Imprimir o valor da variável soma
 \end{verbatim}
 
+
 \begin{tabular}{|c|c|c|c|}
 \hline
-\textbf{linha} & \textbf{contador} & \textbf{soma} \\
+\textbf{linha} & \textbf{maximo} & \textbf{contador} & \textbf{soma} \\
 \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
+& & & \\ \hline
+& & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
+&  & & \\ \hline
 \end{tabular}
 
 {\color{blue} {\small
@@ -373,7 +372,7 @@ inicialmente N=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
 \end{minted}
 \end{myboxCode}
 \caption{Exemplo prático de teste de mesa paramétrico mostrando o gabarito -- Parte 1: Descrição de questão.}
-\label{lst:questaoQT_TesteMesaEx3Parte1}
+\label{lst:questaoQT_TesteMesaEx2Parte1}
 \end{listing}
 
 \begin{listing}[!ht]
@@ -384,24 +383,27 @@ inicialmente N=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
 import random
 
 def gerar_gabarito(N1, N2, N3):
-    s = "Linha\tContador\tSoma\n"
-    s += "--------------------\n"
-
+    s = "linha maximo contador soma\n"
+    s += "--------------------------\n"
+    
+    maximo = N1
+    s += f"  1 {maximo:6d}\n"
     contador = N2
-    s += f"  2 {contador:7d}\n"    
+    s += f"  2 {maximo:6d} {contador:6d}\n"
     soma = N3
-    s += f"  3 {contador:7d} {soma:6d}\n"
+    s += f"  3 {maximo:6d} {contador:6d} {soma:7d}\n"
 
-    while contador <= N1:
+
+    while contador <= maximo:
         if contador % 2 == 0:
             soma = soma + contador
-            s += f"  6 {contador:7d} {soma:6d}\n"
+            s += f"  6 {maximo:6d} {contador:6d} {soma:7d}\n"
         else:
             soma = soma - contador
-            s += f"  8 {contador:7d} {soma:6d}\n"
+            s += f"  8 {maximo:6d} {contador:6d} {soma:7d}\n"
 
-        contador += 1
-        s += f" 10 {contador:7d} {soma:6d}\n"
+        contador = contador + 1
+        s += f" 10 {maximo:6d} {contador:6d} {soma:7d}\n"
     
     return s
 
@@ -415,13 +417,13 @@ while True:
 \end{minted}
 \end{myboxCode}
 \caption{Exemplo prático de teste de mesa paramétrico mostrando o gabarito -- Parte 2: Bloco de código em Python.}
-\label{lst:questaoQT_TesteMesaEx3Parte2}
+\label{lst:questaoQT_TesteMesaEx2Parte2}
 \end{listing}
 
-\begin{figure}[b]
-  \includegraphics[width=0.9\textwidth]{cap05_questaoQT_TesteMesaEx3PDF.png}
-  \caption{Recorte do PDF gerado para a questão definida nos Códigos \ref{lst:questaoQT_TesteMesaEx3Parte1} e \ref{lst:questaoQT_TesteMesaEx3Parte2}.}
-  \label{fig:cap05_questaoQT_TesteMesaEx3PDF}
+\begin{figure}[!hb]
+  \includegraphics[width=0.9\textwidth]{cap05_questaoQT_TesteMesaEx2PDF.png}
+  \caption{Recorte do PDF gerado para a questão definida nos Códigos \ref{lst:questaoQT_TesteMesaEx2Parte1} e \ref{lst:questaoQT_TesteMesaEx2Parte2}.}
+  \label{fig:cap05_questaoQT_TesteMesaEx2PDF}
 \end{figure}
 
 \subsection{Exemplo 3 -- Teste de mesa e gabarito com \texttt{settrace}}
@@ -442,9 +444,9 @@ O método de rastreamento personalizado pode realizar várias ações, como exib
 
 \subsubsection{Exemplo de uso do método \texttt{settrace} para rastreamento de código}
 
-O Código \ref{lst:questaoQT_TesteMesaEx4Parte1} define o método \verb|trace| para ser chamada sempre que ocorrer um evento específico, como a execução de uma linha de código. Neste método, as informações relevantes são impressas no console, após a sua execução, como o evento, o número da linha e as variáveis locais.
+O Código \ref{lst:questaoQT_TesteMesaEx3Parte1} define o método \verb|trace| para ser chamada sempre que ocorrer um evento específico, como a execução de uma linha de código. Neste método, as informações relevantes são impressas no console, após a sua execução, como o evento, o número da linha e as variáveis locais.
 %
-Em seguida, o método \verb|gerar_gabarito| é definido para calcular a soma ou subtração com contador par e ímpar, respectivamente, em um determinado intervalo. O método é chamado com os argumentos 9, 7 e 6 para os parâmetros \verb|N1|, \verb|contador| e \verb|soma|, respectivamente.
+Em seguida, o método \verb|gerar_gabarito| é definido para calcular a soma ou subtração com contador par e ímpar, respectivamente, em um determinado intervalo. O método é chamado com os argumentos 9, 7 e 6 para os parâmetros \verb|maximo|, \verb|contador| e \verb|soma|, respectivamente.
 %
 Por fim, o método \verb|trace| é desativado na linha 16.
 %
@@ -455,16 +457,16 @@ Este código é um exemplo de como usar o recurso de rastreamento em Python para
 \hrule
 \begin{minted}[xleftmargin=20pt,linenos=true]{python}
 def trace(frame, event, arg_unused):
-    print(event, frame.f_lineno, frame.f_locals)
+    print(f"{event}\t{frame.f_lineno}\t{frame.f_locals}")
     return trace
 
-def gerar_gabarito(N1, contador, soma):
-    while contador <= N1:
+def gerar_gabarito(maximo, contador, soma):
+    while contador <= maximo:
         if contador % 2 == 0:
             soma = soma + contador
         else:
             soma = soma - contador
-        contador += 1
+        contador = contador + 1
 
 import sys
 sys.settrace(trace)
@@ -473,49 +475,49 @@ sys.settrace(None)
 \end{minted}
 \end{myboxCode}
 \caption{Exemplo de uso de \texttt{sys.settrace}.}\vspace{-2mm}
-\label{lst:questaoQT_TesteMesaEx4Parte1}
+\label{lst:questaoQT_TesteMesaEx3Parte1}
 \end{listing}\vspace{-5mm}
 
-Ao salvar o Código \ref{lst:questaoQT_TesteMesaEx4Parte1} no arquivo \verb|trace.py| e executá-lo no console do computador usando o comando \verb|python trace.py|, a saída resultante será semelhante ao apresentado a seguir:% no Código \ref{lst:questaoQT_TesteMesaEx4Parte1saida}.
+Ao salvar o Código \ref{lst:questaoQT_TesteMesaEx3Parte1} no arquivo \verb|trace.py| e executá-lo no console do computador usando o comando \verb|python trace.py|, a saída resultante será semelhante ao apresentado a seguir:% no Código \ref{lst:questaoQT_TesteMesaEx3Parte1saida}.
 
 %\begin{listing}[!ht]
-\begin{myboxCode}{corCSV}{\textbf{Saída do Código \ref{lst:questaoQT_TesteMesaEx4Parte1}:}}\vspace{3mm}
+\begin{myboxCode}{corCSV}{\textbf{Saída do Código \ref{lst:questaoQT_TesteMesaEx3Parte1}:}}\vspace{3mm}
 \hrule
 \begin{minted}[xleftmargin=20pt,linenos=true]{python}
-call 7 {'N1': 9, 'contador': 7, 'soma': 6}
-line 8 {'N1': 9, 'contador': 7, 'soma': 6}
-line 9 {'N1': 9, 'contador': 7, 'soma': 6}
-line 12 {'N1': 9, 'contador': 7, 'soma': 6}
-line 13 {'N1': 9, 'contador': 7, 'soma': -1}
-line 8 {'N1': 9, 'contador': 8, 'soma': -1}
-line 9 {'N1': 9, 'contador': 8, 'soma': -1}
-line 10 {'N1': 9, 'contador': 8, 'soma': -1}
-line 13 {'N1': 9, 'contador': 8, 'soma': 7}
-line 8 {'N1': 9, 'contador': 9, 'soma': 7}
-line 9 {'N1': 9, 'contador': 9, 'soma': 7}
-line 12 {'N1': 9, 'contador': 9, 'soma': 7}
-line 13 {'N1': 9, 'contador': 9, 'soma': -2}
-line 8 {'N1': 9, 'contador': 10, 'soma': -2}
-return 8 {'N1': 9, 'contador': 10, 'soma': -2}
+call    5       {'maximo': 9, 'contador': 7, 'soma': 6}
+line    6       {'maximo': 9, 'contador': 7, 'soma': 6}
+line    7       {'maximo': 9, 'contador': 7, 'soma': 6}
+line    10      {'maximo': 9, 'contador': 7, 'soma': 6}
+line    11      {'maximo': 9, 'contador': 7, 'soma': -1}
+line    6       {'maximo': 9, 'contador': 8, 'soma': -1}
+line    7       {'maximo': 9, 'contador': 8, 'soma': -1}
+line    8       {'maximo': 9, 'contador': 8, 'soma': -1}
+line    11      {'maximo': 9, 'contador': 8, 'soma': 7}
+line    6       {'maximo': 9, 'contador': 9, 'soma': 7}
+line    7       {'maximo': 9, 'contador': 9, 'soma': 7}
+line    10      {'maximo': 9, 'contador': 9, 'soma': 7}
+line    11      {'maximo': 9, 'contador': 9, 'soma': -2}
+line    6       {'maximo': 9, 'contador': 10, 'soma': -2}
+return  6       {'maximo': 9, 'contador': 10, 'soma': -2}
 \end{minted}
 \end{myboxCode}
-% \caption{Saída no Código \ref{lst:questaoQT_TesteMesaEx4Parte1}, ao ser executado no console do computador.}
-% \label{lst:questaoQT_TesteMesaEx4Parte1saida}
+% \caption{Saída no Código \ref{lst:questaoQT_TesteMesaEx3Parte1}, ao ser executado no console do computador.}
+% \label{lst:questaoQT_TesteMesaEx3Parte1saida}
 % \end{listing}
 
 É possível formatar essa saída e gerar uma questão completa no MCTest, conforme demonstrado a seguir.
 
 \subsubsection{Teste de mesa com rastreamento de código usando \texttt{settrace}}
 
-Neste terceiro exemplo de teste de mesa paramétrico, é utilizado o método \verb|settrace|, da biblioteca \verb|sys|, para gerar o gabarito. Este exemplo foi inspirado no artigo de \citeonline{2023:Teubl.Zampirolli}. A vantagem dessa versão em relação à anterior é que pode-se criar o gabarito sem precisar incluir vários comandos \verb|print| na implementação do pseudocódigo, tornando o processo mais genérico para diferentes exemplos de teste de mesa. A seguir, serão adaptadas as versões anteriores, criando um código em Python que faz parte do enunciado da questão, apresentado no Código \ref{lst:questaoQT_TesteMesaEx4Parte2}. No entanto, também é possível ter utilizado um pseudocódigo.
+Neste terceiro exemplo de teste de mesa paramétrico, é utilizado o método \verb|settrace|, da biblioteca \verb|sys|, para gerar o gabarito. Este exemplo foi inspirado no artigo de \citeonline{2023:Teubl.Zampirolli}. A vantagem dessa versão em relação à anterior é que pode-se criar o gabarito sem precisar incluir vários comandos \verb|print| na implementação do pseudocódigo, tornando o processo mais genérico para diferentes exemplos de teste de mesa. A seguir, serão adaptadas as versões anteriores, criando um código em Python que faz parte do enunciado da questão, apresentado no Código \ref{lst:questaoQT_TesteMesaEx3Parte2}. No entanto, também é possível ter utilizado um pseudocódigo, conforme demonstrado por \citeonline{2023:Teubl.Zampirolli}.
 
-A parte com diferenças significativas em relação às anteriores é apresentada no Código \ref{lst:questaoQT_TesteMesaEx4Parte3}. Nessa parte, o método \verb|trace| é adaptado, conforme apresentado no Código \ref{lst:questaoQT_TesteMesaEx4Parte1}, para formatar a tabela com o gabarito. Dentro desse método, é verificado se o evento atual é uma linha de código (\verb|event == 'line'|). Em caso afirmativo, o método obtém o número da linha atual (\verb|lineno|) e o dicionário de variáveis locais (\verb|locals_dict|) do \verb|frame| atual.
+A parte com diferenças significativas em relação às anteriores é apresentada no Código \ref{lst:questaoQT_TesteMesaEx3Parte3}. Nessa parte, o método \verb|trace| é adaptado, conforme apresentado no Código \ref{lst:questaoQT_TesteMesaEx3Parte1}, para formatar a tabela com o gabarito. Dentro desse método, é verificado se o evento atual é uma linha de código (\verb|event == 'line'|). Em caso afirmativo, o método obtém o número da linha atual (\verb|lineno|) e o dicionário de variáveis locais (\verb|locals_dict|) do \verb|frame| atual.
 
-Em seguida, o método obtém os valores das variáveis \verb|contador| e \verb|soma| do dicionário de variáveis locais, usando o método \verb|get|. Esses valores são usados para criar uma \verb|string| formatada, armazenada em uma lista chamada \verb|output|.
+Em seguida, o método obtém os valores das variáveis \verb|maximo|, \verb|contador| e \verb|soma| do dicionário de variáveis locais, usando o método \verb|get|. Esses valores são usados para criar uma \verb|string| formatada, armazenada em uma lista chamada \verb|output|.
 
 Por fim, o método retorna a si (\verb|return trace|), o que permite que seja chamado novamente no próximo evento de linha. Esse processo se repete até que a execução do programa seja concluída ou até encontrar o comando \verb|sys.settrace(None)|, que encerra o rastreamento.
 
-Além disso, o código apresenta o método \verb|gerar_gabarito|, semelhante ao apresentado no Código \ref{lst:questaoQT_TesteMesaEx4Parte1}.
+Além disso, o código apresenta o método \verb|gerar_gabarito|, semelhante ao apresentado no Código \ref{lst:questaoQT_TesteMesaEx3Parte1}.
 %
 Em seguida, o trecho de código inicia um \verb|loop| infinito que realiza as seguintes ações: gera três números aleatórios distintos em um intervalo específico, inicializa uma lista vazia chamada \verb|output| e adiciona cabeçalhos e uma linha de separação à lista. Em seguida, o rastreamento do código é iniciado com \verb|sys.settrace(trace)|, o método \verb|gerar_gabarito| é executado com os valores gerados e o rastreamento é finalizado com \verb|sys.settrace(None)|. A lista \verb|output| é convertida em uma única \verb|string| chamada \verb|tabela|. O código verifica se o número de linhas na tabela está entre 11 e 14. Se a condição for satisfeita, o \verb|loop| é interrompido e o programa é finalizado. Essa estrutura de repetição permite gerar e obter uma tabela com um número específico de linhas no intervalo desejado.
 
@@ -529,31 +531,31 @@ Preencha a tabela com os valores corretos das variáveis contador e soma
 em cada iteração do laço, para valores de entrada específicos do método. 
 Além disso, considere os números das linhas do código para preencher a 
 tabela, a fim de facilitar a referência. Considere inicialmente 
-N1=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
+maximo=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
 
 \begin{verbatim}
-1. def gerar_gabarito(N1, contador, soma):
-2.    while contador <= N1:
+1. def gerar_gabarito(maximo, contador, soma):
+2.    while contador <= maximo:
 3.        if contador % 2 == 0:
 4.            soma = soma + contador
 5.        else:
 6.            soma = soma - contador
-7.        contador += 1
+7.        contador = contador + 1
 \end{verbatim}
 
 \begin{tabular}{|c|c|c|c|}
 \hline
-\textbf{linha} & \textbf{contador} & \textbf{soma} \\
+\textbf{linha} & \textbf{maximo} & \textbf{contador} & \textbf{soma} \\
 \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
- & & \\ \hline
+& & & \\ \hline
+& & & \\ \hline
+& & & \\ \hline
+& & & \\ \hline
+& & & \\ \hline
+& & & \\ \hline
+& & & \\ \hline
+& & & \\ \hline
+& & & \\ \hline
 \end{tabular}
 
 {\color{blue} {\small
@@ -564,7 +566,7 @@ N1=[[code:N1]], contador=[[code:N2]] e soma=[[code:N3]].
 \end{minted}
 \end{myboxCode}
 \caption{Exemplo prático de teste de mesa paramétrico utilizando \texttt{sys.settrace} -- Parte 1: Descrição de questão.}
-\label{lst:questaoQT_TesteMesaEx4Parte2}
+\label{lst:questaoQT_TesteMesaEx3Parte2}
 \end{listing}
 
 \begin{listing}[!ht]
@@ -579,27 +581,28 @@ def trace(frame, event, arg_unused):
     global output
     if event == 'line':
         lineno = frame.f_lineno  # pega a linha
-        locals_dict = frame.f_locals  # pega todas as variáveis locais
+        locals_dict = frame.f_locals  # pega todas variáveis locais
+        maximo = locals_dict.get('maximo')  # pega a variável maximo
         contador = locals_dict.get('contador')  # pega a variável contador
         soma = locals_dict.get('soma')  # pega a variável soma
-        output.append(f"{lineno-16:3d} {contador:7d} {soma:7d}\n")  
         # armazena a string na lista
+        output.append(f"{lineno-16:3d} {maximo:7d} {contador:7d} {soma:7d}\n")  
     return trace
 
-def gerar_gabarito(N1, soma, contador):
-    while contador <= N1:
+def gerar_gabarito(maximo, soma, contador):
+    while contador <= maximo:
         if contador % 2 == 0:
             soma = soma + contador
         else:
             soma = soma - contador
-        contador += 1
+        contador = contador + 1
 
 # Exemplo de uso:
 while True:
     N1, N2, N3 = random.sample(range(4, 20), 3)
     output = []
-    output.append("Linha Contador Soma\n")
-    output.append("---------------------\n")
+    output.append("linha  maximo  contador soma\n")
+    output.append("-----------------------------\n")
     sys.settrace(trace)  # Inicializa o rastreamento
     gerar_gabarito(N1, N2, N3)
     sys.settrace(None)  # Finaliza o rastreamento
@@ -610,13 +613,13 @@ while True:
 \end{minted}
 \end{myboxCode}
 \caption{Exemplo prático de teste de mesa paramétrico utilizando \texttt{sys.settrace} -- Parte 2: Bloco de código em Python.}
-\label{lst:questaoQT_TesteMesaEx4Parte3}
+\label{lst:questaoQT_TesteMesaEx3Parte3}
 \end{listing}
 
 \begin{figure}[b]
-  \includegraphics[width=0.9\textwidth]{cap05_questaoQT_TesteMesaEx4PDF.png}
-  \caption{Recorte do PDF gerado para a questão definida nos Códigos \ref{lst:questaoQT_TesteMesaEx4Parte2} e \ref{lst:questaoQT_TesteMesaEx4Parte3}.}
-  \label{fig:cap05_questaoQT_TesteMesaEx4PDF}
+  \includegraphics[width=0.9\textwidth]{cap05_questaoQT_TesteMesaEx3PDF.png}
+  \caption{Recorte do PDF gerado para a questão definida nos Códigos \ref{lst:questaoQT_TesteMesaEx3Parte2} e \ref{lst:questaoQT_TesteMesaEx3Parte3}.}
+  \label{fig:cap05_questaoQT_TesteMesaEx3PDF}
 \end{figure}
 
 \section{QT paramétrica, com código}\label{sec:questoesQT_VPL}
