@@ -624,11 +624,11 @@ while True:
 
 \section{QT paramétrica, com código}\label{sec:questoesQT_VPL}
 
-Nesta seção, são abordadas QTs paramétricas que envolvem código, introduzindo o ambiente Moodle e VPL. Em seguida, é apresentado um exemplo de atividade que combina essas duas ferramentas. Posteriormente, é fornecido um exemplo de atividade que utiliza a combinação MCTest, Moodle e VPL.
+Nesta seção, são abordadas QTs paramétricas que envolvem código, introduzindo o ambiente Moodle com o \textit{plugin} VPL. Em seguida, é apresentado um exemplo de atividade que combina essas duas ferramentas. Posteriormente, é fornecido um exemplo de atividade que utiliza a combinação MCTest, Moodle e VPL.
 
 \subsection{Introdução ao Moodle e ao VPL}
 
-O Moodle é uma plataforma de aprendizagem \textit{online} amplamente utilizada em instituições de ensino em todo o mundo. Ela oferece recursos abrangentes para apoiar o ensino e a aprendizagem, incluindo a capacidade de criar e disponibilizar atividades interativas para os estudantes. Um dos \textit{plugins} populares do Moodle é o VPL (\textit{Virtual Programming Lab}) \cite{rodriguez2012virtual}, desenvolvido especialmente para a correção automática de exercícios de programação (EPs).
+O Moodle (\href{www.moodle.org}{moodle.org}) é uma plataforma de aprendizagem \textit{online} amplamente utilizada em instituições de ensino em todo o mundo \cite{presedo2015calibracion}. Ela oferece recursos abrangentes para apoiar o ensino e a aprendizagem, incluindo a capacidade de criar e disponibilizar atividades interativas para os estudantes. Um dos \textit{plugins} populares do Moodle é o VPL (\textit{Virtual Programming Lab} -- \href{https://vpl.dis.ulpgc.es/}{vpl.dis.ulpgc.es}) \cite{rodriguez2012virtual}, desenvolvido especialmente para a correção automática de exercícios de programação (EPs).
 
 O \textit{plugin} VPL permite que os professores criem EPs e ofereçam aos estudantes um ambiente virtual para escrever e testar seu código. Essa ferramenta é particularmente útil em disciplinas de programação, onde os estudantes precisam praticar e aprimorar suas habilidades de codificação.
 
@@ -678,7 +678,7 @@ output="O fatorial de 10 é 3628800"
 
 \end{enumerate}
 
-O Código \ref{lst:fatorial} apresenta um método em Python para calcular o fatorial de um número. O fatorial de um número é o produto de todos os números inteiros positivos de 1 até esse número.
+O Código \ref{lst:fatorial} apresenta um método em Python para calcular o fatorial de um número. O fatorial de um número inteiro é o produto de todos os números inteiros positivos de 1 até esse número.
 
 O método \verb|fatorial(n)| recebe um número \verb|n| como parâmetro. Ele verifica se \verb|n| é igual a zero. Se for, retorna 1, pois o fatorial de 0 é definido como 1. Caso contrário, o método calcula o fatorial de \verb|n| multiplicando \verb|n| pelo fatorial de \verb|n-1| (ou seja, o fatorial do número anterior). Isso é feito recursivamente até chegar ao caso base do fatorial de 0.
 
@@ -706,7 +706,7 @@ print("O fatorial de", numero, "é", resultado, ".")
 
 \subsubsection{Avaliação}
 
-A pontuação para esta questão será baseada no programa fornecido pelo estudante para ler as entradas, calcular o fatorial e produzir as saídas esperadas para os casos de teste fornecidos. Se o estudante fornecer apenas uma saída fixa, como \verb|print("O fatorial de 5 é 120.")|, a questão receberá uma nota de 50\%.
+A pontuação para esta questão será baseada no programa fornecido pelo estudante para ler as entradas, calcular o fatorial e produzir as saídas esperadas para os casos de teste fornecidos. Se o estudante fornecer apenas uma saída fixa, como \verb|print("O fatorial de 5 é 120.")|, a questão receberá uma nota de 50\% (considerando que foram criados dois casos de teste).
 
 Portanto, é importante incluir uma variedade de casos de teste para avaliar corretamente o programa e identificar possíveis tentativas de trapassa. Quanto mais casos de teste forem utilizados, melhor será a avaliação, uma vez que aumenta a chance de identificar soluções corretas e detectar respostas fixas ou incorretas.
 
@@ -717,7 +717,7 @@ Esse tipo de questão, utilizando EP no MCTest+Moodle+VPL, apresenta dois desafi
 
 \subsubsection{Primeiro desafio}
 
-O primeiro desafio consiste em definir a variação da atividade para cada estudante, uma vez que as atividades podem ser individuais. Para solucionar esse problema, o MCTest gera um arquivo no formato CSV chamado \verb|students_variations.csv|, contendo o nome do estudante e a variação atribuída. Esse arquivo deve ser inserido no campo ``Arquivo de execução'' da atividade VPL no Moodle. Além disso, existem vários outros arquivos disponíveis no GitHub, detalhados em capítulos futuros deste livro, que também devem ser incluídos nesse campo. A versão utilizada neste livro está na pasta \href{https://github.com/fzampirolli/mctest/tree/master/VPL_modification}{\texttt{V10-new\_selector}} do GitHub.
+O primeiro desafio consiste em definir a variação da atividade para cada estudante, uma vez que as atividades podem ser individuais. Para solucionar esse problema, o MCTest gera um arquivo no formato CSV chamado \verb|students_variations.csv|, contendo o nome do estudante e a variação atribuída. Esse arquivo deve ser inserido no campo ``Arquivo de execução'' da atividade VPL no Moodle. Além disso, existem vários outros arquivos disponíveis no \href{https://github.com/fzampirolli/mctest}{\texttt{mctest}} do GitHub, detalhados em capítulos futuros deste livro, que também devem ser incluídos nesse campo. A versão utilizada neste segunda edição do livro está na pasta \href{https://github.com/fzampirolli/mctest/tree/master/VPL_modification/V12-trace_test}{\texttt{V12-trace\_test}} do GitHub.
 
 \begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
 É importante destacar que a busca pela variação do estudante deve ser realizada pelo nome e sobrenome do estudante no arquivo \verb|students_variations.csv|, sendo necessário que esses dados sejam idênticos tanto no MCTest quanto no Moodle. Em versões recentes do VPL, também é possível utilizar o e-mail do estudante, o que representará uma melhoria futura nesse processo.
@@ -779,6 +779,10 @@ output=500.39
 
 Para realizar essa tarefa, na descrição da questão no MCTest, é necessário incluir um trecho de código utilizando o comando \verb|comment| que contenha apenas o dicionário de casos de teste. Esse trecho indica ao gerador MCTest para incluir os casos de teste no arquivo \verb|linker.json|, que será importado no Moodle.
 
+\begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+O comando \verb|comment| na descrição da questão é exclusivamente designado para a inclusão do dicionário de casos de teste no MCTest. Qualquer utilização além dessa finalidade pode comprometer a integridade do teste, resultando em possíveis complicações na execução da tarefa. A função deste comando é informar ao gerador MCTest sobre os casos de teste a serem integrados ao arquivo \verb|linker.json| para subsequente importação no Moodle.
+\end{mybox}
+
 \subsubsection{Criando uma QT paramétrica para integração MCTest+Moodle+VPL}
 
 A seguir, será apresentado um exemplo completo de código para essa questão de parcelas sem juros, onde as variáveis e instruções em Python estão entre os marcadores \verb|[[code:| e \verb|]]|. Essas variáveis devem ser criadas no bloco de código Python definido entre os marcadores \verb|[[def:| e \verb|]]|.
@@ -825,8 +829,16 @@ para duas casas decimais apenas). Veja exemplo a seguir: \\
 
 
 A segunda parte da questão apresentada no Código \ref{lst:questaoQT_EP_1_parte1} é fornecida no Código \ref{lst:questaoQT_EP_1_parte2}, que contém o bloco de código Python que define a parte paramétrica, incluindo o dicionário \verb|moodle_cases| que contém os casos de teste.
+%
+Este Código \ref{lst:questaoQT_EP_1_parte2} consiste em quatro passos principais, destacados a seguir em \LaTeX:
 
-O Código \ref{lst:questaoQT_EP_1_parte2} consiste em quatro passos principais. No Passo 1, um número inteiro aleatório entre 8 e 19 é gerado, representando o número de parcelas em uma QT paramétrica. No Passo 2, os casos de teste são criados. Para cada caso de teste, um valor aleatório para o preço do produto é gerado e as entradas e saídas correspondentes são formatadas. No Passo 3, um dicionário contendo os casos de teste é criado e convertido para o formato JSON. Por fim, no Passo 4, um exemplo de caso de teste é mostrado no enunciado da questão. Esse código permite gerar casos de teste e parâmetros para questões paramétricas, proporcionando variação nos valores dos testes e facilitando a criação de questões personalizadas. É importante testar o código em uma IDE antes de utilizá-lo no MCTest.
+\begin{description}
+\item[\textbf{Passo 1:}] Um número inteiro aleatório entre 8 e 19 é gerado, representando o número de parcelas em uma QT paramétrica;
+\item[\textbf{Passo 2:}] Os casos de teste são criados. Para cada caso de teste, um valor aleatório para o preço do produto é gerado, e as entradas e saídas correspondentes são formatadas;
+\item[\textbf{Passo 3:}] Um dicionário contendo os casos de teste é criado e convertido para o formato JSON;
+\item[\textbf{Passo 4:}] Por fim, um exemplo de caso de teste é mostrado no enunciado da questão. Esse código permite gerar casos de teste e parâmetros para questões paramétricas, proporcionando variação nos valores dos testes e facilitando a criação de questões personalizadas. É importante testar o código em uma IDE antes de utilizá-lo no MCTest.
+\end{description}
+
 
 \begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
 Dentre os quatro passos apresentados, o professor precisa apenas modificar o Passo 1, onde os parâmetros do enunciado da questão são definidos. Além disso, o trecho entre \verb|#>>>>| e \verb|#<<<<| deve ser alterado para criar diferentes casos de teste. Essas modificações permitem criar outras questões paramétricas, com variações nos parâmetros e nos casos de teste, tornando o processo de criação mais flexível e personalizado.
@@ -895,6 +907,50 @@ Veja o resultado desta questão criada no MCTest após clicar em ``Criar-PDF'' n
   \label{fig:cap05_questaoQT_EP_1}
 \end{figure}
 
+\subsubsection{As chaves do dicionário \texttt{linker.json}}
+
+O dicionário \verb|linker.json| gerado pelo MCTest apresenta uma estrutura hierárquica organizada para representar dados relacionados à geração de casos de teste em um contexto educacional ou de avaliação. A seguir, é apresentado o conteúdo deste arquivo gerado a partir de um exame contendo apenas a questão de parcelas sem juros, conforme discutido neste capítulo. Os detalhes sobre como gerar este exemplo são apresentados no Capítulo \ref{ch:examesQT_VPL} -- \nameref{ch:examesQT_VPL}.
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo com os casos de teste:}}\vspace{3mm}
+    \hrule
+    \begin{verbatim}
+{
+  "variations": [
+    {
+      "variant": "1",
+      "questions": [
+        {
+          "key": "2454",
+          "number": "1",
+          "file": "Q1",
+          "weight": "1",
+          "language": ["all"],
+          "skills": [],
+          "description": [],
+          "cases": [
+            {
+              "case": "test_1",
+              "input": ["5007.5\n"],
+              "output": ["294.56"]},
+            {
+              "case": "test_2",
+              "input": ["5005.8\n"],
+              "output": ["294.46"]}]}]}]}
+\end{verbatim}
+\end{myboxCode}
+
+
+O dicionário \verb|linker.json| é composto por uma série de elementos-chave organizados de maneira hierárquica para representar um conjunto de variações contendo questões parametrizadas. A estrutura geral é dividida em três níveis principais: \verb|"variations"|, \verb|"questions"|, e \verb|"cases"|, detalhados a seguir:
+
+\begin{description}
+\item[\texttt{variations:}]  Este nível contém informações sobre as diferentes variantes (ou modelos) do conjunto de questões. Cada variante é identificada por um número único, como exemplificado pela entrada \verb|"variant": "1"|. Dentro de cada variante, encontramos informações específicas sobre as questões associadas;
+
+\item[\texttt{questions:}] Este nível representa as questões individuais dentro de cada variante. Cada questão é identificada por uma chave única (\verb|"key"|), e são fornecidas informações adicionais, como o número da questão (\verb|"number"|), o nome do arquivo associado (\verb|"file"|), o peso da questão (\verb|"weight"|), a linguagem de programação relevante (\verb|"language"|), habilidades requeridas (\verb|"skills"|), e uma descrição textual da questão (\verb|"description"|). Esta descrição pode ser apresentada na interface VPL do Moodle;
+
+\item[\texttt{cases:}] Este é o nível mais detalhado, representando os casos de teste específicos para cada questão. Cada caso de teste é identificado por um nome único (\verb|"case"|) e inclui informações sobre as entradas (\verb|"input"|) e as saídas esperadas (\verb|"output"|). No exemplo fornecido, são apresentados dois casos de teste (\verb|test_1| e \verb|test_2|) para a questão identificada pela chave \verb|"2454"|.
+\end{description}
+
+A utilização desse formato de dicionário permite a descrição estruturada de questões de programação parametrizadas, facilitando a integração entre o MCTest e o \textit{plugin} VPL do Moodle para a correção automática de questões individualizadas para cada estudante.
 
 \section{Considerações finais}
 
