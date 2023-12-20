@@ -3,7 +3,7 @@
 
 A criação de questões estáticas é fundamental para a avaliação educacional e existem diversas abordagens e formatos disponíveis. Neste capítulo, serão abordados os dois principais tipos de questões estáticas utilizados em avaliações educacionais: as questões de múltipla escolha (QMs) e as questões dissertativas ou de texto (QTs). O objetivo é apresentar as características e particularidades de cada tipo de questão, bem como as vantagens e desvantagens de sua utilização na avaliação da aprendizagem. É importante destacar que as questões apresentadas neste capítulo não são parametrizadas, sendo as únicas variações os sorteios das questões e alternativas, no caso das QMs. No próximo capítulo, serão abordadas as questões parametrizadas.
 
-Neste capítulo, será discutida a visibilidade do professor no menu do MCTest, permitindo que ele faça a manutenção das questões, exames e turmas que criou. Além disso, o professor também pode visualizar e utilizar questões criadas por outros professores cadastrados nas mesmas disciplinas.  É importante compreender como essa funcionalidade pode ser útil aos professores, proporcionando maior uniformidade e controle sobre as avaliações.
+Neste capítulo, será discutida a visibilidade do professor no menu do MCTest, permitindo que ele faça a manutenção das questões, exames e turmas que criou. Além disso, o professor também pode visualizar e utilizar questões criadas por outros professores cadastrados nas mesmas disciplinas.  É importante compreender como essa funcionalidade pode ser útil aos professores, proporcionando maior uniformidade e controle sobre as avaliações. 
 
 \section{Tutoriais gerais sobre a navegação de questões}\label{sec:questaoNavegacao}
 
@@ -44,7 +44,7 @@ Caso o professor tente modificar uma questão que não é de sua autoria, será 
 Na Figura \ref{fig:cap04_figQuestaoMy}, é possível observar que o professor ``fzprof'' ainda não criou nenhuma questão. Para criar novas questões, o professor pode importar um arquivo no formato TXT, conforme exemplificado abaixo. Esse formato foi utilizado na versão 4 do MCTest, que executava no console de um computador e aceitava apenas três níveis de dificuldade: fácil (QE), médio (QM) e difícil (QH), representados em inglês por \textit{easy}, \textit{median} e \textit{hard}, respectivamente. Já a versão web atual do MCTest aceita cinco níveis de dificuldade, de 1 a 5. Ao importar uma questão de um arquivo TXT na versão web, as questões com nível de dificuldade QE terão dificuldade 1, as QM terão dificuldade 3 e as QH terão dificuldade 5.
 
 
-No exemplo a seguir, o tópico é ``DE-matriz'' e é necessário existir uma disciplina com esse tópico cadastrada no MCTest. Para evitar conflitos, é recomendável incluir algum código como prefixo do tópico, como o código da disciplina. Por exemplo, ``DE-matriz'' significa que o tópico matriz pertence à disciplina ``Disciplina Exemplo'' cadastrada no MCTest. Além disso, o campo ``grupo'' da questão é importante para evitar que duas questões do mesmo grupo sejam sorteadas em um mesmo exame. Isso será exemplificado em capítulos futuros ao explicar a elaboração de exames. Finalmente, as alternativas, se existirem, devem ser precedidas de ``A:'', sendo a primeira alternativa sempre a correta. Ao visualizar uma questão, as alternativas serão sorteadas a cada vez que o PDF da questão for gerado. É possível criar várias QMs utilizando somente um arquivo TXT. Porém, se forem questões paramétricas, deve existir apenas uma questão por arquivo.
+No exemplo a seguir, o tópico é ``DE-matriz'' e é necessário existir uma disciplina com esse tópico cadastrada no MCTest. Para evitar conflitos, é recomendável incluir algum código como prefixo do tópico, como o código da disciplina. Por exemplo, ``DE-matriz'' significa que o tópico matriz pertence à disciplina ``Disciplina Exemplo'' cadastrada no MCTest. Além disso, o campo ``grupo'' da questão é importante para evitar que duas questões do mesmo grupo sejam sorteadas em um mesmo exame. Isso será exemplificado em capítulos futuros ao explicar a elaboração de exames. Finalmente, as alternativas, se existirem, devem ser precedidas de ``A:'', sendo a primeira alternativa sempre a correta. Ao visualizar uma questão, as alternativas serão sorteadas a cada vez que o PDF da questão for gerado. É possível criar várias QMs utilizando somente um arquivo TXT. Porém, se forem questões paramétricas, deve existir apenas uma questão por arquivo. 
 
 \begin{myboxCode}{corCSV}{\textbf{Arquivo CSV, com acentos no formato \LaTeX: }}\vspace{3mm}
 \hrule
@@ -59,6 +59,8 @@ A: 55
 A: 47
 \end{verbatim}
 \end{myboxCode}
+
+Na Seção \ref{sec:questoesQM_QT} -- \nameref{sec:questoesQM_QT}, serão apresentados mais exemplos de como criar questões utilizando um arquivo TXT, destinadas a serem utilizadas em um exame.
 
 \begin{figure}[!ht]
   \centering

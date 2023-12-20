@@ -1,0 +1,40 @@
+{
+  "variations": [
+    {
+      "variant": "1",
+      "questions": [
+        {
+          "key": "2454",
+          "number": "1",
+          "file": "Q1",
+          "weight": "1",
+          "language": [
+            "all"
+          ],
+          "skills": [],
+          "description": [],
+          "cases": [
+            {
+              "case": "test_1",
+              "input": [
+                "5007.5\n"
+              ],
+              "output": [
+                "294.56"
+              ]
+            },
+            {
+              "case": "test_2",
+              "input": [
+                "5005.8\n"
+              ],
+              "output": [
+                "294.46"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
