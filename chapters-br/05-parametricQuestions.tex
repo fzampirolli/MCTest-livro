@@ -862,13 +862,16 @@ Escreva um programa em Python para calcular o fatorial de um número inteiro for
 Aqui está um exemplo de  questão de EP no Moodle usando a linguagem Python para calcular o fatorial de um número:
 \begin{enumerate}
     \item Acesse o Moodle e vá para a disciplina em que deseja adicionar a questão;
-    \item Clique em ``Atividades'' e selecione ``Laboratório Virtual de Programação''  para criar uma nova atividade VPL;
+  
+    \item Clique em ``Ativar edição', para conseguir incluir novas atividades;
+  
+    \item Escolha um tópico do curso e clique em ``Adicionar uma atividade ou recurso'' e selecione ``Laboratório Virtual de Programação''  para criar uma nova atividade VPL;
 
     \item Preencha os detalhes da atividade, como nome, descrição e pontuação. Finalize salvando e mostrando a atividade. Em seguida, clique no ícone de engrenagem para acessar as configurações avançadas da atividade e siga os próximos passos;
 
-    \item Na seção ``Opções de execução'', selecione a linguagem ``Python'' como ``Script de execução'', deixando apenas ``Avaliar'' e ``Atribuição automática de nota'' como ``Sim'', por exemplo;
+    \item Na seção ``Opções de execução'', selecione a linguagem ``PYTHON-3: Using python3 with the first file'' como ``Script de execução'', deixando apenas ``Avaliar'' e ``Atribuição automática de nota'' como ``Sim'', por exemplo. Se deixar em branco na linguagem, a atividade irá aceitar códigos em dezenas de linguagens suportadas.
 
-    \item Na seção ``Casos de teste'', você pode definir os casos de teste da seguinte maneira:
+    \item Na seção ``Casos de teste'' (novamente no ícone de engrenagem), você pode definir os casos de teste da seguinte maneira:
 
 \begin{myboxCode}{corCSV}{\textbf{Arquivo com os casos de teste:}}\vspace{3mm}
 \hrule
@@ -889,24 +892,37 @@ output="O fatorial de 10 é 3628800"
 \end{enumerate}
 
 O Código \ref{lst:fatorial} apresenta um método em Python para calcular o fatorial de um número. O fatorial de um número inteiro é o produto de todos os números inteiros positivos de 1 até esse número.
-
-O método \verb|fatorial(n)| recebe um número \verb|n| como parâmetro. Ele verifica se \verb|n| é igual a zero. Se for, retorna 1, pois o fatorial de 0 é definido como 1. Caso contrário, o método calcula o fatorial de \verb|n| multiplicando \verb|n| pelo fatorial de \verb|n-1| (ou seja, o fatorial do número anterior). Isso é feito recursivamente até chegar ao caso base do fatorial de 0.
+%
+O método \verb|fatorial()| apresentado neste código utiliza um laço \verb|for| para multiplicar todos os números de 1 até \verb|n| e acumula o resultado na variável \verb|r|. Finalmente, retorna o valor acumulado, que é o fatorial de \verb|n|.
 
 Em seguida, o programa solicita ao usuário que digite um número inteiro. Esse número é armazenado na variável \verb|numero|. O programa então chama o método \verb|fatorial(numero)| para calcular o fatorial desse número e armazena o resultado na variável \verb|resultado|. Por fim, o programa exibe a frase \verb|"O fatorial de"| seguida do número digitado pelo usuário e do resultado calculado.
+
+
+%O método \verb|fatorial(n)| recebe um número \verb|n| como parâmetro. Ele verifica se \verb|n| é igual a zero. Se for, retorna 1, pois o fatorial de 0 é definido como 1. Caso contrário, o método calcula o fatorial de \verb|n| multiplicando \verb|n| pelo fatorial de \verb|n-1| (ou seja, o fatorial do número anterior). Isso é feito recursivamente até chegar ao caso base do fatorial de 0.
+
+% def fatorial(n):
+%     if n == 0:
+%         return 1
+%     else:
+%         return n * fatorial(n - 1)
+
+% numero = int(input("Digite um número inteiro: "))
+% resultado = fatorial(numero)
+% print("O fatorial de", numero, "é", resultado, ".")
 
 \begin{listing}[!ht]
 \begin{myboxCode}{corCodigo}{\textbf{Código: } Exemplo de uso de atividade Moodle+VPL}\vspace{3mm}
 \hrule
 \begin{minted}[xleftmargin=20pt,linenos=true]{python}
 def fatorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * fatorial(n - 1)
+    r = 1
+    for i in range(1, n + 1):
+        r = r * i
+    return r
 
-numero = int(input("Digite um número inteiro: "))
+numero = int(input())
 resultado = fatorial(numero)
-print("O fatorial de", numero, "é", resultado, ".")
+print(f"O fatorial de {numero} é {resultado}.")
 \end{minted}
 \end{myboxCode}
 \caption{Programa em Python para cálculo do fatorial.}
@@ -916,14 +932,28 @@ print("O fatorial de", numero, "é", resultado, ".")
 
 \subsubsection{Avaliação}
 
-A pontuação para esta questão será baseada no programa fornecido pelo estudante para ler as entradas, calcular o fatorial e produzir as saídas esperadas para os casos de teste fornecidos. Se o estudante fornecer apenas uma saída fixa, como \verb|print("O fatorial de 5 é 120.")|, a questão receberá uma nota de 50\% (considerando que foram criados dois casos de teste).
+Para reproduzir a visão de estudante para a realização de testes, o professor pode clicar na seta para baixo ao lado do seu nome no canto superior direito e clicar em ``Mudar papel para...'', escolhendo a opção ``Estudante''.
 
-Portanto, é importante incluir uma variedade de casos de teste para avaliar corretamente o programa e identificar possíveis tentativas de trapassa. Quanto mais casos de teste forem utilizados, melhor será a avaliação, uma vez que aumenta a chance de identificar soluções corretas e detectar respostas fixas ou incorretas.
+Na atividade VPL, agora, com a visão de estudante, escolha ``Editar'' para selecionar um novo nome de arquivo, como por exemplo, \verb|teste.py| (necessariamente com a extensão da linguagem escolhida). Para alterar esse nome, basta clicar duas vezes sobre ele.
+
+Inclua uma solução, conforme apresentado no Código \ref{lst:fatorial}, clique no ícone para salvar e solicite avaliação. A pontuação para esta questão será baseada no programa fornecido pelo estudante para ler as entradas, calcular o fatorial e gerar as saídas esperadas para os casos de teste fornecidos. Se o estudante fornecer apenas uma saída fixa, como \verb|print("O fatorial de 5 é 120.")|, a questão receberá uma nota de 50\% (considerando que foram criados dois casos de teste). 
+
+Portanto, é importante incluir uma variedade de casos de teste para avaliar corretamente o programa e identificar possíveis tentativas de trapaça. Quanto mais casos de teste forem utilizados, melhor será a avaliação, uma vez que aumenta a chance de identificar soluções corretas e detectar respostas fixas ou incorretas. Além disso, é possível adicionar arquivos específicos na atividade VPL para verificar se o estudante de fato elaborou o código; essa funcionalidade será introduzida na próxima seção.
+
+A Figura \ref{fig:cap05_questaoQT_Moodle_VPL} ilustra a situação após a solicitação de avaliação, na qual um espaço antes do ponto foi intencionalmente inserido no comando \verb|print|. Esta interface do Moodle é da versão 4.1. Na parte direita da imagem, é possível observar diversas mensagens para cada caso de teste, sendo destacadas as seções \verb|--- Input ---| para a entrada com o comando \verb|input()|, \verb|--- Program output ---| para a saída do programa, e \verb|--- Expected output (exact text)---| para a saída esperada. Removendo esse espaço e solicitando uma nova avaliação, será atribuída \verb|Nota proposta: 100 / 100|, observando a parte superior direito desta figura.
+
+
+\begin{figure}[!ht]
+  \includegraphics[width=0.9\textwidth]{cap05_questaoQT_Moodle_VPL.png}
+  \caption{Recorte da tela do Moodle de uma atividade VPL.}
+  \label{fig:cap05_questaoQT_Moodle_VPL}
+\end{figure}
 
 
 \subsection{Questão com exercício de programação no MCTest+Moodle+VPL}\label{sec:questao_VPL}
 
-Esse tipo de questão, utilizando EP no MCTest+Moodle+VPL, apresenta dois desafios devido à falta de integração atual entre os bancos de dados do MCTest e do Moodle.
+Um problema na solução de EP utilizando apenas Moodle+VPL é não ser possível criar um conjunto específico de casos de teste para cada estudante. Além disso, não é possível criar uma questão distinta para cada estudante. Para resolver isso, será apresentado nesta seção um tipo de questão, utilizando EP no MCTest+Moodle+VPL, que apresenta dois desafios devido à falta de integração atual entre os bancos de dados do MCTest e do Moodle.
+
 
 \subsubsection{Primeiro desafio}
 
@@ -995,7 +1025,7 @@ O comando \verb|comment| na descrição da questão é exclusivamente designado 
 
 \subsubsection{Criando uma QT paramétrica para integração MCTest+Moodle+VPL}
 
-A seguir, será apresentado um exemplo completo de código para essa questão de parcelas sem juros, onde as variáveis e instruções em Python estão entre os marcadores \verb|[[code:| e \verb|]]|. Essas variáveis devem ser criadas no bloco de código Python definido entre os marcadores \verb|[[def:| e \verb|]]|.
+A seguir, será apresentado um exemplo completo de código para essa questão de parcelas sem juros, onde as variáveis e instruções em Python estão entre os marcadores \verb|[[code:| e \verb|]]|. Este exemplo foi adaptado do trabalho de \citeonline{2021:Zampirolli.Sato.ea}. Essas variáveis devem ser criadas no bloco de código Python definido entre os marcadores \verb|[[def:| e \verb|]]|.
 
 Para criar questões paramétricas, não apenas nos casos de teste, é necessário incluir variáveis aleatórias no enunciado da questão entre \verb|[[code:| e \verb|]]|. No exemplo das parcelas sem juros, foi incluído no enunciado o número de parcelas, sendo utilizado apenas o valor da compra como entrada para o caso de teste.
 
@@ -1040,7 +1070,7 @@ para duas casas decimais apenas). Veja exemplo a seguir: \\
 
 A segunda parte da questão apresentada no Código \ref{lst:questaoQT_EP_1_parte1} é fornecida no Código \ref{lst:questaoQT_EP_1_parte2}, que contém o bloco de código Python que define a parte paramétrica, incluindo o dicionário \verb|moodle_cases| que contém os casos de teste.
 %
-Este Código \ref{lst:questaoQT_EP_1_parte2} consiste em quatro passos principais, destacados a seguir em \LaTeX:
+Este Código \ref{lst:questaoQT_EP_1_parte2} consiste em quatro passos principais, destacados a seguir:
 
 \begin{description}
 \item[\textbf{Passo 1:}] Um número inteiro aleatório entre 8 e 19 é gerado, representando o número de parcelas em uma QT paramétrica;
@@ -1121,7 +1151,8 @@ Veja o resultado desta questão criada no MCTest após clicar em ``Criar-PDF'' n
 
 \subsubsection{As chaves do dicionário \texttt{linker.json}} 
 
-O dicionário \verb|linker.json| gerado pelo MCTest apresenta uma estrutura hierárquica organizada para representar dados relacionados à geração de casos de teste em um contexto educacional ou de avaliação. A seguir, é apresentado o conteúdo deste arquivo gerado a partir de um exame contendo apenas a questão de parcelas sem juros, conforme discutido neste capítulo. Os detalhes sobre como gerar este exemplo são apresentados no Capítulo \ref{ch:examesQT_VPL} -- \nameref{ch:examesQT_VPL}. 
+
+O dicionário \verb|linker.json| gerado pelo MCTest apresenta uma estrutura hierárquica organizada para representar dados relacionados à geração de casos de teste em um contexto educacional ou de avaliação. A primeira versão deste arquivo foi apresentada no trabalho de \citeonline{2021:Zampirolli.Sato.ea}. A seguir, é apresentado o conteúdo deste arquivo gerado a partir de um exame contendo apenas a questão de parcelas sem juros, conforme discutido neste capítulo. Os detalhes sobre como gerar este exemplo são apresentados no Capítulo \ref{ch:examesQT_VPL} -- \nameref{ch:examesQT_VPL}.
 
 \begin{myboxCode}{corCSV}{\textbf{Arquivo com os casos de teste:}}\vspace{3mm}
     \hrule
@@ -1157,7 +1188,7 @@ O dicionário \verb|linker.json| é composto por uma série de elementos-chave o
 \begin{description}
 \item[\texttt{variations:}]  Este nível contém informações sobre as diferentes variantes (ou modelos) do conjunto de questões. Cada variante é identificada por um número único, como exemplificado pela entrada \verb|"variant": "1"|. Dentro de cada variante, encontramos informações específicas sobre as questões associadas;
 
-\item[\texttt{questions:}] Este nível representa as questões individuais dentro de cada variante. Cada questão é identificada por uma chave única (\verb|"key"|), e são fornecidas informações adicionais, como o número da questão (\verb|"number"|), o nome do arquivo associado (\verb|"file"|), o peso da questão (\verb|"weight"|), a linguagem de programação relevante (\verb|"language"|), \ habilidades requeridas (\verb|"skills"|), e uma descrição textual da questão (\verb|"description"|). Esta descrição pode ser apresentada na interface VPL do Moodle;
+\item[\texttt{questions:}] Este nível representa as questões individuais dentro de cada variante. Cada questão é identificada por uma chave única (\verb|"key"|), e são fornecidas informações adicionais, como o número da questão (\verb|"number"|), o nome do arquivo associado (\verb|"file"|) -- que deve ser o mesmo nome no arquivo incluído na atividade VPL --, o peso da questão (\verb|"weight"|), a linguagem de programação (\verb|"language"|), \ habilidades requeridas (\verb|"skills"|), e uma descrição textual da questão (\verb|"description"|). Esta descrição pode ser apresentada na interface VPL do Moodle;
 
 \item[\texttt{cases:}] Este é o nível mais detalhado, representando os casos de teste específicos para cada questão. Cada caso de teste é identificado por um nome único (\verb|"case"|) e inclui informações sobre as entradas (\verb|"input"|) e as saídas esperadas (\verb|"output"|). No exemplo fornecido, são apresentados dois casos de teste (\verb|test_1| e \verb|test_2|) para a questão identificada pela chave \verb|"2454"|.
 \end{description}
