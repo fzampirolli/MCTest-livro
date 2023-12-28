@@ -1,11 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mychapter{Exames com Quadro de Respostas (QR)}\label{ch:examesQR}
 
-Este capítulo enfoca a criação de exames que contêm exclusivamente o quadro de resposta (QR). Essa abordagem é especialmente útil quando os enunciados das questões são fornecidos separadamente. É uma prática amplamente adotada na Escola Preparatória da UFABC (EPUFABC) para processos seletivos e simulados que envolvem inúmeros estudantes anualmente. Será apresentado como acomodar centenas de questões em uma única página em formato PDF, que pode ser impressa e distribuída aos estudantes para preencherem manualmente as respostas. Em seguida, os QRs são digitalizados e enviados ao MCTest para correção. O sistema envia ao professor um e-mail contendo arquivos CSV com as marcações de cada estudante e as respostas corretas. Além disso, em poucos minutos, o MCTest fornece uma síntese da Teoria de Respostas ao Item (TRI) com base nas correções realizadas. O gabarito, ou seja, as respostas corretas, é fornecido na primeira página do PDF digitalizado, que pode conter as respostas de todos os estudantes de uma turma em sequência.
+Este capítulo se concentra na criação de exames que exclusivamente apresentam o quadro de resposta (QR). Essa abordagem é particularmente útil quando os enunciados das questões são fornecidos separadamente. É uma prática amplamente adotada na Escola Preparatória da UFABC (EPUFABC) para processos seletivos e simulados que envolvem inúmeros estudantes anualmente.
+
+Será demonstrado como acomodar centenas de questões em uma única página em formato PDF, que pode ser impressa e distribuída aos estudantes para preencherem manualmente as respostas. Posteriormente, os QRs são digitalizados e enviados ao MCTest para correção. O sistema encaminha ao professor um e-mail contendo arquivos CSV com as marcações de cada estudante e as respostas corretas. Além disso, em poucos minutos, o MCTest fornece uma síntese da Teoria de Respostas ao Item (TRI) com base nas correções realizadas, a menos que ocorra algum erro no processo de correção, como a não decodificação do QRCode.
+
+O gabarito, ou seja, as respostas corretas, é disponibilizado na primeira página do PDF digitalizado, que pode conter as respostas de todos os estudantes de uma turma em sequência.
 
 \section{Utilizando exames exclusivamente com QR}\label{sec:examesQR}
 
-Conforme visto no capítulo anterior, na Seção \ref{sec:telaExame} -- \nameref{sec:telaExame}, ao criar um exame, a configuração padrão é para um exame com exclusivamente o QR, como mostrado na Figura \ref{fig:cap06_figExamePDF_QRpadrao}. Para esse estilo de exame, o professor só precisa selecionar a(s) turma(s) e seguir as instruções descritas na Seção \ref{sec:exameDetalhes} -- \nameref{sec:exameDetalhes} para configurar os detalhes do exame. Nesse caso, é necessário definir o número de questões em uma escala de dificuldade de 1 a 5 e o número de alternativas de cada questão na parte esquerda da Figura \ref{fig:cap06_figExameAtualiza4}. Na parte direita, você deve informar a quantidade de questões por bloco/quadro e escolher a quantidade de blocos por linha, além de definir se o estilo do exame será horizontal ou vertical. Certifique-se de marcar as opções ``Questões/Respostas/Ambos=Respostas'', ``Ecológico=Sim'' e ``Retorno=Não''. As instruções do exame podem ser definidas no campo ``Instruções'' e é possível utilizar a formatação de itens com o comando \verb|\item|. 
+Conforme visto no capítulo anterior, na Seção \ref{sec:telaExame} -- \nameref{sec:telaExame}, ao criar um exame, a configuração padrão é para um exame com exclusivamente o QR, como mostrado na Figura \ref{fig:cap06_figExamePDF_QRpadrao}. Para esse estilo de exame, o professor só precisa selecionar a(s) turma(s) e seguir as instruções descritas na Seção \ref{sec:exameDetalhes} -- \nameref{sec:exameDetalhes} para configurar os detalhes do exame. Nesse caso, é necessário definir o número de questões em uma escala de dificuldade de 1 a 5 e o número de alternativas de cada questão na parte esquerda da Figura \ref{fig:cap06_figExameAtualizaConfiguracoes}. Na parte direita, você deve informar a quantidade de questões por bloco/quadro e escolher a quantidade de blocos por linha, além de definir se o estilo do exame será horizontal ou vertical. Certifique-se de marcar as opções ``Questões/Respostas/Ambos=Respostas'', ``Ecológico=Sim'' e ``Retorno=Não''. As instruções do exame podem ser definidas no campo ``Instruções'' e é possível utilizar a formatação de itens com o comando \verb|\item|. 
 
 \subsection{Estilo vertical}
 
@@ -31,12 +35,12 @@ Com esse exemplo realizado na EPUFABC, foi destacada a utilidade do MCTest na re
 
 \subsection{Estilo horizontal}
 
-Para minimizar os erros nas marcações dos círculos, foi criado o estilo horizontal, como ilustrado na Figura \ref{fig:cap07_fighorizontal}. É importante observar que, na questão 15 desta figura, o candidato utilizou corretivo, o que inviabilizou o algoritmo de visão computacional na correção automática deste candidato. Esse estilo foi aplicado no processo seletivo da EPUFABC em 2020. Além disso, o estilo vertical ocupa menos espaço na folha de exame, o que é especialmente útil quando se deseja incluir tanto o QR quanto as questões em uma única folha, conforme utilizado no processo seletivo da Especialização em Tecnologias e Sistemas da Informação (TSI), que será apresentado no próximo capítulo.
+Para minimizar os erros nas marcações dos círculos, foi desenvolvido o estilo horizontal, como ilustrado na Figura \ref{fig:cap07_fighorizontal}. É importante observar que, na questão 15 desta figura, o candidato utilizou corretivo, o que impossibilitou o algoritmo de visão computacional de corrigir automaticamente esse exame. Esse estilo foi aplicado no processo seletivo da EPUFABC em 2020, com 2053 exames digitalizados, 3 QRCodes não identificados e apenas uma falha nas correções das respostas, conforme mostrado na Figura \ref{fig:cap07_fighorizontal}. Além disso, o estilo horizontal ocupa menos espaço na folha de exame, o que é especialmente útil quando se deseja incluir tanto o QR quanto as questões em uma única folha, como utilizado no processo seletivo da Especialização em Tecnologias e Sistemas da Informação (TSI), que será apresentado no próximo capítulo.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{cap07_fighorizontal.png}
-    \caption{Recorte de um exame digitalizado em formato PDF no estilo vertical.}
+    \caption{Recorte de um exame digitalizado em formato PDF no estilo horizontal.}
  \label{fig:cap07_fighorizontal}
 \end{figure}
 
@@ -66,24 +70,25 @@ A seguir, serão apresentadas mais restrições relacionadas à organização do
 \label{fig:cap07_figquestoesPorBloco}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Corrigindo exames com QR}\label{sec:examesCorrigirQR}
 
-Ao imprimir o PDF apresentado na Figura \ref{fig:cap07_figquestoesPorBloco} e preencher o gabarito, foi digitalizado e apresentado na Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(a). Em seguida, foram preenchidas mais algumas alternativas na mesma página do gabarito e realizada uma nova digitalização, como mostrado na Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(b). Na terceira página do PDF, optou-se por repetir o gabarito para simular um estudante que obteve a nota máxima nesta avaliação.
-
+Foi criado um PDF considerando uma turma com três estudantes, sendo o primeiro destinado exclusivamente ao armazenamento do gabarito, conforme ilustrado na Figura \ref{fig:cap07_figquestoesPorBloco}. Após a impressão deste PDF, o gabarito foi preenchido e digitalizado, conforme mostrado na Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(a). Em seguida, mais dois QRs foram preenchidos e digitalizados, como apresentado nas Figuras \ref{fig:cap07_figquestoesPorBlocoScan}--(b) e (c). Todas as três digitalizações foram armazenadas em um único PDF, sendo a primeira página estritamente destinada ao gabarito. No segundo QR, optou-se por introduzir vários erros no preenchimento das alternativas nos terceiro e quarto blocos. Na terceira página do PDF, decidiu-se repetir o gabarito para simular um estudante que obteve a nota máxima nesta avaliação.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.49\textwidth]{cap07_figquestoesPorBlocoScan1.png}
-\includegraphics[width=0.49\textwidth]{cap07_figquestoesPorBlocoScan2.png}\\
-(a) \hspace{7cm} (b)
-\caption{Exemplos de exames digitalizados a partir do PDF mostrado na Figura \ref{fig:cap07_figquestoesPorBloco}.}
+\includegraphics[width=0.54\textwidth]{cap07_figquestoesPorBlocoScan1.png}\\(a)\\
+\includegraphics[width=0.54\textwidth]{cap07_figquestoesPorBlocoScan2.png}\\(b)\\
+\includegraphics[width=0.54\textwidth]{cap07_figquestoesPorBlocoScan3.png}\\(c)
+%(a) \hspace{7cm} (b)
+\caption{Exemplos de exames digitalizados incluem: (a) o gabarito obtido a partir do PDF apresentado na Figura \ref{fig:cap07_figquestoesPorBloco}; (b) e (c) representam dois exemplos adicionais de respostas de estudantes.}
 \label{fig:cap07_figquestoesPorBlocoScan}
 \end{figure}
 
-É importante mencionar que a Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(b) exibe a digitalização da página rotacionada de propósito. Isso pode ser feito sem problemas, desde que os quatro discos pretos externos estejam intactos na digitalização. Nesse caso específico, os erros foram gerados intencionalmente ao marcar mais de uma alternativa em algumas questões, para avaliar a capacidade do método de visão computacional em detectar essas marcações incorretas. 
+É importante mencionar que a Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(c) exibe a digitalização da página rotacionada de propósito. Isso pode ser feito sem problemas, desde que os quatro discos pretos externos estejam intactos na digitalização. Nesse caso específico, os erros foram gerados intencionalmente ao marcar mais de uma alternativa em algumas questões, para avaliar a capacidade do método de visão computacional em detectar essas marcações incorretas. 
 
 \begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
-Se algum dos quatro discos não aparecer durante a digitalização, uma sugestão seria pintar o que estiver faltando com o mesmo diâmetro e realizar uma nova digitalização. Outra opção é realizar a pintura diretamente no arquivo digitalizado, utilizando, por exemplo, a ferramenta disponível em \href{www.ilovepdf.com}{www.ilovepdf.com}. Lembrando que os quatro discos devem formar um retângulo imaginário com as marcações e o QRcode internos.
+Se algum dos quatro discos não aparecer durante a digitalização, uma sugestão seria pintar o que estiver faltando com o mesmo diâmetro e realizar uma nova digitalização. Outra opção é realizar a pintura diretamente no arquivo digitalizado, utilizando, por exemplo, a ferramenta disponível em \href{www.ilovepdf.com}{ilovepdf.com}. Lembrando que os quatro discos devem formar um retângulo imaginário com as marcações e o QRcode internos.
 \end{mybox}
 
 Após fazer o \textit{upload} deste PDF, seguindo as instruções descritas na Seção \ref{sec:exameRecorte1} - \nameref{sec:exameRecorte1}, serão gerados vários arquivos que serão compactados em um arquivo ZIP, conforme apresentado a seguir:
@@ -91,17 +96,19 @@ Após fazer o \textit{upload} deste PDF, seguindo as instruções descritas na S
 \begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar a correção do exame no botão ``Upload-PDF''}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-_e476_fzampirolli@ufabc.edu.br_ScanFile_RETURN__.csv
-_e476_fzampirolli@ufabc.edu.br_ScanFile_RETURN_irt.csv
-_e476_fzampirolli@ufabc.edu.br_ScanFile_RETURN_p002_s3_q002.png
-_e476_fzampirolli@ufabc.edu.br_ScanFile_RETURN_p002_s3_q003.png
-_e476_fzampirolli@ufabc.edu.br_ScanFile_RETURN_p002_s3_q004.png
-_e476_fzampirolli@ufabc.edu.br_ScanFile_RETURN_p002_s3_q005.png
-_e476_fzampirolli@ufabc.edu.br_ScanFile_RETURN_statistics.csv
+_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN__.csv
+_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_irt.csv
+_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_p002_s3_q002.png
+_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_p002_s3_q003.png
+_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_p002_s3_q004.png
+_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_p002_s3_q005.png
+_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_p002_s4_q001_D_OK.png
+_e496_fzampirolli@ufabc.edu.br__e496_varID_0_class_672_scan_RETURN_statistics.csv
+studentEmail_e496.zip
 \end{verbatim}
 \end{myboxCode}
 
-Nesses arquivos, o prefixo \verb|_e476_| representa o ID do exame no banco de dados, seguido pelo e-mail do professor logado no MCTest e pelo nome do arquivo digitalizado e enviado para correção. O sufixo \verb|_RETURN_| indica que esses arquivos serão compactados e enviados ao e-mail do professor vinculado à conta logada no MCTest. 
+Nesses arquivos, o prefixo \verb|_e496_| representa o ID do exame no banco de dados, seguido pelo e-mail do professor logado no MCTest e pelo nome do arquivo digitalizado e enviado para correção. O sufixo \verb|_RETURN_| indica que esses arquivos serão compactados e enviados ao e-mail do professor vinculado à conta logada no MCTest. 
 
 \subsection{Arquivo CSV com as correções}\label{sec:CSVcorrecoesQR}
 
@@ -111,10 +118,10 @@ O conteúdo do primeiro arquivo CSV na lista anterior, \verb|*_.csv|, apresenta 
 \hrule
 {\footnotesize
 \begin{verbatim}
-Pag ID Resp Quest Inv Grade Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18
-1    1    5    18   0     0  A  B  C  D  E  E  D  C  B   A   A   A   A   A   A   D   D   D
-2    1    5    18   4    14  A  B  C  D  E  E  D  C  B   A   A 2/A 3/A 4/A 5/A   D   D   D
-3    1    5    18   0    18  A  B  C  D  E  E  D  C  B   A   A   A   A   A   A   D   D   D
+Pag ID  Resp Quest Inv Grade Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18
+1   101   5    18   0     0  A  B  C  D  E  E  D  C  B  A   A   A   A   A   A   D   D   D
+2   123   5    18   5    12  A  B  C  D  E  E  D  C  B  A   E/A 2/A 3/A 4/A 5/A D   0/D D
+3   987   5    18   0    18  A  B  C  D  E  E  D  C  B  A   A   A   A   A   A   D   D   D
 \end{verbatim}
 }
 \end{myboxCode}
@@ -128,11 +135,12 @@ Pag ID Resp Quest Inv Grade Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 Q
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.048\textwidth]{cap07_figquestoes_q002.png} \ \ \ 
-\includegraphics[width=0.048\textwidth]{cap07_figquestoes_q003.png} \ \ \ 
-\includegraphics[width=0.05\textwidth]{cap07_figquestoes_q004.png} \ \ \ 
+\includegraphics[width=0.05\textwidth]{cap07_figquestoes_q002.png} \ \ \ 
+\includegraphics[width=0.053\textwidth]{cap07_figquestoes_q003.png} \ \ \ 
+\includegraphics[width=0.0478\textwidth]{cap07_figquestoes_q004.png} \ \ \ 
 \includegraphics[width=0.05\textwidth]{cap07_figquestoes_q005.png} \ \ \ 
-\caption{Recortes das questões marcadas erradamente na Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(b).}
+\includegraphics[width=0.05\textwidth]{cap07_figquestoes_q001_D_OK.png} \ \ \ 
+\caption{Recortes das questões erroneamente marcadas no terceiro bloco são apresentados na Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(b). No quarto bloco, a alternativa D foi considerada como correta.}
 \label{fig:cap07_figquestoesPorBlocoScanErros}
 \end{figure}
 
@@ -144,7 +152,7 @@ O segundo arquivo CSV, com sufixo \verb|_irt.csv|, contém as respostas corretas
 \hrule
 {\footnotesize
 \begin{verbatim}
-1  1  1  1  1  1  1  1  1  1  1  0  0  0  0  1  1  1
+1  1  1  1  1  1  1  1  1  1  0  0  0  0  0  1  0  1
 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 \end{verbatim}
 }
