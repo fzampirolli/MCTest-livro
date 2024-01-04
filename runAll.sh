@@ -49,3 +49,5 @@ rm -rf *.png *.aux */*.aux livro-epub* *.bbl *.lof *.log *.blg *.lol *.maf *.mtc
 cp livro*.pdf /Users/fz/PycharmProjects/mctest/book/2ed-br_in_progress/
 cp *.html /Users/fz/PycharmProjects/mctest/book/2ed-br_in_progress/
 cp *.epub /Users/fz/PycharmProjects/mctest/book/2ed-br_in_progress/
+
+cp livro.pdf ~/Desktop

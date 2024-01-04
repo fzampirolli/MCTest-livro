@@ -73,7 +73,14 @@ A seguir, serão apresentadas mais restrições relacionadas à organização do
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Corrigindo exames com QR}\label{sec:examesCorrigirQR}
 
-Foi criado um PDF considerando uma turma com três estudantes, sendo o primeiro destinado exclusivamente ao armazenamento do gabarito, conforme ilustrado na Figura \ref{fig:cap07_figquestoesPorBloco}. Após a impressão deste PDF, o gabarito foi preenchido e digitalizado, conforme mostrado na Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(a). Em seguida, mais dois QRs foram preenchidos e digitalizados, como apresentado nas Figuras \ref{fig:cap07_figquestoesPorBlocoScan}--(b) e (c). Todas as três digitalizações foram armazenadas em um único PDF, sendo a primeira página estritamente destinada ao gabarito. No segundo QR, optou-se por introduzir vários erros no preenchimento das alternativas nos terceiro e quarto blocos. Na terceira página do PDF, decidiu-se repetir o gabarito para simular um estudante que obteve a nota máxima nesta avaliação.
+Foi criado um PDF destinado a uma turma com três estudantes, sendo o primeiro exclusivamente para armazenar o gabarito, conforme ilustrado na Figura \ref{fig:cap07_figquestoesPorBloco}. Após a impressão desse PDF, o gabarito foi preenchido e digitalizado, como mostrado na Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(a). Em seguida, mais dois QRs foram preenchidos e digitalizados, conforme apresentado nas Figuras \ref{fig:cap07_figquestoesPorBlocoScan}--(b) e (c). Todas as três digitalizações foram armazenadas em um único PDF, sendo a primeira página estritamente destinada ao gabarito.
+
+No segundo QR, Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(b), optou-se por introduzir vários erros no preenchimento das alternativas nos terceiro e quarto blocos; os detalhes estão disponíveis na Figura \ref{fig:cap07_figquestoesPorBlocoScanErros}. Nesse caso específico, os erros foram gerados intencionalmente ao marcar mais de uma alternativa em algumas questões, para avaliar a capacidade do método de visão computacional em detectar essas marcações incorretas. 
+
+Na terceira página do PDF, Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(c), decidiu-se repetir o gabarito para simular um estudante que obteve a nota máxima nesta avaliação. No entanto, a questão 9 não foi considerada devido à marcação insuficiente. 
+
+O algoritmo implementado para considerar uma marcação correta exige que mais de 50\% da área esteja marcada dentro do círculo. Se houver mais de uma marcação, em alguns casos, é considerada a marcação com maior área. Essa lógica pode ser observada no quarto bloco, tanto na Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(b) quanto na Figura \ref{fig:cap07_figquestoesPorBlocoScanErros}.
+
 
 \begin{figure}[htbp]
 \centering
@@ -85,43 +92,47 @@ Foi criado um PDF considerando uma turma com três estudantes, sendo o primeiro 
 \label{fig:cap07_figquestoesPorBlocoScan}
 \end{figure}
 
-É importante mencionar que a Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(c) exibe a digitalização da página rotacionada de propósito. Isso pode ser feito sem problemas, desde que os quatro discos pretos externos estejam intactos na digitalização. Nesse caso específico, os erros foram gerados intencionalmente ao marcar mais de uma alternativa em algumas questões, para avaliar a capacidade do método de visão computacional em detectar essas marcações incorretas. 
+É importante mencionar que a Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(c) exibe a digitalização da página rotacionada de propósito. Isso pode ser feito sem problemas com rotações inferiores a $+/- 45$ graus, desde que os quatro discos pretos externos estejam intactos na digitalização.
 
 \begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
 Se algum dos quatro discos não aparecer durante a digitalização, uma sugestão seria pintar o que estiver faltando com o mesmo diâmetro e realizar uma nova digitalização. Outra opção é realizar a pintura diretamente no arquivo digitalizado, utilizando, por exemplo, a ferramenta disponível em \href{www.ilovepdf.com}{ilovepdf.com}. Lembrando que os quatro discos devem formar um retângulo imaginário com as marcações e o QRcode internos.
 \end{mybox}
 
-Após fazer o \textit{upload} deste PDF, seguindo as instruções descritas na Seção \ref{sec:exameRecorte1} - \nameref{sec:exameRecorte1}, serão gerados vários arquivos que serão compactados em um arquivo ZIP, conforme apresentado a seguir:
+Após fazer o \textit{upload} deste PDF digitalizado, seguindo as instruções descritas na Seção \ref{sec:exameRecorte1} - \nameref{sec:exameRecorte1}, serão gerados vários arquivos que serão compactados em um arquivo ZIP, conforme apresentado a seguir:
 
 \begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar a correção do exame no botão ``Upload-PDF''}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN__.csv
-_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_irt.csv
-_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_p002_s3_q002.png
-_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_p002_s3_q003.png
-_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_p002_s3_q004.png
-_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_p002_s3_q005.png
-_e496_fzampirolli@ufabc.edu.br_e496_varID_0_class_672_scan_RETURN_p002_s4_q001_D_OK.png
-_e496_fzampirolli@ufabc.edu.br__e496_varID_0_class_672_scan_RETURN_statistics.csv
-studentEmail_e496.zip
+_e488_fzampirolli@ufabc.edu.br_e488_varID_0_class_672_scan_RETURN__.csv
+_e488_fzampirolli@ufabc.edu.br_e488_varID_0_class_672_scan_RETURN_p002_s3_q002.png
+_e488_fzampirolli@ufabc.edu.br_e488_varID_0_class_672_scan_RETURN_p002_s3_q003.png
+_e488_fzampirolli@ufabc.edu.br_e488_varID_0_class_672_scan_RETURN_p002_s3_q004.png
+_e488_fzampirolli@ufabc.edu.br_e488_varID_0_class_672_scan_RETURN_p002_s3_q005.png
+_e488_fzampirolli@ufabc.edu.br_e488_varID_0_class_672_scan_RETURN_p002_s4_q001_D_OK.png
+_e488_fzampirolli@ufabc.edu.br_e488_varID_0_class_672_scan_RETURN_irt.csv
+_e488_fzampirolli@ufabc.edu.br_e488_varID_0_class_672_scan_RETURN_statistics.csv
+studentEmail_e488.zip
 \end{verbatim}
 \end{myboxCode}
 
-Nesses arquivos, o prefixo \verb|_e496_| representa o ID do exame no banco de dados, seguido pelo e-mail do professor logado no MCTest e pelo nome do arquivo digitalizado e enviado para correção. O sufixo \verb|_RETURN_| indica que esses arquivos serão compactados e enviados ao e-mail do professor vinculado à conta logada no MCTest. 
+Nesses arquivos, o prefixo \verb|_e488_| representa o ID do exame no banco de dados, seguido pelo e-mail do professor logado no MCTest e pelo nome do arquivo digitalizado e enviado para correção. O sufixo \verb|_RETURN_| indica que esses arquivos serão compactados e enviados ao e-mail do professor vinculado à conta logada no MCTest. 
 
 \subsection{Arquivo CSV com as correções}\label{sec:CSVcorrecoesQR}
 
-O conteúdo do primeiro arquivo CSV na lista anterior, \verb|*_.csv|, apresenta a seguinte estrutura: a primeira linha contém o cabeçalho, onde \verb|Pag| representa a página do PDF, \verb|ID| é a identificação do estudante obtida por meio do QRcode, \verb|Resp| indica a quantidade de alternativas, \verb|Quest| representa a quantidade de questões, \verb|Inv| indica as questões inválidas (sem marcação ou com mais de uma marcação), e \verb|Grade| mostra a quantidade de questões marcadas corretamente, conforme o gabarito presente na primeira linha. A segunda linha contém a compilação do gabarito (compilação da primeira página do PDF), enquanto a linha seguinte representa o exame com erros no preenchimento (compilação da segunda página do PDF). É possível observar que existem quatro questões inválidas identificadas pela coluna \verb|Inv|, correspondentes às questões 12, 13, 14 e 15 do terceiro bloco (identificado como \verb|s3| na lista acima), ver Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(b). Essas questões foram salvas como arquivos PNG e estão exibidas na Figura \ref{fig:cap07_figquestoesPorBlocoScanErros}.  Essas imagens são úteis, pois o professor pode analisá-las para verificar possíveis alterações na quantidade de respostas corretas do estudante. A quarta linha deste arquivo CSV corresponde à repetição do gabarito (compilação da terceira página do PDF).
+O conteúdo do primeiro arquivo CSV na lista anterior, \verb|*_.csv|, apresenta a seguinte estrutura: a primeira linha contém o cabeçalho, onde \verb|Pag| representa a página do PDF, \verb|ID| é a identificação do estudante obtida por meio do QRcode, \verb|Resp| indica a quantidade de alternativas, \verb|Quest| representa a quantidade de questões, \verb|Inv| indica as questões inválidas (sem marcação ou com mais de uma marcação), e \verb|Grade| mostra a quantidade de questões marcadas corretamente, conforme o gabarito presente na segunda linha. A segunda linha contém a compilação do gabarito (compilação da primeira página do PDF), enquanto a linha seguinte representa o exame com erros no preenchimento (compilação da segunda página do PDF). É possível observar que existem cinco questões inválidas identificadas pela coluna \verb|Inv|, correspondentes às questões de 12 a 15 do terceiro bloco (identificado como \verb|s3| na lista acima), ver Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(b), além da questão 17 no quarto bloco. 
+
+Essas questões foram salvas como arquivos PNG e estão exibidas na Figura \ref{fig:cap07_figquestoesPorBlocoScanErros}. Essas imagens são úteis, pois o professor pode analisá-las para verificar possíveis alterações na quantidade de respostas corretas do estudante. A quarta linha deste arquivo CSV corresponde à repetição do gabarito (compilação da terceira página do PDF), com exceção da marcação inválida na questão 9. 
+
+Optou-se por não enviar os recortes das questões sem marcação ou com baixa marcação (\verb|0/*|, como mostram as questões 17 da segunda página e 9 da terceira página), pois é comum o estudante deixar questões em branco, o que geraria muitas imagens no arquivo ZIP.
 
 \begin{myboxCode}{corCSV}{\textbf{Conteúdo do arquivo \texttt{*\_.csv} gerado (as colunas são separadas por vírgula)}}\vspace{3mm}
 \hrule
 {\footnotesize
 \begin{verbatim}
-Pag ID  Resp Quest Inv Grade Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18
-1   101   5    18   0     0  A  B  C  D  E  E  D  C  B  A   A   A   A   A   A   D   D   D
-2   123   5    18   5    12  A  B  C  D  E  E  D  C  B  A   E/A 2/A 3/A 4/A 5/A D   0/D D
-3   987   5    18   0    18  A  B  C  D  E  E  D  C  B  A   A   A   A   A   A   D   D   D
+Pag ID  Resp Quest Inv Grade Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9  Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18
+1   101   5    18   0     0  A  B  C  D  E  E  D  C  B   A   A   A   A   A   A   D   D   D
+2   123   5    18   6    12  A  B  C  D  E  E  D  C  B   A   E/A 2/A 3/A 4/A 5/A D   0/D D
+3   987   5    17   1    17  A  B  C  D  E  E  D  C  0/B A   A   A   A   A   A   D   D   D
 \end{verbatim}
 }
 \end{myboxCode}
@@ -137,10 +148,11 @@ Pag ID  Resp Quest Inv Grade Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 
 \centering
 \includegraphics[width=0.05\textwidth]{cap07_figquestoes_q002.png} \ \ \ 
 \includegraphics[width=0.053\textwidth]{cap07_figquestoes_q003.png} \ \ \ 
-\includegraphics[width=0.0478\textwidth]{cap07_figquestoes_q004.png} \ \ \ 
-\includegraphics[width=0.05\textwidth]{cap07_figquestoes_q005.png} \ \ \ 
-\includegraphics[width=0.05\textwidth]{cap07_figquestoes_q001_D_OK.png} \ \ \ 
-\caption{Recortes das questões erroneamente marcadas no terceiro bloco são apresentados na Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(b). No quarto bloco, a alternativa D foi considerada como correta.}
+\includegraphics[width=0.053\textwidth]{cap07_figquestoes_q004.png} \ \ \ 
+\includegraphics[width=0.0549\textwidth]{cap07_figquestoes_q005.png} \hspace{11mm} 
+\includegraphics[width=0.053\textwidth]{cap07_figquestoes_q001_D_OK.png} \hspace{11mm} 
+\includegraphics[width=0.27\textwidth]{cap07_figquestoes_s4.png} \ \ \ 
+\caption{À esquerda, são apresentados quatro recortes automáticos das questões erroneamente marcadas no terceiro bloco, na Figura \ref{fig:cap07_figquestoesPorBlocoScan}--(b). No centro, encontra-se outro recorte automático referente ao quarto bloco, onde a alternativa D foi considerada correta. À direita, também no quarto bloco, a imagem é apresentada de forma ampliada para destacar múltiplas marcações em vermelho.}
 \label{fig:cap07_figquestoesPorBlocoScanErros}
 \end{figure}
 
@@ -153,7 +165,7 @@ O segundo arquivo CSV, com sufixo \verb|_irt.csv|, contém as respostas corretas
 {\footnotesize
 \begin{verbatim}
 1  1  1  1  1  1  1  1  1  1  0  0  0  0  0  1  0  1
-1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1  0  1  1  1  1  1  1  1  1  1
 \end{verbatim}
 }
 \end{myboxCode}
@@ -185,15 +197,15 @@ id corr fail aver std  %corr %fail
  6   2   0   1.0  0.0   1.0   0.0
  7   2   0   1.0  0.0   1.0   0.0
  8   2   0   1.0  0.0   1.0   0.0
- 9   2   0   1.0  0.0   1.0   0.0
+ 9   1   1   0.5  0.5   0.5   0.5
 10   2   0   1.0  0.0   1.0   0.0
-11   2   0   1.0  0.0   1.0   0.0
+11   1   1   0.5  0.5   0.5   0.5
 12   1   1   0.5  0.5   0.5   0.5
 13   1   1   0.5  0.5   0.5   0.5
 14   1   1   0.5  0.5   0.5   0.5
 15   1   1   0.5  0.5   0.5   0.5
 16   2   0   1.0  0.0   1.0   0.0
-17   2   0   1.0  0.0   1.0   0.0
+17   1   1   0.5  0.5   0.5   0.5
 18   2   0   1.0  0.0   1.0   0.0
 \end{verbatim}
 }
@@ -211,6 +223,9 @@ Se a opção ``Retorno=Sim'' na Seção \ref{sec:exameDetalhes} -- \nameref{sec:
 \label{fig:cap07_figFeedback}
 \end{figure}
 
+\begin{mybox}{pink}{\textbf{Melhorias:\\\vspace{-3mm}\hrule}\vspace{3mm}}
+  Na Figura \ref{fig:cap07_figFeedback}, ainda é necessário ajustar os discos vermelhos nas alternativas corretas que o estudante errou. Além disso, é necessário corrigir a apresentação da nota do estudante.
+\end{mybox}
 
 % melhorar escrita formal e científica, mantendo a formatação LaTex: 
 
