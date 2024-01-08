@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1702374242 "/Users/fz/VSCode/MCTest-livro/livro-capa21x29.7orelha.tex" "livro-capa21x29.7orelha.pdf" "livro-capa21x29.7orelha" 1702374244 0
-  "/Users/fz/VSCode/MCTest-livro/livro-capa21x29.7orelha.tex" 1702374239 8328 71878efaeef497ae8dce24b2abe5d824 ""
+["pdflatex"] 1704673694 "/Users/fz/VSCode/MCTest-livro/livro-capa21x29.7orelha.tex" "livro-capa21x29.7orelha.pdf" "livro-capa21x29.7orelha" 1704673696 0
+  "/Users/fz/VSCode/MCTest-livro/livro-capa21x29.7orelha.tex" 1704673695 8328 4a138455fa11e3cdae17124e17af3322 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -161,9 +161,9 @@
   "figures/qrcode.png" 1702060558 5826 e229cda4637801c392d4b9540f8ca5fc ""
   "figures/verso.png" 1702060558 105465 9f4f00e3e2af4bd94ae5eae8d8c984b8 ""
   "figures/zampirolli.png" 1702060558 253401 19020947b7d3f8260ec5fcc89b0ff70e ""
-  "livro-capa21x29.7orelha.aux" 1702374243 634 dae04709ba649dfc3b6dcbd4618c9067 "pdflatex"
-  "livro-capa21x29.7orelha.out" 1702374243 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "livro-capa21x29.7orelha.tex" 1702374239 8328 71878efaeef497ae8dce24b2abe5d824 ""
+  "livro-capa21x29.7orelha.aux" 1704673695 634 dae04709ba649dfc3b6dcbd4618c9067 "pdflatex"
+  "livro-capa21x29.7orelha.out" 1704673695 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "livro-capa21x29.7orelha.tex" 1704673695 8328 4a138455fa11e3cdae17124e17af3322 ""
   (generated)
   "livro-capa21x29.7orelha.aux"
   "livro-capa21x29.7orelha.log"
