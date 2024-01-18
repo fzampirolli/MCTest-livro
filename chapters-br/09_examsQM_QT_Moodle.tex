@@ -4,17 +4,17 @@ Neste capítulo, será apresentado um recurso interessante do MCTest que permite
 
 Embora o Moodle suporte a criação de questões parametrizadas, que utilizam valores curinga, essas questões têm limitações em relação às funções disponibilizadas pela linguagem PHP. Utilizar o MCTest para criar o banco de questões é vantajoso porque suporta muito mais variações de questões. É possível, por exemplo, criar um exame contendo QMs e QTs, com respostas exatas. Em seguida, é configurado o exame para gerar variações, salvando com um destes formatos Aiken ou XML. É possível então importar esses arquivos para o banco de questões no Moodle e criar uma atividade, incluindo as questões recém-importadas. Dessa forma, é possível criar atividades muito mais parametrizadas do que as suportadas pelo Moodle utilizando os curingas.
 
-Assim, apesar dos recursos disponíveis no Moodle, ele ainda tem limitações na criação de questões. Neste capítulo, será apresentado como tentar contornar essas restrições para criar exames de qualidade.
+Assim, apesar dos recursos disponíveis no Moodle, ele ainda apresenta limitações na criação de questões. Neste capítulo, será abordado como tentar contornar essas restrições para criar avaliações com diversas variações.
 
 \section{Criando exames e exportando arquivos Aiken e XML}
 
-Será criado um exame com três QMs paramétricas, com quatro alternativas e uma QT com resposta exata. A primeira questão é a área do círculo, apresentada no segundo exemplo da Seção \ref{sec:QMparametrica} -- \nameref{sec:QMparametrica}. As três próximas questões estão definidas nas próximas seções.
+Será criado um exame com três QMs paramétricas, cada uma contendo quatro alternativas, e uma QT com resposta exata. A primeira questão abordará a área do círculo, conforme apresentado no segundo exemplo da Seção \ref{sec:QMparametrica} -- \nameref{sec:QMparametrica}. As outras três questões serão definidas nas seções subsequentes.
 
 \subsection{QM -- equação de primeiro grau -- idade}
 
 O Código \ref{lst:questaoQM_EquacaoIdade} apresenta um algoritmo que soluciona o problema de encontrar as idades de duas pessoas, dada a soma e a diferença entre elas. O método \verb|calcular_idades| recebe como parâmetros esses dois valores e utiliza equações matemáticas para determinar as idades da pessoa e do irmão. As idades são retornadas como uma \textit{string} no formato ``x e y'', onde x e y são as idades da pessoa e do irmão, respectivamente. Caso as idades não sejam números inteiros positivos, o método retorna uma \textit{string} vazia.
 
-O programa utiliza o método \verb|random.sample| para gerar aleatoriamente pares de valores de soma e diferença no intervalo de 2 a 30. Para cada par de valores gerado, o programa chama o método \verb|calcular_idades| e armazena as respostas válidas em uma lista. A alternativa correta da questão, apresentada na linha 36, considera os dados do enunciado e utiliza o método \verb|calcular_idades| para determinar as idades dos irmãos apresentados na Figura \ref{fig:cap09_questaoQM_EquacaoIdadePDFb}.
+O programa utiliza o método \verb|random.sample| para gerar aleatoriamente pares de valores de soma e diferença no intervalo de 2 a 29. Para cada par de valores gerado, o programa chama o método \verb|calcular_idades| e armazena as respostas válidas em uma lista. A alternativa correta da questão, apresentada na linha 36, considera os dados do enunciado e utiliza o método \verb|calcular_idades| para determinar as idades dos irmãos apresentados na Figura \ref{fig:cap09_questaoQM_EquacaoIdadePDFb}. Esta resposta, \verb|respostas[3]|, deve ser incluída na primeira alternativa (correta) do formulário da questão. As demais, encontradas nos elementos de índice 0, 1 e 2 da lista \verb|respostas|, devem ser inseridas nas demais alternativas (erradas). Se desejar gerar uma questão com um maior número de alternativas, por exemplo, 10, basta modificar a linha com o comando \verb|while| para ser menor que 10, e a alternativa correta estará no elemento 9 da lista \verb|respostas|.
 
 \begin{listing}[!ht]
 \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
@@ -29,7 +29,7 @@ import random
 
 def calcular_idades(soma, diferenca):
   """Calcula idades, dados soma e diferença.
-  x - y = diferenca e x + y = soma ==> 2x = (soma + diferenca)"""
+  x + y = soma e x - y = diferenca ==> 2x = (soma + diferenca)"""
 
   # Calcular a idade da pessoa
   x = (soma + diferenca) / 2
@@ -180,7 +180,7 @@ def ordena_parte_vetor(vetor,inicio,fim):
 for i in range(casos_teste):    
 
     #>>>> begin - casos de teste
-    # Gerar valores aleatórios entre 0 e 9 para a matriz 
+    # Gerar valores aleatórios entre 0 e 9 para o vetor 
     v = np.random.randint(10, size=n) 
 
     # Criar a entrada do caso de teste como uma string
