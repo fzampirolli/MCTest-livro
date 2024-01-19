@@ -137,9 +137,9 @@ Esta questão de ordenar vetor é um exemplo típico que não pode ser implement
 \begin{minted}[xleftmargin=20pt,linenos=true]{python}
 Dado um vetor de inteiros de tamanho \( n = [[code:n]]\), ordenar o trecho do 
 vetor que começa no índice \( inicio = [[code:inicio]] \) e termina no índice 
-\( fim = [[code:fim]]\). Onde, \( 0<início<fim<n \), ou seja, o trecho a ser
-ordenado está entre início (inclusive) e fim (inclusive). Vale ressaltar que 
-os índices do vetor começam em 0 e terminam em \( n-1\). 
+\( fim = [[code:fim]]\). Onde, \( 0 < inicio < fim < n \), ou seja, o trecho a 
+ser ordenado está entre início (inclusive) e fim (inclusive). Vale ressaltar 
+que os índices do vetor começam em 0 e terminam em \( n-1\). 
 
 Considere esta entrada:} 
 [[code:caso0_inp]]
@@ -187,7 +187,7 @@ for i in range(casos_teste):
     inp = ' '.join(str(i) for i in v) + '\n'
 
     # Calcular o vetor de saída
-    out = ' '.join(str(i) for i in ordena_parte_vetor(v,inicio,fim)) + '\n'
+    out = ' '.join(str(i) for i in ordena_parte_vetor(v,inicio,fim)) # + '\n'
     #<<<< end - casos de teste
 
     # Adicionar a entrada e saída do caso de teste às listas
@@ -207,12 +207,23 @@ caso0_inp, caso0_out = cases['input'][0], cases['output'][0]
 \label{lst:questaoQT_Exata_1_parte2}
 \end{listing}
 
-
 \begin{figure}[!ht]
   \includegraphics[width=0.9\textwidth]{cap09_questaoQT_Exata_PDF.png}
   \caption{Recorte do PDF gerado para a questão com resposta exata definida pelos Códigos \ref{lst:questaoQT_Exata_1_parte1} e \ref{lst:questaoQT_Exata_1_parte2}.}
   \label{fig:cap09_questaoQT_Exata_PDF}
 \end{figure}
+
+\ 
+\newpage
+
+\
+
+\begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+  \begin{enumerate}
+    \item No final da linha 33 do Código \ref{lst:questaoQT_Exata_1_parte2}, foi necessário adicionar um comentário para assegurar uma formatação adequada da questão no Moodle. Essa informação está presente no enunciado da questão, na linha 10 do Código \ref{lst:questaoQT_Exata_1_parte1}, com o intuito de armazenar a resposta correta da questão.
+    \item As mudanças de linha são obrigatórias a cada entrada/saída nas questões com integração VPL, conforme apresentado no Capítulo \ref{ch:questoesCodigoMCTest} -- \nameref{ch:questoesCodigoMCTest} e também serão destacadas no próximo capítulo.
+  \end{enumerate}  
+\end{mybox}
 
 \subsection{Criando exame e exportando as variações}
 
@@ -297,14 +308,7 @@ B) 3019.07
 C) 1809.56
 D) 1963.50
 ANSWER: D
-...
-\end{verbatim}
-\end{myboxCode}
 
-\begin{myboxCode}{corCSV}{\textbf{Conteúdo do arquivo \texttt{*\_aiken.txt}, variação 0 e questão 3.}}\vspace{3mm}
-\hrule
-\begin{verbatim}
-...
 #c:3 #id:2464 #topic:Topico Exemplo #type:QM #diff:1
 
 Qual é a equação da reta que passa pelos pontos (2, 7) e (8, 6)?
@@ -313,7 +317,6 @@ B) y = -0.17x + 7.33
 C) y = 2.00x + 1.00
 D) y = 1.00x + 4.00
 ANSWER: B
-...
 \end{verbatim}
 \end{myboxCode}
 
@@ -323,10 +326,9 @@ A seguir é detalhado o arquivo no formato XML que contém a primeira QM da prim
 
 Cabe salientar que a sintaxe no formato XML é complexa e não é destinada ao consumo humano. Por isso, foi apresentada somente a primeira QM gerada a seguir.
 
-Foi criada, no código abaixo, uma hierarquia de categorias para as questões com base nas suas características, tais como tipo, tópico e nível de dificuldade. Essa organização visa tornar o banco de questões mais estruturado no Moodle. Além disso, foi criada uma categoria para cada questão do MCTest, facilitando a localização das questões no Moodle.
-No exemplo a seguir, é apresentada a categoria  \verb|multichoice/Topico Exemplo/diff1/área círculo - ex.1|.
-
-%É importante observar que, no arquivo XML desta questão, há um comentário em \LaTeX{} que deveria ter sido removido na questão do MCTest. Esse comentário será importado juntamente com a questão no Moodle e pode causar problemas. Por isso, é necessário remover todos os comentários adicionados na questão do MCTest antes de importar as questões no Moodle.
+Foi criada, no código XML a seguir, uma hierarquia de categorias para as questões com base nas suas características, tais como tipo, tópico e nível de dificuldade. Essa organização visa tornar o banco de questões mais estruturado no Moodle. Além disso, foi criada uma categoria para cada questão do MCTest, facilitando a localização das questões no Moodle.
+\
+No exemplo a seguir, é apresentada a hierarquia de categorias  \verb|multichoice/Topico Exemplo/diff1/área círculo - ex.1|.
 
 
 % \tiny < \scriptsize < \footnotesize < \small < \normalsize < \large < \Large < \LARGE < \huge < \Huge
@@ -336,9 +338,7 @@ No exemplo a seguir, é apresentada a categoria  \verb|multichoice/Topico Exempl
 {\scriptsize
 \begin{verbatim}
 <?xml version="1.0" encoding="UTF-8"?>
-
 <quiz>
-
     <!-- category:  #id:2449 #type:multichoice #topic:Topico Exemplo #diff:1 #descr:área círculo - ex.1  -->
     
     <question type="category">
@@ -362,39 +362,46 @@ No exemplo a seguir, é apresentada a categoria  \verb|multichoice/Topico Exempl
         <idnumber></idnumber>
         
     </question>
-    
 ...
 \end{verbatim}
 }
 \end{myboxCode}
 
+
+
+\begin{myboxCode}{corCSV}{\textbf{Conteúdo do arquivo \texttt{*.xml}, variação 0 e questão 1.}}\vspace{3mm}
+  \hrule
+  {\scriptsize
+  \begin{verbatim}
+  ...
+  <!-- question:#c:2#id:2449#type:multichoice#topic:Topico Exemplo#diff:1#descr:área círculo - ex.1#var:1-->
+  
+            <question type="multichoice">
+  
+              <name>
+                <text>Topico: Topico Exemplo Dificuldade: 1 </text>
+              </name>
+              
+              <questiontext format="moodle_auto_format">
+              
+                  <text><![CDATA[<p> Qual é a área do círculo de raio \( 25 \)?
+  % comentário em LaTex. Observe que a variável raio1, após "code:" 
+  % foi definida na linha 18 abaixo
+  
+   <br></p>]]>
+                  </text>
+  
+              </questiontext>
+...
+\end{verbatim}
+}
+\end{myboxCode}
+            
 \begin{myboxCode}{corCSV}{\textbf{Conteúdo do arquivo \texttt{*.xml}, variação 0 e questão 1.}}\vspace{3mm}
 \hrule
 {\scriptsize
 \begin{verbatim}
 ...
-
-<!-- question:#c:2#id:2449#type:multichoice#topic:Topico Exemplo#diff:1#descr:área círculo - ex.1#var:1-->
-
-          <question type="multichoice">
-
-            <name>
-              <text>Topico: Topico Exemplo Dificuldade: 1 </text>
-            </name>
-            
-            <questiontext format="moodle_auto_format">
-            
-                <text><![CDATA[<p> Qual é a área do círculo de raio \( 25 \)?
-
-% comentário em LaTex. Observe que a variável raio1, após "code:" 
-% foi definida na linha 18 abaixo
-
- <br></p>]]>
- 
-                </text>
-
-            </questiontext>
-
             <generalfeedback format="moodle_auto_format">
               <text></text>
             </generalfeedback>
@@ -447,7 +454,16 @@ No exemplo a seguir, é apresentada a categoria  \verb|multichoice/Topico Exempl
               </feedback>
               
             </answer>
-        
+...
+\end{verbatim}
+}
+\end{myboxCode}
+
+\begin{myboxCode}{corCSV}{\textbf{Conteúdo do arquivo \texttt{*.xml}, variação 0 e questão 1 -- alternativas.}}\vspace{3mm}
+\hrule
+{\scriptsize
+\begin{verbatim}
+...
             <answer fraction="0" format="moodle_auto_format">
             
               <text><![CDATA[<p> 3019.07
@@ -458,7 +474,16 @@ No exemplo a seguir, é apresentada a categoria  \verb|multichoice/Topico Exempl
               </feedback>
               
             </answer>
-        
+...
+\end{verbatim}
+}
+\end{myboxCode}
+
+\begin{myboxCode}{corCSV}{\textbf{Conteúdo do arquivo \texttt{*.xml}, variação 0 e questão 1 -- alternativas.}}\vspace{3mm}
+\hrule
+{\scriptsize
+\begin{verbatim}
+...
             <answer fraction="0" format="moodle_auto_format">
             
               <text><![CDATA[<p> 1809.56
@@ -469,7 +494,16 @@ No exemplo a seguir, é apresentada a categoria  \verb|multichoice/Topico Exempl
               </feedback>
               
             </answer>
-        
+...
+\end{verbatim}
+}
+\end{myboxCode}
+
+\begin{myboxCode}{corCSV}{\textbf{Conteúdo do arquivo \texttt{*.xml}, variação 0 e questão 1 -- alternativas.}}\vspace{3mm}
+\hrule
+{\scriptsize
+\begin{verbatim}
+...
             <answer fraction="100" format="moodle_auto_format">
             
               <text><![CDATA[<p> 1963.50
@@ -532,14 +566,15 @@ A seguir, serão apresentados os detalhes do arquivo XML referente à questão c
             
             <text>
             
-            <![CDATA[<p> Dado um vetor de inteiros de tamanho \( n = 31\), ordenar o tre$$ $$cho do 
+            <![CDATA[<p> Dado um vetor de inteiros de tamanho \( n = 31\), ordenar o trecho do 
 vetor que começa no índice \( inicio = 10 \) e termina no índice 
-\( fim = 24\). Onde, \( 0<início<fim<n \)n, ou seja, o tre$$ $$cho a ser
-ordenado está nos limites do vetor. Vale ressaltar que os índices do 
-vetor começam em 0 e terminam em \( n-1\). 
-
+\( fim = 24\). Onde, \( 0 < inicio < fim < n \), ou seja, o trecho 
+a ser ordenado está entre início (inclusive) e fim (inclusive). Vale 
+ressaltar que os índices do vetor começam em 0 e terminam em \( n-1\). 
+            
 Considere esta entrada:
 8 1 4 1 2 0 1 6 1 9 6 3 7 2 7 8 9 3 7 2 0 7 6 4 3 0 1 1 9 4 1
+  
  <br></p>]]>
  
             </text>
@@ -611,13 +646,13 @@ Considere esta entrada:
 
 Como o formato Aiken apresenta algumas limitações, como a impossibilidade de criar questões com resposta exata, será apresentado a seguir um tutorial para importar e criar questionários no Moodle usando o formato XML.
 
-Inicialmente, é necessário criar um questionário no Moodle e acessar a opção ``Banco de Dados'', presente no menu de configurações, representado por uma engrenagem. Em seguida, basta escolher a opção ``Importação'', selecionar o formato XML e mover o arquivo correspondente para a área especificada. Ao clicar em ``Importar'', as 20 questões serão carregadas e poderão ser visualizadas, como ilustrado na Figura \ref{fig:cap09_exameVariacoes_QM_moodle} para uma QM e na Figura \ref{fig:cap09_exameVariacoes_exata_moodle} para uma questão com resposta exata. Na Figura \ref{fig:cap09_exameVariacoes_detalhes} foram 3 QMs, 1 QT e 5 variações ($(3+1)*5=20$).
+Considerando a versão 4.1 do Moodle, é necessário importar o arquivo XML gerado pelo MCTest. Para fazer isso, acesse a opção ``Banco de questões'', disponível no ícone de engrenagem no canto superior direito ou no menu ``Administração'' à esquerda. Em seguida, basta escolher a opção ``Importação'', selecionar o formato XML e mover o arquivo correspondente para a área especificada. Ao clicar em ``Importar'', as 20 questões serão carregadas e poderão ser visualizadas, como ilustrado na Figura \ref{fig:cap09_exameVariacoes_QM_moodle} para uma QM e na Figura \ref{fig:cap09_exameVariacoes_exata_moodle} para uma questão com resposta exata. Na Figura \ref{fig:cap09_exameVariacoes_detalhes} foram 3 QMs, 1 QT e 5 variações ($(3+1)*5=20$).
 
 Vale ressaltar que o uso de formatação em \LaTeX{} no Moodle apresenta muitas limitações em comparação com o PDF gerado pelo MCTest, como ilustrado na Figura \ref{fig:cap09_exameVariacoes_exata_moodle}.
 
 \begin{figure}[!ht]
 \centering
-  \includegraphics[width=0.7\textwidth]{cap09_exameVariacoes_QM_moodle.png}
+  \includegraphics[width=0.9\textwidth]{cap09_exameVariacoes_QM_moodle.png}
     \caption{Exemplo de QM no Moodle.}
   \label{fig:cap09_exameVariacoes_QM_moodle}
 \end{figure}

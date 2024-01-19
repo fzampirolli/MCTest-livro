@@ -6,9 +6,9 @@ Esse tipo de exame tem sido amplamente utilizado na UFABC em disciplinas que env
 
 Outra disciplina que faz uso frequente dessa integração com o \textit{plugin} VPL é a de Processamento da Informação (PI), equivalente à CS1 (\textit{Computer Science} 1). CS1 representa a primeira disciplina introdutória em Ciência da Computação, geralmente oferecido no primeiro ano de graduação em cursos dessa área. A definição CS1 foi estabelecida pela ACM (\textit{Association for Computing Machinery}), uma das principais associações profissionais de Ciência da Computação do mundo \cite{hogan2023cs0}.
 
-Ao longo dos anos, diversos professores da UFABC têm contribuído para o desenvolvimento de questões, resultando em um total de 2.273 questões cadastradas até agosto de 2023. Dessas questões, 643 são do tipo paramétricas, como indicado em \href{http://mctest.ufabc.edu.br/}{mctest.ufabc.edu.br}.
+Ao longo dos anos, diversos professores da UFABC têm contribuído para o desenvolvimento de questões, resultando em um total de 2.516 questões cadastradas até janeiro de 2024. Dessas questões, 691 são do tipo paramétricas, como indicado em \href{http://mctest.ufabc.edu.br/}{mctest.ufabc.edu.br}.
 
-É importante destacar que, embora essa metodologia de avaliação seja adotada em diversas turmas, muitos professores ainda não utilizam essa abordagem ou outras similares. Isso pode indicar uma falta de padronização dos conteúdos apresentados aos estudantes, o que pode prejudicar o processo de ensino-aprendizagem \cite{2018:Zampirolli.Goya.ea}.
+É importante destacar que, embora essa metodologia de avaliação seja adotada em diversas turmas, muitos professores ainda não utilizam essa abordagem ou outras similares. Isso pode indicar uma falta de padronização dos conteúdos apresentados aos estudantes, o que pode prejudicar o processo de ensino-aprendizagem, com detalhado por \citeonline{2018:Zampirolli.Goya.ea}.
 
 Todo o processo de criação de exames descrito nos capítulos anteriores pode ser aplicado a exames que utilizam a integração do VPL do Moodle, com algumas adaptações. Este capítulo apresentará especificamente essa integração, que contou com a ajuda do Prof. Dr. Paulo Henrique Pisani e de seu orientando Heitor Rodrigues Savegnago na adaptação dos arquivos de configuração do VPL. Essa colaboração resultou em diversas publicações a partir de 2019, resumidas em \href{http://vision.ufabc.edu.br}{vision.ufabc.edu.br}. Neste capítulo, não serão detalhadas as modificações realizadas nesses arquivos de configuração, mas apenas será destacado como incluir os arquivos gerados pelo MCTest, necessários para a correção automática no \textit{plugin} VPL.
 
@@ -110,7 +110,7 @@ caso0_inp, caso0_out = cases['input'][0], cases['output'][0]
 \label{lst:questaoQT_EP_2_matriz_parte2}
 \end{listing}
 
-O Código \ref{lst:questaoQT_EP_2_matriz_parte2} utiliza as bibliotecas \verb|json| e \verb|numpy| para criar valores paramétricos e casos de teste de uma questão envolvendo matrizes. No passo 1, são definidos os parâmetros Linhas e Colunas, que representam o tamanho da matriz e serão incluídos no enunciado da questão. No passo 2, são criados casos de teste com valores aleatórios na matriz e, em seguida, é gerada a entrada e saída para cada caso. O método \verb|matriz2texto| converte a matriz em formato de texto. Os casos de teste são armazenados em listas de entrada (\verb|inp_list|) e saída (\verb|out_list|). No passo 3, é criado um dicionário com os casos de teste e, em seguida, é convertido em formato JSON. Finalmente, no passo 4, é mostrado um exemplo no enunciado da questão, exibindo a entrada e saída do primeiro caso de teste. O código pode ser utilizado para gerar casos de teste para uma questão relacionada a matrizes e cálculos.
+O Código \ref{lst:questaoQT_EP_2_matriz_parte2} utiliza as bibliotecas \verb|json| e \verb|numpy| para criar valores paramétricos e casos de teste de uma questão envolvendo matrizes. No Passo 1, são definidos os parâmetros Linhas e Colunas, que representam o tamanho da matriz e serão incluídos no enunciado da questão. No Passo 2, são criados casos de teste com valores aleatórios na matriz e, em seguida, é gerada a entrada e saída para cada caso. O método \verb|matriz2texto| converte a matriz em formato de texto. Os casos de teste são armazenados em listas de entrada (\verb|inp_list|) e saída (\verb|out_list|). No Passo 3, é criado um dicionário com os casos de teste e, em seguida, é convertido em formato JSON. Finalmente, no Passo 4, é mostrado um exemplo no enunciado da questão, exibindo a entrada e saída do primeiro caso de teste. O código pode ser utilizado para gerar casos de teste para uma questão relacionada a matrizes e cálculos.
 
 Um método mais genérico para \verb|matriz2texto| é apresentado no Código \ref{lst:matriz2texto2} para formatar uma matriz com elementos de vários dígitos. O método recebe uma matriz \verb|f| representada como uma matriz \verb|numpy ndarray|. O método tem o propósito de converter essa matriz em uma representação de texto adequada para impressão. Primeiro, o método obtém o número de linhas (\verb|l|) e colunas (\verb|c|) da matriz \verb|f| usando \verb|f.shape|. Em seguida, é feita uma verificação para determinar o formato adequado para a representação dos elementos da matriz na \textit{string} de texto. Se o valor mínimo da matriz for menor que zero, a variável \verb|num_digitos| é criada usando a formatação \verb|%Xd|, onde \verb|X| é a quantidade de dígitos necessários para representar o valor máximo da matriz em texto. Caso contrário, a variável \verb|num_digitos| é criada usando \verb|%Yd|, onde \verb|Y| é a quantidade de dígitos necessários para representar o valor máximo da matriz em texto com valores negativos. Posteriormente, o método itera sobre cada elemento da matriz e formata cada valor usando a variável \verb|num_digitos|, concatenando-os na \textit{string} de texto. A cada linha, é adicionado um caractere de quebra de linha \verb|'\n'| para iniciar uma nova linha na representação final. O método retorna a \textit{string} de texto contendo a representação da matriz. Esse método é útil para visualizar o conteúdo da matriz \verb|f| de forma legível em uma saída de texto, permitindo uma inspeção mais clara dos valores contidos na matriz.
 
@@ -151,7 +151,7 @@ Dessa forma, seria possível criar uma ampla variedade de questões utilizando a
 
 \subsection{Criando as variações e imprimindo o PDF do exame}
 
-Para criar um novo exame, siga os passos descritos no Capítulo \ref{ch:exames} -- \nameref{ch:exames}. Após definir o nome do exame, escolha a turma e as questões, preencha o restante da tela conforme apresentado na Figura \ref{fig:cap10_figExameVPL_Atualiza4}, realizando as devidas alterações nos campos  ``Dificuldade 1'', ``Dissertativa'' e ``Respostas/Questões/Ambos''. Finalize clicando no botão ``Salvar''.
+Para criar um novo exame, siga os passos descritos no Capítulo \ref{ch:exames} -- \nameref{ch:exames}. Após definir o nome do exame, escolha a(s) turma(s), tópico(s) e as questões, preencha o restante da tela conforme apresentado na Figura \ref{fig:cap10_figExameVPL_Atualiza4}, realizando as devidas alterações nos campos  ``Dificuldade 1'', ``Dissertativa'' e ``Respostas/Questões/Ambos''. Finalize clicando no botão ``Salvar''.
 
 Agora, para criar as variações, é importante selecionar a opção ``Json'' antes de clicar no botão ``Criar-Variações''.
 
@@ -193,15 +193,25 @@ Adaptando as instruções definidas na Seção \ref{sec:questoesQT_VPL} -- \name
 
     \item Na seção ``Opções de execução'', selecione a linguagem ``Python'' como ``Script de execução'', deixando apenas ``Avaliar'' e ``Atribuição automática de nota'' como ``Sim'', por exemplo;
 
-    \item Na seção ``Arquivo de execução'', inclua os arquivos disponíveis na última versão disponível em \href{https://github.com/fzampirolli/mctest/tree/master/VPL_modification}{github.com/fzampirolli/mctest/tree/master/VPL\_modification/V10-new\_selector}. Os arquivos para \textit{download} são: \verb|makefile|, \verb|vpl_evaluate.sh| e \verb|zip.tar.gz.b64|. Inclua também os arquivos \verb|linker.json| e \verb|students_variations.csv|;
+    \item Na seção ``Arquivo de execução'', inclua os arquivos disponíveis na última versão disponível em \href{https://github.com/fzampirolli/mctest/tree/master/VPL_modification}{github.com/fzampirolli/mctest/tree/master/VPL\_modification/V13-Moodle\_v4.1}. 
+    %Os arquivos para \textit{download} são: \verb|makefile|, \verb|vpl_evaluate.sh| e \verb|zip.tar.gz.b64|. 
+    Inclua também os novos arquivos \verb|linker.json| e \verb|students_variations.csv|, que foram gerados recentemente pelos botões ``Criar-Variações'' e ``Criar-PDF'', respectivamente;
 
-    \item Para que o Moodle escolha a variação correta do exame, é necessário que o nome e sobrenome sejam exatamente iguais no Moodle e também no arquivo \verb|students_variations.csv|. Portanto, é necessário alterar o nome  do estudante de \verb|Estudante Exemplo Sobrenome|, conforme mostrado na Figura \ref{fig:cap10_figExameVPL_PDF}, para \verb|Francisco Exemplo Zampirolli|;
+    \item Para que o Moodle selecione a variação correta do exame, é crucial que o endereço de e-mail seja idêntico tanto no Moodle quanto no arquivo \verb|students_variations.csv|; 
 
     \item Em ``Arquivos a serem mantidos durante a execução'', marque todas as opções e clique em Salvar;
 
     \item Para realizar a atividade do exame, clique na opção ``Atividade de teste'' e em seguida em ``Editar''. Será aberta uma janela solicitando o nome do arquivo, que deve ser exatamente \verb|Q1.py|. Caso utilize o nome \verb|q1.py|, a atividade não funcionará corretamente. Caso deseje criar um segundo arquivo, clique no ícone ``+'' e o ícone para criar um novo arquivo, em seguida utilize exatamente o nome do arquivo \verb|Q2.py|.
     
 \end{enumerate}
+
+
+\begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+  \begin{enumerate}
+    \item No item 6, na versão 5.3 do MCTest, o email foi incluído no arquivo \verb|students_variations.csv| como parte das informações do estudante, juntamente com o nome completo e a variação sorteada;
+    \item Nas versões anteriores, a alteração do nome do estudante de \verb|Estudante Exemplo Sobrenome| para \verb|Francisco Exemplo Zampirolli|, conforme mostrado na Figura \ref{fig:cap10_figExameVPL_PDF}, era necessária porque a chave de busca era o Nome e Sobrenome do estudante. Agora, com a versão 5.3, a chave de busca é o email do estudante.
+  \end{enumerate}  
+\end{mybox}
 
 \subsection{Soluções da atividade VPL para o exame}
 
@@ -286,14 +296,39 @@ A segunda questão sobre parcelas sem juros, a ser inserida no arquivo de códig
 
 Esta seção detalha o arquivo \verb|linker.json|, sendo amplamente utilizado para trocar dados entre sistemas e fornece uma maneira fácil de armazenar e acessar informações estruturadas. Com o arquivo \verb|linker.json|, o professor pode facilmente importar as variações do exame em um sistema de gerenciamento de exames, como o Moodle com VPL, para criar e administrar o exame.
 
-A versão 11 mais recente do arquivo \verb|linker.json| está sendo validada e em breve será incluída no GitHub, para poder usufruir de todos os novos recursos ao criar uma questão no MCTest com integração VPL. É destacada uma nova chave no dicionário chamada \verb|skills|. Essa chave contém um conjunto de habilidades que o estudante deve desenvolver para resolver a questão. Por exemplo, se a questão verifica a competência do estudante em criar laços de repetição utilizando o comando \verb|while|, as adaptações nos arquivos do VPL irão verificar se o estudante realmente utilizou essa habilidade. É importante ressaltar que para cada disciplina devem haver conjuntos específicos de habilidades a serem avaliadas e esses conjuntos devem crescer progressivamente.
+A versão mais recente, a 13, disponível no \href{https://github.com/fzampirolli/mctest/tree/master/VPL_modification/V13-Moodle_v4.1}{GitHub}, considera o arquivo \verb|linker.json| criado pela nova versão 5.3 do MCTest. Isso possibilita aproveitar todos os novos recursos ao criar uma questão no MCTest com integração VPL. Destaca-se a adição de uma nova chave no dicionário, chamada \verb|skills|. Essa chave contém um conjunto de habilidades que o estudante deve desenvolver para resolver a questão. Por exemplo, se a questão avalia a competência do estudante em criar laços de repetição utilizando o comando \verb|while|, as adaptações nos arquivos do VPL que devem ser incluídas verificarão se o estudante realmente utilizou essa habilidade. É importante ressaltar que para cada disciplina devem existir conjuntos específicos de habilidades a serem avaliadas e implementadas nestes arquivos VPL, e esses conjuntos devem crescer progressivamente. Essas implementações no VPL estão em processo de construção; no entanto, a estrutura necessária no arquivo JSON já está definida.
 
 Dessa forma, o arquivo \verb|linker.json| se torna uma ferramenta valiosa para avaliar as competências dos estudantes de forma mais precisa e objetiva. Com as adaptações nos arquivos do VPL, é possível verificar se as habilidades necessárias para resolver a questão foram efetivamente utilizadas, garantindo uma avaliação mais coerente para aprendizagem da disciplina.
 
 Na Seção \ \ref{sec:questao_VPL} -- \nameref{sec:questao_VPL}, \ é apresentado o dicionário \verb|moodle_cases| de uma QT com integração VPL para popular o arquivo \ \verb|linker.json|. O trecho de código a seguir exemplifica como o arquivo \verb|linker.json| é estruturado.
 
-O arquivo consiste em uma variação de questões do exame, identificada pela chave \verb|variant|, e uma lista de questões. Cada questão é identificada pela chave \verb|key|, sendo um valor único do banco de dados associado a cada questão. Além disso, a questão possui um número de identificação, indicado pela chave \verb|number|, que representa a ordem da questão na variante do exame, um arquivo de código relacionado, indicado pela chave \verb|file|, que deve ser utilizado com o mesmo nome e extensão em alguma linguagem, como \verb|Q1.py| para Python, e um peso, indicado pela chave \verb|weight|. Este peso é a dificuldade da questão, definida na Seção \ref{sec:questaoNavegacao} -- \nameref{sec:questaoNavegacao} (ver Figura \ref{fig:cap04_figQuestaoCria}). Por exemplo, se um exame tem duas questões VPL, com dificuldades 1 e 2, respectivamente, a primeira questão terá uma nota fracionada de 1/3, enquanto a segunda questão valerá 2/3, sendo que a segunda questão tem o dobro da dificuldade da primeira.
+O arquivo JSON apresentado a seguir consiste em uma variação de questões do exame, identificada pela chave \verb|variant|, e uma lista de questões. Cada questão é identificada pela chave \verb|key|, sendo um valor único do banco de dados associado a cada questão. Além disso, a questão possui um número de identificação, indicado pela chave \verb|number|, que representa a ordem da questão na variante do exame, um arquivo de código relacionado, indicado pela chave \verb|file|, que deve ser utilizado com o mesmo nome e extensão em alguma linguagem, como \verb|Q1.py| para Python, e um peso, indicado pela chave \verb|weight|. Este peso é a dificuldade da questão, definida na Seção \ref{sec:questaoNavegacao} -- \nameref{sec:questaoNavegacao} (ver Figura \ref{fig:cap04_figQuestaoCria}). Por exemplo, se um exame tem duas questões VPL, com dificuldades 1 e 2, respectivamente, a primeira questão terá uma nota fracionada de 1/3, enquanto a segunda questão valerá 2/3, sendo que a segunda questão tem o dobro da dificuldade da primeira.
 
+
+\begin{myboxCode}{corCSV}{\textbf{Conteúdo do arquivo linker.json até a primeira questão:}}\vspace{3mm}
+  \hrule
+  {\scriptsize 
+  \begin{verbatim}
+  {
+    "variations": [
+      {
+        "variant": "1",
+        "questions": [
+          {
+            "key": "2463",
+            "number": "1",
+            "file": "Q1",
+            "weight": "1",
+            "language": [
+              "all"
+            ],
+            "skills": [],
+            "description": [],
+    ...
+  \end{verbatim}
+  }
+  \end{myboxCode}
+  
 A questão também pode ter uma lista de linguagens de programação possíveis para a sua resolução, indicada pela chave \verb|language|, uma lista de habilidades que o estudante deve desenvolver para resolvê-la, indicada pela chave \verb|skills|, e uma descrição, indicada pela chave \verb|description|, que pode ser o enunciado da questão a ser apresentado na descrição da questão no Moodle em formato TXT. Por fim, a questão contém uma lista de casos de teste, cada um contendo uma entrada e uma saída esperada, indicados pelas chaves \verb|input| e \verb|output|, respectivamente.
 
 Vale relembrar que a definição do arquivo JSON contou com a valorosa colaboração do Prof. Dr. Paulo Henrique Pisani e seu orientando Heitor Rodrigues Savegnago para a
@@ -303,25 +338,12 @@ Essa estrutura permite uma administração mais eficiente e precisa do exame, po
 
 % \tiny < \scriptsize < \footnotesize < \small < \normalsize < \large < \Large < \LARGE < \huge < \Huge
 
-\begin{myboxCode}{corCSV}{\textbf{Conteúdo do arquivo linker.json de até a primeira questão:}}\vspace{3mm}
-\hrule
-{\scriptsize 
-\begin{verbatim}
-{
-  "variations": [
-    {
-      "variant": "1",
-      "questions": [
-        {
-          "key": "2463",
-          "number": "1",
-          "file": "Q1",
-          "weight": "1",
-          "language": [
-            "all"
-          ],
-          "skills": [],
-          "description": [],
+\begin{myboxCode}{corCSV}{\textbf{Continuação do conteúdo do arquivo linker.json até a primeira questão:}}\vspace{3mm}
+  \hrule
+  {\scriptsize 
+  \begin{verbatim}
+  {
+  ...  
           "cases": [
             {
              "case": "test_1",
@@ -366,6 +388,18 @@ A seguir, é apresentada a segunda questão da primeira variação do exame, seg
           ],
           "skills": [],
           "description": [],
+
+...
+\end{verbatim}
+}
+\end{myboxCode}
+
+\begin{myboxCode}{corCSV}{\textbf{Continuação do conteúdo do arquivo linker.json até a segunda questão:}}\vspace{3mm}
+\hrule
+{\scriptsize 
+\begin{verbatim}
+{
+... 
           "cases": [
             {
               "case": "test_1",
