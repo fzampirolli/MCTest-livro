@@ -47,7 +47,7 @@ git push origin main
 rm -rf *.aux */*.aux livro-epub* *.bbl *.lof *.log *.blg *.lol *.maf *.mtc* *.out *.ptc *.toc *.xhtml *.css *.dvi *.tmp *.xref *.idv *.lg *.ncx *.pyg *.4* _min* *.opf *.png 
 
 cp livro*.pdf /Users/fz/PycharmProjects/mctest/book/2ed-br
-cp *.html /Users/fz/PycharmProjects/mctest/book/2ed-br
+#cp *.html /Users/fz/PycharmProjects/mctest/book/2ed-br
 cp *.epub /Users/fz/PycharmProjects/mctest/book/2ed-br
 
 cp livro.pdf ~/Desktop
