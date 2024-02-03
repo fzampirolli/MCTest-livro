@@ -258,7 +258,7 @@ Estudante Exemplo Sobrenome   fzampirolli@ufabc.edu.br  0
 \begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e485\_varID\_61031\_variations.csv}, com as variações de cada estudante, com turma e soma das notas de exames anteriores}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-Room          ID Name                        Email            Variation SumLatestGrades
+Room          ID Name                        Email            Variation SumPreviousAbilities
 fz-turmaTeste 1  Estudante Exemplo Sobrenome fzampirolli@ufabc.edu.br 0         0
 \end{verbatim}
 \end{myboxCode}
@@ -361,20 +361,20 @@ Calcule a habilidade do estudante multiplicando elemento a elemento as listas \v
 No item 3 acima, para calcular o parâmetro b, são apresentados 4 tipos de teste/exame adaptativo:
 
 \begin{itemize}
-    \item Se o teste for do tipo \textit{Classical Testing Theory} (CTT), o parâmetro b é simplesmente 0 ou 1, dependendo se a resposta do estudante está correta;
     \item Se o teste for do tipo \textit{Weighted Percentage Correct} (WPC), o parâmetro b é calculado como a diferença entre 1 e a porcentagem ponderada de respostas corretas para a questão;
     \item Se o teste for do tipo \textit{Computerized Adaptive Testing} (CAT), o parâmetro b é a habilidade associada à questão. O CAT foi implementado no MCTest v5.3 pelo estudante Lucas Montagnani Calil Elias, como Trabalho de Conclusão de Curso no Bacharelado em Ciência da Computação da Universidade Federal do ABC, a quem agradeço imensamente;
-    \item Se o teste for do tipo \textit{Semi-Adaptive Testing} (SAT), o parâmetro b é determinado pelo índice da taxonomia de Bloom da questão, variando entre 1 e 6.
+    \item Se o teste for do tipo \textit{Semi-Adaptive Testing by Bloom} (SATB), o parâmetro b é determinado pelo índice da taxonomia de Bloom da questão, variando entre 1 e 6;
+    \item Se o teste for do tipo \textit{Semi-Adaptive Testing by Difficulty} (SATD), o parâmetro b é determinado pela dificuldade da questão, variando entre 1 e 5.
 \end{itemize}
 
 
 Os tipos WPC e CAT exigem que cada questão tenha sido respondida várias vezes anteriormente. Por exemplo, o CAT considera um número mínimo de 1.000 participantes no modelo 3PLM \cite{min2021systematic}. 
 
-\subsection*{Exemplificando o uso do método SAT}
+\subsection*{Exemplificando o uso do método SATB}
 
 Para que este método de exame adaptativo funcione adequadamente, é necessário definir a taxonomia de Bloom para cada questão, nos 6 possíveis níveis: lembrar, compreender, aplicar, analisar, avaliar e criar. Cada um desses níveis recebe um valor de 1 a 6, respectivamente. Quando, para cada nível de dificuldade, são escolhidas várias questões com taxonomias distintas, cada variação do exame poderá apresentar pesos diferentes considerando essas taxonomias. Por exemplo, se um exame definir 5 questões com dificuldade 1, mas houver 10 questões marcadas para esse mesmo nível 1, além disso, foi decidida a criação de 20 variações de exames, teremos então variações com somatórios com diferentes pesos dos níveis dessa taxonomia.
 
-Para ilustrar esse processo, foi criado um exame com 3 QM e 1 QT, todas com dificuldade 1. Além disso, foram selecionadas 6 QM para serem sorteadas, com apenas 3 delas sendo escolhidas com base no desempenho do estudante em exames recentes. Na barra de rolagem, foi escolhido o número 2 para o exame adaptativo, ou seja, serão somadas as 2 últimas notas dos exames realizados pelo estudante. Foram solicitadas a criação de 20 variações de exames antes de clicar no botão ``Criar-Variações''. Também foram selecionadas duas turmas. Após clicar no botão ``Criar-PDF'', os arquivos foram enviados para o email do professor, além de um \textit{download} de um arquivo compactado contendo os seguintes arquivos.
+Para ilustrar esse processo, foi criado um exame com 3 QM e 1 QT, todas com dificuldade 1. Além disso, foram selecionadas 6 QM para serem sorteadas, com apenas 3 delas sendo escolhidas com base no desempenho do estudante em exames recentes. Na barra de rolagem, foi escolhido o número 5 para o exame adaptativo, ou seja, serão somadas as 5 últimas habilidades dos exames realizados pelo estudante. Foram solicitadas a criação de 20 variações de exames antes de clicar no botão ``Criar-Variações''. Também foram selecionadas duas turmas. Após clicar no botão ``Criar-PDF'', os arquivos foram enviados para o email do professor, além de um \textit{download} de um arquivo compactado contendo os seguintes arquivos.
 
 \begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar criar PDF com o botão ``Criar-PDF''}}\vspace{3mm}
 \hrule
@@ -396,7 +396,7 @@ O primeiro arquivo \verb|_e486_varID_61093_adaptive_test_variations.csv| possui 
 \begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e486\_varID\_61093\_adaptive\_test\_variations}}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-Variation  VariationID  SumQuestions
+Variation  VariationID  SumAbilities
  4         61096         8
  9         61101         8
 12         61104         8
@@ -434,15 +434,15 @@ RoomID RoomCode      NameStudent                           EmailStudent
 \end{verbatim}
 \end{myboxCode}
 
-As demais colunas deste arquivo \verb|_e486_varID_61093_adaptive_test.csv| a seguir representam informações específicas de cada exame realizado pelos estudantes. As colunas incluem o ID do Exame (\verb|IDExame1| e \verb|IDExame2|), a data de realização do exame (\verb|DataExame1| e \verb|DataExame2|), e as notas obtidas em cada exame (\verb|GradeExame1| e \verb|GradeExame2|). Nota-se que o primeiro exame com ID \verb|485| do estudante com ID \verb|671| ocorreu em 7 de dezembro de 2023, e a nota atribuída foi 1.0. Os outros dois estudantes não tiveram notas registradas nessas duas avaliações. A coluna \verb|SumLatestGrades| indica a soma das duas últimas avaliações dos estudantes.
+As demais colunas deste arquivo \verb|_e486_varID_61093_adaptive_test.csv| a seguir representam informações específicas de cada exame realizado pelos estudantes. As colunas incluem o ID do Exame (\verb|ExamID1| e \verb|ExamID2|), a data de realização do exame (\verb|ExamDate1| e \verb|ExamDate2|), e as notas obtidas em cada exame (\verb|ExamAbilities1| e \verb|ExamAbilities2|). Nota-se que o primeiro exame com ID \verb|485| do estudante com ID \verb|671| ocorreu em 7 de dezembro de 2023, e a nota atribuída foi 1.0. Os outros dois estudantes não tiveram notas registradas nessas duas avaliações. A coluna \verb|SumPreviousAbilities| indica a soma das duas últimas avaliações dos estudantes.
 
 \begin{myboxCode}{corCSV}{\textbf{Continuação do arquivo \texttt{\_e486\_varID\_61093\_adaptive\_test.csv}}}\vspace{3mm}
   \hrule
   \begin{verbatim}
-IDExame1 DataExame1 GradeExame1 IDExame2 DataExame2 GradeExame2 SumLatestGrades
-485      2023-12-07 1.0         486.0    2023-12-09             1.0 
-486      2023-12-09                                             0.0 
-486      2023-12-09                                             0.0
+ExamID1 ExamDate1 ExamAbilities1 ExamID2 ExamDate2 ExamAbilities2 SumPreviousAbilities
+485      2023-12-07 1.0          486.0   2023-12-09 5.0           6.0 
+486      2023-12-09                                               0.0 
+486      2023-12-09                                               0.0
 \end{verbatim}
 \end{myboxCode}
 
@@ -451,8 +451,8 @@ O arquivo \verb|_e486_varID_61093_variations.csv| a seguir resume esses dados, c
 \begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e486\_varID\_61093\_variations.csv}}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-Room          ID  Name                               Variation  SumLatestGrades
-fz-turmaTeste   1 Estudante Exemplo Sobrenome            18         1.0
+Room          ID  Name                               Variation  SumPreviousAbilities
+fz-turmaTeste   1 Estudante Exemplo Sobrenome            18         6.0
 Turma Exemplo 123 João da Silva                          19         0.0
 Turma Exemplo 987 Maria da Silva Andrade de S Gonçalves  17         0.0
 \end{verbatim}
