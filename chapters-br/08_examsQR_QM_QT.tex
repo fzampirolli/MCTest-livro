@@ -337,7 +337,7 @@ A Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} apresenta um relatório com os
 
 Abaixo do botão ``Criar-PDF'' na tela de exame, conforme ilustrado na Figura \ref{fig:cap06_figExameAtualiza1}, encontram-se duas barras de rolagem. A primeira permite definir o tamanho da fonte do arquivo PDF gerado com o exame. A segunda barra de rolagem possibilita definir o número de exames anteriores realizados por cada estudante a ser considerado. Por exemplo, se o valor selecionado for 1, será considerada apenas o último exame para definir qual variação deste será destinada aos estudantes. 
 
-Foram definidos 3 tipos diferentes de estatísticas aplicadas a esses exames anteriores, conforme destacado na Figura \ref{fig:cap08_figexameAdapterType}.
+Foram estabelecidos três distintos tipos de estatísticas aplicadas a esses exames anteriores, conforme evidenciado na Figura \ref{fig:cap08_figexameAdapterType}. O número mínimo de exames anteriores na barra de rolagem é 1 e estende-se até 10, sendo 10 o valor padrão. Ao alcançar o valor 10, todas as avaliações anteriores serão consideradas, caracterizando um conjunto infinito.
 
 \begin{figure}[!ht]
   \centering
@@ -351,19 +351,19 @@ O processo de cálculo desses tipos de exames adaptativos considera que, para ca
 \begin{enumerate}
     \item Recupere os dados da questão;
     \item Verifique se o estudante acertou a questão;
-    \item Calcule o parâmetro $b$ com base no tipo de teste adaptativo escolhido;
-    \item Armazene o parâmetro $b$ (dificultade da questão) na lista \verb|b_vector|;
-    \item Armazene se o estudante acertou a questão na lista \verb|u_vector|.
+    \item Calcule o parâmetro $b$ (dificultade da questão) com base no tipo de teste adaptativo escolhido;
+    \item Armazene o parâmetro $b$ na lista \verb|b_vector|;
+    \item Armazene se o estudante acertou (valor 1 acertou e 0 caso contrário) a questão na lista \verb|u_vector|.
 \end{enumerate}
 
-Calcule a habilidade do estudante multiplicando elemento a elemento as listas \verb|b_vector| e \verb|u_vector|. Ao realizar essa operação e somar os resultados, obtém-se um valor que representa a habilidade do estudante com base nas respostas dadas.
+Calcule a habilidade do estudante multiplicando elemento a elemento as listas \verb|b_vector| e \verb|u_vector|. Ao realizar essa operação e somar os resultados, obtém-se um valor que representa a habilidade do estudante com base em suas respostas e nas dificuldades das questões.
 
 No item 3 anterior, para calcular o parâmetro $b$, são apresentados 3 tipos de teste/exame adaptativo:
 
 \begin{itemize}
   \item Se o teste for do tipo \textit{Weighted Percentage Correct} (WPC), o parâmetro $b$ é calculado como a diferença entre 1 e a fração ponderada de respostas corretas em relação à quantidade total de questões corrigidas;
   \item Se o teste for do tipo \textit{Computerized Adaptive Testing} (CAT), o parâmetro $b$ é a habilidade associada à questão. O CAT foi implementado no MCTest v5.3 pelo estudante Lucas Montagnani Calil Elias, como Trabalho de Conclusão de Curso no Bacharelado em Ciência da Computação da Universidade Federal do ABC, a quem agradeço imensamente;
-    \item Se o teste for do tipo \textit{Semi-Adaptive Testing by Bloom} (SAT), o parâmetro $b$ é determinado pelo índice da taxonomia de Bloom da questão, variando entre 1 e 6;
+    \item Se o teste for do tipo \textit{Semi-Adaptive Testing} (SAT), o parâmetro $b$ é determinado pelo índice da taxonomia de Bloom da questão, variando entre 1 e 6;
     % \item Se o teste for do tipo \textit{Semi-Adaptive Testing by Difficulty} (SATD), o parâmetro $b$ é determinado pela dificuldade da questão, variando entre 1 e 5.
 \end{itemize}
 
