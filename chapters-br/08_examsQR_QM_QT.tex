@@ -258,8 +258,8 @@ Estudante Exemplo Sobrenome   fzampirolli@ufabc.edu.br  0
 \begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e485\_varID\_61031\_variations.csv}, com as variações de cada estudante, com turma e soma das notas de exames anteriores}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-Room          ID Name                        Email            Variation SumPreviousAbilities
-fz-turmaTeste 1  Estudante Exemplo Sobrenome fzampirolli@ufabc.edu.br 0         0
+Room          ID Name                        Email    Variation SumPreviousAbilities
+fz-turmaTeste 1  Estudante Exemplo Sobrenome fzampirolli@ufabc.edu.br 0            0
 \end{verbatim}
 \end{myboxCode}
 
@@ -318,11 +318,24 @@ Conforme explicado na Seção \ref{sec:CSVcorrecoesQR} -- \nameref{sec:CSVcorrec
 \hrule
 {\scriptsize
 \begin{verbatim}
-Pag ID Resp Quest Inv Grad Q1 Q2 Q3  Q4  Q5  Q6  K1        K2        K3        K4        K5        K6
-1   1  5    6     1   1   E/A D  C/D B/E A/B 2/A 245604231 245521304 245843102 245723410 246130421 246001432
+Pag ID Student                     Email                  Resp Quest Inv Grad 
+1   1  Estudante Exemplo Sobrenome fzampirolli@gmail.com  5    6     1   1  
 \end{verbatim}
 }
 \end{myboxCode}
+
+
+\begin{myboxCode}{corCSV}{\textbf{Continuação do arquivo \texttt{*\_.csv}}}\vspace{3mm}
+  \hrule
+  {\scriptsize
+  \begin{verbatim}
+  Q1  Q2 Q3  Q4  Q5  Q6  K1        K2        K3        K4        K5        K6
+  E/A D  C/D B/E A/B 2/A 245604231 245521304 245843102 245723410 246130421 246001432
+  \end{verbatim}
+  }
+  \end{myboxCode}
+
+
 %1  001    5     6   1   1 E/C D/A C/B B/E A 2/E 245612043 245503421 245830214 245741320 246104132 246032140
 
 
