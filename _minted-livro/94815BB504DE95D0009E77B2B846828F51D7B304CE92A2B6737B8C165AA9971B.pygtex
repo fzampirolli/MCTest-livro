@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{[[}\PYG{n}{def}\PYG{p}{:}
+\PYG{k+kn}{import} \PYG{n+nn}{random}
+
+\PYG{k}{def} \PYG{n+nf}{gerar\PYGZus{}gabarito}\PYG{p}{(}\PYG{n}{N1}\PYG{p}{,} \PYG{n}{N2}\PYG{p}{,} \PYG{n}{N3}\PYG{p}{):}
+    \PYG{n}{s} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}linha maximo contador soma}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}
+    \PYG{n}{s} \PYG{o}{+=} \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}
+
+    \PYG{n}{maximo} \PYG{o}{=} \PYG{n}{N1}
+    \PYG{n}{s} \PYG{o}{+=} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}  1 }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{maximo}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}
+    \PYG{n}{contador} \PYG{o}{=} \PYG{n}{N2}
+    \PYG{n}{s} \PYG{o}{+=} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}  2 }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{maximo}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{contador}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}
+    \PYG{n}{soma} \PYG{o}{=} \PYG{n}{N3}
+    \PYG{n}{s} \PYG{o}{+=} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}  3 }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{maximo}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{contador}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{soma}\PYG{l+s+si}{:}\PYG{l+s+s2}{7d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}
+
+
+    \PYG{k}{while} \PYG{n}{contador} \PYG{o}{\PYGZlt{}=} \PYG{n}{maximo}\PYG{p}{:}
+        \PYG{k}{if} \PYG{n}{contador} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+            \PYG{n}{soma} \PYG{o}{=} \PYG{n}{soma} \PYG{o}{+} \PYG{n}{contador}
+            \PYG{n}{s} \PYG{o}{+=} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}  6 }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{maximo}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{contador}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{soma}\PYG{l+s+si}{:}\PYG{l+s+s2}{7d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n}{soma} \PYG{o}{=} \PYG{n}{soma} \PYG{o}{\PYGZhy{}} \PYG{n}{contador}
+            \PYG{n}{s} \PYG{o}{+=} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}  8 }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{maximo}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{contador}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{soma}\PYG{l+s+si}{:}\PYG{l+s+s2}{7d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}
+
+        \PYG{n}{contador} \PYG{o}{=} \PYG{n}{contador} \PYG{o}{+} \PYG{l+m+mi}{1}
+        \PYG{n}{s} \PYG{o}{+=} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{} 10 }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{maximo}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{contador}\PYG{l+s+si}{:}\PYG{l+s+s2}{6d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{soma}\PYG{l+s+si}{:}\PYG{l+s+s2}{7d}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}
+
+    \PYG{k}{return} \PYG{n}{s}
+
+\PYG{c+c1}{\PYGZsh{} Exemplo de uso:}
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{n}{N1}\PYG{p}{,} \PYG{n}{N2}\PYG{p}{,} \PYG{n}{N3} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{sample}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{),} \PYG{l+m+mi}{3}\PYG{p}{)}
+    \PYG{n}{tabela} \PYG{o}{=} \PYG{n}{gerar\PYGZus{}gabarito}\PYG{p}{(}\PYG{n}{N1}\PYG{p}{,} \PYG{n}{N2}\PYG{p}{,} \PYG{n}{N3}\PYG{p}{)}
+    \PYG{k}{if} \PYG{l+m+mi}{10} \PYG{o}{\PYGZlt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{tabela}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{))} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{15}\PYG{p}{:}
+        \PYG{k}{break}
+\PYG{p}{]]}
+\end{Verbatim}

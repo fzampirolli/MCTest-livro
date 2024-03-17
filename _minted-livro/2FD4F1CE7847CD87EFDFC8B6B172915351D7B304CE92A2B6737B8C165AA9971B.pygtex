@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Qual} \PYG{n}{é} \PYG{n}{a} \PYG{n}{equação} \PYG{n}{da} \PYG{n}{reta} \PYG{n}{que} \PYG{n}{passa} \PYG{n}{pelos} \PYG{n}{pontos} \PYG{p}{([[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{x1}\PYG{p}{]],} \PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{y1}\PYG{p}{]])} \PYG{n}{e}
+\PYG{p}{([[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{x2}\PYG{p}{]],} \PYG{p}{[[}\PYG{n}{code}\PYG{p}{:}\PYG{n}{y2}\PYG{p}{]])}\PYG{err}{?}
+
+\PYG{p}{[[}\PYG{n}{def}\PYG{p}{:}
+\PYG{k+kn}{import} \PYG{n+nn}{random}
+
+\PYG{k}{def} \PYG{n+nf}{equacao\PYGZus{}reta}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{y1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{y2}\PYG{p}{):}
+  \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Calcula a equação da reta que passa pelos pontos (x1, y1) e (x2, y2)\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+  \PYG{n}{m} \PYG{o}{=} \PYG{p}{(}\PYG{n}{y2} \PYG{o}{\PYGZhy{}} \PYG{n}{y1}\PYG{p}{)} \PYG{o}{/} \PYG{p}{(}\PYG{n}{x2} \PYG{o}{\PYGZhy{}} \PYG{n}{x1}\PYG{p}{)}
+  \PYG{n}{b} \PYG{o}{=} \PYG{n}{y1} \PYG{o}{\PYGZhy{}} \PYG{n}{m} \PYG{o}{*} \PYG{n}{x1}
+  \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}y = }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{m}\PYG{l+s+si}{:}\PYG{l+s+s2}{.2f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{x + }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{b}\PYG{l+s+si}{:}\PYG{l+s+s2}{.2f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} Lista de respostas}
+\PYG{n}{respostas} \PYG{o}{=} \PYG{p}{[]}
+
+\PYG{c+c1}{\PYGZsh{} Gerar 4 equações de reta aleatórias e distintas}
+\PYG{k}{while} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{respostas}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{4}\PYG{p}{:}
+  \PYG{n}{x1}\PYG{p}{,}\PYG{n}{y1}\PYG{p}{,}\PYG{n}{x2}\PYG{p}{,}\PYG{n}{y2} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{sample}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{10}\PYG{p}{),} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Gerar 2 pontos aleatórios}
+  \PYG{k}{if} \PYG{n}{x1} \PYG{o}{==} \PYG{n}{x2}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} A reta é vertical: não é possível calcular a inclinação m}
+    \PYG{k}{continue}
+
+  \PYG{n}{equacao} \PYG{o}{=} \PYG{n}{equacao\PYGZus{}reta}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{y1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{y2}\PYG{p}{)}
+  \PYG{k}{if} \PYG{n}{equacao} \PYG{o+ow}{not} \PYG{o+ow}{in} \PYG{n}{respostas}\PYG{p}{:}
+      \PYG{n}{respostas}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{equacao}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} [[code:respostas[3]]] \PYGZsh{} última será a correta}
+\PYG{p}{]]}
+\end{Verbatim}

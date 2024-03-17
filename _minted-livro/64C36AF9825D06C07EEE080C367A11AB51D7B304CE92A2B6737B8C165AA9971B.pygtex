@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{matriz2texto2}\PYG{p}{(}\PYG{n}{f}\PYG{p}{):}
+    \PYG{n}{l}\PYG{p}{,} \PYG{n}{c} \PYG{o}{=} \PYG{n}{f}\PYG{o}{.}\PYG{n}{shape}
+    \PYG{k}{if} \PYG{n}{np}\PYG{o}{.}\PYG{n}{min}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{n}{num\PYGZus{}digitos} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZpc{}\PYGZsq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{l+m+mi}{1} \PYG{o}{+} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{max}\PYG{p}{(}\PYG{n}{f}\PYG{p}{))))} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}d \PYGZsq{}}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{num\PYGZus{}digitos} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZpc{}\PYGZsq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{max}\PYG{p}{(}\PYG{n}{f}\PYG{p}{))))} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}d \PYGZsq{}}
+    \PYG{c+c1}{\PYGZsh{}print(\PYGZsq{}\PYGZdq{}\PYGZsq{}+num\PYGZus{}digitos+\PYGZsq{}\PYGZdq{}\PYGZsq{})}
+    \PYG{n}{texto} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{l}\PYG{p}{):}
+        \PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{c}\PYG{p}{):}
+            \PYG{n}{texto} \PYG{o}{+=} \PYG{n}{num\PYGZus{}digitos} \PYG{o}{\PYGZpc{}} \PYG{n}{f}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]}
+        \PYG{n}{texto} \PYG{o}{+=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}
+    \PYG{k}{return} \PYG{n}{texto}
+\end{Verbatim}

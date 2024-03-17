@@ -1,0 +1,49 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} ...}
+\PYG{c+c1}{\PYGZsh{} Parte 4 \PYGZhy{} Bloco principal}
+
+\PYG{k+kn}{import} \PYG{n+nn}{random}
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+  \PYG{n}{itens} \PYG{o}{=} \PYG{n}{gerar\PYGZus{}itens}\PYG{p}{(}\PYG{n}{setTrue}\PYG{p}{,} \PYG{n}{setFalse}\PYG{p}{,} \PYG{n}{num\PYGZus{}itens}\PYG{p}{,} \PYG{n}{num\PYGZus{}operadores}\PYG{p}{)}
+
+  \PYG{n}{itens\PYGZus{}corretos} \PYG{o}{=} \PYG{n}{gerar\PYGZus{}itens\PYGZus{}corretos}\PYG{p}{(}\PYG{n}{setTrue}\PYG{p}{,}\PYG{n}{setFalse}\PYG{p}{,} \PYG{n}{num\PYGZus{}itens}\PYG{p}{,}
+                                        \PYG{n}{num\PYGZus{}operadores}\PYG{p}{,} \PYG{n}{itens}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Se o número de itens corretos não for igual ao desejado, gerar uma nova questão}
+  \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{itens\PYGZus{}corretos}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{num\PYGZus{}itens\PYGZus{}corretos}\PYG{p}{:}
+    \PYG{k}{continue}
+
+  \PYG{n}{corretos} \PYG{o}{=} \PYG{n}{gerar\PYGZus{}indices\PYGZus{}itens\PYGZus{}corretos}\PYG{p}{(}\PYG{n}{itens}\PYG{p}{,} \PYG{n}{itens\PYGZus{}corretos}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Alternativa correta}
+  \PYG{n}{aux} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{k}{for} \PYG{n}{corr} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{num\PYGZus{}itens\PYGZus{}corretos}\PYG{p}{):}
+    \PYG{n}{aux}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{itens\PYGZus{}str}\PYG{p}{[}\PYG{n}{corretos}\PYG{p}{[}\PYG{n}{corr}\PYG{p}{]])}
+  \PYG{n}{itens\PYGZus{}comb} \PYG{o}{=} \PYG{p}{[}\PYG{n}{aux}\PYG{p}{]}
+
+  \PYG{c+c1}{\PYGZsh{} Gerar alternativas erradas}
+  \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{num\PYGZus{}alternativas}\PYG{p}{):}
+    \PYG{n}{aux} \PYG{o}{=} \PYG{n+nb}{sorted}\PYG{p}{(}\PYG{n}{random}\PYG{o}{.}\PYG{n}{sample}\PYG{p}{(}\PYG{n}{itens\PYGZus{}str}\PYG{p}{[:}\PYG{n}{num\PYGZus{}itens}\PYG{p}{],} \PYG{n}{num\PYGZus{}itens\PYGZus{}corretos}\PYG{p}{))}
+    \PYG{c+c1}{\PYGZsh{} Incluir apenas alternativas diferentes}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{aux} \PYG{o+ow}{in} \PYG{n}{itens\PYGZus{}comb}\PYG{p}{:}
+      \PYG{n}{itens\PYGZus{}comb}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{aux}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Montar as descrições das alternativas}
+  \PYG{n}{descricoes} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{k}{for} \PYG{n}{letra} \PYG{o+ow}{in} \PYG{n}{itens\PYGZus{}comb}\PYG{p}{:}
+    \PYG{n}{descricoes}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}, \PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{letra}\PYG{p}{)}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Se o número de descrições não for igual ao número de alternativas,}
+  \PYG{c+c1}{\PYGZsh{} gerar uma nova questão}
+  \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{descricoes}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{num\PYGZus{}alternativas}\PYG{p}{:}
+    \PYG{k}{continue}
+
+  \PYG{c+c1}{\PYGZsh{} Encerrar o loop, pois a questão foi gerada com sucesso}
+  \PYG{k}{break}
+
+\PYG{l+s+sd}{\PYGZsq{}\PYGZsq{}\PYGZsq{}\PYGZsq{} Alternativas}
+\PYG{l+s+sd}{[[code:descricoes[0]]]}
+\PYG{l+s+sd}{[[code:descricoes[1]]]}
+\PYG{l+s+sd}{...}
+\PYG{l+s+sd}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\end{Verbatim}

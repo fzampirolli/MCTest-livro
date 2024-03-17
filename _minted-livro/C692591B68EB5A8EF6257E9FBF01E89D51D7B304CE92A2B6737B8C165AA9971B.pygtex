@@ -1,0 +1,38 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{drawMatrix}\PYG{p}{(}\PYG{n}{A}\PYG{p}{,} \PYG{n}{myfile}\PYG{p}{):}
+    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    Desenha uma representação visual de uma matriz e salva a imagem em um arquivo.}
+\PYG{l+s+sd}{    Exemplo de uso:}
+\PYG{l+s+sd}{    No enunciado da questão, desenhe a seguinte figura}
+\PYG{l+s+sd}{    (copie o código abaixo para uma nova questão):}
+\PYG{l+s+sd}{    \PYGZbs{}begin\PYGZob{}figure\PYGZcb{}[h!]}
+\PYG{l+s+sd}{    \PYGZbs{}centering}
+\PYG{l+s+sd}{    \PYGZbs{}includegraphics[scale=0.55]\PYGZob{}[[code:f\PYGZdq{}./tmp/imgs180days/\PYGZob{}pathGraficoA\PYGZcb{}\PYGZdq{}]]\PYGZcb{}}
+\PYG{l+s+sd}{    \PYGZbs{}end\PYGZob{}figure\PYGZcb{}}
+
+\PYG{l+s+sd}{    [[def:}
+\PYG{l+s+sd}{    import numpy as np}
+\PYG{l+s+sd}{    Lin, Col = 4, 5}
+\PYG{l+s+sd}{    A = np.random.randint(10, size=(Lin, Col))}
+\PYG{l+s+sd}{    \PYGZsh{} Plotagem da função}
+\PYG{l+s+sd}{    import hashlib}
+\PYG{l+s+sd}{    s =str([Lin, Col])}
+\PYG{l+s+sd}{    h = hashlib.md5(s.encode()) \PYGZsh{} create hash \PYGZhy{} arquivo único}
+\PYG{l+s+sd}{    h = str(h.hexdigest())}
+\PYG{l+s+sd}{    fig0 = f\PYGZsq{}fz\PYGZus{}figExample01\PYGZob{}Lin\PYGZcb{}\PYGZus{}\PYGZob{}Col\PYGZcb{}\PYGZus{}\PYGZob{}h\PYGZcb{}.png\PYGZsq{}}
+\PYG{l+s+sd}{    drawMatrix(A, fig0)}
+\PYG{l+s+sd}{    ]] \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+
+    \PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{()}
+    \PYG{n}{mat} \PYG{o}{=} \PYG{n}{ax}\PYG{o}{.}\PYG{n}{imshow}\PYG{p}{(}\PYG{n}{A}\PYG{p}{,} \PYG{n}{cmap}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Pastel1\PYGZsq{}}\PYG{p}{,} \PYG{n}{interpolation}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}nearest\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{A}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]):}
+        \PYG{k}{for} \PYG{n}{y} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{A}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]):}
+            \PYG{n}{ax}\PYG{o}{.}\PYG{n}{annotate}\PYG{p}{(}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{A}\PYG{p}{[}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{])[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{xy}\PYG{o}{=}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{x}\PYG{p}{),} \PYG{n}{horizontalalignment}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}center\PYGZsq{}}\PYG{p}{,}
+                        \PYG{n}{verticalalignment}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}center\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+    \PYG{n}{fig}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}./tmp/imgs180days/}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{myfile}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{.png\PYGZsq{}}\PYG{p}{,} \PYG{n}{dpi}\PYG{o}{=}\PYG{l+m+mi}{300}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

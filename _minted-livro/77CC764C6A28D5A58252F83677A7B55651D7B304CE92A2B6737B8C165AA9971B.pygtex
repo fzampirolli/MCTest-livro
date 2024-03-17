@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{fatorial}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+    \PYG{n}{r} \PYG{o}{=} \PYG{l+m+mi}{1}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{n} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{):}
+        \PYG{n}{r} \PYG{o}{=} \PYG{n}{r} \PYG{o}{*} \PYG{n}{i}
+    \PYG{k}{return} \PYG{n}{r}
+
+\PYG{n}{numero} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{())}
+\PYG{n}{resultado} \PYG{o}{=} \PYG{n}{fatorial}\PYG{p}{(}\PYG{n}{numero}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}O fatorial de }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{numero}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ é }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{resultado}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{.\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}
