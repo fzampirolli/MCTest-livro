@@ -255,10 +255,10 @@ Estudante Exemplo Sobrenome   fzampirolli@ufabc.edu.br  0
 \end{verbatim}
 \end{myboxCode}
 
-\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e485\_varID\_61031\_variations.csv}, com as variações de cada estudante, com turma e soma das notas de exames anteriores}}\vspace{3mm}
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e485\_varID\_61031\_variations.csv}, com as variações de cada estudante, com turma e média das notas de exames anteriores}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-Room          ID Name                        Email    Variation SumPreviousAbilities
+Room          ID Name                        Email    Variation MeanPreviousAbilities
 fz-turmaTeste 1  Estudante Exemplo Sobrenome fzampirolli@ufabc.edu.br 0            0
 \end{verbatim}
 \end{myboxCode}
@@ -369,27 +369,33 @@ O processo de cálculo desses tipos de exames adaptativos considera que, para ca
     \item Armazene se o estudante acertou (valor 1 acertou e 0 caso contrário) a questão na lista \verb|u_vector|.
 \end{enumerate}
 
-Calcule a habilidade do estudante multiplicando elemento a elemento as listas \verb|b_vector| e \verb|u_vector|. Ao realizar essa operação e somar os resultados, obtém-se um valor que representa a habilidade do estudante com base em suas respostas e nas dificuldades das questões.
+Calcule a habilidade do estudante multiplicando elemento a elemento as listas \verb|b_vector| e \verb|u_vector|. Ao realizar essa operação e calcular a média os resultados, obtém-se um valor que representa a habilidade do estudante com base em suas respostas e nas dificuldades das questões.
 
 No item 3 anterior, para calcular o parâmetro $b$, são apresentados 3 tipos de teste/exame adaptativo:
 
 \begin{itemize}
   \item Se o teste for do tipo \textit{Weighted Percentage Correct} (WPC), o parâmetro $b$ é calculado como a diferença entre 1 e a fração ponderada de respostas corretas em relação à quantidade total de questões corrigidas;
   \item Se o teste for do tipo \textit{Computerized Adaptive Testing} (CAT), o parâmetro $b$ é a habilidade associada à questão. O CAT foi implementado no MCTest v5.3 pelo estudante Lucas Montagnani Calil Elias, como Trabalho de Conclusão de Curso no Bacharelado em Ciência da Computação da Universidade Federal do ABC, a quem agradeço imensamente;
-    \item Se o teste for do tipo \textit{Semi-Adaptive Testing} (SAT), o parâmetro $b$ é determinado pelo índice da taxonomia de Bloom da questão, variando entre 1 e 6;
+    \item Se o teste for do tipo \textit{Semi-Adaptive Testing} (SAT), o parâmetro $b$ é determinado pelo índice da taxonomia de Bloom da questão, variando entre 1 e 6.
     % \item Se o teste for do tipo \textit{Semi-Adaptive Testing by Difficulty} (SATD), o parâmetro $b$ é determinado pela dificuldade da questão, variando entre 1 e 5.
 \end{itemize}
 
 Os tipos WPC e CAT exigem que cada questão tenha sido respondida por um número mínimo de participantes anteriormente. Por exemplo, o CAT, que se baseia na Teoria de Resposta ao Item (TRI), requer um mínimo de 1.000 participantes no modelo 3PLM \cite{min2021systematic}. Se a questão ainda não tiver sido respondida, a Taxonomia de Bloom é utilizada para classificá-la.
 
 \begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
-  Para que o método adaptativo funcione corretamente, é necessário que todas as turmas dos exames anteriores estejam selecionadas nas suas respectivas telas de configuração de exames.  \end{mybox}
+  Para que o método adaptativo funcione corretamente:
+\begin{enumerate}
+\item Atribuir a Taxonomia de Bloom a cada questão. Essa atribuição é considerada uma condição inicial para o cálculo dos níveis de dificuldade das questões, tanto no método WPC quanto no CAT, antes de corrigir qualquer questão;
+\item Certificar-se de que todos os exames anteriores tenham sido corrigidos e que as estatísticas de desempenho, tanto para o método WPC quanto para o CAT, tenham sido atualizadas para cada questão. Isso pode ser feito por meio da digitalização dos exames e do uso do botão ``Upload-PDF'' para realizar as correções;
+\item Antes de escolher ``Criar PDF'' para distribuir os exames adaptativos, utilizando um dos três métodos apresentados na Figura \ref{fig:cap08_figexameAdapterType}, verifique se todas as turmas dos exames anteriores estão selecionadas nas respectivas telas de configuração de exames. Adicionalmente, as datas dos exames nos formulários devem estar corretas, pois apenas exames anteriores serão considerados nos cálculos das estatísticas.
+\end{enumerate}
+\end{mybox}
 
-\subsection*{Exemplificando o uso do método SAT}
+\subsection{Exemplificando o uso do método SAT}
 
-Para que este método de exame adaptativo funcione adequadamente, é necessário definir a taxonomia de Bloom para cada questão, nos 6 possíveis níveis: lembrar, compreender, aplicar, analisar, avaliar e criar. Cada um desses níveis recebe um valor de 1 a 6, respectivamente. Quando, para cada nível de dificuldade, são escolhidas várias questões com taxonomias distintas, cada variação do exame poderá apresentar pesos diferentes considerando essas taxonomias. Por exemplo, se um exame definir 5 questões com dificuldade 1, mas houver 10 questões marcadas para esse mesmo nível 1, além disso, foi decidida a criação de 20 variações de exames, teremos então variações com somatórios com diferentes pesos dos níveis dessa taxonomia.
+Para que este método de exame adaptativo funcione adequadamente, é necessário definir a taxonomia de Bloom para cada questão, nos 6 possíveis níveis: lembrar, compreender, aplicar, analisar, avaliar e criar. Cada um desses níveis recebe um valor de 1 a 6, respectivamente. Quando, para cada nível de dificuldade, são escolhidas várias questões com taxonomias distintas, cada variação do exame poderá apresentar pesos diferentes considerando essas taxonomias. Por exemplo, se um exame definir 5 questões com dificuldade 1, mas houver 10 questões marcadas para esse mesmo nível 1, além disso, foi decidida a criação de 20 variações de exames, teremos então variações com médias com diferentes pesos dos níveis dessa taxonomia.
 
-Para ilustrar esse processo, foi criado um exame com 3 QM e 1 QT, todas com dificuldade 1. Além disso, foram selecionadas 6 QM para serem sorteadas, com apenas 3 delas sendo escolhidas com base no desempenho do estudante em exames recentes. Na barra de rolagem, foi escolhido o número 5 para o exame adaptativo, ou seja, serão somadas as 5 últimas habilidades dos exames realizados pelo estudante. Foram solicitadas a criação de 20 variações de exames antes de clicar no botão ``Criar-Variações''. Também foram selecionadas duas turmas. Após clicar no botão ``Criar-PDF'', os arquivos foram enviados para o email do professor, além de um \textit{download} de um arquivo compactado contendo os seguintes arquivos.
+Para ilustrar esse processo, foi criado um exame com 3 QM e 1 QT, todas com dificuldade 1. Além disso, foram selecionadas 6 QM para serem sorteadas, com apenas 3 delas sendo escolhidas com base no desempenho do estudante em exames recentes. Na barra de rolagem, foi escolhido o número 5 para o exame adaptativo, ou seja, será calculada a média das 5 últimas habilidades dos exames realizados pelo estudante. Foram solicitadas a criação de 20 variações de exames antes de clicar no botão ``Criar-Variações''. Também foram selecionadas duas turmas. Após clicar no botão ``Criar-PDF'', os arquivos foram enviados para o email do professor, além de um \textit{download} de um arquivo compactado contendo os seguintes arquivos.
 
 \begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar criar PDF com o botão ``Criar-PDF''}}\vspace{3mm}
 \hrule
@@ -405,13 +411,13 @@ _e486_varID_61093_variations.csv
 \end{verbatim}
 \end{myboxCode}
 
-O primeiro arquivo \verb|_e486_varID_61093_adaptive_test_variations.csv| possui na primeira coluna as 20 variações do exame, na segunda coluna a chave das variações no BD e na terceira coluna a soma dos níveis da taxonomia de Bloom para as questões sorteadas para cada variação, em ordem crescente. Observam-se as questões com variações 4, 9, 12, 17 e 19 com o mesmo nível de dificuldade 8. Além disso, as variações 2, 5, 14 e 18 com dificuldade 15.
+O primeiro arquivo \verb|_e486_varID_61093_adaptive_test_variations.csv| possui na primeira coluna as 20 variações do exame, na segunda coluna a chave das variações no BD e na terceira coluna a média dos níveis da taxonomia de Bloom para as questões sorteadas para cada variação, em ordem crescente. Observam-se as questões com variações 4, 9, 12, 17 e 19 com o mesmo nível de dificuldade 8. Além disso, as variações 2, 5, 14 e 18 com dificuldade 15.
 
 
 \begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e486\_varID\_61093\_adaptive\_test\_variations}}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-Variation  VariationID  SumAbilities
+Variation  VariationID  MeanAbilities
  4         61096         8
  9         61101         8
 12         61104         8
@@ -449,24 +455,24 @@ RoomID RoomCode      NameStudent                           EmailStudent
 \end{verbatim}
 \end{myboxCode}
 
-As demais colunas deste arquivo \verb|_e486_varID_61093_adaptive_test.csv| a seguir representam informações específicas de cada exame realizado pelos estudantes. As colunas incluem o ID do Exame (\verb|ExamID1| e \verb|ExamID2|), a data de realização do exame (\verb|ExamDate1| e \verb|ExamDate2|), e as notas obtidas em cada exame (\verb|ExamAbilities1| e \verb|ExamAbilities2|). Nota-se que o primeiro exame com ID \verb|485| do estudante com ID \verb|671| ocorreu em 7 de dezembro de 2023, e a nota atribuída foi 1.0. Os outros dois estudantes não tiveram notas registradas nessas duas avaliações. A coluna \verb|SumPreviousAbilities| indica a soma das duas últimas avaliações dos estudantes.
+As demais colunas deste arquivo \verb|_e486_varID_61093_adaptive_test.csv| a seguir representam informações específicas de cada exame realizado pelos estudantes. As colunas incluem o ID do Exame (\verb|ExamID1| e \verb|ExamID2|), a data de realização do exame (\verb|ExamDate1| e \verb|ExamDate2|), e as notas obtidas em cada exame (\verb|ExamAbilities1| e \verb|ExamAbilities2|). Nota-se que o primeiro exame com ID \verb|485| do estudante com ID \verb|671| ocorreu em 7 de dezembro de 2023, e a nota atribuída foi 1.0. Os outros dois estudantes não tiveram notas registradas nessas duas avaliações. A coluna \verb|MeanPreviousAbilities| indica a média das duas últimas avaliações dos estudantes.
 
 \begin{myboxCode}{corCSV}{\textbf{Continuação do arquivo \texttt{\_e486\_varID\_61093\_adaptive\_test.csv}}}\vspace{3mm}
   \hrule
   \begin{verbatim}
-ExamID1 ExamDate1 ExamAbilities1 ExamID2 ExamDate2 ExamAbilities2 SumPreviousAbilities
+ExamID1 ExamDate1 ExamAbilities1 ExamID2 ExamDate2 ExamAbilities2 MeanPreviousAbilities
 485      2023-12-07 1.0          486.0   2023-12-09 5.0           6.0 
 486      2023-12-09                                               0.0 
 486      2023-12-09                                               0.0
 \end{verbatim}
 \end{myboxCode}
 
-O arquivo \verb|_e486_varID_61093_variations.csv| a seguir resume esses dados, com a variação sorteada para cada estudante. Observa-se que as variações 19 e 17 com a menor soma pela taxonomia de Bloom (8) foram sorteadas para os estudantes da turma \verb|Turma Exemplo|.
+O arquivo \verb|_e486_varID_61093_variations.csv| a seguir resume esses dados, com a variação sorteada para cada estudante. Observa-se que as variações 19 e 17 com a menor média pela taxonomia de Bloom (8) foram sorteadas para os estudantes da turma \verb|Turma Exemplo|.
 
 \begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e486\_varID\_61093\_variations.csv}}}\vspace{3mm}
 \hrule
 \begin{verbatim}
-Room          ID  Name                               Variation  SumPreviousAbilities
+Room          ID  Name                               Variation  MeanPreviousAbilities
 fz-turmaTeste   1 Estudante Exemplo Sobrenome            18         6.0
 Turma Exemplo 123 João da Silva                          19         0.0
 Turma Exemplo 987 Maria da Silva Andrade de S Gonçalves  17         0.0
@@ -479,6 +485,36 @@ Uma parte crucial desse processo adaptativo reside na seleção apropriada das q
 \begin{mybox}{pink}{\textbf{Melhorias:\\\vspace{-3mm}\hrule\vspace{3mm}}}
   Por enquanto, o exame adaptativo ocorre através da definição manual da taxonomia de Bloom para cada questão. Como trabalhos futuros, é possível criar três caixas abaixo do botão ``Criar-PDF'' para Bloom, TCI e TRI, representando a taxonomia de Bloom, Teoria Clássica do Item e Teoria de Resposta ao Item, respectivamente. O professor pode escolher qual critério aplicar. Um problema para estas duas últimas é que será necessário definir os parâmetros após a aplicação das questões em exames anteriores. Conforme apresentando na Seção \ref{sec:questaoQM} -- \nameref{sec:questaoQM}, os parâmetros de TRI deverão ser calculados considerando um número mínimo de 1.000 participantes no modelo 3PLM \cite{min2021systematic}.
 \end{mybox}
+
+\subsection{Estimativa dos parâmetros do modelo TRI}
+
+Ao corrigir um exame com questões de múltipla escolha, diversas estatísticas são calculadas, incluindo os parâmetros $a$, $b$ e $c$ da Teoria da Resposta ao Item (TRI). Estes parâmetros representam, respectivamente, a discriminação, a habilidade e o chute do item, conforme detalhado na Seção \ref{sec:questaoQM}. A Figura \ref{fig:cap04_figTRI} ilustra a Curva Característica do Item (CCI) com base nesses três parâmetros.
+
+O código desenvolvido no MCTest v.5.3 tem como objetivo estimar os parâmetros $a$, $b$ e $c$ da TRI para cada questão de múltipla escolha de um exame, utilizando o método da máxima verossimilhança.
+
+Inicialmente, uma função gera um dicionário contendo as respostas de cada aluno para cada questão no formato de 1 para acerto e 0 para erro, onde a chave do discionário é o ID da questão no banco de dados.
+
+Em seguida, para cada questão é feita a estimativa dos parâmetros utilizando a função de \textit{likelihood} negativa. Os parâmetros iniciais são definidos com base nos valores já armazenados no banco de dados ou valores fixos. A minimização é realizada utilizando o algoritmo \verb|L-BFGS-B|, com restrições nos intervalos de cada parâmetro, com a seguinte importação \verb|from scipy.optimize import minimize|.
+
+Após a convergência do algoritmo de otimização, os valores estimados dos parâmetros $a$, $b$ e $c$  são atualizados no modelo da questão no banco de dados. Desta forma, os parâmetros TRI são recalculados a cada aplicação e correção do exame, permitindo acompanhar possíveis mudanças na dificuldade ou discriminação das questões ao longo do tempo.
+
+Estes cálculos estimam os parâmetros do modelo IRT triparamétrico (TRI) para cada questão multiple choice de um exame utilizando máxima verossimilhança.
+\
+A função de verossimilhança negativa $L(\theta,\alpha,\beta,\gamma|\mathbf{x})$ é definida como:
+
+\begin{align*}
+L(\theta,\alpha,\beta,\gamma|\mathbf{x}) &= -\sum_{i=1}^N x_i \log P(X_i=1|\theta_i, \alpha,\beta,\gamma) + (1-x_i)\log[1-P(X_i=1|\theta_i, \alpha,\beta,\gamma)],
+\end{align*}
+\
+onde $P(X_i=1|\theta_i, \alpha,\beta,\gamma) = \gamma + (1-\gamma)F(\alpha(\theta_i - \beta))$ e $F$ é a função logística cumulativa.
+
+A estimação é realizada minimizando $L(\theta,\alpha,\beta,\gamma|\mathbf{x})$ usando o algoritmo \verb|L-BFGS-B|, com restrições $\theta\in[-5,5]$, $\alpha\in(-\infty,+\infty)$, $\beta\in[-5,5]$ e $\gamma\in[0,1]$. Valores iniciais são obtidos dos parâmetros armazenados ou valores fixos.
+
+Após a convergência, os parâmetros estimados $\hat{\alpha}$, $\hat{\beta}$ e $\hat{\gamma}$ são atualizados no banco de dados para cada questão.
+
+Dessa forma, o código implementa a estimação dos parâmetros do modelo TRI para cada questão por máxima verossimilhança.
+
+
 
 % melhorar escrita formal e científica, mantendo a formatação LaTex: 
 

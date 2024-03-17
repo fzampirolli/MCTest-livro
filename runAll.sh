@@ -50,7 +50,7 @@ cp livro*.pdf /Users/fz/PycharmProjects/mctest/book/2ed-br
 #cp *.html /Users/fz/PycharmProjects/mctest/book/2ed-br
 cp *.epub /Users/fz/PycharmProjects/mctest/book/2ed-br
 
-cp livro.pdf ~/Desktop
+cp livro*.pdf /Users/fz/PycharmProjects/mctest/book/2ed-br
 
 # pdflatex --shell-escape livro.tex ; cp livro.pdf ~/Desktop
 # bibtex livro
