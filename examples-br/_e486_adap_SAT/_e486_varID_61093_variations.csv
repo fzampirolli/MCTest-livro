@@ -1,4 +1,4 @@
-Room,ID,Name,Variation,SumLatestGrades
-fz-turmaTeste,1,Estudante Exemplo Sobrenome,18,1.0
-Turma Exemplo,123,João da Silva,19,0.0
-Turma Exemplo,987,Maria da Silva Andrade de S Gonçalves,17,0.0
+Room,ID,Name,Email,Variation,MeanPreviousAbilities
+Turma Exemplo,123,João da Silva,fzampirolli@gmail.com,19,-5.0
+Turma Exemplo,987,Maria da Silva Andrade de S Gonçalves,fzampirolli@gmail.com,12,-5.0
+fz-turmaTeste,1,Estudante Exemplo Sobrenome,fzampirolli@ufabc.edu.br,18,-0.333

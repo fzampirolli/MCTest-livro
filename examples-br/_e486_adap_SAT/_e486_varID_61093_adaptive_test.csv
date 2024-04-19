@@ -1,4 +1,4 @@
-RoomID,RoomCode,NomeAluno,EmailAluno,IDExame1,DataExame1,GradeExame1,IDExame2,DataExame2,GradeExame2,SumLatestGrades
-671,fz-turmaTeste,Estudante Exemplo Sobrenome,fzampirolli@gmail.com,485,2023-12-07,1.0,486.0,2023-12-09,,1.0
-672,Turma Exemplo,João da Silva,fzampirolli@gmail.com,486,2023-12-09,,0.0,,,
-672,Turma Exemplo,Maria da Silva Andrade de S Gonçalves,fzampirolli@gmail.com,486,2023-12-09,,0.0,,,
+RoomID,RoomCode,NameStudent,EmailStudent,2023-12-07:485:exameTesteQR-QM ,MeanPreviousAbilities
+672,Turma Exemplo,João da Silva,fzampirolli@gmail.com,-5.000,-5.000
+672,Turma Exemplo,Maria da Silva Andrade de S Gonçalves,fzampirolli@gmail.com,-5.000,-5.000
+671,fz-turmaTeste,Estudante Exemplo Sobrenome,fzampirolli@ufabc.edu.br,-0.333,-0.333

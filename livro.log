@@ -1,8 +1,0 @@
-This is TeX, Version 3.141592653 (TeX Live 2023) (preloaded format=tex 2023.7.1)  17 MAR 2024 10:31
-**livro
-(./livro.tex
-! Undefined control sequence.
-l.1 \documentclass
-                  [a4paper,11pt,openany,twoside]{book}
-? x
-No pages of output.

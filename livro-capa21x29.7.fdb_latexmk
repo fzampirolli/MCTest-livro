@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1705434491 "/Users/fz/VSCode/MCTest-livro/livro-capa21x29.7.tex" "livro-capa21x29.7.pdf" "livro-capa21x29.7" 1705434493 0
+["pdflatex"] 1713548705 "/Users/fz/VSCode/MCTest-livro/livro-capa21x29.7.tex" "livro-capa21x29.7.pdf" "livro-capa21x29.7" 1713548707 0
   "/Users/fz/VSCode/MCTest-livro/livro-capa21x29.7.tex" 1704673648 8370 52eb54255332b79d8597d17168a3184f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -159,8 +159,8 @@
   "figures/img2.png" 1702060558 113918 3ed1c4efbe1f285db660e997f10ef200 ""
   "figures/qrcode.png" 1702060558 5826 e229cda4637801c392d4b9540f8ca5fc ""
   "figures/verso.png" 1702060558 105465 9f4f00e3e2af4bd94ae5eae8d8c984b8 ""
-  "livro-capa21x29.7.aux" 1705434493 671 a5c2f26cca564d8172f792aabe2db655 "pdflatex"
-  "livro-capa21x29.7.out" 1705434492 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "livro-capa21x29.7.aux" 1713548707 671 a5c2f26cca564d8172f792aabe2db655 "pdflatex"
+  "livro-capa21x29.7.out" 1713548707 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "livro-capa21x29.7.tex" 1704673648 8370 52eb54255332b79d8597d17168a3184f ""
   (generated)
   "livro-capa21x29.7.aux"
