@@ -6,7 +6,9 @@ Apesar de este conteúdo do apêndice não estar diretamente relacionado ao MCTe
 
 \section{Contexto da oferta}
 
-A disciplina de Processamento da Informação é obrigatória para estudantes em diversos programas de nossa universidade, com uma média de 2000 matrículas por ano. A partir de 2023, a disciplina é oferecida integralmente por um único professor em um laboratório de informática. O curso tem duração de 12 semanas, com quatro horas de aula por semana. No início de 2024, foi realizado um experimento em duas turmas, A e B, com 38 e 35 estudantes matriculados, respectivamente, de fevereiro a maio. O professor ministrou aulas laboratoriais síncronas aos estudantes por meio de um projetor, apresentando \href{https://colab.research.google.com}{Google Colabs} contendo conceitos, exemplos e exercícios dentro do Moodle, conforme relatado em \citeonline{2021:Zampirolli.Teubl.ea}. Também foram disponibilizadas aulas gravadas criadas durante a pandemia de Covid-19.
+A disciplina de Processamento da Informação é obrigatória para estudantes em diversos programas de nossa universidade, com uma média de 2000 matrículas por ano. A partir de 2023, a disciplina é oferecida integralmente por um único professor em um laboratório de informática. O curso tem duração de 12 semanas, com quatro horas de aula por semana. No início de 2024, foi realizado um experimento em duas turmas, A e B, com 38 e 35 estudantes matriculados, respectivamente, de fevereiro a maio. O professor ministrou aulas laboratoriais síncronas aos estudantes por meio de um projetor, apresentando \href{https://colab.research.google.com}{Google Colabs} contendo conceitos, exemplos e exercícios, conforme relatado em \citeonline{2021:Zampirolli.Teubl.ea}. Além disso, o professor disponibilizou 80 exercícios com correção automática detalhados a seguir. Também foram disponibilizadas aulas gravadas, criadas durante a pandemia de Covid-19.
+
+
 
 \section{Intervenção pedagógica}
 
@@ -22,7 +24,7 @@ A estratégia de avaliação para este curso consistiu no Exame 1 (40\% da nota 
 
 O serviço disponibilizado em \url{http://mctest.ufabc.edu.br:8000/LabMoodle} para acompanhamento das atividades realizadas pelos estudantes no Moodle foi elaborado em PHP para a interface do professor, enquanto a lógica no servidor para a geração dos relatórios foi realizada na linguagem Python, utilizando principalmente as bibliotecas \href{https://pandas.pydata.org}{Pandas} e \href{https://seaborn.pydata.org}{Seaborn}.
 
-O acompanhamento das atividades dos estudantes no Moodle é facilitado por meio de arquivos gerados nesse serviço. Um exemplo pode ser visto na pasta \href{http://mctest.ufabc.edu.br:8000/LabMoodle/modelos/report}{``report''}. Para obter esses arquivos, primeiramente é necessário fazer \textit{login} no Moodle e baixar o \textit{log} da disciplina em formato CSV. Em seguida, no \href{https://sig.ufabc.edu.br/sigaa/verTelaLogin.do}{SIGAA}, acessa-se o portal docente, seleciona-se a turma desejada e, dentro do menu de estudantes, é possível lançar notas e exportar uma planilha em formato XLS contendo as faltas dos estudantes, ver Figura \ref{fig:ApeA_parte1}.
+O acompanhamento das atividades dos estudantes no Moodle é facilitado por meio de arquivos gerados nesse serviço. Um exemplo pode ser visto na pasta \href{http://mctest.ufabc.edu.br:8000/LabMoodle/modelos/report}{``report''}. Para obter esses arquivos, primeiramente é necessário fazer \textit{login} no Moodle e baixar o \textit{log} da disciplina em formato CSV. Em seguida, no \href{https://sig.ufabc.edu.br/sigaa/verTelaLogin.do}{SIGAA}, acessa-se o portal docente, seleciona-se a turma desejada e, dentro do menu de estudantes, é possível lançar notas e faltas e exportar uma planilha em formato XLS contendo a lista dos estudantes, ver Figura \ref{fig:ApeA_parte1}.
 
 \begin{figure}[!ht]
     \centering
@@ -51,11 +53,11 @@ Finalmente, no serviço fornecido, há um formulário para realizar o \textit{up
 \label{fig:ApeA_parte3}
 \end{figure}
 
-O processo de geração de relatório é demorado e depende da conexão de internet. Por exemplo, demorou 2 minutos para um arquivo de \textit{Log} de 45MB e gerou uma página, cujo início é apresentado na Figura \ref{fig:ApeA_relato1}. Os dados dos estudantes foram omitidos. O restante da página apresenta seis imagens e será detalhado na próxima seção de resultados e discussões.
+O processo de geração de relatório é demorado e depende da conexão de internet. Por exemplo, demorou 2 minutos para um arquivo de \textit{log} de 45MB e gerou uma página, cujo início é apresentado na Figura \ref{fig:ApeA_relato1}. Os dados dos estudantes foram omitidos nas figuras apresentadas neste apêndice. O restante da página apresenta seis imagens e será detalhado na próxima seção de resultados e discussões.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.99\textwidth]{ApeA_relato1.png}
+\includegraphics[width=0.92\textwidth]{ApeA_relato1.png}
     \caption{Tela do serviço - Parte inicial do relatório gerado.}
 \label{fig:ApeA_relato1}
 \end{figure}
@@ -66,7 +68,9 @@ Destaco na Figura \ref{fig:ApeA_relato1} que nas linhas 9 e 10, dois estudantes 
 
 \section{Resultados e discussões}\label{sec:apendice_resultados}
 
-Além da parte inicial apresentada na Figura \ref{fig:ApeA_relato1}, o professor recebe um arquivo compactado contendo vários outros arquivos gerados durante o processo de geração de relatório, exemplificados a seguir. Nesta seção, serão detalhados esses arquivos.
+Esta seção complementa a parte inicial apresentada na Figura \ref{fig:ApeA_relato1}, descrevendo os arquivos adicionais que compõem o conjunto de informações recebidas pelo professor. Junto com o relatório inicial, o professor também recebe um arquivo compactado contendo diversos outros arquivos gerados durante o processo de análise e geração de dados. Nesta seção, serão detalhados esses arquivos.
+
+As imagens \verb|*_Nome.png| na listagem a seguir apresentam os nomes dos estudantes no eixo $x$ do gráfico, enquanto as imagens \verb|*_RA.png| mostram os números de matrícula (RA) dos estudantes. Caso o professor deseje enviar aos estudantes seus desempenhos em comparação com a turma, os gráficos com os RAs são mais apropriados. Sem redundância, nesta seção serão apresentados apenas os gráficos com RA contidos nos arquivos \verb|alunos_Acessos_Sem_Filtros_RA.png| e \verb|alunos_Total_Presencas_RA.png|, pois \verb|alunos_Total_Acessos_RA.png| pode ser visualizado no primeiro caso.
 
 \begin{myboxCode}{corCSV}{\textbf{Arquivos descompactados}}\vspace{3mm}
 \hrule
@@ -84,7 +88,6 @@ presenca_notas_BCM0505-B-22SA_20241-OK2.xls.csv
 \end{verbatim}
 \end{myboxCode}
 
-As imagens \verb|*_Nome.png| apresentam os nomes dos estudantes no eixo $x$ do gráfico, enquanto as imagens \verb|*_RA.png| mostram os números de matrícula (RA) dos estudantes. Caso o professor deseje enviar aos estudantes seus desempenhos em comparação com a turma, os gráficos com os RAs são mais apropriados. Sem redundância, nesta seção serão apresentados apenas os gráficos com RA contidos nos arquivos \verb|alunos_Acessos_Sem_Filtros_RA.png| e \verb|alunos_Total_Presencas_RA.png|, pois \verb|alunos_Total_Acessos_RA.png| pode ser visualizado no primeiro caso.
 
 \subsection{Arquivo \texttt{data.json}}
 
@@ -213,6 +216,21 @@ A Figura \ref{fig:ApeA_alunos_Acessos_Sem_Filtros_RA} apresenta a imagem \verb|a
 %     \label{fig:ApeA_alunos_Total_Acessos_RA}
 % \end{figure}
 
+\section{Acessos às atividades do Moodle}
+
+
+O gráfico de barras da Figura \ref{fig:ApeA_Acessos_EPs} apresenta o número de alunos que tentaram resolver cada um dos 80 EPs, distribuídos ao longo do eixo \( x \). No eixo \( y \), está representado o número de alunos que tentaram realizar cada EP. Além disso, o gráfico inclui uma linha de tendência exponencial com um coeficiente de determinação \( R^2=0.449 \), indicando que a linha é uma aproximação moderada para os dados. Cada barra no gráfico corresponde a um EP específico, como ``EP1\_1'', ``EP1\_2'', ..., ``EP6\_23''. Observa-se uma variação considerável no número de acessos entre os diferentes EPs, indicando diferentes níveis de interação dos alunos com o material disponibilizado. A linha de tendência exponencial ajuda a visualizar a tendência geral de decrescimento dos acessos ao longo dos EPs. Isso pode indicar o baixo desempenho dos alunos na prova final, como relatado na próxima seção. A cor verde é associada aos EPs relacionados a vetores, enquanto a cor salmão representa os EPs relacionados a matrizes.
+
+\begin{figure}[!ht]
+    \centering
+    \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeA_Acessos_EPs.png}}
+    \caption{Quantidade de alunos que tentaram resolver os EP (verde para EPs sobre vetores e salmão para matrizes).}
+    \label{fig:ApeA_Acessos_EPs}
+\end{figure}
+
+
+
+
 \section{Tabelas comparativas - turma A vs. turma B}
 
 Esta seção destaca a comparação do desempenho entre as turmas A e B, tanto antes quanto após a prova de recuperação. Antes do exame, a turma B exibia uma correlação mais pronunciada entre acessos e conceitos, com uma maior proporção de estudantes alcançando os conceitos A e B. Em contraste, na turma A, havia uma quantidade significativa de estudantes com conceitos D e F. Após a prova de recuperação, houve uma melhora notável na turma A, com mais estudantes obtendo conceitos B, C e D e menos estudantes com conceito F. O mesmo padrão foi observado na turma B.
@@ -276,5 +294,7 @@ O serviço LabMoodle, desenvolvido para acompanhar as atividades dos estudantes 
 É importante ressaltar que os dados de acesso ao Moodle e as presenças em aula representam apenas uma parte do processo de aprendizagem dos estudantes. Outros fatores, como a dedicação individual fora do horário de aula, as estratégias de estudo e o engajamento com o conteúdo, também desempenham um papel crucial no desempenho acadêmico.
 
 Uma limitação deste método é que alguns estudantes podem realizar seus estudos fora do Moodle, tanto durante a aula quanto fora dela. Além disso, não foi avaliado o conhecimento prévio dos estudantes. Assim, estudantes com experiência em programação podem não participar das atividades e ainda assim apresentar um bom desempenho, como observado nos gráficos apresentados. Finalmente, presume-se que os IPs de um laboratório devem ter um prefixo, como ``172.17.14'', conforme apresentado na Figura \ref{fig:ApeA_parte2}. O professor pode também considerar todos os IPs, substituindo o prefixo por ``172'' ou simplesmente ``.''.
+
+Como sugestões para trabalhos futuros, considerando que os estudantes adquirem conhecimentos básicos de lógica de programação no seu ingresso na graduação, durante a disciplina de Bases Computacionais da Ciência (CS0), geralmente ministrada utilizando a linguagem Python, propõe-se algumas modificações nas avaliações da disciplina de Processamento da Informação. Uma sugestão seria realizar a primeira prova abrangendo conceitos até laços de repetição ao final da semana 4, funcionando como uma revisão dos conteúdos abordados no curso CS0. Na semana 7, poderia ser aplicada uma prova sobre vetores, e na semana 11, uma prova sobre matrizes, distribuídas com pesos de avaliação de 30\%, 30\% e 40\%, respectivamente. Outra sugestão é substituir os testes adaptativos de múltipla escolha em papel por uma implementação similar no próprio ambiente Moodle.
 
 As informações obtidas neste experimento podem ser utilizadas para aprimorar o planejamento e a condução de futuras ofertas da disciplina. Ajustes nas abordagens pedagógicas, incentivos ao engajamento e um acompanhamento mais próximo dos estudantes com dificuldades podem ser implementados com base nas lições aprendidas.
