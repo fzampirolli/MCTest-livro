@@ -69,9 +69,7 @@ Destaco na Figura \ref{fig:ApeA_relato1} que nas linhas 9 e 10, dois estudantes 
 \section{Resultados e discussões}\label{sec:apendice_resultados}
 
 Esta seção complementa a parte inicial apresentada na Figura \ref{fig:ApeA_relato1}, descrevendo os arquivos adicionais que compõem o conjunto de informações recebidas pelo professor. Junto com o relatório inicial, o professor também recebe um arquivo compactado contendo diversos outros arquivos gerados durante o processo de análise e geração de dados. Nesta seção, serão detalhados esses arquivos.
-
-As imagens \verb|*_Nome.png| na listagem a seguir apresentam os nomes dos estudantes no eixo $x$ do gráfico, enquanto as imagens \verb|*_RA.png| mostram os números de matrícula (RA) dos estudantes. Caso o professor deseje enviar aos estudantes seus desempenhos em comparação com a turma, os gráficos com os RAs são mais apropriados. Sem redundância, nesta seção serão apresentados apenas os gráficos com RA contidos nos arquivos \verb|alunos_Acessos_Sem_Filtros_RA.png| e \verb|alunos_Total_Presencas_RA.png|, pois \verb|alunos_Total_Acessos_RA.png| pode ser visualizado no primeiro caso.
-
+\
 \begin{myboxCode}{corCSV}{\textbf{Arquivos descompactados}}\vspace{3mm}
 \hrule
 \begin{verbatim}
@@ -87,7 +85,8 @@ faltas_notas_BCM0505-B-22SA_20241-OK2.xls.csv
 presenca_notas_BCM0505-B-22SA_20241-OK2.xls.csv
 \end{verbatim}
 \end{myboxCode}
-
+\
+As imagens \verb|*_Nome.png| na listagem a seguir apresentam os nomes dos estudantes no eixo $x$ do gráfico, enquanto as imagens \verb|*_RA.png| mostram os números de matrícula (RA) dos estudantes. Caso o professor deseje enviar aos estudantes seus desempenhos em comparação com a turma, os gráficos com os RAs são mais apropriados. Sem redundância, nesta seção serão apresentados apenas os gráficos com RA contidos nos arquivos \verb|alunos_Acessos_Sem_Filtros_RA.png| e \verb|alunos_Total_Presencas_RA.png|, pois \verb|alunos_Total_Acessos_RA.png| pode ser visualizado no primeiro caso.
 
 \subsection{Arquivo \texttt{data.json}}
 
@@ -232,7 +231,7 @@ Esta seção destaca a comparação do desempenho entre as turmas A e B, tanto a
 
 \subsection{Comparações antes da prova de recuperação}
 
-Após a análise da tabela comparativa antes da prova de recuperação (Tabela \ref{tab:antes-recuperacao}), observa-se que a turma B apresentou uma correlação ligeiramente maior entre acessos (durante a aula e fora também) e conceitos em comparação com a turma A. Além disso, a turma B obteve um número maior de estudantes com conceitos A e B, indicando um desempenho global melhor em relação à turma A antes da prova de recuperação. Por outro lado, a turma A teve uma proporção significativamente maior de estudantes com conceitos D e F, sugerindo um desempenho mais baixo nesse período.
+Após a análise da tabela comparativa antes da prova de recuperação (Tabela \ref{tab:antes-recuperacao}), observa-se que a turma B apresentou uma correlação ligeiramente maior entre acessos (durante a aula e fora também) e conceitos em comparação com a turma A. Além disso, a turma B obteve um número maior de estudantes com conceitos A e B, indicando um desempenho global melhor em relação à turma A antes da prova de recuperação. Por outro lado, a turma A teve uma proporção significativamente maior de estudantes com conceitos D e F, sugerindo um desempenho mais baixo nesse período. Esses valores foram alterados após a prova de recuperação, como apresentado na próxima seção.
 
 \begin{table}[htbp]
     \centering
@@ -255,34 +254,35 @@ Após a análise da tabela comparativa antes da prova de recuperação (Tabela \
 
 \subsection{Comparações após a prova de recuperação - resultado final}
 
-Em breve ...
+Após a realização da prova de recuperação e a obtenção dos resultados finais, conforme apresentado na tabela comparativa (Tabela \ref{tab:apos-recuperacao}), notamos que a correlação entre acessos e conceitos permaneceu relativamente constante em ambas as turmas. No entanto, houve uma melhoria no desempenho da turma A, com um aumento no número de estudantes com conceitos A e B e uma redução na proporção de estudantes com conceitos D e F. Por outro lado, na turma B, embora tenha havido um aumento no número de estudantes com conceito A, houve também um aumento no número de estudantes com conceitos D e F, sugerindo uma variação no desempenho dos estudantes após a prova de recuperação.
 
-% Após a realização da prova de recuperação e a obtenção dos resultados finais, conforme apresentado na tabela comparativa (Tabela \ref{tab:apos-recuperacao}), notamos que a correlação entre acessos e conceitos permaneceu relativamente constante em ambas as turmas. No entanto, houve uma melhoria no desempenho da turma A, com um aumento no número de estudantes com conceitos A e B e uma redução na proporção de estudantes com conceitos D e F. Por outro lado, na turma B, embora tenha havido um aumento no número de estudantes com conceito A, houve também um aumento no número de estudantes com conceitos D e F, sugerindo uma variação no desempenho dos estudantes após a prova de recuperação.
-
-% \begin{table}[htbp]
-%   \centering
-%   \caption{Tabela Comparativa - Após a Prova de Recuperação}
-%   \label{tab:apos-recuperacao}
-%   \begin{tabular}{|l|c|c|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{Correlações} & \multicolumn{3}{c|}{Resumo} & \multicolumn{2}{c|}{Resumo} \\
-%     \cline{2-3} \cline{4-6} \cline{7-8}
-%     & Acessos & Presenças & A & B & C & D & F \\
-%     \hline
-%     Turma A & 0,414 & 0,279 & 5 & 4 & 3 & 6 & 20 \\
-%     \hline
-%     Turma B & 0,508 & 0,452 & 10 & 2 & 2 & 9 & 12 \\
-%     \hline
-%   \end{tabular}
-% \end{table}
+\begin{table}[htbp]
+    \centering
+    \caption{Tabela comparativa - após da prova de recuperação}
+    \label{tab:apos-recuperacao}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+      \hline
+      \rowcolor[HTML]{EFEFEF} 
+      & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Correlações (desempenho vs)}} & \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Conceitos}} & \cellcolor[HTML]{C0C0C0}\textbf{Reprovação} \\
+      \cline{2-3} \cline{4-8} \cline{9-9}
+      \rowcolor[HTML]{EFEFEF} 
+      \textbf{Turma} & \textbf{Acessos} & \textbf{Presenças} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{F} & \textbf{\%} \\
+      \hline
+      A & 0.498 & 0.389 & 3 & 3 & 2 & 4 & 26 & 68.42 \\
+      \hline
+      B & 0.558 & 0.526 & 7 & 1 & 1 & 7 & 19 & 54.29 \\
+      \hline
+    \end{tabular}
+\end{table}
 
 \section{Considerações finais}
 
-O experimento realizado nas turmas A e B da disciplina de Processamento da Informação no primeiro quadrimestre de 2024 proporcionou insights valiosos sobre o engajamento e desempenho dos estudantes. A análise dos dados de acesso ao Moodle, combinada com os conceitos obtidos, permitiu avaliar a correlação entre essas métricas e identificar áreas de melhoria.
+O experimento realizado nas turmas A e B da disciplina de Processamento da Informação no primeiro quadrimestre de 2024 proporcionou informações valiosas sobre o engajamento e desempenho dos estudantes. A análise dos dados de acesso ao Moodle, combinada com os conceitos obtidos, permitiu avaliar a correlação entre essas métricas e identificar áreas de melhoria.
 
-Os resultados revelaram que a turma B apresentou uma correlação um pouco mais forte entre acessos, presenças e desempenho, com uma proporção maior de estudantes obtendo conceitos mais altos após da prova de recuperação. Isso sugere que, mesmo recebendo o mesmo conteúdo e avaliações semelhantes, uma turma pode ter um desempenho superior por razões que vão além do escopo deste estudo.
-
-Após a prova de recuperação, observou-se uma melhoria geral no desempenho das turmas A e B, com mais estudantes alcançando conceitos superiores. No entanto, a turma B também apresentou um aumento no número de estudantes com conceitos elevados, indicando uma variação positiva no desempenho dessa turma.
+Os resultados revelaram que a turma B apresentou uma correlação um pouco mais forte entre acessos, presenças e desempenho, com uma proporção maior de estudantes obtendo conceitos mais altos em geral. Isso sugere que, mesmo recebendo o mesmo conteúdo e avaliações semelhantes, uma turma pode ter um desempenho superior por razões que vão além do escopo deste estudo.
+\
+Após a prova de recuperação, observou-se uma melhoria geral no desempenho das turmas A e B, com mais estudantes alcançando conceitos superiores. 
+%No entanto, a turma B também apresentou um aumento no número de estudantes com conceitos elevados, indicando uma variação positiva no desempenho dessa turma.
 
 O serviço LabMoodle, desenvolvido para acompanhar as atividades dos estudantes no Moodle, demonstrou ser uma ferramenta valiosa para os professores. Ao fornecer informações detalhadas sobre acessos, presenças e desempenho, o serviço permitiu identificar pontos de atenção e orientar estratégias pedagógicas mais eficazes.
 
@@ -290,6 +290,6 @@ O serviço LabMoodle, desenvolvido para acompanhar as atividades dos estudantes 
 
 Uma limitação deste método é que alguns estudantes podem realizar seus estudos fora do Moodle, tanto durante a aula quanto fora dela. Além disso, não foi avaliado o conhecimento prévio dos estudantes. Assim, estudantes com experiência em programação podem não participar das atividades e ainda assim apresentar um bom desempenho, como observado nos gráficos apresentados. Finalmente, presume-se que os IPs de um laboratório devem ter um prefixo, como ``172.17.14'', conforme apresentado na Figura \ref{fig:ApeA_parte2}. O professor pode também considerar todos os IPs, substituindo o prefixo por ``172'' ou simplesmente ``.''.
 
-Como sugestões para trabalhos futuros, considerando que os estudantes adquirem conhecimentos básicos de lógica de programação no seu ingresso na graduação, durante a disciplina de Bases Computacionais da Ciência (CS0), geralmente ministrada utilizando a linguagem Python, propõe-se algumas modificações nas avaliações da disciplina de Processamento da Informação. Uma sugestão seria realizar a primeira prova abrangendo conceitos até laços de repetição ao final da semana 4, funcionando como uma revisão dos conteúdos abordados no curso CS0. Na semana 7, poderia ser aplicada uma prova sobre vetores, e na semana 11, uma prova sobre matrizes, distribuídas com pesos de avaliação de 30\%, 30\% e 40\%, respectivamente. Outra sugestão é substituir os testes adaptativos de múltipla escolha em papel por uma implementação similar no próprio ambiente Moodle.
+Como sugestões para trabalhos futuros, considerando que os estudantes adquirem conhecimentos básicos de lógica de programação no seu ingresso na graduação, durante a disciplina de Bases Computacionais da Ciência (CS0), geralmente ministrada utilizando a linguagem Python, propõe-se algumas modificações nas avaliações da disciplina de Processamento da Informação. Uma sugestão seria realizar a primeira prova abrangendo conceitos até laços de repetição ao final da semana 4, funcionando como uma revisão dos conteúdos abordados no curso CS0. Na semana 7, poderia ser aplicada uma prova sobre vetores, e na semana 11, uma prova sobre matrizes, distribuídas com pesos de avaliação de 30\%, 30\% e 40\%, respectivamente. Outra sugestão é substituir os testes adaptativos de múltipla escolha em papel por uma implementação similar no próprio ambiente Moodle. Ou ainda realizar simulados antes de cada avaliação, valendo um bônus de 5\% em cada um.
 
 As informações obtidas neste experimento podem ser utilizadas para aprimorar o planejamento e a condução de futuras ofertas da disciplina. Ajustes nas abordagens pedagógicas, incentivos ao engajamento e um acompanhamento mais próximo dos estudantes com dificuldades podem ser implementados com base nas lições aprendidas.
