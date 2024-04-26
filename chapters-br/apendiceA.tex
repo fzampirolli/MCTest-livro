@@ -69,6 +69,8 @@ Destaco na Figura \ref{fig:ApeA_relato1} que nas linhas 9 e 10, dois estudantes 
 \section{Resultados e discussões}\label{sec:apendice_resultados}
 
 Esta seção complementa a parte inicial apresentada na Figura \ref{fig:ApeA_relato1}, descrevendo os arquivos adicionais que compõem o conjunto de informações recebidas pelo professor. Junto com o relatório inicial, o professor também recebe um arquivo compactado contendo diversos outros arquivos gerados durante o processo de análise e geração de dados. Nesta seção, serão detalhados esses arquivos.
+
+As imagens \verb|*_Nome.png| na listagem a seguir apresentam os nomes dos estudantes no eixo $x$ do gráfico, enquanto as imagens \verb|*_RA.png| mostram os números de matrícula (RA) dos estudantes. Caso o professor deseje enviar aos estudantes seus desempenhos em comparação com a turma, os gráficos com os RAs são mais apropriados. Sem redundância, nesta seção serão apresentados apenas os gráficos com RA contidos nos arquivos \verb|alunos_Acessos_Sem_Filtros_RA.png| e \verb|alunos_Total_Presencas_RA.png|, pois \verb|alunos_Total_Acessos_RA.png| pode ser visualizado no primeiro caso.
 \
 \begin{myboxCode}{corCSV}{\textbf{Arquivos descompactados}}\vspace{3mm}
 \hrule
@@ -85,8 +87,7 @@ faltas_notas_BCM0505-B-22SA_20241-OK2.xls.csv
 presenca_notas_BCM0505-B-22SA_20241-OK2.xls.csv
 \end{verbatim}
 \end{myboxCode}
-\
-As imagens \verb|*_Nome.png| na listagem a seguir apresentam os nomes dos estudantes no eixo $x$ do gráfico, enquanto as imagens \verb|*_RA.png| mostram os números de matrícula (RA) dos estudantes. Caso o professor deseje enviar aos estudantes seus desempenhos em comparação com a turma, os gráficos com os RAs são mais apropriados. Sem redundância, nesta seção serão apresentados apenas os gráficos com RA contidos nos arquivos \verb|alunos_Acessos_Sem_Filtros_RA.png| e \verb|alunos_Total_Presencas_RA.png|, pois \verb|alunos_Total_Acessos_RA.png| pode ser visualizado no primeiro caso.
+
 
 \subsection{Arquivo \texttt{data.json}}
 
@@ -111,13 +112,11 @@ Nessa lista de arquivos possui também texto nos formatos JSON e CSV. O promeiro
         "day": "1",
         "hour": "10:00",
         "duration": "2:00",
-        "ipPrefix": "172.17.14"
-    },{
+        "ipPrefix": "172.17.14" },{
         "day": "3",
         "hour": "8:00",
         "duration": "2:00",
-        "ipPrefix": "172.17.14"
-    }]}
+        "ipPrefix": "172.17.14" }]}
 \end{verbatim}
 \end{myboxCode}
 
@@ -166,54 +165,47 @@ O arquivo \texttt{presenca\_notas\_*.csv} mantém as três primeiras colunas par
 \end{verbatim}
 \end{myboxCode}
 
-\subsection{Presença em aula}
+% \subsection{Presença em aula}
 
-A Figura \ref{fig:ApeA_alunos_Total_Presencas_RA} mostra a imagem \verb|alunos_Total_Presencas_RA.png|, que exibe o total de presenças durante as aulas de laboratório para a turma B. A linha tracejada vermelha indica o número mínimo de faltas que um estudante pode ter sem reprovação por faltas. Um gráfico semelhante para a turma A é apresentado na Figura \ref{fig:ApeA_alunos_Total_Presencas_RA_Turma_A}.
+% A Figura \ref{fig:ApeA_alunos_Total_Presencas_RA} mostra a imagem \verb|alunos_Total_Presencas_RA.png|, que exibe o total de presenças durante as aulas de laboratório para a turma B. A linha tracejada vermelha indica o número mínimo de faltas que um estudante pode ter sem reprovação por faltas. Um gráfico semelhante para a turma A é apresentado na Figura \ref{fig:ApeA_alunos_Total_Presencas_RA_Turma_A}.
 
-\begin{figure}[!ht]
-    \centering
-    \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeA_alunos_Total_Presencas_RA.png}}
-    \caption{Gráfico contendo as presenças dos estudantes da turma B.}
-    \label{fig:ApeA_alunos_Total_Presencas_RA}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeA_alunos_Total_Presencas_RA.png}}
+%     \caption{Gráfico contendo as presenças dos estudantes da turma B.}
+%     \label{fig:ApeA_alunos_Total_Presencas_RA}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeA_alunos_Total_Presencas_RA_Turma_A.png}}
-    \caption{Gráfico contendo as presenças dos estudantes da turma A.}
-    \label{fig:ApeA_alunos_Total_Presencas_RA_Turma_A}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeA_alunos_Total_Presencas_RA_Turma_A.png}}
+%     \caption{Gráfico contendo as presenças dos estudantes da turma A.}
+%     \label{fig:ApeA_alunos_Total_Presencas_RA_Turma_A}
+% \end{figure}
 
 
 
 \subsection{Acessos no Moodle}
 
-A Figura \ref{fig:ApeA_alunos_Acessos_Sem_Filtros_RA} apresenta a imagem \verb|alunos_Acessos_Sem_Filtros_RA.png| contendo informa\-ções bastante relevantes, destacadas na área sombreada em vermelho, que correspondem ao número de acessos dos estudantes fora do horário das aulas na turma B. Esses dados sugerem uma possível falta de dedicação por parte dos estudantes nesta disciplina ao longo do período regular até a prova final. No topo de cada barra, são exibidos os totais de acessos, juntamente com o conceito atribuído ao estudante antes do exame final (sendo permitido realizar o exame final apenas para os estudantes com conceitos D e F). Um gráfico semelhante para a turma A é apresentado na Figura \ref{fig:ApeA_alunos_Acessos_Sem_Filtros_RA_Turma_A}.
+A Figura \ref{fig:ApeA_alunos_Acessos_Sem_Filtros_RA_turmaA} apresenta a imagem \verb|alunos_Acessos_Sem_Filtros_RA.png| contendo informa\-ções bastante relevantes, destacadas na área sombreada em vermelho, que correspondem ao número de acessos dos estudantes fora do horário das aulas na turma A. Esses dados sugerem uma possível falta de dedicação por parte dos estudantes nesta disciplina ao longo do período regular até a prova final. No topo de cada barra, são exibidos os totais de acessos, juntamente com o conceito atribuído ao estudante antes do exame final (sendo permitido realizar o exame final apenas para os estudantes com conceitos D e F). Um gráfico semelhante para a turma B é apresentado na Figura \ref{fig:ApeA_alunos_Acessos_Sem_Filtros_RA_turmaB}.
 
 \begin{figure}[!ht]
     \centering
-    \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeA_alunos_Acessos_Sem_Filtros_RA.png}}
-    \caption{Gráfico contendo os acessos totais dos estudantes da turma B, com destaque para o baixo acesso fora da aula.}
-    \label{fig:ApeA_alunos_Acessos_Sem_Filtros_RA}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeA_alunos_Acessos_Sem_Filtros_RA_Turma_A.png}}
+    \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeA_alunos_Acessos_Sem_Filtros_RA_turmaA.png}}
     \caption{Gráfico contendo os acessos totais dos estudantes da turma A, com destaque para o baixo acesso fora da aula.}
-    \label{fig:ApeA_alunos_Acessos_Sem_Filtros_RA_Turma_A}
+    \label{fig:ApeA_alunos_Acessos_Sem_Filtros_RA_turmaA}
 \end{figure}
 
-% \begin{figure}[!ht]
-%     \centering
-%     \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeA_alunos_Total_Acessos_RA.png}}
-%     \caption{Gráfico contendo os acessos durante as aulas.}
-%     \label{fig:ApeA_alunos_Total_Acessos_RA}
-% \end{figure}
+\begin{figure}[!ht]
+    \centering
+    \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeA_alunos_Acessos_Sem_Filtros_RA_turmaB.png}}
+    \caption{Gráfico contendo os acessos totais dos estudantes da turma B, com destaque para o baixo acesso fora da aula.}
+    \label{fig:ApeA_alunos_Acessos_Sem_Filtros_RA_turmaA}
+\end{figure}
 
 \section{Acessos às atividades do Moodle}
 
-O gráfico de barras da Figura \ref{fig:ApeA_Acessos_EPs} apresenta o número de estudantes que tentaram resolver cada um dos 80 EPs, distribuídos ao longo do eixo \( x \). No eixo \( y \), está representado o número de estudantes que tentaram realizar cada EP. Cada barra no gráfico corresponde a um EP específico, como ``EP1\_1'', ``EP1\_2'', ..., ``EP6\_23''. Observa-se uma variação considerável no número de acessos entre os diferentes EPs, indicando diferentes níveis de interação dos estudantes com o material disponibilizado. Além disso, o gráfico inclui uma linha de tendência exponencial com um coeficiente de determinação \( R^2=0.449 \), indicando que a linha é uma aproximação moderada para os dados. Esta linha ajuda a visualizar a tendência geral de decrescimento dos acessos ao longo dos EPs. Isso pode indicar o baixo desempenho dos estudantes na prova final, como relatado na próxima seção. A cor azul tem os EPs relacionados à primeira prova. A cor verde é associada aos EPs relacionados a vetores, enquanto a cor salmão representa os EPs relacionados a matrizes, ambas abordando o conteúdo da prova final. Finalmente, vale enfatizar ainda que aproximadamente 70 destes EPs foram resolvidos em sala de aula pelo professor.
+O gráfico de barras da Figura \ref{fig:ApeA_Acessos_EPs} apresenta o número de estudantes que tentaram resolver cada um dos 80 EPs, distribuídos ao longo do eixo \( x \). No eixo \( y \), está representado o número de estudantes que tentaram realizar cada EP. Cada barra no gráfico corresponde a um EP específico, como ``EP1\_1'', ``EP1\_2'', ..., ``EP6\_23''. Observa-se uma variação considerável no número de acessos entre os diferentes EPs, indicando diferentes níveis de interação dos estudantes com o material disponibilizado. Além disso, o gráfico inclui uma linha de tendência exponencial com um coeficiente de determinação \( R^2=0.449 \), indicando que a linha é uma aproximação moderada para os dados. Esta linha ajuda a visualizar a tendência geral de decrescimento dos acessos ao longo dos EPs. Isso pode indicar o baixo desempenho dos estudantes na prova final, como relatado na próxima seção. A cor azul tem os EPs relacionados à primeira prova. A cor verde é associada aos EPs relacionados a vetores, enquanto a cor salmão representa os EPs relacionados a matrizes, ambas abordando o conteúdo da prova final. Finalmente, vale enfatizar ainda que aproximadamente 60 destes EPs foram resolvidos em sala de aula pelo professor, com é possível observar os EPs que se aproximam da linha de tendência.
 
 \begin{figure}[!ht]
     \centering
@@ -227,11 +219,11 @@ O gráfico de barras da Figura \ref{fig:ApeA_Acessos_EPs} apresenta o número de
 
 \section{Tabelas comparativas - turma A vs. turma B}
 
-Esta seção destaca a comparação do desempenho entre as turmas A e B, tanto antes quanto após a prova de recuperação. Antes do exame, a turma B exibia uma correlação mais pronunciada entre acessos e conceitos, com uma maior proporção de estudantes alcançando os conceitos A e B. Em contraste, na turma A, havia uma quantidade significativa de estudantes com conceitos D e F. Após a prova de recuperação, houve uma melhora notável na turma A, com mais estudantes obtendo conceitos B, C e D e menos estudantes com conceito F. O mesmo padrão foi observado na turma B.
+Esta seção destaca a comparação do desempenho entre as turmas A e B, tanto antes quanto após a prova de recuperação. Antes do exame, a turma B exibia uma correlação mais pronunciada entre acessos e conceitos, com uma maior proporção de estudantes alcançando o conceito A. 
 
 \subsection{Comparações antes da prova de recuperação}
 
-Após a análise da tabela comparativa antes da prova de recuperação (Tabela \ref{tab:antes-recuperacao}), observa-se que a turma B apresentou uma correlação ligeiramente maior entre acessos (durante a aula e fora também) e conceitos em comparação com a turma A. Além disso, a turma B obteve um número maior de estudantes com conceitos A e B, indicando um desempenho global melhor em relação à turma A antes da prova de recuperação. Por outro lado, a turma A teve uma proporção significativamente maior de estudantes com conceitos D e F, sugerindo um desempenho mais baixo nesse período. Esses valores foram alterados após a prova de recuperação, como apresentado na próxima seção.
+Após a análise da tabela comparativa antes da prova de recuperação (Tabela \ref{tab:antes-recuperacao}), observa-se que a turma B apresentou uma correlação ligeiramente maior entre acessos (durante a aula e fora também) e conceitos em comparação com a turma A. No entanto, a turma B obteve um número maior de estudantes com conceito A, indicando um desempenho global melhor em relação à turma B antes da prova de recuperação. Por outro lado, a turma B teve uma proporção maior de estudantes com conceitos D e F, sugerindo um desempenho mais baixo nesse período. Esses valores foram alterados após a prova de recuperação, como apresentado na próxima seção.
 
 \begin{table}[htbp]
     \centering
@@ -254,23 +246,24 @@ Após a análise da tabela comparativa antes da prova de recuperação (Tabela \
 
 \subsection{Comparações após a prova de recuperação - resultado final}
 
-Após a realização da prova de recuperação e a obtenção dos resultados finais, conforme apresentado na tabela comparativa (Tabela \ref{tab:apos-recuperacao}), notamos que a correlação entre acessos e conceitos permaneceu relativamente constante em ambas as turmas. No entanto, houve uma melhoria no desempenho da turma A, com um aumento no número de estudantes com conceitos A e B e uma redução na proporção de estudantes com conceitos D e F. Por outro lado, na turma B, embora tenha havido um aumento no número de estudantes com conceito A, houve também um aumento no número de estudantes com conceitos D e F, sugerindo uma variação no desempenho dos estudantes após a prova de recuperação.
+
+Após a realização da prova de recuperação e a obtenção dos resultados finais, conforme apresentado na tabela comparativa (Tabela \ref{tab:apos-recuperacao}), notamos que houve uma melhoria no desempenho da turma A, com um aumento no número de estudantes com conceitos A, C e D e uma redução na proporção de estudantes com conceito F. Por outro lado, na turma B, embora não tenha alterado no número de estudantes com conceito A e B, houve também um aumento no número de estudantes com conceitos C e D. Porém, o destaque continua sendo a porcentagem de reprovações elevada na turma A (55.26\%) comparada à turma B (35.29\%). Nessa tabela não foram apresentadas as correlações entre desempenho e acessos (além de frequência), pois não foi mais contabilizada a presença após a prova 2, visto que alguns estudantes que já foram aprovados não participaram mais das aulas.
 
 \begin{table}[htbp]
     \centering
     \caption{Tabela comparativa - após da prova de recuperação}
     \label{tab:apos-recuperacao}
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
       \hline
       \rowcolor[HTML]{EFEFEF} 
-      & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Correlações (desempenho vs)}} & \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Conceitos}} & \cellcolor[HTML]{C0C0C0}\textbf{Reprovação} \\
-      \cline{2-3} \cline{4-8} \cline{9-9}
+       & \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Conceitos}} & \cellcolor[HTML]{C0C0C0}\textbf{Reprovação} \\
+      \cline{2-6} \cline{7-7}
       \rowcolor[HTML]{EFEFEF} 
-      \textbf{Turma} & \textbf{Acessos} & \textbf{Presenças} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{F} & \textbf{\%} \\
+      \textbf{Turma} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{F} & \textbf{\%} \\
       \hline
-      A & 0.498 & 0.389 & 3 & 3 & 2 & 4 & 26 & 68.42 \\
+      A & 4 & 2 & 5 & 6 & 21 & 55.26 \\
       \hline
-      B & 0.558 & 0.526 & 7 & 1 & 1 & 7 & 19 & 54.29 \\
+      B & 7 & 1 & 2 & 12 & 12 & 35.29 \\
       \hline
     \end{tabular}
 \end{table}
@@ -288,8 +281,8 @@ O serviço LabMoodle, desenvolvido para acompanhar as atividades dos estudantes 
 
 É importante ressaltar que os dados de acesso ao Moodle e as presenças em aula representam apenas uma parte do processo de aprendizagem dos estudantes. Outros fatores, como a dedicação individual fora do horário de aula, as estratégias de estudo e o engajamento com o conteúdo, também desempenham um papel crucial no desempenho acadêmico.
 
-Uma limitação deste método é que alguns estudantes podem realizar seus estudos fora do Moodle, tanto durante a aula quanto fora dela. Além disso, não foi avaliado o conhecimento prévio dos estudantes. Assim, estudantes com experiência em programação podem não participar das atividades e ainda assim apresentar um bom desempenho, como observado nos gráficos apresentados. Finalmente, presume-se que os IPs de um laboratório devem ter um prefixo, como ``172.17.14'', conforme apresentado na Figura \ref{fig:ApeA_parte2}. O professor pode também considerar todos os IPs, substituindo o prefixo por ``172'' ou simplesmente ``.''.
+Uma limitação deste método é que alguns estudantes podem realizar seus estudos fora do Moodle, tanto durante a aula quanto fora dela. Além disso, não foi avaliado o conhecimento prévio dos estudantes. Assim, estudantes com experiência em programação podem não participar das atividades e ainda assim apresentar um bom desempenho, como observado nos gráficos apresentados. Finalmente, presume-se que os IPs de um laboratório devem ter um prefixo, como ``172.17.14'', conforme apresentado na Figura \ref{fig:ApeA_parte2}. O professor pode também considerar todos os IPs, substituindo o prefixo por ``172'' (conforme a rede local) ou simplesmente ``.''.
 
-Como sugestões para trabalhos futuros, considerando que os estudantes adquirem conhecimentos básicos de lógica de programação no seu ingresso na graduação, durante a disciplina de Bases Computacionais da Ciência (CS0), geralmente ministrada utilizando a linguagem Python, propõe-se algumas modificações nas avaliações da disciplina de Processamento da Informação. Uma sugestão seria realizar a primeira prova abrangendo conceitos até laços de repetição ao final da semana 4, funcionando como uma revisão dos conteúdos abordados no curso CS0. Na semana 7, poderia ser aplicada uma prova sobre vetores, e na semana 11, uma prova sobre matrizes, distribuídas com pesos de avaliação de 30\%, 30\% e 40\%, respectivamente. Outra sugestão é substituir os testes adaptativos de múltipla escolha em papel por uma implementação similar no próprio ambiente Moodle. Ou ainda realizar simulados antes de cada avaliação, valendo um bônus de 5\% em cada um.
+Como sugestões para trabalhos futuros, considerando que os estudantes adquirem conhecimentos básicos de lógica de programação no seu ingresso na graduação, durante a disciplina de Bases Computacionais da Ciência (CS0), geralmente ministrada utilizando a linguagem Python, propõe-se algumas modificações nas avaliações da disciplina de Processamento da Informação. Uma sugestão seria realizar a primeira prova abrangendo conceitos até laços de repetição ao final da semana 4, funcionando como uma revisão dos conteúdos abordados no curso CS0. Na semana 7, poderia ser aplicada uma prova sobre vetores, e na semana 11, uma prova sobre matrizes, distribuídas com pesos de avaliação de 30\%, 35\% e 35\%, respectivamente. Outra sugestão é substituir os testes adaptativos de múltipla escolha em papel por uma implementação similar no próprio ambiente Moodle. Ou ainda realizar simulados antes de cada avaliação, valendo um bônus de 5\% em cada um. Finalmente, um estudante sugeriu resolver mais EPs passo-a-passo pelo professor, além de mostrar soluções prontas e explicar.
 
 As informações obtidas neste experimento podem ser utilizadas para aprimorar o planejamento e a condução de futuras ofertas da disciplina. Ajustes nas abordagens pedagógicas, incentivos ao engajamento e um acompanhamento mais próximo dos estudantes com dificuldades podem ser implementados com base nas lições aprendidas.
