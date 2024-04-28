@@ -16,7 +16,7 @@ O capítulo detalha a criação de um exame composto por três QMs paramétricas
 
 Além disso, são apresentados detalhes sobre o conteúdo dos arquivos nos formatos Aiken e XML, utilizados para armazenar QMs e QTs com respostas exatas. É importante ressaltar a necessidade de remover os comentários adicionados pelo MCTest nos arquivos Aiken antes de importá-los para o Moodle. No caso dos arquivos XML, é enfatizada a complexidade da sintaxe e a importância de remover os comentários em \LaTeX{} presentes em cada questão no MCTest. Deve-se também atentar para o formato utilizado, como fórmulas matemáticas, que podem se tornar inválidas no Moodle devido à sua limitação na formatação de questões.
 
-\section{MCTest-5, com Moodle+VPL}
+\section{MCTest-5, com Moodle+VPL}\label{sec:mctest+moodle+vpl}
 
 Durante a pandemia de COVID-19, o MCTest desempenhou um papel crucial ao permitir a avaliação remota de milhares de estudantes, principalmente em disciplinas que envolvem exercícios de programação (EP). Foram implementadas e validadas diversas funcionalidades em turmas para viabilizar esse processo, com destaque para as principais melhorias apresentadas nesta seção. %É relevante destacar que o próximo artigo conduziu seus experimentos antes da pandemia, adotando um formato híbrido no qual as avaliações foram realizadas presencialmente. No entanto, mesmo considerando esse contexto, é de significativa importância apresentar as melhorias implementadas e sua subsequente evolução.
 
@@ -164,6 +164,59 @@ A intervenção pedagógica consistiu em construir gradualmente um jogo simples 
 Os autores aplicaram um questionário para capturar as perspectivas dos estudantes sobre a abordagem. As análises sugeriram que os elementos de gamificação melhoraram a motivação em relação aos tópicos do curso. Adicionalmente, a taxa de reprovação do grupo estudado foi menor do que a média de outras turmas no período da pandemia.
 
 Assim, a intervenção recebeu \textit{feedback} positivo dos estudantes. Entretanto, os autores afirmam que estudos controlados com maiores amostras são necessários para avaliar plenamente a efetividade da abordagem. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Aplicação do MCTest-5 com Moodle+VPL no Ensino de PDI}\label{sec:mctest+moodle+vpl+pdi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Ao contrário dos artigos apresentados na Seção \ref{sec:mctest+moodle+vpl}, que descrevem experimentos em cursos introdutórios de lógica de programação (CS0 e CS1), esta seção relata a aplicação dessa integração no curso de Processamento Digital de Imagens (PDI).
+
+O trabalho ``\texttt{A Practical Digital Image Processing Course with \texttt{morph.py}}'' de \citeonline{2024:Zampirolli.Josko-PDI} foi publicado no Simpósio Brasileiro de Ensino de Computação e \textbf{recebeu o primeiro lugar na categoria de Recursos e Ambientes Educacionais} entre os trabalhos apresentados no evento.
+
+Isso marca o encerramento de um ciclo virtuoso iniciado em 2012, com a primeira publicação de \citeonline{2013:Zampirolli.Quilici-Gonzalez.ea} relacionada ao PDI na primeira versão do MCTest, ainda em Matlab, introduzido no primeiro capítulo deste livro, na Seção \ref{sec:historico} -- \nameref{sec:historico}.
+
+O ensino de PDI é desafiador devido à sua complexidade matemática e algorítmica. Este artigo apresenta um curso prático que utiliza a biblioteca Python \texttt{morph.py} para apoiar o ensino. O curso interativo emprega exemplos ilustrativos e exercícios práticos para facilitar a compreensão de conceitos e operadores fundamentais de PDI, desde noções básicas até tópicos avançados. Um estudo de caso exploratório com um grupo de 15 participantes confirmou a eficácia do método de ensino baseado na biblioteca \texttt{morph.py}, abordando as dificuldades de ensinar PDI a iniciantes.
+
+
+\subsection{Método}
+
+Nesta seção, é resumido o método apresentado no artigo, contextualizando o curso de PDI e detalhando a intervenção pedagógica, com ênfase na utilização da biblioteca \verb|morph.py| como um fator motivacional. Por fim, foi discutido os ambientes de desenvolvimento.
+
+\subsubsection{Contexto} \label{sec:cont}
+
+O curso de PDI é uma disciplina eletiva oferecida a estudantes de diversos programas na universidade, como o Bacharelado em Ciência da Computação e vários cursos de Engenharia. Com duração de 12 semanas e quatro horas de aula por semana, o curso é ministrado por meio de aulas laboratoriais síncronas, onde os professores apresentam Colabs contendo conceitos, exemplos e exercícios no Sistema de Gerenciamento de Aprendizado Moodle. Em 2023, o curso foi oferecido para 25 estudantes de fevereiro a maio, incluindo aulas gravadas produzidas durante a pandemia de Covid-19.
+
+\subsubsection{Intervenção Pedagógica} \label{sec:pi}
+
+O curso aborda uma ampla gama de tópicos em PDI, com as primeiras seis semanas dedicadas a equipar os estudantes com habilidades essenciais para desenvolver operadores de PDI, como limiares, histogramas, convolução, erosão, dilatação, filtros, \textit{watershed}, rotulagem e transformações de distância, seguindo o livro-texto de Gonzalez e Woods \cite{gonzalez2009processamento}. Na sétima semana, os estudantes fazem o Exame 1, enquanto as semanas subsequentes (oito a dez) focam na aplicação desses operadores de PDI para resolver problemas reais de visão computacional. Em suma, a primeira parte do curso visa fornecer aos estudantes as habilidades necessárias para desenvolver operadores de PDI, enquanto a segunda parte constrói sobre essa base, aplicando esses operadores para resolver vários problemas de visão computacional. A semana onze é reservada para revisão, e o curso é concluído com um exame final na semana doze.
+
+A avaliação do curso consiste em quatro tarefas individualizadas e parametrizadas (15\% da nota final), relacionadas ao último tópico abordado em sala de aula. Essas tarefas são fornecidas aos emails dos estudantes antes de cada aula e são avaliadas automaticamente utilizando a integração do MCTest, Moodle e VPL \cite{2020:Zampirolli.Pisani.ea,2021:Zampirolli.Sato.ea}. Além dessas tarefas, o Exame 1 (30\% da nota final) consiste em exercícios semelhantes. Para o projeto individual final (15\% da nota final), os estudantes devem desenvolver um Colab para resolver um problema de PDI. O exame final (40\% da nota final) segue uma estrutura similar ao projeto. Tanto o primeiro quanto o último exame devem ser concluídos dentro do período de duas horas de aula.
+
+\subsubsection{Ambientes de Desenvolvimento}\label{sec:development}
+
+A Figura~\ref{fig:cap13_DIP01} fornece uma visão geral da intervenção pedagógica empregada no curso de PDI, utilizando a biblioteca \verb|morph.py|, que oferece 71 métodos, incluindo operações (como mínimo, máximo e negação) e operadores (como erosões e dilatações). Embora o curso ia870p3\footnote{Disponível em \url{http://github.com/robertoalotufo/ia870p3}.} \cite{ia898p3} tenha abordado alguns algoritmos da caixa de ferramentas \verb|mmorph|~\cite{dougherty2003hands}, nem esse curso nem o curso apresentado no artigo cobriram toda a gama de funcionalidades oferecidas pela caixa de ferramentas.
+
+O material do curso consistiu em seis \textit{notebooks} conceituais durante as seis primeiras semanas e oito documentos focados em operadores morfológicos. Esses recursos foram utilizados até o Exame 1, marcando um marco significativo na progressão do curso. Após o Exame 1, o curso incorporou um conjunto de 27 demonstrações de \textit{notebooks} que combinavam teoria com prática.
+
+\begin{figure}[ht]
+\centering
+   \includegraphics[width=0.99\textwidth]{cap13_DIP01.png}
+\caption{Visão geral da intervenção pedagógica empregada no curso de PDI. Fonte: \cite{2024:Zampirolli.Josko-PDI}.}
+\label{fig:cap13_DIP01}
+\end{figure}
+
+Agora, o sistema de VPL fornece uma abordagem automatizada para avaliar as soluções dos estudantes. Por meio da biblioteca \verb|morph.py|, é possível verificar diretamente as soluções dos estudantes e compará-las com as respostas corretas, agilizando o processo de avaliação. Além disso, a combinação de \textit{notebooks} conceituais com \textit{notebooks} de demonstração permite aos estudantes uma compreensão completa dos conceitos, seguida pela aplicação prática desses conceitos em exemplos específicos. Essa abordagem integrada ajuda a fortalecer a compreensão dos estudantes e a solidificar suas habilidades práticas em PDI.
+
+\subsection{Experimentos}
+
+Os autores realizaram uma pesquisa voluntária para coletar dados dos estudantes em nosso curso de PDI. A pesquisa foi administrada após o exame final e incluiu 5 perguntas baseadas em Likert para obter \textit{feedback} sobre o conteúdo e as estratégias do curso.
+
+Dos estudantes que concluíram o curso, foram 15 respostas (aproximadamente 60\%). Os autores analisaram essas respostas e descobriram que duas perguntas se assemelham a uma distribuição normal. Portanto, foi utilizado um método paramétrico (\textit{teste t}) para essas duas perguntas e um método não paramétrico equivalente (\textit{Wilcoxon Signed-Rank}) para as restantes. Além disso, foi aplicado o Alpha de Cronbach para avaliar a consistência interna dos dados Likert, obtendo um valor de 0,90. Finalmente, foi testada a hipótese de que a biblioteca \texttt{morph.py} teve um efeito neutro na aprendizagem dos estudantes.
+
+Os resultados mostram diferenças significativas entre todas as perguntas e a hipótese nula. Por exemplo, a percepção positiva dos estudantes sobre a biblioteca indica que ela facilitou a exploração dos diferentes algoritmos pré-implementados sem a necessidade de implementá-los do zero. Como resultado, eles puderam se concentrar mais em entender os conceitos subjacentes e as técnicas por trás dos algoritmos, reduzindo a curva de aprendizado inicial. Finalmente, dos 25 estudantes que concluíram o curso, apenas 4 não obtiveram aprovação, resultando em uma taxa de aprovação de 84\%.
+
+Desafios à validade incluem a natureza eletiva do curso de PDI na universidade, o que pode afetar a representatividade dos resultados. Além disso, a realização de experimentos envolvendo grupos de teste e controle requer aprovação do comitê de ética e apresenta desafios logísticos. Assim, este estudo abre caminho para pesquisas futuras explorarem novas formas de experimentação.
 
 
 \section{Considerações finais}
