@@ -13,7 +13,7 @@ A Tabela \ref{tab:testes} apresenta uma lista de seis testes utilizados para ava
 O Teste 5 aborda o tema de vetores e é do tipo MLE-v0, destinado a avaliar conhecimentos sobre vetores e operações relacionadas. Enquanto isso, o teste 6 versa sobre matrizes e é classificado como MLE-v1, apresentando um nível de dificuldade mais elevado. Cada teste consiste em 200 variações sorteadas entre os estudante das duas turmas. Todos os testes possuem 5 questões de múltipla escolha, cada uma com 5 alternativas, sendo apenas uma correta. Todas as questões foram criadas pelo professor e atribuídas a uma das taxonomias de Bloom, priorizando os três primeiros níveis: Lembrar, Entender e Aplicar, devido ao curso ser introdutório de Lógica de Programação (CS1). \
 Na semana 11, houve a segunda prova avaliativa (valendo 60\%), e na semana 12, a prova de recuperação. Todas as provas avaliativas foram realizadas em atividade integrando MCTest+Moodle+VPL. Essas avaliações tiveram duração de duas horas e foram realizados utilizando o navegador \textit{Safe Exam Browser} (\href{safeexambrowser.org}{SEB}), sem consulta externa. 
 
-\begin{table}[htbp]
+\begin{table}[!ht]
     \centering
     \caption{Testes e seus respectivos tópicos e tipos.}
     \label{tab:testes}
@@ -50,7 +50,7 @@ A Tabela \ref{tab:respostas_atualizada} apresenta a porcentagem de acertos e o n
 
 É possível observar que a aleatoriedade nos sorteios das questões dos Grupos 2 e 3, assim como as porcentagens de acertos, estão adequadas. Além disso, é importante notar que a taxonomia não reflete necessariamente na dificuldade de acerto das questões. Por exemplo, as questões de Lembrar, Entender (Grupo 3) e Aplicar apresentaram porcentagens de acertos próximas.
 
-\begin{table}[htbp]
+\begin{table}[!ht]
     \centering
     \caption{Porcentagem de acertos e número de questões respondidas para cada chave do banco de dados no Teste 1 -- Sequencial, agrupadas por Taxonomia de Bloom.}
     \label{tab:respostas_atualizada}
@@ -183,7 +183,7 @@ Neste segundo teste, foram registradas 58 respostas, conforme sumarizado na Tabe
 
 É possível observar na linha de Respostas da Tabela \ref{tab:respostas_atualizada_teste2} um baixo número de respostas, devido à quantidade excessiva de questões a serem sorteadas. Isso prejudica a qualidade da calibração de cada questão. Por exemplo, a questão 14 teve apenas uma resposta correta, enquanto a questão 21 teve 15 respostas corretas, evidenciando que esta última está muito fácil e provavelmente precisa ser revisada, pois pode não estar discriminando adequadamente entre os estudantes que sabem o conteúdo e os que não sabem.
 
-\begin{table}[htbp]
+\begin{table}[!ht]
     \centering
     \caption{Porcentagem de acertos e número de questões respondidas no Teste 2: Método -- WPC.}
     \label{tab:respostas_atualizada_teste2}
@@ -238,7 +238,7 @@ Como as 18 questões usadas neste teste são novas, a Taxonomia de Bloom também
 
 A Tabela \ref{tab:respostas_atualizada_teste3} apresenta a porcentagem de acertos e o número de questões respondidas no Teste 3, agrupadas de acordo com a Taxonomia de Bloom. Cada coluna representa uma categoria da taxonomia. Os grupos numerados de 1 a 6 indicam os grupos de questões, lembrando que são sorteadas 5 questões em cada teste e uma questão por grupo. Neste teste, foram 56 respondentes. O número de respostas indica quantos estudantes responderam a cada questão, enquanto a porcentagem de acertos reflete a taxa de sucesso dos estudantes ao responderem cada questão.
 
-\begin{table}[htbp]
+\begin{table}[!ht]
     \centering
     \caption{Porcentagem de acertos e número de questões respondidas no Teste 3: Condicional -- WPC.}
     \label{tab:respostas_atualizada_teste3}
@@ -260,7 +260,7 @@ A Tabela \ref{tab:respostas_atualizada_teste3} apresenta a porcentagem de acerto
 
 O Teste 4, centrado em questões relacionadas à repetição, também utiliza o método de avaliação WPC (\textit{Weighted Probability of Correctness}) para determinar as habilidades dos estudantes, seguindo uma abordagem semelhante à apresentada na seção anterior. Nesta seção, são apresentados exclusivamente os resultados da correção deste teste aplicado às duas turmas. A Tabela \ref{tab:respostas_atualizada_teste4} não inclui uma linha de grupos devido à ausência de grupos com mais de uma questão. Assim, cada questão é tratada como um grupo individual e possui a mesma probabilidade de ser selecionada entre as 5 questões do teste. Nesta aplicação, houve um total de 50 respondentes.
 
-\begin{table}[htbp]
+\begin{table}[!ht]
     \centering
     \caption{Porcentagem de acertos e número de questões respondidas no Teste 4: Repetição -- WPC.}
     \label{tab:respostas_atualizada_teste4}
@@ -284,7 +284,7 @@ O Teste 5, que trata de vetores, utiliza o teste adaptativo MLE (\textit{Maximum
 A Tabela \ref{tab:respostas_atualizada_teste5} exibe a porcentagem de acertos e o número de questões respondidas no Teste 5, agrupadas por Taxonomia de Bloom. As questões estão distribuídas entre as categorias Lembrar, Entender, Aplicar e Analisar. As colunas correspondem às diferentes categorias de Bloom e as respectivas questões. Os valores de Repostas indicam o número de respostas para cada questão, e os valores de Acertos mostram a porcentagem de acertos para cada questão. Neste teste foram 53 respondentes.
 
 
-\begin{table}[htbp]
+\begin{table}[!ht]
     \centering
     \caption{Porcentagem de acertos e número de questões respondidas no Teste 5: Vetor -- MLE.}
     \label{tab:respostas_atualizada_teste5}
@@ -311,7 +311,7 @@ A Tabela \ref{tab:respostas_atualizada_teste6} apresenta a porcentagem de acerto
 
 Para obter mais detalhes sobre as correções realizadas e o método utilizado, é possível consultar a função \texttt{getHashVariationByCat()} no arquivo \texttt{UtilsLatex.py}, disponível no GitHub\footnote{\url{https://github.com/fzampirolli/mctest/blob/master/exam/UtilsLatex.py}.}. Atualmente, em caso de empate nos valores de TI, uma variação é selecionada aleatoriamente dentro do intervalo +/- 0.05 do valor de TI.
 
-\begin{table}[htbp]
+\begin{table}[!ht]
 \centering
 \caption{Porcentagem de acertos e número de questões respondidas no Teste 6: Matriz -- MLE.}
 \label{tab:respostas_atualizada_teste6}
@@ -333,7 +333,7 @@ Para obter mais detalhes sobre as correções realizadas e o método utilizado, 
 
 A fim de aumentar a variedade de variações sorteadas (na Tabela \ref{tab:respostas_atualizada_teste6}, sempre foi atribuída a primeira variação com o mesmo TI), porém, agora quando ocorre um empate no TI, é selecionada aleatoriamente uma variação dentro de um intervalo de TI, conforme mencionado anteriormente. Como mostrado na Tabela \ref{tab:MLE_frequencias}, no primeiro caso foram geradas 6 variações e no segundo caso 15 variações. Em comparação com o método WPC aplicado ao Teste 6, foram utilizadas 54 variações distintas distribuídas linearmente entre os estudantes. Nas duas turmas foram 73 estudantes matriculados. Ou seja, a probabilidade de dois estudantes receberem a mesma variação e sentarem próximos é baixa na correção do MLE e também nos métodos adaptativos WPC e SAT.
 
-\begin{table}[htbp]
+\begin{table}[!ht]
     \centering
     \caption{Comparação entre as frequências das variações.}
     \label{tab:MLE_frequencias}
@@ -430,8 +430,261 @@ Diferentemente das provas avaliativas, essas questões são simples e devem ser 
   \label{fig:ApeB_3087}
 \end{figure}
 
-\subsection{Calibrações das questões}\label{sec:calibracao}
+\subsection{Calibração das questões}\label{sec:calibracao}
 
+A estimativa dos parâmetros da Teoria de Resposta ao Item (TRI), ou calibração, foi introduzida na Seção \ref{sec:estimativas_TRI} -- \nameref{sec:estimativas_TRI}, utilizando o método \verb|minimize| da biblioteca \verb|scipy.optimize|. Essa abordagem foi adotada devido à conveniência de ter o MCTest implementado em Python. Entretanto, nesta seção, serão apresentadas análises utilizando a linguagem R, pois essa possui diversos recursos gráficos que facilitam a visualização e interpretação dos resultados.
+
+A Tabela \ref{tab:parameters} contém os parâmetros obtidos a partir da calibração dos itens utilizando diferentes modelos de ajuste. Os modelos foram ajustados aos dados empregando a função \verb|mirt()| do pacote R chamado \verb|mirt|.
+
+O modelo de 1 parâmetro (1PL) foi ajustado aos dados, utilizando o modelo de Rasch. Os parâmetros estimados para cada item no modelo 1PL são apresentados na coluna 1PL da tabela.
+
+Em seguida, o modelo de 2 parâmetros (2PL) foi ajustado aos dados. Esse modelo leva em consideração tanto a habilidade dos participantes quanto a dificuldade dos itens. Os parâmetros estimados para cada item no modelo 2PL são apresentados nas colunas 2PL da tabela, com os valores correspondentes para os parâmetros de discriminação (representados por $a$) e dificuldade (representados por $b$).
+
+Por fim, o modelo de 3 parâmetros (3PL) foi ajustado aos dados. Esse modelo considera a habilidade dos participantes, a dificuldade dos itens e a chance de acerto ao acaso. Os parâmetros estimados para cada item no modelo 3PL são apresentados nas colunas 3PL da tabela, com os valores correspondentes para os parâmetros de discriminação (representados por $a$), dificuldade (representados por $b$) e chance de acerto ao acaso (representados por $c$).
+
+Alguns pontos importantes a destacar nesta tabela:
+\begin{itemize}
+    \item Nos modelos 2PL e 3PL, os valores de dificuldade (parâmetro $b$) encontram-se fora do intervalo recomendado de -5 a 5. Isso indica que alguns itens podem estar muito fáceis ou muito difíceis para a população avaliada;
+    \item Os valores de discriminação (parâmetro $a$) também não se encontram dentro do intervalo ideal de 0,5 a 1,5. Estes valores foram estimados empiricamente após alguns testes no Colab\footnote{\url{https://colab.research.google.com/drive/1ka7_SR_QB4G7ZPVvH3p_E0bZEbOH1vhK}.}. Alguns itens apresentam baixa capacidade de discriminar entre indivíduos com diferentes níveis de proficiência;
+    \item Essa falta de adequação dos parâmetros aos intervalos esperados sugere que as questões não foram bem calibradas, provavelmente devido ao baixo número de respondentes utilizado nessa análise inicial.
+\end{itemize}
+Portanto, serão necessários ajustes adicionais no futuro, como coletar mais dados e refinar o processo de calibração dos itens, para melhorar a qualidade psicométrica desses instrumentos. Apenas dessa forma será possível obter uma avaliação mais confiável do construto de interesse.
+
+\begin{table}[!ht]
+    \centering
+    \caption{Tabela de Parâmetros}
+    \label{tab:parameters}
+    \begin{tabular}{cccccccccc}
+    \toprule
+    & & \multicolumn{1}{c}{1PL} & \multicolumn{2}{c}{2PL} & \multicolumn{3}{c}{3PL} & \multicolumn{2}{c}{Estatísticas} \\
+    \cmidrule(r){3-3} \cmidrule(r){4-5} \cmidrule(r){6-8} \cmidrule(r){9-10}
+    & Chaves & $b$ & $a$ & $b$ & $a$ & $b$ & $c$ & Média & SD \\
+    \midrule
+    \cellcolor{green!25}\textbf{Lembrar} & 264 & 1.01 & 2.02 & 1.67 & 32.74 & 10.40 & 0.27 & 0.73 & 0.45 \\
+    \cellcolor{green!25}
+    & 3078 & 1.01 & 1.30 & 1.31 & 1.50 & 1.37 & 0.00 & 0.73 & 0.45 \\
+    \cellcolor{green!25}
+    & 3079 & -0.83 & 0.08 & -0.81 & 2.18 & -3,73 & 0.24 & 0.31 & 0.47 \\
+    \midrule
+    \cellcolor{yellow!25}\textbf{Entender} & 3081 & -2.36 & -3.48 & -5.27 & -3.16 & -4.86 & 0.00 & 0.09 & 0.29 \\
+    \cellcolor{yellow!25}
+    & 3083 & -2.92 & -2.57 & -4.93 & -18.14 & -28.69 & 0.00 & 0.05 & 0.23 \\
+    \cellcolor{yellow!25}
+    & 3084 & -2.92 & -1.44 & -3.64 & -1.25 & -3.46 & 0.00 & 0.05 & 0.23 \\
+    \cellcolor{yellow!25}
+    & 3085 & -0.66 & 0.91 & -0.75 & 0.91 & -0.76 & 0.00 & 0.35 & 0.48 \\
+    \midrule
+    \cellcolor{red!25}
+    \textbf{Aplicar} & 3086 & -0.42 & 0.62 & -0.44 & 0.72 & -0.46 & 0.00 & 0.40 & 0.49 \\
+    \cellcolor{red!25}
+    & 3087 & -1.68 & -6.54 & -7.19 & -3.17 & -3.63 & 0.00 & 0.16 & 0.37 \\
+    \bottomrule
+    \textbf{RMSE} & & 3.08 & & 3.15 & & 3.13 & & & \\
+    \bottomrule
+    \end{tabular}
+    \end{table}
+
+%     Iteration: 348, Log-Lik: -209.665, Max-Change: 0.00010
+% [1] "RMSE 1PL: 3.08199696335581"
+% [1] "RMSE 2PL: 3.1514553367472"
+% [1] "RMSE 3PL: 3.13044892667878"
+
+A Tabela \ref{tab:parameters} foi gerada a partir do Código \ref{lst:tri_estatisticas}. Para poder executar instruções em R em uma célula no Colab, é necessário antes ativar o suporte ao R com o comando \verb|%load_ext rpy2.ipython|. Em seguida, no início de uma próxima célula, deve-se incluir a diretiva \verb|%%R| para indicar que o conteúdo da célula será interpretado como código R. É necessário também instalar a biblioteca \verb|mirt| antes de utilizá-la. Isso pode ser feito com o comando \verb|install.packages("mirt")|. O arquivo \verb|teste.csv| contém as respostas dos 55 estudantes nas linhas para as 9 questões nas colunas (1 para acerto e 0 para erro).
+
+Nesta tabela, os valores de RMSE (\textit{Root Mean Squared Error} - Erro Médio Quadrático) para os modelos 1PL, 2PL e 3PL são 3.08, 3.15 e 3.13, respectivamente.  O RMSE mede a diferença entre os valores observados e previstos.  Esses valores indicam que todos os modelos têm um desempenho preditivo semelhante, com o modelo 1PL sendo o mais simples e ligeiramente mais preciso, enquanto o 3PL, que inclui um parâmetro de adivinhação, oferece uma melhoria marginal na precisão. A escolha do modelo deve equilibrar simplicidade e precisão, considerando o contexto específico do teste e dos dados. Porém, esses valores altos indicam que são necessárias novas calibrações nas questões utilizadas no Teste 6, conforme discutido nas próximas seções.
+
+O Código \ref{lst:tri_estatisticas} ajusta três modelos de Teoria de Resposta ao Item (TRI) - Rasch (1 parâmetro), 2PL (2 parâmetros) e 3PL (3 parâmetros) - aos dados contidos no arquivo \verb|teste.csv|. Para cada modelo, são extraídos os coeficientes estimados. Além disso, são calculadas a média e o desvio padrão dos acertos por questão. Todos esses resultados são então combinados em um único \textit{dataframe} e salvos em um arquivo CSV com o nome \verb|teste.csv_models.csv|. O resultado desse código permite comparar, na Tabela \ref{tab:parameters}, os parâmetros estimados pelos diferentes modelos de TRI, bem como as estatísticas descritivas das respostas dos participantes.
+
+%  93,85,34,31,33,60,43,48,60
+% 0,73	0,93
+% 0,73	0,85
+% 0,31	0,34
+% 0,09	0,31
+% 0,05	0,33
+% 0,05	0,6
+% 0,35	0,43
+% 0,40	0,48
+% 0,16	0,6
+% correl = 0,76
+\begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+    %\textbf{Observações sobre as porcentagens de acertos nas Tabelas \ref{tab:respostas_atualizada_teste6} e \ref{tab:parameters}:} 
+    É importante salientar que as porcentagens de acertos das questões apresentadas nas Tabelas \ref{tab:respostas_atualizada_teste6} e \ref{tab:parameters} são diferentes por motivos metodológicos.
+    Na Tabela \ref{tab:respostas_atualizada_teste6}, são consideradas apenas as 5 questões sorteadas para cada estudante entre as 9 possíveis. Já na Tabela \ref{tab:parameters}, para as questões não sorteadas para um determinado estudante, o valor 0 é atribuído, assumindo-se que o estudante errou a questão.
+    Apesar dessa diferença metodológica, as duas tabelas apresentam alta correlação de acertos (aproximadamente 0,76). Isso se deve ao fato de que cada questão no Teste 6 tem a mesma probabilidade de ser sorteada para cada estudante.
+    É importante ressaltar que os testes foram adaptativos, o que significa que a seleção das questões para cada estudante leva em consideração as habilidades demonstradas nos 5 testes anteriores. Em outras palavras, se um estudante apresenta baixo desempenho geral, as questões com menor nível de taxonomia de Bloom serão priorizadas.
+    Portanto, ao comparar os valores apresentados nas duas tabelas, é fundamental considerar as diferenças metodológicas e o caráter adaptativo dos testes.
+\end{mybox}
+
+
+\begin{listing}[!ht]
+    \begin{myboxCode}{corCodigo}{\textbf{Célula do Colab: }}\vspace{3mm}
+    \hrule
+    \begin{minted}[xleftmargin=20pt,linenos=true]{python}
+%%R
+# Carregar o pacote mirt, se ainda não foi carregado
+if(!require(mirt)){install.packages("mirt")}
+
+# Carregar os pacotes mirt e data.table
+library(mirt)
+library(data.table)
+
+# Ajuste os modelos usando a função mirt()
+f <- "teste.csv"
+data <- fread(f)
+
+# Modelo de 1 parâmetro (Rasch)
+model_1pl <- mirt(data, 1, itemtype = "Rasch")
+coef_1pl <- as.data.frame(coef(model_1pl, simplify = TRUE)$items)
+
+# Modelo de 2 parâmetros
+model_2pl <- mirt(data, 1, itemtype = "2PL")
+coef_2pl <- as.data.frame(coef(model_2pl, simplify = TRUE)$items)
+
+# Modelo de 3 parâmetros
+model_3pl <- mirt(data, 1, itemtype = "3PL")
+coef_3pl <- as.data.frame(coef(model_3pl, simplify = TRUE)$items)
+
+# Calcular a média e o desvio padrão dos acertos
+mean_score <- colMeans(data)
+sd_score <- apply(data, 2, sd)
+
+# Combinar os coeficientes dos modelos em um único data frame
+all_coef <- cbind(coef_1pl, coef_2pl, coef_3pl, Mean = mean_score, SD = sd_score)
+
+# Salvar os resultados em um único arquivo CSV
+write.csv(all_coef, file = paste0(f, "_models.csv"), row.names = FALSE)
+\end{minted}
+\end{myboxCode}
+\caption{Exemplo de código R em uma célula do Colab para gerar a Figura \ref{fig:ApeB_plot_3pl}.}
+\label{lst:tri_estatisticas}
+\end{listing}
+
+\subsubsection{Curvas Características do Item}\label{sec:apeB_cci}
+
+As Figuras \ref{fig:ApeB_plot_2pl} e \ref{fig:ApeB_plot_3pl} mostram as Curvas de Características do Item (CCI) para os 9 itens do teste. A primeira figura representa a CCI no modelo de 2 parâmetros (2PL), enquanto a segunda representa a CCI no modelo de 3 parâmetros (3PL), ambas obtidas utilizando a função \verb|mirt()| do pacote R chamado \verb|mirt|. Para fins de comparação, a Figura \ref{fig:cap04_figTRI} ilustra CCI utilizando apenas a linguagem Python.
+
+Além de configurar a parte do R no Colab, como visto na seção anterior, é necessário instalar a biblioteca \verb|mirt| antes de utilizá-la. 
+\
+O Código \ref{lst:ApeB_plot_3pl} gera a imagem apresentada na Figura \ref{fig:ApeB_plot_3pl}. 
+
+\begin{listing}[!ht]
+    \begin{myboxCode}{corCodigo}{\textbf{Célula do Colab: }}\vspace{3mm}
+    \hrule
+    \begin{minted}[xleftmargin=20pt,linenos=true]{python}
+%%R
+# Carregar o pacote mirt
+library(mirt)
+
+# Carregar os dados do arquivo "teste.csv"
+f <- "teste.csv"
+data <- fread(f)
+
+# Definir as chaves das questões
+item_keys <- c(264, 3078, 3079, 3081, 3083, 3084, 3085, 3086, 3087)
+
+# Substituir nomes das variáveis por chaves dos itens
+names(data)[1:ncol(data)] <- item_keys
+
+# Ajustar o modelo 3PL
+model_3pl <- mirt(data, 1, itemtype = "3PL")
+
+# Criar a CCI para o modelo 3PL
+plot_3pl <- plot(model_3pl, type = "trace", items = 1, lwd = 3, 
+                 main = "Curva Característica do Item para o modelo 3PL")
+
+# Salvar o gráfico como um arquivo em disco
+png("plot_3pl.png")
+print(plot_3pl)
+dev.off()
+\end{minted}
+\end{myboxCode}
+\caption{Exemplo de código R em uma célula do Colab para gerar a Figura \ref{fig:ApeB_plot_3pl}.}
+\label{lst:ApeB_plot_3pl}
+\end{listing}
+
+
+A CCI é uma representação gráfica que ilustra a relação entre a habilidade dos indivíduos e a probabilidade de eles responderem corretamente a um determinado item. No modelo de 2 parâmetros, a CCI é baseada nos parâmetros de dificuldade e discriminação do item. Já no modelo de 3 parâmetros, a CCI leva em consideração um parâmetro adicional, chamado de parâmetro de acerto ao acaso ou parâmetro de acerto ao chute.
+
+Observando as duas figuras, é possível notar diferenças na forma das curvas. No modelo de 2PL, as curvas são suaves e monótonas, indicando a relação entre a habilidade e a probabilidade de resposta correta. Já no modelo de 3PL, as curvas podem ter uma forma mais complexa devido à inclusão do parâmetro de acerto ao acaso. Isso permite capturar melhor a possibilidade de acertos aleatórios ou de ``acerto por sorte'' em itens mais fáceis.
+
+A análise das CCI é útil para avaliar a qualidade dos itens do teste. Itens com curvas mais íngremes indicam maior discriminação, ou seja, são mais eficazes para diferenciar entre indivíduos com habilidades diferentes. Por outro lado, itens com curvas mais planas podem indicar menor discriminação e menor sensibilidade para avaliar as diferenças nas habilidades dos indivíduos. Portanto, a análise das CCI auxilia na identificação de itens que podem precisar de revisão ou substituição no teste.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.9\textwidth]{ApeB_plot_2pl.png}
+\caption{Curva Característica do Item no modelo 2PL.}
+\label{fig:ApeB_plot_2pl}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.9\textwidth]{ApeB_plot_3pl.png}
+\caption{Curva Característica do Item no modelo 3PL.}
+\label{fig:ApeB_plot_3pl}
+\end{figure}
+
+
+\subsubsection{Curvas de Informação ao Item}\label{sec:apeB_cci}
+
+A Figura \ref{fig:ApeB_plot_CII} apresenta as Curvas de Informação ao Item (CII) para os modelos 2PL e 3PL, respectivamente, utilizando a função \verb|mirt()| do pacote R chamado \verb|mirt|. No modelo 2PL, o item 3087 apresenta um pico muito alto de informação, indicando que este item é altamente discriminativo em uma faixa estreita de habilidade. Já no modelo 3PL, os itens 264 e 3083 também apresentam picos muito altos de informação, sugerindo que esses itens fornecem uma quantidade substancial de informação sobre a habilidade dos indivíduos em uma região específica do traço latente. Esse comportamento é típico de itens com alta capacidade discriminativa, porém, pode indicar que esses itens são mais adequados para diferenciar indivíduos com habilidades próximas ao ponto de máxima informação do item, sendo menos eficientes em distinguir indivíduos com habilidades distantes desse ponto.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.49\textwidth]{ApeB_plot_2pl_CII.png}
+\includegraphics[width=0.49\textwidth]{ApeB_plot_3pl_CII.png}
+\caption{Curvas de Informação ao Item nos modelos 2PL e 3PL.}
+\label{fig:ApeB_plot_CII}
+\end{figure}
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.7\textwidth]{ApeB_plot_3pl_CII.png}
+% \caption{Curvas de Informação ao Item no modelo 3PL.}
+% \label{fig:ApeB_plot_3pl_CII}
+% \end{figure}
+
+\subsubsection{Curvas de Informação do Teste}\label{sec:apeB_cit}
+
+A Figura \ref{fig:ApeB_plot_TIC} apresenta as Curvas de Informação do Teste (CIT) para os modelos de 2 parâmetros (2PL) e 3 parâmetros (3PL). Observa-se que a CIT no modelo 2PL atinge um pico próximo da habilidade $\theta = -1$, com um valor máximo de informação de aproximadamente 15. A CIT se concentra na região entre $\theta = -3$ e $\theta = 0$, indicando que o teste possui maior precisão de medição em torno dessa faixa de habilidade. Já no modelo 3PL, a CIT apresenta dois picos principais: um próximo de $\theta = -1,7$ com informação de aproximadamente 85 e outro próximo de $\theta = 0$ com informação de aproximadamente 130. Essa configuração sugere que o teste possui maior precisão de medição em torno dessas duas regiões de habilidade.
+
+Essas diferenças entre os modelos 2PL e 3PL indicam que o modelo 3PL, com seus três parâmetros (discriminação, dificuldade e acerto ao acaso), é capaz de capturar de forma mais refinada as características dos itens e, consequentemente, fornecer uma medida de informação do teste mais precisa em diferentes regiões da escala de habilidade.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.49\textwidth]{ApeB_plot_2pl_TIC.png}
+    \includegraphics[width=0.49\textwidth]{ApeB_plot_3pl_TIC.png}
+    \caption{Curvas de Informação do Teste nos modelos 2PL e 3PL.}
+    \label{fig:ApeB_plot_TIC}
+    \end{figure}
+    
+    % \begin{figure}[!ht]
+    % \centering
+    % \includegraphics[width=0.7\textwidth]{ApeB_plot_3pl_TIC.png}
+    % \caption{Curvas de Informação do Teste no modelo 3PL.}
+    % \label{fig:ApeB_plot_3pl_TIC}
+    % \end{figure}
+
+\subsubsection{Curvas de Informação vs Erro Padrão do Teste}\label{sec:apeB_TIC_SE}
+
+A Figura \ref{fig:ApeB_plot_TIC_SE} apresenta as curvas de Informação do Teste (TIC) e Erro Padrão do Teste (SEM - \textit{Standard Error of Measurement}) para os modelos 1PL, 2PL e 3PL. A análise comparativa desses modelos revela características distintas em termos de precisão da medição ao longo da habilidade ($\theta$).
+
+O modelo 1PL, que assume que todos os itens são igualmente discriminativos, apresenta uma curva de TIC com formato de sino, com informação máxima em torno de $\theta = 1.5$ e decréscimo gradual em ambas as direções. A curva de SEM, por outro lado, apresenta valores decrescentes à medida que se afasta de $\theta = 1.5$, indicando maior precisão na medição para indivíduos próximos da média da habilidade e menor precisão nas extremidades. As intersecções das duas curvas ocorrem em -1.2 e 3 aproximadamente, indicando que o modelo 1PL é mais adequado para medir habilidades nesse intervalo.
+
+O modelo 2PL, que leva em consideração a discriminação dos itens, apresenta uma curva de TIC mais acentuada, com informação máxima em torno de $\theta = 0.5$ e decréscimo mais abrupto em ambas as direções. A curva de SEM é menos acentuada, com valores crescentes menos rápidos, indicando maior precisão na medição para indivíduos próximos de $\theta = 0.5$ da habilidade e menor precisão nas extremidades. As intersecções das duas curvas ocorrem em -3 e 0.5 aproximadamente, sugerindo que o modelo 2PL é mais adequado para medir habilidades nesse intervalo.
+
+O modelo 3PL, que além da discriminação dos itens, também leva em conta a adivinhação, apresenta a curva de TIC mais alta e mais acentuada entre os modelos, com informação máxima superior a 80 e decréscimo abrupto em ambas as direções, destacando dois picos em $\theta = -1.5$ e $\theta = 0.5$.
+
+A escala da curva de TIC para o modelo 3PL é diferente da escala da SEM, tornando inviável estimar a intersecção entre essas curvas. Isso sugere um comportamento inesperado e indica a necessidade de mais dados e ajustes nos itens.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.49\textwidth]{ApeB_plot_1pl_TIC_SE_ex2.png}
+    \includegraphics[width=0.49\textwidth]{ApeB_plot_2pl_TIC_SE_ex2.png} \\ 
+    \includegraphics[width=0.49\textwidth]{ApeB_plot_3pl_TIC_SE.png} 
+    \caption{Curvas de Informação vs Erro Padrão do Teste nos modelos 1PL, 2PL e 3PL.}
+    \label{fig:ApeB_plot_TIC_SE}
+    \end{figure}
+  
 \section{Questionário avaliativo}
 
 Conforme detalhado no Apêndice \ref{ch:apendice} -- \nameref{ch:apendice}, houve um total de 72 estudantes matriculados em duas turmas: A, com 38 estudantes, e B, com 34 estudantes. A taxa de reprovação na turma A foi de 55,26\%, enquanto na turma B foi de 32,35\%. Isso resultou em 17 estudantes aprovados na turma A e 23 na turma B, totalizando 40 estudantes aprovados no curso.
@@ -559,7 +812,7 @@ Os resultados da análise indicam que a metodologia de ensino adotada teve um ef
 
 Embora esses resultados sejam promissores, é importante ressaltar que novas pesquisas são necessárias para confirmar a efetividade da metodologia em larga escala. Estudos futuros, com amostras maiores e mais diversificadas, incluindo grupos de teste e controle, permitiriam análises mais robustas e generalizações mais confiáveis sobre o impacto da metodologia no aprendizado de estudantes em diferentes contextos.
 
-\begin{table}[htbp]
+\begin{table}[!ht]
     \centering
     \caption{Tabela com os resultados estatísticos}
     \label{tab:estatisticas}
