@@ -6,8 +6,6 @@ O conteúdo deste apêndice é uma adaptação do Trabalho de Conclusão de Curs
 
 \section{Contextualização dos exames adaptativos}
 
-%Na primeira semana de aula, foi aplicado um teste para tentar identificar o perfil dos estudantes, contendo sete questões de múltipla escolha. Esse teste serviu para verificar se o método de aplicação/correção estava funcionando perfeitamente, se todos os estudantes cadastrados nos sistemas Moodle, SIGAA e MCTest estavam corretos, etc.
-
 A Tabela \ref{tab:testes} apresenta uma lista de seis testes utilizados para avaliar o desempenho e a compreensão dos estudantes em áreas específicas da programação. Geralmente, esses testes são administrados na semana seguinte à apresentação do respectivo tópico. O primeiro teste é sobre Sequencial, sendo do tipo Aleatório, indicando que envolve a execução sequencial de instruções com perguntas apresentadas de forma aleatória. O segundo teste aborda Método e é do tipo SAT, avaliando a capacidade dos estudantes em trabalhar com métodos e lógica. Os Testes 3 e 4 tratam de Condicional e Repetição, respectivamente, sendo do tipo WPC, focando na compreensão e implementação de estruturas condicionais e de repetição. Após esses testes, houve a primeira prova avaliativa (valendo 40\% do conceito final), realizada na semana 5. 
 
 O Teste 5 aborda o tema de vetores e é do tipo MLE-v0, destinado a avaliar conhecimentos sobre vetores e operações relacionadas. O Teste 6 versa sobre matrizes e é classificado como MLE-v1, apresentando um nível de dificuldade mais elevado. Cada teste consiste em 200 variações sorteadas entre os estudante das duas turmas. Todos os testes possuem 5 questões de múltipla escolha, cada uma com 5 alternativas, sendo apenas uma correta. Todas as questões foram criadas pelo professor e atribuídas a uma das taxonomias de Bloom, priorizando os três primeiros níveis: Lembrar, Entender e Aplicar, devido ao curso ser introdutório de Lógica de Programação (CS1). \
@@ -331,7 +329,6 @@ Para obter mais detalhes sobre as correções realizadas e o método utilizado, 
 \end{tabular}
 \end{table}
 
-\subsection{Diferenças entre MLE-v0 e  MLE-v1}
 
 A fim de aumentar a variedade de variações sorteadas (na Tabela \ref{tab:MLE_frequencias}, versão 0, sempre foi atribuída a primeira variação com o mesmo TI), porém, agora quando ocorre um empate no TI, é selecionada aleatoriamente uma variação dentro de um intervalo de TI, conforme mencionado anteriormente. Como mostrado na Tabela \ref{tab:MLE_frequencias}, no primeiro caso foram geradas 6 variações e no segundo caso 15 variações. Em comparação com o método WPC aplicado ao Teste 6, foram utilizadas 54 variações distintas distribuídas linearmente entre os estudantes. Nas duas turmas foram 73 estudantes matriculados. Ou seja, a probabilidade de dois estudantes receberem a mesma variação e sentarem próximos é baixa na correção do MLE-v1 e também nos métodos adaptativos WPC e SAT.
 
@@ -454,46 +451,42 @@ Portanto, serão necessários ajustes adicionais no futuro, como coletar mais da
 
 \begin{table}[!ht]
     \centering
-    \caption{Tabela de Parâmetros}
-    \label{tab:parameters}
+\caption{Parâmetros da TRI nos Modelos 1PL, 2PL e 3PL, Além de Média e Desvio Padrão.}
+    \label{tab:parameters}\normalsize
     \begin{tabular}{cccccccccc}
     \toprule
     & & \multicolumn{1}{c}{1PL} & \multicolumn{2}{c}{2PL} & \multicolumn{3}{c}{3PL} & \multicolumn{2}{c}{Estatísticas} \\
     \cmidrule(r){3-3} \cmidrule(r){4-5} \cmidrule(r){6-8} \cmidrule(r){9-10}
-    & Chaves & $b$ & $a$ & $b$ & $a$ & $b$ & $c$ & Média & SD \\
+    & Chaves & $b$ & $a$ & $b$ & $a$ & $b$ & $c$ & Média & DP \\
     \midrule
-    \cellcolor{green!25}\textbf{Lembrar} & 264 & 1.01 & 2.02 & 1.67 & 32.74 & 10.40 & 0.27 & 0.73 & 0.45 \\
+    \cellcolor{green!25}\textbf{Lembrar} & 264 & -3.43 & 1.10 & -3.16 & 1.02 & -3.17 & 0.16 & 0.95 & 0.22 \\
     \cellcolor{green!25}
-    & 3078 & 1.01 & 1.30 & 1.31 & 1.50 & 1.37 & 0.00 & 0.73 & 0.45 \\
+    & 3078 & -2.22 & 1.00 & -2.15 & 1.07 & -1.90 & 0.13 & 0.85 & 0.36 \\
     \cellcolor{green!25}
-    & 3079 & -0.83 & 0.08 & -0.81 & 2.18 & -3,73 & 0.24 & 0.31 & 0.47 \\
+    & 3079 & 0.80 & 1.13 & 0.73 & 1.11 & 0.79 & 0.02 & 0.33 & 0.47 \\
     \midrule
-    \cellcolor{yellow!25}\textbf{Entender} & 3081 & -2.36 & -3.48 & -5.27 & -3.16 & -4.86 & 0.00 & 0.09 & 0.29 \\
+    \cellcolor{yellow!25}\textbf{Entender} & 3081 & 0.87 & 2.91 & 0.32 & 3.05 & 0.30 & 0.01 & 0.27 & 0.46 \\
     \cellcolor{yellow!25}
-    & 3083 & -2.92 & -2.57 & -4.93 & -18.14 & -28.69 & 0.00 & 0.05 & 0.23 \\
+    & 3083 & 0.41 & 2.03 & 0.06 & 2.38 & 0.05 & 0.03 & 0.33 & 0.50 \\
     \cellcolor{yellow!25}
-    & 3084 & -2.92 & -1.44 & -3.64 & -1.25 & -3.46 & 0.00 & 0.05 & 0.23 \\
+    & 3084 & -1.31 & -1.53 & -0.56 & -1.24 & -0.73 & 0.12 & 0.60 & 0.55 \\
     \cellcolor{yellow!25}
-    & 3085 & -0.66 & 0.91 & -0.75 & 0.91 & -0.76 & 0.00 & 0.35 & 0.48 \\
+    & 3085 & 0.17 & 0.37 & 0.63 & 0.64 & 1.97 & 0.27 & 0.43 & 0.50 \\
     \midrule
     \cellcolor{red!25}
-    \textbf{Aplicar} & 3086 & -0.42 & 0.62 & -0.44 & 0.72 & -0.46 & 0.00 & 0.40 & 0.49 \\
+    \textbf{Aplicar} & 3086 & 0.04 & 0.96 & 0.07 & 1.00 & 0.14 & 0.04 & 0.47 & 0.51 \\
     \cellcolor{red!25}
-    & 3087 & -1.68 & -6.54 & -7.19 & -3.17 & -3.63 & 0.00 & 0.16 & 0.37 \\
+    & 3087 & -0.82 & 1.18 & -0.81 & 1.30 & -0.61 & 0.11 & 0.57 & 0.51 \\
     \bottomrule
-    \textbf{RMSE} & & 3.08 & & 3.15 & & 3.13 & & & \\
+    \textbf{RMSE} & & 2.92 & & 2.94 & & 2.95 & & & \\
     \bottomrule
-    \end{tabular}
-    \end{table}
+    \end{tabular}\normalsize
+\end{table}
 
-%     Iteration: 348, Log-Lik: -209.665, Max-Change: 0.00010
-% [1] "RMSE 1PL: 3.08199696335581"
-% [1] "RMSE 2PL: 3.1514553367472"
-% [1] "RMSE 3PL: 3.13044892667878"
 
 A Tabela \ref{tab:parameters} foi gerada a partir do Código \ref{lst:tri_estatisticas}. Para poder executar instruções em R em uma célula no Colab, é necessário antes ativar o suporte ao R com o comando \verb|%load_ext rpy2.ipython|. Em seguida, no início de uma próxima célula, deve-se incluir a diretiva \verb|%%R| para indicar que o conteúdo da célula será interpretado como código R. É necessário também instalar a biblioteca \verb|mirt| antes de utilizá-la. Isso pode ser feito com o comando \verb|install.packages("mirt")|. O arquivo \verb|teste.csv| contém as respostas dos 55 estudantes nas linhas para as 9 questões nas colunas (1 para acerto e 0 para erro).
 
-Na Tabela \ref{tab:parameters}, os valores de RMSE (\textit{Root Mean Squared Error} - Erro Médio Quadrático) para os modelos 1PL, 2PL e 3PL são 3.08, 3.15 e 3.13, respectivamente.  O RMSE mede a diferença entre os valores observados e previstos.  Esses valores indicam que todos os modelos têm um desempenho preditivo semelhante, com o modelo 1PL sendo o mais simples e ligeiramente mais preciso, enquanto o 3PL, que inclui um parâmetro de adivinhação, oferece uma melhoria marginal na precisão. A escolha do modelo deve equilibrar simplicidade e precisão, considerando o contexto específico do teste e dos dados. Porém, esses valores altos indicam que são necessárias novas calibrações nas questões utilizadas no Teste 6, conforme discutido nas próximas seções.
+Na Tabela \ref{tab:parameters}, os valores de RMSE (\textit{Root Mean Squared Error} - Erro Médio Quadrático) para os modelos 1PL, 2PL e 3PL são 2.92, 2.94 e 2.95, respectivamente. RMSE mede a diferença entre os valores observados e os valores previstos. Esses valores indicam que todos os modelos têm desempenho preditivo semelhante.
 
 O Código \ref{lst:tri_estatisticas} ajusta três modelos de Teoria de Resposta ao Item (TRI) - Rasch (1 parâmetro), 2PL (2 parâmetros) e 3PL (3 parâmetros) - aos dados contidos no arquivo \verb|teste.csv|. Para cada modelo, são extraídos os coeficientes estimados. Além disso, são calculadas a média e o desvio padrão dos acertos por questão. Todos esses resultados são então combinados em um único \textit{dataframe} e salvos em um arquivo CSV com o nome \verb|teste.csv_models.csv|. O resultado desse código permite comparar, na Tabela \ref{tab:parameters}, os parâmetros estimados pelos diferentes modelos de TRI, bem como as estatísticas descritivas das respostas dos participantes.
 
@@ -537,42 +530,48 @@ library(data.table)
 
 # Ajuste os modelos usando a função mirt()
 f <- "teste.csv"
-data <- fread(f)
+data <- read.delim(f, header = TRUE, sep = ",")
+
+# Definir as chaves das questões
+item_keys <- c(264, 3078, 3079, 3081, 3083, 3084, 3085, 3086, 3087)
+
+# Substituir nomes das variáveis por chaves dos itens
+names(data)[1:ncol(data)] <- item_keys
 
 # Modelo de 1 parâmetro (Rasch)
-model_1pl <- mirt(data, 1, itemtype = "Rasch")
-coef_1pl <- as.data.frame(coef(model_1pl, simplify = TRUE)$items)
+model_1pl <- mirt(data, 1, itemtype = "Rasch", SE=TRUE, TOL='1e-10')
+coef_1pl <- as.data.frame(coef(model_1pl, simplify = TRUE, IRTpars=TRUE)$items)
 
 # Modelo de 2 parâmetros
-model_2pl <- mirt(data, 1, itemtype = "2PL")
-coef_2pl <- as.data.frame(coef(model_2pl, simplify = TRUE)$items)
+model_2pl <- mirt(data, 1, itemtype = "2PL", SE=TRUE, TOL='1e-10')
+coef_2pl <- as.data.frame(coef(model_2pl, simplify = TRUE, IRTpars=TRUE)$items)
 
 # Modelo de 3 parâmetros
-model_3pl <- mirt(data, 1, itemtype = "3PL")
-coef_3pl <- as.data.frame(coef(model_3pl, simplify = TRUE)$items)
+model_3pl <- mirt(data, 1, itemtype = "3PL", SE=TRUE, TOL='1e-10')
+coef_3pl <- as.data.frame(coef(model_3pl, simplify = TRUE, IRTpars=TRUE)$items)
 
-# Calcular a média e o desvio padrão dos acertos
-mean_score <- colMeans(data)
-sd_score <- apply(data, 2, sd)
+# Calcular a média e o desvio padrão dos acertos ignorando NAs
+mean_score <- colMeans(data, na.rm = TRUE)
+sd_score <- apply(data, 2, sd, na.rm = TRUE)
 
 # Combinar os coeficientes dos modelos em um único data frame
 all_coef <- cbind(coef_1pl, coef_2pl, coef_3pl, Mean = mean_score, SD = sd_score)
 
 # Salvar os resultados em um único arquivo CSV
-write.csv(all_coef, file = paste0(f, "_models.csv"), row.names = FALSE)
+write.csv(all_coef, file = paste0(f, "_models.csv"), row.names = TRUE)
 \end{minted}
 \end{myboxCode}
-\caption{Exemplo de código R em uma célula do Colab para gerar a Figura \ref{fig:ApeB_plot_3pl}.}
+\caption{Exemplo de código R em uma célula do Colab para gerar a Tabela \ref{tab:parameters}.}
 \label{lst:tri_estatisticas}
 \end{listing}
 
 \subsubsection{Curvas Características do Item}\label{sec:apeB_cci}
 
-As Figuras \ref{fig:ApeB_plot_2pl} e \ref{fig:ApeB_plot_3pl} mostram as Curvas  Características do Item (CCI) para os 9 itens do teste. A primeira figura representa a CCI no modelo de 2 parâmetros (2PL), enquanto a segunda representa a CCI no modelo de 3 parâmetros (3PL), ambas obtidas utilizando a função \verb|mirt()| do pacote R chamado \verb|mirt|. Para fins de comparação, a Figura \ref{fig:cap04_figTRI} ilustra CCI utilizando apenas a linguagem Python. Essa figura foi obtida a partir do Colab\footnote{\url{https://colab.research.google.com/drive/1ka7_SR_QB4G7ZPVvH3p_E0bZEbOH1vhK}.}.
+A Figura \ref{fig:ApeB_plot_ALL_ICC} ilustra o ICC para os 9 itens de teste. O painel esquerdo mostra o ICC no modelo 1PL, o painel central mostra o ICC no modelo 2PL e o painel direito mostra o ICC no modelo 3PL.  Para fins de comparação, a Figura \ref{fig:cap04_figTRI} ilustra CCI utilizando apenas a linguagem Python. Essa figura foi obtida a partir do Colab\footnote{\url{https://colab.research.google.com/drive/1ka7_SR_QB4G7ZPVvH3p_E0bZEbOH1vhK}.}.
 
 Além de configurar a parte do R no Colab, como visto na seção anterior, é necessário instalar a biblioteca \verb|mirt| antes de utilizá-la. 
 \
-O Código \ref{lst:ApeB_plot_3pl} gera a imagem apresentada na Figura \ref{fig:ApeB_plot_3pl}. 
+O Código \ref{lst:ApeB_plot_3pl} gera a imagem apresentada na Figura \ref{fig:ApeB_plot_ALL_ICC}. 
 
 \begin{listing}[!ht]
     \begin{myboxCode}{corCodigo}{\textbf{Célula do Colab: }}\vspace{3mm}
@@ -582,9 +581,9 @@ O Código \ref{lst:ApeB_plot_3pl} gera a imagem apresentada na Figura \ref{fig:A
 # Carregar o pacote mirt
 library(mirt)
 
-# Carregar os dados do arquivo "teste.csv"
+# Ajuste os modelos usando a função mirt()
 f <- "teste.csv"
-data <- fread(f)
+data <- read.delim(f, header = TRUE, sep = ",")
 
 # Definir as chaves das questões
 item_keys <- c(264, 3078, 3079, 3081, 3083, 3084, 3085, 3086, 3087)
@@ -592,105 +591,99 @@ item_keys <- c(264, 3078, 3079, 3081, 3083, 3084, 3085, 3086, 3087)
 # Substituir nomes das variáveis por chaves dos itens
 names(data)[1:ncol(data)] <- item_keys
 
-# Ajustar o modelo 3PL
-model_3pl <- mirt(data, 1, itemtype = "3PL")
+# Modelo de 3 parâmetros
+model_3pl <- mirt(data, 1, itemtype = "3PL", SE=TRUE, TOL='1e-10')
+coef_3pl <- as.data.frame(coef(model_3pl, simplify = TRUE, IRTpars=TRUE)$items)
 
-# Criar a CCI para o modelo 3PL
-plot_3pl <- plot(model_3pl, type = "trace", items = 1, lwd = 3, 
-                 main = "Curva Característica do Item para o modelo 3PL")
+# Configurar o gráfico para salvar como PNG
+png("plot_3pl_ICC.png")
 
-# Salvar o gráfico como um arquivo em disco
-png("plot_3pl.png")
-print(plot_3pl)
+# Obter informações dos itens
+theta <- seq(-4, 4, length.out = 100)
+icc_data <- lapply(1:ncol(data), function(i) {
+  # Ajustando para obter a probabilidade correta
+  prob <- probtrace(extract.item(model_3pl, i), Theta = theta)[, 2]  
+  data.frame(Theta = theta, Prob = prob)
+})
+
+# Plotar as curvas características dos itens
+colors <- rainbow(ncol(data))  # Usar cores diferentes
+plot(NULL, xlim = c(-4, 4), ylim = c(0, 1), xlab = "Theta", 
+     ylab = "Probabilidade de Acerto", 
+     main = "Curvas Características dos Itens para o modelo 3PL")
+
+for (i in 1:ncol(data)) {
+  lines(icc_data[[i]]$Theta, icc_data[[i]]$Prob, col = colors[i], lwd = 2)
+}
+
+# Definir as chaves dos itens como legendas
+item_keys <- colnames(data)
+legend("topright", legend = item_keys, col = colors, lty = 1, lwd = 2)
+
+# Fechar o dispositivo gráfico
 dev.off()
 \end{minted}
 \end{myboxCode}
-\caption{Exemplo de código R em uma célula do Colab para gerar a Figura \ref{fig:ApeB_plot_3pl}.}
+\caption{Exemplo de código R em uma célula do Colab para gerar o gráfico CCI no modelo 3PL, ver Figura \ref{fig:ApeB_plot_ALL_ICC}.}
 \label{lst:ApeB_plot_3pl}
 \end{listing}
 
-
-A CCI é uma representação gráfica que ilustra a relação entre a habilidade dos indivíduos e a probabilidade de eles responderem corretamente a um determinado item. No modelo de 2 parâmetros, a CCI é baseada nos parâmetros de dificuldade e discriminação do item. Já no modelo de 3 parâmetros, a CCI leva em consideração um parâmetro adicional, chamado de parâmetro de acerto ao acaso ou parâmetro de acerto ao chute.
-
-Observando as duas figuras, é possível notar diferenças na forma das curvas. No modelo de 2PL, as curvas são suaves e monótonas, indicando a relação entre a habilidade e a probabilidade de resposta correta. Já no modelo de 3PL, as curvas podem ter uma forma mais complexa devido à inclusão do parâmetro de acerto ao acaso. Isso permite capturar melhor a possibilidade de acertos aleatórios ou de ``acerto por sorte'' em itens mais fáceis.
+Ao examinar essas figuras, podemos observar diferenças distintas nas formas das curvas. No modelo 1PL, as curvas são suaves e aumentam monotonicamente, refletindo um parâmetro de discriminação uniforme em todos os itens. O modelo 2PL introduz variabilidade nas inclinações das curvas devido a diferentes parâmetros de discriminação para cada item, permitindo uma compreensão mais matizada da dificuldade do item. O modelo 3PL complica ainda mais o formato das curvas ao incluir um parâmetro de adivinhação, que leva em consideração a possibilidade de adivinhação aleatória em itens mais fáceis. Essa adição ajuda a modelar melhor a probabilidade de uma resposta correta, especialmente para alunos com habilidades mais baixas.
 
 A análise das CCI é útil para avaliar a qualidade dos itens do teste. Itens com curvas mais íngremes indicam maior discriminação, ou seja, são mais eficazes para diferenciar entre indivíduos com habilidades diferentes. Por outro lado, itens com curvas mais planas podem indicar menor discriminação e menor sensibilidade para avaliar as diferenças nas habilidades dos indivíduos. Portanto, a análise das CCI auxilia na identificação de itens que podem precisar de revisão ou substituição no teste.
 
 \begin{figure}[!ht]
-\centering
-\includegraphics[width=0.9\textwidth]{ApeB_plot_2pl.png}
-\caption{Curva Característica do Item no modelo 2PL.}
-\label{fig:ApeB_plot_2pl}
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.9\textwidth]{ApeB_plot_3pl.png}
-\caption{Curva Característica do Item no modelo 3PL.}
-\label{fig:ApeB_plot_3pl}
-\end{figure}
+    \centering
+    \includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_1pl_ICC.png}
+    \includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_2pl_ICC.png}
+    \includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_3pl_ICC.png}
+    \caption{Curvas Características dos Itens nos modelos 1PL (esquerda), 2PL (centro) e 3PL (direita).}
+    \label{fig:ApeB_plot_ALL_ICC}
+    \end{figure}
 
 
 \subsubsection{Curvas de Informação ao Item}\label{sec:apeB_cci}
 
-A Figura \ref{fig:ApeB_plot_CII} apresenta as Curvas de Informação ao Item (CII) para os modelos 2PL e 3PL, respectivamente, utilizando a função \verb|mirt()| do pacote R chamado \verb|mirt|. No modelo 2PL, o item 264 apresenta um pico muito alto de informação, indicando que este item é altamente discriminativo em uma faixa estreita de habilidade. Já no modelo 3PL, os itens 264 e 3083 também apresentam picos muito altos de informação, sugerindo que esses itens fornecem uma quantidade substancial de informação sobre a habilidade dos indivíduos em uma região específica do traço latente. Esse comportamento é típico de itens com alta capacidade discriminativa, porém, pode indicar que esses itens são mais adequados para diferenciar indivíduos com habilidades próximas ao ponto de máxima informação do item, sendo menos eficientes em distinguir indivíduos com habilidades distantes desse ponto.
+A Figura \ref{fig:ApeB_plot_CII} apresenta as Curvas de Informação ao Item (CII) para os modelos 2PL e 3PL, respectivamente, utilizando a função \verb|mirt()| do pacote R chamado \verb|mirt|. Nos modelos 2PL e 3PL, os itens 3081 e 3083  apresentam picos altos de informação, sugerindo que esses itens fornecem uma quantidade substancial de informação sobre a habilidade dos indivíduos em uma região específica do traço latente. Esse comportamento é típico de itens com alta capacidade discriminativa, porém, pode indicar que esses itens são mais adequados para diferenciar indivíduos com habilidades próximas ao ponto de máxima informação do item, sendo menos eficientes em distinguir indivíduos com habilidades distantes desse ponto.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.49\textwidth]{ApeB_plot_2pl_CII.png}
-\includegraphics[width=0.49\textwidth]{ApeB_plot_3pl_CII.png}
-\caption{Curvas de Informação ao Item nos modelos 2PL e 3PL.}
+\includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_1pl_CII.png}
+\includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_2pl_CII.png}
+\includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_3pl_CII.png}
+\caption{Curvas de Informação ao Item nos modelos 1PL (esquerda), 2PL (centro) e 3PL (direita).}
 \label{fig:ApeB_plot_CII}
 \end{figure}
 
-% \begin{figure}[!ht]
-% \centering
-% \includegraphics[width=0.7\textwidth]{ApeB_plot_3pl_CII.png}
-% \caption{Curvas de Informação ao Item no modelo 3PL.}
-% \label{fig:ApeB_plot_3pl_CII}
-% \end{figure}
-
 \subsubsection{Curvas de Informação do Teste}\label{sec:apeB_cit}
 
-A Figura \ref{fig:ApeB_plot_TIC} apresenta as Curvas de Informação do Teste (CIT) para os modelos de 2 parâmetros (2PL) e 3 parâmetros (3PL). Observa-se que a CIT no modelo 2PL atinge um pico próximo da habilidade $\theta = -1$, com um valor máximo de informação de aproximadamente 15. A CIT se concentra na região entre $\theta = -3$ e $\theta = 0$, indicando que o teste possui maior precisão de medição em torno dessa faixa de habilidade. Já no modelo 3PL, a CIT apresenta dois picos principais: um próximo de $\theta = -1,7$ com informação de aproximadamente 85 e outro próximo de $\theta = 0$ com informação de aproximadamente 130. Essa configuração sugere que o teste possui maior precisão de medição em torno dessas duas regiões de habilidade.
-
-Essas diferenças entre os modelos 2PL e 3PL indicam que o modelo 3PL, com seus três parâmetros (discriminação, dificuldade e acerto ao acaso), é capaz de capturar de forma mais refinada as características dos itens e, consequentemente, fornecer uma medida de informação do teste mais precisa em diferentes regiões da escala de habilidade.
+A Figura \ref{fig:ApeB_plot_TIC} apresenta as Curvas de Informação do Teste (CIT) para os modelos 1PL, 2PL e 3PL. Observa-se que as CITs nestes modelos atinge picos próximos da habilidade $\theta = 0$, com valores máximos de informação entre 1 e 5. As CITs se concentram na região entre $\theta = -2$ e $\theta = 2$, indicando que o teste possui maior precisão de medição em torno dessa faixa de habilidade. 
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.49\textwidth]{ApeB_plot_2pl_TIC.png}
-    \includegraphics[width=0.49\textwidth]{ApeB_plot_3pl_TIC.png}
-    \caption{Curvas de Informação do Teste nos modelos 2PL e 3PL.}
+    \includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_1pl_TIC.png}
+    \includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_2pl_TIC.png}
+    \includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_3pl_TIC.png}
+    \caption{Curvas de Informação do Teste nos modelos 1PL (esquerda), 2PL (centro) e 3PL (direita).}
     \label{fig:ApeB_plot_TIC}
     \end{figure}
-    
-    % \begin{figure}[!ht]
-    % \centering
-    % \includegraphics[width=0.7\textwidth]{ApeB_plot_3pl_TIC.png}
-    % \caption{Curvas de Informação do Teste no modelo 3PL.}
-    % \label{fig:ApeB_plot_3pl_TIC}
-    % \end{figure}
 
 \subsubsection{Curvas de Informação vs Erro Padrão do Teste}\label{sec:apeB_TIC_SE}
 
-A Figura \ref{fig:ApeB_plot_TIC_SE} apresenta as curvas de Informação do Teste (TIC) e Erro Padrão do Teste (SEM - \textit{Standard Error of Measurement}) para os modelos 1PL, 2PL e 3PL. A análise comparativa desses modelos revela características distintas em termos de precisão da medição ao longo da habilidade ($\theta$).
+A Figura \ref{fig:ApeB_plot_TIC_SE} exibe o TIC e SEM para os modelos 1PL, 2PL e 3PL. A análise comparativa desses modelos revela características interessantes, com máxima informação em torno de $\theta = 0$, além de interseções entre as curvas do TIC e SEM perto de -2 e 2. Além disso, o TIC em forma de sino apresenta quedas mais acentuadas para 2PL e 3PL à medida que se afasta de $\theta = 0$, enquanto o SEM aumenta em torno do ponto mínimo em $\theta = 0$, indicando maior precisão de medição perto do ponto mínimo e menor precisão em traços latentes extremos.
 
-O modelo 1PL, que assume que todos os itens são igualmente discriminativos, apresenta uma curva de TIC com formato de sino, com informação máxima em torno de $\theta = 1.5$ e decréscimo gradual em ambas as direções. A curva de SEM, por outro lado, apresenta valores crescentes à medida que se afasta de $\theta = 1.5$, indicando maior precisão na medição para indivíduos próximos da média da habilidade e menor precisão nas extremidades. As intersecções das duas curvas ocorrem em -1.2 e 3 aproximadamente, indicando que o modelo 1PL é mais adequado para medir habilidades nesse intervalo \cite{baker2017basics}.
-
-O modelo 2PL, que leva em consideração a discriminação dos itens, apresenta uma curva de TIC mais acentuada, com informação máxima em torno de $\theta = 0.5$ e decréscimo mais abrupto em ambas as direções. A curva de SEM é menos acentuada, com valores crescentes menos rápidos, indicando maior precisão na medição para indivíduos próximos de $\theta = 0.5$ da habilidade e menor precisão nas extremidades. As intersecções das duas curvas ocorrem em -3 e 0.5 aproximadamente, sugerindo que o modelo 2PL é mais adequado para medir habilidades nesse intervalo \cite{baker2017basics}.
-
-O modelo 3PL, que além da discriminação dos itens, também leva em conta a adivinhação, apresenta a curva de TIC mais alta e mais acentuada entre os modelos, com informação máxima superior a 80 e decréscimo abrupto em ambas as direções, destacando dois picos em $\theta = -1.5$ e $\theta = 0.5$.
-
-A escala da curva de TIC para o modelo 3PL é diferente da escala da SEM, tornando inviável estimar a intersecção entre essas curvas. Isso sugere um comportamento inesperado e indica a necessidade de mais dados e ajustes nos itens.
+%Quando há uma interseção entre o TIC e o SEM, isso indica uma melhor adequação na medição de habilidades dentro desse intervalo de interseção \cite{?}.
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.49\textwidth]{ApeB_plot_1pl_TIC_SE_ex2.png}
-    \includegraphics[width=0.49\textwidth]{ApeB_plot_2pl_TIC_SE_ex2.png} \\ 
-    \includegraphics[width=0.49\textwidth]{ApeB_plot_3pl_TIC_SE.png} 
-    \caption{Curvas de Informação vs Erro Padrão do Teste nos modelos 1PL, 2PL e 3PL.}
+    \includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_1pl_TIC_SE_ex2.png}
+    \includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_2pl_TIC_SE_ex2.png} 
+    \includegraphics[width=0.32\textwidth, trim=10mm 16mm 0 2cm, clip]{ApeB_plot_3pl_TIC_SE_ex2.png}     
+    \caption{Curvas de Informação vs Erro Padrão do Teste nos modelos 1PL (esquerda), 2PL (centro) e 3PL (direita).}
     \label{fig:ApeB_plot_TIC_SE}
     \end{figure}
+
+
   
 \section{Questionário avaliativo}
 
