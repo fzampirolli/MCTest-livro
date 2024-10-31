@@ -225,6 +225,16 @@ caso0_inp, caso0_out = cases['input'][0], cases['output'][0]
   \end{enumerate}  
 \end{mybox}
 
+\subsection{QT para a integração MCTest+Moodle+CodeRunner}\label{sec:questoesQM_QT_CodeRunner}
+
+A nova versão do MCTest 5.3 permite gerar XML para questões QT, compatível com o \textit{plugin} \href{https://moodle.org/plugins/qtype_coderunner}{CodeRunner}. Para utilizar essa funcionalidade, configure a questão como nos exemplos dos Códigos \ref{lst:questaoQT_Exata_1_parte1} e \ref{lst:questaoQT_Exata_1_parte2}.
+
+Após a linha 42 do Código \ref{lst:questaoQT_Exata_1_parte2}, adicione a seguinte linha para inserir a solução da questão em código:
+
+\verb|cases['answer'] = ['''sua solução aqui''']|
+
+O método \verb|createFileDB_xml()| contido no arquivo \verb|UtilsLatex| na pasta de exames no \href{https://github.com/fzampirolli/mctest/blob/master/exam/UtilsLatex.py}{github.com/fzampirolli/mctest} pode ser consultado para obter mais detalhes sobre a geração do XML. Vale notar que o texto da questão no formato \LaTeX{} é convertido de forma automática para o formato HTML utilizando o pacote \href{https://pandoc.org}{pandoc}; veja o método \verb|latex_to_html()| neste mesmo arquivo \verb|UtilsLatex|.
+
 \subsection{Criando exame e exportando as variações}
 
 Com as questões definidas anteriormente, é possível agora criar um exame seguindo as instruções apresentadas no Capítulo \ref{ch:exames} -- \nameref{ch:exames}, e exportar as variações necessárias.

@@ -1169,6 +1169,7 @@ O dicionário \verb|linker.json| gerado pelo MCTest apresenta uma estrutura hier
           "weight": "1",
           "language": ["all"],
           "skills": [],
+          "answer": [],
           "description": [],
           "cases": [
             {
@@ -1188,7 +1189,7 @@ O dicionário \verb|linker.json| é composto por uma série de elementos-chave o
 \begin{description}
 \item[\texttt{variations:}]  Este nível contém informações sobre as diferentes variantes (ou modelos) do conjunto de questões. Cada variante é identificada por um número único, como exemplificado pela entrada \verb|"variant": "1"|. Dentro de cada variante, encontramos informações específicas sobre as questões associadas;
 
-\item[\texttt{questions:}] Este nível representa as questões individuais dentro de cada variante. Cada questão é identificada por uma chave única (\verb|"key"|), e são fornecidas informações adicionais, como o número da questão (\verb|"number"|), o nome do arquivo associado (\verb|"file"|) -- que deve ser o mesmo nome no arquivo incluído na atividade VPL --, o peso da questão (\verb|"weight"|), a linguagem de programação (\verb|"language"|), \ habilidades requeridas (\verb|"skills"|), e uma descrição textual da questão (\verb|"description"|). Esta descrição pode ser apresentada na interface VPL do Moodle;
+\item[\texttt{questions:}] Este nível representa as questões individuais dentro de cada variante. Cada questão é identificada por uma chave única (\verb|"key"|), e são fornecidas informações adicionais, como o número da questão (\verb|"number"|), o nome do arquivo associado (\verb|"file"|) -- que deve ser o mesmo nome no arquivo incluído na atividade VPL --, o peso da questão (\verb|"weight"|), a linguagem de programação (\verb|"language"|), \ habilidades requeridas (\verb|"skills"|), \ solução da questão (\verb|"answer"|), e uma descrição textual da questão (\verb|"description"|). Esta descrição pode ser apresentada na interface VPL do Moodle;
 
 \item[\texttt{cases:}] Este é o nível mais detalhado, representando os casos de teste específicos para cada questão. Cada caso de teste é identificado por um nome único (\verb|"case"|) e inclui informações sobre as entradas (\verb|"input"|) e as saídas esperadas (\verb|"output"|). No exemplo fornecido, são apresentados dois casos de teste (\verb|test_1| e \verb|test_2|) para a questão identificada pela chave \verb|"2454"|.
 \end{description}
