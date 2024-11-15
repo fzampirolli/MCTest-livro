@@ -1,0 +1,38 @@
+\documentclass[a4paper,11pt,openany,twoside]{book}
+
+% para leitura em pdf/html
+%12pt
+%\usepackage[a4paper, inner=1.5cm, outer=1.5cm, top=2cm, bottom=2cm]{geometry}
+
+% 12pt para impressão, frente-verso
+%\usepackage[a4paper, inner=2.2cm, outer=.8cm, top=2cm, bottom=2cm]{geometry}
+
+% para leitura em pdf/html
+%11pt
+\usepackage[a4paper, inner=2.12cm, outer=2.12cm, top=2.83cm, bottom=2.84cm]{geometry}
+
+% 11pt para impressão, frente-verso
+%\usepackage[a4paper, inner=2.62cm, outer=1.62cm, top=2.83cm, bottom=2.84cm]{geometry}
+
+
+
+\input{pre}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\thispagestyle{empty}
+\includepdf[width=597pt,height=845pt,pages={1}]{capa-br2ed.pdf}
+\thispagestyle{empty}
+
+\input{miolo}
+
+\newpage \ \\ \ 
+\newpage \ \\ \ \thispagestyle{empty}
+\includepdf[width=597pt,height=845pt,pages={2}]{capa-br2ed.pdf}
+\thispagestyle{empty}
+
+\end{document}
+
+% rm *.aux *.bbl *.html *.lof *.log *.blg *.lol *.maf *.mtc* *.out *.ptc *~ *.toc
+

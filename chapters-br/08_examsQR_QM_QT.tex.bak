@@ -1,0 +1,574 @@
+\mychapter{Exames com QR+QM e/ou QT}\label{ch:examesQM_QT}
+
+Este capítulo complementa o anterior, fornecendo detalhes sobre o processo de criação e correção de exames que envolvem tanto o Quadro de Respostas (QR) quanto os enunciados das questões de múltipla escolha (QMs), como exemplificado nos Capítulos \ref{ch:questoesClassicasMCTest} -- \nameref{ch:questoesClassicasMCTest} e  \ref{ch:questoesCodigoMCTest} -- \nameref{ch:questoesCodigoMCTest} para questões com código em Python.
+
+Esse estilo de exame com QR+QM tem sido amplamente utilizado na Especialização em Tecnologia e Sistemas de Informação (TSI) da UFABC, como introduzido no Capítulo \ref{ch:introducao}, nos processos seletivos desde 2017. Anteriormente, desde 2012, já se utilizava o MCTest em versões anteriores, com QR+QM, porém em um formato de exame que empregava editores de texto como o Word ou o BROffice, com uma única folha frente e verso, para evitar a necessidade de grampear as folhas de milhares de candidatos nos processos seletivos. O avanço significativo no MCTest ocorreu na versão 4, quando passou a ser possível criar os exames utilizando o \LaTeX{}, o que permitiu também a inclusão de blocos de código Python para a elaboração de questões paramétricas, conforme apresentado no Capítulo \ref{ch:questoesCodigoMCTest} -- \nameref{ch:questoesCodigoMCTest}. A versão mais recente do MCTest, disponível na web, possibilitou o armazenamento das questões em um banco de dados, juntamente com toda uma estrutura para gerenciar um sistema acadêmico voltado exclusivamente para avaliações. Esses avanços têm sido objeto de diversas publicações e também motivaram a escrita deste livro, com o intuito de registrar as principais características de tudo o que foi desenvolvido e validado em avaliações dos mais diversos estilos.
+
+Além das QMs, também é possível incluir questões dissertativas (QTs) nos exames, após a apresentação das QMs. Essa abordagem permite uma maior diversidade nos tipos de questões e uma avaliação mais abrangente das habilidades dos estudantes.
+
+No Capítulo \ref{ch:exames} -- \nameref{ch:exames}, foi introduzido como criar exames contendo QR+QM, abordando detalhes sobre a tela do exame. Agora, será colocada em prática a criação de exemplos de exames contendo QR+QM+QT, além de detalhar o processo de correção automática.
+
+\section{Desenvolvendo QMs e uma QT para inclusão em um exame}\label{sec:questoesQM_QT}
+
+Uma forma prática de criar questões não paramétricas no MCTest é utilizando um arquivo TXT com todas as questões, conforme introduzido na Seção \ref{sec:questaoNavegacao} -- \nameref{sec:questaoNavegacao}. Antes de prosseguir com a criação das questões, é necessário criar o tópico, por exemplo, \verb|DE-TIC| da disciplina, seguindo as instruções apresentadas na Seção \ref{sec:topicos} -- \nameref{sec:topicos}. 
+
+A seguir, serão apresentadas sete questões que serão incluídas no MCTest. Serão duas questões para o nível de dificuldade fácil (\verb|QE|), ou dificuldade 1, duas questões para o nível de dificuldade médio (\verb|QM|), ou dificuldade 3, e três questões para o nível de dificuldade difícil (\verb|QH|), ou dificuldade 5. Para otimizar o processo de \textit{upload}, sugere-se agrupá-las em um único arquivo TXT, como disponibilizado no GitHub em \href{https://raw.githubusercontent.com/fzampirolli/mctest/master/book/2ed-br/cap08_exemplosQM.txt}{cap08\_exemplosQM.txt}.
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo CSV, questões fáceis }}\vspace{3mm}
+\hrule
+{\footnotesize
+\begin{verbatim}
+QE::DE-TIC:: 
+Qual é o componente principal de um computador que armazena dados e programas?
+A: Memória RAM % alternativa correta - sempre a primeira
+A: Placa-mãe
+A: Processador
+A: Teclado
+A: Placa de vídeo
+
+QE::DE-TIC:: 
+Qual dos seguintes dispositivos é usado exclusivamente para entrada de dados em um computador?
+A: Teclado 
+A: Impressora
+A: Caixa de som
+A: Monitor
+A: Placa de vídeo
+\end{verbatim}
+}
+\end{myboxCode}
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo CSV, questões de nível médio }}\vspace{3mm}
+\hrule
+{\footnotesize
+\begin{verbatim}
+QM::DE-TIC:: 
+O que significa a sigla HTML?
+A: HyperText Markup Language
+A: High Technical Machine Language
+A: Home Tool Management Language
+A: Hyper Transfer Machine Learning
+A: Hardware Technical Maintenance Language
+
+QM::DE-TIC:: 
+Qual das seguintes linguagens de programação é amplamente utilizada para o desenvolvimento de 
+sites dinâmicos?
+A: JavaScript
+A: HTML
+A: CSS
+A: Python
+A: C++
+\end{verbatim}
+}
+\end{myboxCode}
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo CSV, questões difíceis}}\vspace{3mm}
+\hrule
+{\footnotesize
+\begin{verbatim}
+QH::DE-TIC:: 
+Qual das seguintes opções representa corretamente um endereço IP válido?
+A: 127.0.0.1
+A: 192.168.0.300
+A: 10.0.0.256
+A: 172.16.0.0
+A: 256.256.256.256
+
+QH::DE-TIC::
+Qual dos seguintes protocolos de internet é utilizado para enviar e-mails?
+A: SMTP
+A: FTP
+A: HTTP
+A: DNS
+A: SSH
+
+QH::DE-TIC::
+Qual é o resultado da soma dos números hexadecimais 7C e 54?
+A: D0
+A: F0
+A: D4
+A: D1
+A: E0
+\end{verbatim}
+}
+\end{myboxCode}
+
+\subsection{QT com valor exato}\label{sec:QT_exato}
+
+A questão apresentada no Código \ref{lst:questaoQT_exata} é um exemplo de QT que contém um valor exato como resposta correta, delimitado pelos marcadores \verb|%%{| e \verb|}%%|, conforme indicado na linha 5 do código. Neste caso, é utilizada a palavra ``exata'' como exemplo para ilustrar o funcionamento dessa abordagem. Na linha 7 do código, são desenhadas 10 linhas para que o estudante possa responder à questão. Na próxima seção, será explorada essa funcionalidade com mais detalhes.
+
+\begin{listing}[!ht]
+\begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
+\hrule
+\begin{minted}[xleftmargin=20pt,linenos=true]{python}
+Descreva brevemente a importância da tecnologia da informação (TI) na 
+sociedade moderna e mencione pelo menos duas áreas onde a TI desempenha 
+um papel fundamental.
+
+%%{exata}%%
+
+\drawLines{10}
+\end{minted}
+\end{myboxCode}
+\caption{Exemplo de QT com resposta exata.}
+\label{lst:questaoQT_exata}
+\end{listing}
+
+\subsection{Elaborar exame com questões formuladas}\label{sec:cap8_criar_exame}
+
+Após importar esse arquivo TXT com as novas questões no tópico ``DE-TIC'' da ``Disciplina Exemplo'', criar um novo exame. Antes disso, crie uma turma de teste para essa disciplina. Ao abrir a tela para atualizar esse exame, escolha o tópico ``DE-TIC'' e, em seguida, clique no botão ``Salvar''. Dessa forma, todas as questões recentemente criadas desse tópico irão aparecer na tela do exame. Selecione essas questões, conforme Figura \ref{fig:cap08_figexameQR_QTquestoes}. Em seguida, defina duas questões em cada nível de dificuldade, conforme ilustrado na Figura \ref{fig:cap08_figexameQR_QT}. Além disso, inclua uma questão dissertativa (QT) como exemplo. Certifique-se de marcar a opção ``Respostas/Questões/Ambos=Ambos'' para incluir tanto o QR quanto as questões (QM e QT) no exame. Mais informações sobre essa configuração podem ser encontradas na Seção \ref{sec:exameDetalhes} -- \nameref{sec:exameDetalhes}.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap08_figexameQR_QTquestoes.png}
+   \caption{Recorte da tela com as quesões escolhidas do exame.}
+\label{fig:cap08_figexameQR_QTquestoes}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap08_figexameQR_QT.png}
+   \caption{Recorte da tela de configuração do exame.}
+\label{fig:cap08_figexameQR_QT}
+\end{figure}
+
+\section{Criando as variações}
+
+Antes de criar o PDF do exame, é necessário criar as variações clicando no botão ``Criar-Variações'' (observe que ao lado deste botão há um ID inicialmente definido como 0, que será alterado quando o botão for pressionado). É importante detalhar mais essa opção, conforme ilustrado na Figura \ref{fig:cap08_figexameCriarVariacoes}.
+
+Ao marcar a opção ``Json'', se a questão for de integração entre MCTest, Moodle e VPL, será enviado ao e-mail do professor um arquivo \verb|linker.json| contendo os casos de teste a serem incluídos na atividade VPL do Moodle. Se a opção ``Template'' for selecionada, será criado um arquivo CSV contendo o gabarito das QMs, bem como QTs com respostas curtas, para ser possível comparar as respostas exatas, caractere por caractere.
+
+As opções ``Aiken'' e ``XML'' são utilizadas para gerar arquivos que podem ser importados para criar um banco de questões no Moodle. Por fim, ao selecionar a opção ``LaTeX+PDF'', o professor receberá um PDF contendo todas as variações do exame. No exemplo ilustrado na Figura \ref{fig:cap08_figexameQR_QT}, foram criadas apenas duas variações. Vale ressaltar que existem artigos validando cada método utilizado nesses botões, os quais serão detalhados na parte de experimentos deste livro.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap08_figexameCriarVariacoes.png}
+   \caption{Recorte da tela de configuração do exame, detalhando o botão ``Criar-Variações''.}
+\label{fig:cap08_figexameCriarVariacoes}
+\end{figure}
+
+Assim, antes de criar o PDF do exame, marque a opção ``Template'' na Figura \ref{fig:cap08_figexameCriarVariacoes} para receber o gabarito e clique em ``Criar-Variações''. Nesse exemplo, uma nova aba será aberta no navegador exibindo a mensagem apresentada na Figura \ref{fig:cap08_figexameCriarVariacoesMsg}. 
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap08_figexameCriarVariacoesMsg.png}
+   \caption{Mensagem após clicar no botão ``Criar-Variações''.}
+\label{fig:cap08_figexameCriarVariacoesMsg}
+\end{figure}
+
+
+\section{Detalhando os gabaritos no arquivo CSV}\label{sec:QMgabarito}
+
+Após clicar em ``Criar-Variações'', selecionando antes a opção ``Template'', o professor receberá um e-mail contendo o seguinte arquivo com os gabaritos, conforme ilustrado na Figura \ref{fig:cap08_figexameCriarVariacoesEmail}.
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo CSV, com os gabaritos (as colunas são separadas por vírgula)}}\vspace{3mm}
+\hrule
+{\footnotesize
+\begin{verbatim}
+variation Q1 Q2 Q3 Q4 Q5 Q6    Q7     K1        K2        K3        K4        K5        K6
+    0      A  D  D  E  B  A exata 245604231 245521304 245843102 245723410 246130421 246001432
+    1      D  D  E  C  B  E exata 245521403 245632104 245814230 245721034 246010243 246113240
+\end{verbatim}
+}
+\end{myboxCode}
+%    0      A  B  C  A  A  A exata 245604231 245540123 245823041 245703214 245904132 246002413
+%    1      C  A  B  E  A  E exata 245612043 245503421 245830214 245741320 246104132 246032140
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap08_figexameCriarVariacoesEmail.png}
+   \caption{E-mail enviado ao professor após clicar no botão ``Criar-Variações''.}
+\label{fig:cap08_figexameCriarVariacoesEmail}
+\end{figure}
+
+
+No arquivo em questão, a primeira coluna \verb|variation| apresenta a variação do exame. No exemplo mostrado na Figura \ref{fig:cap08_figexameQR_QT}, foram escolhidas apenas duas variações, identificadas como variação 0 e variação 1. Em seguida, são apresentadas as respostas corretas para cada uma das sete questões do exame, identificadas como \verb|Q1| até \verb|Q7|.
+
+A questão \verb|Q7| é uma QT e foi definida em seu enunciado a sequência \verb|%%{exata}%%|, indicando para o MCTest que essa questão tem uma resposta exata contendo o texto ``exata''. É importante ressaltar que é possível incluir questões paramétricas, onde cada variação pode apresentar uma resposta correta diferente. Essa flexibilidade é discutida em detalhes no trabalho de \citeonline{2020:Zampirolli.Batista.ea}, que descreve a aplicação dessas técnicas na disciplina de Cálculo 1. Na parte de experimentos deste livro, essas abordagens serão apresentadas de forma mais detalhada, explorando suas aplicações e resultados.
+
+Após as respostas corretas, são criadas novas colunas de \verb|K1| até \verb|K6| para detalhar o sorteio realizado em cada variação do exame para as QMs. Por exemplo, na variação 1 (segunda variação), a questão \verb|K1| tem o valor 245521403. Como são QMs com 5 alternativas, o valor 21403 indica a ordem das alternativas da questão 2455 (ID da questão no banco de dados). Sabendo que a alternativa correta sempre é a primeira (índice 0), pode-se concluir que a alternativa correta para essa questão é a letra D. Portanto, a alternativa A corresponde à terceira alternativa no banco de dados (índice 2), a alternativa B corresponde à segunda (índice 1), a alternativa C corresponde à quinta alternativa (índice 4), a alternativa D é a correta (índice 0) e a alternativa E corresponde à quarta (índice 3), resultando na sequência 21403. 
+
+Ao analisar o sorteio das questões em ambas as variações, foram selecionadas sete QMs. No entanto, para cada exame, apenas seis questões serão sorteadas, conforme a configuração previamente definida. No arquivo CSV, é possível observar que apenas as questões \verb|Q3| e \verb|Q4| não apresentaram variações diferentes (consulte as colunas \verb|K3| e \verb|K4|, com questões de ID 2458 e 2457, respectivamente). No entanto, em todas as questões houve embaralhamento das alternativas.
+
+Uma estrutura de atribuição de pesos diferentes para cada alternativa marcada é detalhada no trabalho de  \citeonline{2020:Zampirolli.Batista.ea}, onde são apresentadas abordagens para avaliar o desempenho dos estudantes considerando a relevância das respostas em QMs.
+
+\begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+É extremamente importante verificar se o gabarito gerado corresponde ao PDF que será distribuído aos estudantes.
+\begin{enumerate}
+
+%  #E485#V61031 -- 2023-12-09 -- 10:59:04
+%  #E477#V60970 -- 2023-07-09 -- 14:58:34
+
+\item O ID da variação será alterado toda vez que o botão ``Criar-Variações'' for acionado;
+\item Esse número de ID também será impresso no PDF gerado, abaixo do cabeçalho do exame, em vermelho. Por exemplo, {\color{red} \verb|#E485#V61031 -- 2023-12-09 -- 10:59:04|}. No exemplo mencionado, o exame possui o ID 485 e a variação é 61031;
+\item No momento em que o botão ``Criar-Variações'' é acionado, uma ``fotografia'' das questões selecionadas no exame é armazenada no banco de dados para cada variação. Essa ``fotografia'' representa o estado atual das questões e é independente de eventuais alterações realizadas posteriormente pelo coordenador da disciplina ou professor que criou alguma destas questões. Esse recurso de segurança garante que as variações do exame permaneçam consistentes, mesmo que haja modificações nas questões originais.
+\end{enumerate}
+\end{mybox}
+
+
+\section{Criando o PDF do exame com QR+QM+QT}\label{sec:exameQM_QT_criarPDF}
+
+Após a criação das variações, a próxima etapa do processo de criação do exame consiste em gerar o PDF contendo os QRs, as QMs e QTs, caso estejam presentes no exame. Essa etapa é realizada ao clicar no botão ``Criar-PDF'' no painel de configuração do exame.
+
+Ao gerar o PDF, todas as variações do exame serão incluídas, garantindo a diversificação das questões e respostas. Os QRs serão apresentados para os estudantes poderem preencher suas respostas, e as QMs e QTs serão apresentadas conforme a configuração do exame. A ordem das questões impressas no PDF gerado segue a ordem de dificuldade de 1 a 5 para as QMs. Em seguida, as QTs serão apresentadas na mesma ordem.
+
+É de extrema importância revisar o PDF gerado para garantir a correta formatação das questões, respostas e demais elementos antes de disponibilizá-lo aos estudantes.
+%
+Além disso, é válido ressaltar que será criado um PDF para cada turma selecionada no exame, conforme detalhado na Seção \ref{sec:exameTurmas} -- \nameref{sec:exameTurmas}. No contexto do exame criado nas seções anteriores, foi gerado o PDF ilustrado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDF}. 
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap08_figexameQR_QM_QT_PDF.png}
+   \caption{Recorte do PDF do exame gerado após a ação do botão ``Criar-PDF''.}
+\label{fig:cap08_figexameQR_QM_QT_PDF}
+\end{figure}
+
+Após a geração do PDF do exame, será enviado por e-mail ao professor o arquivo \LaTeX{} correspondente a cada turma selecionada. Esse arquivo pode ser útil caso o professor deseje realizar alterações manuais no exame, embora seja importante ressaltar que o QRcode é específico de cada estudante, para garantir a correção automática. No exemplo fornecido, o arquivo gerado é o \verb|_e485_class_671_varID_61031.tex|. 
+
+Além do arquivo \LaTeX{}, o e-mail também conterá um arquivo CSV anexado, que apresenta as variações sorteadas para cada estudante. No exemplo mencionado, o arquivo é denominado \verb|report_Exam_485_varID_61031_students_variations.csv|. Caso haja mais turmas selecionadas para o exame, todos os estudantes de todas as turmas serão listados em um único arquivo CSV, que corresponde ao exame com o ID 485.
+
+% melhorar escrita formal e científica, mantendo a formatação LaTex: 
+Ao observar a Figura \ref{fig:cap08_figexameCriarPDF_Email}, é possível verificar um trecho do e-mail encaminhado ao professor após acionar o botão ``Criar-PDF'' contendo os três arquivos a seguir:
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivos anexados ao e-mail enviado ao professor}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+_e485_varID_61031_class_671.pdf
+_e485_varID_61031_class_671.tex
+_e485_varID_61031_class_671_students_variations.csv
+_e485_varID_61031_class_671_variations.csv
+\end{verbatim}
+\end{myboxCode}
+ 
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap08_figexameCriarPDF_Email.png}
+   \caption{E-mail enviado ao professor após clicar no botão ``Criar-PDF''.}
+\label{fig:cap08_figexameCriarPDF_Email}
+\end{figure}
+
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e485\_varID\_61031\_students\_variations.csv}, com as variações de cada estudante}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+Name                          Email                     Variation
+Estudante Exemplo Sobrenome   fzampirolli@ufabc.edu.br  0
+\end{verbatim}
+\end{myboxCode}
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{\_e485\_varID\_61031\_variations.csv}, com as variações de cada estudante, com turma e média das notas de exames anteriores}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+Room          ID Name                        Email    Variation MeanPreviousAbilities
+fz-turmaTeste 1  Estudante Exemplo Sobrenome fzampirolli@ufabc.edu.br 0            0
+\end{verbatim}
+\end{myboxCode}
+
+\begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+Foi adotado o seguinte critério de sorteio de variações para os estudantes:
+\begin{enumerate}
+\item Se o número de variações definido for menor que o número de estudantes em cada turma, será sorteada uma variação para os estudantes  baseado no \textit{hash} gerado a partir do nome e sobrenome do estudante. Dessa forma, ao clicar em ``Criar-PDF'', será atribuída a mesma variação para cada estudante;
+\item Caso contrário, ou seja, se o número de variações definido no exame for maior ou igual que o número de estudantes da turma, será sorteada uma variação diferente para cada estudante a cada vez que o botão ``Criar-PDF'' for acionado.
+\end{enumerate}
+\end{mybox}
+
+\section{Corrigindo exames com QR+QM}
+
+
+Ao corrigir exames que contêm QR e QMs utilizando o MCTest, o processo é mais simples em comparação com a correção de exames apenas com QR, conforme detalhado na Seção \ref{sec:examesCorrigirQR} -- \nameref{sec:examesCorrigirQR}.
+
+O gabarito de cada exame não é mais armazenado no servidor do MCTest em formato TXT. Agora, ele é identificado por meio da variação contida no QRcode. As informações contidas no QRcode, conforme ilustrado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDF}, são criptografadas e compactadas.
+
+É possível verificar as respostas correspondentes ao gabarito apresentado no CSV na Seção \ref{sec:QMgabarito} -- \nameref{sec:QMgabarito}, considerando a variação 0, conforme apresentado no CSV da seção anterior. Portanto, as respostas para as questões \verb|Q1| até \verb|Q7| são, respectivamente: \verb|A, D, D, E, B, A, exata|.
+
+Imprimindo o PDF apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDF}, selecionando a opção ``Retorno=Sim'' e salvando o exame, preenchendo as questões, digitalizando e enviando para o botão ``Upload-PDF'',  o estudante receberá o \textit{feedback} apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} por e-mail. Certifique-se de marcar a caixa abaixo desse botão para também enviar os enunciados das questões, as alternativas corretas e as inválidas.
+
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap08_figexameQR_QM_QT_PDFScan.png}
+   \caption{Recorte do e-mail com parte do PDF do exame enviado como \textit{feedaback} ao estudante, após a ação do botão ``Upload-PDF''. Neste PDF, o enunciado da QT também é apresentado após as QMs.}
+\label{fig:cap08_figexameQR_QM_QT_PDFScan} 
+\end{figure}
+
+Além disso, o professor receberá as correções realizadas em um arquivo ZIP, conforme detalhado na Seção \ref{sec:examesCorrigirQR} -- \nameref{sec:examesCorrigirQR}, que conterá os seguintes arquivos:
+ 
+\begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar a correção do exame no botão ``Upload-PDF''}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+studentEmail_e485.zip
+_e485_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN__.csv
+_e485_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_irt.csv
+_e485_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_p001_s1_q006.png
+_e485_fzampirolli@ufabc.edu.br_ScanFileQR_QM_RETURN_statistics.csv
+\end{verbatim}
+\end{myboxCode}
+
+O arquivo \verb|studentEmail_e485.zip| contém todos os arquivos PDF enviados aos estudantes, caso tenham escolhido ``Retorno=SIM'' na tela do exame. Um exemplo é apresentado na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan}, exibindo também as questões, as respostas do estudante e a alternativa correta. Esses enunciados são incluídos no PDF quando a caixa abaixo do botão ``Upload-PDF'' é marcada; caso contrário, apenas a imagem, as informações do estudante e sua nota são enviadas. 
+
+\begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+  Um destaque incluído na versão mais recente do MCTest é apresentar as questões e as alternativas armazenadas nas variações salvas no banco de dados. Ou seja, quando há questões paramétricas, é exibida a ``fotografia'' da questão criada no momento em que o botão ``Criar-Variações'' foi pressionado. O \textit{feedback} é apresentado obtendo o atributo também da ``fotografia'' gerada, que agora pode ser parametrizado, sendo incluído no PDF a ser enviado ao estudante. Para isso, foi necessário incluir no QRCode informações da chave da variação do exame sorteada para cada estudante.
+
+\end{mybox}
+
+Conforme explicado na Seção \ref{sec:CSVcorrecoesQR} -- \nameref{sec:CSVcorrecoesQR}, o primeiro arquivo CSV, \verb|*_.csv|, apresenta o seguinte conteúdo:
+
+% \tiny < \scriptsize < \footnotesize < \small 
+
+\begin{myboxCode}{corCSV}{\textbf{Conteúdo do arquivo \texttt{*\_.csv} gerado (as colunas são separadas por vírgula)}}\vspace{3mm}
+\hrule
+{\scriptsize
+\begin{verbatim}
+Pag ID Student                     Email                  Resp Quest Inv Grad 
+1   1  Estudante Exemplo Sobrenome fzampirolli@gmail.com  5    6     1   1  
+\end{verbatim}
+}
+\end{myboxCode}
+
+
+\begin{myboxCode}{corCSV}{\textbf{Continuação do arquivo \texttt{*\_.csv}}}\vspace{3mm}
+  \hrule
+  {\scriptsize
+  \begin{verbatim}
+  Q1  Q2 Q3  Q4  Q5  Q6  K1        K2        K3        K4        K5        K6
+  E/A D  C/D B/E A/B 2/A 245604231 245521304 245843102 245723410 246130421 246001432
+  \end{verbatim}
+  }
+  \end{myboxCode}
+
+
+%1  001    5     6   1   1 E/C D/A C/B B/E A 2/E 245612043 245503421 245830214 245741320 246104132 246032140
+
+
+% melhorar escrita formal e científica, mantendo a formatação LaTex: 
+
+No arquivo em questão, é possível observar nas colunas \verb|Q1| até \verb|Q6| a notação apresentada na Seção \ref{sec:CSVcorrecoesQR} -- \nameref{sec:CSVcorrecoesQR}, agora com a adição de \verb|resposta marcada| / \verb|resposta correta|. Por exemplo, na questão \verb|Q1| tem a notação \verb|E/A|, indicando que a alternativa marcada pelo estudante foi a \verb|E|, enquanto a resposta correta é a \verb|A|. Também é possível notar a presença de uma questão inválida na coluna \verb|Inv|, referente à questão \verb|Q6|, que apresenta o conteúdo \verb|2/E|. Isso indica que duas alternativas foram marcadas, sendo que na Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} é possível observar que a alternativa \verb|A| foi marcada, mas também foi realizada uma pequena marcação na alternativa \verb|E|, invalidando a questão. Neste exemplo, a única marcação correta é na questão \verb|Q2|. Observa-se que ainda não é possível corrigir a QT com resposta exata, e a questão 7 não está incluída no arquivo CSV anterior.
+
+A Figura \ref{fig:cap08_figexameQR_QM_QT_PDFScan} apresenta um relatório com os dados do estudante, a nota obtida e os enunciados das questões, incluindo as marcações realizadas e a alternativa correta de cada questão. As colunas \verb|K1| até \verb|K6| foram previamente explicadas na Seção \ref{sec:QMgabarito} -- \nameref{sec:QMgabarito}.
+
+% NOVO
+\section{Exames adaptativos}\label{sec:testeAdaptativo}
+
+Abaixo do botão ``Criar-PDF'' na tela de exame, conforme ilustrado na Figura \ref{fig:cap06_figExameAtualiza1}, encontram-se duas barras de rolagem. A primeira permite definir o tamanho da fonte do arquivo PDF gerado com o exame. A segunda barra de rolagem possibilita definir o número de exames anteriores realizados por cada estudante a ser considerado. Por exemplo, se o valor selecionado for 1, será considerada apenas o último exame para definir qual variação deste será destinada aos estudantes. 
+
+Foram estabelecidos três distintos tipos de estatísticas aplicadas a esses exames anteriores, conforme evidenciado na Figura \ref{fig:cap08_figexameAdapterType}. O número mínimo de exames anteriores na barra de rolagem é 1 e estende-se até 10, sendo 10 o valor padrão. Ao alcançar o valor 10, todas as avaliações anteriores serão consideradas, caracterizando um conjunto infinito.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.4\textwidth]{cap08_figexameAdapterType.png}
+   \caption{Tipos de exames adaptativos.}
+\label{fig:cap08_figexameAdapterType}
+\end{figure}
+
+O processo de cálculo desses tipos de exames adaptativos considera que, para cada exame anterior e para cada questão respondida pelo estudante:
+
+\begin{enumerate}
+    \item Recupere os dados da questão;
+    \item Calcule o parâmetro $b$ (dificultade da questão) com base no tipo de teste adaptativo escolhido;
+    \item Armazene o parâmetro $b$ na lista \verb|b_vector|;
+    \item Armazene se o estudante acertou (valor 1 acertou e 0 caso contrário) a questão na lista \verb|u_vector|.
+\end{enumerate}
+
+No item 2 anterior, para calcular o parâmetro $b$, são apresentados 3 tipos de teste/exame adaptativo:
+
+\begin{description}
+  \item[WPC:] Se o teste for do tipo \textit{Weighted Probability of Correctness} (WPC) ou Porcentagem Ponderada de Acertos, o parâmetro $b$ é calculado como a diferença entre 1 e a fração ponderada de respostas corretas em relação à quantidade total de questões corrigidas. O valor de $b$ foi normalizado entre -5 e 5.
+  \
+  No WPC, o método aprimora a avaliação atribuindo pesos às respostas corretas, levando em consideração a dificuldade individual de cada questão. 
+  
+  \item[MLE:] Se o teste for do tipo \textit{Maximum Likelihood Estimation} (MLE) ou Estimativa de Máxima Verossimilhança, o parâmetro $b$ é a habilidade associada à questão. Neste caso, esse valor de $b$ foi normalizado entre -5 e 5.
+  \
+  O MLE é um método usado para determinar os valores dos parâmetros de um modelo estatístico que maximizam a probabilidade de observar os dados. Esse método ajusta dinamicamente a dificuldade das questões com base nas suas respostas anteriores, seguindo a TRI.
+  
+  \item[SAT:] Se o teste for do tipo \textit{Semi-Adaptive Testing} (SAT) ou Avaliação Semi-Adaptativa, o parâmetro $b$ é determinado pelo índice da taxonomia de Bloom da questão, variando entre 1 e 6. Neste caso, esse valor de $b$ foi normalizado entre -2 e 3.
+  \
+  O SAT é um método de avaliação adaptativa em que o professor define manualmente o nível da Taxonomia de Bloom para cada questão. Este método combina adaptabilidade com avaliação personalizada, permitindo que o sistema ajuste dinamicamente a dificuldade das questões com base nas respostas dos alunos em exames anteriores, ao mesmo tempo em que considera os níveis cognitivos predefinidos pelo professor.
+\end{description}
+
+Nos tipos WPC e SAT, calcula-se a habilidade do estudante multiplicando elemento a elemento das listas \verb|b_vector| e \verb|u_vector|. Ao realizar essa operação e calcular a média dessas multiplicações, obtém-se um valor que representa a habilidade do estudante com base em suas respostas e nas dificuldades das questões.
+
+Para uma boa calibração das questões, os tipos WPC e MLE exigem que cada questão tenha sido respondida por um número mínimo de participantes anteriormente. Por exemplo, o MLE, que se baseia na Teoria de Resposta ao Item (TRI), requer um mínimo de 1.000 participantes no modelo 3PLM \cite{min2021systematic}. Se a questão ainda não tiver sido respondida, a Taxonomia de Bloom é utilizada para classificá-la.
+
+
+\begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+  Para que o método adaptativo funcione corretamente:
+\begin{enumerate}
+\item Atribuir a Taxonomia de Bloom a cada questão. Essa atribuição é considerada uma condição inicial para o cálculo dos níveis de dificuldade das questões, tanto no método WPC quanto no MLE, antes de corrigir qualquer questão;
+\item Certificar-se de que todos os exames anteriores tenham sido corrigidos e que as estatísticas de desempenho, tanto para o método WPC quanto para o MLE, tenham sido atualizadas para cada questão. Isso pode ser feito por meio da digitalização dos exames anteriores e do uso do botão ``Upload-PDF'' para realizar as correções;
+\item Antes de escolher ``Criar PDF'' para distribuir os exames adaptativos, utilizando um dos três métodos apresentados na Figura \ref{fig:cap08_figexameAdapterType}, verifique se todas as turmas dos exames anteriores estão selecionadas nas respectivas telas de configuração de exames. Adicionalmente, as datas dos exames nos formulários devem estar corretas, pois apenas exames anteriores serão considerados nos cálculos das estatísticas.
+\end{enumerate}
+\end{mybox}
+
+\subsection{Exemplificando o uso do método SAT}\label{sec:SAT_ex1}
+
+Para que este método de exame adaptativo funcione adequadamente, é necessário definir a taxonomia de Bloom para cada questão, nos 6 possíveis níveis: lembrar, compreender, aplicar, analisar, avaliar e criar. Cada um desses níveis recebe um valor de 1 a 6, respectivamente. Quando, para cada nível de dificuldade, são escolhidas várias questões com taxonomias distintas, cada variação do exame poderá apresentar pesos diferentes considerando essas taxonomias. Por exemplo, se um exame definir 3 questões com dificuldade 1, mas houver 6 questões com diferentes taxonomias marcadas para esse mesmo nível 1, e, além disso, foi decidida a criação de 20 variações de exames, teremos então variações com médias com diferentes pesos dos níveis dessa taxonomia.
+
+
+Para ilustrar esse processo, foi criado um exame com 3 QM e 1 QT, todas com dificuldade 1. Além disso, foram selecionadas 6 QM para serem sorteadas, conforme Figura \ref{fig:cap08_figexameAdapterTypeQM}, com apenas 3 delas sendo escolhidas com base no desempenho do estudante em exames recentes. 
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{cap08_figexameAdapterTypeQM.png}
+  \caption{Seleção das questões na tela do exame para sorteio.}
+  \label{fig:cap08_figexameAdapterTypeQM}
+\end{figure}
+
+Na barra de rolagem da Figura \ref{fig:cap08_figexameAdapterType}, foi escolhido o número 5 para o exame adaptativo, ou seja, será calculada a média das 5 últimas habilidades dos exames realizados pelo estudante. Foram solicitadas a criação de 20 variações de exames antes de clicar no botão ``Criar-Variações''. Também foram selecionadas duas turmas. Após clicar no botão ``Criar-PDF'', os arquivos foram enviados para o email do professor, além de um \textit{download} de um arquivo compactado contendo os seguintes arquivos  (esse \textit{download} ocorre apenas quando tem mais de uma turma selecionada).
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivos gerados ao solicitar criar PDF com o botão ``Criar-PDF''}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+_e486_varID_61093_adaptive_test_variations.csv
+_e486_varID_61093_adaptive_test.csv
+_e486_varID_61093_class_671.pdf
+_e486_varID_61093_class_671.tex
+_e486_varID_61093_class_672.pdf
+_e486_varID_61093_class_672.tex
+_e486_varID_61093_students_variations.csv
+_e486_varID_61093_variations.csv
+\end{verbatim}
+\end{myboxCode}
+
+O arquivo \verb|*_adaptive_test_variations.csv| contém informações sobre as variações do exame, ordenadas pela coluna \verb|MeanAbilities|. O segundo arquivo \verb|_adaptive_test.csv| contém informações dos exames anteriores realizados por todos os estudantes, ordenados pela última coluna \verb|MeanPreviousAbilities|. Em seguida, temos o PDF gerado a partir do \TeX{} de cada turma. O penúltimo arquivo, \verb|*_students_variations.csv|, contém um resumo do arquivo seguinte com a variação sorteada de cada estudante, em ordem alfabética, por turma. Finalmente, o arquivo \verb|*_variations.csv| contém a variação de cada estudante e a média das habilidades, ordenadas por essa média. Assim, as informações dos exames anteriores realizados por cada estudante da disciplina são detalhadas no arquivo \verb|*_adaptive_test.csv| e a partir dele são resumidas em outros dois arquivos: \verb|*_students_variations.csv| e \verb|*_variations.csv|. Todos esses arquivos procuram tornar mais didáticos os cálculos estatísticos realizados para a escolha dos exames adaptativos para cada estudante. Os principais arquivos serão detalhados a seguir.
+
+\subsubsection{Arquivo \texttt{*\_adaptive\_test\_variations}}\label{sec:adaptiveTestVariations}
+
+O primeiro arquivo \verb|*_adaptive_test_variations.csv| possui, na primeira coluna, as 20 variações do exame, na segunda coluna a chave das variações no banco de dados e na terceira coluna a média dos níveis da taxonomia de Bloom para as questões sorteadas para cada variação, em ordem crescente. Observam-se as questões com variações 4, 9, 12, 17 e 19 com o mesmo nível de dificuldade média de -0.333. Além disso, as variações 2, 5, 14 e 18 têm dificuldade média 2. A coluna seguinte armazena o desvio padrão dessas médias. As colunas seguintes são para calibrar os parâmetros $a_i$ e $b_i$ da TRI de cada questão $i\in\{1,\cdots,5\}$. Finalmente, as últimas colunas $k_i$ armazenam as chaves das questões QM no banco de dados; além disso, mostram em seguida a(s) chave(s) das QT, se existir(em).
+
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{*\_adaptive\_test\_variations}}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+Variation VariationID MeanAbilities STD  a1 a2 a3 b1 b2 b3  k1   k2   k3   k4
+ 4         61096      -0.333       1.247  0  0  0  0  1 -2 2443 2444 2455 2462
+ 9         61101      -0.333       1.247  0  0  0 -2  0  1 2455 2443 2444 2462
+12         61104      -0.333       1.700  0  0  0 -2 -1  2 2455 2456 2445 2462
+17         61109      -0.333       1.247  0  0  0  0  1 -2 2443 2444 2455 2462
+19         61111      -0.333       1.700  0  0  0  2 -2 -1 2445 2455 2456 2462
+ 6         61098       0.000       2.160  0  0  0  3 -1 -2 2468 2456 2455 2462
+15         61107       0.000       2.160  0  0  0 -2 -1  3 2455 2456 2468 2462
+ 1         61093       0.333       1.247  0  0  0  2 -1  0 2445 2456 2443 2462
+ 3         61095       0.667       1.700  0  0  0 -1  0  3 2456 2443 2468 2462
+11         61103       0.667       2.055  0  0  0 -2  1  3 2455 2444 2468 2462
+13         61105       0.667       2.055  0  0  0  1 -2  3 2444 2455 2468 2462
+16         61108       0.667       1.700  0  0  0  3  0 -1 2468 2443 2456 2462
+ 7         61099       1.000       1.633  0  0  0  1 -1  3 2444 2456 2468 2462
+10         61102       1.000       1.633  0  0  0 -1  1  3 2456 2444 2468 2462
+ 8         61100       1.333       1.247  0  0  0  0  1  3 2443 2444 2468 2462
+20         61112       1.333       1.700  0  0  0  2 -1  3 2445 2456 2468 2462
+ 2         61094       2.000       0.816  0  0  0  2  3  1 2445 2468 2444 2462
+ 5         61097       2.000       0.816  0  0  0  3  2  1 2468 2445 2444 2462
+14         61106       2.000       0.816  0  0  0  2  3  1 2445 2468 2444 2462
+18         61110       2.000       0.816  0  0  0  3  2  1 2468 2445 2444 2462
+\end{verbatim}
+\end{myboxCode}
+
+\subsubsection{Arquivo \texttt{*\_adaptive\_test.csv}}\label{sec:adaptive_test}
+
+O arquivo \verb|*_adaptive_test.csv| contém informações sobre  turmas, códigos das  turmas, nomes de estudantes e seus e-mails. Há duas  turmas identificadas, \verb|671| e \verb|672|. A primeira possui um estudante, enquanto a segunda tem dois estudantes associados.
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{*\_adaptive\_test.csv}}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+RoomID RoomCode      NameStudent                           EmailStudent
+672    Turma Exemplo João da Silva                         fzampirolli@gmail.com 
+672    Turma Exemplo Maria da Silva Andrade de S Gonçalves fzampirolli@gmail.com    
+671    fz-turmaTeste Estudante Exemplo Sobrenome           fzampirolli@gmail.com 
+\end{verbatim}
+\end{myboxCode}
+
+Considere clicar em ``Criar PDF'' escolhendo SAT, ver Figura \ref{fig:cap08_figexameAdapterType}, em um novo exame adaptativo de nome \verb|exameTesteAdaptQR-QM|, com data de 19 de abril de 2024. As demais colunas desse arquivo \verb|*_adaptive_test.csv| a seguir representam informações específicas de cada exame realizado pelos estudantes em datas anteriores. As colunas incluem a data de realização do exame, o ID do exame e o nome do exame. O conteúdo de cada coluna contém as habilidades obtidas em cada exame. Observa-se que o primeiro exame com ID \verb|485| ocorreu em 7 de dezembro de 2023, e a média de acertos, considerando a taxonomia de Bloom, foi de -0.333. Os outros dois estudantes não tiveram notas registradas nessa avaliação, e foi atribuído o valor mínimo de habilidade igual a -5.0. A coluna \verb|MeanPreviousAbilities| indica a média das habilidades nas avaliações dos estudantes.
+
+\begin{myboxCode}{corCSV}{\textbf{Continuação do arquivo \texttt{*\_adaptive\_test.csv}}}\vspace{3mm}
+  \hrule
+  \begin{verbatim}
+2023-12-07:485:exameTesteQR-QM  MeanPreviousAbilities
+  -5.0                           -5.0 
+  -5.0                           -5.0 
+  -0.333                         -0.333
+\end{verbatim}
+\end{myboxCode}
+
+\subsubsection{Arquivo \texttt{*\_variations.csv}}\label{sec:variations}
+
+O arquivo \verb|*_variations.csv| a seguir resume esses dados, com a variação sorteada para cada estudante. Observa-se que as variações 12 e 19, com a menor média pela taxonomia de Bloom, foram sorteadas para os estudantes da turma \verb|Turma Exemplo|. Como apresentado anteriormente, essas variações são 4, 9, 12, 17 e 19. Por outro lado, a variação 2 foi sorteada entre 2, 5, 14 e 18, que apresentam a maior dificuldade.
+
+\begin{myboxCode}{corCSV}{\textbf{Arquivo \texttt{*\_variations.csv}}}\vspace{3mm}
+\hrule
+\begin{verbatim}
+Room          ID  Name                               Variation  MeanPreviousAbilities
+Turma Exemplo 123 João da Silva                          12        -5.0
+Turma Exemplo 987 Maria da Silva Andrade de S Gonçalves  19        -5.0
+fz-turmaTeste   1 Estudante Exemplo Sobrenome             2        -0.333
+\end{verbatim}
+\end{myboxCode}
+
+
+Uma parte crucial desse processo adaptativo reside na seleção apropriada das questões, classificadas com base na taxonomia de Bloom. É essencial assegurar que as questões sejam precisamente definidas e estejam alinhadas aos objetivos de aprendizagem. Ademais, o método adaptativo em questão deve estimular os estudantes a manterem-se engajados na disciplina, evitando a imposição de exames excessivamente difíceis como forma de penalização ou excessivamente fáceis, o que resultaria em uma atribuição injusta de conceitos. Uma estratégia promissora talvez seja a atribuição de notas de participação, independentemente do desempenho obtido nos exames adaptativos. Dessa forma, essas atividades são consideradas formativas e não avaliativas.
+
+\subsection{Estimativa dos parâmetros do modelo TRI}\label{sec:estimativas_TRI}
+
+Ao corrigir um exame com QMs, diversas estatísticas são calculadas, incluindo os parâmetros $a$, $b$ e $c$ da Teoria da Resposta ao Item/Questão (TRI). Estes parâmetros representam, respectivamente, a discriminação, a habilidade e o chute do item, conforme detalhado na Seção \ref{sec:questaoQM}. A Figura \ref{fig:cap04_figTRI} ilustra a Curva Característica do Item (CCI) com base nesses três parâmetros.
+
+O código desenvolvido no MCTest v.5.3 tem como objetivo estimar os parâmetros $a$, $b$ e $c$ da TRI para cada QM de um exame, utilizando o método da máxima verossimilhança.
+
+Inicialmente, uma função gera um dicionário contendo as respostas de cada estudante para cada questão no formato de 1 para acerto e 0 para erro, onde a chave do discionário é o ID da questão no banco de dados.
+
+Em seguida, para cada questão é feita a estimativa dos parâmetros utilizando a função de \textit{likelihood} negativa. Os parâmetros iniciais são definidos com base nos valores já armazenados no banco de dados ou valores fixos. A minimização é realizada utilizando o algoritmo \verb|L-BFGS-B|, com restrições nos intervalos de cada parâmetro, com a seguinte importação \verb|from scipy.optimize import minimize|.
+
+Após a convergência do algoritmo de otimização, os valores estimados dos parâmetros $a$, $b$ e $c$  são atualizados no modelo da questão no banco de dados. Desta forma, os parâmetros TRI são recalculados a cada aplicação e correção do exame, permitindo acompanhar possíveis mudanças na dificuldade ou discriminação das questões ao longo do tempo.
+
+Estes cálculos estimam os parâmetros do modelo triparamétrico (3PLM) para cada QM de um exame utilizando máxima verossimilhança.
+\
+A função de verossimilhança negativa $L(\theta,a,b,c|\mathbf{x})$ é definida como:
+\
+\begin{align*}
+L(\theta,a,b,c|\mathbf{x}) &= -\sum_{i=1}^N x_i \log P(X_i=1|\theta_i, a,b,c) + (1-x_i)\log[1-P(X_i=1|\theta_i, a,b,c)],
+\end{align*}
+\
+onde $P(X_i=1|\theta_i, a,b,c) = c + (1-c)F(a(\theta_i - b))$ e $F$ é a função logística cumulativa.
+
+A estimação é realizada minimizando $L(\theta,a,b,c|\mathbf{x})$ usando o algoritmo \verb|L-BFGS-B|, com restrições $\theta\in[-5,5]$, $a\in(-\infty,+\infty)$, $b\in[-5,5]$ e $c\in[0,1]$. Valores iniciais são obtidos dos parâmetros armazenados ou valores fixos.
+\
+Após a convergência, os parâmetros estimados $a$, $b$ e $c$ são atualizados no banco de dados para cada questão.
+\
+Dessa forma, o código implementa a estimação dos parâmetros do modelo TRI para cada questão por máxima verossimilhança. Esses cálculos são realizados através do método \verb|estimate_IRT_parameters(exam)|, disponível no arquivo \verb|CVMCTest.py|\footnote{\url{https://github.com/fzampirolli/mctest/blob/master/exam/CVMCTest.py}}, chamado após as correções dos exames digitalizados, ao pressionar o botão ``Upload-PDF'' na tela do exame.
+
+
+
+
+
+% melhorar escrita formal e científica, mantendo a formatação LaTex: 
+
+\section{Recomendações para realização tranquila de exames presenciais}\label{sec:recomendacoesCap8}
+
+Com base na experiência de inúmeros exames aplicados e corrigidos, é possível destacar algumas recomendações essenciais para garantir a realização tranquila do processo e permitir o melhor desempenho de todos os envolvidos:
+
+\begin{enumerate}
+    \item Revisar cuidadosamente todas as questões, a fim de evitar erros ou ambiguidades que comprometam a aplicação ou correção. Questões mal elaboradas podem prejudicar a validade de todo o exame;
+    \item Após selecionar as questões e configurar o estilo, crie as variações de exame marcando a caixa ``Template'' ao lado do botão ``Criar-Variações''. Isso assegura que o sistema gere os gabaritos corretos e possibilite a correção automática por meio do QRCode (se houver algum erro na leitura do QRCode durante a correção automática, o gabarito enviado por e-mail deverá ser usado -- certifique-se de guardar o arquivo CSV com cuidado);
+    \item Cada vez que você clicar em ``Criar-Variações'', o ID será alterado, gerando novas variações com gabaritos diferentes no banco de dados. Para aplicar o exame, verifique se o ID ao lado deste botão corresponde ao ID em vermelho no PDF do exame (não se esqueça de atualizar a página para atualizar o ID). Isso é fundamental para garantir a correção automática, pois o ID gerado deve sempre coincidir com o do exame aplicado;
+    \item É viável empregar as variações existentes no banco de dados em múltiplas turmas, com a simples modificação da turma no exame, seguida dos botões ``Salvar'' e ``Criar-PDF'';
+    \item Deixar ``Retorno'' como ``Não'' ao criar os exames, caso contrário elas serão enviadas aos estudantes por e-mail antes da aplicação;
+    \item Imprima um único exemplar do exame antes de produzir toda a tiragem, a fim de validar. Preencha o exame, digitalize e solicite a correção automática enviando o PDF e selecionando o botão ``Upload-PDF''. Isso permite verificar se o sistema gerou o exame corretamente e realizou a correção automática adequadamente. Além disso, verifique se todos os exames ocupam apenas uma página frente e verso, evitando a necessidade de grampear folhas. Se todos os PDFs gerados estiverem corretos, solicite a impressão no modo frente e verso, utilizando uma impressora com bom toner. Por fim, verifique se a impressão foi realizada com sucesso, garantindo que os quatro discos pretos que delimitam o QR estão intactos e sem cortes na folha;
+    \item Organizar os exames em ordem alfabética sobre as filas de carteiras da sala, de modo que os estudantes não tenham dúvidas sobre qual é a deles. Isso garante que todos tenham acesso aos seus exames de forma rápida e organizada. Esse processo geralmente leva cerca de 10 minutos para 100 exames;
+    \item Instrua os estudantes a não utilizar fluidos de correção (conhecidos como ``branquinho'') ou fazer rascunhos nos espaços designados pelos quatro discos pretos, a fim de evitar a interferência na correção automática dos gabaritos;
+    \item Digitalizar somente a frente dos exames em um único arquivo PDF por turma para permitir a correção em larga escala de maneira ágil e livre de erros. Evite o uso de impressoras que possam ``engolir'' as folhas;
+    \item Se ocorrer erro na decodificação do QRCode, é possível digitalizar apenas os exames com erro, utilizando diferentes configurações de digitalização da impressora. Outra alternativa é a correção manual, usando o gabarito enviado por e-mail. Certifique-se de verificar qual é a variação do exame do estudante recebido por e-mail ao clicar em ``Criar-PDF'' e o gabarito da variação recebida também por e-mail ao clicar em ``Criar Variação'';
+    \item Envie os resultados aos estudantes somente após validar as correções para assegurar que tudo ocorreu conforme o esperado e não há erros. Se desejar enviar um gabarito aos estudantes apenas com QR, sem as questões, marque ``Retorno'' como ``SIM'' e não selecione a caixa abaixo do botão ``Upload-PDF''. Em seguida, escolha o arquivo e clique no botão para realizar a correção automática e enviar os \textit{feedbacks} aos estudantes por e-mail.
+\end{enumerate}
+
+Seguir essas recomendações é crucial para a realização de exames presenciais tranquilamente. É essencial revisar as questões, criar variações e verificar os IDs tanto na página do exame quanto no PDF. Garantir a impressão correta do PDF, sem cortes no QR, é importante. Além disso, realizar a validação das correções antes de enviar os resultados assegura a qualidade e precisão do processo. Ao seguir essas recomendações, é possível promover a eficiência da correção automatizada.
+
+\section{Considerações finais}
+
+Este capítulo abordou a criação e correção de exames que envolvem tanto o QR quanto as QMs, além das QTs. Essa combinação de questões permite uma avaliação abrangente das habilidades dos estudantes e tem sido amplamente utilizada na Especialização em Tecnologia e Sistemas de Informação (TSI) da UFABC, como mencionado no Capítulo \ref{ch:introducao}.
+
+No processo de criação dos exames, é necessário criar as QMs e QTs, seguindo as instruções fornecidas neste capítulo, bem como nos Capítulos \ref{ch:questoesClassicasMCTest} -- \nameref{ch:questoesClassicasMCTest} e \ref{ch:questoesCodigoMCTest} -- \nameref{ch:questoesCodigoMCTest}. A utilização de arquivos TXT para criar as questões não paramétricas é uma abordagem prática e eficiente para inseri-las no MCTest. Além disso, é fundamental criar as variações do exame por meio do botão ``Criar-Variações''. Essa etapa garante a diversificação das questões e respostas disponibilizadas aos estudantes.
+
+Após a criação das variações, é possível gerar o PDF do exame, incluindo os QR, QM e QT, através do botão ``Criar-PDF''. É essencial revisar o PDF gerado para garantir a formatação correta das questões, respostas e demais elementos antes de disponibilizá-lo aos estudantes.
+
+Na etapa de correção dos exames, o processo é simplificado quando se utiliza o MCTest, pois o gabarito é armazenado no servidor. O gabarito é identificado através da decodificação do QRcode e pode ser verificado a partir do CSV dos gabaritos correspondentes, caso a opção ``Template'' tenha sido selecionada antes de clicar em ``Criar-Variações''. As respostas corretas para cada questão podem ser obtidas dessa forma, como exemplificado no capítulo.
+
+Ao enviar o PDF preenchido pelos estudantes através do botão ``Upload-PDF'', e selecionar a opção ``Retorno=Sim'', o estudante receberá um \textit{feedback} detalhado por e-mail, contendo as correções realizadas. O professor também receberá um arquivo ZIP com as correções realizadas em formato CSV, além de vários outros arquivos já citados anteriormente, facilitando a análise e o registro das correções.
+
+No próximo capítulo, serão explorados os formatos de arquivos Aiken e XML ao criar variações de um exame. Esses recursos são altamente úteis para a criação de bancos de questões no Moodle.

@@ -1,0 +1,108 @@
+\chapter*{Prefáceis}\normalsize
+
+\section*{Prefácio da primeira edição}
+
+% CONTEXTO
+A avaliação dos estudantes é uma atividade crucial para o trabalho de um professor, ao permitir avaliar de maneira precisa o desempenho dos estudantes ao longo do curso, fornecendo \textit{feedback} importante para o seu desenvolvimento acadêmico. Além disso, a avaliação também é um meio importante para aprimorar a prática educativa, permitindo que os professores identifiquem pontos fortes e fracos de sua metodologia e aprimorem sua abordagem pedagógica para proporcionar um melhor aprendizado aos estudantes.
+
+% LACUNA
+Avaliar inúmeros estudantes individualizadamente é uma tarefa desafiadora para professores em todos os níveis de ensino, especialmente em disciplinas que exigem habilidades e competências específicas. Esse desafio é ainda maior em exames que envolvem exercícios de programação (EP), uma vez que exigem uma avaliação minuciosa dos processos de resolução de problemas, além da compreensão do código e da lógica utilizados pelos estudantes.
+
+% PROPÓSITO
+Este livro visa prover uma solução abrangente e eficaz para a avaliação de estudantes. A abordagem colaborativa adotada por docentes da Universidade Federal do ABC (UFABC), empregando o sistema de código aberto MCTest, viabiliza a reutilização de conjuntos de questões previamente utilizados por outros colegas que ministram a mesma disciplina.
+
+% MÉTODO
+O  MCTest permite a criação e correção de exames de múltipla escolha e dissertativa, incluindo EP no \textit{plugin} VPL (\href{https://vpl.dis.ulpgc.es}{ \textit{Virtual Programming Lab}}) do ambiente Moodle. Ele oferece questões parametrizadas e exames individualizados que podem ser usados por várias turmas simultaneamente. A principal contribuição desse sistema reside na capacidade de compartilhar questões parametrizadas, que incorporam enunciados em \LaTeX{} intercalados com códigos em Python. 
+
+% RESULTADOS
+Este livro consolida mais de uma década de experiência na avaliação anual de milhares de estudantes, a partir de 2012, quando se deu início à automatização do processo seletivo da Especialização em Tecnologias e Sistemas de Informação (TSI) da UFABC, com a criação da primeira versão do MCTest, desenvolvida em Matlab. Desde então, o sistema passou por um substancial processo de evolução, beneficiando-se da colaboração de diversos colegas da UFABC, cujas contribuições permitiram identificar novas necessidades e aprimorar suas funcionalidades. A versão web mais recente abordada neste livro é a 5.2 e encontrando-se disponível para instalação no endereço \href{https://github.com/fzampirolli/mctest}{github.com/fzampirolli/mctest}. Duas implantações ativas do sistema estão em execução na UFABC: a versão de produção, hospedada em \href{http://mctest.ufabc.edu.br}{mctest.ufabc.edu.br}; e a versão de desenvolvimento, \textit{backup} e divulgação em \href{http://vision.ufabc.edu.br}{vision.ufabc.edu.br}.
+
+É de extrema importância enfatizar que o MCTest não tem um caráter comercial e não segue rigidamente o ciclo de vida convencional de desenvolvimento de software. Sua abordagem é fundamentada na prototipagem, seguindo os princípios da Engenharia de Software, em suma, novos requisitos e protótipo rápido para validação de conceitos. No entanto, até o momento, o sistema ainda não atingiu sua versão final, desenvolvido predominantemente por um único programador (com exceção da adaptação realizada no VPL, pelo Heitor Rodrigues Savegnago e seu orientador Prof. Dr. Paulo Henrique Pisani, a quem expresso minha sincera gratidão). Para poder progredir em direção a um produto comercial, seriam necessários processos de engenharia reversa e contínuos aprimoramentos. 
+
+% uso na UFABC
+Apesar das limitações acima mencionadas, o MCTest é utilizado por alguns docentes e gestores da UFABC, desempenhando um papel de significativa relevância no âmbito da avaliação discente. Essa utilização resulta não apenas em uma notável redução da carga de trabalho repetitivo, mas também contribui para a mitigação de possíveis ocorrências de falhas. 
+
+% implantação
+A implantação do sistema é agilizada por meio da adoção do ambiente \textit{VirtualBox} (\href{https://www.virtualbox.org}{virtualbox.org}), que permite uma implantação local para fins de teste em uma máquina com bom desempenho de processamento, armazenamento (5 GB livre) e memória RAM ($\geq$ 8 GB). Ao optar pela instalação dos sistemas operacionais Ubuntu ou Mint, seguida pela subsequente execução do arquivo \href{https://github.com/fzampirolli/mctest/blob/master/_setup-all.sh}{\_setup-all.sh} disponibilizado no repositório GitHub (\href{https://github.com/fzampirolli/mctest}{github.com/fzampirolli/mctest}), mediante privilégios de administrador, o MCTest é instalado de forma contínua, estando acompanhado por um conjunto inicial de dados de teste presente no arquivo \verb|mctest.sql|. Os exemplos ilustrativos apresentados neste trabalho encontram-se no arquivo \verb|book/1ed-br/mctestLivro.sql|, estando também acessíveis no repositório GitHub. A fim de empregar esses exemplos no MCTest, é necessário observar as instruções fornecidas no arquivo \href{https://github.com/fzampirolli/mctest/blob/master/_setup-all.sh}{\_setup-all.sh}.
+
+A obra foi elaborada em 14 capítulos, divididos em quatro partes principais. A Parte \ref{part:fundamentos} tem como principal objetivo introduzir os leitores ao sistema, oferecendo detalhes sobre seus componentes e funcionalidades essenciais. A Parte \ref{part:questoesMCTest} explora a variedade de tipos de questões disponíveis. A Parte \ref{part:exames} abrange a criação e administração de exames. Por fim, a Parte \ref{part:experimentos} proporciona estudos de caso e exemplos práticos, sendo estes últimos divulgados em artigos científicos. Estes experimentos foram realizados em modalidades híbridas, totalmente remotas e totalmente presenciais. 
+%
+Para aqueles sem interesse na parte paramétrica, que requer conhecimentos de programação, ou sem usar o banco de questões, há a possibilidade de pular diversos capítulos, conforme explicado no final do Capítulo \ref{ch:introducao}.
+
+% CONCLUSÃO
+Ao usar o MCTest, os professores têm à disposição uma ferramenta para aprimorar a avaliação das habilidades e competências dos estudantes. Assim, os docentes conseguem reduzir o esforço exigido na criação e correção de exames e atividades práticas. No entanto, o ponto crucial desse processo reside na ampla coleção de questões elaboradas e disponibilizadas pelos professores da UFABC, que atualmente totalizam 2.273 questões, embora limitadas aos docentes de cada disciplina.
+
+O MCTest permanece em constante processo de evolução e aprimoramento, incentivando os usuários a contribuírem com suas experiências para torná-lo ainda mais eficiente e alinhado com as demandas educacionais em constante transformação.
+
+Ao longo desta obra, as funcionalidades do MCTest serão exploradas, permitindo aos leitores compreenderem suas características e recursos. Espera-se que esse trabalho proveja um guia completo sobre como empregar o MCTest em ambientes educacionais.
+
+A partir de 2023, estudantes de Trabalho de Conclusão de Curso e Mestrado em Ciência da Computação na UFABC desempenham um papel ativo no processo de implementação de melhorias no sistema. Há expectativas de que essas melhorias sejam incorporadas à versão atual disponibilizada no GitHub. É importante ressaltar, contudo, que ainda existem áreas que demandam aprimoramento. Isso inclui a navegação entre as interfaces e a avaliação das competências e habilidades dos estudantes. Por exemplo, em um EP submetido por meio do VPL, quando se requer a utilização de estruturas de repetição com o comando \textit{while}, a avaliação deve ser condizente com o cumprimento ou descumprimento dessa especificação.
+
+Com o intuito de aprimorar a compreensão durante a leitura, é importante salientar que os seguintes termos serão amplamente utilizados ao longo deste trabalho: exercício de programação (EP), questão de múltipla escolha (QM), questão dissertativa ou de texto (QT) e quadro de respostas (QR). Nesse contexto, os estudantes efetuam as marcações das QMs no QR.
+
+Leitores interessados em adquirir versões impressas deste livro podem encontrar mais informações na pasta \verb|book| disponível no seguinte endereço:
+\href{https://github.com/fzampirolli/mctest/tree/master/book/1ed-br}{github.com/fzampirolli/mctest}.
+
+Este livro foi concebido e elaborado exclusivamente pelo autor. No entanto, lamentavelmente, não passou por um processo de revisão formal. Os textos apresentados foram predominantemente avaliados por meio de consultas a redes generativas, pertencentes a uma categoria de modelos de aprendizado de máquina. A compreensão dos colegas interessados é confiada para o aprimoramento de edições futuras por meio de seus valiosos \textit{feedbacks} construtivos.
+
+Finalmente, é de suma importância enfatizar que as opiniões e declarações apresentadas nesta obra são devidamente embasadas por referências sempre que possível, ou por meio de experimentos realizados e devidamente citados no próprio livro. Nos casos em que a obtenção de referências se torna inviável, tais posicionamentos refletem a perspectiva pessoal do autor e não devem ser considerados uma representação oficial da instituição à qual o autor está afiliado.
+
+\begin{verse}
+    \vspace*{2mm}
+	\begin{flushright}
+		Francisco de Assis Zampirolli\\
+            \date{7 de setembro de 2023}
+	\end{flushright}
+\end{verse}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Prefácio da segunda edição -- em construção}
+
+Aprimoramentos e correções realizados no texto da primeira edição deste livro \cite{Zampirolli2023:MCTest}, utilizando o MCTest versão 5.2, serão descritos nesta segunda edição e implementados na versão 5.3 do MCTest. No arquivo \href{https://github.com/fzampirolli/mctest/blob/master/_setup-all.sh}{\_setup-all.sh}, estão detalhadas as instruções para a instalação dessas versões. Agradeço aos colegas que destacaram informações não ressaltadas no texto original, as quais foram incorporadas nesta nova versão, conforme formato descrito a seguir:
+
+\begin{mybox}{corEdicao2}{\textbf{Destaque:\\\vspace{-3mm}\hrule\vspace{3mm}}}
+Este é um exemplo de destaque para chamar a atenção do leitor em algum ponto.
+\end{mybox}
+
+Na tela de atualização de questões, ver Seção \ref{sec:questaoQM} -- \nameref{sec:questaoQM}, foram adicionados cinco novos campos: contador de correções, contador de acertos e, para a Teoria de Resposta ao Item, os parâmetros \(a\)-discriminação, \(b\)-habilidade e \(c\)-chute. Esses parâmetros são fundamentais para a criação de exames adaptativos, ver Seção \ref{sec:testeAdaptativo} -- \nameref{sec:testeAdaptativo}. 
+
+Nesta mesma tela de atualização de questões, o campo de ``Retorno desta alternativa'' (\textit{feedback}) foi alterado para também aceitar a parte paramétrica, entre \verb|[[code:| e \verb|]]|, já incluída em ``Descrição'' e ``Alternativas'' da questão.
+
+
+A Seção \ref{sec:QMparametricaExtra} -- \nameref{sec:QMparametricaExtra} apresenta uma nova questão paramétrica altamente flexível, proporcionando uma extensa variedade de configurações e variações. Esta questão automatiza o processo de geração de itens, incorporando operadores relacionais e não relacionais, e oferece controle sobre parâmetros essenciais, como o número de itens, alternativas, operadores e itens corretos. Este tipo de questão, caracterizado por sua adaptabilidade através de parâmetros configuráveis, revela-se facilmente extensível para uma variedade de conjuntos, não se restringindo exclusivamente aos conjuntos de operadores relacionais e não relacionais. Para tal adaptação, é suficiente que o primeiro conjunto contenha elementos com premissas verdadeiras, enquanto o segundo apresente premissas falsas. Pode-se considerar, por exemplo, conjuntos como caracteres alfanuméricos permitidos em um nome de arquivo/variável versus caracteres proibidos, entre outros.
+
+
+Na tela de atualizar exame, foi adicionado um novo campo para a seleção dos tópicos da disciplina que serão considerados na avaliação, ver Seção \ref{sec:exameTopicos} -- \nameref{sec:exameTopicos}. Após escolher o tópico desejado e clicar no botão ``Salvar'', apenas as questões relacionadas a esse tópico serão apresentadas. Este novo recurso é crucial para otimizar o tempo de carregamento da tela, especialmente em situações em que a disciplina possui inúmeras questões, resultando em uma melhoria significativa na eficiência do processo.
+
+A opção pelo termo ``tela'' em detrimento de ``formulário'' é respaldada pela natureza das interfaces gráficas presentes no MCTest, as quais exibem informações provenientes de registros de banco de dados. Em geral, essas páginas proporcionam uma visão mais abrangente dos atributos desses registros, enriquecendo a compreensão do conteúdo. Apesar da constante necessidade de aprimoramento na Interface Humano-Computador, a escolha por ``tela'' é orientada pela dinâmica e interatividade inerentes às informações apresentadas. Além disso, as figuras deste livro, que são representações visuais desses recortes de tela, buscam ilustrar a experiência do usuário, contribuindo para a compreensão e usabilidade do sistema.
+
+Foi criada a Seção \ref{sec:testeAdaptativo} -- \nameref{sec:testeAdaptativo} para explicar o funcionamento de uma nova funcionalidade opcional que permite a criação de exames adaptativos, considerando o desempenho do estudante em exames anteriores. Para que essa funcionalidade opere corretamente, é necessário que as questões de múltipla escolha estejam classificadas conforme a taxonomia de Bloom e que sejam geradas várias variações do exame. Dessa forma, os estudantes que não obtiveram um bom desempenho em exames anteriores receberão exames personalizados, com níveis de questões classificados nos primeiros níveis dessa taxonomia.
+
+No QRcode apresentado no PDF de um exame, foi incluída também a variação do exame, criada após clicar no botão ``Criar-Variações''. Esse recurso é importante para vincular o PDF digitalizado com as respostas dos estudantes à página do exame que será utilizada para fazer as correções, clicando no botão ``Upload-PDF''. Além disso, com essa informação no QRCode, não é mais necessário criar arquivo criptografado e compactado com o gabarito do exame, anteriormente armazenado no servidor. Agora, o gabarito de cada exame é acessado diretamente no banco de dados, na registro contendo as variações do exame.
+
+Foi inserida a Seção \ref{sec:recomendacoesCap8} -- \nameref{sec:recomendacoesCap8}, para destacar algumas recomendações essenciais para garantir a realização de um exame impresso com questões de múltipla escolha. Por exemplo, o método de correção automática \textbf{NÃO} funcionará se os quatro discos pretos não estiverem intactos na página digitalizada. Além disso, ao utilizar questões disponíveis no banco de dados do MCTest, é necessário clicar no botão ``Criar-Variações'' antes de clicar no botão ``Criar-PDF''. Adicionalmente, o número ID exibido ao lado do botão ``Criar-Variações'' \textbf{DEVE} ser o mesmo número exibido em vermelho na folha do exame impresso, abaixo do cabeçalho. Caso esses números difiram das páginas digitalizadas, a correção automática \textbf{NÃO} funcionará. O código foi adaptado para incluir a variação do exame também no QRCode. No entanto, para aceitar as variações anteriores, seria necessário armazenar todas as variações geradas no banco de dados, o que consumiria muito espaço em disco, sendo inviável no momento.
+
+É altamente aconselhável seguir a prática de, antes de administrar um exame para uma ou diversas turmas com inúmeros estudantes, imprimir uma cópia, preenchê-la e submetê-la a uma correção automatizada. Caso essa abordagem demonstre eficácia durante essa simulação preliminar, é razoável esperar que funcione de maneira adequada durante a situação real de aplicação, correção e fornecimento de \textit{feedback} do exame.
+ 
+A Seção \ref{sec:questoesQM_QT_CodeRunner} – \nameref{sec:questoesQM_QT_CodeRunner} apresenta brevemente a possibilidade de reutilizar questões já criadas no formato Moodle+VPL. Ao exportar essas questões para o formato XML e importá-las para o Moodle com o \textit{plugin} \href{https://moodle.org/plugins/qtype_coderunner}{CodeRunner} instalado, é possível criar avaliações com mais esse recurso no Moodle. Mais exemplos de uso serão incluídos neste livro assim que o \textit{plugin} CodeRunner for incluído no Moodle da UFABC.
+
+Foi incluída na Seção \ref{sec:mctest+moodle+vpl+pdi} -- \nameref{sec:mctest+moodle+vpl+pdi} um resumo que descreve a implementação do MCTest-5 com Moodle+VPL no curso de Processamento Digital de Imagens (PDI). Enquanto os estudos anteriores abordaram cursos introdutórios de lógica de programação, este relato destaca a aplicação dessa integração em um contexto mais específico. O trabalho \textit{``A Practical Digital Image Processing Course with \texttt{morph.py}''} de \citeonline{2024:Zampirolli.Josko-PDI} foi premiado no Simpósio Brasileiro de Educação em Computação, consolidando uma jornada iniciada em 2012. Este curso prático utiliza a biblioteca Python \texttt{morph.py} para auxiliar no ensino de PDI, abordando conceitos desde o básico até avançado, apoiando-se em exemplos e exercícios práticos. Um estudo de caso com 15 participantes validou a eficácia do método, destacando os desafios e soluções encontrados no ensino de PDI para iniciantes.
+
+O Apêndice \ref{ch:apendice} -- \nameref{ch:apendice} descreve uma experiência realizada na disciplina de Processamento da Informação na UFABC no primeiro quadrimestre de 2024, em duas turmas, com o objetivo de substituir a lista de presença por um processo automático de verificação de acesso dos estudantes no Moodle durante as aulas. Foi desenvolvido o serviço \texttt{LabMoodle}, que acompanha as atividades dos estudantes cadastrados em uma disciplina no Moodle. Além disso, foram oferecidos 80 Exercícios de Programação (EPs) com correção automática pelo VPL. A disciplina abordou os conceitos fundamentais de Lógica de Programação e foi ministrada em um laboratório de informática. A estratégia de ensino incluiu aulas conceituais no Google Colab seguidas da resolução dos EPs pelos estudantes, com ênfase em vetores e matrizes. Os resultados foram avaliados por meio de exames elaborados no MCTest e compostos por questões com correção automática utilizando o \textit{plugin} VPL do Moodle. O serviço \texttt{LabMoodle} permitiu o acompanhamento das atividades dos estudantes, destacando a participação e os acessos durante as aulas. Os dados coletados proporcionaram uma análise comparativa entre as duas turmas, evidenciando diferenças no desempenho e na participação dos estudantes antes e após a prova de recuperação. 
+
+O Apêndice \ref{ch:apendiceB} -- \nameref{ch:apendiceB} continua o relato do apêndice anterior, porém focado nos testes adaptativos. Foram aplicados 6 testes, sendo apenas o primeiro não adaptativo. Esses testes foram utilizados como avaliação formativa com objetivo motivacional. Foram implementados 3 formas diferentes de criar esses testes adaptativos: SAT (\textit{Semi-Adaptive Testing}), WPC (\textit{Weighted Probability of Correctness}) e MLE (\textit{Maximum Likelihood Estimation}). A implementação desses testes foi realizada durante o andamento do curso, sendo o último MLE auxiliado pelo estudante Lucas Montagnani Calil Elias, como Trabalho de Conclusão de Curso do Bacharelado em Ciência da Computação na Universidade Federal do ABC. No final do curso, foi aplicado um questionário com 17 respondentes e realizada uma análise da significância estatística.
+
+O Apêndice \ref{ch:apendiceC} -- \nameref{ch:apendiceC} mostra como o SEB (\textit{Safe Exam Browser}) pode ser utilizado para restringir o acesso a uma atividade VPL no Moodle. O arquivo de configuração do SEB foi aplicado à atividade VPL, em várias avaliações na UFABC, garantindo que os alunos acessem apenas por meio do ambiente seguro do SEB. Essa solução robusta e segura, que também restringe o acesso pelos IP's do laboratório, ajuda a evitar o acesso não autorizado e garante a integridade do processo de avaliação.
+
+Finalmente, o Apêndice \ref{ch:apendiceD} -- \nameref{ch:apendiceD} detalha a implementação de um sistema de validação de código Python para o MCTest. A ferramenta Bandit é utilizada para identificar vulnerabilidades em código Python inserido em questões. Um servidor em Go foi criado para receber o código Python de uma questão paramétrica, executar o Bandit e retornar o resultado ao MCTest antes de salvar a questão. A estrutura e o funcionamento do sistema, incluindo a comunicação entre os componentes, são apresentados em detalhes. Este conteúdo é uma adaptação do trabalho de conclusão de curso desenvolvido no curso de Ciência da Computação da Universidade Federal do ABC, no período de 2023-2024, pelo estudante Gabriel Tavares Frota de Azevedo.
+
+\begin{verse}
+    \vspace*{2mm}
+	\begin{flushright}
+		Francisco de Assis Zampirolli\\
+            \date{\today}
+	\end{flushright}
+\end{verse}
