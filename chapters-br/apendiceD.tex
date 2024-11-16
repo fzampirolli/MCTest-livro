@@ -11,7 +11,7 @@ Este apêndice começa apresentando a estrutura inicial de uma validação reali
 O Bandit é uma ferramenta essencial para analisar vulnerabilidades em código Python. Para instalá-lo, utilize o seguinte comando:
 
 \begin{verbatim}
-pip install bandit
+    pip install bandit
 \end{verbatim}
 
 \subsection{Instalação do Go}
@@ -25,10 +25,10 @@ O Go é uma linguagem de programação desenvolvida pelo Google. Para instalá-l
 \end{enumerate}
 
 \begin{verbatim}
-wget https://golang.org/dl/go1.23.3.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.23.3.linux-amd64.tar.gz
-sudo sed -i '$ a export PATH=$PATH:/usr/local/go/bin' ~/.bashrc
-source ~/.bashrc
+    wget https://golang.org/dl/go1.23.3.linux-amd64.tar.gz
+    sudo tar -C /usr/local -xzf go1.23.3.linux-amd64.tar.gz
+    sudo sed -i '$ a export PATH=$PATH:/usr/local/go/bin' ~/.bashrc
+    source ~/.bashrc
 \end{verbatim}
 
 \section{Criar um projeto simples para troca de mensagens}
@@ -36,32 +36,51 @@ source ~/.bashrc
 Para criar um projeto Go simples que aplica requisições REST usando o método POST, seguir os passos abaixo. Este exemplo ilustrará como configurar um servidor básico que aceita dados em formato JSON via POST e retorna uma resposta.
 
 \subsubsection{Estrutura do Projeto}
-Criar uma estrutura de diretórios simples:
+Criar uma estrutura de diretório e arquivos como apresentado na Figura \ref{fig:estrutura-simple-rest-api}.
 
-\begin{verbatim}
-simple-rest-api
-|-- go.mod
-|-- go.sum
-|-- main.go
-\end{verbatim}
+\begin{figure}[h!]%
+    \centering
+    \begin{tikzpicture}[
+        grow=right,
+        edge from parent/.style={draw,thick},
+        every node/.style={draw,rounded corners,anchor=north, align=center, text width=2.5cm}, % Ajuste de largura para 2.5cm
+        level distance=4cm,
+        sibling distance=2.5cm,
+        scale=0.8,
+        transform shape,
+        folder/.style={rectangle, draw, fill=blue!10}, % Estilo para pastas com filhos
+        file/.style={rectangle, draw, fill=yellow!20, text centered}, % Estilo para arquivos
+        level 1/.style={sibling distance=2cm,level distance=4cm},
+        level 2/.style={sibling distance=2.3cm,level distance=4cm},
+        level 3/.style={sibling distance=0.9cm,level distance=4cm}
+    ]
+    \node[folder] {simple-rest-api}
+        child {node[file] {go.mod}}
+        child {node[file] {go.sum}}
+        child {node[file] {main.go}};
+\end{tikzpicture}
+\caption{Diretório e arquivos de \texttt{simple-rest-api}.}
+\label{fig:estrutura-simple-rest-api}
+\end{figure}%
+
 
 \subsubsection{Passo 1: Inicializar o Projeto}
 
 \begin{enumerate}
     \item Criar um novo diretório para o projeto:
     \begin{verbatim}
-    mkdir simple-rest-api
-    cd simple-rest-api
+mkdir simple-rest-api
+cd simple-rest-api
     \end{verbatim}
 
     \item Inicializar um novo módulo Go:
     \begin{verbatim}
-    go mod init simple-rest-api
+go mod init simple-rest-api
     \end{verbatim}
 
     \item Adicionar a dependência do Gin:
     \begin{verbatim}
-    go get github.com/gin-gonic/gin
+go get github.com/gin-gonic/gin
     \end{verbatim}
 \end{enumerate}
 
@@ -111,7 +130,7 @@ O Código \ref{lst:mainGo} define uma API simples utilizando a biblioteca Gin. A
 Para executar o servidor, usar o seguinte comando:
 
 \begin{verbatim}
-go run main.go
+        go run main.go
 \end{verbatim}
 
 Isso iniciará um servidor na porta 8080.
@@ -121,8 +140,9 @@ Isso iniciará um servidor na porta 8080.
 Testar a API usando \texttt{curl} ou uma ferramenta como Postman. Aqui está um exemplo usando \texttt{curl}:
 
 \begin{verbatim}
-curl -X POST http://localhost:8080/message -H "Content-Type: application/json" \
--d '{"text": "Hello, World!"}'
+        curl -X POST http://localhost:8080/message \
+        -H "Content-Type: application/json" \
+        -d '{"text": "Hello, World!"}'
 \end{verbatim}
 
 \subsubsection{Resposta Esperada}
@@ -130,18 +150,24 @@ curl -X POST http://localhost:8080/message -H "Content-Type: application/json" \
 Se tudo estiver configurado corretamente, a resposta deverá ser esta:
 
 \begin{verbatim}
-{
-    "received": "Hello, World!"
-}
+        {
+            "received": "Hello, World!"
+        }
 \end{verbatim}
 
 O diagrama apresentado na Figura \ref{fig:figGo01} ilustra a interação entre um cliente e um servidor de API durante uma requisição POST para o rota final \texttt{/message}. O cliente envia um JSON contendo a mensagem \texttt{"text": "Hello, World!"}. O servidor valida o formato JSON recebido. Se ocorrer um erro de validação, o servidor responde com um erro 400 (\textit{Bad Request}) informando que o campo \texttt{text} é obrigatório. Caso a validação seja bem-sucedida, o servidor processa a mensagem e retorna uma resposta 200 (\textit{OK}) com a mensagem recebida, confirmando o processamento. Veja a seguir uma captura de saída do servidor com a primeira requisição POST correta e duas requisições POST com erros:
 
-\begin{verbatim}
-[GIN] 2024/11/15 - 10:09:12 | 200 |  2.730988ms |  ::1 | POST  "/message"
-[GIN] 2024/11/15 - 10:09:51 | 400 |   101.305µs |  ::1 | POST  "/message"
-[GIN] 2024/11/15 - 10:10:16 | 400 |    98.401µs |  ::1 | POST  "/message"
-\end{verbatim}
+
+\begin{myboxCode}{corCSV}{\textbf{Saída do servidor:}}\vspace{3mm}
+    \hrule
+    {\footnotesize
+    \begin{verbatim}
+    [GIN] 2024/11/15 - 10:09:12 | 200 |  2.730988ms |  ::1 | POST  "/message"
+    [GIN] 2024/11/15 - 10:09:51 | 400 |   101.305µs |  ::1 | POST  "/message"
+    [GIN] 2024/11/15 - 10:10:16 | 400 |    98.401µs |  ::1 | POST  "/message"
+    \end{verbatim}
+    }
+    \end{myboxCode}
     
 
 \begin{figure}[!ht]
@@ -159,7 +185,7 @@ Nesta seção, será demonstrado um exemplo básico de utilização do \texttt{B
 
 \subsection{Criação do Arquivo \texttt{example.py}}
 
-Primeiro, crie um arquivo chamado \texttt{example.py} com o seguinte conteúdo:
+Primeiro, crie um arquivo chamado \texttt{example.py} com o conteúdo apresentado no Código \ref{lst:example.py}.
 
 \begin{listing}[!ht]
     \begin{myboxCode}{corCodigo}{\textbf{Código Python: }}\vspace{3mm}
@@ -167,7 +193,7 @@ Primeiro, crie um arquivo chamado \texttt{example.py} com o seguinte conteúdo:
     \begin{minted}[xleftmargin=20pt,linenos=true]{Python}
 import subprocess
 
-def unsafe_function():
+def unsafe_method():
     subprocess.call('ls')  # Potencialmente inseguro
 \end{minted}
 \end{myboxCode}
@@ -175,14 +201,14 @@ def unsafe_function():
 \label{lst:example.py}
 \end{listing}
 
-O código acima contém uma função \texttt{unsafe\_function} que utiliza o comando \texttt{subprocess.call} para executar um comando externo. Essa abordagem pode ser insegura, especialmente se as entradas do comando forem manipuladas por usuários externos.
+O código acima contém um método \texttt{unsafe\_method} que utiliza o comando \texttt{subprocess.call} para executar um comando externo. Essa abordagem pode ser insegura, especialmente se as entradas do comando forem manipuladas por usuários externos.
 
 \subsection{Instalação do \texttt{Bandit}}
 
 Para instalar o \texttt{Bandit}, utilize o comando a seguir:
 
 \begin{verbatim}
-pip install bandit
+        pip install bandit
 \end{verbatim}
 
 Mais detalhes sobre outras formas de instalação serão abordados no próximo capítulo.
@@ -192,7 +218,7 @@ Mais detalhes sobre outras formas de instalação serão abordados no próximo c
 Após a instalação, execute o seguinte comando para realizar a análise de segurança no arquivo \texttt{example.py}:
 
 \begin{verbatim}
-bandit -f json -r example.py
+        bandit -f json -r example.py
 \end{verbatim}
 
 Esse comando gera um relatório no formato \texttt{JSON}, identificando potenciais vulnerabilidades no código. O relatório apresenta detalhes, incluindo o trecho de código afetado, número da linha, links para documentação relevante, e recomendações para mitigar os riscos. O Código \ref{lst:Report-example.py} apresenta trecho desse \texttt{JSON}.
@@ -221,7 +247,7 @@ Esse comando gera um relatório no formato \texttt{JSON}, identificando potencia
   },
   "results": [
     {
-      "code": "1 import subprocess\n2 def unsafe_function():\n\
+      "code": "1 import subprocess\n2 def unsafe_method():\n\
                 3     subprocess.call('ls') # Potencialmente inseguro\n",
       ...
       "issue_confidence": "HIGH",
@@ -250,9 +276,9 @@ Esse comando gera um relatório no formato \texttt{JSON}, identificando potencia
 
 \subsection{Interpretação do Relatório}
 
-O relatório gerado pelo \texttt{Bandit} aplicado no arquivo \texttt{example.py}, conforme mostrado no Código \ref{lst:Report-example.py}, indica que o uso da função \texttt{subprocess.call} na função \texttt{unsafe\_function} pode introduzir vulnerabilidades no sistema. Isso ocorre porque comandos externos podem ser executados de forma incontrolada, especialmente quando as entradas não são validadas adequadamente.
+O relatório gerado pelo \texttt{Bandit} aplicado no arquivo \texttt{example.py}, conforme mostrado no Código \ref{lst:Report-example.py}, indica que o uso do método \texttt{subprocess.call} no método \texttt{unsafe\_method} pode introduzir vulnerabilidades no sistema. Isso ocorre porque comandos externos podem ser executados de forma incontrolada, especialmente quando as entradas não são validadas adequadamente.
 %
-A análise realizada pelo comando \texttt{bandit -f json -r example.py}, conforme o Código \ref{lst:example.py}, identificou três vulnerabilidades de baixa gravidade (\texttt{SEVERITY.LOW}), todas com alta confiança (\texttt{CONFIDENCE.HIGH}). Os alertas estão associados ao uso do módulo \texttt{subprocess} na função \texttt{unsafe\_function}, conforme descrito abaixo:
+A análise realizada pelo comando \texttt{bandit -f json -r example.py}, conforme o Código \ref{lst:example.py}, identificou três vulnerabilidades de baixa gravidade (\texttt{SEVERITY.LOW}), todas com alta confiança (\texttt{CONFIDENCE.HIGH}). Os alertas estão associados ao uso do módulo \texttt{subprocess} no método \texttt{unsafe\_method}, conforme descrito abaixo:
 
 \begin{itemize}
     \item \textbf{Teste B404}: Destaca implicações de segurança relacionadas ao uso do módulo \texttt{subprocess}, conforme detalhado no link da CWE \href{https://cwe.mitre.org/data/definitions/78.html}{CWE-78}.
@@ -266,7 +292,7 @@ A análise realizada pelo comando \texttt{bandit -f json -r example.py}, conform
 Este projeto foi desenvolvido pelo estudante Gabriel Tavares Frota de Azevedo e está disponível no GitHub: \href{https://github.com/leirbagseravat/mctest-validator-api}{\texttt{mctest-validator-api}}.
 
 
-A sequência de instruções apresentada no Código \ref{lst:bashGo} pode ser utilizada para instalar o projeto \texttt{mctest-validator-api} do GitHub do MCTest. A sequência instala a biblioteca \texttt{bandit}, baixa a linguagem de programação \texttt{Go} e baixa o projeto \texttt{mctest-validator-api} do GitHub, configura o Go e inicia o servidor.
+A sequência de instruções apresentada no Código \ref{lst:scriptMCTest} pode ser utilizada para instalar o projeto \texttt{mctest-validator-api} do GitHub do MCTest. A sequência instala a biblioteca \texttt{bandit}, baixa a linguagem de programação \texttt{Go} e baixa o projeto \texttt{mctest-validator-api} do GitHub, configura o Go e inicia o servidor.
 
 \begin{listing}[!ht]
 \begin{myboxCode}{corCodigo}{\textbf{Código Bash: }}\vspace{3mm}
@@ -285,19 +311,21 @@ go run main.go > logfile.txt 2>&1 & # Executar a aplicação mctest-validator-ap
 \end{minted}
 \end{myboxCode}
 \caption{Trecho incluído no arquivo de instalação \texttt{setup\_all.sh}, disponível no GitHub do projeto do MCTest, para a instalação do serviço \texttt{mctest-validator-api}.}
-\label{lst:bashGo}
+\label{lst:scriptMCTest}
 \end{listing}
 
-Esse conjunto de instruções apresentado no Código \ref{lst:bashGo} foi incluído no \textit{script} de instalação \texttt{\_setup-all.sh}, disponível no GitHub do projeto do MCTest. Para mais detalhes, ver a Seção \ref{sec:instalacao} -- \nameref{sec:instalacao}.
+Esse conjunto de instruções apresentado no Código \ref{lst:scriptMCTest} foi incluído no \textit{script} de instalação \texttt{\_setup-all.sh}, disponível no GitHub do projeto do MCTest. Para mais detalhes, ver a Seção \ref{sec:instalacao} -- \nameref{sec:instalacao}.
 
 \subsection{Ajuste no MCTest}\label{sec:contexto}
 
 Os ajustes realizados no \textit{MCTest} focaram nos serviços de criação e atualização de questões, envolvendo modificações nos arquivos \texttt{views.py} e \texttt{UtilsMCTest4.py}, localizados na pasta \texttt{topic} do projeto \textit{MCTest} no GitHub \href{https://github.com/fzampirolli/mctest}{github.com/fzampirolli/mctest}. Durante o salvamento de uma questão, esses serviços validam os campos do formulário para assegurar que estão de acordo com os requisitos definidos. O objetivo dessas modificações é garantir que as questões estejam em conformidade com critérios de segurança e formatação.
 
-Uma das alterações principais foi a criação da função \texttt{generateCode}, apresentada no Código \ref{lst:generateCode}, que foi incorporada ao arquivo \texttt{UtilsMCTest4.py}. Essa função utiliza os parâmetros \texttt{request}, \texttt{question} e \texttt{pk}, processando o texto da questão ao dividi-lo em linhas e eliminando espaços em branco desnecessários. Cada linha tratada é armazenada em uma lista, que é posteriormente concatenada na \textit{string} \texttt{mystr}, conforme ilustrado nas linhas 2 a 10 do código.
+Uma das alterações principais foi a criação do método \texttt{generateCode}, apresentada no Código \ref{lst:generateCode}, que foi incorporada ao arquivo \texttt{UtilsMCTest4.py}. Esse método utiliza os parâmetros \texttt{request}, \texttt{question} e \texttt{pk}, processando o texto da questão ao dividi-lo em linhas e eliminando espaços em branco desnecessários. Cada linha tratada é armazenada em uma lista, que é posteriormente concatenada na \textit{string} \texttt{mystr}, conforme ilustrado nas linhas 2 a 10 do código.
 
 \begin{listing}[!ht]
-\begin{minted}[xleftmargin=20pt,linenos=true,fontsize=\small]{python}
+    \begin{myboxCode}{corCodigo}{\textbf{Código Python: }}\vspace{3mm}
+    \hrule
+    \begin{minted}[xleftmargin=20pt,linenos=true]{python}
 def generateCode(request, question, pk):
     AllLines = question.splitlines()
     for i in range(len(AllLines)):
@@ -324,16 +352,20 @@ def generateCode(request, question, pk):
             return render(request, 'exam/exam_errors.html', 
                           {'error_json': error_message})
 \end{minted}
-\caption{Função que filtra código em Python da questão e valida em \texttt{mctest-validator}}
+\end{myboxCode}
+\caption{Método que filtra código em Python da questão e valida em \texttt{mctest-validator}}
 \label{lst:generateCode}
 \end{listing}
 
-A \textit{string} resultante é passada para a função \texttt{get\_code} (linha 11), responsável por identificar definições de funções no texto da questão. Caso sejam detectadas definições de código Python delimitadas por ``\texttt{[[def:}'' e ``\texttt{]]}'', essas linhas são enviadas para validação por meio de uma requisição \textit{HTTP POST}. A URL da API é construída dinamicamente utilizando o identificador \texttt{pk}. O Código \ref{lst:generateCode} apresenta os detalhes dessa operação.
 
-A API de validação retorna um relatório em formato \textit{JSON}, que é analisado para identificar possíveis erros. Caso um erro seja detectado, uma mensagem detalhada é exibida ao usuário em uma página de erros. A função \texttt{generateCode}, se identificar problemas, interrompe o fluxo de execução e retorna a validação. Caso contrário, a função \texttt{formset.save()} é acionada, e o usuário é redirecionado para a URL especificada. O arquivo \texttt{exam\_errors.html}, na pasta \texttt{exam/template/exam}, foi modificado para incluir o código apresentado no Código \ref{lst:formatJson}, o qual trata o conteúdo \textit{JSON} retornado pela API.
+A \textit{string} resultante é passada para o método \texttt{get\_code} (linha 11), responsável por identificar definições de funções no texto da questão. Caso sejam detectadas definições de código Python delimitadas por ``\texttt{[[def:}'' e ``\texttt{]]}'', essas linhas são enviadas para validação por meio de uma requisição \textit{HTTP POST}. A URL da API é construída dinamicamente utilizando o identificador \texttt{pk}. O Código \ref{lst:generateCode} apresenta os detalhes dessa operação.
+
+A API de validação retorna um relatório em formato \textit{JSON}, que é analisado para identificar possíveis erros. Caso um erro seja detectado, uma mensagem detalhada é exibida ao usuário em uma página de erros. O método \texttt{generateCode}, se identificar problemas, interrompe o fluxo de execução e retorna a validação. Caso contrário, o método \texttt{formset.save()} é acionada, e o usuário é redirecionado para a URL especificada. O arquivo \texttt{exam\_errors.html}, na pasta \texttt{exam/template/exam}, foi modificado para incluir o código apresentado no Código \ref{lst:erroHTML}, o qual trata o conteúdo \textit{JSON} retornado pela API.
 
 \begin{listing}[!ht]
-\begin{minted}[xleftmargin=20pt,linenos=true,fontsize=\small]{html}
+    \begin{myboxCode}{corCodigo}{\textbf{Código HTML: }}\vspace{3mm}
+    \hrule
+    \begin{minted}[xleftmargin=20pt,linenos=true]{HTML}
 ...
 <!-- Display JSON formatted error details -->
 {% if error_json %}
@@ -352,29 +384,34 @@ A API de validação retorna um relatório em formato \textit{JSON}, que é anal
 ...
 {% endif %}
 \end{minted}
-\caption{Trecho de código para tratar o conteúdo \textit{JSON} retornado pelo \texttt{requests} da função \texttt{generateCode}}
-\label{lst:formatJson}
+\end{myboxCode}
+\caption{Trecho de código para tratar o conteúdo \textit{JSON} retornado pelo \texttt{requests} do método \texttt{generateCode}}
+\label{lst:erroHTML}
 \end{listing}
 
-A função \texttt{generateCode} é utilizada nas \textit{views} \texttt{QuestionCreate} e \texttt{UpdateQuestion} no arquivo \texttt{views.py}, antes de as alterações serem salvas no banco de dados. O Código \ref{lst:updateQuestionView} exemplifica sua utilização em uma atualização de questão, com destaque para as linhas adicionadas.
+
+O método \texttt{generateCode} é utilizada nas \textit{views} \texttt{QuestionCreate} e \texttt{UpdateQuestion} no arquivo \texttt{views.py}, antes de as alterações serem salvas no banco de dados. O Código \ref{lst:updateQuestionView} exemplifica sua utilização em uma atualização de questão, com destaque para as linhas adicionadas.
 
 \begin{listing}[!ht]
-\begin{minted}[xleftmargin=20pt,linenos=true,fontsize=\small]{python}
+    \begin{myboxCode}{corCodigo}{\textbf{Código Python: }}\vspace{3mm}
+    \hrule
+    \begin{minted}[xleftmargin=20pt,linenos=true]{python}
 ...
-if formset.is_valid():
-  valida = UtilsMC.generateCode(request, question_inst.question_text, pk)
-  if valida is not None:
-    return valida
+#  Método criado por Gabriel Tavares Frota de Azevedo para o TCC do BCC/UFABC.
+validation = UtilsMC.generateCode(request, question_inst.question_text, pk)
+if validation is not None:
+    return validation
 
-  formset.save()
-  return HttpResponseRedirect('/topic/question/' + str(pk) + '/update/')
+question_inst.save()
 ...
 \end{minted}
-\caption{Trecho de código incluído na \textit{view} de atualização de questão para chamar a função \texttt{generateCode}}
+\end{myboxCode}
+\caption{Trecho de código incluído na \textit{view} de atualização de questão para chamar o método \texttt{generateCode}}
 \label{lst:updateQuestionView}
 \end{listing}
 
-O propósito da função \texttt{generateCode} é garantir a segurança e integridade das questões geradas, implementando um sistema eficiente de validação automatizada.
+
+O propósito do método \texttt{generateCode} é garantir a segurança e integridade das questões geradas, implementando um sistema eficiente de validação automatizada.
 
 \subsection{Comunicação entre MCTest e \texttt{mctest-validator}}\label{sec:contexto}
 
@@ -456,7 +493,7 @@ O fluxo começa com \texttt{main.go} iniciando a aplicação, configurando o rot
 
 \begin{figure}[h!]%
     \centering%
-    \includegraphics[width=\textwidth]{ApeD_plantuml.png}
+    \rotatebox{270}{\includegraphics[width=0.96\textheight]{ApeD_plantuml.png}}
     \caption{Mensagens entre os diversos arquivos de \texttt{mctest-validator}.}
     \label{fig:plantuml}
 \end{figure}%
