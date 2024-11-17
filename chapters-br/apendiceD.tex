@@ -1,11 +1,11 @@
-\mychapter{Sobre Validação de Código}\label{ch:apendiceD}
+\mychapter{Sobre validação de código}\label{ch:apendiceD}
 
-Este apêndice trata da validação de código Python em uma questão paramétrica antes de ser salvo no banco de dados. Esta é uma adaptação do Trabalho de Conclusão de Curso do Programa de Graduação em Ciência da Computação (área de concentração: Segurança da Informação), como parte dos requisitos necessários para a obtenção do título de Bacharel em Ciência da Computação do estudante Gabriel Tavares Frota de Azevedo. O trabalho foi desenvolvido no curso de Ciência da Computação da Universidade Federal do ABC, no período de 2023-2024. 
+Este apêndice trata da validação de código Python em uma questão paramétrica antes de ser salvo no banco de dados. Esta é uma adaptação do Trabalho de Conclusão de Curso do Programa de Graduação em Ciência da Computação (área de concentração: Segurança da Informação), como parte dos requisitos necessários para a obtenção do título de Bacharel em Ciência da Computação do estudante Gabriel Tavares Frota de Azevedo. O trabalho foi desenvolvido no curso da Universidade Federal do ABC, no período de 2023-2024. 
 
 Este apêndice começa apresentando a estrutura inicial de uma validação realizada na linguagem de programação Go, também conhecida como GoLang. Em seguida, apresenta a solução proposta pelo estudante Gabriel. Por fim, o apêndice apresenta um resumo do trabalho desenvolvido.
 
 
-\section{Instalações e Bibliotecas Usadas}
+\section{Instalações e bibliotecas usadas}
 
 \subsection{Instalação do Bandit}
 O Bandit é uma ferramenta essencial para analisar vulnerabilidades em código Python. Para instalá-lo, utilize o seguinte comando:
@@ -35,7 +35,7 @@ O Go é uma linguagem de programação desenvolvida pelo Google. Para instalá-l
 
 Para criar um projeto Go simples que aplica requisições REST usando o método POST, seguir os passos abaixo. Este exemplo ilustrará como configurar um servidor básico que aceita dados em formato JSON via POST e retorna uma resposta.
 
-\subsubsection{Estrutura do Projeto}
+\subsubsection{Estrutura do projeto}
 Criar uma estrutura de diretório e arquivos como apresentado na Figura \ref{fig:estrutura-simple-rest-api}.
 
 \begin{figure}[h!]%
@@ -64,7 +64,7 @@ Criar uma estrutura de diretório e arquivos como apresentado na Figura \ref{fig
 \end{figure}%
 
 
-\subsubsection{Passo 1: Inicializar o Projeto}
+\subsubsection{Passo 1: Inicializar o projeto}
 
 \begin{enumerate}
     \item Criar um novo diretório para o projeto:
@@ -82,11 +82,12 @@ go mod init simple-rest-api
     \begin{verbatim}
 go get github.com/gin-gonic/gin
     \end{verbatim}
+    Esse comando baixa e integra a biblioteca no ambiente de desenvolvimento, tornando possível utilizar as funcionalidades do Gin, como roteamento, manipulação de requisições HTTP e construção de APIs. 
 \end{enumerate}
 
-\subsubsection{Passo 2: Criar o Arquivo \texttt{main.go}}
+\subsubsection{Passo 2: Criar o arquivo \texttt{main.go}}
 
-Agora, criar o arquivo \texttt{main.go} e adicionar o Código \ref{lst:mainGo}:
+O Código \ref{lst:mainGo} (arquivo \texttt{main.go}) define uma API simples utilizando a biblioteca Gin. A estrutura \verb|Message| representa o formato JSON esperado para a requisição. O servidor disponibiliza uma rota POST em \verb|/message|. Quando a rota é acessada, o código decodifica o corpo da requisição para a estrutura \verb|Message|. Caso a validação do JSON falhe (campo \verb|text| ausente ou estrutura inválida), o servidor retorna um erro (\textit{HTTP Status Code 400 Bad Request}) com detalhes do erro. Se a validação for bem-sucedida, o servidor processa a mensagem e retorna uma resposta (\textit{HTTP Status Code 200 OK}) confirmando o recebimento do texto.
 
 \begin{listing}[!ht]
     \begin{myboxCode}{corCodigo}{\textbf{Código Go: }}\vspace{3mm}
@@ -123,9 +124,8 @@ func main() {
 \label{lst:mainGo}
 \end{listing}
 
-O Código \ref{lst:mainGo} define uma API simples utilizando a biblioteca Gin. A estrutura \verb|Message| representa o formato JSON esperado para a requisição. O servidor disponibiliza uma rota POST em \verb|/message|. Quando a rota é acessada, o código decodifica o corpo da requisição para a estrutura \verb|Message|. Caso a validação do JSON falhe (campo \verb|text| ausente ou estrutura inválida), o servidor retorna um erro (\textit{HTTP Status Code 400 Bad Request}) com detalhes do erro. Se a validação for bem-sucedida, o servidor processa a mensagem e retorna uma resposta (\textit{HTTP Status Code 200 OK}) confirmando o recebimento do texto.
 
-\subsubsection{Passo 3: Executar o Servidor}
+\subsubsection{Passo 3: Executar o servidor}
 
 Para executar o servidor, usar o seguinte comando:
 
@@ -137,7 +137,7 @@ Isso iniciará um servidor na porta 8080.
 
 \subsubsection{Passo 4: Testar a API}
 
-Testar a API usando \texttt{curl} ou uma ferramenta como Postman. Aqui está um exemplo usando \texttt{curl}:
+Testar a API usando \texttt{curl}. Aqui está um exemplo usando \texttt{curl}:
 
 \begin{verbatim}
         curl -X POST http://localhost:8080/message \
@@ -145,7 +145,7 @@ Testar a API usando \texttt{curl} ou uma ferramenta como Postman. Aqui está um 
         -d '{"text": "Hello, World!"}'
 \end{verbatim}
 
-\subsubsection{Resposta Esperada}
+\subsubsection{Resposta esperada}
 
 Se tudo estiver configurado corretamente, a resposta deverá ser esta:
 
@@ -155,7 +155,7 @@ Se tudo estiver configurado corretamente, a resposta deverá ser esta:
         }
 \end{verbatim}
 
-O diagrama apresentado na Figura \ref{fig:figGo01} ilustra a interação entre um cliente e um servidor de API durante uma requisição POST para o rota final \texttt{/message}. O cliente envia um JSON contendo a mensagem \texttt{"text": "Hello, World!"}. O servidor valida o formato JSON recebido. Se ocorrer um erro de validação, o servidor responde com um erro 400 (\textit{Bad Request}) informando que o campo \texttt{text} é obrigatório. Caso a validação seja bem-sucedida, o servidor processa a mensagem e retorna uma resposta 200 (\textit{OK}) com a mensagem recebida, confirmando o processamento. Veja a seguir uma captura de saída do servidor com a primeira requisição POST correta e duas requisições POST com erros:
+O diagrama apresentado na Figura \ref{fig:figGo01} ilustra a interação entre um cliente e um servidor de API durante uma requisição POST para o rota final \texttt{/message}. O cliente envia um JSON contendo a mensagem \texttt{"text": "Hello, World!"}. O servidor valida o formato JSON recebido. Se ocorrer um erro de validação, o servidor responde com um erro 400 (\textit{Bad Request}) informando que o campo \texttt{text} é obrigatório. Caso a validação seja bem-sucedida, o servidor processa a mensagem e retorna uma resposta 200 (\textit{OK}) com a mensagem recebida, confirmando o processamento. Veja a seguir uma captura de saída do servidor com a primeira requisição POST correta e duas requisições com erros:
 
 
 \begin{myboxCode}{corCSV}{\textbf{Saída do servidor:}}\vspace{3mm}
@@ -177,13 +177,13 @@ O diagrama apresentado na Figura \ref{fig:figGo01} ilustra a interação entre u
     \label{fig:figGo01}
 \end{figure}
 
-Este exemplo é básico e pode ser expandido para incluir mais rotas, métodos HTTP, manipulação de erros, e integração com um banco de dados, como será apresentado na Seção \ref{sec:projeto-servidor-mctest-validator}. Antes, será apresentado como utilizar a bibliodeca \texttt{Bandit} para analisar segurança de código em \textit{Python}.
+Este exemplo é básico e pode ser expandido para incluir mais rotas, métodos HTTP, manipulação de erros, e integração com um banco de dados, como será apresentado na Seção \ref{sec:projeto-servidor-mctest-validator}. Antes, será apresentado como utilizar a bibliodeca \texttt{Bandit} para analisar segurança de código em Python.
 
-\section{Exemplo Simples de Uso do \texttt{Bandit}}\label{sec:exemplo-bandit}
+\section{Exemplo simples de uso do \texttt{Bandit}}\label{sec:exemplo-bandit}
 
-Nesta seção, será demonstrado um exemplo básico de utilização do \texttt{Bandit} para análise de segurança de código em \textit{Python}. O \texttt{Bandit} é uma ferramenta que examina \textit{scripts} \textit{Python} em busca de potenciais vulnerabilidades.
+Nesta seção, será demonstrado um exemplo básico de utilização do \texttt{Bandit} para análise de segurança de código em Python. O \texttt{Bandit} é uma ferramenta que examina \textit{scripts} Python em busca de potenciais vulnerabilidades.
 
-\subsection{Criação do Arquivo \texttt{example.py}}
+\subsection{Criação do arquivo \texttt{example.py}}
 
 Primeiro, crie um arquivo chamado \texttt{example.py} com o conteúdo apresentado no Código \ref{lst:example.py}.
 
@@ -197,7 +197,7 @@ def unsafe_method():
     subprocess.call('ls')  # Potencialmente inseguro
 \end{minted}
 \end{myboxCode}
-\caption{Exemplo de código \textit{Python} com potencial vulnerabilidade}
+\caption{Exemplo de código Python com potencial vulnerabilidade.}
 \label{lst:example.py}
 \end{listing}
 
@@ -211,9 +211,7 @@ Para instalar o \texttt{Bandit}, utilize o comando a seguir:
         pip install bandit
 \end{verbatim}
 
-Mais detalhes sobre outras formas de instalação serão abordados no próximo capítulo.
-
-\subsection{Análise do Arquivo com o \texttt{Bandit}}
+\subsection{Análise do arquivo com o \texttt{Bandit}}
 
 Após a instalação, execute o seguinte comando para realizar a análise de segurança no arquivo \texttt{example.py}:
 
@@ -221,7 +219,7 @@ Após a instalação, execute o seguinte comando para realizar a análise de seg
         bandit -f json -r example.py
 \end{verbatim}
 
-Esse comando gera um relatório no formato \texttt{JSON}, identificando potenciais vulnerabilidades no código. O relatório apresenta detalhes, incluindo o trecho de código afetado, número da linha, links para documentação relevante, e recomendações para mitigar os riscos. O Código \ref{lst:Report-example.py} apresenta trecho desse \texttt{JSON}.
+Esse comando gera um relatório no formato JSON, identificando potenciais vulnerabilidades no código. O relatório apresenta detalhes, incluindo o trecho de código afetado, número da linha, links para documentação relevante, e recomendações para mitigar os riscos. O Código \ref{lst:Report-example.py} apresenta trecho desse JSON.
 \begin{listing}[!ht]
     \begin{myboxCode}{corCodigo}{\textbf{Código JSON: }}\vspace{3mm}
     \hrule
@@ -274,7 +272,7 @@ Esse comando gera um relatório no formato \texttt{JSON}, identificando potencia
 
 
 
-\subsection{Interpretação do Relatório}
+\subsection{Interpretação do relatório}
 
 O relatório gerado pelo \texttt{Bandit} aplicado no arquivo \texttt{example.py}, conforme mostrado no Código \ref{lst:Report-example.py}, indica que o uso do método \texttt{subprocess.call} no método \texttt{unsafe\_method} pode introduzir vulnerabilidades no sistema. Isso ocorre porque comandos externos podem ser executados de forma incontrolada, especialmente quando as entradas não são validadas adequadamente.
 %
@@ -310,7 +308,7 @@ go mod tidy # Baixar e instalar as dependências
 go run main.go > logfile.txt 2>&1 & # Executar a aplicação mctest-validator-api
 \end{minted}
 \end{myboxCode}
-\caption{Trecho incluído no arquivo de instalação \texttt{setup\_all.sh}, disponível no GitHub do projeto do MCTest, para a instalação do serviço \texttt{mctest-validator-api}.}
+\caption{Trecho de instruções para a instalação do serviço \texttt{mctest-validator-api}.}
 \label{lst:scriptMCTest}
 \end{listing}
 
@@ -318,7 +316,7 @@ Esse conjunto de instruções apresentado no Código \ref{lst:scriptMCTest} foi 
 
 \subsection{Ajuste no MCTest}\label{sec:contexto}
 
-Os ajustes realizados no \textit{MCTest} focaram nos serviços de criação e atualização de questões, envolvendo modificações nos arquivos \texttt{views.py} e \texttt{UtilsMCTest4.py}, localizados na pasta \texttt{topic} do projeto \textit{MCTest} no GitHub \href{https://github.com/fzampirolli/mctest}{github.com/fzampirolli/mctest}. Durante o salvamento de uma questão, esses serviços validam os campos do formulário para assegurar que estão de acordo com os requisitos definidos. O objetivo dessas modificações é garantir que as questões estejam em conformidade com critérios de segurança e formatação.
+Os ajustes realizados no MCTest focaram nos serviços de criação e atualização de questões, envolvendo modificações nos arquivos \texttt{views.py} e \texttt{UtilsMCTest4.py}, localizados na pasta \texttt{topic} do projeto MCTest no GitHub \href{https://github.com/fzampirolli/mctest}{github.com/fzampirolli/mctest}. Durante o salvamento de uma questão, esses serviços validam os campos do formulário para assegurar que estão de acordo com os requisitos definidos. O objetivo dessas modificações é garantir que as questões estejam em conformidade com critérios de segurança e formatação.
 
 Uma das alterações principais foi a criação do método \texttt{generateCode}, apresentada no Código \ref{lst:generateCode}, que foi incorporada ao arquivo \texttt{UtilsMCTest4.py}. Esse método utiliza os parâmetros \texttt{request}, \texttt{question} e \texttt{pk}, processando o texto da questão ao dividi-lo em linhas e eliminando espaços em branco desnecessários. Cada linha tratada é armazenada em uma lista, que é posteriormente concatenada na \textit{string} \texttt{mystr}, conforme ilustrado nas linhas 2 a 10 do código.
 
@@ -353,14 +351,14 @@ def generateCode(request, question, pk):
                           {'error_json': error_message})
 \end{minted}
 \end{myboxCode}
-\caption{Método que filtra código em Python da questão e valida em \texttt{mctest-validator}}
+\caption{Método que filtra código em Python da questão e valida em \texttt{mctest-validator}.}
 \label{lst:generateCode}
 \end{listing}
 
 
-A \textit{string} resultante é passada para o método \texttt{get\_code} (linha 11), responsável por identificar definições de funções no texto da questão. Caso sejam detectadas definições de código Python delimitadas por ``\texttt{[[def:}'' e ``\texttt{]]}'', essas linhas são enviadas para validação por meio de uma requisição \textit{HTTP POST}. A URL da API é construída dinamicamente utilizando o identificador \texttt{pk}. O Código \ref{lst:generateCode} apresenta os detalhes dessa operação.
+A \textit{string} resultante é passada para o método \texttt{get\_code} (linha 11), responsável por identificar definições de funções no texto da questão. Caso sejam detectadas definições de código Python delimitadas por ``\texttt{[[def:}'' e ``\texttt{]]}'', essas linhas são enviadas para validação por meio de uma requisição HTTP POST. A URL da API é construída dinamicamente utilizando o identificador \texttt{pk}. O Código \ref{lst:generateCode} apresenta os detalhes dessa operação.
 
-A API de validação retorna um relatório em formato \textit{JSON}, que é analisado para identificar possíveis erros. Caso um erro seja detectado, uma mensagem detalhada é exibida ao usuário em uma página de erros. O método \texttt{generateCode}, se identificar problemas, interrompe o fluxo de execução e retorna a validação. Caso contrário, o método \texttt{formset.save()} é acionada, e o usuário é redirecionado para a URL especificada. O arquivo \texttt{exam\_errors.html}, na pasta \texttt{exam/template/exam}, foi modificado para incluir o código apresentado no Código \ref{lst:erroHTML}, o qual trata o conteúdo \textit{JSON} retornado pela API.
+A API de validação retorna um relatório no formato JSON, que é analisado para identificar possíveis erros. Caso algum erro seja detectado, uma mensagem detalhada é exibida ao usuário em uma página de erro. O método \texttt{generateCode}, ao identificar problemas, interrompe o fluxo de execução e retorna a validação. Caso contrário, o método \texttt{formset.save()} é acionado, e o usuário é redirecionado para a URL especificada. O arquivo \texttt{exam\_errors.html}, localizado na pasta \texttt{exam/template/exam}, foi modificado para incluir o tratamento do erro, caso existente, conforme apresentado no Código \ref{lst:erroHTML}, o qual processa o conteúdo JSON retornado pela API.
 
 \begin{listing}[!ht]
     \begin{myboxCode}{corCodigo}{\textbf{Código HTML: }}\vspace{3mm}
@@ -385,7 +383,7 @@ A API de validação retorna um relatório em formato \textit{JSON}, que é anal
 {% endif %}
 \end{minted}
 \end{myboxCode}
-\caption{Trecho de código para tratar o conteúdo \textit{JSON} retornado pelo \texttt{requests} do método \texttt{generateCode}}
+\caption{Trecho de código para tratar o conteúdo JSON retornado pelo \texttt{requests} do método \texttt{generateCode}.}
 \label{lst:erroHTML}
 \end{listing}
 
@@ -415,9 +413,9 @@ O propósito do método \texttt{generateCode} é garantir a segurança e integri
 
 \subsection{Comunicação entre MCTest e \texttt{mctest-validator}}\label{sec:contexto}
 
-A interação entre o MCTest e o \texttt{mctest-validator} utiliza a biblioteca \texttt{Requests}, uma ferramenta \textit{Python} que facilita a manipulação de solicitações \texttt{HTTP}. Após a análise sintática da questão, o MCTest realiza uma requisição \textit{REST} via método \texttt{POST}, enviando o código \textit{Python} no corpo da solicitação para uma URL que inclui o identificador da questão.
+A interação entre o MCTest e o \texttt{mctest-validator} utiliza a biblioteca \texttt{Requests}, uma ferramenta Python que facilita a manipulação de solicitações HTTP. Após a análise sintática da questão, o MCTest realiza uma requisição REST via método POST, enviando o código Python no corpo da solicitação para uma URL que inclui o identificador da questão.
 
-O \textit{JSON} retornado pelo \texttt{mctest-validator} contém um campo de \textit{status}, que determina se a questão passou na validação. Em caso de sucesso, a questão é salva no MCTest. Se falhar, o usuário é redirecionado para uma página de erro que detalha as razões da falha. Este processo assegura que apenas questões válidas sejam aceitas, mantendo a qualidade e integridade do sistema.
+O JSON retornado pelo \texttt{mctest-validator} contém um campo de \textit{status}, que determina se a questão passou na validação. Em caso de sucesso, a questão é salva no MCTest. Se falhar, o usuário é redirecionado para uma página de erro que detalha as razões da falha. Este processo assegura que apenas questões válidas sejam aceitas, mantendo a qualidade e integridade do sistema.
 
 
 A Figura \ref{fig:pastas} ilustra a estrutura de arquivos e pastas do projeto \texttt{mctest-validator-api}. Esta estrutura demonstra a organização do código em diferentes diretórios, cada um responsável por uma parte específica da aplicação, como configuração, controladores, mapeadores e serviços. Essa divisão facilita a manutenção e evolução do projeto.
@@ -499,6 +497,12 @@ O fluxo começa com \texttt{main.go} iniciando a aplicação, configurando o rot
 \end{figure}%
 % corrigir em https://www.plantuml.com/plantuml/uml/bLDDJzj04BtxLwp2EKr5FzH65OAGIY05WG1nwMcoEnjMEBlkx3X0g_xtJk9uxTWXQdDmh9ttvitRUJwD3CJbCi_Ya_C542pL7FJJWaBfpNd80wddHyVOgZ-2Dy_acD4h2tbiroB-BD5hLByp9Rypel1STJaw_lJv0ywhOys19e4CKhyuSnPdpkDRzHiWTjeLuFbV81qpH_QB1Qiti4busTVXJvRDmuiQd1L5xZIm2rxDu1Lf8EptzgkrMT48gC4Id7-t20C5KLt9-sxraRaOGL7K2Ecw2z31CuKyHueZmY8Grz3pLCdG6oL3RIUR1j7S6ShOZxjT8zBAQUoslAkEkmQAegz-jJdj88F1F8uCXmvuUd-z5xdg0X-kEruklIM8JANcah3nXFRO7lTkohh5o033728cxKdJSdYoMS5OtR4mLMk56MXsAs2iTfIjdqhW0XchI-_OGUv-eReD9ICbz6PVcJm4srh8MDtYmaL1LeIO2EsjDQzgM4jLy4H7andSnwq6_3OSjcWaD32lDIEDzoFPlhY_ln6GV8IH3pg-06zoR4CFsxsXe376Dg4_SjllIPsriVh-WheKwAICpg-RpCB2wTGYXJBRlWXvcxxnklqAYTS1KnmaFebM1xJwKyD6CR7Gg2amP0QxfBRKT38MM9KfTItLJbuaNzF9Rl-4alk8PSuj1O4VDFAmzY5s_jU821N1HpnefhEqTE5folwTzpEQKjGNRC3RaAJWrUYt4Yf1hhzCz7qtAQMdKYsN-Ly0
 
+
+\section{Considerações finais}
+
+Este apêndice apresentou uma solução para a validação de código Python em um contexto educacional, priorizando a segurança e a integridade dos dados. A integração do sistema de validação ao MCTest demonstrou a viabilidade de aplicar técnicas de análise de código estático em ambientes reais de ensino.
+
+Como desdobramentos futuros, propõe-se: expandir o sistema para incorporar o uso de diferentes ferramentas de análise estática, com o objetivo de ampliar o espectro de vulnerabilidades detectáveis; aplicar técnicas de aprendizado de máquina para aumentar a precisão na detecção de vulnerabilidades e adaptar a análise ao contexto específico de cada questão; desenvolver mecanismos capazes de fornecer \textit{feedback} detalhado aos usuários em casos de erros; além de realizar testes de código estático, executar esse código e retornar as variáveis a serem utilizadas na questão, como os casos de teste utilizados na integração com o Moodle; e realizar testes de desempenho rigorosos, visando otimizar a eficiência e identificar possíveis gargalos no funcionamento do sistema.
 
 
 
