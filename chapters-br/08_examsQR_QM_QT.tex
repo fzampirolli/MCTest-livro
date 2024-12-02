@@ -183,13 +183,13 @@ variation Q1 Q2 Q3 Q4 Q5 Q6    Q7     K1        K2        K3        K4        K5
 
 No arquivo em questão, a primeira coluna \verb|variation| apresenta a variação do exame. No exemplo mostrado na Figura \ref{fig:cap08_figexameQR_QT}, foram escolhidas apenas duas variações, identificadas como variação 0 e variação 1. Em seguida, são apresentadas as respostas corretas para cada uma das sete questões do exame, identificadas como \verb|Q1| até \verb|Q7|.
 
-A questão \verb|Q7| é uma QT e foi definida em seu enunciado a sequência \verb|%%{exata}%%|, indicando para o MCTest que essa questão tem uma resposta exata contendo o texto ``exata''. É importante ressaltar que é possível incluir questões paramétricas, onde cada variação pode apresentar uma resposta correta diferente. Essa flexibilidade é discutida em detalhes no trabalho de \citeonline{2020:Zampirolli.Batista.ea}, que descreve a aplicação dessas técnicas na disciplina de Cálculo 1. Na parte de experimentos deste livro, essas abordagens serão apresentadas de forma mais detalhada, explorando suas aplicações e resultados.
+A questão \verb|Q7| é uma QT e foi definida em seu enunciado a sequência \verb|%%{exata}%%|, indicando para o MCTest que essa questão tem uma resposta exata contendo o texto ``exata''. É importante ressaltar que é possível incluir questões paramétricas, nas quais cada variação pode apresentar uma resposta correta diferente. Essa flexibilidade é discutida em detalhes no trabalho de \citeonline{2020:Zampirolli.Batista.ea}, que descreve a aplicação dessas técnicas na disciplina de Cálculo 1. Na parte de experimentos deste livro, essas abordagens serão apresentadas de forma mais detalhada, explorando suas aplicações e resultados.
 
 Após as respostas corretas, são criadas novas colunas de \verb|K1| até \verb|K6| para detalhar o sorteio realizado em cada variação do exame para as QMs. Por exemplo, na variação 1 (segunda variação), a questão \verb|K1| tem o valor 245521403. Como são QMs com 5 alternativas, o valor 21403 indica a ordem das alternativas da questão 2455 (ID da questão no banco de dados). Sabendo que a alternativa correta sempre é a primeira (índice 0), pode-se concluir que a alternativa correta para essa questão é a letra D. Portanto, a alternativa A corresponde à terceira alternativa no banco de dados (índice 2), a alternativa B corresponde à segunda (índice 1), a alternativa C corresponde à quinta alternativa (índice 4), a alternativa D é a correta (índice 0) e a alternativa E corresponde à quarta (índice 3), resultando na sequência 21403. 
 
 Ao analisar o sorteio das questões em ambas as variações, foram selecionadas sete QMs. No entanto, para cada exame, apenas seis questões serão sorteadas, conforme a configuração previamente definida. No arquivo CSV, é possível observar que apenas as questões \verb|Q3| e \verb|Q4| não apresentaram variações diferentes (consulte as colunas \verb|K3| e \verb|K4|, com questões de ID 2458 e 2457, respectivamente). No entanto, em todas as questões houve embaralhamento das alternativas.
 
-Uma estrutura de atribuição de pesos diferentes para cada alternativa marcada é detalhada no trabalho de  \citeonline{2020:Zampirolli.Batista.ea}, onde são apresentadas abordagens para avaliar o desempenho dos estudantes considerando a relevância das respostas em QMs.
+Uma estrutura de atribuição de pesos diferentes para cada alternativa marcada é detalhada no trabalho de  \citeonline{2020:Zampirolli.Batista.ea}, no qual são apresentadas abordagens para avaliar o desempenho dos estudantes considerando a relevância das respostas em QMs.
 
 \begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
 É extremamente importante verificar se o gabarito gerado corresponde ao PDF que será distribuído aos estudantes.
@@ -511,7 +511,7 @@ Ao corrigir um exame com QMs, diversas estatísticas são calculadas, incluindo 
 
 O código desenvolvido no MCTest v.5.3 tem como objetivo estimar os parâmetros $a$, $b$ e $c$ da TRI para cada QM de um exame, utilizando o método da máxima verossimilhança.
 
-Inicialmente, uma função gera um dicionário contendo as respostas de cada estudante para cada questão no formato de 1 para acerto e 0 para erro, onde a chave do discionário é o ID da questão no banco de dados.
+Inicialmente, uma função gera um dicionário contendo as respostas de cada estudante para cada questão no formato de 1 para acerto e 0 para erro. A chave do discionário é o ID da questão no banco de dados.
 
 Em seguida, para cada questão é feita a estimativa dos parâmetros utilizando a função de \textit{likelihood} negativa. Os parâmetros iniciais são definidos com base nos valores já armazenados no banco de dados ou valores fixos. A minimização é realizada utilizando o algoritmo \verb|L-BFGS-B|, com restrições nos intervalos de cada parâmetro, com a seguinte importação \verb|from scipy.optimize import minimize|.
 
@@ -525,7 +525,7 @@ A função de verossimilhança negativa $L(\theta,a,b,c|\mathbf{x})$ é definida
 L(\theta,a,b,c|\mathbf{x}) &= -\sum_{i=1}^N x_i \log P(X_i=1|\theta_i, a,b,c) + (1-x_i)\log[1-P(X_i=1|\theta_i, a,b,c)],
 \end{align*}
 \
-onde $P(X_i=1|\theta_i, a,b,c) = c + (1-c)F(a(\theta_i - b))$ e $F$ é a função logística cumulativa.
+em que $P(X_i=1|\theta_i, a,b,c) = c + (1-c)F(a(\theta_i - b))$ e $F$ é a função logística cumulativa.
 
 A estimação é realizada minimizando $L(\theta,a,b,c|\mathbf{x})$ usando o algoritmo \verb|L-BFGS-B|, com restrições $\theta\in[-5,5]$, $a\in(-\infty,+\infty)$, $b\in[-5,5]$ e $c\in[0,1]$. Valores iniciais são obtidos dos parâmetros armazenados ou valores fixos.
 \

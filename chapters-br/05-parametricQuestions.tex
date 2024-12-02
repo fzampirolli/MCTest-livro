@@ -315,11 +315,12 @@ Nesta versão, foi criado o método \verb|gerar_gabarito| para retornar a tabela
 O trecho entre as linhas 30 e 34 do Código \ref{lst:questaoQT_TesteMesaEx2Parte2} apresenta um exemplo de uso do código, no qual são gerados valores aleatórios para \verb|N1|, \verb|N2| e \verb|N3| até que a tabela gerada tenha entre 10 e 15 linhas (exclusivamente). Esse trecho será analisado linha por linha:
 
 \begin{description}
-    \item \verb|while True|: isso cria um \textit{loop} infinito que será executado até que a condição na linha 33 seja satisfeita e o \textit{loop} seja interrompido na linha 34;
-    \item \verb|N1, N2, N3 = random.sample(range(4, 20), 3)|: aqui é usado o método \verb|sample| da biblioteca \verb|random| para gerar três valores aleatórios, sem repetição, no intervalo de 4 a 19. Esses valores são atribuídos às variáveis \verb|N1|, \verb|N2| e \verb|N3|;
-    \item \verb|tabela = gerar_gabarito(N1, N2, N3)|: o método é chamado \verb|gerar_gabarito| passando os valores aleatórios \verb|N1|, \verb|N2| e \verb|N3| como argumentos. Esse método retorna a tabela formatada com os valores corretos das variáveis \verb|maximo|, \verb|contador| e \verb|soma|;
-    \item \verb|if 10 < len(tabela.split('\n')) < 15: break|: aqui é verificado o número de linhas na tabela gerada. Se o número de linhas estiver entre 10 e 15 (exclusivamente), a condição é satisfeita e o \textit{loop} é interrompido com o uso do comando \textit{break}.
+  \item \verb|while True|: isso cria um \textit{loop} infinito que será executado até que a condição na linha 33 seja satisfeita e o \textit{loop} seja interrompido na linha 34;
+  \item \verb|N1, N2, N3 = random.sample(range(4, 20), 3)|: o método \verb|sample| da biblioteca \verb|random| é utilizado para gerar três valores aleatórios, sem repetição, no intervalo de 4 a 19. Esses valores são atribuídos às variáveis \verb|N1|, \verb|N2| e \verb|N3|;
+  \item \verb|tabela = gerar_gabarito(N1, N2, N3)|: o método \verb|gerar_gabarito| é chamado, recebendo como argumentos os valores aleatórios \verb|N1|, \verb|N2| e \verb|N3|. Esse método retorna a tabela formatada com os valores corretos das variáveis \verb|maximo|, \verb|contador| e \verb|soma|;
+  \item \verb|if 10 < len(tabela.split('\n')) < 15: break|: o número de linhas na tabela gerada é verificado. Se o número de linhas estiver entre 10 e 15 (exclusivamente), a condição é satisfeita e o \textit{loop} é interrompido com o comando \textit{break}.
 \end{description}
+
 
 Dessa forma, esse trecho de código permite gerar valores aleatórios para as variáveis \verb|N1|, \verb|N2| e \verb|N3| repetidamente até que a tabela gerada tenha o número de linhas desejado. Isso garante que todas as variações tenham dificuldades de resolução semelhantes, testando diferentes casos. Neste exemplo simples, é possível gerar $15*14*13$ variações (pois os valores sortados não se repetem usando o comando \verb|random.sample(range(4, 20), 3)|), mas apenas aquelas que resultarem em tabelas com 11 a 14 linhas serão consideradas.
 
@@ -657,7 +658,7 @@ Qual(is) do(s) seguinte(s) item(ns) conta apenas com operadores relacionais?
     \label{fig:questaoQM_Extra1_PDF}
 \end{figure}
 
-Para implementar esta questão, foram definidos dois conjuntos: \verb|setTrue| para operadores relacionais e \verb|setFalse| para os operadores não relacionais, conforme apresentado no Código~\ref{lst:questaoQM_Extra1_parte2}. Observa-se que esta questão pode ser generalizada para outros conjuntos, onde o primeiro é formado por condições verdadeiras e o segundo por condições falsas. Além disso, os parâmetros da questão são configuráveis para permitir a criação de diferentes cenários de avaliação. O número de itens na questão (\verb|num_itens|) pode ser ajustado, com um limite máximo de 10 itens. Adicionalmente, é possível definir o número de alternativas apresentadas aos respondentes (\verb|num_alternativas|) e o número de operadores em cada item (\verb|num_operadores|). A questão ainda oferece a flexibilidade de determinar quantos itens são considerados corretos (\verb|num_itens_corretos|), permitindo variações no grau de dificuldade da avaliação.
+Para implementar esta questão, foram definidos dois conjuntos: \verb|setTrue|, que contém operadores relacionais, e \verb|setFalse|, que reúne operadores não relacionais, como mostrado no Código~\ref{lst:questaoQM_Extra1_parte2}. Essa abordagem pode ser generalizada para outros conjuntos, em que o primeiro agrupa condições verdadeiras e o segundo condições falsas. Os parâmetros da questão são configuráveis, possibilitando a criação de diversos cenários de avaliação. O número de itens da questão (\verb|num_itens|) pode ser ajustado, respeitando o limite máximo de 10 itens. Além disso, é possível definir o número de alternativas exibidas aos respondentes (\verb|num_alternativas|) e a quantidade de operadores presentes em cada item (\verb|num_operadores|). A questão também oferece flexibilidade para determinar quantos itens são classificados como corretos (\verb|num_itens_corretos|), permitindo ajustar o grau de dificuldade da avaliação.
 
 \begin{listing}[!ht]
     \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
@@ -840,9 +841,11 @@ Nesta seção, são abordadas QTs paramétricas que envolvem código, introduzin
 
 O Moodle (\href{www.moodle.org}{moodle.org}) é uma plataforma de aprendizagem \textit{online} amplamente utilizada em instituições de ensino em todo o mundo \cite{presedo2015calibracion}. Ela oferece recursos abrangentes para apoiar o ensino e a aprendizagem, incluindo a capacidade de criar e disponibilizar atividades interativas para os estudantes. Um dos \textit{plugins} populares do Moodle é o VPL (\textit{Virtual Programming Lab} -- \href{https://vpl.dis.ulpgc.es/}{vpl.dis.ulpgc.es}) \cite{rodriguez2012virtual}, desenvolvido especialmente para a correção automática de exercícios de programação (EPs).
 
-O \textit{plugin} VPL permite que os professores criem EPs e ofereçam aos estudantes um ambiente virtual para escrever e testar seu código. Essa ferramenta é particularmente útil em disciplinas de programação, onde os estudantes precisam praticar e aprimorar suas habilidades de codificação.
+O \textit{plugin} VPL permite que os professores criem EPs e ofereçam aos estudantes um ambiente virtual para escrever e testar seu código. Essa ferramenta é particularmente útil em disciplinas de programação, nas quais os estudantes precisam praticar e aprimorar suas habilidades de codificação.
 
-O VPL oferece recursos avançados de avaliação e correção automática. Os estudantes podem enviar seus códigos para o sistema, e o VPL executará testes automatizados para verificar se o código produz os resultados esperados. Os resultados são fornecidos instantaneamente, permitindo que os estudantes identifiquem onde cometeram erros e onde podem melhorar.
+O VPL oferece recursos avançados de avaliação e correção automática. Os estudantes podem enviar seus códigos para o sistema, e o VPL executará testes automatizados para verificar se o código produz os resultados esperados. Os resultados são fornecidos instantaneamente, permitindo que os estudantes identifiquem os pontos em que cometeram erros e os aspectos em que podem melhorar.
+
+
 
 Além disso, o VPL permite que os professores configurem casos de teste personalizados para verificar a correção dos programas dos estudantes. Isso significa que os professores podem criar uma variedade de exercícios e testes para avaliar a compreensão e a habilidade dos estudantes em diferentes aspectos da programação.
 
@@ -859,7 +862,8 @@ Escreva um programa em Python para calcular o fatorial de um número inteiro for
 
 \subsubsection{Instruções}
 
-Aqui está um exemplo de  questão de EP no Moodle usando a linguagem Python para calcular o fatorial de um número:
+Segue um exemplo de questão de EP no Moodle que utiliza a linguagem Python para calcular o fatorial de um número:
+
 \begin{enumerate}
     \item Acesse o Moodle e vá para a disciplina em que deseja adicionar a questão;
   
@@ -1025,7 +1029,7 @@ O comando \verb|comment| na descrição da questão é exclusivamente designado 
 
 \subsubsection{Criando uma QT paramétrica para integração MCTest+Moodle+VPL}
 
-A seguir, será apresentado um exemplo completo de código para essa questão de parcelas sem juros, onde as variáveis e instruções em Python estão entre os marcadores \verb|[[code:| e \verb|]]|. Este exemplo foi adaptado do trabalho de \citeonline{2021:Zampirolli.Sato.ea}. Essas variáveis devem ser criadas no bloco de código Python definido entre os marcadores \verb|[[def:| e \verb|]]|.
+A seguir, será apresentado um código completo referente à questão das parcelas sem juros, com as variáveis e instruções em Python destacadas entre os marcadores \verb|[[code:| e \verb|]]|. Este exemplo foi adaptado do trabalho de \citeonline{2021:Zampirolli.Sato.ea}. As variáveis devem ser definidas no bloco de código Python localizado entre os marcadores \verb|[[def:| e \verb|]]|.
 
 Para criar questões paramétricas, não apenas nos casos de teste, é necessário incluir variáveis aleatórias no enunciado da questão entre \verb|[[code:| e \verb|]]|. No exemplo das parcelas sem juros, foi incluído no enunciado o número de parcelas, sendo utilizado apenas o valor da compra como entrada para o caso de teste.
 
@@ -1034,8 +1038,7 @@ Para criar questões paramétricas, não apenas nos casos de teste, é necessár
 Para garantir que cada estudante receba uma questão diferente, é necessário incluir o maior número possível de variáveis aleatórias no enunciado. Por exemplo, ao lidar com um problema de parcelas sem juros, é possível adicionar variáveis aleatórias como o nome do cliente, o produto em questão, entre outros. Além disso, é importante que esses dados sejam impressos na saída esperada para os casos de teste. Caso contrário, um mesmo código pode funcionar para todas as variações de atividade, ignorando a necessidade de múltiplos casos de teste.
 \end{mybox}
 
-No Código \ref{lst:questaoQT_EP_1_parte1}, é apresentado o enunciado da questão, incluindo a parcela como parte paramétrica. Também é incluído o primeiro caso de teste como exemplo no enunciado. Essa primeira parte é finalizada com o bloco \verb|comment|, necessário para o MCTest entender que se trata de uma questão onde o estudante deve resolver como uma atividade VPL no Moodle.
-
+No Código \ref{lst:questaoQT_EP_1_parte1}, é detalhado o enunciado da questão, incorporando a parcela como um parâmetro. Além disso, o primeiro caso de teste é fornecido como exemplo no enunciado. Esta seção inicial é concluída com o bloco \verb|comment|, essencial para que o MCTest compreenda que se trata de uma questão a ser resolvida pelo estudante como uma atividade VPL no Moodle
 
 \begin{listing}[!ht]
 \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
@@ -1081,7 +1084,7 @@ Este Código \ref{lst:questaoQT_EP_1_parte2} consiste em quatro passos principai
 
 
 \begin{mybox}{corCopia}{\textbf{Atenção:\\\vspace{-3mm}\hrule\vspace{3mm}}}
-Dentre os quatro passos apresentados, o professor precisa apenas modificar o Passo 1, onde os parâmetros do enunciado da questão são definidos. Além disso, o trecho entre \verb|#>>>>| e \verb|#<<<<| deve ser alterado para criar diferentes casos de teste. Essas modificações permitem criar outras questões paramétricas, com variações nos parâmetros e nos casos de teste, tornando o processo de criação mais flexível e personalizado.
+Dentre os quatro passos apresentados, o professor precisa apenas modificar o Passo 1, no qual os parâmetros do enunciado da questão são definidos. Além disso, o trecho entre \verb|#>>>>| e \verb|#<<<<| deve ser alterado para criar diferentes casos de teste. Essas modificações permitem criar outras questões paramétricas, com variações nos parâmetros e nos casos de teste, tornando o processo de criação mais flexível e personalizado.
 \end{mybox}
 
 
@@ -1205,6 +1208,6 @@ Embora a criação de questões paramétricas possa exigir habilidades de progra
 
 No caso das QMs paramétricas, foram apresentados exemplos de como criar questões com variações de parâmetros, permitindo a geração fácil e rápida de inúmeras questões. Também foram discutidas diferentes técnicas de parametrização, oferecendo ao professor a liberdade de escolher a que melhor se adapta às suas habilidades de programação.
 
-Em relação às QTs paramétricas, foram destacados que os conceitos e técnicas apresentados para as QMs também se aplicam a esse tipo de questão. No entanto, nas QTs, não é preciso se preocupar com as alternativas. Foram apresentados exemplos de questões paramétricas onde os parâmetros foram variados, permitindo uma ampla gama de variações para os estudantes.
+No contexto das QTs paramétricas, foi ressaltado que os conceitos e técnicas utilizados para as QMs também são aplicáveis a esse formato de questão. Entretanto, nas QTs, não há necessidade de se preocupar com as alternativas. Exemplos de questões paramétricas foram apresentados, demonstrando a variação dos parâmetros e proporcionando uma ampla gama de variações para os estudantes.
 
 Por fim, foram abordadas QTs paramétricas que envolvem código e introduzido o ambiente Moodle e o \textit{plugin} VPL. Mostrou-se como criar questões de EPs utilizando o Moodle+VPL e discutiram-se os benefícios dessa abordagem, incluindo a prática ativa, o \textit{feedback} imediato e a agilidade na correção. Também foram mencionados os desafios de integrar o MCTest, Moodle e VPL para questões paramétricas de EP. A combinação dessas ferramentas oferece aos professores uma poderosa maneira de criar e avaliar questões paramétricas personalizadas, enriquecendo a experiência de aprendizagem dos estudantes.

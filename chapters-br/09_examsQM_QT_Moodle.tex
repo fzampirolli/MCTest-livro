@@ -1,6 +1,6 @@
 \mychapter{Variações de exames com QM+QT para o Moodle} \label{ch:examesQM_QT_Moodle}
 
-Neste capítulo, será apresentado um recurso interessante do MCTest que permite exportar as variações de um exame para arquivos nos formatos Aiken e XML, que podem ser utilizados pelo Moodle para criar um banco de questões. Será utilizado um exemplo de questão da área do círculo apresentada no Capítulo \ref{ch:examesQM_QT} -- \nameref{ch:examesQM_QT}, bem como a criação de novas questões para exemplificar melhor o processo. O artigo de \citeonline{2021:Zampirolli.Batista.ea*1} detalha este recurso, e aqui é resumido todo o processo.
+Neste capítulo, será apresentado um recurso interessante do MCTest que permite exportar as variações de um exame para arquivos nos formatos Aiken e XML, que podem ser utilizados pelo Moodle para criar um banco de questões. Será utilizado um exemplo de questão da área do círculo apresentada no Capítulo \ref{ch:examesQM_QT} -- \nameref{ch:examesQM_QT}, bem como a criação de novas questões para exemplificar melhor o processo. O artigo de \citeonline{2021:Zampirolli.Batista.ea*1} detalha este recurso, e neste capítulo é resumido todo o processo.
 
 Embora o Moodle suporte a criação de questões parametrizadas, que utilizam valores curinga, essas questões têm limitações em relação às funções disponibilizadas pela linguagem PHP. Utilizar o MCTest para criar o banco de questões é vantajoso porque suporta muito mais variações de questões. É possível, por exemplo, criar um exame contendo QMs e QTs, com respostas exatas. Em seguida, é configurado o exame para gerar variações, salvando com um destes formatos Aiken ou XML. É possível então importar esses arquivos para o banco de questões no Moodle e criar uma atividade, incluindo as questões recém-importadas. Dessa forma, é possível criar atividades muito mais parametrizadas do que as suportadas pelo Moodle utilizando os curingas.
 
@@ -12,7 +12,7 @@ Será criado um exame com três QMs paramétricas, cada uma contendo quatro alte
 
 \subsection{QM -- equação de primeiro grau -- idade}
 
-O Código \ref{lst:questaoQM_EquacaoIdade} apresenta um algoritmo que soluciona o problema de encontrar as idades de duas pessoas, dada a soma e a diferença entre elas. O método \verb|calcular_idades| recebe como parâmetros esses dois valores e utiliza equações matemáticas para determinar as idades da pessoa e do irmão. As idades são retornadas como uma \textit{string} no formato ``x e y'', onde x e y são as idades da pessoa e do irmão, respectivamente. Caso as idades não sejam números inteiros positivos, o método retorna uma \textit{string} vazia.
+O Código \ref{lst:questaoQM_EquacaoIdade} apresenta um algoritmo que soluciona o problema de encontrar as idades de duas pessoas, dada a soma e a diferença entre elas. O método \verb|calcular_idades| recebe como parâmetros esses dois valores e utiliza equações matemáticas para determinar as idades da pessoa e do irmão. As idades são retornadas como uma \textit{string} no formato ``x e y'', em que x e y são as idades da pessoa e do irmão, respectivamente. Caso as idades não sejam números inteiros positivos, o método retorna uma \textit{string} vazia.
 
 O programa utiliza o método \verb|random.sample| para gerar aleatoriamente pares de valores de soma e diferença no intervalo de 2 a 29. Para cada par de valores gerado, o programa chama o método \verb|calcular_idades| e armazena as respostas válidas em uma lista. A alternativa correta da questão, apresentada na linha 36, considera os dados do enunciado e utiliza o método \verb|calcular_idades| para determinar as idades dos irmãos apresentados na Figura \ref{fig:cap09_questaoQM_EquacaoIdadePDFb}. Esta resposta, \verb|respostas[3]|, deve ser incluída na primeira alternativa (correta) do formulário da questão. As demais, encontradas nos elementos de índice 0, 1 e 2 da lista \verb|respostas|, devem ser inseridas nas demais alternativas (erradas). Se desejar gerar uma questão com um maior número de alternativas, por exemplo, 10, basta modificar a linha com o comando \verb|while| para ser menor que 10, e a alternativa correta estará no elemento 9 da lista \verb|respostas|.
 
@@ -231,7 +231,7 @@ A nova versão do MCTest 5.3 permite gerar XML para questões QT, compatível co
 
 Após a linha 42 do Código \ref{lst:questaoQT_Exata_1_parte2}, adicione a seguinte linha para inserir a solução da questão em código:
 
-\verb|cases['answer'] = ['''sua solução aqui''']|
+\verb|cases['answer'] = ['''sua solução''']|
 
 O método \verb|createFileDB_xml()| contido no arquivo \verb|UtilsLatex| na pasta de exames no \href{https://github.com/fzampirolli/mctest/blob/master/exam/UtilsLatex.py}{github.com/fzampirolli/mctest} pode ser consultado para obter mais detalhes sobre a geração do XML. Vale notar que o texto da questão no formato \LaTeX{} é convertido de forma automática para o formato HTML utilizando o pacote \href{https://pandoc.org}{pandoc}; veja o método \verb|latex_to_html()| neste mesmo arquivo \verb|UtilsLatex|.
 
