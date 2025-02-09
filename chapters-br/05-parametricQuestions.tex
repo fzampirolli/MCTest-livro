@@ -634,19 +634,11 @@ A descrição da questão é definida no Código~\ref{lst:questaoQM_Extra1_parte
     \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
     \hrule
     \begin{minted}[xleftmargin=20pt,linenos=true]{python}
-%
-% Parte 1 - Descrição da Questão
-%
-
 Qual(is) do(s) seguinte(s) item(ns) conta apenas com operadores relacionais?
 
 \begin{enumerate}[label=(\Roman*)]\itemsep0pt\parskip0pt\parsep0pt
 [[code:itens_format]]
 \end{enumerate}
-
-[[def:
-# ... próximos trechos de códigos
-]]
 \end{minted}
 \end{myboxCode}
 \caption{Exemplo de QM paramétrica de operadores relacionais -- Parte 1: Descrição de questão.}
@@ -665,10 +657,7 @@ Para implementar esta questão, foram definidos dois conjuntos: \verb|setTrue|, 
     \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
     \hrule
     \begin{minted}[xleftmargin=20pt,linenos=true]{python}
-#
-# Parte 2 - Definições dos Atributos e chamada do método gerar_QM_itens
-#
-
+[[
 # Lista de afirmações verdadeiras: operadores relacionais
 setTrue = ['\\(>\\)', '\\(>=\\)', '\\(<=\\)', '\\(<\\)', '\\(!=\\)','\\(==\\)']
 
@@ -680,10 +669,10 @@ setFalse = ['\\(\\text{and}\\)', '\\(\\text{not}\\)', '\\(\\text{or}\\)',
 num_itens = 5          # N. itens na questão (máximo: 10)
 num_alternativas = 5   # N. alternativas (máximo: 15)
 num_itens_corretos = 2 # N. itens corretos na questão (máximo: num_itens)
-# N. afirmacoes em cada item (menor que quant. de setTrue)
 num_afirmacoes_corretas_por_item = 4  
+# N. afirmacoes em cada item (menor que quant. de setTrue)
 
-# chamada
+# chamada do método gerar_QM_itens
 itens_format, descricoes = gerar_QM_itens(setTrue, setFalse, num_itens, 
       num_alternativas, num_itens_corretos, num_afirmacoes_corretas_por_item)
 
@@ -692,6 +681,7 @@ itens_format, descricoes = gerar_QM_itens(setTrue, setFalse, num_itens,
 [[code:descricoes[1]]]
 ...
 '''
+]]
 \end{minted}
 \end{myboxCode}
 \caption{Exemplo de QM paramétrica de operadores relacionais -- Parte 2: Bloco de código em Python com as declarações e a chamada do método \texttt{gerar\_QM\_itens}.}
@@ -731,83 +721,141 @@ def gerar_QM_itens(
 
 \subsection{Explicação do método \texttt{gerar\_QM\_itens}: Verifica parâmetros}
 
-Esta seção apresenta o método \texttt{verifica\_possibilidade}, responsável por validar os parâmetros necessários para a geração de variações de questões. O foco principal é a verificação das condições que garantem a formação adequada dos itens, considerando restrições matemáticas e combinatórias.
+O método \texttt{verifica\_parametros} valida os parâmetros para geração de variações de questões, focando em garantir a formação adequada dos itens com base em restrições matemáticas e combinatórias.
 
-\begin{description}
-    \item[\texttt{verifica\_possibilidade():}] 
-    Este método verifica a possibilidade de gerar variações de uma questão com base nos conjuntos de afirmações verdadeiras (\textit{setTrue}) e falsas (\textit{setFalse}), utilizando a função \textit{comb} da biblioteca \texttt{scipy.special}.  
+Sejam:
+\begin{itemize}
+    \item $T$ e $F$, os números de afirmações verdadeiras e falsas;
+    \item $N$, o número total de itens;
+    \item $A$, o número de alternativas;
+    \item $C$, o número de itens corretos;
+    \item $P$, o número de afirmações corretas por item.
+\end{itemize}
 
-    Sejam:
-    \begin{itemize}
-        \item $T$ e $F$, os números de afirmações verdadeiras e falsas, respectivamente;
-        \item $N$, o número total de itens;
-        \item $A$, o número de alternativas;
-        \item $C$, o número de itens corretos;
-        \item $P$, o número de afirmações corretas por item.
-    \end{itemize}
-    
-    O método valida as seguintes condições:
-    \begin{enumerate}
-        \item Se a quantidade de itens e afirmações corretas é suficiente:
-        \begin{equation}
-            N \cdot C \geq A, \quad C < N, \quad P \leq T
-        \end{equation}
-        \item Se há combinações suficientes para gerar os itens corretos:
-        \begin{equation}
-            \binom{T}{P} \geq C
-        \end{equation}
-        \item Se há combinações para formar os itens da questão:
-        \begin{equation}
-            \binom{T+F}{P} \geq N
-        \end{equation}
-        \item Se há combinações para gerar todas as alternativas:
-        \begin{equation}
-            \binom{N}{P} \geq A
-        \end{equation}
-    \end{enumerate}
-    
-    Se todas as condições forem atendidas, a questão pode ser gerada. O método retorna a variável lógica \verb|pode_gerar| e mensagens de erro na variável \verb|itens_format| para ajustes nos parâmetros, caso \verb|pode_gerar=False|.  
-    
-    O número de variações possíveis da questão é dado por:
+O método valida as seguintes condições:
+\begin{enumerate}
+    \item Restrição inicial:
     \begin{equation}
-        \binom{\binom{T+F}{P}}{N}
+        N \cdot C \geq A, \quad C < N, \quad P \leq T
     \end{equation}
+    \item Combinações de itens corretos:
+    \begin{equation}
+        \binom{T}{P} \geq C
+    \end{equation}
+    \item Formação de itens da questão:
+    \begin{equation}
+        \binom{T+F}{P} \geq N
+    \end{equation}
+    \item Geração de alternativas:
+    \begin{equation}
+        \binom{N}{P} \geq A
+    \end{equation}
+\end{enumerate}
     
-    Ver Código~\ref{lst:questaoQM_gerar_QM_itens_parte2}. Mais detalhes podem ser consultados no arquivo \href{https://github.com/fzampirolli/mctest/blob/master/topic/Utils.py}{\texttt{Utils.py}} no GitHub. 
-\end{description}
+%Ver Código~\ref{lst:questaoQM_gerar_QM_itens_parte2}. Mais detalhes podem ser consultados no arquivo \href{https://github.com/fzampirolli/mctest/blob/master/topic/Utils.py}{\texttt{Utils.py}} no GitHub. 
 
 
 \begin{listing}[!ht]
   \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
   \hrule
   \begin{minted}[xleftmargin=20pt,linenos=true]{python}
-# ...
-# Parte 2 - Definição do Método verifica_possibilidade
+  # Parte 2 - Método verifica_parametros
 
-# Verifica possibilidade de criar variações
-def verifica_possibilidade(setTrue, setFalse, num_itens, \
-                           num_afirmacoes_corretas_por_item, 
-                           num_itens_corretos, num_alternativas):
-  # ... ver código complento no GitHub  
-  
-  return pode_gerar, itens_format
+  # Verifica parâmetros para criar variações
+  def verifica_parametros(T, F, N, P, C, A):
+    from scipy.special import comb
+    output, pode_gerar = [], True
+    T, F = len(T), len(F)
+    if N * C < A or C >= N or P > T:
+      output.append(f"ERRO: Não é possível gerar variações com {A} alternativas,"
+                    f" {N} itens e {C} item(ns) correto(s)")
+      pode_gerar = False
+    if comb(T, P) < C:
+      output.append(f"ERRO: Não é possível gerar {C} itens distintos com {P} "
+                    "afirmações corretas por item.")
+      pode_gerar = False
+    if comb(T + F, P) < N:
+      output.append(f"ERRO: Não é possível gerar {N} itens")
+      pode_gerar = False
+    if comb(N, P) < A:
+      output.append(f"ERRO: Não é possível gerar {A} alternativas")
+      pode_gerar = False
+    variacoes = (f'Número de variações possíveis: '
+                f'comb({comb(T + F, P):.0f},{N}) = {comb(comb(T + F, P), N):.0f}')
+    itens_format = ''
+    if not pode_gerar:
+      output.extend([f'Itens distintos com {P} afirmações verdadeiras: '
+                    f'comb({T},{P}) = {comb(T, P):.0f}',
+                    f'Itens distintos com afirmações V+F: '
+                    f'comb({T + F},{P}) = {comb(T + F, P):.0f}', variacoes])
+      itens_format = "\item " + "\n\item ".join(output)
+      itens_format += (f'\n\item T = {T}\n\item F = {F}\n\item N = {N}'
+                      f'\n\item A = {A}\n\item C = {C}\n\item P = {P}')
+      itens_format = itens_format.replace('_', '\_')
+    return pode_gerar, itens_format
 
-pode_gerar, itens_format = \
-verifica_possibilidade(setTrue, setFalse, num_itens, \
-                       num_afirmacoes_corretas_por_item, \
-                       num_itens_corretos,\
-                       num_alternativas)
-
-if not pode_gerar:
-  print(itens_format)
-  descricoes = ['' for i in range(num_alternativas)]
-
-# ...
+  pode_gerar, itens_format = verifica_parametros(
+      setTrue, setFalse, num_itens, num_afirmacoes_corretas_por_item,
+      num_itens_corretos, num_alternativas)
+  if not pode_gerar:
+      print(itens_format)
+      descricoes = ['' for _ in range(num_alternativas)]
+  # ...
 \end{minted}
 \end{myboxCode}
-\caption{Método \texttt{gerar\_QM\_itens} -- Parte 2: Método \texttt{verifica\_possibilidade()}.}
+\caption{Método \texttt{gerar\_QM\_itens} -- Parte 2: Método \texttt{verifica\_parametros()}.}
 \label{lst:questaoQM_gerar_QM_itens_parte2}
 \end{listing}
+
+O número de variações possíveis é calculado por:
+\begin{equation}
+    \binom{\binom{T+F}{P}}{N}
+\end{equation}
+
+O método retorna \verb|pode_gerar| (variável lógica) e \verb|itens_format| (mensagens de erro, se existirem).
+
+Apenas como ilustração, ao modificar a chamada do método no Código~\ref{lst:questaoQM_Extra1_parte2}, o Código~\ref{lst:questaoQM_gerar_QM_itens_parte2_false} apresenta quatro cenários que podem invalidar a geração de questões, cada um representando uma restrição estrutural ou combinatória distinta.
+
+\begin{listing}[!ht]
+    \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
+    \hrule
+    \begin{minted}[xleftmargin=20pt,linenos=true]{python}
+# 1. Restrição Inicial
+# Exemplo: 2 itens corretos em 2 itens, tentando gerar 10 alternativas
+gerar_QM_itens(setTrue=['1', '3', '5'], setFalse=['2', '4'], 
+               num_itens=2, num_alternativas=10, 
+               num_itens_corretos=2, num_afirmacoes_corretas_por_item=3)
+
+# 2. Insuficiência de Combinações de Itens Corretos
+# Exemplo: Tentar criar 4 itens corretos com apenas 2 afirmações verdadeiras
+gerar_QM_itens(setTrue=['1', '3'], setFalse=['2', '4', '6'], 
+               num_itens=5, num_alternativas=10, 
+               num_itens_corretos=4, num_afirmacoes_corretas_por_item=2)
+
+# 3. Impossibilidade de Gerar Itens Totais
+# Exemplo: Tentar criar 6 itens com poucas afirmações disponíveis
+gerar_QM_itens(setTrue=['1', '3'], setFalse=['2'], 
+               num_itens=6, num_alternativas=10, 
+               num_itens_corretos=3, num_afirmacoes_corretas_por_item=2)
+
+# 4. Limitação de Alternativas
+# Exemplo: Tentar gerar 10 alternativas com poucos itens
+gerar_QM_itens(setTrue=['1', '3', '5'], setFalse=['2', '4'], 
+               num_itens=5, num_alternativas=10, 
+               num_itens_corretos=3, num_afirmacoes_corretas_por_item=1)
+\end{minted}
+\end{myboxCode}
+\caption{Exemplo de chamadas de \texttt{gerar\_QM\_itens} com \texttt{verifica\_parametros} retornando \texttt{pode\_gerar = False}.}
+\label{lst:questaoQM_gerar_QM_itens_parte2_false}
+\end{listing}
+
+A Figura~\ref{fig:questaoQM_Extra1_PDF_false} ilustra o PDF gerado pelo MCTest utilizando a primeira chamada do método \texttt{gerar\_QM\_itens}, com parâmetros inválidos.
+
+\begin{figure}[!ht]
+    \includegraphics[width=0.9\textwidth]{cap05_questaoQM_Extra1_PDF_false.png}
+    \caption{Recorte do PDF gerado para a QM com os parâmetros inválidos da primeira chamada do Código~\ref{lst:questaoQM_gerar_QM_itens_parte2_false}.}
+    \label{fig:questaoQM_Extra1_PDF_false}
+\end{figure}
 
 \subsection{Explicação do método \texttt{gerar\_QM\_itens}: Outros métodos}
 
@@ -823,14 +871,13 @@ Os métodos a seguir estão apresentados no Código~\ref{lst:questaoQM_gerar_QM_
     Este método verifica os itens gerados, contando o número de operadores relacionais presentes em cada item. Apenas os itens que possuem exatamente \verb|num_afirmacoes| de operadores relacionais são considerados corretos e são armazenados em uma lista chamada \verb|itens_corretos|;
 
     \item[\texttt{gerar\_indices\_itens\_corretos():}]
-    Este método tem como objetivo gerar uma lista de índices dos itens corretos, enquanto também cria um formato de exibição dos itens exibição na descrição da questão. A variável global \verb|itens_format| é utilizada para acumular uma representação formatada dos itens, que é construída no formato de lista (\texttt{\textbackslash item}) para ser incorporada em um ambiente de lista em \LaTeX. O código percorre os itens gerados, formata cada item como uma \textit{string} e adiciona o índice correspondente à lista de itens corretos (\verb|corretos|). Ao final, a função retorna os índices dos itens corretos, ordenados, para facilitar referências posteriores.
+    Este método tem como objetivo gerar uma lista de índices dos itens corretos, enquanto também cria um formato de exibição dos itens exibição na descrição da questão. A variável global \verb|itens_format| é utilizada para acumular uma representação formatada dos itens, que é construída no formato de lista (\texttt{\textbackslash item}) para ser incorporada em um ambiente de lista em \LaTeX. O código percorre os itens gerados, formata cada item como uma \textit{string} e adiciona o índice correspondente à lista de itens corretos (\verb|corretos|). Ao final, a método retorna os índices dos itens corretos, ordenados, para facilitar referências posteriores.
 \end{description}
 
 \begin{listing}[!ht]
   \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
   \hrule
   \begin{minted}[xleftmargin=20pt,linenos=true]{python}
-  # ...
   # Parte 3 - Outros Métodos 
 
   def gerar_itens(setTrue, setFalse, num_itens, num_afirmacoes):
@@ -905,8 +952,7 @@ Dessa forma, é assegurada a obtenção de uma questão válida que atenda aos p
     \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
     \hrule
     \begin{minted}[xleftmargin=20pt,linenos=true]{python}
-  # ...
-  # Parte 4 - Bloco principal
+  # Parte 4 - Laço principal
 
   while pode_gerar:
     itens = gerar_itens(setTrue, setFalse, num_itens, 
