@@ -626,9 +626,9 @@ while True:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{QM paramétrica com múltiplas variações: um estudo de caso}\label{sec:QMparametricaExtra}
 
-Nesta seção, é apresentada uma questão paramétrica que oferece uma ampla variedade de configurações, nos Códigos~\ref{lst:questaoQM_Extra1_parte1},~\ref{lst:questaoQM_Extra1_parte2},~\ref{lst:questaoQM_Extra1_parte3} e~\ref{lst:questaoQM_Extra1_parte4}.
+Nesta seção, é apresentada uma questão paramétrica que oferece uma ampla variedade de configurações, nos Códigos~\ref{lst:questaoQM_Extra1_parte1},~\ref{lst:questaoQM_Extra1_parte2},~\ref{lst:questaoQM_gerar_QM_itens_parte1},~\ref{lst:questaoQM_gerar_QM_itens_parte2},~\ref{lst:questaoQM_gerar_QM_itens_parte3} e~\ref{lst:questaoQM_gerar_QM_itens_parte4}.
 %
-A descrição da questão é definida no Código~\ref{lst:questaoQM_Extra1_parte1}, que inclui o parâmetro \verb|itens_format|, contendo os itens (I, II, III, IV, \(\ldots\)) para que o estudante verifique qual(is) destes itens contém apenas elementos do conjunto dos operadores relacionais. Uma variação desta questão é apresentada na Figura \ref{fig:questaoQM_Extra1_PDF}.
+A descrição da questão é definida no Código~\ref{lst:questaoQM_Extra1_parte1}, que inclui o parâmetro \verb|itens_format|, contendo os itens (I, II, III, IV, \(\ldots\)) para que o estudante verifique qual(is) destes itens contém apenas afirmações verdadeiras, neste caso, elementos do conjunto dos operadores relacionais. Uma variação desta questão é apresentada na Figura \ref{fig:questaoQM_Extra1_PDF}.
 
 \begin{listing}[!ht]
     \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
@@ -637,6 +637,7 @@ A descrição da questão é definida no Código~\ref{lst:questaoQM_Extra1_parte
 %
 % Parte 1 - Descrição da Questão
 %
+
 Qual(is) do(s) seguinte(s) item(ns) conta apenas com operadores relacionais?
 
 \begin{enumerate}[label=(\Roman*)]\itemsep0pt\parskip0pt\parsep0pt
@@ -658,107 +659,235 @@ Qual(is) do(s) seguinte(s) item(ns) conta apenas com operadores relacionais?
     \label{fig:questaoQM_Extra1_PDF}
 \end{figure}
 
-Para implementar esta questão, foram definidos dois conjuntos: \verb|setTrue|, que contém operadores relacionais, e \verb|setFalse|, que reúne operadores não relacionais, como mostrado no Código~\ref{lst:questaoQM_Extra1_parte2}. Essa abordagem pode ser generalizada para outros conjuntos, em que o primeiro agrupa condições verdadeiras e o segundo condições falsas. Os parâmetros da questão são configuráveis, possibilitando a criação de diversos cenários de avaliação. O número de itens da questão (\verb|num_itens|) pode ser ajustado, respeitando o limite máximo de 10 itens. Além disso, é possível definir o número de alternativas exibidas aos respondentes (\verb|num_alternativas|) e a quantidade de operadores presentes em cada item (\verb|num_operadores|). A questão também oferece flexibilidade para determinar quantos itens são classificados como corretos (\verb|num_itens_corretos|), permitindo ajustar o grau de dificuldade da avaliação.
+Para implementar esta questão, foram definidos dois conjuntos: \verb|setTrue|, que contém operadores relacionais, e \verb|setFalse|, que reúne operadores não relacionais, como mostrado no Código~\ref{lst:questaoQM_Extra1_parte2}. Essa abordagem pode ser generalizada para outros conjuntos, em que o primeiro agrupa afirmações verdadeiras e o segundo afirmações falsas. Os parâmetros da questão são configuráveis, possibilitando a criação de diversos cenários de avaliação. O número de itens da questão (\verb|num_itens|) pode ser ajustado, respeitando o limite máximo de 10 itens. Além disso, é possível definir o número de alternativas exibidas (\verb|num_alternativas|) e a quantidade de operadores presentes em cada item (\verb|num_afirmacoes_corretas_por_item|). A questão também oferece flexibilidade para determinar quantos itens são classificados como corretos (\verb|num_itens_corretos|), permitindo ajustar o grau de dificuldade da avaliação.
 
 \begin{listing}[!ht]
     \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
     \hrule
     \begin{minted}[xleftmargin=20pt,linenos=true]{python}
-# ...
-# Parte 2 - Definições dos Atributos
+#
+# Parte 2 - Definições dos Atributos e chamada do método gerar_QM_itens
+#
 
-# Lista de operadores relacionais
+# Lista de afirmações verdadeiras: operadores relacionais
 setTrue = ['\\(>\\)', '\\(>=\\)', '\\(<=\\)', '\\(<\\)', '\\(!=\\)','\\(==\\)']
 
-# Lista de operadores não relacionais
-setFalse = ['\\(\\text{and}\\)', '\\(\\text{not}\\)', '\\(\\text{or}\\)',  
-            '\\(=\\)', '\\(+\\)', '\\(\\%\\)']
-
-itens_str = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
+# Lista de afirmações falsas: operadores não relacionais
+setFalse = ['\\(\\text{and}\\)', '\\(\\text{not}\\)', '\\(\\text{or}\\)', 
+        '\\(=\\)', '\\(+\\)', '\\(\\%\\)']
 
 # Definição dos parâmetros da questão
-num_itens = 5        # N. itens na questão (máximo: 10)
-num_alternativas = 5 # N. alternativas (máximo: 15)
-num_operadores = 4   # N. oper. em cada item (menor que quant. de setTrue)
+num_itens = 5          # N. itens na questão (máximo: 10)
+num_alternativas = 5   # N. alternativas (máximo: 15)
 num_itens_corretos = 2 # N. itens corretos na questão (máximo: num_itens)
-# ...
+# N. afirmacoes em cada item (menor que quant. de setTrue)
+num_afirmacoes_corretas_por_item = 4  
+
+# chamada
+itens_format, descricoes = gerar_QM_itens(setTrue, setFalse, num_itens, 
+      num_alternativas, num_itens_corretos, num_afirmacoes_corretas_por_item)
+
+'''' Alternativas
+[[code:descricoes[0]]]
+[[code:descricoes[1]]]
+...
+'''
 \end{minted}
 \end{myboxCode}
-\caption{Exemplo de QM paramétrica de operadores relacionais -- Parte 2: Bloco de código em Python com as declarações.}
+\caption{Exemplo de QM paramétrica de operadores relacionais -- Parte 2: Bloco de código em Python com as declarações e a chamada do método \texttt{gerar\_QM\_itens}.}
 \label{lst:questaoQM_Extra1_parte2}
 \end{listing}
 
-O Código~\ref{lst:questaoQM_Extra1_parte3} apresenta três métodos utilizados nesta questão contendo itens, descritos a seguir:
+\subsection{Explicação do método \texttt{gerar\_QM\_itens}}\label{sec:metodo_Gerar_QM_itens}
+
+O Código~\ref{lst:questaoQM_gerar_QM_itens_parte1} apresenta o início do método \verb|gerar_QM_itens|, implementado no arquivo em \href{https://github.com/fzampirolli/mctest/blob/master/topic/Utils.py}{Utils.py}, disponível no GitHub. Este método é responsável por gerar os itens da questão.
+
+A partir da linha 14, o código é estruturado em vários métodos auxiliares que encapsulam as diferentes etapas do processo de geração de itens. Esses métodos auxiliam na organização do código e facilitam a manutenção. Eles são apresentados nos Códigos~\ref{lst:questaoQM_gerar_QM_itens_parte2},~\ref{lst:questaoQM_gerar_QM_itens_parte3} e~\ref{lst:questaoQM_gerar_QM_itens_parte4}.
+
+\begin{listing}[!ht]
+  \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
+  \hrule
+  \begin{minted}[xleftmargin=20pt,linenos=true]{python}
+# Parte 1: Bloco principal
+
+def gerar_QM_itens(
+  setTrue=['1', '3', '5'], 
+  setFalse=['2', '4'], 
+  num_itens=5,             # N. itens na questão (máximo: 10)
+  num_alternativas=10,     # N. alternativas (máximo: 15)
+  num_itens_corretos=3,    # N. itens corretos na questão (máximo: num_itens)
+  num_afirmacoes_corretas_por_item=3): 
+  # N. afirmacoes em cada item (menor que quant. de setTrue)
+    
+  global itens_format, itens_str
+
+  itens_str = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
+  # ...
+\end{minted}
+\end{myboxCode}
+\caption{Método \texttt{gerar\_QM\_itens} -- Parte 1: Bloco principal.}
+\label{lst:questaoQM_gerar_QM_itens_parte1}
+\end{listing}
+
+\subsection{Explicação do método \texttt{gerar\_QM\_itens}: Verifica parâmetros}
+
+Esta seção apresenta o método \texttt{verifica\_possibilidade}, responsável por validar os parâmetros necessários para a geração de variações de questões. O foco principal é a verificação das condições que garantem a formação adequada dos itens, considerando restrições matemáticas e combinatórias.
+
+\begin{description}
+    \item[\texttt{verifica\_possibilidade():}] 
+    Este método verifica a possibilidade de gerar variações de uma questão com base nos conjuntos de afirmações verdadeiras (\textit{setTrue}) e falsas (\textit{setFalse}), utilizando a função \textit{comb} da biblioteca \texttt{scipy.special}.  
+
+    Sejam:
+    \begin{itemize}
+        \item $T$ e $F$, os números de afirmações verdadeiras e falsas, respectivamente;
+        \item $N$, o número total de itens;
+        \item $A$, o número de alternativas;
+        \item $C$, o número de itens corretos;
+        \item $P$, o número de afirmações corretas por item.
+    \end{itemize}
+    
+    O método valida as seguintes condições:
+    \begin{enumerate}
+        \item Se a quantidade de itens e afirmações corretas é suficiente:
+        \begin{equation}
+            N \cdot C \geq A, \quad C < N, \quad P \leq T
+        \end{equation}
+        \item Se há combinações suficientes para gerar os itens corretos:
+        \begin{equation}
+            \binom{T}{P} \geq C
+        \end{equation}
+        \item Se há combinações para formar os itens da questão:
+        \begin{equation}
+            \binom{T+F}{P} \geq N
+        \end{equation}
+        \item Se há combinações para gerar todas as alternativas:
+        \begin{equation}
+            \binom{N}{P} \geq A
+        \end{equation}
+    \end{enumerate}
+    
+    Se todas as condições forem atendidas, a questão pode ser gerada. O método retorna a variável lógica \verb|pode_gerar| e mensagens de erro na variável \verb|itens_format| para ajustes nos parâmetros, caso \verb|pode_gerar=False|.  
+    
+    O número de variações possíveis da questão é dado por:
+    \begin{equation}
+        \binom{\binom{T+F}{P}}{N}
+    \end{equation}
+    
+    Ver Código~\ref{lst:questaoQM_gerar_QM_itens_parte2}. Mais detalhes podem ser consultados no arquivo \href{https://github.com/fzampirolli/mctest/blob/master/topic/Utils.py}{\texttt{Utils.py}} no GitHub. 
+\end{description}
+
+
+\begin{listing}[!ht]
+  \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
+  \hrule
+  \begin{minted}[xleftmargin=20pt,linenos=true]{python}
+# ...
+# Parte 2 - Definição do Método verifica_possibilidade
+
+# Verifica possibilidade de criar variações
+def verifica_possibilidade(setTrue, setFalse, num_itens, \
+                           num_afirmacoes_corretas_por_item, 
+                           num_itens_corretos, num_alternativas):
+  # ... ver código complento no GitHub  
+  
+  return pode_gerar, itens_format
+
+pode_gerar, itens_format = \
+verifica_possibilidade(setTrue, setFalse, num_itens, \
+                       num_afirmacoes_corretas_por_item, \
+                       num_itens_corretos,\
+                       num_alternativas)
+
+if not pode_gerar:
+  print(itens_format)
+  descricoes = ['' for i in range(num_alternativas)]
+
+# ...
+\end{minted}
+\end{myboxCode}
+\caption{Método \texttt{gerar\_QM\_itens} -- Parte 2: Método \texttt{verifica\_possibilidade()}.}
+\label{lst:questaoQM_gerar_QM_itens_parte2}
+\end{listing}
+
+\subsection{Explicação do método \texttt{gerar\_QM\_itens}: Outros métodos}
+
+Esta seção apresenta métodos auxiliares do \texttt{gerar\_QM\_itens}, responsáveis por gerar e validar itens de questões de forma estruturada. Cada método desempenha uma função específica, desde a criação e embaralhamento dos itens até a verificação da conformidade com os critérios estabelecidos.
+
+Os métodos a seguir estão apresentados no Código~\ref{lst:questaoQM_gerar_QM_itens_parte3}.
 
 \begin{description}
     \item[\texttt{gerar\_itens():}]
-    Este método utiliza a biblioteca \verb|random| para embaralhar as listas de operadores \verb|setTrue| e \verb|setFalse|. Em seguida, gera uma lista de \verb|num_itens| de itens aleatórios contendo \verb|num_operadores| de elementos, selecionados a partir da concatenação de \verb|setTrue| e \verb|setFalse|;
+    Este método utiliza a biblioteca \verb|random| para embaralhar as listas de operadores \verb|setTrue| e \verb|setFalse|. Em seguida, gera uma lista de \verb|num_itens| de itens aleatórios contendo \verb|num_afirmacoes| de elementos, selecionados a partir da concatenação de \verb|setTrue| e \verb|setFalse|;
 
     \item[\texttt{gerar\_itens\_corretos():}]
-    Este método verifica os itens gerados, contando o número de operadores relacionais presentes em cada item. Apenas os itens que possuem exatamente \verb|num_operadores| de operadores relacionais são considerados corretos e são armazenados em uma lista chamada \verb|itens_corretos|;
+    Este método verifica os itens gerados, contando o número de operadores relacionais presentes em cada item. Apenas os itens que possuem exatamente \verb|num_afirmacoes| de operadores relacionais são considerados corretos e são armazenados em uma lista chamada \verb|itens_corretos|;
 
     \item[\texttt{gerar\_indices\_itens\_corretos():}]
     Este método tem como objetivo gerar uma lista de índices dos itens corretos, enquanto também cria um formato de exibição dos itens exibição na descrição da questão. A variável global \verb|itens_format| é utilizada para acumular uma representação formatada dos itens, que é construída no formato de lista (\texttt{\textbackslash item}) para ser incorporada em um ambiente de lista em \LaTeX. O código percorre os itens gerados, formata cada item como uma \textit{string} e adiciona o índice correspondente à lista de itens corretos (\verb|corretos|). Ao final, a função retorna os índices dos itens corretos, ordenados, para facilitar referências posteriores.
 \end{description}
 
 \begin{listing}[!ht]
-    \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
-    \hrule
-    \begin{minted}[xleftmargin=20pt,linenos=true]{python}
-# ...
-# Parte 3 - Definições dos Métodos
+  \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
+  \hrule
+  \begin{minted}[xleftmargin=20pt,linenos=true]{python}
+  # ...
+  # Parte 3 - Outros Métodos 
 
-def gerar_itens(setTrue, setFalse, num_itens, num_operadores):
-  # Embaralhar as listas de operadores
-  import random
-  random.shuffle(setTrue), random.shuffle(setFalse)
+  def gerar_itens(setTrue, setFalse, num_itens, num_afirmacoes):
+    todas_afirmacoes = setTrue + setFalse  # Junta todas as afirmações
+    random.shuffle(todas_afirmacoes)  # Embaralha a lista para aleatoriedade
 
-  # Gerar os itens aleatórios com operadores relacionais e não relacionais
-  itens = []
-  for i in range(num_itens):
-    itens.append(random.sample(setTrue + setFalse, num_operadores))
-  return itens
+    # Gerar combinações únicas usando um conjunto para evitar duplicatas
+    itens = set()
+    while len(itens) < num_itens:
+        item = tuple(sorted(random.sample(todas_afirmacoes, num_afirmacoes)))
+        itens.add(item)
 
-def gerar_itens_corretos(setTrue, setFalse, num_itens, num_operadores, itens):
-  # Lista para armazenar os itens que atendem aos critérios
-  itens_corretos = []
-  for item in itens:
-    # Contar a quantidade de operadores relacionais presentes no item
-    cont = 0
-    for op in item:
-      if op in setTrue:
-        cont += 1
-    # Se o número de operadores relacionais for igual ao número desejado
-    if cont == num_operadores:
-      itens_corretos.append(item)
-  return itens_corretos
+    return list(itens)  # Converte para lista antes de retornar
 
-def gerar_indices_itens_corretos(itens, itens_corretos):
-  # Gerar índices dos itens corretos e criar itens_format
+  def gerar_itens_corretos(setTrue, setFalse, num_itens, num_afirmacoes, itens):
+    # Lista para armazenar os itens que atendem aos critérios
+    itens_corretos = []
+    for item in itens:
+        # Contar a quantidade de afirmações verdadeiras presentes no item
+        cont = 0
+        for op in item:
+            if op in setTrue:
+                cont += 1
+        # Se o número de afirmações verdadeiras for igual ao número desejado
+        if cont == num_afirmacoes:
+            itens_corretos.append(item)
+    return itens_corretos
 
-  # formatar itens e declarar como variável global
-  global itens_format
-  itens_format = ''
+  def gerar_indices_itens_corretos(itens, itens_corretos):
+    # Gerar índices dos itens corretos e criar itens_format
 
-  corretos = []
-  for i, item in enumerate(itens):
-    s = f"{', '.join(item)}"
-    itens_format += f"\item {s}\n"
+    # formatar itens e declarar como variável global
+    global itens_format, itens_str
+    itens_format = ''
 
-    # Adicionar o índice do item à lista de itens corretos
-    for c in itens_corretos:
-      if c == item:
-        corretos.append(i)
+    corretos = []
+    for i, item in enumerate(itens):
+        s = f"{'; '.join(item)}"
+        #itens_format += f"\item {itens_str[i]}. {s}\n"
+        itens_format += f"\item {s}\n"
 
-  return sorted(corretos) # Ordenar os índices dos itens corretos
-# ...
+        # Adicionar o índice do item à lista de itens corretos
+        for c in itens_corretos:
+            if c == item:
+                corretos.append(i)
+
+    return sorted(corretos)  # Ordenar os índices dos itens corretos
+  # ...
 \end{minted}
 \end{myboxCode}
-\caption{Exemplo de QM paramétrica de operadores relacionais -- Parte 3: Bloco de código em Python com os métodos.}
-\label{lst:questaoQM_Extra1_parte3}
+\caption{Método \texttt{gerar\_QM\_itens} -- Parte 3: Outros métodos.}
+\label{lst:questaoQM_gerar_QM_itens_parte3}
 \end{listing}
 
-O Código \ref{lst:questaoQM_Extra1_parte4} encapsula o processo central para a geração automatizada de questões objetivas contendo itens aleatórios. As principais etapas são:
+\subsection{Explicação do método \texttt{gerar\_QM\_itens}: Laço Principal}
+
+O Código \ref{lst:questaoQM_gerar_QM_itens_parte4} encapsula o processo central para a geração automatizada de questões objetivas contendo itens aleatórios. As principais etapas são:
 
 \begin{enumerate}
     \item Geração dos itens através do método \verb|gerar_itens()|, obtendo os operadores a partir de conjuntos pré-definidos;
@@ -776,57 +905,49 @@ Dessa forma, é assegurada a obtenção de uma questão válida que atenda aos p
     \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
     \hrule
     \begin{minted}[xleftmargin=20pt,linenos=true]{python}
-# ...
-# Parte 4 - Bloco principal
+  # ...
+  # Parte 4 - Bloco principal
 
-import random
-while True:
-  itens = gerar_itens(setTrue, setFalse, num_itens, num_operadores)
+  while pode_gerar:
+    itens = gerar_itens(setTrue, setFalse, num_itens, 
+                        num_afirmacoes_corretas_por_item)
 
-  itens_corretos = gerar_itens_corretos(setTrue,setFalse, num_itens, 
-                                        num_operadores, itens)
+    itens_corretos = gerar_itens_corretos(setTrue, setFalse, num_itens,
+                                          num_afirmacoes_corretas_por_item, itens)
 
-  # Se o número de itens corretos não for igual ao desejado, gerar uma nova questão
-  if len(itens_corretos) != num_itens_corretos:
-    continue
-  
-  corretos = gerar_indices_itens_corretos(itens, itens_corretos)
+    # Se o n. de itens corretos não for igual ao desejado, gerar uma nova questão
+    if len(itens_corretos) != num_itens_corretos: continue
 
-  # Alternativa correta
-  aux = []
-  for corr in range(num_itens_corretos):
-    aux.append(itens_str[corretos[corr]])
-  itens_comb = [aux]
+    corretos = gerar_indices_itens_corretos(itens, itens_corretos)
 
-  # Gerar alternativas erradas
-  for i in range(num_alternativas):
-    aux = sorted(random.sample(itens_str[:num_itens], num_itens_corretos))
-    # Incluir apenas alternativas diferentes
-    if not aux in itens_comb:
-      itens_comb.append(aux)
+    aux = [] # Alternativa correta
+    for corr in range(num_itens_corretos):
+        aux.append(itens_str[corretos[corr]])
+    itens_comb = [aux]
 
-  # Montar as descrições das alternativas
-  descricoes = []
-  for letra in itens_comb:
-    descricoes.append(f"{', '.join(letra)}") 
+    # Gerar alternativas erradas
+    for i in range(num_alternativas):
+        aux = sorted(random.sample(itens_str[:num_itens], num_itens_corretos))
+        # Incluir apenas alternativas diferentes
+        if not aux in itens_comb:
+            itens_comb.append(aux)
 
-  # Se o número de descrições não for igual ao número de alternativas, 
-  # gerar uma nova questão
-  if len(descricoes) != num_alternativas:
-    continue
+    # Montar as descrições das alternativas
+    descricoes = []
+    for letra in itens_comb:
+        descricoes.append(f"{'; '.join(letra)}")
 
-  # Encerrar o loop, pois a questão foi gerada com sucesso
-  break
+    # Se o número de descrições não for igual ao número de alternativas,
+    # gerar uma nova questão
+    if len(descricoes) != num_alternativas: continue
 
-'''' Alternativas
-[[code:descricoes[0]]]
-[[code:descricoes[1]]]
-...
-'''
+    # Encerrar o loop, pois a questão foi gerada com sucesso
+    break
+  return itens_format, descricoes
 \end{minted}
 \end{myboxCode}
-\caption{Exemplo de QM paramétrica de operadores relacionais -- Parte 4: Bloco de código em Python com o laço principal.}
-\label{lst:questaoQM_Extra1_parte4}
+\caption{Método \texttt{gerar\_QM\_itens} -- Parte 4: Laço principal.}
+\label{lst:questaoQM_gerar_QM_itens_parte4}
 \end{listing}
 
 

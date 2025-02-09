@@ -59,5 +59,4 @@ bibtex livro
 find . -name "*.tex" -exec sed -i.bak 's/ aluno / estudante /g' {} \;
 find . -name "*.tex" -exec sed -i.bak 's/ alunos / estudantes /g' {} \;
 
-
 '''
