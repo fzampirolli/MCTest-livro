@@ -651,7 +651,7 @@ Qual(is) do(s) seguinte(s) item(ns) conta apenas com operadores relacionais?
     \label{fig:questaoQM_Extra1_PDF}
 \end{figure}
 
-Para implementar esta questão, foram definidos dois conjuntos: \verb|setTrue|, que contém operadores relacionais, e \verb|setFalse|, que reúne operadores não relacionais, como mostrado no Código~\ref{lst:questaoQM_Extra1_parte2}. Essa abordagem pode ser generalizada para outros conjuntos, em que o primeiro agrupa afirmações verdadeiras e o segundo afirmações falsas. Os parâmetros da questão são configuráveis, possibilitando a criação de diversos cenários de avaliação. O número de itens da questão (\verb|num_itens|) pode ser ajustado, respeitando o limite máximo de 10 itens. Além disso, é possível definir o número de alternativas exibidas (\verb|num_alternativas|) e a quantidade de operadores presentes em cada item (\verb|num_afirmacoes_corretas_por_item|). A questão também oferece flexibilidade para determinar quantos itens são classificados como corretos (\verb|num_itens_corretos|), permitindo ajustar o grau de dificuldade da avaliação.
+Para implementar esta questão, foram definidos dois conjuntos: \verb|setTrue|, que contém operadores relacionais, e \verb|setFalse|, que reúne operadores não relacionais, como mostrado no Código~\ref{lst:questaoQM_Extra1_parte2}. Essa abordagem pode ser generalizada para outros conjuntos, em que o primeiro agrupa afirmações verdadeiras e o segundo afirmações falsas. Os parâmetros da questão são configuráveis, possibilitando a criação de diversos cenários de avaliação. O número de itens da questão (\verb|num_itens|) pode ser ajustado, respeitando o limite máximo de 10 itens. Além disso, é possível definir o número de alternativas exibidas (\verb|num_alternativas|) e a quantidade de operadores presentes em cada item (\verb|num_afirmacoes_por_item|). A questão também oferece flexibilidade para determinar quantos itens são classificados como corretos (\verb|num_itens_corretos|), permitindo ajustar o grau de dificuldade da avaliação.
 
 \begin{listing}[!ht]
     \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
@@ -669,12 +669,12 @@ setFalse = ['\\(\\text{and}\\)', '\\(\\text{not}\\)', '\\(\\text{or}\\)',
 num_itens = 5          # N. itens na questão (máximo: 10)
 num_alternativas = 5   # N. alternativas (máximo: 15)
 num_itens_corretos = 2 # N. itens corretos na questão (máximo: num_itens)
-num_afirmacoes_corretas_por_item = 4  
+num_afirmacoes_por_item = 4  
 # N. afirmacoes em cada item (menor que quant. de setTrue)
 
 # chamada do método gerar_QM_itens
 itens_format, descricoes = gerar_QM_itens(setTrue, setFalse, num_itens, 
-      num_alternativas, num_itens_corretos, num_afirmacoes_corretas_por_item)
+      num_alternativas, num_itens_corretos, num_afirmacoes_por_item)
 
 '''' Alternativas
 [[code:descricoes[0]]]
@@ -706,7 +706,7 @@ def gerar_QM_itens(
   num_itens=5,             # N. itens na questão (máximo: 10)
   num_alternativas=10,     # N. alternativas (máximo: 15)
   num_itens_corretos=3,    # N. itens corretos na questão (máximo: num_itens)
-  num_afirmacoes_corretas_por_item=3): 
+  num_afirmacoes_por_item=3): 
   # N. afirmacoes em cada item (menor que quant. de setTrue)
     
   global itens_format, itens_str
@@ -719,17 +719,17 @@ def gerar_QM_itens(
 \label{lst:questaoQM_gerar_QM_itens_parte1}
 \end{listing}
 
-\subsection{Explicação do método \texttt{gerar\_QM\_itens}: Verifica parâmetros}
+\subsection{Explicação do método \texttt{gerar\_QM\_itens}: Verifica parâmetros}\label{sec:verificaParametros}
 
 O método \texttt{verifica\_parametros} valida os parâmetros para geração de variações de questões, focando em garantir a formação adequada dos itens com base em restrições matemáticas e combinatórias.
 
 Sejam:
 \begin{itemize}
-    \item $T$ e $F$, os números de afirmações verdadeiras e falsas;
+    \item $T$ e $F$, os números de afirmações verdadeiras e falsas, respectivamente;
     \item $N$, o número total de itens;
     \item $A$, o número de alternativas;
     \item $C$, o número de itens corretos;
-    \item $P$, o número de afirmações corretas por item.
+    \item $P$, o número de afirmações por item.
 \end{itemize}
 
 O método valida as seguintes condições:
@@ -772,7 +772,7 @@ O método valida as seguintes condições:
       pode_gerar = False
     if comb(T, P) < C:
       output.append(f"ERRO: Não é possível gerar {C} itens distintos com {P} "
-                    "afirmações corretas por item.")
+                    "afirmações por item.")
       pode_gerar = False
     if comb(T + F, P) < N:
       output.append(f"ERRO: Não é possível gerar {N} itens")
@@ -795,7 +795,7 @@ O método valida as seguintes condições:
     return pode_gerar, itens_format
 
   pode_gerar, itens_format = verifica_parametros(
-      setTrue, setFalse, num_itens, num_afirmacoes_corretas_por_item,
+      setTrue, setFalse, num_itens, num_afirmacoes_por_item,
       num_itens_corretos, num_alternativas)
   if not pode_gerar:
       print(itens_format)
@@ -824,25 +824,25 @@ Apenas como ilustração, ao modificar a chamada do método no Código~\ref{lst:
 # Exemplo: 2 itens corretos em 2 itens, tentando gerar 10 alternativas
 gerar_QM_itens(setTrue=['1', '3', '5'], setFalse=['2', '4'], 
                num_itens=2, num_alternativas=10, 
-               num_itens_corretos=2, num_afirmacoes_corretas_por_item=3)
+               num_itens_corretos=2, num_afirmacoes_por_item=3)
 
 # 2. Insuficiência de Combinações de Itens Corretos
 # Exemplo: Tentar criar 4 itens corretos com apenas 2 afirmações verdadeiras
 gerar_QM_itens(setTrue=['1', '3'], setFalse=['2', '4', '6'], 
                num_itens=5, num_alternativas=10, 
-               num_itens_corretos=4, num_afirmacoes_corretas_por_item=2)
+               num_itens_corretos=4, num_afirmacoes_por_item=2)
 
 # 3. Impossibilidade de Gerar Itens Totais
 # Exemplo: Tentar criar 6 itens com poucas afirmações disponíveis
 gerar_QM_itens(setTrue=['1', '3'], setFalse=['2'], 
                num_itens=6, num_alternativas=10, 
-               num_itens_corretos=3, num_afirmacoes_corretas_por_item=2)
+               num_itens_corretos=3, num_afirmacoes_por_item=2)
 
 # 4. Limitação de Alternativas
 # Exemplo: Tentar gerar 10 alternativas com poucos itens
 gerar_QM_itens(setTrue=['1', '3', '5'], setFalse=['2', '4'], 
                num_itens=5, num_alternativas=10, 
-               num_itens_corretos=3, num_afirmacoes_corretas_por_item=1)
+               num_itens_corretos=3, num_afirmacoes_por_item=1)
 \end{minted}
 \end{myboxCode}
 \caption{Exemplo de chamadas de \texttt{gerar\_QM\_itens} com \texttt{verifica\_parametros} retornando \texttt{pode\_gerar = False}.}
@@ -956,10 +956,10 @@ Dessa forma, é assegurada a obtenção de uma questão válida que atenda aos p
 
   while pode_gerar:
     itens = gerar_itens(setTrue, setFalse, num_itens, 
-                        num_afirmacoes_corretas_por_item)
+                        num_afirmacoes_por_item)
 
     itens_corretos = gerar_itens_corretos(setTrue, setFalse, num_itens,
-                                          num_afirmacoes_corretas_por_item, itens)
+                                          num_afirmacoes_por_item, itens)
 
     # Se o n. de itens corretos não for igual ao desejado, gerar uma nova questão
     if len(itens_corretos) != num_itens_corretos: continue
@@ -996,8 +996,130 @@ Dessa forma, é assegurada a obtenção de uma questão válida que atenda aos p
 \label{lst:questaoQM_gerar_QM_itens_parte4}
 \end{listing}
 
+\subsection{Aplicação do método \texttt{gerar\_QM\_itens}}
 
-Esse estilo de questão contendo itens pode facilmente ser adaptado para outros tipos de conjuntos \verb|setTrue| e \verb|setFalse|, não apenas os relacionais e não relacionais. Basta que o primeiro contenha elementos com premissas verdadeiras e o segundo com premissas falsas. Por exemplo, conjunto de elementos planares versus não planares em geometria; conjunto dos animais vertebrados versus invertebrados em biologia; conjunto dos elementos pares versus ímpares em matemática; conjunto dos caracteres alfanuméricos permitidos em um nome de arquivo/variável versus caracteres proibidos em computação; etc.
+Em 22 de fevereiro de 2025, o método \texttt{gerar\_QM\_itens} foi aplicado no processo seletivo da Especialização em Tecnologia de Sistemas da Informação (TSI) da UFABC, com a participação de 273 candidatos em diferentes polos do estado de São Paulo. As provas, geradas no MCTest, continham 30 questões parametrizadas sobre Fundamentos de Computação, sendo 5 questões sobre operações binárias e representação hexadecimal, 1 questão sobre endereçamento direto em memória RAM e 24 questões semelhantes à apresentada na Figura \ref{fig:questaoQM_Extra1_PDF}, compostas por conjuntos de afirmações categorizadas em \verb|setTrue| e \verb|setFalse|. O Código \ref{lst:questaoQM_TSI} exemplifica a configuração utilizada, com os parâmetros \texttt{num\_itens=5}, \texttt{num\_alternativas=10}, \texttt{num\_itens\_corretos=2} e \texttt{num\_afirmacoes\_por\_item=2}.
+
+\begin{listing}[!ht]
+  \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
+  \hrule
+  \begin{minted}[xleftmargin=20pt,linenos=true]{python}
+setTrue = [
+ "Operadores aritméticos (+, -, *, /) são usados para realizar cálculos \
+  matemáticos.",
+ "Operadores lógicos (e, ou, não) são usados para combinar ou negar condições.",
+ "Estruturas de controle (se, senão, enquanto, para) controlam o fluxo de \
+  execução do programa.",
+]
+setFalse = [
+ "Operadores lógicos são usados principalmente para realizar cálculos matemáticos.",
+ "Estruturas de controle não são necessárias para escrever programas.",
+ "Um loop 'enquanto' repete um bloco de código um número específico de vezes.",
+]
+num_itens=5               # N. itens na questão (máximo: 10)
+num_alternativas=10       # N. alternativas (máximo: 15)
+num_itens_corretos=2      # N. itens corretos na questão (máximo: num_itens)
+num_afirmacoes_por_item=2 # N. afirmacoes em cada item (menor que quant. de setTrue)
+\end{minted}
+\end{myboxCode}
+\caption{Trecho de QM paramétrica utilizada no processo seletivo do TSI.}
+\label{lst:questaoQM_TSI}
+\end{listing}
+
+Com base nas equações apresentadas na Seção \ref{sec:verificaParametros}, é possível gerar até 3003 variações de cada questão, sem considerar a ordem das 10 alternativas. Calcular as possíveis variações com os valores fornecidos:
+\begin{itemize}
+    \item $A = 10$ (número de alternativas);
+    \item $N = 5$ (número total de itens);
+    \item $F = 3$, $T = 3$ (número de afirmações falsas e verdadeiras);
+    \item $P = 2$ (número de afirmações por item);
+    \item $C = 2$ (número de itens corretos).
+\end{itemize}
+
+Agora, aplicando as fórmulas:
+
+\begin{enumerate}
+    \item \textbf{Combinações de itens corretos:}
+    \begin{equation}
+        \binom{T}{P} = \binom{3}{2} = \frac{3!}{2!(3-2)!} = 3
+    \end{equation}
+    Como $3 \geq C =2$, a restrição inicial apresentada na Seção \ref{sec:verificaParametros} é satisfeita;
+
+    \item \textbf{Formação de itens da questão:}
+    \begin{equation}
+        \binom{T+F}{P} = \binom{3+3}{2} = \binom{6}{2} = \frac{6!}{2!(6-2)!} = 15
+    \end{equation}
+    Como $15 \geq N =5$, a restrição inicial apresentada na Seção \ref{sec:verificaParametros} é satisfeita;
+
+    \item \textbf{Geração de alternativas:}
+    \begin{equation}
+        \binom{N}{C} = \binom{5}{2} = \frac{5!}{2!(5-2)!} = 10
+    \end{equation}
+    Como $10 \geq A =10$, a restrição inicial apresentada na Seção \ref{sec:verificaParametros} é satisfeita;
+
+    \item \textbf{Número total de variações possíveis:}
+    \begin{equation}
+        \binom{\binom{T+F}{P}}{N} = \binom{15}{5} = \frac{15!}{5!(15-5)!} = 3003
+    \end{equation}
+    Ou seja, existem \textbf{3003 variações possíveis} para a geração das questões.
+\end{enumerate}
+
+
+No MCTest foi criado um Exame com essas 30 questões parametrizadas e 10 variações. Foi escolhido salvar um arquivo no formato XML com essas 300 variações, por exemplo \verb|test.xml|. Em seguida, todo texto no formato \LaTeX{} deste arquivo foi convertido para o formato HTML para importação no Moodle, conforme Código \ref{lst:questaoQM_XML_Latex2HTML} (para mais detalhes, ver Capítulo \ref{ch:examesQM_QT_Moodle} -- \nameref{ch:examesQM_QT_Moodle}). Esse código necessita instalar com \verb|pip| a biblioteca \verb|latex2mathml|. O código lê um arquivo XML (\verb|test.xml|) e processa os textos dentro das \textit{tags} \verb|<text>|, substituindo expressões \LaTeX{} por equivalentes em HTML. Para isso, remove configurações desnecessárias, converte listas enumeradas \LaTeX{} (\verb|\begin{enumerate}| e \verb|\item|) para \verb|<ol>| e \verb|<li>|, transforma expressões matemáticas delimitadas por \verb|\(...\)| em MathML usando \verb|latex2mathml|, e substitui \verb|\text{...}| por \verb|<span>...</span>|. O resultado atualizado é salvo em um novo arquivo (\verb|output.xml|).
+
+\begin{listing}[!ht]
+  \begin{myboxCode}{corCodigo}{\textbf{Questão: }}\vspace{3mm}
+  \hrule
+  \begin{minted}[xleftmargin=20pt,linenos=true]{python}
+from bs4 import BeautifulSoup
+import re
+import latex2mathml.converter
+
+def clean_latex(latex_text):
+    """Remove configurações LaTeX desnecessárias."""
+    return re.sub(r"\[label=\(\\Roman\*\)]\\itemsep0pt\\parskip0pt\\parsep0pt", 
+                  "", latex_text).strip()
+
+def latex_to_html(latex_text):
+    """Converte expressões LaTeX para HTML e ajusta listas."""
+    text = clean_latex(latex_text)
+    text = text.replace(r"\begin{enumerate}", "<ol type='I'>")\
+               .replace(r"\end{enumerate}", "</ol>")
+    text = re.sub(r"\\item\s*", "<li>", text) + "</li>"
+
+    # Converte expressões matemáticas LaTeX para MathML
+    for expr in re.findall(r"\\\((.*?)\\\)", text):
+        text = text.replace(f"\\({expr}\\)", 
+                            latex2mathml.converter.convert(expr))
+
+    # Converte \text{...} para <span>...</span>
+    return re.sub(r"\\text\{(.*?)\}", r"<span>\1</span>", text).strip()
+
+# Lê e processa o arquivo XML
+with open("test.xml", "r", encoding="utf-8") as file:
+    soup = BeautifulSoup(file, "xml")
+
+for tag in soup.find_all("text"):
+    if tag.string and tag.parent.name in ["questiontext", "answer"]:
+        tag.string = latex_to_html(tag.string)
+
+# Salva o resultado
+with open("output.xml", "w", encoding="utf-8") as file:
+    file.write(str(soup))
+\end{minted}
+\end{myboxCode}
+\caption{Código para coverter arquivo XML do formato \LaTeX{} para HTML.}
+\label{lst:questaoQM_XML_Latex2HTML}
+\end{listing}
+
+Como demonstração deste processo seletivo no TSI, a Figura \ref{fig:cap05_questaoQT_TSI_normal} apresenta a distribuição de frequência dos acertos nas 30 questões para cada um dos 273 candidatos, seguindo uma distribuição normal.
+
+\begin{figure}[!ht]
+  \includegraphics[width=0.99\textwidth]{cap05_questaoQT_TSI_normal.png}
+  \caption{Frenquência dos acertos dos 273 candidatos no processo seletivo do TSI.}
+  \label{fig:cap05_questaoQT_TSI_normal}
+\end{figure}
+
+Assim, esse estilo de questão contendo itens foi facilmente adaptado para outros tipos de conjuntos \verb|setTrue| e \verb|setFalse|, não apenas os relacionais e não relacionais. Bastou que o primeiro contivesse elementos com premissas verdadeiras e o segundo, com premissas falsas. Por exemplo, o conjunto de elementos planares versus não planares em geometria; o conjunto dos animais vertebrados versus invertebrados em biologia; o conjunto dos números pares versus ímpares em matemática; o conjunto dos caracteres alfanuméricos permitidos em um nome de arquivo/variável versus caracteres proibidos em computação; entre outros.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{QT paramétrica, com código}\label{sec:questoesQT_VPL}
